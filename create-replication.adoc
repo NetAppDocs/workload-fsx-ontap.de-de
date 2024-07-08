@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: create-replication.html 
+keywords: replication, replicate 
+summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisystem, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden. 
+---
+= Erstellen einer Replikationsbeziehung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisystem, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden.
+
+.Über diese Aufgabe
+Die Replizierung ist eine zusätzliche Datensicherungsschicht, die im Falle eines Ausfalls der Region, in der Ihre Daten gespeichert sind, von wesentlicher Bedeutung ist. Durch regionsübergreifende Replizierung kann Datenverlust vermieden werden.
+
+Dieser Vorgang erzeugt eine Replikationsbeziehung für ein oder alle Quell-Volumes in einem FSX für ONTAP-Dateisystem.
+
+Replizierte Volumes im Zieldateisystem folgen dem Namensformat: `{OriginalVolumeName}_copy`.
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie beginnen.
+
+* Sie müssen über zwei verfügbare Dateisysteme in Ihrem Speicherbestand verfügen, um eine Replikationsbeziehung zu erstellen.
+* Den beiden Dateisystemen, die Sie für die Replikationsbeziehung verwenden, muss eine Verknüpfung zugeordnet sein. Wenn die Dateisysteme keine Verknüpfungen haben, link:create-link.html["Erstellen Sie zunächst einen Link"]. link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]Klicken Sie in den Dateisystemen unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung in beiden Dateisystemen verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+
+
+Führen Sie die folgenden Schritte aus, um ein einzelnes Volume zu replizieren oder alle Volumes in einem Dateisystem zu replizieren.
+
+[role="tabbed-block"]
+====
+.Replizieren eines einzelnen Volumes
+--
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei Punkte-Menü des Dateisystems aus, das das zu replizierende Volume enthält, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des zu replizierenden Volumes aus.
+. Wählen Sie *Data Protection Actions* und dann *Replicate Volume Data*.
+. Geben Sie auf der Seite Replikation erstellen unter Replikationsziel Folgendes an:
++
+.. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
+.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
+.. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
+.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten.
++
+_Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Verwendung der Workload Factory FSX für ONTAP-Benutzeroberfläche. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^]in der Dokumentation zu AWS FSX for NetApp ONTAP.
+
+.. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
++
+Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+
+
+
+. Geben Sie unter Replikationseinstellungen Folgendes an:
++
+.. *Replikationsintervall*: Wählen Sie die Häufigkeit, mit der Snapshots vom Quell-Volume auf das Ziel-Volume übertragen werden.
+.. *Langfristige Aufbewahrung*: Optional können Snapshots für die langfristige Aufbewahrung aktiviert werden.
++
+Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
+
++
+... Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+... Geben Sie für *Create a New Policy* Folgendes an:
++
+.... *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
+.... *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
+
+
+
+
+
+
+. Klicken Sie Auf *Erstellen*.
+
+
+--
+.Replizieren aller Volumes in einem Dateisystem
+--
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte FSX for ONTAP auf das Menü mit den drei Punkten des Dateisystems mit den Volumes und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht *Replikation erstellen* aus.
+. Geben Sie auf der Seite Replikation erstellen unter Replikationsziel Folgendes an:
++
+.. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
+.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
+.. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`.
+.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten.
++
+_Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Verwendung der Workload Factory FSX für ONTAP-Benutzeroberfläche. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^]in der Dokumentation zu AWS FSX for NetApp ONTAP.
+
+.. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
++
+Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+
+
+
+. Geben Sie unter Replikationseinstellungen Folgendes an:
++
+.. *Replikationsintervall*: Wählen Sie die Häufigkeit, mit der Snapshots vom Quell-Volume auf das Ziel-Volume übertragen werden.
+.. *Langfristige Aufbewahrung*: Optional können Snapshots für die langfristige Aufbewahrung aktiviert werden.
++
+Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
+
++
+... Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+... Geben Sie für *Create a New Policy* Folgendes an:
++
+.... *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
+.... *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
+
+
+
+
+
+
+. Klicken Sie Auf *Erstellen*.
+
+
+--
+====
+.Ergebnis
+Die Replikationsbeziehung wird auf der Registerkarte *Replikationsbeziehungen* angezeigt.

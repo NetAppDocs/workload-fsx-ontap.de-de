@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: delete-replication.html 
+keywords: delete replication 
+summary: Löschen Sie bei Bedarf eine Replikationsbeziehung. 
+---
+= Löschen einer Replikationsbeziehung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie eine Replikationsbeziehung löschen, wird die Replikationsbeziehung zwischen dem Quell- und dem Ziel-Volume entfernt. Nach dem Löschen der Replikationsbeziehung bestehen beide Volumes weiterhin unabhängig von den aktuellen Daten, die sie enthalten.
+
+Wenn Sie eine Replikationsbeziehung löschen, löscht FSX für ONTAP auch die allgemeinen Replikations-Snapshots des Quell- und Zielvolume.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der zu löschenden Replikationsbeziehung.
+. Wählen Sie *Löschen*.
+. Klicken Sie im Dialogfeld Beziehung löschen auf *Löschen*.
+

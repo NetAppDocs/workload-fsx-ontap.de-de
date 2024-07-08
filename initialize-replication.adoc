@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: initialize-replication.html 
+keywords: initialize replication, begin replication, start replication 
+summary: Initialisieren Sie eine Replikationsbeziehung zwischen Quell- und Ziel-Volumes. 
+---
+= Initialisieren Sie eine Replikationsbeziehung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Initialisieren Sie eine Replikationsbeziehung zwischen Quell- und Ziel-Volumes.
+
+.Über diese Aufgabe
+Die Initialisierung führt einen _Baseline_ Transfer durch: Es erstellt einen Snapshot des Quell-Volumes und überträgt dann den Snapshot und alle Datenblöcke, die es auf das Ziel-Volume verweist.
+
+.Bevor Sie beginnen
+Denken Sie daran, wenn Sie diesen Vorgang abschließen möchten. Initialisierung kann sehr zeitaufwendig sein. Möglicherweise möchten Sie den Basistransfer in Zeiten geringerer Auslastung durchführen.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der zu initialisierenden Replikationsbeziehung.
+. Wählen Sie *Initialisieren*.
+. Klicken Sie im Dialogfeld Beziehung initialisieren auf *Initialisieren*.
+

@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: manage-links.html 
+keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
+summary: Sie können Links erstellen und verwalten, um eine Vertrauensbeziehung und Konnektivität zwischen einem Workload Factory-Konto und einem oder mehreren FSX for ONTAP-Dateisystemen bereitzustellen. So können Sie bestimmte Funktionen direkt über das ONTAP-Dateisystem überwachen und managen, die über die AWS FSX für ONTAP-APIs nicht verfügbar sind. 
+---
+= Links verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verwalten von Links, die Sie mit Ihrem Workload Factory-Konto verknüpft haben.
+
+link:links-overview.html["Weitere Informationen zu Links"] Oder link:create-link.html["Erstellen Sie eine Verknüpfung"].
+
+
+
+== Zeigen Sie die mit Ihrem Konto verknüpften Links an
+
+Sie können die Links anzeigen, die derzeit mit Ihrem Konto verknüpft sind.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie im Menü „Konto“ die Option *Links*.
++
+image:screenshot-links-button.png["Ein Screenshot, der zeigt, wie die Seite „Links“ geöffnet wird."]
+
+. Wenn Links vorhanden sind, werden die Informationen auf der Übersichtsseite angezeigt.
+. Um die FSX für ONTAP-Dateisysteme anzuzeigen, die mit einem Link verknüpft sind, wählen Sie die Schaltfläche *Ansicht* im Abschnitt „zugewiesene Ressourcen“ aus.
++
+image:screenshot-view-link-details.png["Ein Bildschirm, der die FSX für ONTAP-Dateisysteme anzeigt, die einen bestimmten Link verwenden."]
+
+. Wenn Sie den Amazon Resource Name (ARN) für den Link benötigen, können Sie neben dem ARN-Feld das _copy_ -Symbol auswählen.
+
+
+
+
+== Verknüpfen Sie einen Link mit einem FSX for ONTAP-Dateisystem
+
+Nachdem Sie einen Link erstellt haben, können Sie ihn Ihrem FSX for ONTAP-Dateisystem zuordnen. Jedes Dateisystem kann nur einem Link in einem einzigen NetApp-Konto zugeordnet werden, aber ein Link kann mit vielen Dateisystemen verknüpft werden.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht *Link zuordnen* aus.
+. Wählen Sie auf der Link-Seite „Mitarbeiter“ die Option *vorhandenen Link verknüpfen*, wählen Sie den Link aus und wählen Sie *Übernehmen* aus.
+
+
+.Ergebnis
+Der Link ist mit dem Dateisystem FSX für ONTAP verbunden und Sie können erweiterte ONTAP-Vorgänge durchführen.
+
+
+
+== Bearbeiten Sie einen Link
+
+Sie können einen Link nicht über die Workload Factory-Schnittstelle bearbeiten. Wenn Sie eine Änderung an einem Link vornehmen müssen, müssen Sie einen neuen Link erstellen und diesen dann mit Ihrem Dateisystem verknüpfen.
+
+
+NOTE: Sie können die Lambda-Netzwerkkonfiguration (z. B. VPC, Subnetze und Sicherheitsgruppen) über die AWS Konsole bearbeiten. Die Änderungen werden dann in der UI für das Linkmanagement übernommen. Diese Änderungen können jedoch zu Verbindungsproblemen zwischen Lambda und ONTAP führen und werden nicht empfohlen.
+
+
+
+== Entfernen Sie eine Verknüpfung
+
+Sie können einen Link entfernen, den Sie in Ihrer Umgebung nicht mehr verwenden. Alle FSX für ONTAP-Dateisysteme oder andere Ressourcen, die den Link verwendeten, können bestimmte Funktionen nicht nutzen, nachdem der Link entfernt wurde.
+
+Beachten Sie, dass der Link nur aus Workload Factory gelöscht wird - er wird nicht aus Ihrer AWS-Umgebung gelöscht. Sie müssen die Lambda-Funktion aus Ihrem AWS-Konto löschen, nachdem Sie den Link in Workload Factory entfernt haben.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie im Menü „Konto“ die Option *Links*.
+. Wählen Sie auf der Seite Links die Menütaste und dann *Entfernen* aus.
++
+image:screenshot-remove-link.png["Ein Screenshot, der zeigt, wie ein Link aus Workload Factory entfernt wird."]
+
+. Wenn Sie sicher sind, wählen Sie erneut *Entfernen*.
+
+
+Informationen hierzu finden Sie in der AWS-Dokumentation unter link:https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html#with-userapp-walkthrough-custom-events-delete-function["Lambda-Funktion löschen"].

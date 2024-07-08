@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: troubleshooting.html 
+keywords: troubleshooting, troubleshoot, help, issues 
+summary: Die Dokumentation zu Amazon FSX for NetApp ONTAP enthält Fehlerbehebungsthemen für Ihre Referenz. 
+---
+= Fehlerbehebung für FSX für ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Dokumentation zu Amazon FSX for NetApp ONTAP enthält Fehlerbehebungsthemen für Ihre Referenz.
+
+Weitere Informationen finden Sie unter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/troubleshooting.html["Fehlerbehebung bei Amazon FSX for NetApp ONTAP"^] .

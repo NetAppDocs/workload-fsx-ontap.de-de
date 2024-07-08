@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: rebalance-volume.html 
+keywords: rebalance capacity, volume capacity, redistribute capacity 
+summary: Bringen Sie die Kapazität eines Volumes wieder in den Gleichgewicht, um Ungleichgewichte zu vermeiden, die sich im Laufe der Zeit entwickeln. 
+---
+= Neuausrichtung der Kapazität eines Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bringen Sie die Kapazität eines Volumes wieder in den Gleichgewicht, um Ungleichgewichte zu vermeiden, die sich im Laufe der Zeit entwickeln.
+
+.Über diese Aufgabe
+Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei.
+
+
+NOTE: Der Ausbalancierung eines Volumes wird nur für FlexGroup Volumes unterstützt.
+
+.Bevor Sie beginnen
+Um ein Volume neu auszurichten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei Punkte-Menü des Dateisystems aus, das das Volume zum Ausgleichen enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des Volumes aus, das Sie ausgleichen möchten.
+. Wählen Sie *Erweiterte Aktionen* und dann *Lautstärke neu ausgleichen*.
+. Wählen Sie im Dialogfeld Volume neu ausgleichen die Option *Neu abgleichen*.
+

@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: create-snapshot-policy.html 
+keywords: create 
+summary: Erstellen Sie eine Snapshot-Richtlinie für FSX für ONTAP-Volumes. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt. 
+---
+= Erstellen Sie eine Snapshot-Richtlinie für FSX für ONTAP-Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für FSX für ONTAP-Volumes. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt.
+
+.Über diese Aufgabe
+Sie können eine benutzerdefinierte Snapshot-Richtlinie erstellen, die sich von den drei integrierten Snapshot-Richtlinien für FSX für ONTAP unterscheidet:
+
+* `default`
+* `default-1weekly`
+* `none`
+
+
+Standardmäßig ist jedes Volume mit der Snapshot-Richtlinie des Dateisystems verknüpft `default` . Wir empfehlen, diese Richtlinie für die meisten Workloads zu verwenden.
+
+Durch das Anpassen einer Richtlinie können Sie festlegen, wann Snapshots erstellt werden sollen, wie viele Kopien aufbewahrt werden sollen und wie sie benannt werden sollen.
+
+.Bevor Sie beginnen
+* Beachten Sie Folgendes über die Snapshot-Kapazität, bevor Sie Snapshots verwenden:
++
+** Bei den meisten Datensätzen reicht eine zusätzliche Kapazität von 20 % aus, um Snapshots für bis zu vier Wochen aufzubewahren. Je älter die Daten werden, desto wahrscheinlicher wird die Verwendung für Wiederherstellungen.
+** Das Überschreiben aller Daten in einem Snapshot erfordert eine erhebliche Volume-Kapazität, was für die Bereitstellung von Volume-Kapazität von Bedeutung ist.
+
+
+* Um eine benutzerdefinierte Snapshot-Richtlinie zu erstellen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das drei Punkte-Menü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte *Volumes* das drei Punkte-Menü für das Volume aus, das mit geplanten Snapshots geschützt werden soll.
+. Wählen Sie *Data Protection actions*, *Snapshots* und dann *Manage Snapshot Policies*.
+. Wählen Sie auf der Seite Snapshot Policy Management *Create a New Snapshot Policy* aus.
+. Geben Sie im Feld *Snapshot Policy Name* einen Namen für die Snapshot Policy ein.
+. Optional: Geben Sie im Feld *Beschreibung* eine Beschreibung für die Snapshot-Richtlinie ein.
+. Wählen Sie unter *Schedule*, wann Snapshots erstellt werden sollen. Zum Beispiel jede Minute oder jede Stunde.
++
+Sie können mehr als eine Frequenz auswählen.
+
+. Geben Sie unter *Anzahl der Kopien* die Anzahl der Kopien ein, die beibehalten werden sollen.
++
+Die maximale Anzahl von Kopien beträgt 1,023.
+
+. Optional: Geben Sie unter *Namenskonventionen* ein *Präfix* für die Richtlinie ein.
+. *Retention Label* wird automatisch ausgefüllt.
++
+Dieses Label bezieht sich auf das SnapMirror- oder Replication-Label, mit dem nur angegebene Snapshots für die Replizierung vom Quell- zum Zieldateisystem ausgewählt werden.
+
+. Klicken Sie Auf *Anwenden*.
+

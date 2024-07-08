@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: split-cloned-volume.html 
+keywords: split clone volume, FlexVol volume 
+summary: Teilen Sie ein Klon-FlexVol-Volume von seinem übergeordneten Volume auf, um den Klon zu einem normalen FlexVol Volume mit Lese- und Schreibzugriffen zu machen. 
+---
+= Teilen Sie ein geklontes Volume auf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Teilen Sie ein Klon-FlexVol-Volume von seinem übergeordneten Volume auf, um den Klon zu einem normalen FlexVol Volume mit Lese- und Schreibzugriffen zu machen.
+
+Auf Daten kann auf dem Klon und auf dem übergeordneten Element während der Teilung zugegriffen werden. Der Split-Vorgang aktualisiert nur Metadaten und erfordert minimale I/O-Vorgänge. Es werden keine Datenblöcke kopiert.
+
+.Über diese Aufgabe
+Der Vorgang zum Aufteilen von Klonen umfasst Folgendes:
+
+* Während der Aufteilung können keine neuen Snapshot-Kopien des FlexClone Volume erstellt werden.
+* Ein FlexClone Volume kann nicht vom übergeordneten Volume getrennt werden, wenn es zu einer Datensicherungsbeziehung gehört.
+* Wenn Sie das FlexClone Volume während des Splittings offline schalten, wird der Split-Vorgang unterbrochen. Wenn Sie das FlexClone Volume wieder online schalten, wird der Splitting-Vorgang fortgesetzt.
+* Nach der Aufteilung benötigen sowohl das übergeordnete FlexVol Volume als auch der Klon die volle Speicherplatzzuweisung, die durch die Garantien des Volume festgelegt wurde.
+* Nachdem ein FlexClone Volume von seinem übergeordneten Element getrennt wurde, können die beiden Volumes nicht erneut verbunden werden.
+
+
+.Bevor Sie beginnen
+Vor dem Aufteilen eines geklonten Volume sollten Sie Folgendes beachten:
+
+* Um ein geklontes Volume aufzuteilen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+* Sie müssen ein Cluster-Administrator sein.
+* Das FlexClone Volume muss online sein, wenn der Trennvorgang beginnt.
+* Das übergeordnete Volume muss online sein, damit die Teilung erfolgreich durchgeführt werden kann.
+
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie die Registerkarte *Volumes*.
+. Wählen Sie auf der Registerkarte Volumes das Menü mit den drei Punkten des Volumes aus, auf dem das geklonte Volume aufgeteilt werden soll.
+. Wählen Sie *Data Protection Actions* und dann *Split geklontes Volume*.
+. Klicken Sie im Dialogfeld Volumen teilen auf *Löschen*.
+

@@ -1,0 +1,203 @@
+---
+sidebar: sidebar 
+permalink: create-file-system.html 
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
+summary: Mit Workload Factory können Sie ein FSX für ONTAP-Dateisystem erstellen, um Volumes und zusätzliche Datenservices hinzuzufügen und zu verwalten. 
+---
+= Erstellen Sie ein FSX für ONTAP-Dateisystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Workload Factory können Sie ein FSX für ONTAP-Dateisystem erstellen, um Volumes und zusätzliche Datenservices hinzuzufügen und zu verwalten.
+
+.Über diese Aufgabe
+Beim Erstellen eines Dateisystems wird eine Storage-VM erstellt.
+
+.Bevor Sie beginnen
+Bevor Sie Ihr FSX für ONTAP-Dateisystem erstellen, benötigen Sie:
+
+* Der ARN einer IAM-Rolle, die Workload Factory die Berechtigungen gibt, die zum Erstellen eines FSX für ONTAP-Filesystems erforderlich sind. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie einem AWS-Konto Berechtigungen erteilen"^].
+* Die Region und VPC-Informationen, für die Sie die FSX für ONTAP-Instanz erstellen möchten.
+
+
+
+
+== Erstellen Sie ein FSX für ONTAP-Dateisystem
+
+Sie können ein FSX für ONTAP-Dateisystem mit _Quick create_ oder _Advanced create_ erstellen.
+
+[role="tabbed-block"]
+====
+.Schnelle Erstellung
+--
+Die schnelle Erstellung ermöglicht Ihnen die Verwendung einer empfohlenen Best-Practice-Konfiguration. Sie können die meisten Einstellungen ändern, nachdem Sie ein FSX für ONTAP-Dateisystem erstellt haben.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher * FSX für ONTAP erstellen *.
+. Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Schnellerstellung* aus.
++
+Sie können auch eine gespeicherte Konfiguration laden.
+
+. Geben Sie unter Allgemeine Dateisystemkonfiguration Folgendes an:
++
+.. *AWS Zugangsdaten*: Wählen Sie aus, um AWS Zugangsdaten in Workload Factory hinzuzufügen oder ohne Anmeldedaten fortzufahren.
+.. *Dateisystemname*: Geben Sie einen Namen für das Dateisystem ein.
+.. *Bereitstellungstopologie*: Wählen Sie eine Bereitstellungstopologie.
++
+*** Bei der Scale-up-Topologie wird ein Dateisystem zur Datenverteilung verwendet und kann zur Bewältigung des Datenwachstums größer werden.
+*** Bei der Scale-out-Topologie wird mehr als ein Dateisystem zur Datenverteilung verwendet.
+
+
+.. *HA-Paare*: Geben Sie die Anzahl der HA-Paare ein.
++
+*** Bei vertikal skalierbaren Implementierungen kann nur ein HA-Paar vorhanden sein.
+*** Bei horizontal skalierbaren Implementierungen gibt es zwischen zwei und zwölf HA-Paare.
+
+
+.. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.
++
+*** Implementierung von Single Availability Zone (Single-AZ): Sorgt für Verfügbarkeit, indem Hardware-Ausfälle überwacht und Infrastrukturkomponenten bei Ausfällen automatisch ersetzt werden. Erzielt hohe Beständigkeit durch automatische Replizierung Ihrer Daten in einer Verfügbarkeitszone zum Schutz vor Komponentenausfall.
+*** Implementierung mit mehreren Verfügbarkeitszonen (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Verfügbarkeitszone nicht verfügbar ist. Multi-AZ-Filesysteme unterstützen alle Verfügbarkeits- und Dauerhaltbarkeitsfunktionen von Single-AZ-Filesystemen. Ein Filesystem mit mehreren Verfügbarkeitszonen wurde für geschäftskritische Produktions-Workloads konzipiert, die Hochverfügbarkeit für gemeinsam genutzte ONTAP-Dateidaten erfordern und Storage mit integrierter Replizierung über Verfügbarkeitszonen hinweg benötigen.
+
+
+.. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
+
+
+. Wählen Sie unter *Netzwerk & Sicherheit* im Feld *Region & VPC* die Region und VPC für das Dateisystem aus.
+. Geben Sie unter *Dateisystemdetails* Folgendes an:
++
+.. *SSD-Speicherkapazität*: Geben Sie die Speicherkapazität ein und wählen Sie die Speicherkapazitätseinheit aus.
+.. *ONTAP Credentials*: Geben Sie Ihren ONTAP Benutzernamen und Ihr Passwort ein.
+.. *SMB/CIFS Setup*: Optional. Wenn Sie Vorhaben, das SMB/CIFS-Protokoll für den Zugriff auf Volumes zu verwenden, müssen Sie das Active Directory für die Storage-VM während der Erstellung des Filesystems konfigurieren. Geben Sie die folgenden Details für die Speicher-VM ein, die für dieses Dateisystem erstellt wurde.
++
+... *Active Directory-Domain zu verbinden*: Geben Sie den vollständig qualifizierten Domainnamen (FQDN) für das Active Directory ein.
+... *DNS-IP-Adressen*: Geben Sie bis zu drei DNS-IP-Adressen durch Kommas getrennt ein.
+... *SMB-Server NetBIOS-Name*: Geben Sie den SMB-Server NetBIOS-Namen des Active Directory-Computerobjekts ein, das für Ihre Speicher-VM erstellt werden soll. Dies ist der Name dieser Speicher-VM im Active Directory.
+... *Benutzername*: Geben Sie den Benutzernamen des Dienstkontos in Ihr vorhandenes Active Directory ein.
++
+Geben Sie kein Domänenpräfix oder Suffix ein. Für `EXAMPLE\ADMIN`, verwenden `ADMIN`.
+
+... *Passwort*: Geben Sie das Passwort für das Service-Konto ein.
+... *Organisationseinheit*: Geben Sie optional den Namen der Organisationseinheit ein, in der Sie das Computerkonto für FSX für ONTAP erstellen möchten. Die Organisationseinheit ist der Distinguished Path Name der Organisationseinheit, der Sie dem Dateisystem beitreten möchten.
+... *Delegierte Administratorengruppe*: Geben Sie optional den Namen der Gruppe in Ihrem Active Directory ein, die Ihr Dateisystem verwalten kann.
++
+Wenn Sie Microsoft AD von AWS Managed verwenden, müssen Sie eine Gruppe wie AWS Delegated FSX Administrators, AWS Delegated Administrators oder eine benutzerdefinierte Gruppe mit delegierten Berechtigungen für die Organisationseinheit angeben.
+
++
+Wenn Sie einem selbstverwalteten AD beitreten, verwenden Sie den Namen der Gruppe in Ihrem AD. Die Standardgruppe ist `Domain Admins`.
+
+
+
+
+
+. Öffnen Sie die *Zusammenfassung*, um die von Ihnen definierte Konfiguration zu überprüfen. Bei Bedarf können Sie zu diesem Zeitpunkt jede Einstellung ändern, bevor Sie das Dateisystem speichern oder erstellen.
+. Speichern oder erstellen Sie das Dateisystem.
+
+
+Wenn Sie das Dateisystem erstellt haben, können Sie nun das FSX für ONTAP Dateisystem auf der Seite *Inventar* anzeigen.
+
+--
+.Erweiterte Erstellung
+--
+Mit Advanced Create können Sie alle Konfigurationsoptionen festlegen, einschließlich Verfügbarkeit, Sicherheit, Backups und Wartung.
+
+.Schritte
+. Wechseln Sie zur Workload Factory-Konsole.
+. Wählen Sie unter Speicher * FSX für ONTAP erstellen *.
+. Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Erweitertes Erstellen* aus.
++
+Sie können auch eine gespeicherte Konfiguration laden.
+
+. Geben Sie unter Allgemeine Dateisystemkonfiguration Folgendes an:
++
+.. *AWS Zugangsdaten*: Wählen Sie aus, um AWS Zugangsdaten in Workload Factory hinzuzufügen oder ohne Anmeldedaten fortzufahren.
+.. *Dateisystemname*: Geben Sie einen Namen für das Dateisystem ein.
+.. *Bereitstellungstopologie*: Wählen Sie eine Bereitstellungstopologie.
++
+*** Bei der Scale-up-Topologie wird ein Dateisystem zur Datenverteilung verwendet und kann zur Bewältigung des Datenwachstums größer werden.
+*** Bei der Scale-out-Topologie wird mehr als ein Dateisystem zur Datenverteilung verwendet.
+
+
+.. *HA-Paare*: Geben Sie die Anzahl der HA-Paare ein.
++
+*** Bei vertikal skalierbaren Implementierungen kann nur ein HA-Paar vorhanden sein.
+*** Bei horizontal skalierbaren Implementierungen gibt es zwischen zwei und zwölf HA-Paare.
+
+
+.. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.
++
+*** Implementierung von Single Availability Zone (Single-AZ): Sorgt für Verfügbarkeit, indem Hardware-Ausfälle überwacht und Infrastrukturkomponenten bei Ausfällen automatisch ersetzt werden. Erzielt hohe Beständigkeit durch automatische Replizierung Ihrer Daten in einer Verfügbarkeitszone zum Schutz vor Komponentenausfall.
+*** Implementierung mit mehreren Verfügbarkeitszonen (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Verfügbarkeitszone nicht verfügbar ist. Multi-AZ-Filesysteme unterstützen alle Verfügbarkeits- und Dauerhaltbarkeitsfunktionen von Single-AZ-Filesystemen. Ein Filesystem mit mehreren Verfügbarkeitszonen wurde für geschäftskritische Produktions-Workloads konzipiert, die Hochverfügbarkeit für gemeinsam genutzte ONTAP-Dateidaten erfordern und Storage mit integrierter Replizierung über Verfügbarkeitszonen hinweg benötigen.
+
+
+.. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
+
+
+. Geben Sie unter Netzwerk und Sicherheit Folgendes an:
++
+.. *Region & VPC*: Wählen Sie die Region und VPC für das Dateisystem.
+.. *Sicherheitsgruppe*: Erstellen oder verwenden Sie eine vorhandene Sicherheitsgruppe.
+.. *Verfügbarkeitszonen*: Wählen Sie Verfügbarkeitszonen und Subnetze aus.
++
+*** Für Clusterknoten 1: Wählen Sie eine Verfügbarkeitszone und ein Subnetz aus.
+*** Für Clusterknoten 2: Wählen Sie eine Verfügbarkeitszone und ein Subnetz aus.
+
+
+.. *VPC Route tables*: Wählen Sie die VPC Route table, um den Client-Zugriff auf Volumes zu ermöglichen.
+.. *IP-Adressbereich des Endpunkts*: Wählen Sie *unbewegter IP-Adressbereich außerhalb Ihres VPC* oder *Geben Sie einen IP-Adressbereich* ein und geben Sie einen IP-Adressbereich ein.
+.. *Verschlüsselung*: Wählen Sie den Namen des Verschlüsselungsschlüssels aus der Dropdown-Liste aus.
+
+
+. Geben Sie unter Dateisystemdetails Folgendes an:
++
+.. *SSD-Speicherkapazität*: Geben Sie die Speicherkapazität ein und wählen Sie die Speicherkapazitätseinheit aus.
+.. *Bereitgestellte IOPS*: Wählen Sie *automatisch* oder *vom Benutzer bereitgestellt*.
+.. *Durchsatzkapazität pro HA-Paar*: Wählen Sie Durchsatzkapazität pro HA-Paar.
+.. *ONTAP Credentials*: Geben Sie Ihren ONTAP Benutzernamen und Ihr Passwort ein.
+.. *Storage VM Credentials*: Geben Sie Ihren Benutzernamen ein. Das Kennwort kann spezifisch für dieses Dateisystem sein, oder Sie verwenden das gleiche Kennwort, das für die ONTAP-Anmeldeinformationen eingegeben wurde.
+.. *SMB/CIFS Setup*: Optional. Wenn Sie Vorhaben, das SMB/CIFS-Protokoll für den Zugriff auf Volumes zu verwenden, müssen Sie das Active Directory für die Storage-VM während der Erstellung des Filesystems konfigurieren. Geben Sie die folgenden Details für die Speicher-VM ein, die für dieses Dateisystem erstellt wurde.
++
+... *Active Directory-Domain zu verbinden*: Geben Sie den vollständig qualifizierten Domainnamen (FQDN) für das Active Directory ein.
+... *DNS-IP-Adressen*: Geben Sie bis zu drei DNS-IP-Adressen durch Kommas getrennt ein.
+... *SMB-Server NetBIOS-Name*: Geben Sie den SMB-Server NetBIOS-Namen des Active Directory-Computerobjekts ein, das für Ihre Speicher-VM erstellt werden soll. Dies ist der Name dieser Speicher-VM im Active Directory.
+... *Benutzername*: Geben Sie den Benutzernamen des Dienstkontos in Ihr vorhandenes Active Directory ein.
++
+Geben Sie kein Domänenpräfix oder Suffix ein. Für `EXAMPLE\ADMIN`, verwenden `ADMIN`.
+
+... *Passwort*: Geben Sie das Passwort für das Service-Konto ein.
+... *Organisationseinheit*: Geben Sie optional den Namen der Organisationseinheit ein, in der Sie das Computerkonto für FSX für ONTAP erstellen möchten. Die Organisationseinheit ist der Distinguished Path Name der Organisationseinheit, der Sie dem Dateisystem beitreten möchten.
+... *Delegierte Administratorengruppe*: Geben Sie optional den Namen der Gruppe in Ihrem Active Directory ein, die Ihr Dateisystem verwalten kann.
++
+Wenn Sie Microsoft AD von AWS Managed verwenden, müssen Sie eine Gruppe wie AWS Delegated FSX Administrators, AWS Delegated Administrators oder eine benutzerdefinierte Gruppe mit delegierten Berechtigungen für die Organisationseinheit angeben.
+
++
+Wenn Sie einem selbstverwalteten AD beitreten, verwenden Sie den Namen der Gruppe in Ihrem AD. Die Standardgruppe ist `Domain Admins`.
+
+
+
+
+
+. Geben Sie unter Backup und Wartung Folgendes an:
++
+.. *FSX für ONTAP-Sicherung*: Tägliche automatische Backups sind standardmäßig aktiviert. Bei Bedarf deaktivieren.
++
+... *Automatische Backup-Aufbewahrungsfrist*: Geben Sie die Anzahl der Tage ein, um automatische Backups zu behalten.
+... *Tägliches automatisches Backup-Fenster*: Wählen Sie entweder *Keine Präferenz* (für Sie wird eine tägliche Backup-Startzeit ausgewählt) oder *Startzeit für tägliche Backups auswählen* und eine Startzeit angeben.
+... *Wöchentliches Wartungsfenster*: Wählen Sie entweder *Keine Präferenz* (eine wöchentliche Startzeit des Wartungsfensters wird für Sie ausgewählt) oder *Startzeit für 30-minütiges wöchentliches Wartungsfenster* und geben Sie eine Startzeit an.
+
+
+
+
+. Speichern oder erstellen Sie das Dateisystem.
+
+
+Wenn Sie das Dateisystem erstellt haben, können Sie nun das FSX für ONTAP Dateisystem auf der Seite *Inventar* anzeigen.
+
+--
+====
+.Wie es weiter geht
+Mit einem Dateisystem in Ihrem Speicher-Inventar können Sie link:create-volume.html["Erstellen von Volumes"]Ihr FSX für ONTAP-Dateisystem verwalten und für Ihre Ressourcen einrichten link:data-protection-overview.html["Datensicherung"] .

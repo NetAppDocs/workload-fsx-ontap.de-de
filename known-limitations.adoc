@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: known-limitations.html 
+keywords: limitations, fsx, ontap 
+summary: Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
+---
+= Bekannte Einschränkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts in Workload Factory nicht unterstützt werden oder die nicht korrekt mit dieser Version zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
+
+
+
+== Betriebsmodi
+
+_Read_-Modus ist derzeit nicht verfügbar.
+
+
+
+== Verlinken
+
+Für einige Vorgänge wie die Replikation in der Workload Factory-Benutzeroberfläche ist ein Link erforderlich.
+
+
+
+== Storage-Effizienz
+
+Storage-Effizienz kann nach der Volume-Erstellung nicht deaktiviert oder aktiviert werden.
+
+
+
+== Unterstützung für Durchsatzkapazität in Regionen
+
+
+
+=== Vertikal skalierbare Implementierungen
+
+Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 4 Gbit/s für Scale-up-Bereitstellungen: Region US East (Ohio), Region US East (N. Virginia), Region US West (Oregon) und Europa (Irland).
+
+
+
+== Horizontal skalierbare Implementierungen
+
+Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 3 und 6 Gbit/s für Scale-out-Implementierungen: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland) und Asia Pacific (Sydney).
+
+
+
+== Kapazitätsmanagement
+
+* Die Volume Autogrow-Funktion wird derzeit für das iSCSI-Protokoll nicht unterstützt.
+* Wenn die automatische Kapazitätsverwaltungsfunktion ausgeführt wird, ist eine manuelle Kapazitätserhöhung nicht zulässig.
+* Das Deaktivieren der automatischen Kapazitätsverwaltungsfunktion ist nur mit denselben Berechtigungen möglich, die zur Aktivierung verwendet wurden.
+
+
+
+
+== Storage-VMs
+
+Die Anzahl der Storage-VMs ist pro SKU begrenzt. Das Erstellen von Storage-VMs, die über die Grenzen hinausgehen, wird in Workload Factory nicht unterstützt.^1^
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Management von FSX für ONTAP Storage Virtual Machines"^]In der AWS-Dokumentation finden Sie Informationen zur maximalen Anzahl von SVMs pro Filesystem.
+
+
+
+== ISCSI-Protokoll unterstützt
+
+* Das iSCSI-Protokoll wird nur für Scale-up-Implementierungen unterstützt. ^1^
+* Das iSCSI-Protokoll ist nur für FlexGroup-Volumes verfügbar. ^1^
+* Es kann nur eine einzelne LUN pro Volume konfiguriert werden.
+
+
+
+
+== Unterstützte Regionen
+
+* Die Region Kanada West (Calgary) wird derzeit nicht unterstützt.
+
+
+
+
+== Datensicherung
+
+* Snapshots können nicht gelöscht werden.
+* Die Replikation zwischen FSX für ONTAP-Dateisystemen wird nur unterstützt.
+* Wenn Sie ein Dateisystem replizieren, verwenden alle Volumes im Dateisystem dieselbe Replikationsrichtlinie.
+* Nur der letzte Snapshot ist für die Wiederherstellung verfügbar.
+
+
+
+
+== Rechner für Storage-Einsparungen
+
+Der Rechner für Storage-Einsparungen berechnet die Kosteneinsparungen für die folgenden Konfigurationen nicht:
+
+* FSX für Windows File Server: HDD Storage-Typ
+* Elastic Block Store (EBS): st1-, sc1- und Standard-Volume-Typen
+* Elastic File System (EFS): Bursting-Durchsatzmodus
+
+
+Hinweis:
+
+. Gilt für Amazon FSX for NetApp ONTAP
+

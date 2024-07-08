@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: update-snapshot-replication.html 
+keywords: update snapshot data, replication 
+summary: Aktualisieren Sie Snapshot-Daten, die in einer Replikationsbeziehung zu jedem Zeitpunkt zwischen Quell- und Ziel-Volumes übertragen werden, manuell. 
+---
+= Aktualisieren von Snapshot-Daten in einer Replikationsbeziehung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Eine Replikationsbeziehung verfügt über einen festgelegten Replikationszeitplan, Sie können jedoch bei Bedarf die zwischen Quell- und Ziel-Volumes übertragenen Snapshot-Daten manuell aktualisieren.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der zu aktualisierenden Replikationsbeziehung.
+. Wählen Sie *Jetzt aktualisieren*.
+. Klicken Sie im Dialogfeld Aktualisieren auf *Jetzt aktualisieren*.
+

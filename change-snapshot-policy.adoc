@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: change-snapshot-policy.html 
+keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
+summary: Die Snapshot-Richtlinie eines Volumes kann jederzeit aktualisiert werden. 
+---
+= Ändern der Snapshot-Richtlinie eines Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Snapshot-Richtlinie eines Volumes kann jederzeit aktualisiert werden.
+
+.Über diese Aufgabe
+Bei diesem Vorgang wird die Häufigkeit der für ein Volume erstellten Snapshots aktualisiert oder automatische Snapshots deaktiviert.
+
+.Bevor Sie beginnen
+Zum Anzeigen vorhandener Snapshot-Richtlinien ist ein Link erforderlich. Um einen Link zuzuordnen, klicken Sie unter *Kontoname* auf *Associate Link*. Kehren Sie dann zu diesem Vorgang zurück.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie die Registerkarte *Volumes*.
+. Wählen Sie auf der Registerkarte *Volumes* das drei Punkte-Menü des Volumes aus, um die Snapshot-Richtlinie zu ändern.
+. Wählen Sie *Data Protection actions*, *Snapshots* und dann *Manage Snapshot Policies*.
+. Wählen Sie auf der Seite Snapshot Policy Management *Change an Existing Snapshot Policy* aus.
+. Wählen Sie im Feld *Snapshot Policy Name* eine andere Snapshot Policy für dieses Volume aus.
++
+Um automatische Snapshots zu deaktivieren, wählen Sie `none`.
+
++
+Wenn keine anderen Snapshot-Richtlinien vorhanden sind, link:create-snapshot-policy.html["Erstellen Sie eine neue Snapshot-Richtlinie für dieses Volume"].
+
+. Klicken Sie Auf *Anwenden*.
+

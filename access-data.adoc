@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: access-data.html 
+keywords: access data, mount clients, on-premises 
+summary: Sie können von vor Ort auf Ihre FSX for ONTAP-Dateisysteme zugreifen, indem Sie Volumes für NAS-Clients mounten und iSCSI-LUNs für SAN-Clients mounten. 
+---
+= Zugriff auf Ihre Daten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können von vor Ort auf Ihre FSX for ONTAP-Dateisysteme zugreifen, indem Sie Volumes für NAS-Clients mounten und iSCSI-LUNs für SAN-Clients mounten.
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Datenzugriff"^] In der Dokumentation zu Amazon FSX for NetApp ONTAP finden Sie Informationen dazu, wie Sie auf Daten für Ihre Referenz zugreifen.
+
+
+
+== Stellen Sie eine Verbindung mit NAS-Clients her
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-linux-client.html["Mounten Sie ein Volume auf Linux-Clients"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-windows-client.html["Mounten Sie ein Volume auf Windows-Clients"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-mac-client.html["Mounten Sie ein Volume auf macOS Clients"^]
+
+
+
+
+== Stellen Sie eine Verbindung mit SAN-Clients her
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-luns-linux.html["Mounten Sie eine iSCSI-LUN auf Linux-Clients"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-windows.html["Mounten Sie eine iSCSI-LUN auf Windows-Clients"^]
+

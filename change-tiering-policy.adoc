@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: change-tiering-policy.html 
+keywords:  
+summary: Ändern Sie die Tiering-Richtlinie, um Daten aus dem primären Storage-Tier mit hoher Performance wieder der Storage-Tier mit dem sekundären Kapazitäts-Pool zuzuweisen. 
+---
+= Ändern Sie die Tiering-Richtlinie eines Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ändern Sie die Tiering-Richtlinie, um Daten aus dem leistungsstarken primären Storage-Tier automatisch der sekundären Kapazitäts-Pool-Storage-Tier zuzuweisen.
+
+.Über diese Aufgabe
+Sie können die Tiering-Richtlinie eines Volumes jederzeit ändern. Die Tiering-Richtlinie wird pro Volume definiert.
+
+Eine Entscheidung, wo Ihre Daten gespeichert werden, wirkt sich auf Ihre Kosteneinsparungen aus.
+
+FSX für ONTAP verfügt über zwei Tiers zum Speichern von Volume-Daten:
+
+* *SSD Storage Tier*: Dieser primäre Storage Tier ist für die Daten, auf die Sie am häufigsten zugreifen, auch als _Hot_ Daten bekannt. Das Speichern von Daten in der primären Storage-Tier ist teurer als das Speichern auf der sekundären Storage-Tier.
+* *Kapazitäts-Pool-Storage-Tier*: Dieses sekundäre Storage-Tier ist für archivierte Daten oder selten genutzte Daten, auch als _Cold_-Daten bekannt.
+
+
+Weitere Informationen zu Storage-Tiers finden link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Management der Storage-Kapazität"^] Sie in der Dokumentation zu AWS für FSX für NetApp ONTAP.
+
+.Bevor Sie beginnen
+Überprüfen Sie die vier verfügbaren Tiering-Richtlinien, bevor Sie die Tiering-Richtlinie ändern.
+
+* *Auto*: Verschiebt alle kalten Daten, einschließlich Benutzerdaten und Snapshots, für einen bestimmten Zeitraum in den Kapazitäts-Pool-Speicher-Tier.
+* *Nur Snapshot*: Verschiebt nur Snapshot-Daten auf den Storage Tier des Kapazitäts-Pools.
+* *Keine*: Speichert alle Daten Ihres Volumes auf dem primären Storage Tier.
+* *All*: Markiert alle Benutzerdaten und Snapshot-Daten als „kalt“ und speichert sie im Kapazitäts-Pool-Speicher-Tier.
+
+
+Beachten Sie, dass einige Tiering-Richtlinien über einen zugehörigen Mindestkühlzeitraum verfügen, der die Zeit bzw. die _Kühltage_ festlegt, dass Benutzerdaten in einem Volume inaktiv bleiben müssen, damit die Daten als „kalt“ gelten und in die Storage-Ebene des Kapazitäts-Pools verschoben werden. Der Kühlzeitraum beginnt, wenn Daten auf die Festplatte geschrieben werden.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Klicken Sie auf der Registerkarte Volumes auf das Menü mit den drei Punkten des Volumes, um die Tiering-Richtlinie für zu ändern.
+. Wählen Sie *Erweiterte Aktionen* und dann *Tiering-Richtlinie ändern*.
+. Wählen Sie auf der Seite Tiering Policy ändern eine der folgenden Tiering Policies aus:
++
+** *Auto*: Geben Sie die Anzahl der Abkühltage ein.
+** *Nur Snapshot*: Geben Sie die Anzahl der Abkühltage ein.
+** *Keine*
+** * Alle*
+
+
+. Klicken Sie Auf *Anwenden*.
+

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: clone-volume.html 
+keywords: clone volume 
+summary: Klonen Sie ein Volume, um zu Testzwecken ein Lese-/Schreib-Volume des ursprünglichen Volumes zu erstellen. 
+---
+= Klonen Sie ein Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Klonen Sie ein Volume, um zu Testzwecken ein Lese-/Schreib-Volume des ursprünglichen Volumes zu erstellen.
+
+Der Klon gibt den aktuellen Point-in-Time-Zustand der Daten wieder. Darüber hinaus können Klone verwendet werden, um zusätzlichen Benutzern Zugriff auf Daten zu gewähren, ohne dass diese auf Produktionsdaten zugreifen müssen.
+
+.Über diese Aufgabe
+Das Klonen von Volumes wird nur für FlexClone Volumes unterstützt.
+
+Wenn ein Volume geklont wird, wird ein beschreibbares Volume mit Referenzen zu Snapshots vom übergeordneten Volume erstellt. Die Klonerstellung erfolgt in Sekunden. Die geklonten Daten befinden sich nicht auf dem Volume-Klon, sondern befinden sich auf dem übergeordneten Volume. Alle neuen Daten, die nach der Klonerstellung auf das Volume geschrieben werden, verbleiben im Klon.
+
+Damit ein geklontes Volume alle Daten des übergeordneten Volume und alle neuen Daten, die nach der Erstellung dem Klon hinzugefügt werden, enthält, ist das übergeordnete Volume erforderlich link:split-cloned-volume.html["Teilen Sie den Klon auf"] . Außerdem können Sie ein übergeordnetes Volume nicht löschen, wenn es über einen Klon verfügt. Ein Klon muss aufgeteilt werden, bevor ein übergeordnetes Volume gelöscht werden kann.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie die Registerkarte *Volumes*.
+. Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des Volumes aus, das geklont werden soll.
+. Wählen Sie *Data Protection actions* und dann *Clone Volume*.
+. Geben Sie im Dialogfeld Volume klonen einen Namen für den Volume-Klon ein.
+. Klicken Sie Auf *Clone*.
+

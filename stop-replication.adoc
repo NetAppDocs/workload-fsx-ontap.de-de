@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: stop-replication.html 
+keywords: stop replication, break replication 
+summary: Stoppen einer Replikationsbeziehung zwischen Quell- und Ziel-Volumes. 
+---
+= Anhalten einer Replikationsbeziehung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie eine Replikation anhalten, werden geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume angehalten. Das Ziel-Volume wechselt von schreibgeschützt zu Lese- und Schreibzugriff.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der Replikationsbeziehung, die angehalten werden soll.
+. Wählen Sie *Pause*.
+. Wählen Sie im Dialogfeld Replikation unterbrechen *Break* aus.
+
+
+Der Replikationsstatus des Volumes ändert sich in *broken*. Das Ziel-Volume wird beschreibbar.

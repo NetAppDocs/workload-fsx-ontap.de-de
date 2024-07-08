@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: update-throughput-capacity.html 
+keywords: update throughput, change throughput, throughput capacity 
+summary: Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSX für ONTAP-Filesystem. 
+---
+= Aktualisieren der Durchsatzkapazität eines Dateisystems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSX für ONTAP-Filesystem.
+
+Weitere Informationen zu Durchsatzkapazitätsgrenzen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] in der Dokumentation zu AWS FSX for NetApp ONTAP.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Klicken Sie unter Speicher auf *Gehe zu Lagerbestandsbestand*.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des Dateisystems, um die Durchsatzkapazität zu aktualisieren, und wählen Sie dann *Verwalten*.
+. Klicken Sie unter Information auf das Bleistiftsymbol neben *Durchsatzkapazität*. Das Bleistiftsymbol wird neben dem Dropdown-Pfeil angezeigt, wenn die Maus über die Zeile *Durchsatzkapazität* schwebt.
+. Wählen Sie im Dialogfeld Durchsatzkapazität die benötigte Durchsatzkapazität aus.
+. Klicken Sie Auf *Anwenden*.
+

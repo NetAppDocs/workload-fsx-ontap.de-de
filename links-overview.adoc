@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: links-overview.html 
+keywords: links, accounts, lambda 
+summary: Eine Workload Factory-Verbindung erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen einem Workload Factory-Konto und einem oder mehreren FSX for ONTAP-Dateisystemen. So können Sie bestimmte Filesystem-Funktionen direkt über die ONTAP-REST-APIs überwachen und managen, die über die Amazon FSX für ONTAP-APIs nicht verfügbar sind. 
+---
+= Erfahren Sie mehr über Workload Factory Links
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Eine Workload Factory-Verbindung erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen einem Workload Factory-Konto und einem oder mehreren FSX for ONTAP-Dateisystemen. So können Sie bestimmte Filesystem-Funktionen direkt über die ONTAP-REST-API-Aufrufe überwachen und managen, die über die Amazon FSX for ONTAP-API nicht verfügbar sind.
+
+Sie benötigen keinen Link, um mit Workload Factory zu beginnen, aber in einigen Fällen müssen Sie einen Link erstellen, um alle Workload Factory-Funktionen und Workload-Funktionen freizuschalten.
+
+
+
+== Wie Links funktionieren
+
+Links nutzen AWS Lambda Lambda führt Code als Reaktion auf Ereignisse aus und verwaltet automatisch die für diesen Code erforderlichen Rechenressourcen. Die von Ihnen erstellten Links sind Teil Ihres NetApp Kontos und mit einem AWS Konto verknüpft.
+
+Nachdem Sie einen Link erstellt haben, können Sie ihn einem oder mehreren FSX for ONTAP-Dateisystemen zuordnen. Jedes Dateisystem kann nur einem Link im selben NetApp-Konto zugeordnet werden. Wenn Sie mehrere NetApp-Konten haben, kann ein einziges Dateisystem mit zusätzlichen Links unter verschiedenen NetApp-Konten verknüpft werden.
+
+Sie erstellen Links von den Dateisystemseiten FSX für ONTAP in Workload Factory. link:create-link.html["Erfahren Sie, wie Sie Verknüpfungen erstellen"] Genaue Informationen.
+
+
+
+== Kosten
+
+Jede Transaktion, die Lambda durchführt, ist kostenpflichtig. Da Lambda als Proxy zwischen den beiden Systemen fungiert, wird eine Gebühr erhoben, wenn Lambda eine Anforderung an die ONTAP-REST-API auf einem Dateisystem sendet und die Antwort an Workload Factory zurücksendet.
+
+link:https://aws.amazon.com/lambda/pricing/["Informieren Sie sich über die Kosten bei der Nutzung von AWS Lambda"^]
+
+
+
+== Wenn ein Link erforderlich ist
+
+Workload Factory erfordert einen Link, um einige Informationen anzuzeigen und einige Aufgaben auszuführen. Wenn Sie versuchen, einen Vorgang auszuführen, der einen Link erfordert, und Sie keinen Link mit dem Dateisystem FSX für ONTAP verknüpft haben, wird eine Meldung angezeigt, dass der Vorgang einen Link erfordert. Sie können zu diesem Zeitpunkt einen neuen Link hinzufügen oder das FSX for ONTAP-Dateisystem einem vorhandenen Link zuweisen, damit Sie den Vorgang durchführen können.
+
+Zu den Funktionen, für die ein Link erforderlich ist, gehören:
+
+* Zeigt die Version von ONTAP an, die auf einem FSX für ONTAP-Dateisystem installiert ist
+* Verwalten Sie iSCSI-Volumes auf dem System
+* Aktivieren und deaktivieren Sie die Autogrow Funktion für Volumes
+* Erstellen und Verwalten von Snapshot-Richtlinien
+* Konfiguration von Replikationsbeziehungen und Replizierung von Volumes zwischen Dateisystemen
+* Backup-Beziehungen konfigurieren und Volume-Daten im Cloud-Storage sichern
+* Volumes innerhalb eines Filesystems klonen
+* Zusätzliche Metriken direkt aus ONTAP anzeigen (Standardkennzahlen werden von Amazon CloudWatch erfasst)
+* Management von NFS-Exportrichtlinien
+

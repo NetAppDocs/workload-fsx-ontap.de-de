@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: create-storage-vm.html 
+keywords: create storage VM, create svm 
+summary: 'Sie können ein FSX für ONTAP Storage-VM (SVM) erstellen, um Storage- und Datenservices für Ihre Workloads in Workload Factory bereitzustellen.' 
+---
+= Erstellen Sie eine Storage-VM für ein FSX für ONTAP-Filesystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erstellen Sie eine Storage-VM (SVM) für ein FSX for ONTAP Filesystem, um auf Storage- und Datenservices virtuell für Ihre Workloads in Workload Factory zuzugreifen.
+
+.Über diese Aufgabe
+Storage-VMs sind isolierte File Server, mit denen Sie auf die Daten der jeweiligen Workloads im Workload Factory Storage zugreifen können. Jede SVM verfügt über eigene Administrationsanmeldedaten und Endpunkte für die Verwaltung und den Zugriff auf Daten.
+
+Wenn Sie mit SVMs auf Daten in FSX for ONTAP zugreifen, mounten Ihre Clients und Workstations über den Endpunkt (IP-Adresse) der SVM ein Volume, eine CIFS/SMB-Freigabe oder eine iSCSI-LUN, die von einer SVM gehostet wird.
+
+.Bevor Sie beginnen
+Überprüfen Sie die unterstützte Anzahl von Storage-VMs pro Dateisystem. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Management von FSX für ONTAP Storage Virtual Machines"^]In der AWS-Dokumentation finden Sie Informationen zur maximalen Anzahl von SVMs pro Filesystem.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte FSX for ONTAP auf das Menü mit drei Punkten des Dateisystems, um eine Storage-VM für zu erstellen, und wählen Sie *Verwalten* aus.
+. Wählen Sie in der Dateisystemübersicht *Speicher-VM erstellen* aus.
+. Stellen Sie auf der Seite Storage VM unter Storage VM Configuration Folgendes bereit:
++
+.. *Name*: Geben Sie einen Namen für die Speicher-VM ein.
+.. *Speicher-VM-Anmeldeinformationen*: Geben Sie ein Passwort für den Benutzer dieser Speicher-VM ein `vsadmin` oder verwenden Sie die Benutzeranmeldeinformationen des Dateisystems `fsxadmin` .
+.. *Sicherheitsstil des Root-Volumes*: Wählen Sie den Sicherheitstyp des Root-Volumes abhängig von der Art der Clients, die auf Ihre Daten zugreifen - UNIX (Linux-Clients), NTFS (Windows-Clients) oder gemischt.
+.. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
+
+
+. Klicken Sie Auf *Erstellen*.
+

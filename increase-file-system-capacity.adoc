@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: increase-file-system-capacity.html 
+keywords: increase capacity, increase file system capacity, increase FSx capacity 
+summary: Erhöhen Sie die SSD-Speicherkapazität eines FSX für ONTAP-Dateisystems manuell, wenn die verwendete SSD-Speicherkapazität einen von Ihnen angegebenen Schwellenwert überschreitet. 
+---
+= Erhöhen Sie die Kapazität des Filesystems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erhöhen Sie die SSD-Speicherkapazität eines FSX für ONTAP-Dateisystems manuell, wenn die verwendete SSD-Speicherkapazität einen von Ihnen angegebenen Schwellenwert überschreitet.
+
+Alternativ können Sie link:enable-auto-capacity-management.html["Aktivieren Sie die automatische Kapazitätsverwaltungsfunktion"] mit Workload Factory die Dateisystemkapazität für Sie managen.
+
+.Über diese Aufgabe
+Das Erhöhen der Filesystem-Kapazität wirkt sich auf die IOPS für Ihr FSX for ONTAP Filesystem aus.
+
+Bei automatischer beziehen Sie link:provision-iops.html["Bereitstellung von IOPS"] auf ein Dateisystem erhöht sich der IOPS um 3 IOPS bei jeder Erhöhung der SSD-Kapazität um 1 gib. Beispiel: Wenn Sie 100 tib (102,400 gib) SSD-Kapazität bereitstellen, erhöht sich der IOPS um 300 tib (307,200 gib).
+
+Wenn Sie link:provision-iops.html["Bereitstellung von IOPS"] manuell arbeiten, müssen Sie möglicherweise die IOPS-Zuweisung erhöhen, um die höhere Kapazität des Filesystems zu unterstützen.
+
+Weitere Informationen zu SSD-Storage-Kapazitätsbeschränkungen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] in der Dokumentation zu AWS FSX für NetApp ONTAP.
+
+.Bevor Sie beginnen
+Um die Kapazität eines Dateisystems zu erhöhen, müssen Sie zuerst link:enable-auto-capacity-management.html["Deaktivieren Sie das automatische Kapazitätsmanagement"].
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Klicken Sie unter Speicher auf *Gehe zu Lagerbestandsbestand*.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des Dateisystems, um die Kapazität für zu erhöhen.
+. Wählen Sie *Verwalten*.
+. Klicken Sie unter Information auf das Bleistiftsymbol neben *Kapazitätsverteilung*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *Kapazitätsverteilung* schwebt.
+. Geben Sie im Dialogfeld SSD-Speichergröße eine Zahl für *bereitgestellte Kapazität* ein.
+. Wählen Sie die Einheit für die bereitgestellte Kapazität aus.
+. Klicken Sie Auf *Anwenden*.
+

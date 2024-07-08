@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: change-replication-schedule.html 
+keywords: change replication schedule, update replication schedule, edit replication schedule 
+summary: Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replikationsbeziehung. 
+---
+= Ändern Sie den Replikationszeitplan eines Quell-Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replikationsbeziehung.
+
+Legen Sie fest, wie oft Snapshots vom Quell-Volume auf das replizierte Volume übertragen werden, um die erforderlichen Point Objectives (RPOs) zu erfüllen.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte des Zeitplans für die Replikationsbeziehung, der geändert werden soll.
+. Wählen Sie *Replikationsintervall bearbeiten*.
+. Wählen Sie im Dialogfeld Replikationsintervall bearbeiten die Häufigkeit der Snapshot-Übertragung vom Quell-Volume aus. Sie können zwischen den folgenden Frequenzen wählen:
++
+** Alle 5 Minuten
+** Stündlich
+** Alle 8 Stunden
+** Täglich
+** Wöchentlich
+
+
+. Klicken Sie Auf *Anwenden*.
+

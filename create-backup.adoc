@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: create-backup.html 
+keywords: create backup, volume backup, back up a volume 
+summary: Erstellen Sie ein manuelles Backup eines Volumes außerhalb von regelmäßig geplanten Backups. 
+---
+= Erstellen Sie ein manuelles Backup eines Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erstellen Sie ein manuelles Backup eines Volumes außerhalb von regelmäßig geplanten Backups.
+
+.Über diese Aufgabe
+FSX für ONTAP-Backups erfolgen pro Volume, sodass jedes Backup nur die Daten in einem bestimmten Volume enthält.
+
+FSX für ONTAP-Backups sind inkrementell, was bedeutet, dass nur die Daten auf dem Volume, die sich nach Ihrem letzten Backup geändert haben, gespeichert werden. Dies minimiert die zur Erstellung des Backups benötigte Zeit und den für das Backup benötigten Storage-Bedarf. Dadurch sparen Sie Storage-Kosten, da Daten nicht dupliziert werden.
+
+.Bevor Sie beginnen
+Um Backups Ihrer Volumes zu erstellen, müssen sowohl das Volume als auch das Dateisystem über ausreichend SSD-Speicherkapazität verfügen, um den Backup-Snapshot zu speichern. Bei der Erstellung eines Backup-Snapshots kann die zusätzliche Speicherkapazität, die durch den Snapshot verbraucht wird, nicht dazu führen, dass das Volume SSD-Storage-Auslastung von über 98 % überschreitet. In diesem Fall schlägt die Sicherung fehl.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das drei Punkte-Menü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Klicken Sie auf der Registerkarte *Volumes* auf das Menü mit den drei Punkten, in dem die Lautstärke gesichert werden soll.
+. Wählen Sie *Data Protection Actions*, *FSX for ONTAP Backup* und dann *Manual Backup*.
+. Geben Sie im Dialogfeld Manuelle Sicherung einen Namen für das Backup ein.
+. Klicken Sie auf *Sichern*.
+

@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: data-protection-overview.html 
+keywords: overview 
+summary:  
+---
+= Datensicherung im Überblick
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+FSX für ONTAP unterstützt Snapshots zum Erstellen von schreibgeschützten, zeitpunktgenauen Images eines Volumes, Volume-Backups zur Erstellung von Offline-Backups mit langer Aufbewahrung der Volumes und Volume-Replizierung zur Erstellung asynchroner Spiegelungen Ihres Volumes in verschiedenen Regionen.
+
+
+
+== Arten der Datensicherung
+
+Datensicherung Ihrer Workloads gewährleistet, dass nach jedem Datenverlust jederzeit ein Recovery durchgeführt werden kann. Informieren Sie sich über die Arten der Datensicherung, bevor Sie die zu verwendenden Funktionen auswählen.
+
+.Snapshots
+Ein Snapshot erstellt ein schreibgeschütztes, zeitpunktgenaues Image eines Volumes innerhalb des Quell-Volumes als Snapshot-Kopie. Sie können die Snapshot-Kopie verwenden, um einzelne Dateien wiederherzustellen oder den gesamten Inhalt eines Volumes wiederherzustellen. Snapshots sind die Grundlage aller Sicherungsmethoden. Mithilfe der Snapshot Kopie, die auf dem Volume erstellt wird, werden das replizierte Volume und die Backup-Datei bei den Änderungen am Quell-Volume synchronisiert.
+
+.Backups
+Sie können Backups Ihrer Daten in der Cloud zur Sicherung und zur langfristigen Aufbewahrung erstellen. Bei Bedarf können Sie ein Volume, einen Ordner oder einzelne Dateien aus dem Backup in demselben oder einem anderen funktionierenden Dateisystem wiederherstellen.
+
+.Replizierung
+Durch Replizierung wird eine sekundäre Kopie Ihrer Daten in einem anderen FSX für ONTAP Filesystem erstellt und die sekundären Daten werden kontinuierlich aktualisiert. Ihre Daten bleiben aktuell und verfügbar, beispielsweise für Disaster Recovery.
+
+Sie können sowohl replizierte Volumes auf einem anderen FSX für ONTAP-Dateisystem als auch Backup-Dateien in der Cloud erstellen. Oder Sie haben die Wahl, ob Sie nur replizierte Volumes oder Backup-Dateien erstellen möchten.
+
+
+
+== Best Practices zum Schutz Ihrer Workload-Daten
+
+FSX für ONTAP bietet mehrere Datensicherungsoptionen, die miteinander kombiniert werden können, um die Recovery-Zeitpunkte und -Zeiten Ihrer Wahl zu erreichen. Für den bestmöglichen Schutz empfehlen wir, sowohl Volume-Snapshots als auch Volume-Backups zu verwenden.
+
+Ein Recovery-Zeitpunkt (Recovery Point Objective, RPO) beschreibt, wie häufig die neueste Kopie Ihrer Daten garantiert wird. Ein Recovery-Zeitvorgabe (Recovery Time Objective, RTO) definiert, wie lange die Wiederherstellung Ihrer Daten dauert.
+
+
+
+== Schützen Sie Ihre Workload-Daten mit Snapshots
+
+Snapshots sind virtuelle Point-in-Time-Versionen eines Volumes, die nach einem Zeitplan erstellt werden. Sie können mithilfe von standardmäßigen Dateisystembefehlen auf Snapshots zugreifen. Snapshots stellen einen RPO von nur einer Stunde bereit. Die RTO hängt von der wiederherzustellenden Datenmenge ab und ist in erster Linie durch das Volume-Durchsatzlimit begrenzt. Snapshots ermöglichen Benutzern auch die Wiederherstellung spezifischer Dateien und Verzeichnisse, wodurch die RTO noch weiter verringert wird. Snapshots verbrauchen nur zusätzlichen Volume-Speicherplatz für Änderungen, die am Volume vorgenommen werden.
+
+
+
+== Schutz von Workload-Daten durch Backups
+
+Volume Backups ermöglichen unabhängige, zeitpunktgenaue Kopien Ihres Volumes. Sie können dazu verwendet werden, alte Backups zu speichern und die erforderliche zweite Kopie Ihrer Daten bereitzustellen. Tägliche, wöchentliche und monatliche Backup-Zeitpläne ermöglichen die Einhaltung von RPOs ab einem Tag. Volume Backups können nur als Ganzes wiederhergestellt werden. Das Erstellen eines Volumes aus einem Backup (RTO) kann je nach Größe des Backups Stunden bis viele Tage dauern.
+
+
+
+== Schutz von Workload-Daten durch Volume-Replizierung
+
+Volume Replication erstellt eine Kopie der neuesten Daten eines Volumes einschließlich aller Snapshots in einer anderen Region. Wenn Sie sich keine mehrstündigen RTOs für eine vollständige Volume-Wiederherstellung von einem Volume-Backup leisten können, sollten Sie eine Volume-Replikation in Erwägung ziehen. Die Volume-Replikation stellt zwar sicher, dass aktuelle Daten in einer anderen Region zur Verfügung stehen, Sie müssen jedoch Ihre Clients anpassen, um das Volume in der anderen Region zu verwenden.
+
+
+
+== Empfehlungen zum Schutz Ihrer Workload-Daten
+
+Berücksichtigen Sie die folgenden Empfehlungen zum Schutz Ihrer Workload-Daten.
+
+* Verwenden Sie Volume-Backups in Verbindung mit Snapshots: Durch die gemeinsame Verwendung der beiden Funktionen wird sichergestellt, dass Sie Ihre Dateien aus Snapshots wiederherstellen und im Falle eines Volume-Verlusts mithilfe von Backups vollständige Wiederherstellungen durchführen können.
+* Definieren Sie eine Volume Backup-Richtlinie: Vergewissern Sie sich, dass die Backup-Richtlinie die Anforderungen Ihres Unternehmens im Hinblick auf das Alter und die Häufigkeit des Backups erfüllt. Wir empfehlen, mindestens zwei tägliche Backups für jedes Volume zu erstellen.
+* Definieren Sie einen Snapshot-Zeitplan: Ältere Snapshots werden weniger wahrscheinlich zur Wiederherstellung von Daten verwendet. Wir empfehlen Ihnen, einen Snapshot-Zeitplan zu definieren, der die abnehmenden Ergebnisse der Aufbewahrung älterer Snapshots im Vergleich zu den Kosten für zusätzliche Snapshot-Kapazität berücksichtigt.
+

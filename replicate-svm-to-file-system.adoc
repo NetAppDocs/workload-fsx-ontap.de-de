@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: replicate-svm-to-file-system.html 
+keywords:  
+summary: Das Replizieren einer Storage-VM in ein anderes FSX für ONTAP-Filesystem bietet bei einem Datenverlust eine schützende Schicht für den Datenzugriff. 
+---
+= Replizieren einer Storage-VM in ein anderes FSX für ONTAP-Dateisystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das Replizieren einer Storage-VM in ein anderes FSX für ONTAP-Filesystem bietet bei einem Datenverlust eine schützende Schicht für den Datenzugriff. Mit diesem Vorgang werden alle Volumes einer Storage-VM in ein anderes FSX for ONTAP-Dateisystem repliziert.
+
+.Bevor Sie beginnen
+Um eine Storage VM auf ein anderes FSX für ONTAP Dateisystem zu replizieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit der zu replizierenden Speicher-VM aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
+. Wählen Sie auf der Registerkarte Storage-VMs das Menü mit den drei Punkten der Storage-VM aus, für die eine SVM repliziert werden soll.
+. Wählen Sie *Replicate Storage VM* aus.
+. Geben Sie auf der Seite Replikation erstellen unter Replikationsziel Folgendes an:
++
+.. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
+.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
+.. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`.
+.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten.
++
+_Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Verwendung der Workload Factory FSX für ONTAP-Benutzeroberfläche. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^]in der Dokumentation zu AWS FSX for NetApp ONTAP.
+
+.. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
++
+Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+
+
+
+. Geben Sie unter Replikationseinstellungen Folgendes an:
++
+.. *Replikationsintervall*: Wählen Sie die Häufigkeit, mit der Snapshots vom Quell-Volume auf das Ziel-Volume übertragen werden.
+.. *Langfristige Aufbewahrung*: Optional können Snapshots für die langfristige Aufbewahrung aktiviert werden.
++
+Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
+
++
+... Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+... Geben Sie für *Create a New Policy* Folgendes an:
++
+.... *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
+.... *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
+
+
+
+
+
+
+. Klicken Sie Auf *Erstellen*.
+
+
+.Ergebnis
+Alle Volumes innerhalb der Storage-VM werden auf das Ziel-Filesystem repliziert.

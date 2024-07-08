@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: change-cifs-share.html 
+keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
+summary: Ändern Sie die CIFS-Freigabe für ein Volume, das den SMB/CIFS-Protokolltyp verwendet. 
+---
+= Ändern Sie die CIFS-Freigabe für ein Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Beim Ändern der CIFS-Freigabe eines Volumes müssen die Benutzer und Gruppen ermittelt werden, denen Zugriff gewährt werden soll, und die Art des Zugriffs, der ihnen gewährt werden soll.
+
+.Bevor Sie beginnen
+Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie fest, welche Art von Zugriff ihnen gewährt werden soll.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Klicken Sie auf der Registerkarte Volumes auf das Menü mit den drei Punkten des Volumes, um die SMB-Freigabe für zu ändern.
+. Wählen Sie *Erweiterte Aktionen* und dann *CIFS-Freigabe bearbeiten*.
+. Geben Sie auf der Seite „CIFS-Freigabe bearbeiten“ Folgendes ein:
++
+.. *Benutzer oder Gruppen*: Geben Sie gültige Benutzer und Gruppen ein. Trennen Sie jeden Eintrag durch einen Semikolon „;“.
+.. *Berechtigungen*: Wählen Sie *volle Kontrolle*, *Lesen/Schreiben*, *Lesen* oder *kein Zugriff*.
+
+
+. Klicken Sie Auf *Anwenden*.
+

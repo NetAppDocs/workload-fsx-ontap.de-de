@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: restore-from-backup.html 
+keywords: restore backup, new volume, volume restoration, backup 
+summary: Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wieder her. 
+---
+= Stellen Sie ein Volume aus einem Backup wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wieder her.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das drei Punkte-Menü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Klicken Sie auf der Registerkarte *Volumes* auf das drei Punkte-Menü für das Volume, das aus einem Backup wiederhergestellt werden soll.
+. Wählen Sie *Data Protection Actions*, *FSX for ONTAP Backup* und dann *Restore from a Backup*.
+. Geben Sie im Dialogfeld Wiederherstellen von einem Backup Folgendes an:
++
+.. *Zieldateisystem*: Wählen Sie das Zieldateisystem aus dem Dropdown-Menü aus.
+.. *Ziel-Speicher-VM*: Wählen Sie die Ziel-Speicher-VM aus dem Dropdown-Menü.
+.. *Sicherungsname*: Wählen Sie den Sicherungsnamen aus dem Dropdown-Menü.
+.. *Name des wiederhergestellten Volumes*: Geben Sie den Namen des wiederhergestellten Volumes ein.
+
+
+. Klicken Sie Auf *Wiederherstellen*.
+

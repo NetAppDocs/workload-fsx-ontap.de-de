@@ -1,0 +1,129 @@
+---
+sidebar: sidebar 
+permalink: explore-savings.html 
+keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP 
+summary: 'Entdecken Sie Einsparungen bei Ihren Storage-Workloads – bei EBS-Storage (Amazon Elastic Block Store), Elastic File System (EFS) und FSX für Windows-Dateiserver im Vergleich zu AWS FSX für NetApp ONTAP.' 
+---
+= Informieren Sie sich über Einsparungen im FSX für ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erkunden Sie die Einsparmöglichkeiten bei Ihren Storage-Workloads, die Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File Server gegen FSX für NetApp ONTAP verwenden.
+
+.Über diese Aufgabe
+Workload Factory stellt einen Storage-Rechner bereit, mit dem Sie die Kosten des Storage auf FSX für ONTAP Filesysteme mit Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File Server Storage vergleichen können. Je nach Ihren Storage-Anforderungen sind FSX für ONTAP-Filesysteme für Sie möglicherweise am kosteneffektivsten.
+
+Sie können die Einsparungen für ein bestimmtes Storage-System oder für bestimmte Volumes mit dem Storage-Rechner ermitteln. Der Storage-Rechner zeigt an, ob der Storage für die Workloads dieser Storage-Systeme weniger kosten würde, wenn Sie ein FSX für das ONTAP-Filesystem einsetzen.
+
+Wenn Workload Factory feststellt, dass Sie durch die Ausführung dieser Workloads auf einem FSX für ONTAP-Filesystem Kosten sparen können, können Sie das Filesystem vom Rechner direkt aus Workload Factory bereitstellen. In einigen Fällen empfiehlt Workload Factory möglicherweise die Implementierung mehrerer Dateisysteme, basierend auf dem aktuell verwendeten Storage und auf den Performance-Merkmalen der Workloads.
+
+
+
+== Geben Sie die Systemanforderungen an
+
+Wenn Sie den _Automate_-Modus ( ) aktiviert haben,link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Weitere Informationen zu den Modi"]indem Sie Ihrem Workload Factory-Konto AWS-Anmeldeinformationen hinzufügen, kann Workload Factory alle Speichersysteme identifizieren, die in Ihrem AWS-Konto verfügbar sind, und die Eigenschaften der Volumes auf diesen Systemen auf der Seite Storage Inventory anzeigen. Das gesuchte AWS Konto basiert auf den Anmeldedaten, die Sie in Ihrem Workload Factory-Konto definiert haben.
+
+Diese Abbildung zeigt die Volumes auf FSX für Windows-Dateiserversystemen, die in einem AWS-Konto erkannt wurden.
+
+image:screenshot-storage-inventory.png["Die Storage-Bestandsseite mit Ihrem aktuellen Inventar der Volumes auf FSX für Windows File Server."]
+
+Wenn Sie keine Anmeldedaten hinzugefügt haben, um Ihr Workload Factory-Konto mit einem AWS-Konto zu verknüpfen (mit dem Namen „_Basic_ Mode“), können Sie die für ein zu implementierendes Storage-System erforderlichen Merkmale manuell eingeben. Der Storage-Rechner ermittelt dann basierend auf den Kosten das beste Filesystem. Sie können diese Methode verwenden, um ein neues FSX für ONTAP-Dateisystem mit _Automate_-Modus als auch einzuumfang.
+
+Diese Abbildung zeigt die Storage-Rechnerseite mit einem Vergleich zwischen FSX für ONTAP und EBS Storage.
+
+image:screenshot-ebs-calculator.png["Die Storage-Rechner-Seite mit einem Vergleich zwischen FSX für ONTAP und Elastic Block Store Storage."]
+
+.Bevor Sie beginnen
+Wenn Workload Factory in Ihrem AWS-Konto Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File Server-Storage-Umgebungen erkennt, müssen Sie link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erteilen _Automatisieren_ Berechtigungen"^] Ihr AWS-Konto angeben.
+
+
+
+== Einsparungen entdecken
+
+Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher *Einsparungen erkunden* und dann *Amazon Elastic Block Store (EBS)* aus.
+. Geben Sie im Rechner für Storage-Einsparungen folgende Informationen an:
++
+.. *Anwendungsfall*: Wählen Sie einen Anwendungsfall aus dem Dropdown-Menü. Der ausgewählte Anwendungsfall legt die Eigenschaften des Filesystems FSX für ONTAP für den Vergleich fest.
+.. *Region*: Wählen Sie im Dropdown-Menü die Region für Ihre EBS-Konfiguration aus.
+.. *Select EBS Volume type*: Wählen Sie den für Ihre Konfiguration verwendeten EBS Volume-Typ aus.
+.. *Anzahl der Volumes*: Geben Sie die Anzahl der Volumes in Ihrer EBS-Konfiguration ein.
+.. *Speichermenge pro Volume (tib)*: Geben Sie die Speichermenge pro Volume in tib ein.
+.. *Snapshot-Frequenz*: Wählen Sie die Snapshot-Frequenz für Ihre EBS-Konfiguration aus.
+.. *Geänderter Betrag pro Snapshot (gib)*: Nur für Snapshot-Speicherung. Geben Sie den pro Snapshot geänderten Betrag in gib ein.
+.. *Bereitgestellte IOPS pro Volume*: Für gp3-, io1- und io2-Volumes. Geben Sie die bereitgestellten IOPS pro Volume ein.
+.. *Durchsatz (MiB/s)*: Nur für gp3-Volumes. Geben Sie den Durchsatz in MiB/s pro Volume ein.
+
+
+
+
+--
+.Amazon FSX für Windows File Server
+--
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher * Einsparungen erkunden * und dann * Amazon FSX für Windows File Server *.
+. Geben Sie im Rechner für Storage-Einsparungen folgende Informationen an:
++
+.. *Anwendungsfall*: Wählen Sie einen Anwendungsfall aus dem Dropdown-Menü. Der ausgewählte Anwendungsfall legt die Eigenschaften des Filesystems FSX für ONTAP für den Vergleich fest.
+.. *Region*: Wählen Sie aus dem Dropdown-Menü die Region für Ihre FSX for Windows File Server-Konfiguration aus.
+.. *Bereitstellungstyp*: Wählen Sie *einzelne Verfügbarkeitszone* oder *mehrere Verfügbarkeitszonen*.
+.. *Speichertyp*: Der SSD-Speichertyp ist standardmäßig ausgewählt.
+.. *Speicherkapazität (tib)*: Geben Sie die Speicherkapazität für die Konfiguration ein.
+.. *Einsparungen durch Deduplizierung (%)*: Geben Sie den Prozentsatz der zu erwartenden Kapazitätseinsparungen durch Deduplizierung ein.
+.. *Snapshot-Frequenz*: Wählen Sie die Snapshot-Frequenz für Ihre Konfiguration.
+.. *Geänderter Betrag pro Snapshot (gib)*: Nur für Snapshot-Speicherung. Geben Sie den pro Snapshot geänderten Betrag in gib ein.
+.. *Bereitgestellte SSD-IOPS*: Geben Sie die bereitgestellten SSD-IOPS ein.
+.. *Durchsatz (MiB/s)*: Geben Sie den Durchsatz in MiB/s ein
+
+
+
+
+--
+.Amazon Elastic File System (EFS)
+--
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher *Einsparungen erkunden* und dann *Amazon Elastic File System (EFS)* aus.
+. Geben Sie im Rechner für Storage-Einsparungen folgende Informationen an:
++
+.. *Anwendungsfall*: Wählen Sie einen Anwendungsfall aus dem Dropdown-Menü. Der ausgewählte Anwendungsfall legt die Eigenschaften des Filesystems FSX für ONTAP für den Vergleich fest.
+.. *Region*: Wählen Sie aus dem Dropdown-Menü die Region für Ihre FSX for Windows File Server-Konfiguration aus.
+.. *File System Type*: Wählen Sie *Regional* oder *one Zone*.
+.. *Speicherkapazität (tib)*: Geben Sie die Speicherkapazität der EFS-Konfiguration ein.
+.. *Daten, auf die häufig zugegriffen wird (%)*: Geben Sie den Prozentsatz der Daten ein, auf die häufig zugegriffen wird.
+.. *Durchsatzmodus*: Wählen Sie *bereitgestellter Durchsatz* oder *Elastischer Durchsatz*.
+.. *Durchsatz (MiB/s)*: Geben Sie den Durchsatz in MiB/s ein
+
+
+
+
+--
+====
+Nachdem Sie Details zur Konfiguration des Speichersystems angegeben haben, überprüfen Sie die Berechnungen und Empfehlungen auf der Seite.
+
+Scrollen Sie zusätzlich nach unten auf der Seite zu *PDF exportieren* oder *Berechnungen anzeigen*.
+
+
+
+== Implementieren von FSX für ONTAP-Dateisysteme
+
+Wenn Sie zu FSX für ONTAP wechseln möchten, um Kosteneinsparungen zu erzielen, klicken Sie auf *Erstellen*, um das Dateisystem direkt aus dem Assistenten zum Erstellen eines FSX für ONTAP-Dateisystems zu erstellen, oder klicken Sie auf *Speichern*, um die empfohlenen Konfigurationen für später zu speichern.
+
+Bereitstellungsmethoden:: Im _Automate_-Modus können Sie das Dateisystem FSX für ONTAP direkt aus Workload Factory bereitstellen. Sie können den Inhalt auch aus dem Codebox-Fenster kopieren und das System mit einer der Codebox-Methoden bereitstellen.
++
+--
+Im _BASIC_-Modus können Sie den Inhalt aus dem Codebox-Fenster kopieren und das Dateisystem FSX for ONTAP mit einer der Codebox-Methoden bereitstellen.
+
+--
+

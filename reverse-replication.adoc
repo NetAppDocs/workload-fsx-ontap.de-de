@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: reverse-replication.html 
+keywords: reverse replication, change replication 
+summary: Wenden Sie eine Replikationsbeziehung um, damit das Ziel-Volume das Quell-Volume wird. 
+---
+= Eine Replikationsbeziehung umkehren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenden Sie eine Replikationsbeziehung um, damit das Ziel-Volume das Quell-Volume wird.
+
+Nachdem Sie die Replikation beendet und Änderungen am Ziel-Volume vorgenommen haben, können Sie diese Änderungen zurück auf das Quell-Volume replizieren. Dieser Prozess ist in einem Disaster-Recovery-Szenario üblich, in dem Sie eine Weile auf dem Ziel-Volume arbeiten und die Rollen der Volumes wechseln möchten.
+
+.Über diese Aufgabe
+Wenn Sie eine Replikation rückgängig machen und wieder aufnehmen, wechselt sie die Quell- und Zielrollen der Volumes, das Ziel-Volume wird das neue Quell-Volume und das Quell-Volume wird das neue Ziel-Volume. Bei der Umkehrung wird auch der Inhalt des neuen Ziel-Volume mit dem Inhalt des neuen Quell-Volume überschrieben. Wenn Sie eine Replikation zweimal umkehren, wird die ursprüngliche Replikationsrichtung neu erstellt.
+
+
+NOTE: Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierung des Quell-Volumes auf das ursprüngliche Quell-Volume geschrieben wurden, bleiben nicht erhalten.
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie die aktuellen und zukünftigen Rollen Ihrer Quell- und Ziel-Volumes kennen, da Änderungen am neuen Ziel-Volume mit dem neuen Quell-Volume überschrieben werden. Bei unsachgemäßer Verwendung kann es zu unbeabsichtigten Datenverlusten kommen.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der Replikationsbeziehung, die umgekehrt werden soll.
+. Wählen Sie *Beziehung umkehren*.
+. Klicken Sie im Dialogfeld Beziehung umkehren auf *Umkehren*.
+

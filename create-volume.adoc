@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: create-volume.html 
+keywords: create volume, FSx for ONTAP volume 
+summary: Nachdem Sie Ihr FSX für ONTAP-Dateisystem eingerichtet haben, können Sie FSX für ONTAP-Volumen erstellen. 
+---
+= Erstellen eines FSX für ONTAP-Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie Ihr FSX für ONTAP-Dateisystem eingerichtet haben, können Sie FSX für ONTAP-Volumen erstellen.
+
+.Über diese Aufgabe
+FSX for ONTAP Volumes sind virtuelle Ressourcen, die zum Gruppieren von Daten verwendet werden, zum Bestimmen, wie die Daten gespeichert werden und zum Bestimmen der Art des Zugriffs auf Ihre Daten. Volumes verbrauchen keine Storage-Kapazität des Filesystems. Die in einem Volume gespeicherten Daten belegen primär SSD-Storage. Je nach der Tiering-Richtlinie des Volumes können die Daten auch Kapazitäts-Pool-Storage in Anspruch nehmen. Sie legen die Größe eines Volumes fest, wenn Sie es erstellen, und Sie können die Größe später ändern.
+
+Die folgenden Protokolle können für Ihre Volumes verwendet werden:
+
+* CIFS: File-Storage-Protokoll für Windows-Betriebssysteme
+* NFS: File-Storage-Protokoll für Unix Betriebssysteme
+* ISCSI: Block-Storage-Protokoll
+
+
+.Bevor Sie beginnen
+Überprüfen Sie die folgenden Voraussetzungen, bevor Sie ein Volume erstellen:
+
+* Sie müssen ein FSX für ONTAP-Dateisystem in Workload Factory haben.
+* Sie benötigen eine Storage-VM.
+* Für den Zugriff auf das Protokoll müssen Sie Folgendes ausführen:
++
+** Um den Zugriff auf das Volume zu konfigurieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+** Sie müssen den Zugriff für das ausgewählte Protokoll konfigurieren, entweder CIFS, NFS oder iSCSI.
+
+
+
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkte-Menü des Dateisystems aus, in dem Sie ein Volume erstellen möchten, und wählen Sie *Verwalten*.
+. Klicken Sie auf der Registerkarte *Übersicht* auf *Volume erstellen*.
+. Geben Sie auf der Seite Volume erstellen unter Allgemeine Details die folgenden Details ein:
++
+.. *Volumenname*: Geben Sie einen Namen für das Volume ein.
+.. *Name der Speicher-VM*: Geben Sie optional einen Namen der Speicher-VM ein.
+.. *Lautstärkestil*: Wählen Sie *FlexVol* oder *FlexGroup* Lautstärke.
++
+Standardmäßig ist ein FlexVol-Volume-Stil ausgewählt.
+
++
+Die Volume-Größe von FlexGroup hängt von der Anzahl der Komponenten ab. Pro Komponente sind 100 gib erforderlich.
+
+.. *Volumengröße*: Geben Sie die Volumengröße und Einheit ein.
++
+Aktivieren Sie optional Volume Autogrow. Diese Option ist verfügbar, wenn Sie *Dateizugriff* als Zugriffstyp für das Volume auswählen.
+
+.. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
+
+
+. Geben Sie unter Zugriff (nur für Dateisysteme mit zugehörigen Links) die folgenden Details an:
++
+.. *Zugriffstyp*: Wählen Sie *Dateizugriff* oder *Zugriff sperren*. Weitere Felder zur Konfiguration des Volume-Zugriffs unterscheiden sich je nach Auswahl.
++
+*** *Dateizugriff*: Ermöglicht mehreren autorisierten Benutzern und Geräten den Zugriff auf das Volume mittels SMB/CIFS, NFS oder dualen Protokollen (SMB/NFS).
++
+Füllen Sie die folgenden Felder aus, um den Dateizugriff auf das Volume einzurichten.
+
++
+.... *NFS-Exportpolitik*: Geben Sie die folgenden Details an, um NFS-Zugriff zu ermöglichen:
++
+..... *Zugriffskontrolle*: Wählen Sie eine *Benutzerdefinierte Exportrichtlinie*, *bestehende Exportpolitik* oder *kein Zugriff auf das Volume* aus dem Dropdown-Menü.
+..... *Name der Exportpolitik*:
++
+Wenn Sie eine benutzerdefinierte Exportrichtlinie ausgewählt haben, wählen Sie im Dropdown-Menü einen vorhandenen Richtliniennamen aus.
+
++
+Wenn Sie eine vorhandene Exportrichtlinie ausgewählt haben, geben Sie einen neuen Richtliniennamen ein.
+
+..... *Export Policy Rule* hinzufügen: Optional können Sie für eine benutzerdefinierte Export Policy Regeln zur Export Policy hinzufügen.
+
+
+.... *CIFS-Share*: Geben Sie den CIFS-Share-Namen ein, um SMB-Zugriff zu ermöglichen.
+
+
+*** *Blockzugriff*: Ermöglicht Hosts, die kritische Geschäftsanwendungen ausführen, den Zugriff auf das Volume über das iSCSI-Protokoll.
++
+Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzurichten.
+
++
+.... *ISCSI-Konfiguration*: Geben Sie die folgenden Details an, um iSCSI für den Blockzugriff auf das Volume zu konfigurieren.
++
+..... Wählen Sie *Neue Initiatorgruppe erstellen* oder *vorhandene Initiatorgruppe zuordnen* aus.
+..... Wählen Sie das *Host-Betriebssystem* aus dem Dropdown-Menü aus.
+..... Geben Sie einen *Initiatorgruppennamen* für eine neue Initiatorgruppe ein.
+..... Fügen Sie unter Host-Initiatoren einen oder mehrere iSCSI Qualified Name (IQN)-Hostinitiatoren hinzu.
+
+
+
+
+
+
+
+
+. Geben Sie unter Effizienz und Sicherung folgende Informationen an:
++
+.. *Speichereffizienz*: Deaktivieren oder aktivieren Sie die Speichereffizienz.
++
+Die Storage-Effizienz wird durch Nutzung der Deduplizierungs- und Komprimierungsfunktionen von ONTAP erreicht. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können.
+
+.. *Snapshot Policy*: Wählen Sie die Snapshot Policy aus, um die Häufigkeit und Aufbewahrung von Snapshots festzulegen.
++
+Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Für benutzerdefinierte Snapshot-Richtlinien müssen Sie eine Verknüpfung zuweisen.
+
++
+`default`:: Diese Richtlinie erstellt automatisch Snapshots nach dem folgenden Zeitplan. Die ältesten Snapshot-Kopien werden gelöscht, um Platz für neuere Kopien zu schaffen:
++
+--
+*** Maximal sechs stündliche Snapshots wurden fünf Minuten nach der Stunde erstellt.
+*** Maximal zwei Snapshots täglich von Montag bis Samstag um 10 Minuten nach Mitternacht.
+*** Maximal zwei wöchentliche Schnappschüsse, die jeden Sonntag um 15 Minuten nach Mitternacht erstellt wurden.
++
+
+NOTE: Snapshot-Zeiten basieren auf der Zeitzone des Dateisystems, die standardmäßig auf Coordinated Universal Time (UTC) eingestellt ist. Informationen zum Ändern der Zeitzone finden Sie in link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Anzeigen und Einstellen der Systemzeitzone"^] der NetApp-Supportdokumentation.
+
+
+
+--
+`default-1weekly`:: Diese Richtlinie funktioniert auf die gleiche Weise wie die `default` Richtlinie, außer dass nur ein Snapshot aus dem wöchentlichen Zeitplan aufbewahrt wird.
+`none`:: Diese Richtlinie erstellt keine Snapshots. Sie können diese Richtlinie Volumes zuweisen, um die automatische Erstellung von Snapshots zu verhindern.
+
+
+.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Volume gespeicherten Daten.
++
+Auto ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes über die Benutzeroberfläche von Workload Factory FSX für ONTAP. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP.
+
+
+
+. Geben Sie unter Erweiterte Konfiguration Folgendes an:
++
+.. *Verbindungspfad*: Geben Sie den Speicherort im Namespace der Speicher-VM ein, an dem das Volume gemountet wird. Der Standard-Verbindungspfad ist `/<volume-name>`.
+.. *Aggregatliste*: Nur für FlexGroup Volumes. Hinzufügen oder Entfernen von Aggregaten Die Mindestanzahl an Aggregaten ist eins.
+.. *Anzahl der Komponenten*: Nur für FlexGroup-Volumes. Geben Sie die Anzahl der Bestandteile pro Aggregat ein. Pro Komponente sind 100 gib erforderlich.
+
+
+. Klicken Sie Auf *Erstellen*.
+

@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: limit-transfer-rate.html 
+keywords: limit max transfer rate, limit transfer rate 
+summary: Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung. Eine unbegrenzte Übertragungsrate kann sich negativ auf die Leistung anderer Anwendungen und Ihres Netzwerks auswirken. 
+---
+= Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung. Eine unbegrenzte Übertragungsrate kann sich negativ auf die Leistung anderer Anwendungen und Ihres Netzwerks auswirken.
+
+.Über diese Aufgabe
+Die Begrenzung der maximalen Übertragungsrate ist optional, wird jedoch empfohlen. Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen.
+
+Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+
+.Bevor Sie beginnen
+Berücksichtigen Sie, wie viel Bandbreite für die Replikation zugewiesen werden soll.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der Replikationsbeziehung, um die maximale Übertragungsrate für zu begrenzen.
+. Wählen Sie *Max. Übertragungsrate bearbeiten*.
+. Wählen Sie im Dialogfeld Max. Übertragungsrate bearbeiten die Option *Limited* aus, und geben Sie die maximale Übertragungsgrenze in MB/s ein
++
+Alternativ wählen Sie *Unlimited*.
+
+. Klicken Sie Auf *Anwenden*.
+

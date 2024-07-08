@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: update-backup-schedule.html 
+keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+summary: Bei Bedarf den FSX for ONTAP-Backup-Zeitplan aktualisieren 
+---
+= FSX für ONTAP-Backup-Zeitplan aktualisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bei Bedarf den FSX for ONTAP-Backup-Zeitplan aktualisieren
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Klicken Sie unter Speicher auf *Gehe zu Lagerbestandsbestand*.
+. Klicken Sie auf der Registerkarte *FSX for ONTAP* auf das Menü mit drei Punkten des Dateisystems, um den Backup-Zeitplan für zu aktualisieren und wählen Sie dann *Verwalten* aus.
+. Klicken Sie unter Information auf das Bleistiftsymbol neben *FSX for ONTAP Backup*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *FSX for ONTAP Backup* schwebt.
+. Geben Sie im Dialogfeld *FSX for ONTAP Backup* Folgendes an:
++
+.. *Tägliche automatische Backups*: Aktivieren oder deaktivieren Sie die Funktion. Wenn Sie die Funktion deaktivieren, klicken Sie auf *Anwenden*. Wenn Sie die Funktion aktivieren, führen Sie die folgenden Schritte aus.
+.. *Automatische Backup-Aufbewahrungsfrist*: Geben Sie die Anzahl der Tage ein, um automatische Backups zu behalten.
+.. *Tägliches automatisches Backup-Fenster*: Wählen Sie entweder *Keine Präferenz* (für Sie wird eine tägliche Backup-Startzeit ausgewählt) oder *Startzeit für tägliche Backups auswählen* und eine Startzeit angeben.
+.. *Wöchentliches Wartungsfenster*: Wählen Sie entweder *Keine Präferenz* (eine wöchentliche Startzeit des Wartungsfensters wird für Sie ausgewählt) oder *Startzeit für 30-minütiges wöchentliches Wartungsfenster* und geben Sie eine Startzeit an.
+
+
+. Klicken Sie Auf *Anwenden*.
+

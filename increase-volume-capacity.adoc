@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: increase-volume-capacity.html 
+keywords: increase capacity, volume capacity 
+summary: Erhöhen Sie die Volume-Kapazität eines Volumes jederzeit manuell. 
+---
+= Höhere Volume-Kapazität
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erhöhen Sie die Volume-Kapazität eines Volumes jederzeit manuell.
+
+Optional können Sie link:edit-volume-autogrow.html["Aktivieren Sie die Autogrow Funktion"] Workload Factory Volume-Kapazität für Sie verwalten lassen.
+
+.Über diese Aufgabe
+Bei einer iSCSI-LUN erhöht dieser Vorgang die Größe der Host-LUN. Nachdem die Kapazität erhöht wurde, befolgen Sie das Verfahren Ihres Host-Betriebssystems, um die neue Größe der LUN zu ermitteln und das Dateisystem der LUN zu erweitern.
+
+.Bevor Sie beginnen
+Um die Volumenkapazität zu erhöhen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des Volumens aus, um die Kapazität zu erhöhen.
+. Wählen Sie *Basic actions* und dann *Erhöhen Sie die Volumenkapazität*.
+. Geben Sie im Dialogfeld „Kapazität erhöhen“ Folgendes an:
++
+.. Wählen Sie eine größere Größe.
+.. Tauschen Sie das Gerät bei Bedarf aus.
+
+
+. Klicken Sie Auf *Erhöhen*.
+

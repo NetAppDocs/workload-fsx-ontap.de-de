@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: delete-file-system.html 
+keywords: file system, delete file system, file system deletion 
+summary: Um ein Dateisystem zu löschen, müssen Sie zunächst alle Volumes, Speicher-VMs oder Replikationsbeziehungen löschen, die mit dem Dateisystem verknüpft sind. 
+---
+= Löschen eines Dateisystems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um ein Dateisystem zu löschen, müssen Sie zunächst alle Volumes, Speicher-VMs oder Replikationsbeziehungen löschen, die mit dem Dateisystem verknüpft sind.
+
+.Schritte
+. Melden Sie sich bei der Workload Factory-Konsole an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Klicken Sie im * FSX für ONTAP * Tab auf das drei Punkte-Menü des FSX für ONTAP-Dateisystems, das Sie löschen möchten.
+. Wählen Sie *Verwalten*.
+. Klicken Sie auf der Registerkarte *Übersicht* auf das Menü mit den drei Punkten.
+. Klicken Sie Auf *Löschen*.
+. Geben Sie im Dialogfeld FSX für ONTAP-Dateisystem löschen den Namen des zu löschenden FSX für ONTAP-Dateisystems ein.
+. Klicken Sie Auf *Löschen*.
+
