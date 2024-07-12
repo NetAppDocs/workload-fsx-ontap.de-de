@@ -14,7 +14,7 @@ summary: Hinzufügen, Aktualisieren oder Entfernen von Storage-VM-Tags für eine
 Mit Tags können Sie Ihre Ressourcen kategorisieren. Sie können Tags für eine Storage-VM jederzeit hinzufügen, bearbeiten und entfernen.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit der zu aktualisierenden Speicher-VM aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.

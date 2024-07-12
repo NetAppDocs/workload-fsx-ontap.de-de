@@ -24,7 +24,7 @@ Beachten Sie die folgenden Einschränkungen, bevor Sie ein Volume aus einem Snap
 
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Klicken Sie auf der Registerkarte *FSX for ONTAP* auf das Menü mit den drei Punkten des Dateisystems mit dem Volume-Snapshot und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.

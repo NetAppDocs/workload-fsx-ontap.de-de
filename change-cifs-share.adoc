@@ -17,7 +17,7 @@ Beim Ändern der CIFS-Freigabe eines Volumes müssen die Benutzer und Gruppen er
 Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie fest, welche Art von Zugriff ihnen gewährt werden soll.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.

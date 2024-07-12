@@ -35,7 +35,7 @@ Vor dem Aufteilen eines geklonten Volume sollten Sie Folgendes beachten:
 
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie die Registerkarte *Volumes*.
 . Wählen Sie auf der Registerkarte Volumes das Menü mit den drei Punkten des Volumes aus, auf dem das geklonte Volume aufgeteilt werden soll.

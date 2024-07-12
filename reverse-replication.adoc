@@ -25,7 +25,7 @@ NOTE: Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierun
 Stellen Sie sicher, dass Sie die aktuellen und zukünftigen Rollen Ihrer Quell- und Ziel-Volumes kennen, da Änderungen am neuen Ziel-Volume mit dem neuen Quell-Volume überschrieben werden. Bei unsachgemäßer Verwendung kann es zu unbeabsichtigten Datenverlusten kommen.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.

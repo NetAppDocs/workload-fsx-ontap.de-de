@@ -34,7 +34,7 @@ Führen Sie die folgenden Schritte aus, um ein einzelnes Volume zu replizieren o
 .Replizieren eines einzelnen Volumes
 --
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei Punkte-Menü des Dateisystems aus, das das zu replizierende Volume enthält, und wählen Sie dann *Verwalten* aus.
 . Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des zu replizierenden Volumes aus.
@@ -80,7 +80,7 @@ Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene R
 .Replizieren aller Volumes in einem Dateisystem
 --
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Klicken Sie auf der Registerkarte FSX for ONTAP auf das Menü mit den drei Punkten des Dateisystems mit den Volumes und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht *Replikation erstellen* aus.

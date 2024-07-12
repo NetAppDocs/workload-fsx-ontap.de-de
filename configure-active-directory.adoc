@@ -17,7 +17,7 @@ Konfigurieren und aktualisieren Sie Active Directory für eine Storage-VM in ein
 Die gleichen Schritte gelten für die Konfiguration und Aktualisierung von Active Directory für eine Speicher-VM.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit der zu aktualisierenden Speicher-VM aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.

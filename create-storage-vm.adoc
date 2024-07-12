@@ -22,7 +22,7 @@ Wenn Sie mit SVMs auf Daten in FSX for ONTAP zugreifen, mounten Ihre Clients und
 Überprüfen Sie die unterstützte Anzahl von Storage-VMs pro Dateisystem. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Management von FSX für ONTAP Storage Virtual Machines"^]In der AWS-Dokumentation finden Sie Informationen zur maximalen Anzahl von SVMs pro Filesystem.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Klicken Sie auf der Registerkarte FSX for ONTAP auf das Menü mit drei Punkten des Dateisystems, um eine Storage-VM für zu erstellen, und wählen Sie *Verwalten* aus.
 . Wählen Sie in der Dateisystemübersicht *Speicher-VM erstellen* aus.

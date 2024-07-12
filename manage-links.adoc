@@ -22,7 +22,7 @@ link:links-overview.html["Weitere Informationen zu Links"] Oder link:create-link
 Sie können die Links anzeigen, die derzeit mit Ihrem Konto verknüpft sind.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie im Menü „Konto“ die Option *Links*.
 +
@@ -43,7 +43,7 @@ image:screenshot-view-link-details.png["Ein Bildschirm, der die FSX für ONTAP-D
 Nachdem Sie einen Link erstellt haben, können Sie ihn Ihrem FSX for ONTAP-Dateisystem zuordnen. Jedes Dateisystem kann nur einem Link in einem einzigen NetApp-Konto zugeordnet werden, aber ein Link kann mit vielen Dateisystemen verknüpft werden.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht *Link zuordnen* aus.
@@ -71,7 +71,7 @@ Sie können einen Link entfernen, den Sie in Ihrer Umgebung nicht mehr verwenden
 Beachten Sie, dass der Link nur aus Workload Factory gelöscht wird - er wird nicht aus Ihrer AWS-Umgebung gelöscht. Sie müssen die Lambda-Funktion aus Ihrem AWS-Konto löschen, nachdem Sie den Link in Workload Factory entfernt haben.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie im Menü „Konto“ die Option *Links*.
 . Wählen Sie auf der Seite Links die Menütaste und dann *Entfernen* aus.

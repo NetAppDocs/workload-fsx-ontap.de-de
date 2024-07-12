@@ -28,7 +28,7 @@ Bestimmen Sie die Clientspezifikationen f체r die Regeln der Exportrichtlinie. G�
 
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . W채hlen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . W채hlen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Men체 des Dateisystems mit dem zu aktualisierenden Volume aus und w채hlen Sie dann *Verwalten*.
 . W채hlen Sie in der Dateisystem체bersicht die Registerkarte *Volumes* aus.

@@ -18,7 +18,7 @@ Alternativ können Sie link:enable-auto-capacity-management.html["Aktivieren Sie
 .Über diese Aufgabe
 Das Erhöhen der Filesystem-Kapazität wirkt sich auf die IOPS für Ihr FSX for ONTAP Filesystem aus.
 
-Bei automatischer beziehen Sie link:provision-iops.html["Bereitstellung von IOPS"] auf ein Dateisystem erhöht sich der IOPS um 3 IOPS bei jeder Erhöhung der SSD-Kapazität um 1 gib. Beispiel: Wenn Sie 100 tib (102,400 gib) SSD-Kapazität bereitstellen, erhöht sich der IOPS um 300 tib (307,200 gib).
+Bei automatischer beziehen Sie link:provision-iops.html["Bereitstellung von IOPS"] auf ein Dateisystem erhöht sich der IOPS um 3 IOPS bei jeder Erhöhung der SSD-Kapazität um 1 gib.
 
 Wenn Sie link:provision-iops.html["Bereitstellung von IOPS"] manuell arbeiten, müssen Sie möglicherweise die IOPS-Zuweisung erhöhen, um die höhere Kapazität des Filesystems zu unterstützen.
 

@@ -23,7 +23,7 @@ NOTE: Der Ausbalancierung eines Volumes wird nur für FlexGroup Volumes unterst�
 Um ein Volume neu auszurichten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
 . Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei Punkte-Menü des Dateisystems aus, das das Volume zum Ausgleichen enthält, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.

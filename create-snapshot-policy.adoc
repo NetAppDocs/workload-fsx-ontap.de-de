@@ -36,7 +36,7 @@ Durch das Anpassen einer Richtlinie können Sie festlegen, wann Snapshots erstel
 
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
 . Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das drei Punkte-Menü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.

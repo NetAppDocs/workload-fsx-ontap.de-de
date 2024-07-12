@@ -14,7 +14,7 @@ summary: Stoppen einer Replikationsbeziehung zwischen Quell- und Ziel-Volumes.
 Wenn Sie eine Replikation anhalten, werden geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume angehalten. Das Ziel-Volume wechselt von schreibgeschützt zu Lese- und Schreibzugriff.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.

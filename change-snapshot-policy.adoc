@@ -20,7 +20,7 @@ Bei diesem Vorgang wird die Häufigkeit der für ein Volume erstellten Snapshots
 Zum Anzeigen vorhandener Snapshot-Richtlinien ist ein Link erforderlich. Um einen Link zuzuordnen, klicken Sie unter *Kontoname* auf *Associate Link*. Kehren Sie dann zu diesem Vorgang zurück.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie die Registerkarte *Volumes*.
 . Wählen Sie auf der Registerkarte *Volumes* das drei Punkte-Menü des Volumes aus, um die Snapshot-Richtlinie zu ändern.

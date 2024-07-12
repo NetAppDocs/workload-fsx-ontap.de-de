@@ -16,7 +16,7 @@ summary: Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replika
 Legen Sie fest, wie oft Snapshots vom Quell-Volume auf das replizierte Volume übertragen werden, um die erforderlichen Point Objectives (RPOs) zu erfüllen.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.

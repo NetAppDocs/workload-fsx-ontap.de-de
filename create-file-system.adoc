@@ -36,7 +36,7 @@ Sie können ein FSX für ONTAP-Dateisystem mit _Quick create_ oder _Advanced cre
 Die schnelle Erstellung ermöglicht Ihnen die Verwendung einer empfohlenen Best-Practice-Konfiguration. Sie können die meisten Einstellungen ändern, nachdem Sie ein FSX für ONTAP-Dateisystem erstellt haben.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher * FSX für ONTAP erstellen *.
 . Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Schnellerstellung* aus.
 +

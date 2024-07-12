@@ -14,7 +14,7 @@ summary: Bei Bedarf den FSX for ONTAP-Backup-Zeitplan aktualisieren
 Bei Bedarf den FSX for ONTAP-Backup-Zeitplan aktualisieren
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Klicken Sie unter Speicher auf *Gehe zu Lagerbestandsbestand*.
 . Klicken Sie auf der Registerkarte *FSX for ONTAP* auf das Menü mit drei Punkten des Dateisystems, um den Backup-Zeitplan für zu aktualisieren und wählen Sie dann *Verwalten* aus.
 . Klicken Sie unter Information auf das Bleistiftsymbol neben *FSX for ONTAP Backup*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *FSX for ONTAP Backup* schwebt.

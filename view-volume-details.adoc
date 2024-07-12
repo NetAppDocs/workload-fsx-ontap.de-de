@@ -16,7 +16,7 @@ Zeigen Sie Volume-Details, Verteilung, Nutzung, Zugriff und Sicherung an.
 Volume-Details werden erst angezeigt, nachdem ein Volume in einem Dateisystem erstellt wurde.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte für das Volume aus, das Sie ändern möchten.
 . Wählen Sie *Basic actions* und dann *View Volume Details*.

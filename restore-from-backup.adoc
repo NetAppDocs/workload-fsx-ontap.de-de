@@ -14,7 +14,7 @@ summary: Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ON
 Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wieder her.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das drei Punkte-Menü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.

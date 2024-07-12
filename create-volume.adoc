@@ -37,7 +37,7 @@ Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkte-Menü des Dateisystems aus, in dem Sie ein Volume erstellen möchten, und wählen Sie *Verwalten*.
 . Klicken Sie auf der Registerkarte *Übersicht* auf *Volume erstellen*.

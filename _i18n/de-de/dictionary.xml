@@ -22,7 +22,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Bevor Sie beginnen</block>
   <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie fest, welche Art von Zugriff ihnen gewährt werden soll.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
-  <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">Melden Sie sich bei der Workload Factory-Konsole an.</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.</block>
   <block id="80ad238f0c32ccf7b3f91d0b7b0ea76b" category="list-text">Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.</block>
@@ -640,7 +639,6 @@
   <block id="e916aa8237833ef72c75def81e289920" category="paragraph">Alternativ können Sie <block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block> mit Workload Factory die Dateisystemkapazität für Sie managen.</block>
   <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">Das Erhöhen der Filesystem-Kapazität wirkt sich auf die IOPS für Ihr FSX for ONTAP Filesystem aus.</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">Bereitstellung von IOPS</block>
-  <block id="b677ee098503d5853f180332f5658aa6" category="paragraph">Bei automatischer beziehen Sie <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> auf ein Dateisystem erhöht sich der IOPS um 3 IOPS bei jeder Erhöhung der SSD-Kapazität um 1 gib. Beispiel: Wenn Sie 100 tib (102,400 gib) SSD-Kapazität bereitstellen, erhöht sich der IOPS um 300 tib (307,200 gib).</block>
   <block id="e7317a971e575aecebe43b18f10a7503" category="paragraph">Wenn Sie <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> manuell arbeiten, müssen Sie möglicherweise die IOPS-Zuweisung erhöhen, um die höhere Kapazität des Filesystems zu unterstützen.</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">Weitere Informationen zu SSD-Storage-Kapazitätsbeschränkungen finden Sie <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> in der Dokumentation zu AWS FSX für NetApp ONTAP.</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">Deaktivieren Sie das automatische Kapazitätsmanagement</block>
@@ -1090,4 +1088,6 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">Stellen Sie IOPS für ein Filesystem bereit</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Referenz</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">Fehlerbehebung</block>
+  <block id="1feb39b44e4fcef3d4be063a2f0c0c2c" category="list-text">Melden Sie sich beim an <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block></block>
+  <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">Bei automatischer beziehen Sie <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> auf ein Dateisystem erhöht sich der IOPS um 3 IOPS bei jeder Erhöhung der SSD-Kapazität um 1 gib.</block>
 </blocks>
