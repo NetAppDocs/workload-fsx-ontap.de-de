@@ -30,6 +30,10 @@ Durch Replizierung wird eine sekundäre Kopie Ihrer Daten in einem anderen FSX f
 
 Sie können sowohl replizierte Volumes auf einem anderen FSX für ONTAP-Dateisystem als auch Backup-Dateien in der Cloud erstellen. Oder Sie haben die Wahl, ob Sie nur replizierte Volumes oder Backup-Dateien erstellen möchten.
 
+Das folgende Diagramm zeigt eine visuelle Darstellung der Datensicherung für FSX für ONTAP Storage durch Snapshots, regionsübergreifende Replizierung und Backup in Objekt-Storage.
+
+image:diagram-fsx-data-protection.png["Screenshot zeigt die Datensicherung für FSX für ONTAP Storage mithilfe von Snapshots, regionsübergreifender Replizierung und Backup in Objekt-Storage."]
+
 
 
 == Best Practices zum Schutz Ihrer Workload-Daten

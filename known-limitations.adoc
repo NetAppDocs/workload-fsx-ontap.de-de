@@ -15,12 +15,6 @@ Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, d
 
 
 
-== Betriebsmodi
-
-_Read_-Modus ist derzeit nicht verfügbar.
-
-
-
 == Verlinken
 
 Für einige Vorgänge wie die Replikation in der Workload Factory-Benutzeroberfläche ist ein Link erforderlich.

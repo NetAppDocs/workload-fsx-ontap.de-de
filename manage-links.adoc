@@ -31,7 +31,7 @@ image:screenshot-links-button.png["Ein Screenshot, der zeigt, wie die Seite „L
 . Wenn Links vorhanden sind, werden die Informationen auf der Übersichtsseite angezeigt.
 . Um die FSX für ONTAP-Dateisysteme anzuzeigen, die mit einem Link verknüpft sind, wählen Sie die Schaltfläche *Ansicht* im Abschnitt „zugewiesene Ressourcen“ aus.
 +
-image:screenshot-view-link-details.png["Ein Bildschirm, der die FSX für ONTAP-Dateisysteme anzeigt, die einen bestimmten Link verwenden."]
+image:screenshot-view-link-details.png["Ein Screenshot, der das FSX für ONTAP-Dateisysteme zeigt, die einen bestimmten Link verwenden."]
 
 . Wenn Sie den Amazon Resource Name (ARN) für den Link benötigen, können Sie neben dem ARN-Feld das _copy_ -Symbol auswählen.
 

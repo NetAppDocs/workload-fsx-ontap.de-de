@@ -28,6 +28,6 @@ Beachten Sie Folgendes, bevor Sie ein Volume löschen:
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des zu löschenden Volumens aus.
 . Wählen Sie *Basic actions* und dann *Delete Volume*.
-. Geben Sie im Dialogfeld „Volume löschen“ den Befehl „delete“ ein, um das Volume zu löschen.
+. Geben Sie im Dialogfeld Volume löschen den Befehl „delete“ ein, um das Volume zu löschen.
 . Klicken Sie Auf *Löschen*.
 
