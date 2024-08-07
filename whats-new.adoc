@@ -15,7 +15,7 @@ Informieren Sie sich über die Neuerungen bei Amazon FSX for NetApp ONTAP.
 
 
 
-== 4. August
+== 4 August 2024
 
 
 
@@ -36,8 +36,10 @@ Der Storage-Rechner gibt Empfehlungen für die Konfiguration des Filesystems FSX
 
 
 
-== Juli 7
+== 7 Juli 2024
 
-Amazon FSX for NetApp ONTAP ist jetzt in der BlueXP Workload Factory allgemein verfügbar.
 
-link:learn-fsx-ontap.html["Weitere Informationen zur BlueXP Workload Factory für Amazon FSX for NetApp ONTAP"].
+
+=== Erstversion von Workload Factory für Datenbanken
+
+Die erste Version umfasst die Möglichkeit, mit Amazon FSX for NetApp ONTAP als Storage-Umgebung für Ihre Datenbank-Workloads die Einsparungen zu untersuchen, Microsoft SQL-Server zu erkennen, zu managen und zu implementieren, Datenbanken zu implementieren und zu klonen und diese Jobs innerhalb der Workload Factory zu überwachen.
