@@ -17,10 +17,29 @@ Informieren Sie sich über die Neuerungen bei Amazon FSX for NetApp ONTAP.
 
 == 4 August 2024
 
-Ungelöste Direktive in <stdin> - include:_whatsnew/2024-08-04.adoc[]
+
+
+=== Terraform-Unterstützung
+
+Mit Terraform aus der Codebox können Dateisysteme und Storage-VMs implementiert und gemanagt werden.
+
+* link:create-file-system.html["Erstellen Sie ein Dateisystem"]
+* link:create-storage-vm.html["Erstellen einer Storage-VM"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Verwenden Sie Terraform aus der Codebox"^]
+
+
+
+
+=== Empfehlungen zu Durchsatz und IOPS im Storage-Rechner
+
+Der Storage-Rechner gibt Empfehlungen für die Konfiguration des Filesystems FSX für ONTAP für Durchsatz und IOPS auf Basis von AWS Best Practices ab, damit Sie optimale Hinweise für Ihre Auswahl erhalten.
 
 
 
 == 7 Juli 2024
 
-Ungelöste Direktive in <stdin> - include:_whatsnew/2024-07-07.adoc[]
+
+
+=== Erste Version von Workload Factory für Amazon FSX for NetApp ONTAP
+
+Amazon FSX for NetApp ONTAP ist jetzt allgemein in Workload Factory verfügbar.
