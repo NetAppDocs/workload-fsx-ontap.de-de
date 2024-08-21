@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: clone-volume.html 
-keywords: clone volume 
+keywords: clone volume, clone, clone data 
 summary: Klonen Sie ein Volume, um zu Testzwecken ein Lese-/Schreib-Volume des ursprünglichen Volumes zu erstellen. 
 ---
 = Klonen Sie ein Volume
