@@ -23,8 +23,8 @@ Informieren Sie sich über die Neuerungen bei Amazon FSX for NetApp ONTAP.
 
 Mit Terraform aus der Codebox können Dateisysteme und Storage-VMs implementiert und gemanagt werden.
 
-* link:create-file-system.html["Erstellen Sie ein Dateisystem"]
-* link:create-storage-vm.html["Erstellen einer Storage-VM"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Erstellen Sie ein Dateisystem"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-storage-vm.html["Erstellen einer Storage-VM"]
 * link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Verwenden Sie Terraform aus der Codebox"^]
 
 
@@ -42,4 +42,4 @@ Der Storage-Rechner gibt Empfehlungen für die Konfiguration des Filesystems FSX
 
 === Erste Version von Workload Factory für Amazon FSX for NetApp ONTAP
 
-Amazon FSX for NetApp ONTAP ist jetzt allgemein in Workload Factory verfügbar.
+Amazon FSX for NetApp ONTAP ist in Workload Factory allgemein verfügbar.
