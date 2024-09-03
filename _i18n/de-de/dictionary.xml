@@ -1049,7 +1049,6 @@
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">Das folgende Diagramm zeigt eine visuelle Darstellung der Datensicherung für FSX für ONTAP Storage durch Snapshots, regionsübergreifende Replizierung und Backup in Objekt-Storage.</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">Screenshot zeigt die Datensicherung für FSX für ONTAP Storage mithilfe von Snapshots, regionsübergreifender Replizierung und Backup in Objekt-Storage.</block>
   <block id="29bed1477f8a04f4f702564c7e6bb224" category="paragraph"><block ref="29bed1477f8a04f4f702564c7e6bb224" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d9c70344ba40b88fdb8c4d8e5b34884e" category="list-text">Geben Sie im Dialogfeld Volume löschen den Befehl „delete“ ein, um das Volume zu löschen.</block>
   <block id="0d9b99cb00c934d1cd88332ae901fc26" category="section-title">Tools zur Verwendung von Workload Factory</block>
   <block id="76737aecf42a629e0422271332fcc5a3" category="paragraph">Sie können BlueXP Workload Factory mit folgenden Tools verwenden:</block>
   <block id="0fc51b33bbeafc6425a9bd19ec449966" category="list-text">*Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt</block>
@@ -1126,4 +1125,17 @@
   <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSX for NetApp ONTAP ist jetzt allgemein in Workload Factory verfügbar.</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">Dateisysteme und Storage-VMs können Sie nun mit Terraform von der Codebox implementieren.</block>
+  <block id="f0881d896f399a09e86122a09c00b74d" category="doc">Lesemodus-Unterstützung für Speicherverwaltung</block>
+  <block id="8db376980442524a58ebd917532846d7" category="paragraph">Der Lesemodus steht für die Speicherverwaltung in Workload Factory zur Verfügung. Der Lesemodus verbessert die Erfahrung des Grundmodus durch Hinzufügen von schreibgeschützten Berechtigungen, sodass die Infrastructure-as-Code-Vorlagen mit Ihren spezifischen Variablen gefüllt werden. Die Infrastruktur-als-Code-Vorlagen können direkt über Ihr AWS-Konto ausgeführt werden, ohne dass dafür Änderungsberechtigungen für Workload Factory erteilt werden müssen.</block>
+  <block id="06fdd4e2a129920e1eda56425068ba01" category="inline-link-macro">Weitere Informationen zum Lesemodus</block>
+  <block id="2d68ad2bd6b1f5ddb456706e84602c5e" category="paragraph"><block ref="2d68ad2bd6b1f5ddb456706e84602c5e" category="inline-link-macro-rx"></block></block>
+  <block id="fc30083e7a76ed4c8eb6167ea377c198" category="section-title">Unterstützung für Backup vor dem Löschen von Volumes</block>
+  <block id="8b97ffb47ece0280994594aa00a04a55" category="paragraph">Sie können jetzt ein Volume sichern, bevor Sie es löschen. Die Sicherung bleibt im Dateisystem, bis sie gelöscht wird.</block>
+  <block id="8fb924f94cef9a4615d9910253ac7353" category="paragraph"><block ref="8fb924f94cef9a4615d9910253ac7353" category="inline-link-macro-rx"></block></block>
+  <block id="7dd9587dbbaf30e59e9c0550bb88b5cd" category="list-text">Gehen Sie im Dialogfeld Volume löschen wie folgt vor:</block>
+  <block id="ad3bbbefb363832c16c692a050c01cc8" category="list-text">Klicken Sie optional auf *Backup des Volumes*, um das Volume vor dem Löschen zu sichern.</block>
+  <block id="54ae4e9761548739e1dcb7a7a20751ad" category="paragraph">Das Backup bleibt im Dateisystem, bis Sie es manuell löschen.</block>
+  <block id="26983a904e0717c520032a2178795368" category="list-text">Klicken Sie Auf *Weiter*.</block>
+  <block id="b1bb1fd299d4d0d5a0bcf89deacb85de" category="list-text">Geben Sie „delete“ ein, um das Volume zu löschen.</block>
+  <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 September 2024</block>
 </blocks>
