@@ -19,7 +19,7 @@ Die gleichen Schritte gelten für die Konfiguration und Aktualisierung von Activ
 .Schritte
 . Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit der zu aktualisierenden Speicher-VM aus und wählen Sie dann *Verwalten*.
+. Klicken Sie im Register *FSX for ONTAP* auf das drei-Punkt-Menü des Dateisystems mit der zu aktualisierenden Speicher-VM und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
 . Wählen Sie auf der Registerkarte Storage VMs das Menü mit den drei Punkten der Storage-VM aus, für die Active Directory konfiguriert werden soll.
 . Wählen Sie *AD-Konfiguration verwalten*.
@@ -39,13 +39,13 @@ Die Organisationseinheit ist der Distinguished Path Name der Organisationseinhei
 
 .. *Delegierte Administratorengruppe*: Geben Sie optional die Gruppe Delegierte Dateisystemadministratoren ein.
 +
-Die Gruppe „Gelöschte Administratoren“ ist der Name der Gruppe in Ihrem Active Directory, die Ihr Dateisystem verwalten kann.
+Die Gruppe delegierte Administratoren ist der Name der Gruppe in Ihrem Active Directory, die Ihr Dateisystem verwalten kann.
 
 +
 Wenn Sie Microsoft AD von AWS Managed verwenden, müssen Sie eine Gruppe wie AWS Delegated FSX Administrators, AWS Delegated Administrators oder eine benutzerdefinierte Gruppe mit delegierten Berechtigungen für die Organisationseinheit angeben.
 
 +
-Wenn Sie einem selbstverwalteten AD beitreten, verwenden Sie den Namen der Gruppe in Ihrem AD. Die Standardgruppe ist `Domain Admins`.
+Wenn Sie eine Verbindung zu einem selbst verwalteten AD herstellen, verwenden Sie den Namen der Gruppe in Ihrem AD. Die Standardgruppe ist `Domain Admins`.
 
 
 

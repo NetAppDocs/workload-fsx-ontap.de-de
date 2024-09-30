@@ -11,7 +11,7 @@ summary: Teilen Sie ein Klon-FlexVol-Volume von seinem übergeordneten Volume au
 
 
 [role="lead"]
-Teilen Sie ein Klon-FlexVol-Volume von seinem übergeordneten Volume auf, um den Klon zu einem normalen FlexVol Volume mit Lese- und Schreibzugriffen zu machen.
+Teilen Sie eine geklonte FlexVol volume von seinem übergeordneten Volume auf, um für den Klon eine normale Lese-/Schreib-FlexVol volume zu erstellen.
 
 Auf Daten kann auf dem Klon und auf dem übergeordneten Element während der Teilung zugegriffen werden. Der Split-Vorgang aktualisiert nur Metadaten und erfordert minimale I/O-Vorgänge. Es werden keine Datenblöcke kopiert.
 

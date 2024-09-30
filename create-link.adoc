@@ -22,7 +22,14 @@ Sie können einen Link in Ihrem Konto erstellen, wenn Sie ein FSX für ONTAP-Dat
 
 Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Link zu erstellen.
 
+Sie haben zwei Optionen zum Erstellen von Verknüpfungen - automatisch oder manuell.
+
+* Automatisch: Erstellt eine Verknüpfung mit automatischer Registrierung über Workload Factory. Ein automatisch erstellter Link erfordert Token für die Workload Factory-Automatisierung, und der CloudFormation-Code ist kurzlebig. Er kann nur bis zu 6 Stunden verwendet werden.
+* Manuell: Erstellt einen Link mit manueller Registrierung. Der CloudFormation-Code bleibt bestehen und gibt Ihnen mehr Zeit, um den Vorgang abzuschließen. Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Security und DevOps zusammenarbeiten, die möglicherweise zunächst die erforderlichen Berechtigungen für die Erstellung der Verbindung erteilen müssen.
+
+
 .Bevor Sie beginnen
+* Sie sollten überlegen, welche Link-Erstelloption Sie verwenden.
 * Sie müssen über Anmeldedaten verfügen, um sich bei Ihrem AWS-Konto anzumelden.
 * Sie müssen über die folgenden Berechtigungen in Ihrem AWS-Konto verfügen, wenn Sie einen Link mit einem CloudFormation-Stack hinzufügen:
 +
@@ -64,6 +71,12 @@ Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Li
 ====
 
 
+[role="tabbed-block"]
+====
+.Automatisch erstellen
+--
+Verwenden Sie CloudFormation, um den Link in Workload Factory automatisch zu erstellen und zu registrieren.
+
 .Schritte
 . Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
@@ -79,9 +92,9 @@ Das AWS-Konto und die zusätzlichen Informationen für Konto, Standort und Siche
 
 
 
-. Wählen Sie *Umleiten auf CloudFormation*.
+. Klicken Sie Auf *Erstellen*.
 +
-Es wird ein Dialogfeld angezeigt, in dem erläutert wird, wie der Link vom AWS CloudFormation-Service erstellt wird.
+Das Dialogfeld „Umleiten auf CloudFormation“ wird angezeigt und erläutert, wie der Link vom AWS CloudFormation-Service erstellt wird.
 
 . Wählen Sie *Weiter*, um die AWS-Verwaltungskonsole zu öffnen, und melden Sie sich dann beim AWS-Konto für dieses FSX for ONTAP-Dateisystem an.
 . Wählen Sie auf der Seite „schneller Stapel erstellen“ unter „Funktionen“ *Ich bestätige, dass AWS CloudFormation IAM-Ressourcen erstellen könnte*.
@@ -102,5 +115,46 @@ Sie können den Status der Verknüpfungserstellung auf der Seite Ereignisse übe
 . Kehren Sie zur Workload Factory-Schnittstelle zurück, und Sie werden sehen, dass der Link mit dem FSX für ONTAP-Dateisystem verknüpft ist.
 
 
+--
+.Manuell erstellen
+--
+Mit dieser Option extrahieren Sie den ARN für den Link aus AWS CloudFormation und melden ihn hier. Workload Factory registriert den Link manuell für Sie.
+
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht *Link zuordnen* aus.
+. Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
+. Geben Sie auf der Seite „Link erstellen“ Folgendes an:
++
+.. *Linkname*: Geben Sie den Namen ein, den Sie für diesen Link verwenden möchten. Der Name muss innerhalb Ihres Kontos eindeutig sein.
+.. *Tags*: Fügen Sie optional alle Tags hinzu, die Sie mit diesem Link verknüpfen möchten, damit Sie Ihre Ressourcen einfacher kategorisieren können. Sie könnten beispielsweise ein Tag hinzufügen, das diesen Link als von FSX für ONTAP-Dateisystemen verwendet identifiziert.
+.. *Link-Registrierung*: Klicken Sie auf den Dropdown-Pfeil, um die Anweisungen für die Registrierung des Links aus dem AWS CloudFormation Service erweitern. Befolgen Sie die Anweisungen.
++
+Beachten Sie, dass Lambda drei Berechtigungen erteilt werden, wenn Sie die CloudFormation-Vorlage starten. Workload Factory verwendet diese Berechtigungen, wenn Links verwendet werden.
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
++
+Nachdem Sie den Stapel erfolgreich erstellt haben, fügen Sie die Lambda-ARN in das Textfeld ein.
+
+.. Das AWS-Konto und die zusätzlichen Informationen für Konto, Standort und Sicherheitsgruppe werden basierend auf dem FSX für ONTAP-Dateisystem automatisch abgerufen.
+
+
+. Klicken Sie Auf *Erstellen*.
++
+Sie können den Status der Verknüpfungserstellung auf der Seite Ereignisse überwachen. Dies sollte nicht länger als 5 Minuten dauern.
+
+. Kehren Sie zur Workload Factory-Schnittstelle zurück, und Sie werden sehen, dass der Link mit dem FSX für ONTAP-Dateisystem verknüpft ist.
+
+
+--
+====
 .Ergebnis
 Der von Ihnen erstellte Link wird dem Dateisystem FSX for ONTAP zugeordnet.
