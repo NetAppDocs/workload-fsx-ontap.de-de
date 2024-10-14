@@ -63,7 +63,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 == ISCSI-Protokoll unterstützt
 
 * Das iSCSI-Protokoll wird nur für Scale-up-Implementierungen unterstützt. ^1^
-* Das iSCSI-Protokoll ist nur für FlexGroup-Volumes verfügbar. ^1^
+* Das iSCSI-Protokoll ist nur für FlexVol-Volumes verfügbar. ^1^
 * Es kann nur eine einzelne LUN pro Volume konfiguriert werden.
 
 
