@@ -16,9 +16,9 @@ Sie können ein Volumen in Ihrem FSX für ONTAP-Dateisystem jederzeit löschen. 
 .Bevor Sie beginnen
 Beachten Sie Folgendes, bevor Sie ein Volume löschen:
 
+* Replikationsbeziehungen: Sie müssen link:delete-replication.html["Löschen Sie alle vorhandenen Replikationsbeziehungen"] für dieses Volume vor dem Löschen des Volumes vorgehen, damit keine unterbrochenen Beziehungen erhalten bleiben.
 * Lokale Schnappschüsse: Alle Snapshots, die mit diesem FSX für ONTAP-Dateisystem verbunden sind, werden dauerhaft gelöscht.
 * FSX für ONTAP-Backup: FSX für ONTAP-Backup-Kopien werden bleiben und Sie können sie weiterhin verwenden.
-* Replikationsbeziehungen: Wir empfehlen, dass Sie link:delete-replication.html["Löschen Sie alle vorhandenen Replikationsbeziehungen"] für dieses Volume vor dem Löschen des Volumes, so dass keine unterbrochenen Beziehungen bleiben.
 
 
 .Schritte
