@@ -11,10 +11,7 @@ summary: Die Snapshot-Richtlinie eines Volumes kann jederzeit aktualisiert werde
 
 
 [role="lead"]
-Die Snapshot-Richtlinie eines Volumes kann jederzeit aktualisiert werden.
-
-.Über diese Aufgabe
-Bei diesem Vorgang wird die Häufigkeit der für ein Volume erstellten Snapshots aktualisiert oder automatische Snapshots deaktiviert.
+Aktualisieren Sie die Häufigkeit der für ein Volume erstellten Snapshots, oder deaktivieren Sie die automatischen Snapshots jederzeit.
 
 .Bevor Sie beginnen
 Zum Anzeigen vorhandener Snapshot-Richtlinien ist ein Link erforderlich. Um einen Link zuzuordnen, klicken Sie unter *Kontoname* auf *Associate Link*. Kehren Sie dann zu diesem Vorgang zurück.
@@ -22,6 +19,8 @@ Zum Anzeigen vorhandener Snapshot-Richtlinien ist ein Link erforderlich. Um eine
 .Schritte
 . Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei Punkte-Menü des FSX für ONTAP-Dateisystems aus, das das Volume mit der zu aktualisierenden Snapshot-Richtlinie enthält, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie auf der Registerkarte Übersicht des Dateisystems die Registerkarte *Volumes* aus.
 . Wählen Sie die Registerkarte *Volumes*.
 . Wählen Sie auf der Registerkarte *Volumes* das drei Punkte-Menü des Volumes aus, um die Snapshot-Richtlinie zu ändern.
 . Wählen Sie *Data Protection actions*, *Snapshots* und dann *Manage Snapshot Policies*.

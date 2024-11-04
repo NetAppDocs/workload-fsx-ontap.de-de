@@ -123,8 +123,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 .Schritte
 . Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie im Storage Inventory die Registerkarte *Elastic Block Store (EBS)* aus.
-. Wählen Sie die Instanz(en) aus, die mit FSX für ONTAP verglichen werden soll, und klicken Sie auf *Einsparungen erkunden*.
+. Wählen Sie im Lagerbestandsbestand die Registerkarte *Einsparungen erkunden* aus.
+. Wählen Sie auf der Registerkarte *Elastic Block Store (EBS)* die Instanz(en) aus, die mit FSX for ONTAP verglichen werden soll, und klicken Sie auf *Einsparungen erkunden*.
 . Der Rechner für Storage-Einsparungen wird angezeigt. Die folgenden Merkmale des Speichersystems werden basierend auf den ausgewählten Instanzen vorausgefüllt:
 +
 .. *Anwendungsfall*: Der Anwendungsfall für Ihre Konfiguration. Sie können den Anwendungsfall bei Bedarf ändern.
@@ -142,7 +142,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 .Schritte
 . Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie im Speicher-Inventar die Registerkarte * FSX für Windows-Dateiserver* aus.
+. Wählen Sie im Lagerbestandsbestand die Registerkarte *Einsparungen erkunden* aus.
+. Wählen Sie die Registerkarte *FSX für Windows File Server* aus.
 . Wählen Sie die Instanz(en) aus, die mit FSX für ONTAP verglichen werden soll, und klicken Sie auf *Einsparungen erkunden*.
 . Der Rechner für Storage-Einsparungen wird angezeigt. Die folgenden Merkmale des Speichersystems werden basierend auf dem Bereitstellungstyp der ausgewählten Instanz(en) vorausgefüllt:
 +
@@ -161,7 +162,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 .Schritte
 . Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie in der Lagerbestandsliste die Registerkarte *Elastic File System (EFS)* aus.
+. Wählen Sie im Lagerbestandsbestand die Registerkarte *Einsparungen erkunden* aus.
+. Wählen Sie die Registerkarte *Elastic File System (EFS)* aus.
 . Wählen Sie die Instanz(en) aus, die mit FSX für ONTAP verglichen werden soll, und klicken Sie auf *Einsparungen erkunden*.
 . Der Rechner für Storage-Einsparungen wird angezeigt. Die folgenden Merkmale des Speichersystems werden basierend auf den ausgewählten Instanzen vorausgefüllt:
 +

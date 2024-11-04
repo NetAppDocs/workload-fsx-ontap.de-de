@@ -25,7 +25,8 @@ Damit ein geklontes Volume alle Daten des übergeordneten Volume und alle neuen 
 .Schritte
 . Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie die Registerkarte *Volumes*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei Punkte-Menü des FSX für ONTAP-Dateisystems aus, das das zu klonende Volume enthält, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie auf der Registerkarte Übersicht des Dateisystems die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des Volumes aus, das geklont werden soll.
 . Wählen Sie *Data Protection actions* und dann *Clone Volume*.
 . Geben Sie im Dialogfeld Volume klonen einen Namen für den Volume-Klon ein.
