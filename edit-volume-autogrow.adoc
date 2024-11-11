@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: Aktivieren Sie Volume Autogrow, damit Workload Factory Volume-Kapazität für Sie managen kann. Sie können sie jederzeit deaktivieren. 
+summary: Aktivieren Sie Volume Autogrow, damit BlueXP  Workload Factory Volume-Kapazität für Sie verwalten kann. Sie können sie jederzeit deaktivieren. 
 ---
-= Aktivieren Sie Autogrow
+= Aktivieren Sie Volume Autogrow in der BlueXP  Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aktivieren Sie Volume Autogrow, damit Workload Factory Volume-Kapazität für Sie managen kann. Sie können sie jederzeit deaktivieren.
+Aktivieren Sie Volume Autogrow, damit BlueXP  Workload Factory Volume-Kapazität für Sie verwalten kann. Sie können sie jederzeit deaktivieren.
 
 Optional können Sie die Volume-Kapazität eines Volumes jederzeit manuell über die erhöhen link:increase-volume-capacity.html["Erhöhen Sie die Volume-Kapazität"].
 
@@ -19,15 +19,15 @@ Optional können Sie die Volume-Kapazität eines Volumes jederzeit manuell über
 NOTE: Volume Autogrow wird für iSCSI Volumes nicht unterstützt.
 
 .Bevor Sie beginnen
-Um Volumen Autogrow zu aktivieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+Um Volumen Autogrow zu aktivieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte FSX for ONTAP das Menü mit den drei Punkten des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte FSX for ONTAP das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte für das Volume aus, das Sie ändern möchten.
+. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü für das Volume aus, das Sie ändern möchten.
 . Wählen Sie *Basic actions* und dann *Edit Volume Autogrow*.
 . Aktivieren Sie im Dialogfeld „Autogrow bearbeiten“ die Option „Volume Autogrow“.
-. Klicken Sie Auf *Anwenden*.
+. Wählen Sie *Anwenden*.
 

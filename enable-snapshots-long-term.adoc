@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: enable-snapshots-long-term.html 
 keywords: snapshot long-term retention, enable long-term retention 
-summary: Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replikationsbeziehung. 
+summary: Aktivieren Sie Snapshots für die langfristige Aufbewahrung, wodurch Sie spezifische Snapshots für langfristiges Disaster Recovery replizieren können. 
 ---
 = Aktivieren und bearbeiten Sie Snapshots für die langfristige Aufbewahrung
 :allow-uri-read: 
@@ -11,24 +11,24 @@ summary: Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replika
 
 
 [role="lead"]
-Mit Hilfe von Snapshots zur langfristigen Aufbewahrung können Sie spezifische Snapshots für langfristige Disaster Recovery replizieren.
+In der BlueXP  Workload Factory können Sie Snapshots für die langfristige Aufbewahrung aktivieren, mit denen Sie spezifische Snapshots für langfristige Disaster Recovery replizieren können.
 
-Dank der langfristigen Aufbewahrung können Business-Services auch bei einem vollständigen Standortausfall weiterlaufen und Applikationen mithilfe einer sekundären Kopie einen transparenten Failover unterstützen.
+Dank der langfristigen Aufbewahrung können Business Services auch bei einem vollständigen Standortausfall weiterarbeiten und einen transparenten Failover von Applikationen mithilfe einer sekundären Kopie unterstützen.
 
 Die gleichen Schritte gelten für die Aktivierung und Bearbeitung von Snapshots für die langfristige Aufbewahrung.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte des Zeitplans für die Replikationsbeziehung, der geändert werden soll.
+. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü des Zeitplans für die Replikationsbeziehung aus, das geändert werden soll.
 . Wählen Sie *langfristige Aufbewahrung bearbeiten*.
 . Aktivieren oder deaktivieren Sie im Dialogfeld „langfristige Aufbewahrung bearbeiten“ Snapshots für die langfristige Aufbewahrung.
-. Wenn Sie Snapshots für die langfristige Aufbewahrung deaktivieren möchten, klicken Sie auf *Anwenden*, um diesen Vorgang abzuschließen.
+. Wenn Sie Snapshots für die langfristige Aufbewahrung deaktivieren möchten, wählen Sie *Anwenden*, um diesen Vorgang abzuschließen.
 . Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, wählen Sie zwischen der Auswahl einer vorhandenen Richtlinie oder dem Erstellen einer neuen Richtlinie.
 +
-.. Wählen Sie für eine vorhandene Richtlinie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+.. Um eine vorhandene Richtlinie zu verwenden, wählen Sie sie aus dem Dropdown-Menü aus.
 .. Um eine neue Richtlinie zu erstellen, geben Sie Folgendes an:
 +
 ... *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
@@ -38,5 +38,5 @@ Die gleichen Schritte gelten für die Aktivierung und Bearbeitung von Snapshots 
 
 
 
-. Klicken Sie Auf *Anwenden*.
+. Wählen Sie *Anwenden*.
 

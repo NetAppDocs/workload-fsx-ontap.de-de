@@ -11,23 +11,23 @@ summary: Automatische Provisionierung oder manuelle Bereitstellung von SSD-IOPS 
 
 
 [role="lead"]
-Automatische Provisionierung oder manuelle Bereitstellung von SSD-IOPS für ein FSX für ONTAP Filesystem.
+Automatische Provisionierung oder manuelle Bereitstellung von SSD-IOPS für ein FSX für ONTAP-Filesystem in einer Fabrik mit BlueXP -Workloads.
 
 .Über diese Aufgabe
 Sie können die automatische SSD-IOPS-Bereitstellung für ein FSX-Dateisystem aktivieren oder IOPS manuell bereitstellen.
 
 Automatisch bereitgestellte IOPS werden als 3 IOPS pro gib berechnet.
 
-Wenn Sie IOPS manuell bereitstellen, müssen Sie möglicherweise vorher den IOPS-Wert erhöhen link:increase-file-system-capacity.html["Erhöhen Sie die Kapazität des Filesystems"].
+Wenn Sie IOPS manuell bereitstellen, müssen Sie eventuell zuvor die IOPS erhöhenlink:increase-file-system-capacity.html["Erweiterung der Dateisystemkapazität"].
 
-Weitere Informationen zu IOPS-Limits finden link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] Sie in der Dokumentation zu AWS FSX für NetApp ONTAP.
+Weitere Informationen zu IOPS-Limits finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] in der Dokumentation zu AWS FSX für NetApp ONTAP.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
-. Klicken Sie unter Speicher auf *Gehe zu Lagerbestandsbestand*.
-. Klicken Sie auf der Registerkarte *FSX for ONTAP* auf das Menü mit drei Punkten des Dateisystems, um IOPS bereitzustellen, und wählen Sie dann *Verwalten*.
-. Klicken Sie unter Information auf das Bleistiftsymbol neben *IOPS Allocation*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *IOPS Allocation* schwebt.
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, für das IOPS bereitgestellt werden soll, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie unter Information das Bleistiftsymbol aus, das neben dem Dropdown-Pfeil erscheint, wenn die Maus über die Zeile *IOPS Allocation* schwebt.
 . Wählen Sie im Dialogfeld bereitgestellte IOPS *automatisch* oder *vom Benutzer bereitgestellt* aus.
-. Wenn Sie *User provisioned* auswählen, geben Sie den Wert *IOPS* ein.
-. Klicken Sie Auf *Anwenden*.
+. Wenn Sie *User provisioned* auswählen, geben Sie den gewünschten *IOPS-Wert* ein.
+. Wählen Sie *Anwenden*.
 

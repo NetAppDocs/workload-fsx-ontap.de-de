@@ -4,7 +4,7 @@ permalink: delete-svm.html
 keywords: delete storage vm, delete svm, remove svm 
 summary: 'Löschen Sie eine Storage-VM (SVM), die Sie nicht mehr benötigen, aus der FSX for ONTAP-Filesystem-Konfiguration.' 
 ---
-= Löschen einer Speicher-VM
+= Löschen Sie eine Storage-VM in der BlueXP -Workload-Fabrik
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -21,12 +21,12 @@ Löschen Sie eine Storage-VM (SVM), die Sie nicht mehr benötigen, aus der FSX f
 
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte Storage VMs das Menü mit den drei Punkten der Storage-VM aus, für die Active Directory konfiguriert werden soll.
+. Wählen Sie auf der Registerkarte Storage VMs das drei-Punkt-Menü der Storage-VM aus, für die Active Directory konfiguriert werden soll.
 . Wählen Sie *Speicher-VM löschen*.
 . Geben Sie im Dialogfeld „Storage-VM löschen“ den Befehl „delete“ ein, um die Storage-VM zu löschen.
-. Klicken Sie Auf *Löschen*.
+. Wählen Sie *Löschen*.
 

@@ -4,14 +4,14 @@ permalink: initialize-replication.html
 keywords: initialize replication, begin replication, start replication 
 summary: Initialisieren Sie eine Replikationsbeziehung zwischen Quell- und Ziel-Volumes. 
 ---
-= Initialisieren Sie eine Replikationsbeziehung
+= Initialisieren Sie eine Replizierungsbeziehung in der BlueXP -Workload-Fabrik
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Initialisieren Sie eine Replikationsbeziehung zwischen Quell- und Ziel-Volumes.
+Initialisieren Sie eine Replizierungsbeziehung zwischen Quell- und Ziel-Volumes in der BlueXP -Workload-Fabrik.
 
 .Über diese Aufgabe
 Die Initialisierung führt einen _Baseline_ Transfer durch: Es erstellt einen Snapshot des Quell-Volumes und überträgt dann den Snapshot und alle Datenblöcke, die es auf das Ziel-Volume verweist.
@@ -20,11 +20,11 @@ Die Initialisierung führt einen _Baseline_ Transfer durch: Es erstellt einen Sn
 Denken Sie daran, wenn Sie diesen Vorgang abschließen möchten. Initialisierung kann sehr zeitaufwendig sein. Möglicherweise möchten Sie den Basistransfer in Zeiten geringerer Auslastung durchführen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der zu initialisierenden Replikationsbeziehung.
+. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der zu initialisierenden Replikationsbeziehung aus.
 . Wählen Sie *Initialisieren*.
-. Klicken Sie im Dialogfeld Beziehung initialisieren auf *Initialisieren*.
+. Wählen Sie im Dialogfeld Beziehung initialisieren die Option *Initialisieren* aus.
 

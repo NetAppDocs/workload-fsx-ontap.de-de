@@ -2,27 +2,27 @@
 sidebar: sidebar 
 permalink: change-snapshot-policy.html 
 keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
-summary: Die Snapshot-Richtlinie eines Volumes kann jederzeit aktualisiert werden. 
+summary: Die Snapshot-Richtlinie eines Volumes in der BlueXP -Workload-Fabrik kann jederzeit aktualisiert werden. 
 ---
-= Ändern der Snapshot-Richtlinie eines Volumes
+= Ändern Sie die Snapshot-Richtlinie eines Volumes in der BlueXP  Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aktualisieren Sie die Häufigkeit der für ein Volume erstellten Snapshots, oder deaktivieren Sie die automatischen Snapshots jederzeit.
+Aktualisieren Sie die Häufigkeit der für ein Volume erstellten Snapshots, oder deaktivieren Sie automatische Snapshots jederzeit in der BlueXP  Workload Factory.
 
 .Bevor Sie beginnen
-Zum Anzeigen vorhandener Snapshot-Richtlinien ist ein Link erforderlich. Um einen Link zuzuordnen, klicken Sie unter *Kontoname* auf *Associate Link*. Kehren Sie dann zu diesem Vorgang zurück.
+Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie eine Verknüpfung zuordnen. Um einen Link zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link*. Kehren Sie dann zu diesem Vorgang zurück.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei Punkte-Menü des FSX für ONTAP-Dateisystems aus, das das Volume mit der zu aktualisierenden Snapshot-Richtlinie enthält, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des FSX für ONTAP-Dateisystems aus, das das Volume mit der zu aktualisierenden Snapshot-Richtlinie enthält, und wählen Sie dann *Verwalten* aus.
 . Wählen Sie auf der Registerkarte Übersicht des Dateisystems die Registerkarte *Volumes* aus.
 . Wählen Sie die Registerkarte *Volumes*.
-. Wählen Sie auf der Registerkarte *Volumes* das drei Punkte-Menü des Volumes aus, um die Snapshot-Richtlinie zu ändern.
+. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü des Volumes aus, um die Snapshot-Richtlinie zu ändern.
 . Wählen Sie *Data Protection actions*, *Snapshots* und dann *Manage Snapshot Policies*.
 . Wählen Sie auf der Seite Snapshot Policy Management *Change an Existing Snapshot Policy* aus.
 . Wählen Sie im Feld *Snapshot Policy Name* eine andere Snapshot Policy für dieses Volume aus.
@@ -32,5 +32,5 @@ Um automatische Snapshots zu deaktivieren, wählen Sie `none`.
 +
 Wenn keine anderen Snapshot-Richtlinien vorhanden sind, link:create-snapshot-policy.html["Erstellen Sie eine neue Snapshot-Richtlinie für dieses Volume"].
 
-. Klicken Sie Auf *Anwenden*.
+. Wählen Sie *Übernehmen*, um die Änderungen zu speichern.
 

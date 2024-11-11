@@ -4,14 +4,14 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication 
 summary: Wenden Sie eine Replikationsbeziehung um, damit das Ziel-Volume das Quell-Volume wird. 
 ---
-= Eine Replikationsbeziehung umkehren
+= Wenden Sie eine Replikationsbeziehung in der BlueXP  Workload Factory um
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Wenden Sie eine Replikationsbeziehung um, damit das Ziel-Volume das Quell-Volume wird.
+Wenden Sie eine Replikationsbeziehung in der BlueXP  Workload Factory zurück, so dass das Ziel-Volume das Quell-Volume wird.
 
 Nachdem Sie die Replikation beendet und Änderungen am Ziel-Volume vorgenommen haben, können Sie diese Änderungen zurück auf das Quell-Volume replizieren. Dieser Prozess ist in einem Disaster-Recovery-Szenario üblich, in dem Sie eine Weile auf dem Ziel-Volume arbeiten und die Rollen der Volumes wechseln möchten.
 
@@ -25,11 +25,11 @@ NOTE: Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierun
 Stellen Sie sicher, dass Sie die aktuellen und zukünftigen Rollen Ihrer Quell- und Ziel-Volumes kennen, da Änderungen am neuen Ziel-Volume mit dem neuen Quell-Volume überschrieben werden. Bei unsachgemäßer Verwendung kann es zu unbeabsichtigten Datenverlusten kommen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der Replikationsbeziehung, die umgekehrt werden soll.
+. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der Replikationsbeziehung aus, die umgekehrt werden soll.
 . Wählen Sie *Beziehung umkehren*.
-. Klicken Sie im Dialogfeld Beziehung umkehren auf *Umkehren*.
+. Wählen Sie im Dialogfeld Beziehung umkehren die Option *Umkehren* aus.
 

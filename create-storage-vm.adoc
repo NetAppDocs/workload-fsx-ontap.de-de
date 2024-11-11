@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-storage-vm.html 
 keywords: create storage VM, create svm 
-summary: 'Sie können ein FSX für ONTAP Storage-VM (SVM) erstellen, um Storage- und Datenservices für Ihre Workloads in Workload Factory bereitzustellen.' 
+summary: 'Sie können ein FSX für ONTAP Storage-VM (SVM) erstellen, um Storage- und Datenservices für Ihre Workloads in der BlueXP -Workload-Fabrik bereitzustellen.' 
 ---
 = Erstellen Sie eine Storage-VM für ein FSX für ONTAP-Filesystem
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'Sie können ein FSX für ONTAP Storage-VM (SVM) erstellen, um Storage-
 
 
 [role="lead"]
-Erstellen Sie eine Storage-VM (SVM) für ein FSX for ONTAP Filesystem, um auf Storage- und Datenservices virtuell für Ihre Workloads in Workload Factory zuzugreifen.
+Erstellen Sie eine Storage-VM (SVM) für ein FSX für ONTAP Filesystem, um auf Storage- und Datenservices virtuell für Ihre Workloads in der BlueXP  Workload-Fabrik zuzugreifen.
 
 .Über diese Aufgabe
-Storage-VMs sind isolierte File Server, mit denen Sie auf die Daten der jeweiligen Workloads im Workload Factory Storage zugreifen können. Jede SVM verfügt über eigene Administrationsanmeldedaten und Endpunkte für die Verwaltung und den Zugriff auf Daten.
+Storage-VMs sind isolierte File Server, mit denen Sie auf die Daten von jedem Workload im Workload Factory Storage zugreifen können. Jede SVM verfügt über eigene Administrationsanmeldedaten und Endpunkte für die Verwaltung und den Zugriff auf Daten.
 
 Wenn Sie mit SVMs auf Daten in FSX for ONTAP zugreifen, mounten Ihre Clients und Workstations über den Endpunkt (IP-Adresse) der SVM ein Volume, eine CIFS/SMB-Freigabe oder eine iSCSI-LUN, die von einer SVM gehostet wird.
 
@@ -25,15 +25,15 @@ Wenn Sie mit SVMs auf Daten in FSX for ONTAP zugreifen, mounten Ihre Clients und
 
 == Erstellen einer Storage-VM
 
-Sie können eine Storage-VM über die Konsole von Workload Factory erstellen. Sie können auch die folgenden Werkzeuge verwenden, die in der Codebox verfügbar sind: REST API, CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
+Sie können eine Storage-VM über die Workload-Factory-Konsole erstellen. Sie können auch die folgenden Werkzeuge verwenden, die in der Codebox verfügbar sind: REST API, CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
 
 
 NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie kopieren oder herunterladen, ausgeblendet `fsxadmin` und `vsadmin` Passwörter. Sie müssen die Passwörter erneut eingeben, wenn Sie den Code ausführen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte FSX for ONTAP auf das Menü mit drei Punkten des Dateisystems, um eine Storage-VM für zu erstellen, und wählen Sie *Verwalten* aus.
+. Wählen Sie auf der Registerkarte FSX for ONTAP das drei-Punkt-Menü des Dateisystems aus, für das eine Speicher-VM erstellt werden soll, und wählen Sie *Verwalten* aus.
 . Wählen Sie in der Dateisystemübersicht *Speicher-VM erstellen* aus.
 . Stellen Sie auf der Seite Storage VM unter Storage VM Configuration Folgendes bereit:
 +
@@ -43,5 +43,5 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 .. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
 
 
-. Klicken Sie Auf *Erstellen*.
+. Wählen Sie *Erstellen*.
 

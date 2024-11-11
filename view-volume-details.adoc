@@ -4,7 +4,7 @@ permalink: view-volume-details.html
 keywords: volume details, volume information 
 summary: Zeigen Sie Volume-Details, Verteilung, Nutzung, Zugriff und Sicherung an. 
 ---
-= Zeigen Sie Volume-Details an
+= Zeigen Sie Volume-Details in der BlueXP  Workload-Fabrik an
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -16,9 +16,9 @@ Zeigen Sie Volume-Details, Verteilung, Nutzung, Zugriff und Sicherung an.
 Volume-Details werden erst angezeigt, nachdem ein Volume in einem Dateisystem erstellt wurde.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte für das Volume aus, das Sie ändern möchten.
+. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü für das Volume aus, das Sie ändern möchten.
 . Wählen Sie *Basic actions* und dann *View Volume Details*.
 . Wählen Sie unter *Volume Details* die Registerkarten aus, um die folgenden Volume-Details anzuzeigen:
 +

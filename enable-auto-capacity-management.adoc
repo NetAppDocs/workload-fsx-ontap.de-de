@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: enable-auto-capacity-management.html 
 keywords: auto capacity, automatic capacity management, file system capacity 
-summary: Durch Aktivierung dieser Funktion kann Workload Factory einem Dateisystem FSX for ONTAP automatisch inkrementellen Speicher hinzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert. 
+summary: Wenn diese Funktion aktiviert ist, kann die Workload Factory einem Dateisystem von FSX für ONTAP automatisch inkrementellen Speicher hinzufügen, wenn sich die Kapazitätsanforderungen im Laufe der Zeit ändern. 
 ---
-= Aktivieren der automatischen Kapazitätsverwaltung für ein Dateisystem
+= Aktivieren Sie das automatische Kapazitätsmanagement für ein FSX für ONTAP-Filesystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Durch Aktivierung dieser Funktion kann Workload Factory einem Dateisystem FSX for ONTAP automatisch inkrementellen Speicher hinzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert.
+Durch Aktivieren dieser Funktion kann BlueXP  Workload Factory automatisch inkrementellen Speicher zu einem FSX für ONTAP Dateisystem hinzufügen, wenn sich Kapazitätsanforderungen im Laufe der Zeit ändern.
 
 .Über diese Aufgabe
 Diese Funktion kann nur von einem Konto verwaltet werden.
@@ -19,18 +19,18 @@ Diese Funktion kann nur von einem Konto verwaltet werden.
 Die maximale Menge an SSD-Speicherkapazität für alle FSX für ONTAP-Dateisysteme beträgt 524,288 gib. Informationen zur Anforderung einer Quotenerhöhung finden link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] Sie in der Dokumentation zu AWS FSX for NetApp ONTAP.
 
 .Bevor Sie beginnen
-Sie müssen in Workload Factory über Anmeldeinformationen mit _Automate_-Berechtigungen verfügen, um diese Aufgabe abzuschließen.
+Um diese Aufgabe abzuschließen, müssen Sie in der Workload Factory über Anmeldedaten mit _Automate_-Berechtigungen verfügen.
 
 .Schritte
-. Melden Sie sich bei der Workload Factory-Konsole an.
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte *FSX for ONTAP* auf das Menü mit drei Punkten des Dateisystems, um die automatische Kapazitätsverwaltung zu aktivieren.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um die automatische Kapazitätsverwaltung zu aktivieren.
 . Wählen Sie *Verwalten*.
-. Klicken Sie unter Information auf das Bleistiftsymbol neben *Automatisches Kapazitätsmanagement*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *Automatic Capacity Management* schwebt.
+. Wählen Sie unter Information das Bleistiftsymbol neben *Automatic Capacity Management*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *Automatic Capacity Management* schwebt.
 . Geben Sie im Dialogfeld *Automatic Capacity Management* Folgendes an:
 +
 .. *Zugangsdaten*: Wählen Sie aus dem Dropdown-Menü Zugangsdaten mit _Automate_ Berechtigungen aus.
-.. Klicken Sie auf die Schaltfläche Enable, um *Automatic Capacity Management* zu aktivieren.
+.. Klicken Sie auf die Schaltfläche Aktivieren, um das automatische Kapazitätsmanagement * zu aktivieren.
 +
 Alternativ können Sie die Funktion deaktivieren. Wenn Sie die Kapazität des Dateisystems erhöhen müssen, müssen Sie zunächst die automatische Kapazitätsverwaltung deaktivieren.
 
@@ -38,5 +38,5 @@ Alternativ können Sie die Funktion deaktivieren. Wenn Sie die Kapazität des Da
 .. *Erhöhung der Kapazität*: Geben Sie den Prozentsatz ein, um die Kapazität schrittweise zu erhöhen.
 
 
-. Klicken Sie Auf *Anwenden*.
+. Wählen Sie *Anwenden*.
 

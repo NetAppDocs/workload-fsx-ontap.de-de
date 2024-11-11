@@ -86,16 +86,16 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Höhere Volume-Kapazität
         url: "/increase-volume-capacity.html"
-      - title: Bearbeiten Sie Volume-Tags
-        url: "/edit-volume-tags.html"
+      - title: Verwalten von Volume-Tags
+        url: "/manage-volume-tags.html"
       - title: Neuausrichtung der Kapazität eines Volumes
         url: "/rebalance-volume.html"
       - title: Ändern Sie die Tiering Policy
         url: "/change-tiering-policy.html"
-      - title: Ändern Sie die NFS-Exportrichtlinie
-        url: "/change-nfs-export-policy.html"
-      - title: Ändern Sie die CIFS-Freigabe
-        url: "/change-cifs-share.html"
+      - title: Managen der NFS-Exportrichtlinie
+        url: "/manage-nfs-export-policy.html"
+      - title: Verwalten der CIFS-Freigabe
+        url: "/manage-cifs-share.html"
       - title: Teilen Sie ein geklontes Volume auf
         url: split-cloned-volume.html
       - title: Löschen Sie ein Volume
@@ -116,8 +116,8 @@ sidebar:
         url: "/replicate-svm-to-file-system.html"
       - title: Active Directory für eine Storage-VM konfigurieren und aktualisieren
         url: "/configure-active-directory.html"
-      - title: Bearbeiten Sie Storage-VM-Tags
-        url: "/edit-svm-tags.html"
+      - title: Managen Sie Storage-VM-Tags
+        url: "/manage-svm-tags.html"
       - title: Kennwort für Storage-VM zurücksetzen
         url: reset-svm-password.html
       - title: Löschen einer Speicher-VM
@@ -126,8 +126,8 @@ sidebar:
       entries:
       - title: Ändern der Snapshot-Richtlinie eines Volumes
         url: change-snapshot-policy.html
-      - title: FSX für ONTAP-Backup-Zeitplan aktualisieren
-        url: "/update-backup-schedule.html"
+      - title: Management des FSX für ONTAP-Backup-Zeitplans
+        url: "/manage-backup-schedule.html"
       - title: Aktivieren und bearbeiten Sie Snapshots für die langfristige Aufbewahrung
         url: "/enable-snapshots-long-term.html"
       - title: Eine Replikationsbeziehung umkehren
@@ -165,5 +165,5 @@ sidebar:
   - title: Rechtliche Hinweise
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory
   repo: workload-family

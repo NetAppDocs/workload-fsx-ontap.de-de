@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: delete-replication.html 
 keywords: delete replication 
-summary: Löschen Sie bei Bedarf eine Replikationsbeziehung. 
+summary: Löschen Sie bei Bedarf eine Replikationsbeziehung in der BlueXP  Workload-Fabrik. 
 ---
-= Löschen einer Replikationsbeziehung
+= Löschen Sie eine Replikationsbeziehung in der BlueXP  Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Wenn Sie eine Replikationsbeziehung löschen, wird die Replikationsbeziehung zwischen dem Quell- und dem Ziel-Volume entfernt. Nach dem Löschen der Replikationsbeziehung bestehen beide Volumes weiterhin unabhängig von den aktuellen Daten, die sie enthalten.
+Löschen Sie eine Replikationsbeziehung in der BlueXP  Workload Factory. Wenn Sie eine Replikationsbeziehung löschen, wird die Replikationsbeziehung zwischen dem Quell- und dem Ziel-Volume entfernt. Nach dem Löschen der Replikationsbeziehung bestehen beide Volumes weiterhin unabhängig von den aktuellen Daten, die sie enthalten.
 
 Wenn Sie eine Replikationsbeziehung löschen, löscht FSX für ONTAP auch die allgemeinen Replikations-Snapshots des Quell- und Zielvolume.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der zu löschenden Replikationsbeziehung.
+. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der zu löschenden Replikationsbeziehung aus.
 . Wählen Sie *Löschen*.
-. Klicken Sie im Dialogfeld Beziehung löschen auf *Löschen*.
+. Wählen Sie im Dialogfeld Beziehung löschen *Löschen*.
 

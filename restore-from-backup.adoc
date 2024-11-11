@@ -4,21 +4,21 @@ permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup 
 summary: Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wieder her. 
 ---
-= Stellen Sie ein Volume aus einem Backup wieder her
+= Stellen Sie ein Volume aus einem Backup in der BlueXP  Workload Factory wieder her
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wieder her.
+In der BlueXP -Workload-Fabrik können Sie ein Volume aus einem Backup auf einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wiederherstellen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das drei Punkte-Menü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Klicken Sie auf der Registerkarte *Volumes* auf das drei Punkte-Menü für das Volume, das aus einem Backup wiederhergestellt werden soll.
+. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das von einem Backup wiederhergestellt werden soll.
 . Wählen Sie *Data Protection Actions*, *FSX for ONTAP Backup* und dann *Restore from a Backup*.
 . Geben Sie im Dialogfeld Wiederherstellen von einem Backup Folgendes an:
 +
@@ -28,5 +28,5 @@ Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ONTAP-Datei
 .. *Name des wiederhergestellten Volumes*: Geben Sie den Namen des wiederhergestellten Volumes ein.
 
 
-. Klicken Sie Auf *Wiederherstellen*.
+. Wählen Sie *Wiederherstellen*.
 

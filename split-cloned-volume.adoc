@@ -4,14 +4,14 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume 
 summary: Teilen Sie ein Klon-FlexVol-Volume von seinem übergeordneten Volume auf, um den Klon zu einem normalen FlexVol Volume mit Lese- und Schreibzugriffen zu machen. 
 ---
-= Teilen Sie ein geklontes Volume auf
+= Teilen Sie ein geklontes Volume in der BlueXP  Workload Factory auf
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Teilen Sie eine geklonte FlexVol volume von seinem übergeordneten Volume auf, um für den Klon eine normale Lese-/Schreib-FlexVol volume zu erstellen.
+Teilen Sie eine geklonte FlexVol volume von seinem übergeordneten Volume auf, um für den Klon eine normale Lese- und Schreib-FlexVol volume in der BlueXP  Workload-Fabrik zu erstellen.
 
 Auf Daten kann auf dem Klon und auf dem übergeordneten Element während der Teilung zugegriffen werden. Der Split-Vorgang aktualisiert nur Metadaten und erfordert minimale I/O-Vorgänge. Es werden keine Datenblöcke kopiert.
 
@@ -28,18 +28,20 @@ Der Vorgang zum Aufteilen von Klonen umfasst Folgendes:
 .Bevor Sie beginnen
 Vor dem Aufteilen eines geklonten Volume sollten Sie Folgendes beachten:
 
-* Um ein geklontes Volume aufzuteilen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+* Um ein geklontes Volume aufzuteilen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
 * Sie müssen ein Cluster-Administrator sein.
 * Das FlexClone Volume muss online sein, wenn der Trennvorgang beginnt.
 * Das übergeordnete Volume muss online sein, damit die Teilung erfolgreich durchgeführt werden kann.
 
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei Punkte-Menü des FSX für ONTAP-Dateisystems aus, das das geklonte Volume enthält, das geteilt werden soll, und wählen Sie dann *Verwalten* aus.
-. Wählen Sie auf der Registerkarte Übersicht des Dateisystems die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte Volumes das Menü mit den drei Punkten des Volumes aus, auf dem das geklonte Volume aufgeteilt werden soll.
+. Wählen Sie die Registerkarte *Volumes*.
+. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, in das das geklonte Volume aufgeteilt werden soll.
 . Wählen Sie *Data Protection Actions* und dann *Split geklontes Volume*.
-. Klicken Sie im Dialogfeld Volumen teilen auf *Löschen*.
+. Wählen Sie im Dialogfeld „Volumen teilen“ die Option *Löschen*.
 
+
+.Ergebnis
+Der Volume-Klon wird aufgeteilt und auf der Registerkarte Volumes angezeigt.

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
 keywords:  
-summary: Ändern Sie die Tiering-Richtlinie, um Daten aus dem primären Storage-Tier mit hoher Performance wieder der Storage-Tier mit dem sekundären Kapazitäts-Pool zuzuweisen. 
+summary: Ändern Sie die Tiering-Richtlinie in der BlueXP -Workload-Fabrik, um Daten vom primären Hochleistungs-Storage-Tier auf die sekundäre Kapazitäts-Pool-Storage-Tier neu zuzuweisen. 
 ---
-= Ändern Sie die Tiering-Richtlinie eines Volumes
+= Ändern Sie die Tiering-Richtlinie für ein Volume in der BlueXP  Workload-Fabrik
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Ändern Sie die Tiering-Richtlinie, um Daten aus dem leistungsstarken primären Storage-Tier automatisch der sekundären Kapazitäts-Pool-Storage-Tier zuzuweisen.
+In BlueXP  Workload Factory können Sie die Tiering-Richtlinie ändern, um Daten vom hochperformanten primären Storage-Tier automatisch auf die sekundäre Kapazitäts-Pool-Storage-Tier neu zuzuweisen.
 
 .Über diese Aufgabe
 Sie können die Tiering-Richtlinie eines Volumes jederzeit ändern. Die Tiering-Richtlinie wird pro Volume definiert.
@@ -38,11 +38,11 @@ Weitere Informationen zu Storage-Tiers finden link:https://docs.aws.amazon.com/f
 Beachten Sie, dass einige Tiering-Richtlinien über einen zugehörigen Mindestkühlzeitraum verfügen, der die Zeit bzw. die _Kühltage_ festlegt, dass Benutzerdaten in einem Volume inaktiv bleiben müssen, damit die Daten als „kalt“ gelten und in die Storage-Ebene des Kapazitäts-Pools verschoben werden. Der Kühlzeitraum beginnt, wenn Daten auf die Festplatte geschrieben werden.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei Punkte-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Klicken Sie auf der Registerkarte Volumes auf das Menü mit den drei Punkten des Volumes, um die Tiering-Richtlinie für zu ändern.
+. Wählen Sie auf der Registerkarte Volumes das Menü mit drei Punkten des Volumes aus, um die Tiering-Richtlinie für zu ändern.
 . Wählen Sie *Erweiterte Aktionen* und dann *Tiering-Richtlinie ändern*.
 . Wählen Sie auf der Seite Tiering Policy ändern eine der folgenden Tiering Policies aus:
 +
@@ -52,5 +52,5 @@ Beachten Sie, dass einige Tiering-Richtlinien über einen zugehörigen Mindestk�
 ** * Alle*
 
 
-. Klicken Sie Auf *Anwenden*.
+. Wählen Sie *Anwenden*.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot.html 
 keywords: create snapshot, snapshot 
-summary: Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes. Snapshots sind Point-in-Time-Versionen des Inhalts Ihres Volumes. 
+summary: Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. Snapshots sind Point-in-Time-Versionen des Inhalts Ihres Volumes. 
 ---
 = Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes. Sn
 
 
 [role="lead"]
-Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes. Snapshots sind Point-in-Time-Versionen des Inhalts Ihres Volumes.
+Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. Snapshots sind Point-in-Time-Versionen des Inhalts Ihres Volumes.
 
 Snapshots sind Ressourcen von Volumes und sofortige Erfassung von Daten, die nur für geänderte Daten Speicherplatz verbrauchen. Da sich die Daten im Laufe der Zeit ändern, belegen Snapshots in der Regel mit zunehmendem Alter mehr Speicherplatz.
 
@@ -21,15 +21,15 @@ FSX für ONTAP-Volumes verwenden Just-in-Time Copy-on-Write, sodass unverändert
 NOTE: Snapshots sind keine Kopien Ihrer Daten. Wenn Sie Kopien Ihrer Daten erstellen möchten, sollten Sie FSX für ONTAP-Backups oder Volume-Replizierungsfunktionen in Erwägung ziehen.
 
 .Bevor Sie beginnen
-Sie müssen link:manage-links.html["Verknüpfen Sie eine Verknüpfung"] einen Snapshot erstellen. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+Sie müssen link:manage-links.html["Verknüpfen Sie eine Verknüpfung"] einen Snapshot erstellen. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das drei Punkte-Menü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das Menü mit drei Punkten für das zu schützende Volume aus.
+. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das zu schützende Volume aus.
 . Wählen Sie *Data Protection actions*, *Snapshots*, dann *Create Volume from a Snapshot*.
 . Geben Sie im Dialogfeld Create Volume from a Snapshot im Feld *Snapshot Name* einen Snapshot-Namen ein.
-. Klicken Sie Auf *Erstellen*.
+. Wählen Sie *Erstellen*.
 

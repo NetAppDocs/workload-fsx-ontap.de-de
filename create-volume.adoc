@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: Nachdem Sie Ihr FSX für ONTAP-Dateisystem eingerichtet haben, können Sie FSX für ONTAP-Volumen erstellen. 
+summary: Nachdem Sie Ihr FSX für ONTAP-Filesystem in der BlueXP -Workload-Fabrik eingerichtet haben, können Sie FSX für ONTAP-Volumes erstellen. 
 ---
-= Erstellen eines FSX für ONTAP-Volumes
+= FSX für ONTAP-Volumen in BlueXP -Workload-Fabrik erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Nachdem Sie Ihr FSX für ONTAP-Dateisystem eingerichtet haben, können Sie FSX für ONTAP-Volumen erstellen.
+Nachdem Sie Ihr FSX für ONTAP-Filesystem eingerichtet haben, können Sie FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik erstellen.
 
 .Über diese Aufgabe
 FSX for ONTAP Volumes sind virtuelle Ressourcen, die zum Gruppieren von Daten verwendet werden, zum Bestimmen, wie die Daten gespeichert werden und zum Bestimmen der Art des Zugriffs auf Ihre Daten. Volumes verbrauchen keine Storage-Kapazität des Filesystems. Die in einem Volume gespeicherten Daten belegen primär SSD-Storage. Je nach der Tiering-Richtlinie des Volumes können die Daten auch Kapazitäts-Pool-Storage in Anspruch nehmen. Sie legen die Größe eines Volumes fest, wenn Sie es erstellen, und Sie können die Größe später ändern.
@@ -26,21 +26,21 @@ Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 .Bevor Sie beginnen
 Überprüfen Sie die folgenden Voraussetzungen, bevor Sie ein Volume erstellen:
 
-* Sie müssen ein FSX für ONTAP-Dateisystem in Workload Factory haben.
+* Sie müssen ein FSX für ONTAP-Filesystem in der Workload-Fabrik haben.
 * Sie benötigen eine Storage-VM.
 * Für den Zugriff auf das Protokoll müssen Sie Folgendes ausführen:
 +
-** Um den Zugriff auf das Volume zu konfigurieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, klicken Sie unter *Kontoname* auf *Associate Link*. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+** Um den Zugriff auf das Volume zu konfigurieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
 ** Sie müssen den Zugriff für das ausgewählte Protokoll konfigurieren, entweder CIFS, NFS oder iSCSI.
 
 
 
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkte-Menü des Dateisystems aus, in dem Sie ein Volume erstellen möchten, und wählen Sie *Verwalten*.
-. Klicken Sie auf der Registerkarte *Übersicht* auf *Volume erstellen*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, in dem Sie ein Volume erstellen möchten, und wählen Sie *Verwalten*.
+. Wählen Sie auf der Registerkarte *Übersicht* die Option *Volume erstellen* aus.
 . Geben Sie auf der Seite Volume erstellen unter Allgemeine Details die folgenden Details ein:
 +
 .. *Volumenname*: Geben Sie einen Namen für das Volume ein.
@@ -144,7 +144,7 @@ NOTE: Snapshot-Zeiten basieren auf der Zeitzone des Dateisystems, die standardm�
 .. *Anzahl der Komponenten*: Nur für FlexGroup-Volumes. Geben Sie die Anzahl der Bestandteile pro Aggregat ein. Pro Komponente sind 100 gib erforderlich.
 
 
-. Klicken Sie Auf *Erstellen*.
+. Wählen Sie *Erstellen*.
 
 
 .Ergebnis

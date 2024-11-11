@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: Eine Workload Factory-Verbindung erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen einem Workload Factory-Konto und einem oder mehreren FSX for ONTAP-Dateisystemen. So können Sie bestimmte Filesystem-Funktionen direkt über die ONTAP-REST-APIs überwachen und managen, die über die Amazon FSX für ONTAP-APIs nicht verfügbar sind. 
+summary: Eine Workload-Factory-Verbindung erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen einem Workload-Factory-Konto und einem oder mehreren FSX für ONTAP-Dateisystemen. 
 ---
-= Erfahren Sie mehr über Workload Factory Links
+= Weitere Informationen zu den BlueXP -Workload-Werkseinstellungen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Eine Workload Factory-Verbindung erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen einem Workload Factory-Konto und einem oder mehreren FSX for ONTAP-Dateisystemen. So können Sie bestimmte Filesystem-Funktionen direkt über die ONTAP-REST-API-Aufrufe überwachen und managen, die über die Amazon FSX for ONTAP-API nicht verfügbar sind.
+Ein werkseitiger BlueXP -Workload-Link erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen einem werkseitigen Workload-Konto und einem oder mehreren FSX für ONTAP-Dateisystemen. So können Sie bestimmte Filesystem-Funktionen direkt über die ONTAP-REST-API-Aufrufe überwachen und managen, die über die Amazon FSX for ONTAP-API nicht verfügbar sind.
 
-Sie benötigen keinen Link, um mit Workload Factory zu beginnen, aber in einigen Fällen müssen Sie einen Link erstellen, um alle Workload Factory-Funktionen und Workload-Funktionen freizuschalten.
+Sie benötigen keinen Link, um mit der Workload Factory zu beginnen, aber in einigen Fällen müssen Sie einen Link erstellen, um alle Workload Factory-Funktionen und Workload-Funktionen freizuschalten.
 
 
 
@@ -23,13 +23,13 @@ Links nutzen AWS Lambda Lambda führt Code als Reaktion auf Ereignisse aus und v
 
 Nachdem Sie einen Link erstellt haben, können Sie ihn einem oder mehreren FSX for ONTAP-Dateisystemen zuordnen. Jedes Dateisystem kann nur einem Link im selben NetApp-Konto zugeordnet werden. Wenn Sie mehrere NetApp-Konten haben, kann ein einziges Dateisystem mit zusätzlichen Links unter verschiedenen NetApp-Konten verknüpft werden.
 
-Sie erstellen Links von den Dateisystemseiten FSX für ONTAP in Workload Factory. link:create-link.html["Erfahren Sie, wie Sie Verknüpfungen erstellen"] Genaue Informationen.
+Sie erstellen Links auf den FSX für ONTAP-Dateisystemseiten in Workload Factory. link:create-link.html["Erfahren Sie, wie Sie Verknüpfungen erstellen"] Genaue Informationen.
 
 
 
 == Kosten
 
-Jede Transaktion, die Lambda durchführt, ist kostenpflichtig. Da Lambda als Proxy zwischen den beiden Systemen fungiert, wird eine Gebühr erhoben, wenn Lambda eine Anforderung an die ONTAP-REST-API auf einem Dateisystem sendet und die Antwort an Workload Factory zurücksendet.
+Jede Transaktion, die Lambda durchführt, ist kostenpflichtig. Da Lambda als Proxy zwischen den beiden Systemen fungiert, wird eine Gebühr erhoben, wenn Lambda eine Anforderung an die ONTAP-REST-API auf einem Dateisystem sendet und die Antwort zurück an die Workload Factory sendet.
 
 link:https://aws.amazon.com/lambda/pricing/["Informieren Sie sich über die Kosten bei der Nutzung von AWS Lambda"^]
 

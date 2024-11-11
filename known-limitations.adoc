@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: known-limitations.html 
 keywords: limitations, fsx, ontap 
-summary: Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
+summary: Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. 
 ---
-= Bekannte Einschränkungen
+= Bekannte Einschränkungen von Amazon FSX for NetApp ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts in Workload Factory nicht unterstützt werden oder die nicht korrekt mit dieser Version zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
+Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
 
 
 
 == Verlinken
 
-Für einige Vorgänge wie die Replikation in der Workload Factory-Benutzeroberfläche ist ein Link erforderlich.
+Für einige Vorgänge wie die Replikation in der werkseitigen Benutzeroberfläche des Workloads ist ein Link erforderlich.
 
 
 
@@ -54,7 +54,7 @@ Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis z
 
 == Storage-VMs
 
-Die Anzahl der Storage-VMs ist pro SKU begrenzt. Das Erstellen von Storage-VMs, die über die Grenzen hinausgehen, wird in Workload Factory nicht unterstützt.^1^
+Die Anzahl der Storage-VMs ist pro SKU begrenzt. In der Workload-Fabrik wird nicht unterstützt, Storage-VMs über die Begrenzung hinaus zu erstellen.^1^
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Management von FSX für ONTAP Storage Virtual Machines"^]In der AWS-Dokumentation finden Sie Informationen zur maximalen Anzahl von SVMs pro Filesystem.
 
@@ -94,6 +94,12 @@ Der Rechner für Storage-Einsparungen berechnet die Kosteneinsparungen für die 
 * Elastic Block Store (EBS): st1-, sc1- und Standard-Volume-Typen
 * Elastic File System (EFS): Bursting-Durchsatzmodus
 
+
+
+
+== System Manager
+
+System Manager unterstützt keine Links für FSX for ONTAP-Konnektivität.
 
 Hinweis:
 

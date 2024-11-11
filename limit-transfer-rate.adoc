@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: limit-transfer-rate.html 
 keywords: limit max transfer rate, limit transfer rate 
-summary: Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung. Eine unbegrenzte Übertragungsrate kann sich negativ auf die Leistung anderer Anwendungen und Ihres Netzwerks auswirken. 
+summary: Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung in der BlueXP  Workload-Fabrik. 
 ---
 = Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehun
 
 
 [role="lead"]
-Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung. Eine unbegrenzte Übertragungsrate kann sich negativ auf die Leistung anderer Anwendungen und Ihres Netzwerks auswirken.
+Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung in der BlueXP  Workload-Fabrik. Eine unbegrenzte Übertragungsrate kann sich negativ auf die Leistung anderer Anwendungen und Ihres Netzwerks auswirken.
 
 .Über diese Aufgabe
 Die Begrenzung der maximalen Übertragungsrate ist optional, wird jedoch empfohlen. Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen.
@@ -22,15 +22,15 @@ Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisystem
 Berücksichtigen Sie, wie viel Bandbreite für die Replikation zugewiesen werden soll.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Klicken Sie auf der Registerkarte *FSX für ONTAP* auf das Menü mit drei Punkten des zu aktualisierenden Dateisystems und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Klicken Sie auf der Registerkarte Replikationsbeziehungen auf das Menü drei Punkte der Replikationsbeziehung, um die maximale Übertragungsrate für zu begrenzen.
+. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der Replikationsbeziehung aus, um die maximale Übertragungsrate für zu begrenzen.
 . Wählen Sie *Max. Übertragungsrate bearbeiten*.
 . Wählen Sie im Dialogfeld Max. Übertragungsrate bearbeiten die Option *Limited* aus, und geben Sie die maximale Übertragungsgrenze in MB/s ein
 +
 Alternativ wählen Sie *Unlimited*.
 
-. Klicken Sie Auf *Anwenden*.
+. Wählen Sie *Anwenden*.
 

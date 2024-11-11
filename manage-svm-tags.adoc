@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: manage-svm-tags.html 
+keywords: edit storage vm tags, vm tags, svm tags 
+summary: Hinzufügen, Aktualisieren oder Entfernen von Storage-VM-Tags für eine Storage-VM jederzeit. 
+---
+= Managen Sie Storage-VM-Tags in der BlueXP  Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Tags können Sie Ihre Ressourcen kategorisieren. Sie können Tags für eine Storage-VM jederzeit in der BlueXP  Workload-Fabrik hinzufügen, bearbeiten und entfernen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit der zu aktualisierenden Speicher-VM aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
+. Wählen Sie auf der Registerkarte Storage VMs das drei-Punkt-Menü der Storage-VM aus, für das Sie Tags bearbeiten möchten.
+. Wählen Sie *Storage VM Tags bearbeiten*.
+. Auf der Seite Storage-VM-Tags bearbeiten können Sie Tags hinzufügen, bearbeiten oder entfernen.
++
+Auf eine Storage-VM können Sie maximal 50 Tags anwenden.
+
+. Wählen Sie *Anwenden*.
+

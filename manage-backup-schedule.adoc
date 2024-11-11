@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: manage-backup-schedule.html 
+keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+summary: Verwalten Sie bei Bedarf den Backup-Zeitplan für ein FSX für ONTAP-Filesystem in den BlueXP -Workload-Werkseinstellungen. 
+---
+= Managen des Backup-Zeitplans für ein FSX für ONTAP-Filesystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Managen Sie den Backup-Zeitplan für ein FSX für ONTAP-Filesystem in der BlueXP -Workload-Fabrik.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um den Backup-Zeitplan zu aktualisieren, und wählen Sie dann *Verwalten*.
+. Wählen Sie unter Information das Bleistiftsymbol neben *FSX for ONTAP Backup*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *FSX for ONTAP Backup* schwebt.
+. Geben Sie im Dialogfeld *FSX for ONTAP Backup* Folgendes an:
++
+.. *Tägliche automatische Backups*: Aktivieren oder deaktivieren Sie die Funktion. Wenn Sie die Funktion deaktivieren, wählen Sie *Anwenden*. Wenn Sie die Funktion aktivieren, führen Sie die folgenden Schritte aus.
+.. *Automatische Backup-Aufbewahrungsfrist*: Geben Sie die Anzahl der Tage ein, um automatische Backups zu behalten.
+.. *Tägliches automatisches Backup-Fenster*: Wählen Sie entweder *Keine Präferenz* (für Sie wird eine tägliche Backup-Startzeit ausgewählt) oder *Startzeit für tägliche Backups auswählen* und eine Startzeit angeben.
+.. *Wöchentliches Wartungsfenster*: Wählen Sie entweder *Keine Präferenz* (eine wöchentliche Startzeit des Wartungsfensters wird für Sie ausgewählt) oder *Startzeit für 30-minütiges wöchentliches Wartungsfenster* und geben Sie eine Startzeit an.
+
+
+. Wählen Sie *Anwenden*.
+

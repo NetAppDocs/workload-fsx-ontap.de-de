@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
-summary: Mit Workload Factory können Sie ein FSX für ONTAP-Dateisystem erstellen, um Volumes und zusätzliche Datenservices hinzuzufügen und zu verwalten. 
+keywords: create, FSx file system, ONTAP file system, workload factory, storage 
+summary: Mit BlueXP  Workload Factory können Sie ein FSX für ONTAP Dateisystem erstellen, um Volumes und zusätzliche Datenservices hinzuzufügen und zu verwalten. 
 ---
-= Erstellen Sie ein FSX für ONTAP-Dateisystem
+= Erstellen Sie ein FSX für ONTAP-Dateisystem in der BlueXP -Workload-Fabrik
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Mit Workload Factory können Sie ein FSX für ONTAP-Dateisystem erstellen, um Volumes und zusätzliche Datenservices hinzuzufügen und zu verwalten.
+Mit BlueXP  Workload Factory können Sie ein FSX für ONTAP Dateisystem erstellen, um Volumes und zusätzliche Datenservices hinzuzufügen und zu verwalten.
 
 .Über diese Aufgabe
 Beim Erstellen eines Dateisystems wird eine Storage-VM erstellt.
@@ -19,7 +19,7 @@ Beim Erstellen eines Dateisystems wird eine Storage-VM erstellt.
 .Bevor Sie beginnen
 Bevor Sie Ihr FSX für ONTAP-Dateisystem erstellen, benötigen Sie:
 
-* Der ARN einer IAM-Rolle, die Workload Factory die Berechtigungen gibt, die zum Erstellen eines FSX für ONTAP-Filesystems erforderlich sind. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie einem AWS-Konto Berechtigungen erteilen"^].
+* Der ARN einer IAM-Rolle, die Workload Factory die Berechtigungen verleiht, die zum Erstellen eines FSX für ONTAP-Filesystems erforderlich sind. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie einem AWS-Konto Berechtigungen erteilen"^].
 * Die Region und VPC-Informationen, für die Sie die FSX für ONTAP-Instanz erstellen möchten.
 
 
@@ -39,7 +39,7 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 Die schnelle Erstellung ermöglicht Ihnen die Verwendung einer empfohlenen Best-Practice-Konfiguration. Sie können die meisten Einstellungen ändern, nachdem Sie ein FSX für ONTAP-Dateisystem erstellt haben.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher * FSX für ONTAP erstellen *.
 . Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Schnellerstellung* aus.
 +
@@ -47,7 +47,7 @@ Sie können auch eine gespeicherte Konfiguration laden.
 
 . Geben Sie unter Allgemeine Dateisystemkonfiguration Folgendes an:
 +
-.. *AWS Zugangsdaten*: Wählen Sie aus, um AWS Zugangsdaten in Workload Factory hinzuzufügen oder ohne Anmeldedaten fortzufahren.
+.. *AWS-Zugangsdaten*: Wählen Sie, um AWS-Anmeldeinformationen in der Workload Factory hinzuzufügen oder ohne Anmeldedaten fortzufahren.
 .. *Dateisystemname*: Geben Sie einen Namen für das Dateisystem ein.
 .. *Bereitstellungstopologie*: Wählen Sie eine Bereitstellungstopologie.
 +
@@ -109,7 +109,7 @@ Wenn Sie das Dateisystem erstellt haben, können Sie nun das FSX für ONTAP Date
 Mit Advanced Create können Sie alle Konfigurationsoptionen festlegen, einschließlich Verfügbarkeit, Sicherheit, Backups und Wartung.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher * FSX für ONTAP erstellen *.
 . Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Erweitertes Erstellen* aus.
 +
@@ -117,7 +117,7 @@ Sie können auch eine gespeicherte Konfiguration laden.
 
 . Geben Sie unter Allgemeine Dateisystemkonfiguration Folgendes an:
 +
-.. *AWS Zugangsdaten*: Wählen Sie aus, um AWS Zugangsdaten in Workload Factory hinzuzufügen oder ohne Anmeldedaten fortzufahren.
+.. *AWS-Zugangsdaten*: Wählen Sie, um AWS-Anmeldeinformationen in der Workload Factory hinzuzufügen oder ohne Anmeldedaten fortzufahren.
 .. *Dateisystemname*: Geben Sie einen Namen für das Dateisystem ein.
 .. *Bereitstellungstopologie*: Wählen Sie eine Bereitstellungstopologie.
 +

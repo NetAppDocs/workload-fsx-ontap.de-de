@@ -4,7 +4,7 @@ permalink: access-data.html
 keywords: access data, mount clients, on-premises 
 summary: Sie können von vor Ort auf Ihre FSX for ONTAP-Dateisysteme zugreifen, indem Sie Volumes für NAS-Clients mounten und iSCSI-LUNs für SAN-Clients mounten. 
 ---
-= Zugriff auf Ihre Daten
+= Zugriff auf Ihre FSX for ONTAP-Dateisystemdaten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

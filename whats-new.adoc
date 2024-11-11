@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx for netapp ontap, fsx for ontap' 
 summary: Informieren Sie sich über die Neuerungen bei Amazon FSX for NetApp ONTAP. 
 ---
-= Was ist neu
+= Neuerungen bei Amazon FSX for NetApp ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -35,12 +35,12 @@ Der Bestand des Speichers wurde auf eine Ansicht mit zwei Registerkarten aktuali
 
 === Aktualisierung der Link-Erstellung
 
-* Codebox Viewer: Codebox ist nun in den Prozess der Link-Erstellung integriert. Sie können die CloudFormation-Vorlage aus der Codebox in Workload Factory anzeigen und kopieren, bevor Sie zur Ausführung des Vorgangs zu AWS umgeleitet werden.
-* Erforderliche Berechtigungen: Die Berechtigungen, die für die Ausführung der Link-Erstellung in AWS CloudFormation erforderlich sind, sind jetzt verfügbar, um aus dem Create Link Wizard in Workload Factory anzuzeigen und zu kopieren.
+* Codebox Viewer: Codebox ist nun in den Prozess der Link-Erstellung integriert. Sie können die CloudFormation-Vorlage aus der Codebox in der Workload Factory anzeigen und kopieren, bevor Sie zur Ausführung des Vorgangs zu AWS umgeleitet werden.
+* Erforderliche Berechtigungen: Die für die Ausführung der Link-Erstellung in AWS CloudFormation erforderlichen Berechtigungen sind nun verfügbar, um sie über den Create Link Wizard in Workload Factory anzuzeigen und zu kopieren.
 * Unterstützung für manuelle Link-Erstellung: Diese Funktion ermöglicht die eigenständige Erstellung in AWS CloudFormation mit manueller Registrierung des Links ARN. Es ist nützlich, wenn ein Sicherheits- oder DevOps-Team beim Link-Erstellungsprozess hilft.
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erstellen Sie eine Verknüpfung"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erstellen Sie eine Verknüpfung"]
 
 
 
@@ -50,9 +50,9 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erstelle
 
 === Lesemodus-Unterstützung für Speicherverwaltung
 
-Der Lesemodus steht für die Speicherverwaltung in Workload Factory zur Verfügung. Der Lesemodus verbessert die Erfahrung des Grundmodus durch Hinzufügen von schreibgeschützten Berechtigungen, sodass die Infrastructure-as-Code-Vorlagen mit Ihren spezifischen Variablen gefüllt werden. Die Infrastruktur-als-Code-Vorlagen können direkt über Ihr AWS-Konto ausgeführt werden, ohne dass dafür Änderungsberechtigungen für Workload Factory erteilt werden müssen.
+Der Lesemodus steht für das Speichermanagement in der Workload Factory zur Verfügung. Der Lesemodus verbessert die Erfahrung des Grundmodus durch Hinzufügen von schreibgeschützten Berechtigungen, sodass die Infrastructure-as-Code-Vorlagen mit Ihren spezifischen Variablen gefüllt werden. Die Infrastructure-as-Code-Vorlagen können direkt über Ihr AWS-Konto ausgeführt werden, ohne dass Änderungen an den Berechtigungen für die Werkseinstellungen des Workloads vorgenommen werden müssen.
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Weitere Informationen zum Lesemodus"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Weitere Informationen zum Lesemodus"]
 
 
 
@@ -60,7 +60,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["
 
 Sie können jetzt ein Volume sichern, bevor Sie es löschen. Die Sicherung bleibt im Dateisystem, bis sie gelöscht wird.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["Löschen Sie ein Volume"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["Löschen Sie ein Volume"]
 
 
 
@@ -72,9 +72,9 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["Lösch
 
 Dateisysteme und Storage-VMs können Sie nun mit Terraform von der Codebox implementieren.
 
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Erstellen Sie ein Dateisystem"^]
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-storage-vm.html["Erstellen einer Storage-VM"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Verwenden Sie Terraform aus der Codebox"^]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["Erstellen Sie ein Dateisystem"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-storage-vm.html["Erstellen einer Storage-VM"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Verwenden Sie Terraform aus der Codebox"]
 
 
 
@@ -89,6 +89,6 @@ Der Storage-Rechner gibt Empfehlungen für die Konfiguration des Filesystems FSX
 
 
 
-=== Erste Version von Workload Factory für Amazon FSX for NetApp ONTAP
+=== Erstversion der Workload-Fabrik für Amazon FSX für NetApp ONTAP
 
-Amazon FSX for NetApp ONTAP ist jetzt allgemein in Workload Factory verfügbar.
+Amazon FSX für NetApp ONTAP ist jetzt allgemein in der BlueXP  Workload-Fabrik verfügbar.
