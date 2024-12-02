@@ -27,6 +27,8 @@ Einsparungen durch Anpassung: Sie stellen die Konfigurationseinstellungen für e
 
 Einsparungsmöglichkeiten bei erkannten Storage-Umgebungen: Mit den Links zu Workload-Factory zu Ihren vorhandenen AWS Storage-Umgebungen können Sie die Details zum Rechner nutzen, um sie automatisch zu vergleichen. Für die Verwendung des automatischen Modus müssen Sie die Berechtigung Automatisieren erteilen. Sie können den Anwendungsfall ändern, aber alle anderen Details werden automatisch in der Berechnung ermittelt.
 
+Darüber hinaus können Sie link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Anmeldedaten hinzufügen"^]die Genauigkeit der Rechenanalyse verbessern. Wählen Sie *Einsparungen basierend auf vorhandenen Ressourcen berechnen*. Sie werden zur Seite Anmeldeinformationen hinzufügen weitergeleitet. Nachdem Sie Anmeldedaten hinzugefügt haben, wählen Sie die vorhandenen Ressourcen aus, um sie mit FSX for ONTAP zu vergleichen, und wählen Sie *Einsparungen erkunden* aus.
+
 
 
 == Entdecken Sie Einsparungen durch Anpassung
@@ -100,7 +102,12 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 ====
 Nachdem Sie Details zur Konfiguration des Speichersystems angegeben haben, überprüfen Sie die Berechnungen und Empfehlungen auf der Seite.
 
-Scrollen Sie zusätzlich nach unten auf der Seite zu *PDF exportieren* oder *Berechnungen anzeigen*.
+Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen, indem Sie eine der folgenden Optionen auswählen:
+
+* *PDF exportieren*
+* *Per E-Mail senden*
+* *Die Berechnungen anzeigen*
+
 
 Um zu FSX für ONTAP zu wechseln, folgen Sie den Anweisungen zu <<Implementieren von FSX für ONTAP-Dateisysteme,Implementieren von FSX für ONTAP-Dateisysteme>>.
 
@@ -179,7 +186,12 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 ====
 Nachdem Sie Details zur Konfiguration des Speichersystems angegeben haben, überprüfen Sie die Berechnungen und Empfehlungen auf der Seite.
 
-Scrollen Sie zusätzlich nach unten auf der Seite zu *PDF exportieren* oder *Berechnungen anzeigen*.
+Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen, indem Sie eine der folgenden Optionen auswählen:
+
+* *PDF exportieren*
+* *Per E-Mail senden*
+* *Die Berechnungen anzeigen*
+
 
 
 

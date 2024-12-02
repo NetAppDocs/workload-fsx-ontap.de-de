@@ -59,6 +59,9 @@ Sie können auch eine gespeicherte Konfiguration laden.
 +
 *** Bei vertikal skalierbaren Implementierungen kann nur ein HA-Paar vorhanden sein.
 *** Bei horizontal skalierbaren Implementierungen gibt es zwischen zwei und zwölf HA-Paare.
++
+Um iSCSI-Blockvolumes auf dem Dateisystem bereitzustellen, wählen Sie nicht mehr als 6 HA-Paare aus.
+
 
 
 .. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.
@@ -129,6 +132,9 @@ Sie können auch eine gespeicherte Konfiguration laden.
 +
 *** Bei vertikal skalierbaren Implementierungen kann nur ein HA-Paar vorhanden sein.
 *** Bei horizontal skalierbaren Implementierungen gibt es zwischen zwei und zwölf HA-Paare.
++
+Um iSCSI-Blockvolumes auf dem Dateisystem bereitzustellen, wählen Sie nicht mehr als 6 HA-Paare aus.
+
 
 
 .. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.

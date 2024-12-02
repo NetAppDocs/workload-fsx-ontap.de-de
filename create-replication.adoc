@@ -62,11 +62,11 @@ Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternat
 Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
 
 +
-... Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
-... Geben Sie für *Create a New Policy* Folgendes an:
+*** Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+*** Geben Sie für *Create a New Policy* Folgendes an:
 +
-.... *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
-.... *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
+**** *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
+**** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
 
 
 
@@ -93,7 +93,7 @@ Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene R
 +
 _Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Verwendung der Workload Factory FSX for ONTAP-Benutzeroberfläche. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^]in der Dokumentation zu AWS FSX for NetApp ONTAP.
 
-.. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
+.. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MiB/s. ein Alternativ wählen Sie *Unlimited*.
 +
 Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
 
@@ -107,11 +107,11 @@ Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternat
 Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
 
 +
-... Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
-... Geben Sie für *Create a New Policy* Folgendes an:
+*** Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+*** Geben Sie für *Create a New Policy* Folgendes an:
 +
-.... *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
-.... *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
+**** *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
+**** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
 
 
 
@@ -124,4 +124,4 @@ Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene R
 --
 ====
 .Ergebnis
-Die Replikationsbeziehung wird auf der Registerkarte *Replikationsbeziehungen* angezeigt.
+Die Replikationsbeziehung wird auf der Registerkarte *Replikationsbeziehungen* im Ziel-FSX für ONTAP-Dateisystem angezeigt.

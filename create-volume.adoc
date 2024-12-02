@@ -81,10 +81,15 @@ Wenn Sie eine vorhandene Exportrichtlinie ausgewählt haben, geben Sie einen neu
 ..... *Export Policy Rule* hinzufügen: Optional können Sie für eine benutzerdefinierte Export Policy Regeln zur Export Policy hinzufügen.
 
 
-.... *CIFS-Share*: Geben Sie den CIFS-Share-Namen ein, um SMB-Zugriff zu ermöglichen.
+.... *CIFS-Share*: Geben Sie Folgendes an:
++
+..... *Name*: Geben Sie den CIFS-Share-Namen ein, um SMB-Zugriff zu ermöglichen.
+..... *Berechtigungen*: Wählen Sie Vollzugriff, Lesen/Schreiben, Lesen oder keinen Zugriff und geben Sie dann die Benutzer oder Gruppen getrennt durch ein Semikolon ( ; ) ein. Bei Benutzern oder Gruppen wird zwischen Groß- und Kleinschreibung unterschieden, und die Domäne des Benutzers muss im Format „Domain\username“ enthalten sein.
 
 
-*** *Blockzugriff*: Ermöglicht Hosts, die kritische Geschäftsanwendungen ausführen, den Zugriff auf das Volume über das iSCSI-Protokoll.
+
+
+*** *Blockzugriff*: Ermöglicht Hosts, die kritische Geschäftsanwendungen ausführen, den Zugriff auf das Volume über das iSCSI-Protokoll. Der Block-Zugriff ist nur verfügbar, wenn die horizontal skalierbare Filesystem-Implementierung über 6 HA-Paare oder weniger verfügt.
 +
 Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzurichten.
 

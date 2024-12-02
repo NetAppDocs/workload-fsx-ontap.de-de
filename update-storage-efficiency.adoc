@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: update-storage-efficiency.html 
+keywords: storage efficiency change, update storage efficiency 
+summary: In der BlueXP  Workload-Farm können Sie die Einstellung für die Storage-Effizienz nach der Volume-Erstellung aktualisieren. 
+---
+= Aktualisierung der Storage-Effizienzeinstellung eines Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+In der BlueXP  Workload-Farm können Sie die Einstellung für die Storage-Effizienz nach der Volume-Erstellung aktualisieren.
+
+.Über diese Aufgabe
+Die Storage-Effizienzfunktionen umfassen Deduplizierung, Datenkomprimierung und Data-Compaction, um eine optimale Speicherersparnis mit einer FlexVol volume zu erzielen. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können. Data-Compaction speichert mehr Daten in weniger Speicherplatz und steigert somit die Storage-Effizienz.
+
+Wenn Sie beim Erstellen eines Volumes die Storage-Effizienz nicht aktivieren möchten, können Sie die Einstellungen für potenzielle Platz- und Kosteneinsparungen jederzeit aktivieren.
+
+Volumes verwenden Thin Provisioning, unabhängig davon, ob Sie Storage-Effizienz aktivieren oder deaktivieren.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte Volumes das Menü mit drei Punkten des Volumes aus, um die Tiering-Richtlinie für zu ändern.
+. Wählen Sie *Advanced Actions* und dann *Set Storage Efficiency*.
+. Wählen Sie diese Option, um die Effizienz des Volume-Storage zu aktivieren oder zu deaktivieren.
+. Wählen Sie *Übernehmen*, um die Änderung zu speichern.
+

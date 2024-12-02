@@ -25,9 +25,16 @@ Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, un
 . Wählen Sie *Erweiterte Aktionen* und dann *CIFS-Freigabe bearbeiten*.
 . Geben Sie auf der Seite „CIFS-Freigabe bearbeiten“ Folgendes ein:
 +
-.. *Benutzer oder Gruppen*: Geben Sie gültige Benutzer und Gruppen ein. Trennen Sie jeden Eintrag durch einen Semikolon „;“.
-.. *Berechtigungen*: Wählen Sie *volle Kontrolle*, *Lesen/Schreiben*, *Lesen* oder *kein Zugriff*.
+.. *Name*: Geben Sie den Namen der CIFS-Freigabe ein.
+.. *Berechtigungen*: Wählen Sie Vollzugriff, Lesen/Schreiben, Lesen oder keinen Zugriff und geben Sie dann die Benutzer oder Gruppen getrennt durch ein Semikolon ( ; ) ein. Bei Benutzern oder Gruppen wird zwischen Groß- und Kleinschreibung unterschieden, und die Domäne des Benutzers muss im Format „Domain\username“ enthalten sein.
 
 
-. Wählen Sie *Anwenden*.
+. Wählen Sie Übernehmen.
++
+Änderungen können dazu führen, dass aktuelle Benutzer oder Gruppen den Zugriff auf die CIFS-Freigabe verlieren.
 
+. Wählen Sie *Weiter*, um die Änderungen zu speichern.
+
+
+.Ergebnis
+Änderungen an der CIFS-Freigabe werden übernommen.

@@ -15,15 +15,9 @@ Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, d
 
 
 
-== Verlinken
+== Für erweiterte ONTAP-Vorgänge ist eine Verbindung erforderlich
 
 Für einige Vorgänge wie die Replikation in der werkseitigen Benutzeroberfläche des Workloads ist ein Link erforderlich.
-
-
-
-== Storage-Effizienz
-
-Storage-Effizienz kann nach der Volume-Erstellung nicht deaktiviert oder aktiviert werden.
 
 
 
@@ -37,7 +31,7 @@ Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis z
 
 
 
-== Horizontal skalierbare Implementierungen
+=== Horizontal skalierbare Implementierungen
 
 Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 3 und 6 Gbit/s für Scale-out-Implementierungen: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland) und Asia Pacific (Sydney).
 
@@ -62,7 +56,6 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 
 == ISCSI-Protokoll unterstützt
 
-* Das iSCSI-Protokoll wird nur für Scale-up-Implementierungen unterstützt. ^1^
 * Das iSCSI-Protokoll ist nur für FlexVol-Volumes verfügbar. ^1^
 * Es kann nur eine einzelne LUN pro Volume konfiguriert werden.
 

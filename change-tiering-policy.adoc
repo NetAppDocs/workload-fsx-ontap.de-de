@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
-keywords:  
+keywords: tiering policy, change tier, change tiers, tier policy update 
 summary: Ändern Sie die Tiering-Richtlinie in der BlueXP -Workload-Fabrik, um Daten vom primären Hochleistungs-Storage-Tier auf die sekundäre Kapazitäts-Pool-Storage-Tier neu zuzuweisen. 
 ---
 = Ändern Sie die Tiering-Richtlinie für ein Volume in der BlueXP  Workload-Fabrik

@@ -11,7 +11,7 @@ settings:
   rss_page: whats-new.html
   release_notes_autogen:
     release_notes_repo: workload-relnotes
-  langs: de-de,us-en,ja-jp,ko-kr,zh-cn,zh-tw,es-es,fr-fr,it-it
+  langs: de-de,us-en,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: Amazon FSX für NetApp ONTAP Dokumentation
@@ -78,6 +78,8 @@ sidebar:
           url: "/initialize-replication.html"
       - title: Klonen Sie ein Volume
         url: clone-volume.html
+      - title: Lokale ONTAP-Daten nutzen
+        url: "/use-onprem-data.html"
   - title: Administration und Überwachung
     entries:
     - title: Volume-Administration
@@ -92,6 +94,8 @@ sidebar:
         url: "/rebalance-volume.html"
       - title: Ändern Sie die Tiering Policy
         url: "/change-tiering-policy.html"
+      - title: Aktualisieren Sie die Storage-Effizienz
+        url: "/update-storage-efficiency.html"
       - title: Managen der NFS-Exportrichtlinie
         url: "/manage-nfs-export-policy.html"
       - title: Verwalten der CIFS-Freigabe
