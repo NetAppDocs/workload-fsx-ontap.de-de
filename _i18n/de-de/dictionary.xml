@@ -21,8 +21,6 @@
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.</block>
-  <block id="2ca869b68be8f2b6e678f47d25c26fb7" category="list-text">Wählen Sie *Erweiterte Aktionen* und dann *CIFS-Freigabe bearbeiten*.</block>
-  <block id="736934ebc3ee8de296f3d5213e79430e" category="list-text">Geben Sie auf der Seite „CIFS-Freigabe bearbeiten“ Folgendes ein:</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Über diese Aufgabe</block>
   <block id="4c9aa322b281bc41d9f93e03b1223838" category="paragraph">Bestimmen Sie die Clientspezifikationen für die Regeln der Exportrichtlinie. Gültige Werte für die Client-Spezifikation sind:</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="list-text">IP-Adressen</block>
@@ -396,28 +394,21 @@
   <block id="aca77c97dcf29f670f572a7129863195" category="section-title">Implementieren von FSX für ONTAP-Dateisysteme</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">Bereitstellungsmethoden</block>
   <block id="543b29a63a3d070c0ff920d687259dfc" category="paragraph">Im _BASIC_-Modus können Sie den Inhalt aus dem Codebox-Fenster kopieren und das Dateisystem FSX for ONTAP mit einer der Codebox-Methoden bereitstellen.</block>
-  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp bietet für Workload Factory und die zugehörigen Cloud-Services unterschiedliche Unterstützung. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Erhalten Sie Support für FSX für ONTAP</block>
-  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Für technischen Support in Bezug auf FSX for ONTAP, seine Infrastruktur oder jede Lösung, die den Service verwendet, siehe „Hilfe erhalten“ in der Dokumentation zu Workload Factory für dieses Produkt.</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX für ONTAP</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Nutzen Sie die unten beschriebenen Support-Optionen, um technischen Support für Workload Factory und seine Storage-Lösungen und -Services zu erhalten.</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Nutzen Sie Self-Support-Optionen</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Diese Optionen sind kostenlos verfügbar, 24 Stunden am Tag, 7 Tage die Woche:</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Dokumentation</block>
-  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">Die Workload Factory-Dokumentation, die Sie derzeit anzeigen.</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Wissensdatenbank</block>
   <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
-  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Durchsuchen Sie die Workload Factory Knowledge Base, um hilfreiche Artikel zur Fehlerbehebung zu finden.</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Communitys</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Treten Sie der Workload Factory Community bei, um laufende Diskussionen zu verfolgen oder neue zu erstellen.</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Erstellen Sie einen Fall mit dem NetApp Support</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Zusätzlich zu den oben genannten Self-Support-Optionen können Sie gemeinsam mit einem NetApp Support-Experten eventuelle Probleme nach der Aktivierung des Supports beheben.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Bevor Sie beginnen</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Erfahren Sie, wie Sie sich für Support registrieren</block>
-  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Um die Funktion *Fall erstellen* nutzen zu können, müssen Sie sich zunächst für den Support registrieren. Verknüpfen Sie Ihre Zugangsdaten für die NetApp Support-Website mit Ihrer Workload Factory Anmeldung. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
-  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Wählen Sie oben rechts in der Workload Factory-Konsole *Hilfe &gt; Support* aus.</block>
   <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">Wenn Sie diese Option auswählen, wird die BlueXP Konsole um eine neue Browserregisterkarte geöffnet und das Support Dashboard geladen.</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Wählen Sie auf der Seite *Ressourcen* eine der verfügbaren Optionen unter Technischer Support:</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Wählen Sie *Rufen Sie uns an*, wenn Sie mit jemandem am Telefon sprechen möchten. Sie werden zu einer Seite auf netapp.com weitergeleitet, auf der die Telefonnummern aufgeführt sind, die Sie anrufen können.</block>
@@ -498,7 +489,6 @@
   <block id="482723983a4f2af954e36ff41e567451" category="doc">Bekannte Einschränkungen</block>
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">Unterstützung für Durchsatzkapazität in Regionen</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">Vertikal skalierbare Implementierungen</block>
-  <block id="24aa3b91eee064e4bbffa941e071bd95" category="paragraph">Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 4 Gbit/s für Scale-up-Bereitstellungen: Region US East (Ohio), Region US East (N. Virginia), Region US West (Oregon) und Europa (Irland).</block>
   <block id="2e8bf528a9bc28508b7cf3ffef710f1c" category="section-title">Horizontal skalierbare Implementierungen</block>
   <block id="3e14c6b63ec31128bf81a140eecbaeb0" category="paragraph">Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 3 und 6 Gbit/s für Scale-out-Implementierungen: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland) und Asia Pacific (Sydney).</block>
   <block id="1d19e21de0f93b11f5ceb8b535a3afc2" category="section-title">Kapazitätsmanagement</block>
@@ -509,13 +499,9 @@
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph"><block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block>In der AWS-Dokumentation finden Sie Informationen zur maximalen Anzahl von SVMs pro Filesystem.</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">ISCSI-Protokoll unterstützt</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">Es kann nur eine einzelne LUN pro Volume konfiguriert werden.</block>
-  <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">Unterstützte Regionen</block>
-  <block id="1bf3a4f06c8408a2ff436e0b847ca3a3" category="list-text">Die Region Kanada West (Calgary) wird derzeit nicht unterstützt.</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">Datensicherung</block>
   <block id="3625bed0ef82516150cc87137582e2b5" category="list-text">Snapshots können nicht gelöscht werden.</block>
-  <block id="720a8000a7c475fdd307a99cc1a79ac7" category="list-text">Die Replikation zwischen FSX für ONTAP-Dateisystemen wird nur unterstützt.</block>
   <block id="fa0b5078a184e3a9f13892acdade9375" category="list-text">Wenn Sie ein Dateisystem replizieren, verwenden alle Volumes im Dateisystem dieselbe Replikationsrichtlinie.</block>
-  <block id="2755e2232e7c57beeec07b1f327577b9" category="list-text">Nur der letzte Snapshot ist für die Wiederherstellung verfügbar.</block>
   <block id="6868a45b7f86e5379e5d85b2d762b844" category="section-title">Rechner für Storage-Einsparungen</block>
   <block id="b243e9d890e3c0d1d9ba32de03c0eb00" category="paragraph">Der Rechner für Storage-Einsparungen berechnet die Kosteneinsparungen für die folgenden Konfigurationen nicht:</block>
   <block id="9049888f2f272bf903633de4a685ba6a" category="list-text">FSX für Windows File Server: HDD Storage-Typ</block>
@@ -580,15 +566,6 @@
   <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
   <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">Wenn ein Link erforderlich ist</block>
   <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">Zu den Funktionen, für die ein Link erforderlich ist, gehören:</block>
-  <block id="ab887a13e0e43ab14f26aa4139d3931e" category="list-text">Zeigt die Version von ONTAP an, die auf einem FSX für ONTAP-Dateisystem installiert ist</block>
-  <block id="6a0bbe6ca6ca13a9f69ba22ff72d4db9" category="list-text">Verwalten Sie iSCSI-Volumes auf dem System</block>
-  <block id="f713a1eba4a310a7dee6e6148031ac90" category="list-text">Aktivieren und deaktivieren Sie die Autogrow Funktion für Volumes</block>
-  <block id="b688472ba5c5b20a13e35de55bbd243e" category="list-text">Erstellen und Verwalten von Snapshot-Richtlinien</block>
-  <block id="607207d543b313ae2d9720c777e7a286" category="list-text">Konfiguration von Replikationsbeziehungen und Replizierung von Volumes zwischen Dateisystemen</block>
-  <block id="f39a1ae39e9d73b3a9aa6c431f9fb9d4" category="list-text">Backup-Beziehungen konfigurieren und Volume-Daten im Cloud-Storage sichern</block>
-  <block id="f15997f78fd09915dc098e9c00579d74" category="list-text">Volumes innerhalb eines Filesystems klonen</block>
-  <block id="12f68de27d579f57f0f70762ccd96328" category="list-text">Zusätzliche Metriken direkt aus ONTAP anzeigen (Standardkennzahlen werden von Amazon CloudWatch erfasst)</block>
-  <block id="1a59c94816246f9168f366b6938e1715" category="list-text">Management von NFS-Exportrichtlinien</block>
   <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="doc">Links verwalten</block>
   <block id="a4fcf9229a590e13a5a514e19c4c398e" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> Oder <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>.</block>
   <block id="e32918056c538c64f6e229f2ca257e25" category="section-title">Zeigen Sie die mit Ihrem Konto verknüpften Links an</block>
@@ -694,8 +671,6 @@
   <block id="6155892ff0823c5997e8d188a29e66e2" category="list-text">Wählen Sie im Dialogfeld Replikation unterbrechen *Break* aus.</block>
   <block id="f42375f716d314b031447e015387fbff" category="paragraph">Der Replikationsstatus des Volumes ändert sich in *broken*. Das Ziel-Volume wird beschreibbar.</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Für den Support anmelden</block>
-  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Für den Support von Workload Factory und seinen Storage-Lösungen und -Services ist eine Support-Registrierung erforderlich. Sie müssen sich für Support über die BlueXP Konsole registrieren, einer separaten webbasierten Konsole von Workload Factory.</block>
-  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">Durch die Registrierung für den Support wird die NetApp-Unterstützung für einen Fileservice eines Cloud-Providers nicht aktiviert. Technischer Support im Zusammenhang mit einem Fileservice eines Cloud-Providers, seiner Infrastruktur oder einer Lösung, die den Service verwendet, finden Sie unter „Hilfe erhalten“ in der Dokumentation zu Workload Factory für dieses Produkt.</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Übersicht über die Support-Registrierung</block>
   <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">Die Registrierung Ihres Support-Abonnements für Ihre Account-ID (Ihre 20-stellige Seriennummer 960xxxxxxx auf der Seite „Support Resources“ in BlueXP) dient als zentrale Support-Abonnement-ID. Jedes BlueXP-Abonnement für Support auf Kontoebene muss registriert werden.</block>
   <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">Durch das Registrieren von Funktionen wie das Öffnen von Support-Tickets und die automatische Generierung von Support-Cases. Die Registrierung ist abgeschlossen, indem wie unten beschrieben Konten der NetApp Support Website (NSS) zu BlueXP hinzugefügt werden.</block>
@@ -781,7 +756,6 @@
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">Volume-Administration</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">Bearbeiten Sie Volume Autogrow</block>
   <block id="be6125857b11bdb69d1f89bf69787f48" category="sidebar">Neuausrichtung der Kapazität eines Volumes</block>
-  <block id="9f4aa892debf403a854859b0ca9c9ff6" category="sidebar">Ändern Sie die Tiering Policy</block>
   <block id="28b0bfb965f113c41530116951bfce50" category="sidebar">Filesystem-Administration</block>
   <block id="ff117b5e42f4a60dd5b7859999c4f2bd" category="sidebar">Aktivieren Sie das automatische Kapazitätsmanagement</block>
   <block id="c7ad4dd9b2ecb508f1366110b020e001" category="sidebar">Fsxadmin-Kennwort zurücksetzen</block>
@@ -1089,9 +1063,7 @@
   <block id="4a74309dc15865035b8b93cec28f2a96" category="list-text">Wählen Sie unter Information das Bleistiftsymbol neben *FSX for ONTAP Backup*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *FSX for ONTAP Backup* schwebt.</block>
   <block id="9f16bb4c9cbb656a02f2d0ac20ae70a8" category="list-text">*Tägliche automatische Backups*: Aktivieren oder deaktivieren Sie die Funktion. Wenn Sie die Funktion deaktivieren, wählen Sie *Anwenden*. Wenn Sie die Funktion aktivieren, führen Sie die folgenden Schritte aus.</block>
   <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">*Tägliches automatisches Backup-Fenster*: Wählen Sie entweder *Keine Präferenz* (für Sie wird eine tägliche Backup-Startzeit ausgewählt) oder *Startzeit für tägliche Backups auswählen* und eine Startzeit angeben.</block>
-  <block id="9267ce1924a6f0548efc234c84461fa8" category="summary">Ändern Sie die CIFS-Freigabe für ein Volume in der BlueXP -Workload-Fabrik, die den SMB/CIFS-Protokolltyp verwendet.</block>
   <block id="5bdcc5d3e4e631055e0153df468f21d6" category="doc">Verwalten Sie die CIFS-Freigabe für ein Volume in der BlueXP  Workload Factory</block>
-  <block id="17c44173e4e9c50b2859e1925d7af336" category="paragraph">Beim Management der CIFS-Freigabe eines Volumes in der BlueXP  Workload Factory müssen die Benutzer und Gruppen ermittelt werden, denen Zugriff gewährt werden soll, sowie die Art des Zugriffs, den sie gewähren können.</block>
   <block id="3d158aba7d5d233ad247917999b7f8f9" category="list-text">Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.</block>
   <block id="20ce09b74b6e0e3f084a81d605cc8f77" category="summary">Sie können die mit Ihrem Konto verknüpften Links anzeigen, einen Link zuordnen und einen Link in der BlueXP  Workload Factory entfernen.</block>
   <block id="2083481ef56023982330c4d1cbedcd07" category="doc">Verwalten von BlueXP -Workload-Werkseinstellungen</block>
@@ -1187,8 +1159,6 @@
   <block id="a5707c7f948a436824cd06775026c409" category="sidebar">Amazon FSX für NetApp ONTAP erweitert alle Funktionen von ONTAP in einen nativen AWS Managed Service und sorgt so für eine konsistente Hybrid Cloud-Nutzung. Diese Dokumentation beschreibt, wie FSX für ONTAP mithilfe der BlueXP  Workload-Factory gemanagt wird.</block>
   <block id="788881725a778e76ae58ef03f1dd4d7e" category="sidebar">Dokumentation zu Amazon FSX für NetApp ONTAP für BlueXP  Workload-Werk</block>
   <block id="d151342d67a639e871ca8c57524ca7f8" category="sidebar">Verwalten von Volume-Tags</block>
-  <block id="3a1a7312146508132d80f244521968ee" category="sidebar">Managen der NFS-Exportrichtlinie</block>
-  <block id="baae6cbba4c997ef4c9035394e7dbd9e" category="sidebar">Verwalten der CIFS-Freigabe</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">Managen Sie Storage-VM-Tags</block>
   <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">Management des FSX für ONTAP-Backup-Zeitplans</block>
   <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">Block-Storage für Scale-out-FSX für ONTAP-Filesysteme</block>
@@ -1215,7 +1185,6 @@
   <block id="81433468b8608aba73a2350afe41ac5a" category="section-title">Bereitstellungspunkt für Volumes in der BlueXP -Workload-Fabrik abrufen</block>
   <block id="06e52dae2c3e09e69a906c2fba89ed66" category="paragraph">Holen Sie sich den Mount-Punkt für ein Volume, um eine Freigabe auf einer CIFS-Freigabe oder einem NFS-Client zu mounten.</block>
   <block id="4a6574ab96645d28cf548ed8372c655c" category="list-text">Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü für das Volume, dann *Basic Actions* und dann *View Mount command*.</block>
-  <block id="bd95ac5b25f35af153096a48803b03b4" category="list-text">Wählen Sie im Dialogfeld Mount den Befehl *Copy* aus, um den Befehl zu kopieren. Sie geben den kopierten Befehl in Ihrem Terminal ein.</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">Wählen Sie *Schließen*.</block>
   <block id="0206587910cd5147f80c048ba00193af" category="paragraph">Um iSCSI-Blockvolumes auf dem Dateisystem bereitzustellen, wählen Sie nicht mehr als 6 HA-Paare aus.</block>
   <block id="f3b270238d8c3f46a0b10d724c916e7d" category="list-text">*Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MiB/s. ein Alternativ wählen Sie *Unlimited*.</block>
@@ -1234,10 +1203,7 @@
   <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP -Workload ist werkseitig eingestellt</block>
   <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
   <block id="a32b59044667570495820281f09cfa10" category="list-text">*Name*: Geben Sie den Namen der CIFS-Freigabe ein.</block>
-  <block id="a983c99827c51cfd1ffcfd3882536018" category="list-text">Wählen Sie Übernehmen.</block>
   <block id="aa6a9af5d2170a7e2225e0d97aefef52" category="paragraph">Änderungen können dazu führen, dass aktuelle Benutzer oder Gruppen den Zugriff auf die CIFS-Freigabe verlieren.</block>
-  <block id="e58fa167b6770841b720711ad8a12b1a" category="list-text">Wählen Sie *Weiter*, um die Änderungen zu speichern.</block>
-  <block id="f6db14d0bad35a9b610208b53b06c1ca" category="paragraph">Änderungen an der CIFS-Freigabe werden übernommen.</block>
   <block id="8772abd9ec2ca5593300708cb88b5426" category="summary">In der BlueXP  Workload-Farm können Sie die Einstellung für die Storage-Effizienz nach der Volume-Erstellung aktualisieren.</block>
   <block id="b31795226510baf520db5a5e2287b56e" category="doc">Aktualisierung der Storage-Effizienzeinstellung eines Volumes</block>
   <block id="07834469705cb1cae603dc37fac50539" category="paragraph">Die Storage-Effizienzfunktionen umfassen Deduplizierung, Datenkomprimierung und Data-Compaction, um eine optimale Speicherersparnis mit einer FlexVol volume zu erzielen. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können. Data-Compaction speichert mehr Daten in weniger Speicherplatz und steigert somit die Storage-Effizienz.</block>
@@ -1295,7 +1261,63 @@
   <block id="78ce280a4b77e37298d71642a4457c0a" category="list-text">Wählen Sie das lokale ONTAP-Cluster aus, das entfernt werden soll.</block>
   <block id="5b4dad1d897213eb27b108cb47f3a75d" category="list-text">Wählen Sie das Menü mit drei Punkten und dann *aus Workload Factory entfernen*.</block>
   <block id="a8cf8ae4f9fef4837824fb9409537e5d" category="paragraph">Das lokale ONTAP Cluster wird aus der BlueXP  Workload-Fabrik entfernt.</block>
-  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">Bis 01. Dezember 2024</block>
   <block id="aab28bb522b1a572add493963001b88d" category="sidebar">Lokale ONTAP-Daten nutzen</block>
   <block id="5d831b6559b5decf8f758715856498b9" category="sidebar">Aktualisieren Sie die Storage-Effizienz</block>
+  <block id="442b133d7d895a50d67d2f8514b6fc0a" category="doc">Verbesserungen der Volume-CIFS-Freigabe</block>
+  <block id="c67048e1717263df3fc8ffc894f40785" category="paragraph">Die folgenden Verbesserungen sind für das Management von CIFS-Freigaben für Volumes in einem Dateisystem von Amazon FSX für ONTAP in der BlueXP -Workload-Fabrik verfügbar:</block>
+  <block id="28ee2134fc1275e4f2052b7bd91a9f8d" category="list-text">Unterstützung für mehrere CIFS-Freigaben auf einem Volume</block>
+  <block id="aa8a0747da321d7501a2f34bb5326b65" category="list-text">Die Option, Benutzer und Gruppen jederzeit zu aktualisieren</block>
+  <block id="a85d37847efda31b7b7b0ee3ee3cd2ab" category="list-text">Die Option, Berechtigungen für Benutzer und Gruppen jederzeit zu aktualisieren</block>
+  <block id="0c05c06c8c5abf5cf4956491502d212a" category="list-text">Löschen der CIFS-Freigabe</block>
+  <block id="1122186beaf8563a5f76bdc23dfd22a5" category="inline-link-macro">CIFS-Freigaben managen</block>
+  <block id="f59eead66ce9829f954d28d72a4e99b1" category="paragraph"><block ref="f59eead66ce9829f954d28d72a4e99b1" category="inline-link-macro-rx"></block></block>
+  <block id="2898ec90c27f1541e38a1849b4b9923a" category="list-text">Wählen Sie im Dialogfeld Mount-Befehl *Copy* aus, um den Befehl entweder für den NFS-Mount-Punkt oder die CIFS-Freigabe zu kopieren. Sie geben den kopierten Befehl in Ihrem Terminal ein.</block>
+  <block id="b6a4501cc05e54e2e5a513c3b552183a" category="paragraph">NetApp bietet Unterstützung für die BlueXP -Workload-Fabrik und seine Cloud-Services auf unterschiedliche Weise. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
+  <block id="261966eaf033c38f6934f2c8fc36d79c" category="paragraph">Für technischen Support in Bezug auf FSX for ONTAP, seine Infrastruktur oder jede Lösung, die den Service verwendet, siehe „Hilfe erhalten“ in der Dokumentation zur Workload-Fabrik für dieses Produkt.</block>
+  <block id="5b49df4e58e2a4750acd8bfa8687ccd6" category="paragraph">Die Arbeitslastwerkdokumentation, die Sie derzeit anzeigen.</block>
+  <block id="ba51332e265e54eb4295d6e7d057bad8" category="paragraph">Durchsuchen Sie die Workload Factory Knowledge Base, um hilfreiche Artikel zur Fehlerbehebung zu finden.</block>
+  <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Treten Sie der Workload Factory Community bei, um laufende Diskussionen zu verfolgen oder neue zu erstellen.</block>
+  <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">Um die Funktion *Fall erstellen* nutzen zu können, müssen Sie sich zunächst für den Support registrieren. Verknüpfen Sie Ihre Zugangsdaten für die NetApp Support-Website mit Ihren werkseitigen Workload-Anmeldedaten. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Wählen Sie oben rechts in der Arbeitslastwerkkonsole *Hilfe &gt; Support* aus.</block>
+  <block id="42236277fa3913ec4d1fd1e17b26874c" category="paragraph">Scale-up-Konfigurationen werden in allen Regionen bis zu 2 Gbit/s unterstützt. Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 4 Gbit/s für Scale-up-Bereitstellungen: Region US East (Ohio), Region US East (N. Virginia), Region US West (Oregon) und Europa (Irland).</block>
+  <block id="f23f9e699754fa9634675e68ddb2477a" category="list-text">Bei Replikationsbeziehungen mit langfristiger Aufbewahrung ist nur der letzte Snapshot für die Wiederherstellung verfügbar.</block>
+  <block id="3566e30d1125b1cc489403b83380b16e" category="list-text">Anzeigen der Version von ONTAP, die auf einem FSX für ONTAP-Dateisystem installiert ist</block>
+  <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">Verwaltung von iSCSI-Volumes auf einem FSX für ONTAP-Dateisystem</block>
+  <block id="dd7d7ae00fef8de94b69aa7b5b540cb1" category="list-text">Autogrow-Funktion für Volumes</block>
+  <block id="3351e8dc51e33708d3280516a366bf4f" category="list-text">Erstellung und Management von Snapshot-Richtlinien</block>
+  <block id="bc405b20c5dce6dc67910950f2591510" category="list-text">Konfiguration der Replikationsbeziehungen</block>
+  <block id="900f24520b234a239d52bc47e673bdd5" category="list-text">Volume-Replizierung zwischen FSX für ONTAP-Filesystemen</block>
+  <block id="2886577fc59b2d9df21dd1d41704de71" category="list-text">Konfiguration der Backup-Beziehung</block>
+  <block id="ab8c429c03a3887588677f966f3e8c48" category="list-text">Erstellen von Volume-Daten-Backups in Cloud-Storage</block>
+  <block id="0fb8fbbbeb74e2e76be7a39d75ecdcda" category="list-text">Volume-Klone in einem FSX für ONTAP Filesystem</block>
+  <block id="981bc65604544a529c511adc06cb441f" category="list-text">Anzeige zusätzlicher Metriken direkt aus ONTAP (Standardkennzahlen werden von Amazon CloudWatch erfasst)</block>
+  <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">Management von NFS-Exportrichtlinien</block>
+  <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">Management von CIFS-Freigaben</block>
+  <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik umfasst die Erstellung, die Bestimmung des Zugriffs auf Benutzer und Gruppen sowie das Löschen.</block>
+  <block id="5917a5ef86ec0bb832a8231c1ca2e1df" category="paragraph">Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik umfasst die Erstellung von CIFS-Freigaben, die Bestimmung der Benutzer und Gruppen, denen Zugriff gewährt werden soll, sowie die Art des Zugriffs, der ihnen gewährt werden soll, und das Löschen von CIFS-Freigaben.</block>
+  <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">Bevor Sie beginnen, gehen Sie wie folgt vor:</block>
+  <block id="1832295f4669cf4c232bd0b7e1d64a4b" category="list-text">Um CIFS-Freigaben zu verwalten, müssen Sie <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>. Wenn Sie noch keinen Link haben, <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.</block>
+  <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">Erstellen Sie eine CIFS-Freigabe für ein Volume</block>
+  <block id="cbbe8730f4012f0727071442d89615d6" category="paragraph">Führen Sie die Schritte aus, um eine CIFS-Freigabe für ein Volume zu erstellen.</block>
+  <block id="7b83ec4f9189886fea5cbe593c19e290" category="list-text">Wählen Sie *Advanced Actions* und dann *Manage CIFS Shares*.</block>
+  <block id="212dea300359fc96977228999150178c" category="list-text">Wählen Sie auf der Seite CIFS-Freigabe verwalten die Option *CIFS-Freigabe erstellen* aus.</block>
+  <block id="5844bed8558487b50b554f8e08c11861" category="list-text">Geben Sie im Dialogfeld CIFS-Freigabe erstellen Folgendes ein:</block>
+  <block id="e8a8f2eb5b946d837e542d5a63fad375" category="paragraph">Die CIFS-Freigabe für das Volume wird erstellt.</block>
+  <block id="e72636c845db0954868fedab8b9039a9" category="section-title">Ändern Sie eine CIFS-Freigabe für ein Volume</block>
+  <block id="1865d8e00fbb6200e9726e5afde71e2d" category="paragraph">Führen Sie die Schritte aus, um die CIFS-Freigabeeinstellungen für ein Volume zu ändern.</block>
+  <block id="ca8738e363c21866f7099ffaef924318" category="list-text">Bewegen Sie auf der Seite CIFS-Freigabe managen den Mauszeiger über eine CIFS-Freigabe und wählen Sie das Bleistiftsymbol, um Änderungen vorzunehmen.</block>
+  <block id="5a299cf518ea7257993d2714505b5ff2" category="list-text">Ändern Sie die CIFS-Zugriffsberechtigungen oder die Benutzer oder Gruppen, denen Berechtigungen zugewiesen werden sollen.</block>
+  <block id="84779d2a2e99170bfbb6261853aee8d0" category="paragraph">Der CIFS-Share für das Volume wird aktualisiert.</block>
+  <block id="bb806e2102217ea2d3a0c758e03eb23c" category="section-title">Löschen Sie eine CIFS-Freigabe für ein Volume</block>
+  <block id="7fe3781e49adf652332e06e0cf96f9ca" category="paragraph">Führen Sie die Schritte aus, um eine CIFS-Freigabe für ein Volume zu löschen.</block>
+  <block id="2385aa1bb13246d1508cfe232ff59c2f" category="list-text">Bewegen Sie auf der Seite CIFS-Freigabe verwalten den Mauszeiger über eine CIFS-Freigabe und wählen Sie das Papierkorb-Symbol aus, um sie zu löschen.</block>
+  <block id="db881e47b9137977356b0d30938ec851" category="paragraph">Wenn Sie die CIFS-Freigabe löschen, ist sie für Benutzer, die sie mounten möchten, nicht verfügbar und kann nicht darauf zugegriffen werden.</block>
+  <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">Wählen Sie *Löschen*, um den Löschvorgang zu bestätigen.</block>
+  <block id="8c880a68f0285449b1f44d4fdeca7cae" category="paragraph">Die CIFS-Freigabe für das Volume wird gelöscht.</block>
+  <block id="ce638fcfafd4d79a49524062225d7fbc" category="paragraph">Für den Support ist eine Registrierung erforderlich, um technischen Support zu erhalten, der speziell für die BlueXP  Workload-Fabrik und die Storage-Lösungen und -Services von NetApp vorgesehen ist. Sie müssen sich für den Support über die BlueXP -Konsole registrieren, bei der es sich um eine separate webbasierte Konsole von der Workload-Werkseinstellung handelt.</block>
+  <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">Durch die Registrierung für den Support wird die NetApp-Unterstützung für einen Fileservice eines Cloud-Providers nicht aktiviert. Technischer Support zu einem Fileservice eines Cloud-Providers, seiner Infrastruktur oder einer Lösung, die den Service verwendet, finden Sie unter „Hilfe erhalten“ in der Dokumentation zur Workload-Farm des jeweiligen Produkts.</block>
+  <block id="37b8354fe553b0151888468751ea8eb0" category="section-title">05 Januar 2025</block>
+  <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">Bis 1. Dezember 2024</block>
+  <block id="d83aca6cf65672d392d39e7c76942a11" category="sidebar">Tiering-Richtlinie ändern</block>
+  <block id="07b434b23f63ca6490df33b213599320" category="sidebar">Management der NFS-Exportrichtlinien</block>
 </blocks>

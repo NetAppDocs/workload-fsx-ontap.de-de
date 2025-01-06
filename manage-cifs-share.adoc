@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
-summary: Ändern Sie die CIFS-Freigabe für ein Volume in der BlueXP -Workload-Fabrik, die den SMB/CIFS-Protokolltyp verwendet. 
+summary: Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik umfasst die Erstellung, die Bestimmung des Zugriffs auf Benutzer und Gruppen sowie das Löschen. 
 ---
 = Verwalten Sie die CIFS-Freigabe für ein Volume in der BlueXP  Workload Factory
 :allow-uri-read: 
@@ -11,10 +11,20 @@ summary: Ändern Sie die CIFS-Freigabe für ein Volume in der BlueXP -Workload-
 
 
 [role="lead"]
-Beim Management der CIFS-Freigabe eines Volumes in der BlueXP  Workload Factory müssen die Benutzer und Gruppen ermittelt werden, denen Zugriff gewährt werden soll, sowie die Art des Zugriffs, den sie gewähren können.
+Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik umfasst die Erstellung von CIFS-Freigaben, die Bestimmung der Benutzer und Gruppen, denen Zugriff gewährt werden soll, sowie die Art des Zugriffs, der ihnen gewährt werden soll, und das Löschen von CIFS-Freigaben.
 
 .Bevor Sie beginnen
-Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie fest, welche Art von Zugriff ihnen gewährt werden soll.
+Bevor Sie beginnen, gehen Sie wie folgt vor:
+
+* Um CIFS-Freigaben zu verwalten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+* Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie fest, welche Art von Zugriff ihnen gewährt werden soll.
+
+
+
+
+== Erstellen Sie eine CIFS-Freigabe für ein Volume
+
+Führen Sie die Schritte aus, um eine CIFS-Freigabe für ein Volume zu erstellen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -22,19 +32,63 @@ Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, un
 . Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
-. Wählen Sie *Erweiterte Aktionen* und dann *CIFS-Freigabe bearbeiten*.
-. Geben Sie auf der Seite „CIFS-Freigabe bearbeiten“ Folgendes ein:
+. Wählen Sie *Advanced Actions* und dann *Manage CIFS Shares*.
+. Wählen Sie auf der Seite CIFS-Freigabe verwalten die Option *CIFS-Freigabe erstellen* aus.
+. Geben Sie im Dialogfeld CIFS-Freigabe erstellen Folgendes ein:
 +
 .. *Name*: Geben Sie den Namen der CIFS-Freigabe ein.
 .. *Berechtigungen*: Wählen Sie Vollzugriff, Lesen/Schreiben, Lesen oder keinen Zugriff und geben Sie dann die Benutzer oder Gruppen getrennt durch ein Semikolon ( ; ) ein. Bei Benutzern oder Gruppen wird zwischen Groß- und Kleinschreibung unterschieden, und die Domäne des Benutzers muss im Format „Domain\username“ enthalten sein.
 
 
-. Wählen Sie Übernehmen.
-+
-Änderungen können dazu führen, dass aktuelle Benutzer oder Gruppen den Zugriff auf die CIFS-Freigabe verlieren.
-
-. Wählen Sie *Weiter*, um die Änderungen zu speichern.
+. Wählen Sie *Erstellen*.
 
 
 .Ergebnis
-Änderungen an der CIFS-Freigabe werden übernommen.
+Die CIFS-Freigabe für das Volume wird erstellt.
+
+
+
+== Ändern Sie eine CIFS-Freigabe für ein Volume
+
+Führen Sie die Schritte aus, um die CIFS-Freigabeeinstellungen für ein Volume zu ändern.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
+. Wählen Sie *Advanced Actions* und dann *Manage CIFS Shares*.
+. Bewegen Sie auf der Seite CIFS-Freigabe managen den Mauszeiger über eine CIFS-Freigabe und wählen Sie das Bleistiftsymbol, um Änderungen vorzunehmen.
+. Ändern Sie die CIFS-Zugriffsberechtigungen oder die Benutzer oder Gruppen, denen Berechtigungen zugewiesen werden sollen.
++
+Änderungen können dazu führen, dass aktuelle Benutzer oder Gruppen den Zugriff auf die CIFS-Freigabe verlieren.
+
+. Wählen Sie *Übernehmen*, um die Änderungen zu speichern.
+
+
+.Ergebnis
+Der CIFS-Share für das Volume wird aktualisiert.
+
+
+
+== Löschen Sie eine CIFS-Freigabe für ein Volume
+
+Führen Sie die Schritte aus, um eine CIFS-Freigabe für ein Volume zu löschen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
+. Wählen Sie *Advanced Actions* und dann *Manage CIFS Shares*.
+. Bewegen Sie auf der Seite CIFS-Freigabe verwalten den Mauszeiger über eine CIFS-Freigabe und wählen Sie das Papierkorb-Symbol aus, um sie zu löschen.
++
+Wenn Sie die CIFS-Freigabe löschen, ist sie für Benutzer, die sie mounten möchten, nicht verfügbar und kann nicht darauf zugegriffen werden.
+
+. Wählen Sie *Löschen*, um den Löschvorgang zu bestätigen.
+
+
+.Ergebnis
+Die CIFS-Freigabe für das Volume wird gelöscht.

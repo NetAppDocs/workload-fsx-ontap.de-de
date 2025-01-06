@@ -27,7 +27,7 @@ Für einige Vorgänge wie die Replikation in der werkseitigen Benutzeroberfläch
 
 === Vertikal skalierbare Implementierungen
 
-Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 4 Gbit/s für Scale-up-Bereitstellungen: Region US East (Ohio), Region US East (N. Virginia), Region US West (Oregon) und Europa (Irland).
+Scale-up-Konfigurationen werden in allen Regionen bis zu 2 Gbit/s unterstützt. Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 4 Gbit/s für Scale-up-Bereitstellungen: Region US East (Ohio), Region US East (N. Virginia), Region US West (Oregon) und Europa (Irland).
 
 
 
@@ -62,19 +62,11 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 
 
 
-== Unterstützte Regionen
-
-* Die Region Kanada West (Calgary) wird derzeit nicht unterstützt.
-
-
-
-
 == Datensicherung
 
 * Snapshots können nicht gelöscht werden.
-* Die Replikation zwischen FSX für ONTAP-Dateisystemen wird nur unterstützt.
 * Wenn Sie ein Dateisystem replizieren, verwenden alle Volumes im Dateisystem dieselbe Replikationsrichtlinie.
-* Nur der letzte Snapshot ist für die Wiederherstellung verfügbar.
+* Bei Replikationsbeziehungen mit langfristiger Aufbewahrung ist nur der letzte Snapshot für die Wiederherstellung verfügbar.
 
 
 

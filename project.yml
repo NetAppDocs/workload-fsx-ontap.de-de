@@ -47,7 +47,7 @@ sidebar:
       - title: Erstellen eines Volumes
         url: "/create-volume.html"
       - title: Zugriff auf Ihre Daten
-        url: access-data.html
+        url: "/access-data.html"
     - title: Erstellen einer Storage-VM
       url: "/create-storage-vm.html"
     - title: Sichern Sie Ihre Daten
@@ -77,7 +77,7 @@ sidebar:
         - title: Initialisieren Sie eine Replikationsbeziehung
           url: "/initialize-replication.html"
       - title: Klonen Sie ein Volume
-        url: clone-volume.html
+        url: "/clone-volume.html"
       - title: Lokale ONTAP-Daten nutzen
         url: "/use-onprem-data.html"
   - title: Administration und Überwachung
@@ -92,16 +92,16 @@ sidebar:
         url: "/manage-volume-tags.html"
       - title: Neuausrichtung der Kapazität eines Volumes
         url: "/rebalance-volume.html"
-      - title: Ändern Sie die Tiering Policy
+      - title: Tiering-Richtlinie ändern
         url: "/change-tiering-policy.html"
       - title: Aktualisieren Sie die Storage-Effizienz
         url: "/update-storage-efficiency.html"
-      - title: Managen der NFS-Exportrichtlinie
+      - title: Management der NFS-Exportrichtlinien
         url: "/manage-nfs-export-policy.html"
-      - title: Verwalten der CIFS-Freigabe
+      - title: CIFS-Freigaben managen
         url: "/manage-cifs-share.html"
       - title: Teilen Sie ein geklontes Volume auf
-        url: split-cloned-volume.html
+        url: "/split-cloned-volume.html"
       - title: Löschen Sie ein Volume
         url: "/delete-volume.html"
     - title: Filesystem-Administration
@@ -123,13 +123,13 @@ sidebar:
       - title: Managen Sie Storage-VM-Tags
         url: "/manage-svm-tags.html"
       - title: Kennwort für Storage-VM zurücksetzen
-        url: reset-svm-password.html
+        url: "/reset-svm-password.html"
       - title: Löschen einer Speicher-VM
         url: "/delete-svm.html"
     - title: Datensicherung Administration
       entries:
       - title: Ändern der Snapshot-Richtlinie eines Volumes
-        url: change-snapshot-policy.html
+        url: "/change-snapshot-policy.html"
       - title: Management des FSX für ONTAP-Backup-Zeitplans
         url: "/manage-backup-schedule.html"
       - title: Aktivieren und bearbeiten Sie Snapshots für die langfristige Aufbewahrung
