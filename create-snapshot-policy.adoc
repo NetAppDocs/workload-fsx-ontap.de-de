@@ -36,10 +36,27 @@ Durch das Anpassen einer Richtlinie können Sie festlegen, wann Snapshots erstel
 
 
 .Schritte
-Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an. . Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen. . Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*. . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus. . Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das mit geplanten Snapshots geschützt werden soll. . Wählen Sie *Data Protection actions*, *Snapshots* und dann *Manage Snapshot Policies*. . Wählen Sie auf der Seite Snapshot Policy Management *Create a New Snapshot Policy* aus. . Geben Sie im Feld *Snapshot Policy Name* einen Namen für die Snapshot Policy ein. . Optional: Geben Sie im Feld *Beschreibung* eine Beschreibung für die Snapshot-Richtlinie ein. . Wählen Sie unter *Schedule*, wann Snapshots erstellt werden sollen. Zum Beispiel jede Minute oder jede Stunde.
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
+. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das mit geplanten Snapshots geschützt werden soll.
+. Wählen Sie *Data Protection actions*, *Snapshots* und dann *Manage Snapshot Policies*.
+. Wählen Sie auf der Seite Snapshot Policy Management *Create a New Snapshot Policy* aus.
+. Geben Sie im Feld *Snapshot Policy Name* einen Namen für die Snapshot Policy ein.
+. Optional: Geben Sie im Feld *Beschreibung* eine Beschreibung für die Snapshot-Richtlinie ein.
+. Wählen Sie unter *Schedule*, wann Snapshots erstellt werden sollen. Zum Beispiel jede Minute oder jede Stunde.
++
+Sie können mehr als eine Frequenz auswählen.
 
-+ Sie können mehr als eine Frequenz auswählen. . Geben Sie unter *Anzahl der Kopien* die Anzahl der Kopien ein, die beibehalten werden sollen.
+. Geben Sie unter *Anzahl der Kopien* die Anzahl der Kopien ein, die beibehalten werden sollen.
++
+Die maximale Anzahl von Kopien beträgt 1,023.
 
-+ die maximale Anzahl von Kopien beträgt 1,023. . Optional: Geben Sie unter *Namenskonventionen* ein *Präfix* für die Richtlinie ein. . *Retention Label* wird automatisch ausgefüllt.
+. Optional: Geben Sie unter *Namenskonventionen* ein *Präfix* für die Richtlinie ein.
+. *Retention Label* wird automatisch ausgefüllt.
++
+Dieses Label bezieht sich auf das SnapMirror- oder Replication-Label, mit dem nur angegebene Snapshots für die Replizierung vom Quell- zum Zieldateisystem ausgewählt werden.
 
-+ Dieses Label bezieht sich auf das SnapMirror- oder Replikationslabel, mit dem nur angegebene Snapshots für die Replikation vom Quell- zum Zieldateisystem ausgewählt werden. . Wählen Sie *Anwenden*.
+. Wählen Sie *Anwenden*.
+
