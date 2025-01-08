@@ -11,13 +11,13 @@ summary: Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload
 
 
 [role="lead"]
-Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik umfasst die Erstellung von CIFS-Freigaben, die Bestimmung der Benutzer und Gruppen, denen Zugriff gewährt werden soll, sowie die Art des Zugriffs, der ihnen gewährt werden soll, und das Löschen von CIFS-Freigaben.
+Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik umfasst die Erstellung von CIFS-Freigaben, die Bestimmung der Benutzer und Gruppen, denen Zugriff gewährt werden soll, sowie die Berechtigungsstufe, die ihnen erteilt werden soll, und das Löschen von CIFS-Freigaben.
 
 .Bevor Sie beginnen
 Bevor Sie beginnen, gehen Sie wie folgt vor:
 
 * Um CIFS-Freigaben zu verwalten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
-* Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie fest, welche Art von Zugriff ihnen gewährt werden soll.
+* Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie die Berechtigungsstufe fest.
 
 
 
