@@ -36,11 +36,19 @@ Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 
 
 
+
+
+== Erstellen eines Volumes
+
+Sie können ein Volume mit den folgenden Tools in der Codebox erstellen: REST API, CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^].
+
+
+NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie kopieren oder herunterladen, ausgeblendet `fsxadmin` und `vsadmin` Passwörter. Sie müssen die Passwörter erneut eingeben, wenn Sie den Code ausführen.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, in dem Sie ein Volume erstellen möchten, und wählen Sie *Verwalten*.
-. Wählen Sie auf der Registerkarte *Übersicht* die Option *Volume erstellen* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, in dem Sie ein Volume erstellen möchten, und wählen Sie *Volume erstellen*.
 . Geben Sie auf der Seite Volume erstellen unter Allgemeine Details die folgenden Details ein:
 +
 .. *Volumenname*: Geben Sie einen Namen für das Volume ein.
@@ -113,6 +121,58 @@ Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzuri
 .. *Speichereffizienz*: Deaktivieren oder aktivieren Sie die Speichereffizienz.
 +
 Die Storage-Effizienz wird durch Nutzung der Deduplizierungs- und Komprimierungsfunktionen von ONTAP erreicht. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können.
+
+.. *Unveränderliche Dateien*: Dieses Feature, auch SnapLock genannt, ist standardmäßig deaktiviert. Durch die Aktivierung unveränderlicher Dateien wird verhindert, dass Daten für einen bestimmten Zeitraum gelöscht oder überschrieben werden. Die Aktivierung dieser Funktion ist nur während der Volume-Erstellung möglich. Sobald diese Funktion aktiviert ist, kann sie nicht deaktiviert werden. Dies ist eine Premium-Funktion für FSX für ONTAP, die eine zusätzliche Gebühr in Rechnung stellt. Weitere Informationen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["So funktioniert SnapLock"^]in der Dokumentation zu Amazon FSX for NetApp ONTAP.
++
+Durch die Aktivierung der Funktion „unveränderliche Dateien“ werden Dateien in diesem Volume dauerhaft in einen unveränderlichen WORM-Zustand (Write-Once-Read-Many) versetzt.
+
++
+Aufbewahrungsmodi:: Sie können zwischen zwei Aufbewahrungsmodi wählen: _Enterprise_ oder _Compliance_.
++
+--
+*** Im _Enterprise_-Modus können unveränderliche Dateien oder SnapLock, Administratoren eine Datei während des Aufbewahrungszeitraums löschen.
+*** Im _Compliance_-Modus kann eine WORM-Datei nicht vor Ablauf der Aufbewahrungsfrist gelöscht werden. Auf ähnliche Weise kann das unveränderliche Volume erst gelöscht werden, wenn die Aufbewahrungsfristen für alle Dateien innerhalb des Volume abgelaufen sind.
+
+
+--
+Aufbewahrungszeitraum:: Die Aufbewahrungsfrist hat zwei Einstellungen - _Retention Policy_ und _Retention Periods_. Die _Retention Policy_ definiert, wie lange Dateien in einem unveränderlichen WORM-Zustand aufbewahrt werden sollen. Sie können Ihre eigene Aufbewahrungsrichtlinie festlegen oder die Standardaufbewahrungsrichtlinie (nicht spezifiziert) verwenden, die 30 Jahre beträgt. Die minimalen und maximalen _Aufbewahrungsfristen_ definieren den zulässigen Zeitbereich für das Sperren von Dateien.
++
+--
+HINWEIS:: Selbst wenn die Aufbewahrungsfrist abgelaufen ist, können Sie keine WORM-Datei ändern. Sie können sie nur löschen oder einen neuen Aufbewahrungszeitraum festlegen, um den WORM-Schutz erneut zu aktivieren.
+
+
+--
+Automatisches Commit:: Sie haben die Möglichkeit, die Autocommit-Funktion zu aktivieren. Die Autocommit-Funktion beüberträgt eine Datei in den WORM-Zustand auf einem SnapLock Volume, wenn sich die Datei für die Dauer des Autocommit nicht geändert hat. Die Funktion Autocommit ist standardmäßig deaktiviert. Die Dateien, die automatisch übertragen werden sollen, müssen auf einem SnapLock-Volume gespeichert sein.
+Volume Append-Modus:: Vorhandene Daten in einer WORM-geschützten Datei können nicht geändert werden. Unveränderliche Dateien ermöglichen es Ihnen jedoch, mithilfe von WORM-anhängen-baren Dateien den Schutz bestehender Daten zu erhalten. So können Sie beispielsweise Protokolldateien generieren oder Audio- oder Videostreaming-Daten erhalten, während Sie Daten inkrementell auf sie schreiben. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Erfahren Sie mehr über den Volume-Append-Modus"^] In der Dokumentation zu Amazon FSX for NetApp ONTAP.
++
+--
+.Schritte für unveränderliche Dateien
+... Aktivieren Sie *unveränderliche Dateien mit SnapLock*.
+... Klicken Sie auf das Feld, um zuzustimmen und fortzufahren.
+... Klicken Sie Auf *Aktivieren*.
+... *Retention Mode*: Wählen Sie *Enterprise* oder *Compliance* Modus.
+... *Aufbewahrungsfrist*:
++
+**** Wählen Sie die Aufbewahrungsrichtlinie aus:
++
+***** *Unspezifiziert*: Setzt die Aufbewahrungspolitik auf 30 Jahre.
+***** *Zeitraum angeben*: Geben Sie die Anzahl der Sekunden, Minuten, Stunden, Tage, Monate oder Jahre ein, um Ihre eigene Aufbewahrungsrichtlinie festzulegen.
+
+
+**** Wählen Sie die Mindest- und Höchstaufbewahrungszeiträume aus:
++
+***** *Minimum*: Geben Sie die Anzahl der Sekunden, Minuten, Stunden, Tage, Monate oder Jahre ein, um die Mindestaufbewahrungsdauer festzulegen.
+***** *Maximum*: Geben Sie die Anzahl der Sekunden, Minuten, Stunden, Tage, Monate oder Jahre ein, um die maximale Aufbewahrungsfrist festzulegen.
+
+
+
+
+... *Autocommit*: Deaktivieren oder aktivieren Sie Autocommit. Wenn Sie die automatische Übertragung aktivieren, legen Sie den Zeitraum für die automatische Übertragung fest.
+... *Volume Append-Modus*: Deaktivieren oder aktivieren. Ermöglicht das Hinzufügen neuer Inhalte zu WORM-Dateien.
+
+
+--
+
 
 .. *Snapshot Policy*: Wählen Sie die Snapshot Policy aus, um die Häufigkeit und Aufbewahrung von Snapshots festzulegen.
 +

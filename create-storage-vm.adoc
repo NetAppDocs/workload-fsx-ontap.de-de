@@ -33,8 +33,7 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte FSX for ONTAP das drei-Punkt-Menü des Dateisystems aus, für das eine Speicher-VM erstellt werden soll, und wählen Sie *Verwalten* aus.
-. Wählen Sie in der Dateisystemübersicht *Speicher-VM erstellen* aus.
+. Wählen Sie auf der Registerkarte FSX for ONTAP das drei-Punkt-Menü des Dateisystems aus, für das eine Speicher-VM erstellt werden soll, und wählen Sie *Speicher-VM erstellen* aus.
 . Stellen Sie auf der Seite Storage VM unter Storage VM Configuration Folgendes bereit:
 +
 .. *Name*: Geben Sie einen Namen für die Speicher-VM ein.

@@ -36,9 +36,7 @@ Führen Sie die folgenden Schritte aus, um ein einzelnes Volume zu replizieren o
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das zu replizierende Volume enthält, und wählen Sie dann *Verwalten*.
-. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des zu replizierenden Volumes aus.
-. Wählen Sie *Data Protection Actions* und dann *Replicate Volume Data*.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das zu replizierende Volume enthält, und wählen Sie dann *Volume-Daten replizieren*.
 . Geben Sie auf der Seite Replikation erstellen unter Replikationsziel Folgendes an:
 +
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.

@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: add-ha-pairs.html 
+keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
+summary: Fügen Sie Hochverfügbarkeitspaare zu einem Filesystem in der BlueXP -Workload-Fabrik hinzu, um das Filesystem horizontal zu skalieren. 
+---
+= Fügen Sie HA-Paare zu einem Filesystem in der BlueXP  Workload Factory hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Fügen Sie Hochverfügbarkeitspaare (HA) hinzu, um ein FSX für ONTAP Single-AZ-Filesystem der zweiten Generation in der Fabrik der BlueXP -Workloads horizontal zu skalieren, um Performance und Kapazität zu steigern. Diese Erweiterung sorgt im Vergleich zu Filesystemen der ersten Generation für eine bessere Performance-Skalierbarkeit und -Flexibilität.
+
+.Über diese Aufgabe
+Die neuen HA-Paare werden auf der gleichen SKU und der gleichen Kapazität pro HA-Paar hinzugefügt.
+
+Das Hinzufügen von HA-Paaren wird für folgende nicht unterstützt:
+
+* Hochverfügbarkeit mit mehreren Verfügbarkeitszonen oder FSX for ONTAP-Filesystemen der ersten Generation
+* FSX für ONTAP-Dateisysteme mit mehr als 5 Storage-VMs
+* FSX für ONTAP-Dateisysteme mit iSCSI-LUNs
+* Konfigurationen mit maximaler oder fast der maximalen SSD-Kapazität oder mit erreichten I/O-Zuweisungslimits
+
+
+Folgende Aspekte sollten beim Hinzufügen von HA-Paaren beachtet werden:
+
+* Entfernung von HA-Paaren: HA-Paare können nicht entfernt werden, nachdem sie dem Dateisystem hinzugefügt wurden.
+* Betriebszeit und Einschränkungen: Das Hinzufügen von HA-Paaren kann ca. 30 Minuten dauern. Sie sollten HA-Paare während eines Wartungsfenster oder während Zeiten mit geringer Aktivität hinzufügen. Zudem werden durch das Hinzufügen von HA-Paaren andere Vorgänge eingeschränkt, wie z. B. das Hinzufügen weiterer HA-Paare, die Bereitstellung von IOPS, die Erhöhung der SSD-Kapazität und die Aktualisierung der Durchsatzkapazität.
+* I/O-Zuweisung: Automatische I/O-Zuweisung hängt von der gesamten Speicherkapazität ab. Die benutzerkonfigurierte I/O-Zuweisung wird mit der Menge der hinzugefügten HA-Paare multipliziert.
+* NVMe Cache: Beim Hinzufügen von HA-Paaren ist standardmäßig NVME Cache aktiviert. Wir empfehlen, NVMe-Cache für große Workloads zu deaktivieren.
+* Anzahl an HA-Paaren: Wir empfehlen, das Filesystem auf eine gerade Anzahl von HA-Paaren zu erweitern, um eine ausgewogene Datenverteilung über HA-Paare hinweg zu erreichen.
+* LUN-Erstellung: LUN-Erstellung ist auf einem Single-AZ File-System der zweiten Generation nur möglich, wenn beim Hinzufügen von HA-Paaren noch keine LUNs im File-System vorhanden sind. LUN-Erstellung wird nur auf einem File-System mit maximal 6 HA-Paaren unterstützt.
+
+
+.Bevor Sie beginnen
+Führen Sie die folgenden Schritte aus, bevor Sie HA-Paare zu einem Dateisystem hinzufügen:
+
+* Entfernen Sie alle iSCSI-LUNs, um das Dateisystem zu skalieren.
+* Stellen Sie sicher, dass das Dateisystem nicht mehr als 5 Storage-VMs hat.
+
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* unter *Information* das Bleistiftsymbol neben *HA-Paaren* aus.
+. Wählen Sie im Dialogfeld *HA-Paare hinzufügen* die Anzahl der HA-Paare aus, die dem Dateisystem hinzugefügt werden sollen.
+. Wählen Sie *Add*, um das Hinzufügen der HA-Paare zu bestätigen.
+
+
+.Ergebnis
+Workload Factory initiiert den Prozess zum Hinzufügen der HA-Paare zum Dateisystem. Das Filesystem ist erst für andere Vorgänge wie die Volume-Erstellung verfügbar, wenn die HA-Paare hinzugefügt werden. Sie können den Fortschritt der Operation im Register *Tracker* überwachen.

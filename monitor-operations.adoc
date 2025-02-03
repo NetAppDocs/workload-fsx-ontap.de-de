@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: monitor-operations.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: Überwachen Sie FSX für ONTAP, Zugangsdaten und Link-Vorgänge und überwachen Sie den Job-Fortschritt mit Tracker in der BlueXP  Workload-Fabrik für Storage. 
+---
+= Überwachen Sie den Storage-Betrieb mit Tracker im BlueXP  Workload-Werk
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Tracker in der BlueXP  Workload-Fabrik überwachen und verfolgen Sie die Ausführung von FSX für ONTAP- und Zugangsdaten sowie Linkvorgänge und überwachen den Aufgabenfortschritt.
+
+.Über diese Aufgabe
+Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der Sie den Fortschritt und Status von FSX für ONTAP, Anmeldeinformationen und Verbindungsvorgänge überwachen und verfolgen können, Details für Betriebsaufgaben und untergeordnete Aufgaben überprüfen, Probleme oder Fehler diagnostizieren, Parameter für fehlgeschlagene Vorgänge bearbeiten und fehlgeschlagene Vorgänge erneut versuchen können. Sie können Jobs nach Typ und Status filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle herunterladen.
+
+Der Tracker unterstützt je nach Betrieb bis zu drei Überwachungsebenen. Jede Aufgabe, wie z. B. die Dateisystembereitstellung, zeigt die Aufgabenbeschreibung, den Status, die Startzeit, die Aufgabendauer, den Benutzer, die Region, die Proxyressource, die Aufgaben-ID und alle zugehörigen untergeordneten Aufgaben an.
+
+Verfolgung von Aufgabenebenen mit Beispielen::
++
+--
+* Ebene 1 (übergeordneter Job): Verfolgt eine Dateisystembereitstellung.
+* Ebene 2 (Unterjob): Verfolgt die untergeordneten Jobs, die mit der Dateisystembereitstellung in Verbindung stehen.
+* Stufe 3 (Task): Listet die Reihenfolge der Aktionen auf, die für jede Ressource durchgeführt werden.
+
+
+--
+Betriebsstatus:: Der Betriebsstatus in Tracker ist wie folgt: _In Bearbeitung_, _Erfolg_ und _Fehlgeschlagen_.
++
+--
+Betriebsfrequenz:: Die Vorgangshäufigkeit basiert auf dem Jobtyp und dem Jobplan.
+
+
+--
+Aufbewahrung von Ereignissen:: Ereignisse werden 30 Tage lang in der Benutzeroberfläche gespeichert.
+
+
+
+
+== Verfolgen und überwachen Sie Vorgänge
+
+Überwachen und verfolgen Sie den Betrieb in BlueXP  mit Tracker.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie aus dem Lagerbestand das Menü Kontoeinstellungen und dann *Tracker*.
++
+image:screenshot-menu-tracker-option.png["Ein Screenshot des Menüs „Kontoeinstellungen“ mit markierter Tracker-Option."]
+
+. Verwenden Sie auf der Registerkarte Tracker die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Jobbericht herunterladen.
+
+
+
+
+== API-Anforderung anzeigen
+
+Zeigen Sie die API-Anforderung in der Codebox für eine Aufgabe in Tracker an.
+
+.Schritte
+. Wählen Sie in Tracker eine Aufgabe aus.
+. Wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *API-Anforderung anzeigen*.
+
+
+
+
+== Wiederholen Sie einen fehlgeschlagenen Vorgang
+
+Wiederholen Sie einen fehlgeschlagenen Vorgang in Tracker. Sie können auch die Fehlermeldung eines fehlgeschlagenen Vorgangs kopieren.
+
+
+NOTE: Für einen fehlgeschlagenen Vorgang sind nur x Wiederholungen zulässig.
+
+.Schritte
+. Wählen Sie in Tracker einen fehlgeschlagenen Vorgang aus.
+. Wählen Sie das drei-Punkt-Menü und dann *Wiederholen*.
+
+
+.Ergebnis
+Der Vorgang wird erneut initiiert.
+
+
+
+== Bearbeiten Sie einen fehlgeschlagenen Vorgang und versuchen Sie es erneut
+
+Bearbeiten Sie die Parameter des fehlgeschlagenen Vorgangs, und versuchen Sie den Vorgang außerhalb von Tracker erneut.
+
+.Schritte
+. Wählen Sie in Tracker einen fehlgeschlagenen Vorgang aus.
+. Wählen Sie das drei-Punkt-Menü und dann *Bearbeiten und erneut versuchen*.
++
+Sie werden zur Seite Operation weitergeleitet, auf der Sie die Parameter bearbeiten und den Vorgang wiederholen können.
+
+
+
+.Ergebnis
+Der Vorgang wird erneut initiiert. Rufen Sie Tracker auf, um den Status des Vorgangs anzuzeigen.
