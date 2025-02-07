@@ -11,7 +11,7 @@ summary: Sie können die mit Ihrem Konto verknüpften Links anzeigen, einen Link
 
 
 [role="lead"]
-Verwalten Sie Links, die Sie mit Ihrem BlueXP  Workload Factory-Konto verknüpft haben.
+Verwalten Sie Links, die Sie mit Ihrem BlueXP  Workload Factory-Konto verknüpft haben. Sie können Links zu einem FSX für ONTAP-Dateisystem anzeigen, einen Link zu einem FSX für ONTAP-Dateisystem verknüpfen, einen Link bearbeiten und einen Link entfernen.
 
 link:links-overview.html["Weitere Informationen zu Links"] Oder link:create-link.html["Erstellen Sie eine Verknüpfung"].
 

@@ -27,14 +27,14 @@ FSX für ONTAP bietet folgende Funktionen:
 * *Hohe Verfügbarkeit*: Bietet Hochverfügbarkeit für jedes FSX für ONTAP-Dateisystem, unterstützt einzelne und mehrere Verfügbarkeitszonen-Bereitstellungen.
 * *Automatisierte Snapshots*: Sichert Daten mit automatisierten, effizienten Snapshots, die nahezu sofortige, platzsparende und schreibgeschützte Point-in-Time-Kopien des Dateisystems oder der Volumes sind.
 * *Volume-Replikation*: Bietet Disaster Recovery mit regionsübergreifender Replikation über Amazon Web Services.
-* *Effiziente Backups*: Bietet einen zusätzlichen späteren Schutz mit einer Kopie der Daten in einer anderen Region. Dies bietet eine zusätzliche Schutzschicht im Notfall.
+* *Effiziente Backups*: Fügt eine zusätzliche Schutzschicht mit einer Kopie der Daten in einer anderen Region für Notfälle hinzu.
 * *Fast Cloning*: Beschleunigt die Applikationsentwicklung durch schnelles Klonen.
 * * Multi-Protokoll-Unterstützung*: Unterstützt Network File System (NFS), Server Message Block (SMB) und Internet Small Computer Systems Interface (iSCSI) Protokolle.
 * *Hoher Durchsatz*: Bietet hohe Durchsatz-Performance, um niedrige Latenzen für Workloads zu gewährleisten, die auf FSX for ONTAP-Dateisystemen ausgeführt werden.
-* *In-Memory-Cache und NVMe-Cache*: Enthält einen einzigartigen in-Memory-Cache und NVMe-Cache, der die Performance häufig genutzter Daten weiter verbessert.
+* *In-Memory-Cache und NVMe-Cache*: Umfasst einen einzigartigen in-Memory-Cache und NVMe-Cache, der die Performance häufig genutzter Daten steigert.
 * *Hunderttausende IOPS*: Stellt hunderttausende IOPS mit SSD-Festplatten bereit, um sicherzustellen, dass Ihre Speicher und Workloads rechtzeitig Ergebnisse erhalten.
 * *Thin Provisioning*: Ermöglicht die Bereitstellung von Kapazitäten im Voraus und spart so lange Kosten, bis mehr Kapazität benötigt wird.
-* *Datendeduplizierung und -Komprimierung*: Eliminiert doppelte Datenblöcke und komprimiert Datenblöcke, um die Menge an physischem Storage zu reduzieren, der für FSX für ONTAP-Dateisysteme erforderlich ist und damit Kosteneinsparungen erzielt.
+* *Datendeduplizierung und -Komprimierung*: Entfernt doppelte Daten und komprimiert Daten, um die Menge an physischem Storage zu reduzieren, der für FSX für ONTAP-Dateisysteme erforderlich ist, was zu Kosteneinsparungen führt.
 * *Data Tiering*: Reduziert die Speicherkosten, indem weniger häufig verwendete Daten vom primären SSD-Storage-Tier mit hoher Performance auf die Storage-Tier mit dem sekundären Kapazitäts-Pool verschoben werden.
 
 
@@ -64,7 +64,7 @@ Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:
 
 == Kosten
 
-Ihr FSX for ONTAP Konto wird von AWS gewartet und nicht von der Workload-Fabrik. Siehe link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Preise für Amazon FSX für NetApp ONTAP"^].
+AWS unterhält Ihr FSX für ONTAP-Konto, nicht für die Workload-Fabrik. Siehe link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Preise für Amazon FSX für NetApp ONTAP"^].
 
 
 
