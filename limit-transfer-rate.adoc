@@ -14,7 +14,7 @@ summary: Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehun
 Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung in der BlueXP  Workload-Fabrik. Eine unbegrenzte Übertragungsrate kann sich negativ auf die Leistung anderer Anwendungen und Ihres Netzwerks auswirken.
 
 .Über diese Aufgabe
-Die Begrenzung der maximalen Übertragungsrate ist optional, wird jedoch empfohlen. Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen.
+Die Begrenzung der maximalen Übertragungsrate ist optional, wird jedoch empfohlen. Ohne Einschränkung kann die Netzwerk- und Applikations-Performance abnehmen.
 
 Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
 

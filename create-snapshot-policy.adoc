@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Erstellen Sie eine Snapshot-Richtlinie für FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt. 
+summary: Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für eine Storage-VM in einer BlueXP  Workload Factory. 
 ---
-= Erstellen Sie eine Snapshot-Richtlinie für FSX für ONTAP-Volumes
+= Erstellen Sie eine Snapshot-Richtlinie für Storage-VMs in der BlueXP  Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt.
+Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für Storage-VMs in der BlueXP  Workload Factory. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für eine Storage-VM erstellt. Sie können eine Snapshot-Richtlinie für eine Storage-VM in einem Filesystem FSX für ONTAP erstellen. Sie können die Richtlinie auch über mehrere Storage-VMs hinweg gemeinsam nutzen.
 
 .Über diese Aufgabe
 Sie können eine benutzerdefinierte Snapshot-Richtlinie erstellen, die sich von den drei integrierten Snapshot-Richtlinien für FSX für ONTAP unterscheidet:
@@ -39,13 +39,12 @@ Durch das Anpassen einer Richtlinie können Sie festlegen, wann Snapshots erstel
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
 . Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das mit geplanten Snapshots geschützt werden soll.
-. Wählen Sie *Data Protection actions*, *Snapshots* und dann *Manage Snapshot Policies*.
-. Wählen Sie auf der Seite Snapshot Policy Management *Create a New Snapshot Policy* aus.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
+. Wählen Sie auf der Registerkarte *Storage VMs* das drei-Punkt-Menü für das Volume aus, das mit geplanten Snapshots geschützt werden soll, dann *Advanced Actions* und dann *Manage Snapshot Policies*.
+. Wählen Sie auf der Seite Snapshot Policy Management *Create Snapshot Policy* aus.
 . Geben Sie im Feld *Snapshot Policy Name* einen Namen für die Snapshot Policy ein.
-. Optional: Geben Sie im Feld *Beschreibung* eine Beschreibung für die Snapshot-Richtlinie ein.
-. Wählen Sie unter *Schedule*, wann Snapshots erstellt werden sollen. Zum Beispiel jede Minute oder jede Stunde.
+. Geben Sie optional eine Beschreibung für die Snapshot-Richtlinie ein.
+. Wählen Sie unter *Policy schedule and copies* aus, wann Snapshots erstellt werden sollen. Zum Beispiel jede Minute oder jede Stunde.
 +
 Sie können mehr als eine Frequenz auswählen.
 
@@ -56,7 +55,15 @@ Die maximale Anzahl von Kopien beträgt 1,023.
 . Optional: Geben Sie unter *Namenskonventionen* ein *Präfix* für die Richtlinie ein.
 . *Retention Label* wird automatisch ausgefüllt.
 +
-Dieses Label bezieht sich auf das SnapMirror- oder Replication-Label, mit dem nur angegebene Snapshots für die Replizierung vom Quell- zum Zieldateisystem ausgewählt werden.
+Dieses Label bezieht sich auf das SnapMirror- oder Replikationslabel, mit dem nur angegebene Snapshots für die Replikation vom Quell- zum Zieldateisystem ausgewählt werden.
 
-. Wählen Sie *Anwenden*.
+. Optional: Aktivieren Sie *unveränderliche Snapshots* für alle benötigten Zeitpläne, legen Sie die *Aufbewahrungsfrist* für jeden Zeitplan fest und akzeptieren Sie die Anweisung, um fortzufahren.
++
+Wenn Sie unveränderliche Snapshots aktivieren, werden alle Snapshots in dieser Snapshot-Richtlinie gesperrt, um zu verhindern, dass die Snapshots während des Aufbewahrungszeitraums gelöscht werden.
 
+. *Freigabe über Storage-VMs*: Standardmäßig aktiviert. Wenn diese Option aktiviert ist, wird die Snapshot-Richtlinie für alle Storage-VMs im File-System freigegeben. Deaktivieren Sie, um eine Snapshot-Richtlinie für eine einzelne Storage-VM zu erstellen.
+. Wählen Sie *Erstellen*.
+
+
+.Ergebnis
+Die Snapshot-Richtlinie wird erstellt.

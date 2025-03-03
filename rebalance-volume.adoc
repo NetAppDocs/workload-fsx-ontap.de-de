@@ -2,25 +2,61 @@
 sidebar: sidebar 
 permalink: rebalance-volume.html 
 keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: Bringen Sie die Kapazität eines Volumes wieder in den Gleichgewicht, um Ungleichgewichte zu vermeiden, die sich im Laufe der Zeit entwickeln. 
+summary: Überprüfen und balancieren Sie die Kapazität eines Volumes aus, um Ungleichgewichte zu vermeiden, die sich im Laufe der Zeit entwickeln. 
 ---
-= Bringen Sie die Kapazität eines Volumes wieder in die Fabrik für BlueXP -Workloads
+= Überprüfung und Neuausrichtung der Kapazität eines Volumes
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Bringen Sie die Kapazität eines Volumes in der BlueXP -Workload-Fabrik wieder in den Gleichgewicht, um Ungleichgewichte zu vermeiden, die sich im Laufe der Zeit entwickeln.
+Prüfen Sie die Balance der FlexGroup Volume-Kapazität und gleichen Sie die Volume-Kapazität aus, um Dateien gleichmäßig auf alle Komponenten zu verteilen, damit alle Nodes am Workload eines einzelnen Flex Group Volumes teilnehmen.
 
 .Über diese Aufgabe
+Die FlexGroup-Volume-Kapazität ist in einem Scale-out-FSX für ONTAP-Filesystem mit zwei oder mehr HA-Paaren über eine Reihe von Komponenten verteilt. Jede Komponente ist ein Container, der die maximale einzelne Dateigröße vorgibt. FSX for ONTAP verteilt Dateien gleichmäßig über alle Komponenten, sodass alle Nodes am Workload eines einzelnen FlexGroup Volumes teilnehmen.
+
+Wenn die Komponenten nicht gleichmäßig über alle Nodes verteilt werden, sinkt die FlexGroup Volume-Performance.
+
+Die Überprüfung des Gleichgewichts der FlexGroup Volume-Kapazität schließt die Bewertung des aktuellen Layouts der Komponenten ein. Wenn Sie die Kapazität des Volumes neu verteilen, entwickelt BlueXP  Workload Factory ein neues Komponenten-Layout mit einer geraden Anzahl an Komponenten, um die Daten gleichmäßig über alle HA-Paare zu verteilen. Der Service führt den Ausgleichsplan durch, der wiederum die Lese- und Schreibvorgänge verbessert.
+
 Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei.
 
 
-NOTE: Der Ausbalancierung eines Volumes wird nur für FlexGroup Volumes unterstützt.
+NOTE: Ausbalancierung eines Volumes wird nur für FlexGroup Volumes unterstützt.
+
+
+
+== Überprüfen Sie den Ausgleich eines FlexGroup Volumes
+
+Prüfen Sie den Ausgleich eines aktiven FlexGroup Volumes.
 
 .Bevor Sie beginnen
-Um ein Volume neu auszurichten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+* FlexGroup Volume Balance ist nur für FSX for ONTAP-Filesysteme mit einer Scale-out-Implementierung mit mindestens zwei HA-Paaren verfügbar.
+* Der Volumenstil muss ein FlexGroup-Volume sein.
+* Um den Saldo eines FlexGroup-Volumes zu überprüfen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume zum Ausgleich enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte Volumes oben in der Tabelle *FlexGroup-Balance prüfen* aus.
+. Überprüfen Sie im FlexGroup Balance-Fenster den Ausgleichstatus aller FlexGroup Volumes im FSX für ONTAP File-System.
++
+Wenn ein FlexGroup-Volume unausgeglichen ist, beachten Sie <<Neuausrichtung eines FlexGroup Volumes,Neuausrichtung>>.
+
+
+
+
+
+== Neuausrichtung eines FlexGroup Volumes
+
+<<Überprüfen Sie den Ausgleich eines FlexGroup Volumes,Überprüfen Sie den Ausgleich eines FlexGroup Volumes>> Vor der Ausbalancierung von Volumes.
+
+.Bevor Sie beginnen
+Um ein Volume neu auszurichten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -31,3 +67,6 @@ Um ein Volume neu auszurichten, müssen Sie link:manage-links.html["Verknüpfen 
 . Wählen Sie *Erweiterte Aktionen* und dann *Lautstärke neu ausgleichen*.
 . Wählen Sie im Dialogfeld Volume neu ausgleichen die Option *Neu abgleichen*.
 
+
+.Ergebnis
+Die Kapazität des FlexGroup Volume verteilt sich auf die Waage.

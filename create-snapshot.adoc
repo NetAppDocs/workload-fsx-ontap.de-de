@@ -26,10 +26,20 @@ Sie müssen link:manage-links.html["Verknüpfen Sie eine Verknüpfung"] einen Sn
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume enthält, für das Sie einen Snapshot erstellen möchten, und wählen Sie dann *Verwalten* aus.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das zu schützende Volume aus.
-. Wählen Sie *Data Protection actions*, *Snapshots*, dann *Create Volume from a Snapshot*.
-. Geben Sie im Dialogfeld Create Volume from a Snapshot im Feld *Snapshot Name* einen Snapshot-Namen ein.
+. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das mit Snapshots geschützt werden soll.
+. Wählen Sie *Data Protection actions*, *Snapshots* und dann *Create a Snapshot*.
+. Geben Sie im Dialogfeld Snapshot erstellen einen Snapshot-Namen in das Feld *Snapshot-Name* ein.
+. Optional: Machen Sie den Snapshot unveränderlich, um zu verhindern, dass der Snapshot während des Aufbewahrungszeitraums gelöscht wird.
++
+.. Aktivieren Sie *unveränderliche Snapshots*.
+.. Legen Sie die *Aufbewahrungsfrist* als Anzahl von Stunden, Tagen, Monaten oder Jahren fest.
+.. Akzeptieren Sie die Aussage zu unveränderlichen Snapshots.
+
+
 . Wählen Sie *Erstellen*.
 
+
+.Ergebnis
+Das Volume verfügt über eine Snapshot-Kopie.

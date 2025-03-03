@@ -23,7 +23,7 @@ Für einige Vorgänge wie die Replikation in der werkseitigen Benutzeroberfläch
 
 == Einschränkungen bei HA-Paaren
 
-* Dieser Vorgang kann ca. 30 Minuten dauern.
+* Dieser Vorgang kann etwa 30 Minuten dauern.
 * Durch das Hinzufügen von HA-Paaren sind folgende Vorgänge beschränkt: Mehr HA-Paare hinzufügen, IOPS-Ressourcen bereitstellen, die SSD-Kapazität erhöhen und die Durchsatzkapazität aktualisieren.
 
 

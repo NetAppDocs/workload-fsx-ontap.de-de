@@ -90,6 +90,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Höhere Volume-Kapazität
         url: "/increase-volume-capacity.html"
+      - title: Management unveränderlicher Dateien
+        url: "/manage-immutable-files.html"
       - title: Verwalten von Volume-Tags
         url: "/manage-volume-tags.html"
       - title: Neuausrichtung der Kapazität eines Volumes
@@ -130,24 +132,34 @@ sidebar:
         url: "/delete-svm.html"
     - title: Datensicherung Administration
       entries:
-      - title: Ändern der Snapshot-Richtlinie eines Volumes
-        url: "/change-snapshot-policy.html"
-      - title: Management des FSX für ONTAP-Backup-Zeitplans
-        url: "/manage-backup-schedule.html"
-      - title: Aktivieren und bearbeiten Sie Snapshots für die langfristige Aufbewahrung
-        url: "/enable-snapshots-long-term.html"
-      - title: Eine Replikationsbeziehung umkehren
-        url: "/reverse-replication.html"
-      - title: Ändern Sie den Replikationszeitplan eines Quell-Volumes
-        url: "/change-replication-schedule.html"
-      - title: Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung
-        url: "/limit-transfer-rate.html"
-      - title: Manuelles Update von Snapshot-Daten in einer Replikationsbeziehung
-        url: "/update-snapshot-replication.html"
-      - title: Anhalten einer Replikationsbeziehung
-        url: "/stop-replication.html"
-      - title: Löschen einer Replikationsbeziehung
-        url: "/delete-replication.html"
+      - title: Snapshots
+        entries:
+        - title: Verwalten von Snapshot-Richtlinien
+          url: "/manage-snapshot-policy.html"
+        - title: Aktivieren und bearbeiten Sie Snapshots für die langfristige Aufbewahrung
+          url: "/enable-snapshots-long-term.html"
+      - title: Backups
+        entries:
+        - title: Management des FSX für ONTAP-Backup-Zeitplans
+          url: "/manage-backup-schedule.html"
+      - title: Replizierung
+        entries:
+        - title: Eine Replikationsbeziehung umkehren
+          url: "/reverse-replication.html"
+        - title: Ändern Sie den Replikationszeitplan eines Quell-Volumes
+          url: "/change-replication-schedule.html"
+        - title: Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung
+          url: "/limit-transfer-rate.html"
+        - title: Manuelles Update von Snapshot-Daten in einer Replikationsbeziehung
+          url: "/update-snapshot-replication.html"
+        - title: Replizierung eines Datensicherheitsvolumes
+          url: "/cascade-replication.html"
+        - title: Anhalten und Wiederaufnehmen einer Replikationsbeziehung
+          url: "/pause-resume-replication.html"
+        - title: Anhalten einer Replikationsbeziehung
+          url: "/stop-replication.html"
+        - title: Löschen einer Replikationsbeziehung
+          url: "/delete-replication.html"
     - title: Performance-Administration
       entries:
       - title: Stellen Sie IOPS für ein Filesystem bereit

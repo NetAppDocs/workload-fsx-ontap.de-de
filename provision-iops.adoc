@@ -16,9 +16,9 @@ Automatische Provisionierung oder manuelle Bereitstellung von SSD-IOPS für ein 
 .Über diese Aufgabe
 Sie können die automatische SSD-IOPS-Bereitstellung für ein FSX-Dateisystem aktivieren oder IOPS manuell bereitstellen.
 
-Automatisch bereitgestellte IOPS werden als 3 IOPS pro gib berechnet.
+Die automatisch bereitgestellten IOPS werden als drei IOPS pro GiB berechnet.
 
-Wenn Sie IOPS manuell bereitstellen, müssen Sie eventuell zuvor die IOPS erhöhenlink:increase-file-system-capacity.html["Erweiterung der Dateisystemkapazität"].
+Wenn Sie IOPS manuell bereitstellen, müssen Sie eventuell vorher die IOPS erhöhenlink:increase-file-system-capacity.html["Erweiterung der Dateisystemkapazität"].
 
 Weitere Informationen zu IOPS-Limits finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] in der Dokumentation zu AWS FSX für NetApp ONTAP.
 

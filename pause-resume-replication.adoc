@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: pause-resume-replication.html 
+keywords: pause replication, quiesce replication, resume replication 
+summary: Halten Sie eine Replikationsbeziehung an und setzen Sie sie wieder ein, damit das Ziel-Volume das Quell-Volume wird. 
+---
+= Halten Sie eine Replikationsbeziehung in der BlueXP  Workload Factory an und setzen Sie sie wieder ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Halten Sie eine Replikationsbeziehung an, um geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume zu stoppen. Das Ziel-Volume wechselt von schreibgeschützt zu Lese- und Schreibzugriff. Beide Volumes verwenden weiterhin den letzten Replizierungs-Snapshot als neue Basis für eine spätere Neusynchronisierung.
+
+.Über diese Aufgabe
+Wenn sie angehalten wird, besteht die Replikationsbeziehung zwischen Quell- und Zielvolume weiterhin. Die Datentransfers werden angehalten, und die Volumes werden unabhängig. Um die Übertragung von Änderungen vom Quell-Volume zum Ziel-Volume wieder zu aktivieren, setzen Sie die Replikation fort.
+
+Wenn Sie eine Replikation wieder aufnehmen, werden alle Änderungen am Ziel-Volume rückgängig gemacht und die Replikation wird auf der BlueXP  Workload Factory wieder aktiviert. Das Ziel-Volume wechselt von Read-Write zu Read-Only und empfängt Aktualisierungen vom Quell-Volume im geplanten Replikationsintervall erneut. Wenn Sie eine Replikationsbeziehung wieder aufnehmen, wird das Zielvolume wieder auf den letzten ersten Replikations-Snapshot zurückgesetzt. Zu diesem Zeitpunkt beginnt der Replikationsprozess von neuem.
+
+.Bevor Sie beginnen
+Wenn Sie anhalten, während eine Übertragung ausgeführt wird, wird die Übertragung nicht beeinträchtigt, und die Beziehung wird „Quiescing“, bis die Übertragung abgeschlossen ist. Wenn die aktuelle Übertragung abbricht, handelt es sich jetzt um eine zukünftige Übertragung und wird nicht neu gestartet.
+
+
+
+== Anhalten einer Replikationsbeziehung
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der Replikationsbeziehung aus, die angehalten werden soll.
+. Wählen Sie *Pause (Quiesce)*.
+. Wählen Sie im Dialogfeld *Quiesce-Beziehung* *Quiesce* aus.
+
+
+.Ergebnis
+Die Beziehung hält an und ihr Status wird als „angehalten“ angezeigt.
+
+
+
+== Nehmen Sie eine angehaltene Replikationsbeziehung wieder auf
+
+Wenn Sie eine Replikationsbeziehung wiederaufnehmen, werden alle Änderungen am Zielvolume gelöscht, während die Replikation angehalten wurde.
+
+
+NOTE: Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierung des Quell-Volumes auf das ursprüngliche Quell-Volume geschrieben wurden, bleiben nicht erhalten.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der Replikationsbeziehung aus, die fortgesetzt werden soll.
+. Wählen Sie *Fortsetzen*.
+. Wählen Sie im Dialogfeld Beziehung fortsetzen die Option *Fortsetzen* aus.
+
+
+.Ergebnis
+Die Beziehung wird fortgesetzt und ihr Status wird als „repliziert“ angezeigt.

@@ -14,7 +14,7 @@ summary: Das Replizieren einer Storage-VM in ein anderes FSX für ONTAP-Filesyst
 Das Replizieren einer Storage-VM zu einem anderen FSX für ONTAP-Dateisystem in der BlueXP -Workload-Fabrik bietet eine Schutzschicht für den Datenzugriff bei Datenverlust. Mit diesem Vorgang werden alle Volumes einer Storage-VM in ein anderes FSX for ONTAP-Dateisystem repliziert.
 
 .Bevor Sie beginnen
-Um eine Storage VM auf ein anderes FSX für ONTAP Dateisystem zu replizieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+Um eine Storage VM auf ein anderes FSX für ONTAP Dateisystem zu replizieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -34,7 +34,7 @@ _Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Ve
 
 .. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
 +
-Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+Ohne Einschränkung kann die Netzwerk- und Applikations-Performance abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
 
 
 

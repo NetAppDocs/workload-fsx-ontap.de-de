@@ -11,7 +11,7 @@ summary: Initialisieren Sie eine Replikationsbeziehung zwischen Quell- und Ziel-
 
 
 [role="lead"]
-Initialisieren Sie eine Replizierungsbeziehung zwischen Quell- und Ziel-Volumes in der BlueXP -Workload-Fabrik.
+Initialisieren Sie eine Replizierungsbeziehung zwischen Quell- und Ziel-Volumes, um den Snapshot und alle Datenblöcke in der BlueXP  Workload-Fabrik zu übertragen.
 
 .Über diese Aufgabe
 Die Initialisierung führt einen _Baseline_ Transfer durch: Es erstellt einen Snapshot des Quell-Volumes und überträgt dann den Snapshot und alle Datenblöcke, die es auf das Ziel-Volume verweist.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-volume.html 
 keywords: delete volume, volume deletion 
-summary: Sie können ein Volumen in Ihrem FSX für ONTAP-Dateisystem jederzeit löschen. Dieser Vorgang kann nicht rückgängig gemacht werden. 
+summary: Löschen Sie ein nicht mehr benötigter Volume in Ihrem FSX for ONTAP-Dateisystem und geben Sie Speicherplatz frei. Dieser Vorgang kann nicht rückgängig gemacht werden. 
 ---
 = Löschen Sie ein Volume in der BlueXP -Workload-Fabrik
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Sie können ein Volumen in Ihrem FSX für ONTAP-Dateisystem jederzeit l
 
 
 [role="lead"]
-Sie können ein Volumen in Ihrem FSX für ONTAP-Dateisystem jederzeit löschen. Dieser Vorgang kann nicht rückgängig gemacht werden.
+Löschen Sie ein nicht mehr benötigter Volume in Ihrem FSX for ONTAP-Dateisystem und geben Sie Speicherplatz frei. Dieser Vorgang kann nicht rückgängig gemacht werden.
 
 .Bevor Sie beginnen
 Beachten Sie Folgendes, bevor Sie ein Volume löschen:
@@ -19,7 +19,7 @@ Beachten Sie Folgendes, bevor Sie ein Volume löschen:
 * Replikationsbeziehungen: Sie müssen link:delete-replication.html["Löschen Sie alle vorhandenen Replikationsbeziehungen"] für dieses Volume vor dem Löschen des Volumes vorgehen, damit keine unterbrochenen Beziehungen erhalten bleiben.
 * Lokale Schnappschüsse: Alle Snapshots, die mit diesem FSX für ONTAP-Dateisystem verbunden sind, werden dauerhaft gelöscht.
 * FSX für ONTAP-Backup: FSX für ONTAP-Backup-Kopien werden bleiben und Sie können sie weiterhin verwenden.
-* Unveränderliche Dateien: Volumes, die unveränderliche Dateien mit Unterstützung von SnapLock enthalten, können erst nach Ablauf der Aufbewahrungsfrist gelöscht werden.
+* Unveränderliche Dateien und Snapshots: Volumes, die unveränderliche Dateien und Snapshots enthalten, können erst nach Ablauf des Aufbewahrungszeitraums gelöscht werden.
 
 
 .Schritte

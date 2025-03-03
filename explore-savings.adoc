@@ -11,7 +11,7 @@ summary: 'Entdecken Sie Einsparungen bei Ihren Storage-Workloads – bei EBS-Sto
 
 
 [role="lead"]
-Erkunden Sie die Einsparmöglichkeiten bei Ihren Storage-Workloads, die Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File Server gegen FSX für NetApp ONTAP verwenden.
+Erkunden Sie die Einsparmöglichkeiten bei Ihren Storage-Workloads, die Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File-Server gegen FSX für NetApp ONTAP verwenden.
 
 Die BlueXP  Workload-Farm enthält einen Rechner für Storage-Einsparungen, mit dem Amazon Storage-Umgebungen mit FSX for ONTAP verglichen werden können. Sie profitieren von Einsparungen, die mit oder ohne Ihre AWS Zugangsdaten erzielt und die Konfigurationseinstellungen für Ihre Storage-Umgebung angepasst werden können. Wenn Sie AWS Zugangsdaten bereitstellen, können Sie beispielsweise eine oder mehrere Instanzen von Amazon Elastic Block Store auswählen und den Vergleich automatisch bei den Workload-Werkseinstellungen vornehmen lassen. Ob manuell oder automatisch, der Rechner ermittelt, welcher Storage-Service die niedrigsten Kosten für Ihren Speicherbedarf bietet.
 

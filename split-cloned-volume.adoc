@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: split-cloned-volume.html 
 keywords: split clone volume, FlexVol volume 
-summary: Teilen Sie ein Klon-FlexVol-Volume von seinem übergeordneten Volume auf, um den Klon zu einem normalen FlexVol Volume mit Lese- und Schreibzugriffen zu machen. 
+summary: Teilen Sie eine Klon-FlexVol volume von seinem übergeordneten Volume auf, um den Klon zu einer normalen Lese-/Schreib-FlexVol volume zu machen. 
 ---
 = Teilen Sie ein geklontes Volume in der BlueXP  Workload Factory auf
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Teilen Sie ein Klon-FlexVol-Volume von seinem übergeordneten Volume au
 
 
 [role="lead"]
-Teilen Sie eine geklonte FlexVol volume von seinem übergeordneten Volume auf, um für den Klon eine normale Lese- und Schreib-FlexVol volume in der BlueXP  Workload-Fabrik zu erstellen.
+Teilen Sie eine geklonte FlexVol volume von seinem übergeordneten Volume auf, um für den Klon eine normale Lese-/Schreib-FlexVol volume in der BlueXP  Workload-Fabrik zu erstellen.
 
 Auf Daten kann auf dem Klon und auf dem übergeordneten Element während der Teilung zugegriffen werden. Der Split-Vorgang aktualisiert nur Metadaten und erfordert minimale I/O-Vorgänge. Es werden keine Datenblöcke kopiert.
 
@@ -28,7 +28,7 @@ Der Vorgang zum Aufteilen von Klonen umfasst Folgendes:
 .Bevor Sie beginnen
 Vor dem Aufteilen eines geklonten Volume sollten Sie Folgendes beachten:
 
-* Um ein geklontes Volume aufzuteilen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+* Um ein geklontes Volume aufzuteilen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 * Sie müssen ein Cluster-Administrator sein.
 * Das FlexClone Volume muss online sein, wenn der Trennvorgang beginnt.
 * Das übergeordnete Volume muss online sein, damit die Teilung erfolgreich durchgeführt werden kann.

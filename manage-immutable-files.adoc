@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: manage-immutable-files.html 
+keywords: enable immutable files, disable immutable files, lock files, unlock files 
+summary: Sie können bestimmte Einstellungen für unveränderliche Dateien aktualisieren, wenn die Funktion aktiviert ist. 
+---
+= Verwalten Sie unveränderliche Dateien für ein Volume in der BlueXP  Workload-Fabrik
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn diese Funktion aktiviert ist, können Sie bestimmte unveränderliche Dateieinstellungen für ein Volume aktualisieren, z. B. Aufbewahrungsrichtlinien und -Zeiträume, Autofeststellungszeitraum und Modus zum Anhängen von Volumes.
+
+Beachten Sie, dass die Aktivierung unveränderlicher Dateien nur während möglich istlink:create-volume.html["Volume-Erstellung"].
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie die Registerkarte *Volumes*.
+. Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des Volumes aus, das geklont werden soll.
+. Wählen Sie *Data Protection actions* und dann *Manage Immanable files*.
+. Auf der Seite „unveränderliche Dateien verwalten“ können Sie Folgendes aktualisieren:
++
+** *Aufbewahrungsfrist*: Wählen Sie *nicht spezifiziert* oder *Zeitraum angeben*.
++
+*** *Nicht spezifiziert*: Die Standardminimum-Periode ist "0" Jahre und die Standardmaximum-Periode ist "30 Jahre".
+*** *Zeitraum angeben*: Option zum Definieren der Aufbewahrungsrichtlinie, der Mindest- und Höchstzeiträume, der Autocommit-Funktion und der Volume Append-Funktion. Geben Sie folgende Informationen an:
++
+**** *Aufbewahrungsrichtlinie*: Diese Frist muss größer oder gleich der Mindestaufbewahrungsfrist und kleiner oder gleich der maximalen Aufbewahrungsfrist sein.
+**** *Mindest- und Höchstzeiträume*: Legen Sie die Mindest- und Höchstzeiträume fest, um Dateien in diesem Volume in einen unveränderlichen WORM-Zustand zu versetzen.
+
+
+
+
+** *Autocommit*: Aktivieren oder deaktivieren Sie die Funktion, um Dateien, die während der Autocommit-Periode nicht geändert wurden, automatisch an WORM zu übergeben.
+** *Volume Append-Modus*: Aktivieren oder deaktivieren Sie die Funktion. Durch die Aktivierung des Modus „Anhängen von Volumes“ können Sie WORM-Dateien neuen Inhalt hinzufügen.
+
+
+. Klicken Sie Auf *Anwenden*.
+
+
+.Ergebnis
+Die Aktualisierungen gelten nun für das Volume.

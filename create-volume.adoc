@@ -30,7 +30,7 @@ Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 * Sie benötigen eine Storage-VM.
 * Für den Zugriff auf das Protokoll müssen Sie Folgendes ausführen:
 +
-** Um den Zugriff auf das Volume zu konfigurieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+** Um den Zugriff auf das Volume zu konfigurieren, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 ** Sie müssen den Zugriff für das ausgewählte Protokoll konfigurieren, entweder CIFS, NFS oder iSCSI.
 
 
@@ -97,7 +97,7 @@ Wenn Sie eine vorhandene Exportrichtlinie ausgewählt haben, geben Sie einen neu
 
 
 
-*** *Blockzugriff*: Ermöglicht Hosts, die kritische Geschäftsanwendungen ausführen, den Zugriff auf das Volume über das iSCSI-Protokoll. Der Block-Zugriff ist nur verfügbar, wenn die horizontal skalierbare Filesystem-Implementierung über 6 HA-Paare oder weniger verfügt.
+*** *Blockzugriff*: Ermöglicht Hosts, die kritische Geschäftsanwendungen ausführen, den Zugriff auf das Volume über das iSCSI-Protokoll. Der Block-Zugriff ist nur verfügbar, wenn die horizontal skalierbare Filesystem-Implementierung maximal sechs HA-Paare umfasst.
 +
 Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzurichten.
 
@@ -122,7 +122,7 @@ Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzuri
 +
 Die Storage-Effizienz wird durch Nutzung der Deduplizierungs- und Komprimierungsfunktionen von ONTAP erreicht. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können.
 
-.. *Unveränderliche Dateien*: Dieses Feature, auch SnapLock genannt, ist standardmäßig deaktiviert. Durch die Aktivierung unveränderlicher Dateien wird verhindert, dass Daten für einen bestimmten Zeitraum gelöscht oder überschrieben werden. Die Aktivierung dieser Funktion ist nur während der Volume-Erstellung möglich. Sobald diese Funktion aktiviert ist, kann sie nicht deaktiviert werden. Dies ist eine Premium-Funktion für FSX für ONTAP, die eine zusätzliche Gebühr in Rechnung stellt. Weitere Informationen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["So funktioniert SnapLock"^]in der Dokumentation zu Amazon FSX for NetApp ONTAP.
+.. *Unveränderliche Dateien*: Dieses Feature, auch SnapLock genannt, ist standardmäßig deaktiviert. Durch die Aktivierung unveränderlicher Dateien wird verhindert, dass Daten für einen bestimmten Zeitraum gelöscht oder überschrieben werden. Die Aktivierung dieser Funktion ist nur während der Volume-Erstellung möglich. Nachdem die Funktion aktiviert wurde, kann sie nicht deaktiviert werden. Dies ist eine Premium-Funktion für FSX für ONTAP, die eine zusätzliche Gebühr in Rechnung stellt. Weitere Informationen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["So funktioniert SnapLock"^]in der Dokumentation zu Amazon FSX for NetApp ONTAP.
 +
 Durch die Aktivierung der Funktion „unveränderliche Dateien“ werden Dateien in diesem Volume dauerhaft in einen unveränderlichen WORM-Zustand (Write-Once-Read-Many) versetzt.
 
@@ -148,8 +148,8 @@ Volume Append-Modus:: Vorhandene Daten in einer WORM-geschützten Datei können 
 --
 .Schritte für unveränderliche Dateien
 ... Aktivieren Sie *unveränderliche Dateien mit SnapLock*.
-... Klicken Sie auf das Feld, um zuzustimmen und fortzufahren.
-... Klicken Sie Auf *Aktivieren*.
+... Wählen Sie das Feld aus, um zuzustimmen und fortzufahren.
+... Wählen Sie *Enable*.
 ... *Retention Mode*: Wählen Sie *Enterprise* oder *Compliance* Modus.
 ... *Aufbewahrungsfrist*:
 +

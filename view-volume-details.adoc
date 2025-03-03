@@ -22,7 +22,7 @@ Volume-Details werden erst angezeigt, nachdem ein Volume in einem Dateisystem er
 . Wählen Sie *Basic actions* und dann *View Volume Details*.
 . Wählen Sie unter *Volume Details* die Registerkarten aus, um die folgenden Volume-Details anzuzeigen:
 +
-.. *Allgemeine Details*: Umfasst Volume-Name, Volume-UUID, Volume-ID, Erstellungszeit, Zustand, Volume-Typ (Lese-/Schreibzugriff/Datensicherung (RW/DP) oder schreibgeschützt), Snapshot-Richtlinienname, Hosting von Storage-VM (SVM) und Tags.
+.. *Allgemeine Details*: Umfasst Volume-Name, Volume-UUID, Volume-ID, Erstellungszeit, Status, Volume-Typ (Lese-/Schreib-/Datenschutz (RW/DP) oder schreibgeschützt), Snapshot-Richtlinienname, Hosting-Storage-VM (SVM) und Tags.
 .. *Verteilung*: Umfasst Hosting-Aggregate, Volume-Stil (FlexGroup oder FlexVol), Komponenten (nur FlexGroup) und Ausgleichverhältnis (nur FlexGroup - hoch, mittel oder niedrig).
 .. *Verbrauch*: Umfasst Größe, verwendete SSD, verwendeten Kapazitäts-Pool, Autogrow-Einstellung, maximale Wachstumsgröße, Einstellung der Storage-Effizienz, eingesparte Komprimierung, eingesparte Deduplizierung, Tiering-Richtlinie und Arbeitstage
 .. *Access*: Umfasst Verbindungspfad, Sicherheitsstil, Exportrichtlinie und NFS-Version für NFS und Active Directory, CIFS-Freigabename, Benutzer oder Gruppen und Berechtigungen für SMB/CIFS sowie Initiatorgruppen und Host-IQNs für iSCSI.

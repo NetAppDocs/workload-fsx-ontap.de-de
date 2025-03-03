@@ -31,7 +31,7 @@ Anwendungsfälle:: Beachten Sie, dass der primäre Anwendungsfall für den GenAI
 
 == Ermitteln eines lokalen ONTAP Clusters
 
-Ermitteln Sie ein On-Premises-ONTAP-Cluster in der BlueXP -Workload-Fabrik, sodass Sie die Daten auf ein Amazon FSX für NetApp ONTAP-Filesystem replizieren können.
+Ermitteln Sie ein On-Premises-ONTAP-Cluster in der BlueXP -Workload-Farm, um Daten in ein Amazon FSX für NetApp ONTAP-Filesystem zu replizieren.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Folgendes haben, bevor Sie beginnen:
@@ -74,7 +74,7 @@ Sie können jetzt die Daten in Ihrem lokalen ONTAP-Cluster und anzeigen<<Volume-
 
 == Volume-Daten aus einem lokalen ONTAP Cluster replizieren
 
-Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für ONTAP Filesystem. Nach der Replizierung können die Daten zur Erweiterung von KI-Wissensdatenbanken verwendet werden.
+Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für ONTAP Filesystem. Nach der Replizierung können diese Daten zur Erweiterung von KI-Wissensdatenbanken verwendet werden.
 
 .Bevor Sie beginnen
 * Sie müssen ein On-Premises-ONTAP-Cluster erkennen, um seine Volume-Daten zu replizieren.
@@ -109,7 +109,7 @@ Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs
 
 .. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MiB/s. ein Alternativ wählen Sie *Unlimited*.
 +
-Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+Ohne Einschränkung kann die Netzwerk- und Applikations-Performance abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
 
 
 

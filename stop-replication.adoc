@@ -11,7 +11,7 @@ summary: Stoppen einer Replikationsbeziehung zwischen Quell- und Ziel-Volumes in
 
 
 [role="lead"]
-Stoppen Sie eine Replizierungsbeziehung in der BlueXP  Workload Factory. Wenn Sie eine Replikationsbeziehung anhalten, werden geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume angehalten. Das Ziel-Volume wechselt von schreibgeschützt zu Lese- und Schreibzugriff.
+Stoppen Sie eine Replizierungsbeziehung in der BlueXP  Workload Factory. Wenn Sie eine Replikationsbeziehung anhalten, werden geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume angehalten. Das Ziel-Volume wechselt von schreibgeschützt zu Lese-/Schreibzugriff.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

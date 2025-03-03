@@ -24,8 +24,8 @@ Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Li
 
 Sie haben zwei Optionen zum Erstellen von Verknüpfungen - automatisch oder manuell.
 
-* Automatisch: Erstellt eine Verknüpfung mit automatischer Registrierung über Workload Factory. Ein automatisch erstellter Link erfordert Token für die Automatisierung der Workload-Farm. Der CloudFormation-Code ist von kurzer Dauer. Er kann nur bis zu 6 Stunden verwendet werden.
-* Manuell: Erstellt einen Link mit manueller Registrierung. Der CloudFormation-Code bleibt bestehen und gibt Ihnen mehr Zeit, um den Vorgang abzuschließen. Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Security und DevOps zusammenarbeiten, die möglicherweise zunächst die erforderlichen Berechtigungen für die Erstellung der Verbindung erteilen müssen.
+* Automatisch: Erstellt eine Verknüpfung mit automatischer Registrierung über Workload Factory. Ein automatisch erstellter Link erfordert Token für die Automatisierung der Workload-Farm. Der CloudFormation-Code ist von kurzer Dauer. Er kann nur für bis zu sechs Stunden verwendet werden.
+* Manuell: Erstellt einen Link mit manueller Registrierung. Der CloudFormation-Code bleibt bestehen und gibt Ihnen mehr Zeit, um den Vorgang abzuschließen. Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Sicherheit und DevOps zusammenarbeiten, die möglicherweise zuerst die erforderlichen Berechtigungen für die vollständige Link-Erstellung erteilen müssen.
 
 
 .Bevor Sie beginnen

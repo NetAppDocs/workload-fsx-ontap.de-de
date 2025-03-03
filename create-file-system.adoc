@@ -60,13 +60,13 @@ Sie können auch eine gespeicherte Konfiguration laden.
 *** Bei vertikal skalierbaren Implementierungen kann nur ein HA-Paar vorhanden sein.
 *** Bei horizontal skalierbaren Implementierungen gibt es zwischen zwei und zwölf HA-Paare.
 +
-Um iSCSI-Blockvolumes auf dem Dateisystem bereitzustellen, wählen Sie nicht mehr als 6 HA-Paare aus.
+Wählen Sie zum Bereitstellen von iSCSI-Block-Volumes auf dem Dateisystem maximal sechs HA-Paare aus.
 
 
 
 .. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.
 +
-*** Implementierung von Single Availability Zone (Single-AZ): Sorgt für Verfügbarkeit, indem Hardware-Ausfälle überwacht und Infrastrukturkomponenten bei Ausfällen automatisch ersetzt werden. Erzielt hohe Beständigkeit durch automatische Replizierung Ihrer Daten in einer Verfügbarkeitszone zum Schutz vor Komponentenausfall.
+*** Implementierung von Single Availability Zone (Single-AZ): Bietet Verfügbarkeit durch Überwachung auf Hardwareausfälle und automatischer Austausch von Infrastrukturkomponenten bei einem Ausfall. Erzielt hohe Beständigkeit durch automatische Replizierung Ihrer Daten in einer Verfügbarkeitszone zum Schutz vor Komponentenausfall.
 *** Implementierung mit mehreren Verfügbarkeitszonen (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Verfügbarkeitszone nicht verfügbar ist. Multi-AZ-Filesysteme unterstützen alle Verfügbarkeits- und Dauerhaltbarkeitsfunktionen von Single-AZ-Filesystemen. Ein Filesystem mit mehreren Verfügbarkeitszonen wurde für geschäftskritische Produktions-Workloads konzipiert, die Hochverfügbarkeit für gemeinsam genutzte ONTAP-Dateidaten erfordern und Storage mit integrierter Replizierung über Verfügbarkeitszonen hinweg benötigen.
 
 
@@ -139,7 +139,7 @@ Um iSCSI-Blockvolumes auf dem Dateisystem bereitzustellen, wählen Sie nicht meh
 
 .. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.
 +
-*** Implementierung von Single Availability Zone (Single-AZ): Sorgt für Verfügbarkeit, indem Hardware-Ausfälle überwacht und Infrastrukturkomponenten bei Ausfällen automatisch ersetzt werden. Erzielt hohe Beständigkeit durch automatische Replizierung Ihrer Daten in einer Verfügbarkeitszone zum Schutz vor Komponentenausfall.
+*** Implementierung von Single Availability Zone (Single-AZ): Bietet Verfügbarkeit durch Überwachung auf Hardwareausfälle und automatischer Austausch von Infrastrukturkomponenten bei einem Ausfall. Erzielt hohe Beständigkeit durch automatische Replizierung Ihrer Daten in einer Verfügbarkeitszone zum Schutz vor Komponentenausfall.
 *** Implementierung mit mehreren Verfügbarkeitszonen (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Verfügbarkeitszone nicht verfügbar ist. Multi-AZ-Filesysteme unterstützen alle Verfügbarkeits- und Dauerhaltbarkeitsfunktionen von Single-AZ-Filesystemen. Ein Filesystem mit mehreren Verfügbarkeitszonen wurde für geschäftskritische Produktions-Workloads konzipiert, die Hochverfügbarkeit für gemeinsam genutzte ONTAP-Dateidaten erfordern und Storage mit integrierter Replizierung über Verfügbarkeitszonen hinweg benötigen.
 
 

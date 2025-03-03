@@ -18,7 +18,7 @@ Die Replizierung ist eine zusätzliche Datensicherungsschicht, die im Falle eine
 
 Dieser Vorgang erzeugt eine Replikationsbeziehung für ein oder alle Quell-Volumes in einem FSX für ONTAP-Dateisystem.
 
-Replizierte Volumes im Zieldateisystem folgen dem Namensformat: `{OriginalVolumeName}_copy`.
+Replizierte Volumes im Zieldateisystem sind Datensicherungs-Volumes (DP) und folgen dem Namensformat: `{OriginalVolumeName}_copy`.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie beginnen.
@@ -33,18 +33,20 @@ Führen Sie die folgenden Schritte aus, um ein einzelnes Volume zu replizieren o
 ====
 .Replizieren eines einzelnen Volumes
 --
+Sie können ein Quell-Volume (Lese-/Schreibvorgänge) oder ein Datensicherungs-Volume replizieren. Sie können kein zweites Replikat eines DP-Volumes erstellen.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das zu replizierende Volume enthält, und wählen Sie dann *Volume-Daten replizieren*.
-. Geben Sie auf der Seite Replikation erstellen unter Replikationsziel Folgendes an:
+. Geben Sie auf der Seite Daten replizieren unter Replikationsziel Folgendes an:
 +
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
 .. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
 .. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten.
 +
-_Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Verwendung der Workload Factory FSX for ONTAP-Benutzeroberfläche. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^]in der Dokumentation zu AWS FSX for NetApp ONTAP.
+_Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Verwendung der Workload Factory FSX for ONTAP-Benutzeroberfläche. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP.
 
 .. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
 +
@@ -60,10 +62,16 @@ Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternat
 Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
 
 +
-*** Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
-*** Geben Sie für *Create a New Policy* Folgendes an:
+*** *Wählen Sie eine vorhandene Richtlinie*: Wählen Sie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+*** *Erstellen Sie eine neue Richtlinie*: Geben Sie Folgendes an:
 +
 **** *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
+**** Optional: Unveränderliche Snapshots aktivieren
++
+***** Wählen Sie *Enable Immanable Snapshots* aus, um zu verhindern, dass in dieser Richtlinie ergriffene Snapshots während des Aufbewahrungszeitraums gelöscht werden.
+***** Legen Sie die *Aufbewahrungsfrist* in Stunden, Tagen, Monaten oder Jahren fest.
+
+
 **** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
 
 
@@ -77,12 +85,17 @@ Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene R
 --
 .Replizieren aller Volumes in einem Dateisystem
 --
+Sie können alle Quell- (Lese-/Schreibvorgänge) und Data Protection (DP)-Volumes in einem Dateisystem replizieren.
+
+
+NOTE: Die Replizierung eines Datensicherungs-Volumes wird einmalig unterstützt.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte FSX for ONTAP das drei-Punkt-Menü des Dateisystems mit den Volumes aus und wählen Sie dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht *Replikation erstellen* aus.
-. Geben Sie auf der Seite Replikation erstellen unter Replikationsziel Folgendes an:
+. Wählen Sie in der Dateisystemübersicht *Daten replizieren* aus.
+. Geben Sie auf der Seite Daten replizieren unter Replikationsziel Folgendes an:
 +
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
 .. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
@@ -105,8 +118,8 @@ Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternat
 Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
 
 +
-*** Wählen Sie für *vorhandene Richtlinie auswählen* eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
-*** Geben Sie für *Create a New Policy* Folgendes an:
+*** *Wählen Sie eine vorhandene Richtlinie*: Wählen Sie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+*** *Erstellen Sie eine neue Richtlinie*: Geben Sie Folgendes an:
 +
 **** *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
 **** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
@@ -116,7 +129,7 @@ Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene R
 
 
 
-. Wählen Sie *Erstellen*.
+. Wählen Sie *Replicate*.
 
 
 --

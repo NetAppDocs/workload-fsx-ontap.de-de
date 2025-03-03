@@ -16,7 +16,7 @@ Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik u
 .Bevor Sie beginnen
 Bevor Sie beginnen, gehen Sie wie folgt vor:
 
-* Um CIFS-Freigaben zu verwalten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+* Um CIFS-Freigaben zu verwalten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 * Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie die Berechtigungsstufe fest.
 
 

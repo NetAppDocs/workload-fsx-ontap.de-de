@@ -29,7 +29,7 @@ Sie erstellen Links auf den FSX für ONTAP-Dateisystemseiten in Workload Factory
 
 == Kosten
 
-Jede Transaktion, die Lambda durchführt, ist kostenpflichtig. Da Lambda als Proxy zwischen den beiden Systemen fungiert, wird eine Gebühr erhoben, wenn Lambda eine Anforderung an die ONTAP-REST-API auf einem Dateisystem sendet und die Antwort zurück an die Workload Factory sendet.
+Jede Transaktion, die Lambda durchführt, ist kostenpflichtig. Da Lambda als Proxy zwischen den beiden Systemen fungiert, fällt eine Gebühr an, wenn Lambda eine Anforderung an die ONTAP-REST-API auf einem Dateisystem sendet und die Antwort zurück an die Workload-Fabrik sendet.
 
 link:https://aws.amazon.com/lambda/pricing/["Informieren Sie sich über die Kosten bei der Nutzung von AWS Lambda"^]
 
