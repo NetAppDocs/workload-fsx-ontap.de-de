@@ -152,8 +152,6 @@ sidebar:
           url: "/limit-transfer-rate.html"
         - title: Manuelles Update von Snapshot-Daten in einer Replikationsbeziehung
           url: "/update-snapshot-replication.html"
-        - title: Replizierung eines Datensicherheitsvolumes
-          url: "/cascade-replication.html"
         - title: Anhalten und Wiederaufnehmen einer Replikationsbeziehung
           url: "/pause-resume-replication.html"
         - title: Anhalten einer Replikationsbeziehung
