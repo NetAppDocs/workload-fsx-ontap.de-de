@@ -21,9 +21,8 @@ Der Tracker unterstützt je nach Betrieb bis zu drei Überwachungsebenen. Jede A
 Verfolgung von Aufgabenebenen mit Beispielen::
 +
 --
-* Ebene 1 (übergeordneter Job): Verfolgt eine Dateisystembereitstellung.
-* Ebene 2 (Unterjob): Verfolgt die untergeordneten Jobs, die mit der Dateisystembereitstellung in Verbindung stehen.
-* Stufe 3 (Task): Listet die Reihenfolge der Aktionen auf, die für jede Ressource durchgeführt werden.
+* Stufe 1 (Aufgabe): Verfolgt die Dateisystembereitstellung.
+* Stufe 2 (Unteraufgabe): Verfolgt die Unteraufgaben im Zusammenhang mit der Dateisystembereitstellung.
 
 
 --
