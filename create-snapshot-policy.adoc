@@ -26,6 +26,7 @@ Standardmäßig ist jedes Volume mit der Snapshot-Richtlinie des Dateisystems ve
 Durch das Anpassen einer Richtlinie können Sie festlegen, wann Snapshots erstellt werden sollen, wie viele Kopien aufbewahrt werden sollen und wie sie benannt werden sollen.
 
 .Bevor Sie beginnen
+* Sobald eine Snapshot-Richtlinie erstellt wurde, kann ihre Zuordnung zu den Speicher-VM(s) nicht geändert werden, Sie können die Richtlinie jedoch immer hinzufügen oder aus Volumes entfernen.
 * Beachten Sie Folgendes über die Snapshot-Kapazität, bevor Sie Snapshots verwenden:
 +
 ** Bei den meisten Datensätzen reicht eine zusätzliche Kapazität von 20 % aus, um Snapshots für bis zu vier Wochen aufzubewahren. Je älter die Daten werden, desto wahrscheinlicher wird die Verwendung für Wiederherstellungen.

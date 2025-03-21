@@ -75,6 +75,18 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 * Snapshots können nicht gelöscht werden.
 * Wenn Sie ein Dateisystem replizieren, verwenden alle Volumes im Dateisystem dieselbe Replikationsrichtlinie.
 * Bei Replikationsbeziehungen mit langfristiger Aufbewahrung ist nur der letzte Snapshot für die Wiederherstellung verfügbar.
+* Die folgenden Funktionen werden bei unveränderlichen Snapshots nicht unterstützt:
++
+** Konsistenzgruppen
+** FabricPool
+** FlexCache Volumes
+** SMTape
+** SnapMirror Active Sync
+** SnapMirror-Richtlinie, die den Parameter -schedule verwendet
+** SnapMirror Synchronous
+** SVM-Datenmobilität (verwendet für die Migration oder Verschiebung einer SVM von einem Quell-Cluster zu einem Ziel-Cluster)
+
+
 
 
 
