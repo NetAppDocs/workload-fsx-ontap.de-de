@@ -38,8 +38,9 @@ Um sicherzustellen, dass Volume-Inodes zusammen mit der Speicherkapazität zuneh
 +
 Alternativ können Sie die Funktion deaktivieren. Wenn Sie die Kapazität des Dateisystems erhöhen müssen, müssen Sie zunächst die automatische Kapazitätsverwaltung deaktivieren.
 
-.. *Kapazitätsschwellenwert*: Geben Sie die maximale Größe für das FSX für ONTAP Dateisystem ein.
-.. *Erhöhung der Kapazität*: Geben Sie den Prozentsatz ein, um die Kapazität schrittweise zu erhöhen.
+.. *Schwellenwertsteigerung*: Geben Sie die maximale Größe für das FSX für ONTAP Dateisystem ein.
+.. *Incremental Increase*: Geben Sie den Prozentsatz ein, um die Kapazität schrittweise zu erhöhen.
+.. Optional: Aktivieren Sie die automatische Inodes-Verwaltung, um sicherzustellen, dass die Dateikapazität pro Volume erhöht wird, indem die Anzahl der Inodes (Dateien) bis zum zulässigen Grenzwert erhöht wird.
 
 
 . Wählen Sie *Anwenden*.

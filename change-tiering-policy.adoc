@@ -27,12 +27,12 @@ FSX für ONTAP verfügt über zwei Tiers zum Speichern von Volume-Daten:
 Weitere Informationen zu Storage-Tiers finden link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Management der Storage-Kapazität"^] Sie in der Dokumentation zu AWS für FSX für NetApp ONTAP.
 
 .Bevor Sie beginnen
-Überprüfen Sie die vier verfügbaren Tiering-Richtlinien, bevor Sie die Tiering-Richtlinie ändern.
+Überprüfen Sie die verfügbaren Tiering-Richtlinien, bevor Sie die Tiering-Richtlinie ändern.
 
-* *Auto*: Verschiebt alle kalten Daten, einschließlich Benutzerdaten und Snapshots, für einen bestimmten Zeitraum in den Kapazitäts-Pool-Speicher-Tier.
-* *Nur Snapshot*: Verschiebt nur Snapshot-Daten auf den Storage Tier des Kapazitäts-Pools.
-* *Keine*: Speichert alle Daten Ihres Volumes auf dem primären Storage Tier.
-* *All*: Markiert alle Benutzerdaten und Snapshot-Daten als „kalt“ und speichert sie im Kapazitäts-Pool-Speicher-Tier.
+* *Balanced (Auto)*: Standard-Tiering-Richtlinie beim Erstellen eines Volumes über die Benutzeroberfläche. Speichert häufig genutzte Daten in der SSD-Storage-Tier und verschiebt selten genutzte Daten und Snapshots nach Ablauf des Abkühlzeitraums auf die Kapazitäts-Pool-Storage-Tier. Empfohlen für allgemeine primäre Workloads.
+* *Kostenoptimiert (Alle)*: Verschiebt alle Snapshots und Daten auf den Kapazitäts-Pool-Speicher-Tier. Empfohlen für sekundäre Ziele.
+* *Performance-optimiert (nur Snapshots)*: Verschiebt nur Snapshot-Daten auf den Kapazitäts-Pool-Speicher-Tier. Empfohlen für Workloads mit niedriger Latenz, beispielsweise für geschäftskritische Datenbanken
+* *Keine*: Speichert Volume-Daten im SSD-Speicher-Tier und verhindert, dass sie in den Kapazitäts-Pool-Speicher-Tier verschoben werden.
 
 
 Beachten Sie, dass einige Tiering-Richtlinien über einen zugehörigen Mindestkühlzeitraum verfügen, der die Zeit bzw. die _Kühltage_ festlegt, dass Benutzerdaten in einem Volume inaktiv bleiben müssen, damit die Daten als „kalt“ gelten und in die Storage-Ebene des Kapazitäts-Pools verschoben werden. Der Kühlzeitraum beginnt, wenn Daten auf die Festplatte geschrieben werden.
@@ -44,12 +44,12 @@ Beachten Sie, dass einige Tiering-Richtlinien über einen zugehörigen Mindestk�
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes das Menü mit drei Punkten des Volumes aus, um die Tiering-Richtlinie für zu ändern.
 . Wählen Sie *Erweiterte Aktionen* und dann *Tiering-Richtlinie ändern*.
-. Wählen Sie auf der Seite Tiering Policy ändern eine der folgenden Tiering Policies aus:
+. Wählen Sie auf der Seite Tiering-Richtlinie ändern die Tiering-Richtlinie des Quell-Volume aus, oder wählen Sie eine der folgenden Tiering-Richtlinien aus:
 +
-** *Auto*: Geben Sie die Anzahl der Abkühltage ein.
-** *Nur Snapshot*: Geben Sie die Anzahl der Abkühltage ein.
+** *Ausgeglichen (Auto)*: Geben Sie die Anzahl der Abkühltage ein.
+** *Kostenoptimiert (Alle)*
+** *Performance-optimiert (nur Snapshots)*: Geben Sie die Anzahl der Abkühltage ein.
 ** *Keine*
-** * Alle*
 
 
 . Wählen Sie *Anwenden*.

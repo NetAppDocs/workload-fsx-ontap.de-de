@@ -44,9 +44,25 @@ Sie können ein Quell-Volume (Lese-/Schreibvorgänge) oder ein Datensicherungs-V
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
 .. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
 .. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
-.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten.
+.. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus. Je nach ausgewähltem Anwendungsfall füllt die Workload Factory das Formular mit den empfohlenen Werten gemäß den Best Practices aus. Sie können die empfohlenen Werte akzeptieren oder Änderungen vornehmen, während Sie das Formular ausfüllen.
 +
-_Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Verwendung der Workload Factory FSX for ONTAP-Benutzeroberfläche. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP.
+*** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
+*** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
+*** Disaster Recovery in kalten oder archivierten Daten:
++
+**** Cold Disaster Recovery: Verwendet längere Recovery-Zeitvorgaben (RTO) und Recovery-Zeitpunkte (RPO) zur Senkung der Kosten
+**** Archiv: Replizierung von Daten für langfristige Speicherung und Compliance
+
+
+*** Sonstiges
+
+
+.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
++
+_Balanced (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP. Beachten Sie, dass Workload Factory für Tiering-Richtlinien auf Basis von Anwendungsfällen in der Workload Factory verwendet und Tiering-Richtliniennamen für FSX für ONTAP in Klammern enthält.
+
++
+Wenn Sie den Anwendungsfall für die Migration ausgewählt haben, wählt die Workload Factory automatisch aus, die Tiering-Richtlinie des Quell-Volume auf das Ziel-Volume zu kopieren. Sie können das Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die auf das für die Replikation ausgewählte Volume zutrifft.
 
 .. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
 +
@@ -100,9 +116,25 @@ NOTE: Die Replizierung eines Datensicherungs-Volumes wird einmalig unterstützt.
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
 .. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
 .. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`.
-.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten.
+.. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus. Je nach ausgewähltem Anwendungsfall füllt die Workload Factory das Formular mit den empfohlenen Werten gemäß den Best Practices aus. Sie können die empfohlenen Werte akzeptieren oder Änderungen vornehmen, während Sie das Formular ausfüllen.
 +
-_Auto_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes unter Verwendung der Workload Factory FSX for ONTAP-Benutzeroberfläche. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^]in der Dokumentation zu AWS FSX for NetApp ONTAP.
+*** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
+*** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
+*** Disaster Recovery in kalten oder archivierten Daten:
++
+**** Cold Disaster Recovery: Verwendet längere Recovery-Zeitvorgaben (RTO) und Recovery-Zeitpunkte (RPO) zur Senkung der Kosten
+**** Archiv: Replizierung von Daten für langfristige Speicherung und Compliance
+
+
+*** Sonstiges
+
+
+.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
++
+_Balanced (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP. Beachten Sie, dass Workload Factory für Tiering-Richtlinien auf Basis von Anwendungsfällen in der Workload Factory verwendet und Tiering-Richtliniennamen für FSX für ONTAP in Klammern enthält.
+
++
+Wenn Sie den Anwendungsfall Migration ausgewählt haben, wählt die Workload Factory automatisch das Kopieren der Tiering-Richtlinie von Quell-Volumes auf die Ziel-Volumes im Dateisystem aus. Sie können das Kopieren der Tiering Policy deaktivieren und eine Tiering Policy auswählen, die für die Volumes im Zieldateisystem für die Replikation gilt.
 
 .. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MiB/s. ein Alternativ wählen Sie *Unlimited*.
 +
