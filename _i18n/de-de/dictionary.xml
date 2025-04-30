@@ -1669,4 +1669,9 @@
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Pingen der Instanz</block>
   <block id="70b2c09de9e176a879c840cb014b8c20" category="inline-link-macro">Erteilen Sie _read_ Berechtigungen</block>
   <block id="e395c91c5c84949d52ffb229805b2f5f" category="paragraph">Vergewissern Sie sich Ihr AWS-Konto, dass Workloads, die Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File Server-Storage-Umgebungen in Ihrem AWS-Konto erkennen <block ref="aa999e6a1b84a9d79249d89f4acbbea1" category="inline-link-macro-rx"></block>können.</block>
+  <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link-macro">ONTAP 9-Dokumentation</block>
+  <block id="3611f3afb9bd4ea20ff757fe165aa678" category="paragraph">Darüber hinaus bestimmt die Auswahl des Anwendungsfalls die Replikationsrichtlinie oder die SnapMirror Policy (ONTAP). Die Begriffe, die zur Beschreibung von Replikationsrichtlinien verwendet <block ref="20dfa0e16eac8597602ade67a04436fd" category="inline-link-macro-rx"></block>werden, stammen aus .</block>
+  <block id="b5b213ff8da55d939d5b26b2acad4e23" category="list-text">Für die Migration und andere wird die Replikationsrichtlinie _MirrorAllSnapshots_ genannt. _MirrorAllSnapshots_ ist eine asynchrone Richtlinie zur Spiegelung aller Snapshots und des aktuellen aktiven Dateisystems.</block>
+  <block id="5fc1e1e4cb63004511e44d8fbb5b04a2" category="list-text">Für Disaster Recovery mit heißen, kalten oder archivierten Daten wird die Replikationsrichtlinie _MirrorAndVault_ genannt. _MirrorAndVault_ ist eine asynchrone und Vault-Richtlinie zur Spiegelung des neuesten aktiven Dateisystems und der täglichen und wöchentlichen Snapshots.</block>
+  <block id="a1eefe5e0a806535abe58cb68a54c9d1" category="paragraph">Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die standardmäßige Replikationsrichtlinie für alle Anwendungsfälle _MirrorAndVault_.</block>
 </blocks>

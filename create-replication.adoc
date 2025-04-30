@@ -55,6 +55,17 @@ Sie können ein Quell-Volume (Lese-/Schreibvorgänge) oder ein Datensicherungs-V
 
 
 *** Sonstiges
++
+Darüber hinaus bestimmt die Auswahl des Anwendungsfalls die Replikationsrichtlinie oder die SnapMirror Policy (ONTAP). Die Begriffe, die zur Beschreibung von Replikationsrichtlinien verwendet link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9-Dokumentation"^]werden, stammen aus .
+
++
+**** Für die Migration und andere wird die Replikationsrichtlinie _MirrorAllSnapshots_ genannt. _MirrorAllSnapshots_ ist eine asynchrone Richtlinie zur Spiegelung aller Snapshots und des aktuellen aktiven Dateisystems.
+**** Für Disaster Recovery mit heißen, kalten oder archivierten Daten wird die Replikationsrichtlinie _MirrorAndVault_ genannt. _MirrorAndVault_ ist eine asynchrone und Vault-Richtlinie zur Spiegelung des neuesten aktiven Dateisystems und der täglichen und wöchentlichen Snapshots.
++
+Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die standardmäßige Replikationsrichtlinie für alle Anwendungsfälle _MirrorAndVault_.
+
+
+
 
 
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
@@ -127,6 +138,17 @@ NOTE: Die Replizierung eines Datensicherungs-Volumes wird einmalig unterstützt.
 
 
 *** Sonstiges
++
+Darüber hinaus bestimmt die Auswahl des Anwendungsfalls die Replikationsrichtlinie oder die SnapMirror Policy (ONTAP). Die Begriffe, die zur Beschreibung von Replikationsrichtlinien verwendet link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9-Dokumentation"^]werden, stammen aus .
+
++
+**** Für die Migration und andere wird die Replikationsrichtlinie _MirrorAllSnapshots_ genannt. _MirrorAllSnapshots_ ist eine asynchrone Richtlinie zur Spiegelung aller Snapshots und des aktuellen aktiven Dateisystems.
+**** Für Disaster Recovery mit heißen, kalten oder archivierten Daten wird die Replikationsrichtlinie _MirrorAndVault_ genannt. _MirrorAndVault_ ist eine asynchrone und Vault-Richtlinie zur Spiegelung des neuesten aktiven Dateisystems und der täglichen und wöchentlichen Snapshots.
++
+Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die standardmäßige Replikationsrichtlinie für alle Anwendungsfälle _MirrorAndVault_.
+
+
+
 
 
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
