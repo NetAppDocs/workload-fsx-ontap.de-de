@@ -1,28 +1,37 @@
 ---
 sidebar: sidebar 
 permalink: create-link.html 
-keywords: links, add, add links, add link, create link 
+keywords: connect, connection, link, lambda link, associate link, create link, authenticate link 
 summary: Sie können Links erstellen und verwalten, um eine Vertrauensbeziehung und Konnektivität zwischen einem BlueXP -Workload-Werkskonto und einem oder mehreren FSX for ONTAP-Dateisystemen bereitzustellen. 
 ---
-= Erstellen Sie einen Link in der BlueXP  Workload Factory
+= Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Sie können Links erstellen und verwalten, um eine Vertrauensbeziehung und Konnektivität zwischen einem werkseitigen Konto eines Workloads und einem oder mehreren FSX für ONTAP-Dateisystemen in der BlueXP -Workload-Fabrik bereitzustellen. So können Sie bestimmte Funktionen direkt aus dem Dateisystem FSX für ONTAP überwachen und managen, die über die AWS FSX für ONTAP-API nicht verfügbar sind.
+Um erweiterte ONTAP-Verwaltungsvorgänge auszuführen, müssen Sie eine Verbindung zwischen Ihrem Workload-Werkskonto und einem oder mehreren FSX for ONTAP-Dateisystemen herstellen. Zur Herstellung der Konnektivität gehören die Verknüpfung neuer und vorhandener Lambda-Links und die Authentifizierung der Links. Mit der Link-Zuordnung können Sie bestimmte Funktionen direkt aus dem Dateisystem FSX für ONTAP überwachen und verwalten, die nicht über die AWS FSX für ONTAP-API verfügbar sind.
 
 link:links-overview.html["Weitere Informationen zu Links"].
 
 .Über diese Aufgabe
 Links nutzen AWS Lambda, um Code als Reaktion auf Ereignisse auszuführen und die nach diesem Code erforderlichen Computing-Ressourcen automatisch zu managen. Die von Ihnen erstellten Links sind Teil Ihres NetApp Kontos und mit einem AWS Konto verknüpft.
 
-Sie können einen Link in Ihrem Konto erstellen, wenn Sie ein FSX für ONTAP-Dateisystem definieren. Dieser Link wird für dieses Dateisystem verwendet, und er kann von anderen FSX für ONTAP-Dateisystemen verwendet werden.
+Sie können einen Link in Ihrem Konto erstellen, wenn Sie ein FSX für ONTAP-Dateisystem definieren. Dieser Link wird für dieses Dateisystem verwendet, und er kann von anderen FSX für ONTAP-Dateisystemen verwendet werden. Sie können auch später einen Link zu einem Dateisystem zuordnen.
 
-Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Link zu erstellen.
+Links erfordern eine Authentifizierung. Authentic-Links können mit Anmeldeinformationen verwendet werden, die im Workload Factory Credentials Service gespeichert sind, oder mit Ihren Anmeldeinformationen, die in AWS Secrets Manager gespeichert sind. Pro Link wird nur eine Authentifizierungsmethode unterstützt. Wenn Sie beispielsweise die Verbindungsauthentifizierung mit AWS Secrets Manager auswählen, können Sie die Authentifizierungsmethode später nicht mehr ändern.
 
-Sie haben zwei Optionen zum Erstellen von Verknüpfungen - automatisch oder manuell.
+
+NOTE: AWS Secrets Manager wird bei der Verwendung eines Connectors nicht unterstützt.
+
+
+
+== Neuen Link zuordnen
+
+Die Verknüpfung eines neuen Links umfasst die Erstellung und Verknüpfung.
+
+Sie haben zwei Optionen zum Erstellen von Verknüpfungen - automatisch oder manuell. Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Link zu erstellen.
 
 * Automatisch: Erstellt eine Verknüpfung mit automatischer Registrierung über Workload Factory. Ein automatisch erstellter Link erfordert Token für die Automatisierung der Workload-Farm. Der CloudFormation-Code ist von kurzer Dauer. Er kann nur für bis zu sechs Stunden verwendet werden.
 * Manuell: Erstellt einen Link mit manueller Registrierung. Der CloudFormation-Code bleibt bestehen und gibt Ihnen mehr Zeit, um den Vorgang abzuschließen. Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Sicherheit und DevOps zusammenarbeiten, die möglicherweise zuerst die erforderlichen Berechtigungen für die vollständige Link-Erstellung erteilen müssen.
@@ -30,7 +39,7 @@ Sie haben zwei Optionen zum Erstellen von Verknüpfungen - automatisch oder manu
 
 .Bevor Sie beginnen
 * Sie sollten überlegen, welche Link-Erstelloption Sie verwenden.
-* Sie müssen über Anmeldedaten verfügen, um sich bei Ihrem AWS-Konto anzumelden.
+* Sie benötigen mindestens ein FSX für ONTAP-Dateisystem in der Workload-Fabrik. Zum ermitteln oder Erstellen von FSX für ONTAP-Filesysteme benötigen Sie ein AWS-Konto mit Berechtigungen für FSX für ONTAP-Instanzen und link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["Fügen Sie Anmeldeinformationen in der Workload Factory hinzu"^] mit Lese- oder Schreib-Berechtigungen für Storage-Management.
 * Sie müssen über die folgenden Berechtigungen in Ihrem AWS-Konto verfügen, wenn Sie einen Link mit einem CloudFormation-Stack hinzufügen:
 +
 [%collapsible]
@@ -80,12 +89,21 @@ Erstellen und registrieren Sie den Link mit CloudFormation automatisch innerhalb
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht *Link zuordnen* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
 . Geben Sie auf der Seite „Link erstellen“ Folgendes an:
 +
 .. *Linkname*: Geben Sie den Namen ein, den Sie für diesen Link verwenden möchten. Der Name muss innerhalb Ihres Kontos eindeutig sein.
+.. *AWS Secrets Manager*: Optional. Ermöglicht es der Workload Factory, FSX for ONTAP Zugangsdaten von Ihrem AWS Secrets Manager abzurufen.
++
+Der Link Deployment Stack fügt der Lambda-Berechtigungsrichtlinie den folgenden Standard-Geheimmanager ARN regex hinzu: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`.
+
++
+Sie können entweder Geheimnisse im Einklang mit den Standardberechtigungen erstellen oder Ihre benutzerdefinierten Berechtigungen für die Link-Richtlinie zuweisen.
+
++
+*Konfigurieren des privaten VPC-Endpunkts zu AWS Secrets Manager* ist standardmäßig deaktiviert. Bei Auswahl dieser Option wird das Secret über den privaten VPC-Endpunkt gespeichert, anstatt es lokal zu speichern.
+
 .. *Tags*: Fügen Sie optional alle Tags hinzu, die Sie mit diesem Link verknüpfen möchten, damit Sie Ihre Ressourcen einfacher kategorisieren können. Sie könnten beispielsweise ein Tag hinzufügen, das diesen Link als von FSX für ONTAP-Dateisystemen verwendet identifiziert.
 +
 Das AWS-Konto und die zusätzlichen Informationen für Konto, Standort und Sicherheitsgruppe werden basierend auf dem FSX für ONTAP-Dateisystem automatisch abgerufen.
@@ -121,23 +139,118 @@ Sie können den Status der Verknüpfungserstellung auf der Seite Ereignisse übe
 Mit dieser Option extrahieren Sie den ARN für den Link aus AWS CloudFormation und melden ihn hier. Workload Factory registriert den Link manuell für Sie.
 
 .Schritte
-Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an. . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus. . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Verwalten*. . Wählen Sie in der Dateisystemübersicht *Link zuordnen* aus. . Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*. . Geben Sie auf der Seite Link erstellen Folgendes an: .. *Linkname*: Geben Sie den Namen ein, den Sie für diesen Link verwenden möchten. Der Name muss innerhalb Ihres Kontos eindeutig sein. .. *Tags*: Fügen Sie optional alle Tags hinzu, die Sie mit diesem Link verknüpfen möchten, damit Sie Ihre Ressourcen einfacher kategorisieren können. Sie könnten beispielsweise ein Tag hinzufügen, das diesen Link als von FSX für ONTAP-Dateisystemen verwendet identifiziert. .. *Link-Registrierung*: Wählen Sie auf den Dropdown-Pfeil, um die Anweisungen für die Registrierung des Links aus dem AWS CloudFormation Service erweitern. Befolgen Sie die Anweisungen.
-
-+ Beachten Sie, dass Lambda drei Berechtigungen erteilt werden, wenn Sie die CloudFormation-Vorlage starten. Workload Factory verwendet diese Berechtigungen bei der Verwendung von Links.
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Link zuordnen*.
+. Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
+. Geben Sie auf der Seite „Link erstellen“ Folgendes an:
++
+.. *Linkname*: Geben Sie den Namen ein, den Sie für diesen Link verwenden möchten. Der Name muss innerhalb Ihres Kontos eindeutig sein.
+.. *AWS Secrets Manager*: Optional. Ermöglicht es der Workload Factory, FSX for ONTAP Zugangsdaten von Ihrem AWS Secrets Manager abzurufen.
++
+Der Link Deployment Stack fügt der Lambda-Berechtigungsrichtlinie den folgenden Standard-Geheimmanager ARN regex hinzu: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`.
 
 +
+Sie können entweder Geheimnisse im Einklang mit den Standardberechtigungen erstellen oder Ihre benutzerdefinierten Berechtigungen für die Link-Richtlinie zuweisen.
 
++
+*Konfigurieren des privaten VPC-Endpunkts zu AWS Secrets Manager* ist standardmäßig deaktiviert. Bei Auswahl dieser Option wird das Secret über den privaten VPC-Endpunkt gespeichert, anstatt es lokal zu speichern.
+
+.. *Tags*: Fügen Sie optional alle Tags hinzu, die Sie mit diesem Link verknüpfen möchten, damit Sie Ihre Ressourcen einfacher kategorisieren können. Sie könnten beispielsweise ein Tag hinzufügen, das diesen Link als von FSX für ONTAP-Dateisystemen verwendet identifiziert.
+.. *Link-Registrierung*: Wählen Sie auf den Dropdown-Pfeil, um die Anweisungen für die Registrierung des Links aus dem AWS CloudFormation Service erweitern. Befolgen Sie die Anweisungen.
++
+Beachten Sie, dass Lambda drei Berechtigungen erteilt werden, wenn Sie die CloudFormation-Vorlage starten. Workload Factory verwendet diese Berechtigungen bei der Verwendung von Links.
+
++
 [source, json]
 ----
 "lambda:InvokeFunction",
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 ----
-+ Nachdem Sie den Stapel erfolgreich erstellt haben, fügen Sie den Lambda ARN in das Textfeld ein. .. Das AWS-Konto und die zusätzlichen Informationen für Konto, Standort und Sicherheitsgruppe werden basierend auf dem FSX für ONTAP-Dateisystem automatisch abgerufen. . Wählen Sie *Erstellen*.
++
+Nachdem Sie den Stapel erfolgreich erstellt haben, fügen Sie die Lambda-ARN in das Textfeld ein.
 
-+ Sie können den Status der Verbindungserstellung auf der Seite Ereignisse überwachen. Dies sollte nicht länger als 5 Minuten dauern. . Kehren Sie zur Workload-Werkseinstellungen zurück, und Sie sehen, dass der Link mit dem FSX für ONTAP-Dateisystem verknüpft ist.
+.. Das AWS-Konto und die zusätzlichen Informationen für Konto, Standort und Sicherheitsgruppe werden basierend auf dem FSX für ONTAP-Dateisystem automatisch abgerufen.
+
+
+. Wählen Sie *Erstellen*.
++
+Sie können den Status der Verknüpfungserstellung auf der Seite Ereignisse überwachen. Dies sollte nicht länger als 5 Minuten dauern.
+
+. Kehren Sie zur Workload-Werkseinstellungen zurück, und Sie sehen, dass der Link mit dem FSX für ONTAP-Dateisystem verknüpft ist.
+
 
 --
 ====
 .Ergebnis
-Der von Ihnen erstellte Link wird dem Dateisystem FSX for ONTAP zugeordnet.
+Der von Ihnen erstellte Link wird dem Dateisystem FSX for ONTAP zugeordnet. Sie können erweiterte ONTAP-Vorgänge ausführen.
+
+
+
+== Verknüpfen Sie einen vorhandenen Link mit einem FSX for ONTAP-Dateisystem
+
+Nachdem Sie einen Link erstellt haben, verknüpfen Sie ihn mit einem oder mehreren FSX for ONTAP-Dateisystemen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Link zuordnen*.
+. Wählen Sie auf der Link-Seite „Mitarbeiter“ die Option *vorhandenen Link verknüpfen*, wählen Sie den Link aus und wählen Sie *Weiter*.
+. Wählen Sie den Authentifizierungsmodus aus.
++
+** Workload Factory: Geben Sie das Passwort zweimal ein.
+** AWS Secrets Manager: Geben Sie den geheimen ARN ein.
++
+Das geheime ARN muss die folgenden Schlüssel-gültigen Paare enthalten:
+
++
+*** FilesystemID = FSX_Filesystem_id
+*** User = FSX_User
+*** Passwort = user_password
+
+
+
+
+. Wählen Sie *Anwenden*.
+
+
+.Ergebnis
+Der Link ist mit dem Dateisystem FSX für ONTAP verknüpft. Sie können erweiterte ONTAP-Vorgänge ausführen.
+
+
+
+== Fehlerbehebung bei Problemen mit der AWS Secrets Manager-Link-Authentifizierung
+
+Problem:: Der Link verfügt nicht über die erforderlichen Berechtigungen zum Abrufen des Geheimnisses.
++
+--
+*Auflösung*: Berechtigungen hinzufügen, nachdem der Link aktiv ist. Melden Sie sich bei der AWS-Konsole an, suchen Sie den Lambda-Link und bearbeiten Sie die angehängte Berechtigungsrichtlinie.
+
+--
+Problem:: Das Geheimnis wurde nicht gefunden.
++
+--
+*Auflösung*: Geben Sie das korrekte Geheimnis ARN.
+
+--
+Problem:: Das Geheimnis liegt nicht im richtigen Format vor.
++
+--
+*Auflösung*: Gehen Sie zu AWS Secrets Manager und bearbeiten Sie das Format.
+
+Das Secret sollte die folgenden Schlüssel-gültigen Paare enthalten:
+
+* FilesystemID = FSX_Filesystem_id
+* User = FSX_User
+* Passwort = user_password
+
+
+--
+Problem:: Der Schlüssel enthält keine gültigen ONTAP-Anmeldeinformationen für die Dateisystemauthentifizierung.
++
+--
+* Auflösung*: Geben Sie Anmeldeinformationen an, die FSX für ONTAP-Dateisysteme im AWS Secrets Manager authentifizieren können.
+
+--
+

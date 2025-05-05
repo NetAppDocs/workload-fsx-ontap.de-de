@@ -17,6 +17,8 @@ Dank der langfristigen Aufbewahrung können Business Services auch bei einem vol
 
 Die gleichen Schritte gelten für die Aktivierung und Bearbeitung von Snapshots für die langfristige Aufbewahrung.
 
+Wenn ein lokaler ONTAP Cluster als Ziel für die Replizierungsbeziehung dient, wird das Ändern von Snapshots für die langfristige Aufbewahrung nicht unterstützt.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.

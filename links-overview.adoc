@@ -25,6 +25,8 @@ Nachdem Sie einen Link erstellt haben, können Sie ihn einem oder mehreren FSX f
 
 Sie erstellen Links auf den FSX für ONTAP-Dateisystemseiten in Workload Factory. link:create-link.html["Erfahren Sie, wie Sie Verknüpfungen erstellen"] Genaue Informationen.
 
+Authentic-Links können mit Anmeldeinformationen verwendet werden, die im Workload Factory Credentials Service gespeichert sind, oder mit Ihren Anmeldeinformationen, die in AWS Secrets Manager gespeichert sind. Workload Factory unterstützt keine Änderung der Authentifizierungsmodi.
+
 
 
 == Kosten

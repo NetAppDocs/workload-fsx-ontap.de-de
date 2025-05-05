@@ -38,7 +38,7 @@ sidebar:
       entries:
       - title: Link-Übersicht
         url: "/links-overview.html"
-      - title: Erstellen Sie eine Verknüpfung
+      - title: Stellen Sie eine Verbindung zu einem Dateisystem mit einem Link her
         url: "/create-link.html"
       - title: Links verwalten
         url: "/manage-links.html"
@@ -76,6 +76,8 @@ sidebar:
           url: "/create-replication.html"
         - title: Initialisieren Sie eine Replikationsbeziehung
           url: "/initialize-replication.html"
+      - title: Autonomer Ransomware-Schutz für Daten
+        url: "/ransomware-protection.html"
       - title: Klonen Sie ein Volume
         url: "/clone-volume.html"
       - title: Lokale ONTAP-Daten nutzen
@@ -84,6 +86,12 @@ sidebar:
     entries:
     - title: Überwachen Sie den Betrieb mit Tracker
       url: "/monitor-operations.html"
+    - title: Implementieren von Best Practices für Dateisysteme
+      entries:
+      - title: Konfigurationsanalyse für FSX für ONTAP
+        url: "/configuration-analysis.html"
+      - title: Sorgfältig konzipierte Filesystem-Konfigurationen implementieren
+        url: "/improve-configurations.html"
     - title: Volume-Administration
       entries:
       - title: Bearbeiten Sie Volume Autogrow
@@ -144,6 +152,8 @@ sidebar:
           url: "/manage-backup-schedule.html"
       - title: Replizierung
         entries:
+        - title: Replizierung eines Datensicherheitsvolumes
+          url: "/cascade-replication.html"
         - title: Eine Replikationsbeziehung umkehren
           url: "/reverse-replication.html"
         - title: Ändern Sie den Replikationszeitplan eines Quell-Volumes

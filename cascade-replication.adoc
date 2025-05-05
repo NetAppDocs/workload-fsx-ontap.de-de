@@ -1,49 +1,39 @@
 ---
 sidebar: sidebar 
-permalink: create-replication.html 
-keywords: replication, replicate 
-summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisystem, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden. 
+permalink: cascade-replication.html 
+keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
+summary: Replizieren Sie Datensicherungs-Volumes oder Kaskadenreplikation von Volume-Daten, um die Datensicherung auf tertiäre Systeme zu erweitern oder Ihre Daten zu migrieren. 
 ---
-= Erstellen Sie eine Replizierungsbeziehung in der BlueXP  Workload-Fabrik
+= Replizieren Sie Datensicherungs-Volumes in der BlueXP  Workload-Fabrik
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisystem in BlueXP -Workload-Fabrik, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden.
+Replizieren Sie Datensicherungs-Volumes oder Kaskadenreplikation von Volume-Daten, um die Datensicherung auf tertiäre Systeme zu erweitern oder Ihre Daten zu migrieren.
 
 .Über diese Aufgabe
-Die Replizierung ist eine zusätzliche Datensicherungsschicht, die im Falle eines Ausfalls der Region, in der Ihre Daten gespeichert sind, von wesentlicher Bedeutung ist. Durch regionsübergreifende Replizierung kann Datenverlust vermieden werden.
+Die BlueXP  Workload-Farm unterstützt die Replizierung von Datensicherungs-Volumes, auch „Cascade Deployments“ genannt. Eine _Kaskadenbereitstellung_ besteht aus einer Beziehungskette, in der ein Quell-Volume auf ein sekundäres Volume gespiegelt wird (erster Hop) und das sekundäre Volume auf ein tertiäres Volume gespiegelt wird (zweiter Hop). Falls das sekundäre Volume nicht mehr verfügbar ist, können Sie die Beziehung zwischen dem primären und dem tertiären Volume synchronisieren, ohne einen neuen Basistransfer durchführen zu müssen.
 
-Dieser Vorgang erzeugt eine Replikationsbeziehung für ein oder alle Quell-Volumes in einem FSX für ONTAP-Dateisystem.
+Diese Funktion wird für FSX für ONTAP-Dateisysteme mit ONTAP Version 9.6 und höher unterstützt. Siehe link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["ONTAP-Dokumentation für kompatible ONTAP-Versionen"^].
 
-Replizierte Volumes im Zieldateisystem sind Datensicherungs-Volumes (DP) und folgen dem Namensformat: `{OriginalVolumeName}_copy`.
+Erfahren Sie mehr über link:https://docs.netapp.com/us-en/ontap/data-protection/supported-deployment-config-concept.html#how-cascade-deployments-work["Funktionsweise von Kaskadenimplementierungen"^].
 
 .Bevor Sie beginnen
-Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie beginnen.
+Beachten Sie Folgendes, bevor Sie beginnen:
 
-* Sie müssen über zwei verfügbare Dateisysteme in Ihrem Speicherbestand verfügen, um eine Replikationsbeziehung zu erstellen.
-* Den beiden Dateisystemen, die Sie für die Replikationsbeziehung verwenden, muss eine Verknüpfung zugeordnet sein. Wenn die Dateisysteme keine Verknüpfungen haben, link:create-link.html["Erstellen Sie zunächst einen Link"]. Wählen Sie in den Dateisystemen unter *Kontoname* *Link zum link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]Mitarbeiter* aus. Sobald die Verknüpfung in beiden Dateisystemen verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+* Beachten Sie, dass die erneute Synchronisierung von Volumes, die Teil einer Kaskadenkonfiguration sind, länger dauern kann.
+* Wenn das Quell-Volume der Beziehung ein Data-Protection-Volume ist und ein Ziel einer anderen Beziehung ist, wird das Umkehren der Replikationsbeziehung nicht unterstützt.
+* Es wird ein Replikat eines Data-Protection-Volumes (oder ein zweiter Hop) unterstützt. Es gilt nicht als Best Practice, ein zweites Replikat eines Datensicherheitsvolumes (oder einen dritten Hop) zu erstellen.
 
-
-Führen Sie die folgenden Schritte aus, um ausgewählte Volumes zu replizieren oder alle Volumes in einem Dateisystem zu replizieren.
-
-Sie können ein Quell-Volume (Lese-/Schreibvorgänge) oder ein Datensicherungs-Volume replizieren. Eine kaskadierende Replikation wird unterstützt, ein dritter Hop aber nicht. Erfahren Sie mehr über link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["Kaskadierende Replizierung"^].
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, das die zu replizierenden Volumes enthält, und wählen Sie dann *Verwalten*.
-. Replizieren Sie entweder alle Volumes in einem Dateisystem oder replizieren Sie ausgewählte Volumes.
-+
-** Um alle Volumes in einem Dateisystem zu replizieren: Wählen Sie in der Dateisystemübersicht *Daten replizieren*.
-** Um ausgewählte Volumes zu replizieren: Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-+
-Wählen Sie in der Tabelle Volumes ein oder mehrere Volumes aus und wählen Sie dann *Daten replizieren* aus.
-
-
-
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie in der Tabelle Volumes ein oder mehrere Data Protection Volumes (DP/Replicated Volumes) aus und wählen Sie dann *Replicate Data* aus.
 . Geben Sie auf der Seite Daten replizieren unter Replikationsziel Folgendes an:
 +
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
@@ -60,17 +50,6 @@ Wählen Sie in der Tabelle Volumes ein oder mehrere Volumes aus und wählen Sie 
 
 
 *** Sonstiges
-+
-Darüber hinaus bestimmt die Auswahl des Anwendungsfalls die Replikationsrichtlinie oder die SnapMirror Policy (ONTAP). Die Begriffe, die zur Beschreibung von Replikationsrichtlinien verwendet link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9-Dokumentation"^]werden, stammen aus .
-
-+
-**** Für die Migration und andere wird die Replikationsrichtlinie _MirrorAllSnapshots_ genannt. _MirrorAllSnapshots_ ist eine asynchrone Richtlinie zur Spiegelung aller Snapshots und des aktuellen aktiven Dateisystems.
-**** Für Disaster Recovery mit heißen, kalten oder archivierten Daten wird die Replikationsrichtlinie _MirrorAndVault_ genannt. _MirrorAndVault_ ist eine asynchrone und Vault-Richtlinie zur Spiegelung des neuesten aktiven Dateisystems und der täglichen und wöchentlichen Snapshots.
-+
-Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die standardmäßige Replikationsrichtlinie für alle Anwendungsfälle _MirrorAndVault_.
-
-
-
 
 
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
@@ -119,4 +98,4 @@ NOTE: Zur langfristigen Aufbewahrung sind passende Quell- und Zieletiketten erfo
 
 
 .Ergebnis
-Die Replikationsbeziehung wird auf der Registerkarte *Replikationsbeziehungen* im Ziel-FSX für ONTAP-Dateisystem angezeigt.
+Das replizierte Volume oder die replizierten Volumes replizieren sich und erscheinen auf der Registerkarte *Replikationsbeziehungen* im Ziel-FSX für ONTAP-Dateisystem.

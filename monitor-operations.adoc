@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track database jobs 
+keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
 summary: Überwachen Sie FSX für ONTAP, Zugangsdaten und Link-Vorgänge und überwachen Sie den Job-Fortschritt mit Tracker in der BlueXP  Workload-Fabrik für Storage. 
 ---
 = Überwachen Sie den Storage-Betrieb mit Tracker im BlueXP  Workload-Werk
@@ -14,9 +14,11 @@ summary: Überwachen Sie FSX für ONTAP, Zugangsdaten und Link-Vorgänge und üb
 Mit Tracker in der BlueXP  Workload-Fabrik überwachen und verfolgen Sie die Ausführung von FSX für ONTAP- und Zugangsdaten sowie Linkvorgänge und überwachen den Aufgabenfortschritt.
 
 .Über diese Aufgabe
-Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der Sie den Fortschritt und Status von FSX für ONTAP, Anmeldeinformationen und Verbindungsvorgänge überwachen und verfolgen können, Details für Betriebsaufgaben und untergeordnete Aufgaben überprüfen, Probleme oder Fehler diagnostizieren, Parameter für fehlgeschlagene Vorgänge bearbeiten und fehlgeschlagene Vorgänge erneut versuchen können. Sie können Jobs nach Typ und Status filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle herunterladen.
+Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der Sie den Fortschritt und Status von FSX for ONTAP, Anmeldeinformationen und Link-Operationen überwachen und verfolgen können, Details für Betriebsaufgaben und untergeordnete Aufgaben überprüfen und Probleme oder Fehler diagnostizieren können.
 
-Der Tracker unterstützt je nach Betrieb bis zu drei Überwachungsebenen. Jede Aufgabe, wie z. B. die Dateisystembereitstellung, zeigt die Aufgabenbeschreibung, den Status, die Startzeit, die Aufgabendauer, den Benutzer, die Region, die Proxyressource, die Aufgaben-ID und alle zugehörigen untergeordneten Aufgaben an.
+In Tracker sind mehrere Aktionen verfügbar. Sie können Jobs nach Zeitrahmen (letzte 24 Stunden, 7 Tage, 14 Tage oder 30 Tage), Workload, Status und Benutzer filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle als CSV-Datei herunterladen. Sie können Tracker jederzeit aktualisieren. Sie können einen fehlgeschlagenen Vorgang schnell wiederholen oder Parameter für einen fehlgeschlagenen Vorgang bearbeiten und den Vorgang erneut versuchen.
+
+Tracker unterstützt je nach Betrieb zwei Überwachungsebenen. Jede Aufgabe, wie z. B. die Dateisystembereitstellung, zeigt die Aufgabenbeschreibung, den Status, die Startzeit, die Aufgabendauer, den Benutzer, die Region, die Proxyressource, die Aufgaben-ID und alle zugehörigen untergeordneten Aufgaben an. Sie können API-Antworten anzeigen, um zu verstehen, was während des Vorgangs passiert ist.
 
 Verfolgung von Aufgabenebenen mit Beispielen::
 +

@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: improve-configurations.html 
+keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP 
+summary: Die BlueXP  Workload-Farm für Datenbanken scannt Microsoft SQL Server-Konfigurationen und bietet Ihnen Einblicke und Empfehlungen, um Ihre betrieblichen Abläufe zu optimieren. 
+---
+= Sorgfältig konzipierte Filesystem-Konfigurationen implementieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nutzen Sie mithilfe der Erkenntnisse aus der Konfigurationsanalyse und -Empfehlungen die BlueXP  Workload Factory, um Best Practices für Ihre FSX für ONTAP-Filesysteme zu implementieren. Sie können Probleme leicht finden und Maßnahmen ergreifen, um die Architektur von Systemen zu verbessern, die nicht im Hinblick auf Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
+
+.Über diese Aufgabe
+BlueXP  analysiert täglich die Konfigurationen für die Dateisystembereitstellung von Amazon FSX für NetApp ONTAP. Die tägliche Analyse bietet Einblicke und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, sodass Ihr Filesystem den Best Practices entspricht.
+
+Es stehen Ihnen Optionen zur Verfügung, die Empfehlungen für Konfigurationsprobleme mit Ihren Dateisystemen zu prüfen und diese Probleme aus der Speicherinventarisierung in der Workload-Factory-Konsole zu beheben.
+
+Was analysiert wird:: Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
++
+--
+* Schwellenwert für SSD-Kapazität
+* Daten-Tiering
+* Geplante lokale Snapshots
+* FSX für ONTAP-Backups und
+* Remote-Datenreplizierung
+
+
+--
+
+
+.Bevor Sie beginnen
+* Sie müssen über Anmeldedaten mit Lese- oder Schreib-/Leseberechtigungen verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie in Ihrem AWS-Konto Berechtigungen erteilen"^].
+* Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren.
+
+
+
+NOTE: Die Problembehebung kann zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Überprüfen Sie die Empfehlung sorgfältig, bevor Sie ein Konfigurationsproblem beheben.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel Datenbanken *Gehe zu Speicherbestand* aus.
+. Navigieren Sie auf der Registerkarte *FSX für ONTAP* zur Spalte *gut gestaltter Status* und wählen Sie die Probleme aus, die das Dateisystem beheben soll.
+. Filtern Sie im gut konzipierten Dashboard für das Filesystem Konfigurationsprobleme nach Kategorien, Unterkategorien, Status, Schweregrad und Tags.
+. Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Überprüfen Sie die Empfehlung sorgfältig.
++
+Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.
+
+. Wählen Sie *Fix*.
++
+Wenn *View and fix* eine Option ist, wählen Sie die betroffenen Volumes aus, die repariert werden sollen.
+
+. Sehen Sie sich die im Dialogfeld angezeigten Zusammenfassungs- und Aktionselemente an, um zu erfahren, was passieren wird, wenn Sie das Problem beheben möchten. Einige Vorgänge können zu Instanzausfällen oder Serviceunterbrechungen führen.
+. Wählen Sie *Weiter*, um das Konfigurationsproblem zu beheben.
+
+
+.Ergebnis
+Der Prozess zur Behebung des Problems wird eingeleitet. Wählen Sie die Registerkarte *Job Monitoring*, um den Status des Vorgangs anzuzeigen.

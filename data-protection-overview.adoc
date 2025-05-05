@@ -22,13 +22,16 @@ Datensicherung Ihrer Workloads gewährleistet, dass nach jedem Datenverlust jede
 .Snapshots
 Ein Snapshot erstellt ein schreibgeschütztes, zeitpunktgenaues Image eines Volumes innerhalb des Quell-Volumes als Snapshot-Kopie. Sie können die Snapshot-Kopie verwenden, um einzelne Dateien wiederherzustellen oder den gesamten Inhalt eines Volumes wiederherzustellen. Snapshots sind die Grundlage aller Sicherungsmethoden. Mithilfe der Snapshot Kopie, die auf dem Volume erstellt wird, werden das replizierte Volume und die Backup-Datei bei den Änderungen am Quell-Volume synchronisiert.
 
-.Backups
-Sie können Backups Ihrer Daten in der Cloud zur Sicherung und zur langfristigen Aufbewahrung erstellen. Bei Bedarf können Sie ein Volume, einen Ordner oder einzelne Dateien aus dem Backup in demselben oder einem anderen funktionierenden Dateisystem wiederherstellen.
+.Autonomer Schutz Durch Ransomware
+Autonomous Ransomware Protection (ARP) nutzt Workload-Analysen in NAS-Umgebungen (NFS/SMB), um abnormale Aktivitäten, die ein Ransomware-Angriff sein könnten, zu erkennen und zu warnen. Wird ein Angriff vermutet, erstellt ARP zusätzlich zu dem durch geplante Snapshots vorhandenen Schutz auch neue, unveränderliche Snapshots.
 
 .Replizierung
 Durch Replizierung wird eine sekundäre Kopie Ihrer Daten in einem anderen FSX für ONTAP Filesystem erstellt und die sekundären Daten werden kontinuierlich aktualisiert. Ihre Daten bleiben aktuell und verfügbar, beispielsweise für Disaster Recovery.
 
 Sie können sowohl replizierte Volumes auf einem anderen FSX für ONTAP-Dateisystem als auch Backup-Dateien in der Cloud erstellen. Oder Sie haben die Wahl, ob Sie nur replizierte Volumes oder Backup-Dateien erstellen möchten.
+
+.Backups
+Sie können Backups Ihrer Daten in der Cloud zur Sicherung und zur langfristigen Aufbewahrung erstellen. Bei Bedarf können Sie ein Volume, einen Ordner oder einzelne Dateien aus dem Backup in demselben oder einem anderen funktionierenden Dateisystem wiederherstellen.
 
 Das folgende Diagramm zeigt eine visuelle Darstellung der Datensicherung für FSX für ONTAP Storage durch Snapshots, regionsübergreifende Replizierung und Backup in Objekt-Storage.
 
@@ -62,6 +65,12 @@ Volume Replication erstellt eine Kopie der neuesten Daten eines Volumes einschli
 
 
 
+== Schutz von Workload-Daten durch autonomen Ransomware-Schutz
+
+ARP dient als wichtige zusätzliche Verteidigungsschicht, wenn Antivirensoftware keinen Einbruch erkennen konnte. Die Festlegung einer ARP-Richtlinie ermöglicht es allen Storage-VMs und allen vorhandenen und neu erstellten Volumes. Sobald ARP aktiviert ist, erkennt und sichert es alle Volumes und Storage VMs. Wenn eine Dateierweiterung als anormal gekennzeichnet ist, sollten Sie die Warnmeldung auswerten.
+
+
+
 == Empfehlungen zum Schutz Ihrer Workload-Daten
 
 Berücksichtigen Sie die folgenden Empfehlungen zum Schutz Ihrer Workload-Daten.
@@ -69,4 +78,6 @@ Berücksichtigen Sie die folgenden Empfehlungen zum Schutz Ihrer Workload-Daten.
 * Verwenden Sie Volume-Backups in Verbindung mit Snapshots: Durch die gemeinsame Verwendung der beiden Funktionen wird sichergestellt, dass Sie Ihre Dateien aus Snapshots wiederherstellen und im Falle eines Volume-Verlusts mithilfe von Backups vollständige Wiederherstellungen durchführen können.
 * Definieren Sie eine Volume Backup-Richtlinie: Vergewissern Sie sich, dass die Backup-Richtlinie die Anforderungen Ihres Unternehmens im Hinblick auf das Alter und die Häufigkeit des Backups erfüllt. Wir empfehlen, mindestens zwei tägliche Backups für jedes Volume zu erstellen.
 * Definieren Sie einen Snapshot-Zeitplan: Ältere Snapshots werden weniger wahrscheinlich zur Wiederherstellung von Daten verwendet. Wir empfehlen Ihnen, einen Snapshot-Zeitplan zu definieren, der die abnehmenden Ergebnisse der Aufbewahrung älterer Snapshots im Vergleich zu den Kosten für zusätzliche Snapshot-Kapazität berücksichtigt.
+* Überwachen Sie Ihre Volumes, um auf potenzielle Ransomware-Angriffe aufmerksam zu machen.
+* Aktivieren Sie die ARP-Richtlinie für Ihre Storage-VMs und Volumes, um eine zusätzliche Sicherheitsschicht hinzuzufügen, die Ihre Daten vor Ransomware-Angriffen schützt.
 

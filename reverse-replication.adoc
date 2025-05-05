@@ -13,6 +13,12 @@ summary: Wenden Sie eine Replikationsbeziehung um, damit das Ziel-Volume das Que
 [role="lead"]
 Wenden Sie eine Replikationsbeziehung in der BlueXP  Workload Factory zurück, so dass das Ziel-Volume das Quell-Volume wird.
 
+Rückwärtsgänge werden für folgende Vorgänge unterstützt:
+
+* Zwei FSX für ONTAP-Dateisysteme
+* Ein FSX für ONTAP-Filesystem und ein On-Premises-ONTAP-Cluster
+
+
 Nachdem Sie die Replikation beendet und Änderungen am Ziel-Volume vorgenommen haben, können Sie diese Änderungen zurück auf das Quell-Volume replizieren. Dieser Prozess ist in einem Disaster-Recovery-Szenario üblich, in dem Sie eine Weile auf dem Ziel-Volume arbeiten und die Rollen der Volumes wechseln möchten.
 
 .Über diese Aufgabe

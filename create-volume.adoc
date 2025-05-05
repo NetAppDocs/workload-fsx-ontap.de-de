@@ -95,6 +95,7 @@ Wenn Sie eine vorhandene Exportrichtlinie ausgewählt haben, geben Sie einen neu
 ..... *Berechtigungen*: Wählen Sie Vollzugriff, Lesen/Schreiben, Lesen oder keinen Zugriff und geben Sie dann die Benutzer oder Gruppen getrennt durch ein Semikolon ( ; ) ein. Bei Benutzern oder Gruppen wird zwischen Groß- und Kleinschreibung unterschieden, und die Domäne des Benutzers muss im Format „Domain\username“ enthalten sein.
 
 
+.... *Sicherheitsstil*: Wählen Sie für Dual-Protokoll-Volumes entweder den UNIX- oder NTFS-Sicherheitstil aus. UNIX ist der Standard-Sicherheitstil für Dual-Protokoll-Volumes. Eine detaillierte Anleitung zum User Mapping finden Sie in diesem Kontext im AWS Blog-Artikel link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["Aktivieren von Multiprotokoll-Workloads mit Amazon FSX for NetApp ONTAP"^].
 
 
 *** *Blockzugriff*: Ermöglicht Hosts, die kritische Geschäftsanwendungen ausführen, den Zugriff auf das Volume über das iSCSI-Protokoll. Der Block-Zugriff ist nur verfügbar, wenn die horizontal skalierbare Filesystem-Implementierung maximal sechs HA-Paare umfasst.

@@ -77,7 +77,10 @@ Wählen Sie zum Bereitstellen von iSCSI-Block-Volumes auf dem Dateisystem maxima
 . Geben Sie unter *Dateisystemdetails* Folgendes an:
 +
 .. *SSD-Speicherkapazität*: Geben Sie die Speicherkapazität ein und wählen Sie die Speicherkapazitätseinheit aus.
-.. *ONTAP Credentials*: Geben Sie Ihren ONTAP Benutzernamen und Ihr Passwort ein.
+.. *ONTAP Credentials*: Optional. Geben Sie Ihren ONTAP-Benutzernamen und Ihr Kennwort ein. Das Passwort kann jetzt oder später festgelegt werden.
++
+Wenn der von Ihnen eingegebene Benutzer nicht der Benutzer fsxadmin ist und Sie später das Passwort fsxadmin zurücksetzen müssen, können Sie dies über die AWS-Konsole tun.
+
 .. *SMB/CIFS Setup*: Optional. Wenn Sie Vorhaben, das SMB/CIFS-Protokoll für den Zugriff auf Volumes zu verwenden, müssen Sie das Active Directory für die Storage-VM während der Erstellung des Filesystems konfigurieren. Geben Sie die folgenden Details für die Speicher-VM ein, die für dieses Dateisystem erstellt wurde.
 +
 ... *Active Directory-Domain zu verbinden*: Geben Sie den vollständig qualifizierten Domainnamen (FQDN) für das Active Directory ein.
@@ -169,8 +172,11 @@ Eine Beschreibung der Sicherheitsgruppenprotokolle, Ports und Rollen finden Sie 
 .. *SSD-Speicherkapazität*: Geben Sie die Speicherkapazität ein und wählen Sie die Speicherkapazitätseinheit aus.
 .. *Bereitgestellte IOPS*: Wählen Sie *automatisch* oder *vom Benutzer bereitgestellt*.
 .. *Durchsatzkapazität pro HA-Paar*: Wählen Sie Durchsatzkapazität pro HA-Paar.
-.. *ONTAP Credentials*: Geben Sie Ihren ONTAP Benutzernamen und Ihr Passwort ein.
-.. *Storage VM Credentials*: Geben Sie Ihren Benutzernamen ein. Das Kennwort kann spezifisch für dieses Dateisystem sein, oder Sie verwenden das gleiche Kennwort, das für die ONTAP-Anmeldeinformationen eingegeben wurde.
+.. *ONTAP Credentials*: Optional. Geben Sie Ihren ONTAP-Benutzernamen und Ihr Kennwort ein. Das Passwort kann jetzt oder später festgelegt werden.
++
+Wenn der von Ihnen eingegebene Benutzer nicht der Benutzer fsxadmin ist und Sie später das Passwort fsxadmin zurücksetzen müssen, können Sie dies über die AWS-Konsole tun.
+
+.. *Storage VM Credentials*: Optional. Geben Sie Ihren Benutzernamen ein. Das Kennwort kann spezifisch für dieses Dateisystem sein, oder Sie können dasselbe Kennwort verwenden, das für die ONTAP-Anmeldeinformationen eingegeben wurde. Das Passwort kann jetzt oder später festgelegt werden.
 .. *SMB/CIFS Setup*: Optional. Wenn Sie Vorhaben, das SMB/CIFS-Protokoll für den Zugriff auf Volumes zu verwenden, müssen Sie das Active Directory für die Storage-VM während der Erstellung des Filesystems konfigurieren. Geben Sie die folgenden Details für die Speicher-VM ein, die für dieses Dateisystem erstellt wurde.
 +
 ... *Active Directory-Domain zu verbinden*: Geben Sie den vollständig qualifizierten Domainnamen (FQDN) für das Active Directory ein.

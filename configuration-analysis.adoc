@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: configuration-analysis.html 
+keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: Die BlueXP -Workload-Werkseinstellungen analysieren die Konfigurationen des Amazon FSX for NetApp ONTAP-Dateisystems regelmäßig, um Probleme zu ermitteln. 
+---
+= Konfigurationsanalyse für FSX für ONTAP-Dateisysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die BlueXP -Workload-Werkseinstellungen analysieren die Konfigurationen des Amazon FSX for NetApp ONTAP-Dateisystems regelmäßig, um Probleme zu ermitteln. Wenn Probleme gefunden werden, zeigt Workload Factory Ihnen die Probleme an und erklärt, welche Änderungen erforderlich sind, um sicherzustellen, dass Ihr Dateisystem-Speicher optimale Performance, Kosteneffizienz und Einhaltung von Best Practices erreicht.
+
+Die wichtigsten Funktionen:
+
+* Tägliche Konfigurationsanalyse
+* Automatische Validierung von Best Practices
+* Proaktive Beobachtbarkeit
+* Einblick in Aktion
+* AWS hat eine gut konzipierte Framework Advisor Architektur
+
+
+
+
+== Zustand der Architektur gut
+
+In der Workload-Factory-Konsole auf Filesystem-Ebene wird der gut konzipierte Status für alle FSX for ONTAP-Dateisysteme aufgeführt. Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut strukturiert“ kategorisiert. Wenn Sie den Status „gut strukturiert“ auswählen, werden Sie auf die Registerkarte „gut strukturiert“ im Dateisystem weitergeleitet, auf der Sie die gut konzipierte Punktzahl, die Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden können.
+
+Gut konzipierte Punktzahl:: Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.
+Konfigurationskategorien:: Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.
++
+--
+* _Reliability_: Stellt sicher, dass Workloads ihre beabsichtigten Funktionen auch bei Störungen korrekt und konsistent ausführen. Eine Beispielkonfiguration ist FSX für ONTAP-Backups.
+* _Security_: Legt den Schwerpunkt auf den Schutz von Daten, Systemen und Assets durch Risikobewertungen und Minderungsstrategien.
+* _Operational Excellence_: Konzentriert sich auf die Bereitstellung der optimalen Architektur und des geschäftlichen Nutzens.
+* _Kostenoptimierung_: Zielt darauf ab, einen geschäftlichen Nutzen zu erzielen und gleichzeitig Kosten zu minimieren.
+* _Performance Efficiency_: Konzentriert sich darauf, Ressourcen effizient zu nutzen, um die Systemanforderungen zu erfüllen und eine optimale Leistung bei sich ändernden Anforderungen aufrechtzuerhalten.
+
+
+--
+
+
+
+
+== Analyseanforderungen
+
+Für eine vollständige Dateisystemanalyse müssen Sie einen Link zuordnen. Dank der Link-Konnektivität kann die Workload Factory alle Dateisystemkonfigurationen wie Datensicherung und Performance analysieren.
+
+link:create-link.html["Erfahren Sie, wie Sie einen Link erstellen."]
+
+.Wie es weiter geht
+link:improve-configurations.html["Verbessern Sie die Konfigurationen für FSX for ONTAP-Implementierungen"]

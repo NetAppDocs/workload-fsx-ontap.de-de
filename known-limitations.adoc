@@ -106,6 +106,12 @@ Der Rechner für Storage-Einsparungen berechnet die Kosteneinsparungen für die 
 
 System Manager unterstützt keine Links für FSX for ONTAP-Konnektivität.
 
+
+
+== Unterstützung von AWS Secrets Manager
+
+AWS Secrets Manager wird bei der Verwendung eines Connectors nicht unterstützt.
+
 Hinweis:
 
 . Gilt für Amazon FSX for NetApp ONTAP

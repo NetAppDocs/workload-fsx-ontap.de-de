@@ -15,6 +15,8 @@ summary: Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replika
 
 Legen Sie fest, wie oft Snapshots vom Quell-Volume auf das replizierte Volume übertragen werden, um die erforderlichen Point Objectives (RPOs) zu erfüllen.
 
+Wenn ein On-Premises-ONTAP-Cluster Ziel der Replikationsbeziehung ist, wird eine Änderung des Replikationszeitplans nicht unterstützt.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
