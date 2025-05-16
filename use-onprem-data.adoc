@@ -19,7 +19,7 @@ Um Daten aus einem lokalen ONTAP Cluster zu verwenden, müssen Sie zuerst den lo
 Anwendungsfälle:: Beachten Sie, dass der primäre Anwendungsfall für den GenAI-Workload der Schwerpunkt dieser Aufgabenreihe ist.
 +
 --
-* *GenAI-Workload*: Replizieren Sie On-Premises-ONTAP-Volume-Daten auf ein FSX for ONTAP-Dateisystem, damit die Daten für verwendet werden könnenlink:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Verbesserte KI-Wissensdatenbanken"^].
+* *GenAI-Workload*: Replizieren Sie On-Premises-ONTAP-Volume-Daten auf ein FSX for ONTAP-Dateisystem, damit die Daten für verwendet werden könnenlink:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Verbesserte KI-Wissensdatenbanken"^].
 * *Backup und Migration in die Cloud*: Replizierte On-Premises-ONTAP-Volume-Daten auf einem FSX für ONTAP-Dateisystem können als Backup in der Cloud verwendet werden.
 * *Daten-Tiering*: Nach der Replizierung können selten verwendete Daten auf dem lokalen ONTAP-Volume vom SSD-Storage-Tier auf das Storage-Tier des Kapazitäts-Pools verschoben werden.
 

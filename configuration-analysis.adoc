@@ -51,4 +51,4 @@ Für eine vollständige Dateisystemanalyse müssen Sie einen Link zuordnen. Dank
 link:create-link.html["Erfahren Sie, wie Sie einen Link erstellen."]
 
 .Wie es weiter geht
-link:improve-configurations.html["Verbessern Sie die Konfigurationen für FSX for ONTAP-Implementierungen"]
+link:improve-configurations.html["Sorgfältig konzipierte Filesystem-Konfigurationen implementieren"]
