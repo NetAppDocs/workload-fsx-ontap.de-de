@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: clone-volume.html 
 keywords: clone volume, clone, clone data 
-summary: Klonen Sie ein Volume in der BlueXP  Workload Factory, um zu Testzwecken ein Lese- und Schreib-Volume des ursprünglichen Volumes zu erstellen. 
+summary: Klonen Sie ein Volume in der BlueXP-Workload-Factory, um zum Testen ein Lese-/Schreibvolume des Originalvolumes zu erstellen. 
 ---
 = Klonen eines Volumes im BlueXP  Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Klonen Sie ein Volume in der BlueXP  Workload Factory, um zu Testzweck
 
 
 [role="lead"]
-Klonen Sie ein Volume in der BlueXP  Workload Factory, um zu Testzwecken ein Lese- und Schreib-Volume des ursprünglichen Volumes zu erstellen.
+Klonen Sie ein Volume in der BlueXP-Workload-Factory, um zum Testen ein Lese-/Schreibvolume des Originalvolumes zu erstellen.
 
 Der Klon gibt den aktuellen Point-in-Time-Zustand der Daten wieder. Darüber hinaus können Klone verwendet werden, um zusätzlichen Benutzern Zugriff auf Daten zu gewähren, ohne dass diese auf Produktionsdaten zugreifen müssen.
 

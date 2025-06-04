@@ -33,7 +33,7 @@ Was analysiert wird:: Die Workload-Farm analysiert den gut konzipierten Status d
 
 
 .Bevor Sie beginnen
-* Sie müssen über Anmeldedaten mit Lese- oder Schreib-/Leseberechtigungen verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie in Ihrem AWS-Konto Berechtigungen erteilen"^].
+* Sie müssen über Anmeldeinformationen mit Nur-Lese- oder Lese-/Schreibberechtigung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie in Ihrem AWS-Konto Berechtigungen erteilen"^].
 * Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren.
 
 

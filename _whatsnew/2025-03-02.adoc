@@ -29,7 +29,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.htm
 === Verbesserungen bei der Datenreplizierung
 
 * Cross-Account-Replizierung: Die Replizierung zwischen zwei AWS-Konten wird in der BlueXP  Workload Factory-Konsole sowie in der Replikationsverwaltung unterstützt.
-* Replikation anhalten und fortsetzen: Sie können geplante Replikations-Updates vom Quell-Volume zum Ziel-Volume unterbrechen (stilllegen) und dann den Replikationszeitplan wieder aufnehmen, sobald Sie bereit sind. Während der Pause werden Quell- und Ziel-Volumes unabhängig und das Ziel-Volume wird von schreibgeschützten auf Schreib- und Lesezugriff umgestellt.
+* Replikation anhalten und fortsetzen: Sie können geplante Replikations-Updates vom Quell-Volume zum Ziel-Volume unterbrechen (stilllegen) und dann den Replikationszeitplan wieder aufnehmen, sobald Sie bereit sind. Während der Pause werden Quell- und Zielvolumes unabhängig und der Zielvolume wechselt vom schreibgeschützten zum Lese-/Schreibzugriff.
 +
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/pause-resume-replication.html["Anhalten und Wiederaufnehmen einer Replikationsbeziehung"]
 

@@ -11,12 +11,12 @@ summary: Halten Sie eine Replikationsbeziehung an und setzen Sie sie wieder ein,
 
 
 [role="lead"]
-Halten Sie eine Replikationsbeziehung an, um geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume zu stoppen. Das Ziel-Volume wechselt von schreibgeschützt zu Lese- und Schreibzugriff. Beide Volumes verwenden weiterhin den letzten Replizierungs-Snapshot als neue Basis für eine spätere Neusynchronisierung.
+Halten Sie eine Replikationsbeziehung an, um geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume zu stoppen. Das Ziel-Volume wechselt von schreibgeschützt zu Lese-/Schreibzugriff. Beide Volumes verwenden weiterhin den letzten Replizierungs-Snapshot als neue Basis für eine spätere Neusynchronisierung.
 
 .Über diese Aufgabe
 Wenn sie angehalten wird, besteht die Replikationsbeziehung zwischen Quell- und Zielvolume weiterhin. Die Datentransfers werden angehalten, und die Volumes werden unabhängig. Um die Übertragung von Änderungen vom Quell-Volume zum Ziel-Volume wieder zu aktivieren, setzen Sie die Replikation fort.
 
-Wenn Sie eine Replikation wieder aufnehmen, werden alle Änderungen am Ziel-Volume rückgängig gemacht und die Replikation wird auf der BlueXP  Workload Factory wieder aktiviert. Das Ziel-Volume wechselt von Read-Write zu Read-Only und empfängt Aktualisierungen vom Quell-Volume im geplanten Replikationsintervall erneut. Wenn Sie eine Replikationsbeziehung wieder aufnehmen, wird das Zielvolume wieder auf den letzten ersten Replikations-Snapshot zurückgesetzt. Zu diesem Zeitpunkt beginnt der Replikationsprozess von neuem.
+Wenn Sie eine Replikation wieder aufnehmen, werden alle Änderungen am Ziel-Volume rückgängig gemacht und die Replikation wird auf der BlueXP  Workload Factory wieder aktiviert. Das Zielvolume wechselt vom Lese-/Schreibzugriff zum schreibgeschützten Zugriff und empfängt im geplanten Replikationsintervall wieder Updates vom Quellvolume. Wenn Sie eine Replikationsbeziehung wieder aufnehmen, wird das Zielvolume wieder auf den letzten ersten Replikations-Snapshot zurückgesetzt. Zu diesem Zeitpunkt beginnt der Replikationsprozess von neuem.
 
 .Bevor Sie beginnen
 Wenn Sie anhalten, während eine Übertragung ausgeführt wird, wird die Übertragung nicht beeinträchtigt, und die Beziehung wird „Quiescing“, bis die Übertragung abgeschlossen ist. Wenn die aktuelle Übertragung abbricht, handelt es sich jetzt um eine zukünftige Übertragung und wird nicht neu gestartet.
