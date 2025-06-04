@@ -11,7 +11,7 @@ summary: Wenn diese Funktion aktiviert ist, kann die Workload Factory einem Date
 
 
 [role="lead"]
-Durch Aktivieren dieser Funktion kann BlueXP  Workload Factory automatisch inkrementellen Speicher zu einem FSX für ONTAP Dateisystem hinzufügen, wenn sich Kapazitätsanforderungen im Laufe der Zeit ändern.
+Durch die Aktivierung des automatischen Kapazitätsmanagements kann die BlueXP Workload Factory automatisch inkrementellen Speicher zu einem FSx for ONTAP-Dateisystem hinzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert. Darüber hinaus entfällt durch die Aktivierung dieser Funktion die manuelle Überwachung der Kapazität und das Risiko von Lese- und Schreibvorgängen von Anwendungsdaten, die Auswirkungen haben können, wird verringert.
 
 .Über diese Aufgabe
 Ein Scan des FSX für ONTAP-Dateisystems findet alle 30 Minuten statt, um zu bestimmen, ob inkrementeller Storage hinzugefügt werden muss, und um verfügbare Volume-Inodes oder die maximale Anzahl an Dateien und Ordnern in einem Volume zu prüfen, sodass ihre Anzahl entsprechend den konfigurierten Schwellenwerten für das automatische Kapazitätsmanagement steigt.
@@ -21,9 +21,12 @@ Diese Funktion kann nur von einem Konto verwaltet werden.
 Die maximale Menge an SSD-Speicherkapazität für alle FSX für ONTAP-Dateisysteme beträgt 524,288 gib. Informationen zur Anforderung einer Quotenerhöhung finden link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] Sie in der Dokumentation zu AWS FSX for NetApp ONTAP.
 
 .Bevor Sie beginnen
-Um diese Aufgabe abzuschließen, müssen Sie in der Workload Factory über Anmeldedaten mit _Automate_-Berechtigungen verfügen.
+Beachten Sie Folgendes, bevor Sie beginnen:
 
-Um sicherzustellen, dass Volume-Inodes zusammen mit der Speicherkapazität zunehmen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Sie müssen über Anmeldeinformationen mit Lese-/Schreibberechtigungen in der Workload Factory verfügen, um diese Aufgabe abzuschließen.
+* Um sicherzustellen, dass Volume-Inodes zusammen mit der Speicherkapazität zunehmen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Sie sollten diese Funktion während der Datenmigration nicht aktivieren, da AWS zwischen SSD-Kapazitätserhöhungen eine Abkühlphase von mindestens sechs Stunden vorschreibt. Diese Einschränkung kann Anpassungen verzögern. Planen Sie daher entsprechend.
+
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

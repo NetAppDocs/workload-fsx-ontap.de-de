@@ -24,8 +24,9 @@ Was analysiert wird:: Die Workload-Farm analysiert den gut konzipierten Status d
 * Schwellenwert für SSD-Kapazität
 * Daten-Tiering
 * Geplante lokale Snapshots
-* FSX für ONTAP-Backups und
+* FSx für ONTAP-Backups
 * Remote-Datenreplizierung
+* Storage-Effizienz
 
 
 --
@@ -57,4 +58,4 @@ Wenn *View and fix* eine Option ist, wählen Sie die betroffenen Volumes aus, di
 
 
 .Ergebnis
-Der Prozess zur Behebung des Problems wird eingeleitet. Wählen Sie die Registerkarte *Job Monitoring*, um den Status des Vorgangs anzuzeigen.
+Der Prozess zur Behebung des Problems wird eingeleitet. Wählen Sie das Menü „Kontoeinstellungen“ und dann „Tracker“ aus, um den Status des Vorgangs anzuzeigen.

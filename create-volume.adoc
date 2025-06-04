@@ -2,19 +2,19 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: Erstellen Sie nach dem Einrichten Ihres FSX für ONTAP-Dateisystems FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. 
+summary: Nachdem Sie Ihr FSx für ONTAP-Dateisystem eingerichtet haben, erstellen Sie FSx für ONTAP-Volumes in der Workload Factory. 
 ---
-= FSX für ONTAP-Volumen in BlueXP -Workload-Fabrik erstellen
+= Erstellen Sie ein FSx für ONTAP-Volume in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Erstellen Sie nach dem Einrichten Ihres FSX für ONTAP-Dateisystems FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik.
+Nachdem Sie Ihr FSx für ONTAP-Dateisystem eingerichtet haben, erstellen Sie FSx für ONTAP-Volumes in der Workload Factory als virtuelle Ressourcen zum Gruppieren Ihrer Daten.
 
 .Über diese Aufgabe
-FSX for ONTAP Volumes sind virtuelle Ressourcen, die zum Gruppieren von Daten verwendet werden, zum Bestimmen, wie die Daten gespeichert werden und zum Bestimmen der Art des Zugriffs auf Ihre Daten. Volumes verbrauchen keine Storage-Kapazität des Filesystems. Die in einem Volume gespeicherten Daten belegen primär SSD-Storage. Je nach der Tiering-Richtlinie des Volumes können die Daten auch Kapazitäts-Pool-Storage in Anspruch nehmen. Sie legen die Größe eines Volumes fest, wenn Sie es erstellen, und Sie können die Größe später ändern.
+FSx für ONTAP-Volumes gruppieren Daten virtuell, bestimmen, wie Daten gespeichert werden, und bestimmen die Art des Zugriffs auf Ihre Daten. Volumes verbrauchen keine Storage-Kapazität des Filesystems. Die in einem Volume gespeicherten Daten belegen primär SSD-Storage. Je nach der Tiering-Richtlinie des Volumes können die Daten auch Kapazitäts-Pool-Storage in Anspruch nehmen. Sie legen die Größe eines Volumes fest, wenn Sie es erstellen, und Sie können die Größe später ändern.
 
 Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 
@@ -63,6 +63,10 @@ Die Volume-Größe von FlexGroup hängt von der Anzahl der Komponenten ab. Pro K
 .. *Volumengröße*: Geben Sie die Volumengröße und Einheit ein.
 +
 Aktivieren Sie optional Volume Autogrow. Diese Option ist verfügbar, wenn Sie *Dateizugriff* als Zugriffstyp für das Volume auswählen.
+
+.. *Volume-Autogrow*: Aktivieren Sie optional die Funktion „Volume-Autogrow“, um die Volume-Kapazität automatisch zu erweitern, bis das Volume die maximale Größe erreicht. Diese Funktion trägt der steigenden Datennutzung Rechnung und gewährleistet einen unterbrechungsfreien Betrieb.
++
+Geben Sie die maximale Größe und Einheit für das Volumewachstum an. Die maximale Wachstumsgröße kann nicht kleiner als die aktuelle Volumegröße sein.
 
 .. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
 
@@ -119,7 +123,7 @@ Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzuri
 
 . Geben Sie unter Effizienz und Sicherung folgende Informationen an:
 +
-.. *Speichereffizienz*: Deaktivieren oder aktivieren Sie die Speichereffizienz.
+.. *Speichereffizienz*: Standardmäßig aktiviert. Wählen Sie diese Option, um die Funktion zu deaktivieren.
 +
 Die Storage-Effizienz wird durch Nutzung der Deduplizierungs- und Komprimierungsfunktionen von ONTAP erreicht. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können.
 

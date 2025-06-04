@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: Aktivieren Sie Volume Autogrow, damit BlueXP  Workload Factory Volume-Kapazität für Sie verwalten kann. Sie können sie jederzeit deaktivieren. 
+summary: Aktivieren Sie die automatische Volumevergrößerung, damit die Workload Factory die Volumekapazität für Sie verwalten kann. Sie können sie jederzeit deaktivieren. 
 ---
-= Aktivieren Sie Volume Autogrow in der BlueXP  Workload Factory
+= Aktivieren Sie die automatische Volumevergrößerung in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aktivieren Sie Volume Autogrow, damit BlueXP  Workload Factory Volume-Kapazität für Sie verwalten kann. Sie können sie jederzeit deaktivieren.
+Aktivieren Sie die automatische Volumevergrößerung, damit die Workload Factory die Volumekapazität für Sie verwalten kann. Sie können sie jederzeit deaktivieren.
 
 Optional können Sie die Volume-Kapazität eines Volumes jederzeit manuell über die erhöhen link:increase-volume-capacity.html["Erhöhen Sie die Volume-Kapazität"].
 
@@ -27,7 +27,10 @@ Um Volumen Autogrow zu aktivieren, müssen Sie link:manage-links.html["Verknüpf
 . Wählen Sie auf der Registerkarte FSX for ONTAP das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü für das Volume aus, das Sie ändern möchten.
-. Wählen Sie *Basic actions* und dann *Edit Volume Autogrow*.
-. Aktivieren Sie im Dialogfeld „Autogrow bearbeiten“ die Option „Volume Autogrow“.
+. Wählen Sie *Grundlegende Aktionen* und dann *Automatische Lautstärkevergrößerung festlegen*.
+. Aktivieren Sie im Dialogfeld „Automatische Vergrößerung festlegen“ die automatische Vergrößerung des Volumes, um die Volume-Kapazität automatisch zu erweitern, bis das Volume die maximale Größe erreicht. Diese Funktion trägt der steigenden Datennutzung Rechnung und gewährleistet einen unterbrechungsfreien Betrieb.
++
+Geben Sie die maximale Größe und Einheit für das Volumewachstum an. Die maximale Wachstumsgröße kann nicht kleiner als die aktuelle Volumegröße sein.
+
 . Wählen Sie *Anwenden*.
 

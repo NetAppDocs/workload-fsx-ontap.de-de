@@ -91,6 +91,9 @@ Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternat
 .. *Replikationsintervall*: Wählen Sie die Häufigkeit, mit der Snapshots vom Quell-Volume auf das Ziel-Volume übertragen werden.
 .. *Langfristige Aufbewahrung*: Optional können Snapshots für die langfristige Aufbewahrung aktiviert werden. Dank der langfristigen Aufbewahrung können Business-Services auch bei einem vollständigen Standortausfall weiterlaufen und Applikationen mithilfe einer sekundären Kopie einen transparenten Failover unterstützen.
 +
+Replikationen ohne langfristige Aufbewahrung verwenden die Richtlinie _MirrorAllSnapshots_. Durch Aktivieren der langfristigen Aufbewahrung wird der Replikation die Richtlinie _MirrorAndVault_ zugewiesen.
+
++
 Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
 
 +

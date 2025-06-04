@@ -15,12 +15,6 @@ Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, d
 
 
 
-== Für erweiterte ONTAP-Vorgänge ist eine Verbindung erforderlich
-
-Für einige Vorgänge wie die Replikation in der werkseitigen Benutzeroberfläche des Workloads ist ein Link erforderlich.
-
-
-
 == Einschränkungen bei HA-Paaren
 
 * Dieser Vorgang kann etwa 30 Minuten dauern.
@@ -41,7 +35,7 @@ Scale-up-Konfigurationen werden in allen Regionen bis zu 2 Gbit/s unterstützt. 
 
 === Horizontal skalierbare Implementierungen
 
-Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 3 und 6 Gbit/s für Scale-out-Implementierungen: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland) und Asia Pacific (Sydney).
+Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 6 GB/s für Scale-Out-Bereitstellungen: USA Ost (Nord-Virginia und Ohio), USA West (Nordkalifornien und Oregon), Europa (Frankfurt, Irland und Stockholm) sowie Asien-Pazifik (Singapur und Sydney).
 
 
 
@@ -50,6 +44,7 @@ Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis z
 * Die Volume Autogrow-Funktion wird derzeit für das iSCSI-Protokoll nicht unterstützt.
 * Wenn die automatische Kapazitätsverwaltungsfunktion ausgeführt wird, ist eine manuelle Kapazitätserhöhung nicht zulässig.
 * Das Deaktivieren der automatischen Kapazitätsverwaltungsfunktion ist nur mit denselben Berechtigungen möglich, die zur Aktivierung verwendet wurden.
+* Wenn die automatische Kapazitätsverwaltung aktiviert ist, ist eine Verknüpfung erforderlich, um sicherzustellen, dass die Volume-Inodes zusammen mit der Speicherkapazität zunehmen.
 
 
 
