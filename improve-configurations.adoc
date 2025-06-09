@@ -27,6 +27,7 @@ Was analysiert wird:: Die Workload-Farm analysiert den gut konzipierten Status d
 * FSx für ONTAP-Backups
 * Remote-Datenreplizierung
 * Storage-Effizienz
+* Automatisches Kapazitätsmanagement
 
 
 --
