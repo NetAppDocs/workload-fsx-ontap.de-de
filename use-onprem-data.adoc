@@ -79,7 +79,7 @@ Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für O
 .Bevor Sie beginnen
 * Sie müssen ein On-Premises-ONTAP-Cluster erkennen, um seine Volume-Daten zu replizieren.
 * Sie müssen über ein verfügbares FSX für ONTAP-Dateisystem verfügen, um das Ziel für die Replikation zu sein.
-* Sowohl dem On-Premises-ONTAP-Cluster als auch dem für die Replikationsbeziehung verwendeten FSX for ONTAP-Dateisystem muss ein Link zugeordnet sein. Wenn ein oder beide On-Premises- und FSX für ONTAP-Cluster keine vorhandenen Links haben, link:create-link.html["Erstellen Sie zunächst einen Link"]. Wählen Sie in den Dateisystemen unter *Kontoname* *Link zum link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]Mitarbeiter* aus. Sobald sich die Verbindung im On-Premises-ONTAP-Cluster und dem Dateisystem FSX for ONTAP zugeordnet hat, kehren Sie zu diesem Vorgang zurück.
+* Sowohl dem On-Premises-ONTAP-Cluster als auch dem für die Replikationsbeziehung verwendeten FSX for ONTAP-Dateisystem muss ein Link zugeordnet sein. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 
 .Schritte

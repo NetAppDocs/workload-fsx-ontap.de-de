@@ -34,7 +34,7 @@ Prüfen Sie den Ausgleich eines aktiven FlexGroup Volumes.
 .Bevor Sie beginnen
 * FlexGroup Volume Balance ist nur für FSX for ONTAP-Filesysteme mit einer Scale-out-Implementierung mit mindestens zwei HA-Paaren verfügbar.
 * Der Volumenstil muss ein FlexGroup-Volume sein.
-* Um den Saldo eines FlexGroup-Volumes zu überprüfen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Um den Kontostand eines FlexGroup-Volumens zu prüfen, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 
 .Schritte
@@ -60,7 +60,7 @@ NOTE: Ein werkseitiger Workload-Administrator kann die Ausbalancierung während 
 
 .Bevor Sie beginnen
 * <<Überprüfen Sie den Ausgleich eines FlexGroup Volumes,Überprüfen Sie den Ausgleich eines FlexGroup Volumes>> Vor der Ausbalancierung von Volumes.
-* Um ein Volume neu auszurichten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Um ein Volume neu auszugleichen, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 * Beachten Sie, dass bestehende Snapshots auf Volumes, die Sie ausgleichen, teilweise werden und nicht zur Wiederherstellung von Volume-Daten verwendet werden können. Neue Snapshots nach der Ausbalancierung können jedoch zur Wiederherstellung von Volume-Daten verwendet werden.
 
 

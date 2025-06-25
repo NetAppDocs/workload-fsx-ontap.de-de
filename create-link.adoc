@@ -40,6 +40,12 @@ Sie haben zwei Optionen zum Erstellen von Verknüpfungen - automatisch oder manu
 .Bevor Sie beginnen
 * Sie sollten überlegen, welche Link-Erstelloption Sie verwenden.
 * Sie benötigen mindestens ein FSX für ONTAP-Dateisystem in der Workload-Fabrik. Um FSx for ONTAP-Dateisysteme zu erkennen oder zu erstellen, benötigen Sie ein AWS-Konto mit Berechtigungen für FSx for ONTAP-Instanzen und link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["Fügen Sie Anmeldeinformationen in der Workload Factory hinzu"^] mit _Nur-Lese_- oder _Lese-/Schreib_-Berechtigungen für die Speicherverwaltung.
+* Die folgenden Ports müssen in der mit dem FSx for ONTAP-Dateisystem verknüpften Sicherheitsgruppe für die Link-Konnektivität geöffnet sein.
++
+** Für die Workload Factory-Konsole: Port 443 (HTTPS)
+** Für CloudShell: Port 22 (SSH)
+
+
 * Sie müssen über die folgenden Berechtigungen in Ihrem AWS-Konto verfügen, wenn Sie einen Link mit einem CloudFormation-Stack hinzufügen:
 +
 [%collapsible]

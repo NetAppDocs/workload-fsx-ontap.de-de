@@ -24,7 +24,7 @@ Die maximale Menge an SSD-Speicherkapazität für alle FSX für ONTAP-Dateisyste
 Beachten Sie Folgendes, bevor Sie beginnen:
 
 * Sie müssen über Anmeldeinformationen mit Lese-/Schreibberechtigungen in der Workload Factory verfügen, um diese Aufgabe abzuschließen.
-* Um sicherzustellen, dass Volume-Inodes zusammen mit der Speicherkapazität zunehmen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Um sicherzustellen, dass die Volume-Inodes zusammen mit der Speicherkapazität zunehmen, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 * Sie sollten diese Funktion während der Datenmigration nicht aktivieren, da AWS zwischen SSD-Kapazitätserhöhungen eine Abkühlphase von mindestens sechs Stunden vorschreibt. Diese Einschränkung kann Anpassungen verzögern. Planen Sie daher entsprechend.
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
-summary: Managen von Snapshot-Richtlinien für FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt. 
+summary: Verwalten Sie Snapshot-Richtlinien für FSx für ONTAP-Volumes in der Workload Factory. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt. 
 ---
 = Verwalten von Snapshot-Richtlinien
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Managen von Snapshot-Richtlinien für FSX für ONTAP-Volumes in der Blu
 
 
 [role="lead"]
-Managen von Snapshot-Richtlinien für FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt.
+Verwalten Sie Snapshot-Richtlinien für FSx für ONTAP-Volumes in der Workload Factory. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt.
 
 .Über diese Aufgabe
 Snapshot-Managementvorgänge wie das Zuweisen, Ändern und Löschen von Snapshot-Richtlinien für Volumes in einem Filesystem von FSX für ONTAP werden auf der Storage-VM-Ebene gemanagt. Snapshot-Richtlinien können für eine einzelne Storage-VM oder für alle Storage-VMs freigegeben werden.
 
-Einige Managementaufgaben erfordern Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]zum FSX für ONTAP-Dateisystem. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"].
+Für einige Verwaltungsaufgaben müssen Sie einen Link mit dem FSx for ONTAP-Dateisystem verknüpfen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere Informationen zu Workload Factory-Links"].
 
 Standardmäßig ist jedes Volume mit der Snapshot-Richtlinie des Dateisystems verknüpft `default` . Wir empfehlen, diese Richtlinie für die meisten Workloads zu verwenden.
 
@@ -27,7 +27,7 @@ Standardmäßig ist jedes Volume mit der Snapshot-Richtlinie des Dateisystems ve
 Sie können den Namen der Snapshot-Richtlinie, den Zeitplan und die Anzahl der beizubehaltenden Kopien ändern sowie unveränderliche Snapshots aktivieren oder deaktivieren. Die Richtlinienfreigabe für Storage-VMs kann nicht aktiviert oder deaktiviert werden. Diese Option ist nur während der Erstellung der Snapshot-Richtlinie verfügbar.
 
 .Bevor Sie beginnen
-Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie eine Verknüpfung zuordnen. Um einen Link zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link*. Kehren Sie dann zu diesem Vorgang zurück.
+Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -50,7 +50,7 @@ Die Snapshot-Richtlinie wird aktualisiert.
 Sperren Sie Snapshots, um zu verhindern, dass sie während des Aufbewahrungszeitraums gelöscht werden.
 
 .Bevor Sie beginnen
-Sie müssen link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]unveränderliche Snapshots aktivieren. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Sobald die Verknüpfung verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+Sie müssen einen Link zuordnen, um unveränderliche Snapshots zu aktivieren. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -79,7 +79,7 @@ Der Volume-Snapshot ist jetzt gesperrt.
 Sie können einem einzelnen Volume eine Snapshot-Richtlinie zuweisen, um geplante Snapshots für das Volume zu erstellen.
 
 .Bevor Sie beginnen
-Sie müssen link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]eine Snapshot-Richtlinie zuweisen. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+Sie müssen einen Link zuordnen, um eine Snapshot-Richtlinie zuzuweisen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -105,7 +105,7 @@ Die Snapshot-Richtlinie ist dem Volume zugewiesen.
 Entfernen Sie eine Snapshot-Richtlinie aus einem Volume, da Sie keine Snapshots des Volumes mehr möchten oder eine Snapshot-Richtlinie löschen möchten, die mehreren Volumes zugewiesen ist. <<Löschen einer Snapshot-Richtlinie,Löschen einer Snapshot-Richtlinie>>Wenn diesem Volume mehr als ein Volume zugewiesen ist, müssen Sie es manuell aus allen Volumes entfernen.
 
 .Bevor Sie beginnen
-Sie müssen link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]eine Snapshot-Richtlinie entfernen. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+Sie müssen einen Link zuordnen, um eine Snapshot-Richtlinie zu entfernen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

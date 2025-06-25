@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: Sie können die mit Ihrem Konto verknüpften Links anzeigen, einen Link zuordnen und einen Link in der BlueXP  Workload Factory entfernen. 
+summary: Sie können mit Ihrem Konto verknüpfte Links anzeigen, Passwörter für die Link-Authentifizierung aktualisieren und einen Link in der BlueXP-Workload-Factory entfernen. 
 ---
-= Verwalten von BlueXP -Workload-Werkseinstellungen
+= Verwalten von Workload-Factory-Links
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Verwalten Sie Links, die Sie mit Ihrem BlueXP  Workload Factory-Konto verknüpft haben. Sie können Links zu einem FSX für ONTAP-Dateisystem anzeigen, einen Link zu einem FSX für ONTAP-Dateisystem verknüpfen, einen Link bearbeiten und einen Link entfernen.
+Verwalten Sie Links, die Sie mit Ihrem Workload Factory-Konto verknüpft haben. Sie können Links anzeigen, die mit einem FSx for ONTAP-Dateisystem verknüpft sind, Kennwörter für die Link-Authentifizierung angeben und Links aus der Workload Factory-Konsole entfernen.
 
-link:links-overview.html["Weitere Informationen zu Links"] Oder link:create-link.html["Erstellen Sie eine Verknüpfung"].
+link:links-overview.html["Weitere Informationen zu Links"] Oder link:create-link.html["Erstellen und Zuordnen eines Links"].
 
 
 

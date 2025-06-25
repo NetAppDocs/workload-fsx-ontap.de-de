@@ -24,7 +24,7 @@ Replizierte Volumes im Zieldateisystem sind Datensicherungs-Volumes (DP) und fol
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie beginnen.
 
 * Sie müssen über zwei verfügbare Dateisysteme in Ihrem Speicherbestand verfügen, um eine Replikationsbeziehung zu erstellen.
-* Den beiden Dateisystemen, die Sie für die Replikationsbeziehung verwenden, muss eine Verknüpfung zugeordnet sein. Wenn die Dateisysteme keine Verknüpfungen haben, link:create-link.html["Erstellen Sie zunächst einen Link"]. Wählen Sie in den Dateisystemen unter *Kontoname* *Link zum link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]Mitarbeiter* aus. Sobald die Verknüpfung in beiden Dateisystemen verknüpft ist, kehren Sie zu diesem Vorgang zurück.
+* Den beiden Dateisystemen, die Sie für die Replikationsbeziehung verwenden, muss eine Verknüpfung zugeordnet sein. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 
 Führen Sie die folgenden Schritte aus, um ausgewählte Volumes zu replizieren oder alle Volumes in einem Dateisystem zu replizieren.
