@@ -212,7 +212,7 @@ Das geheime ARN muss die folgenden Schlüssel-gültigen Paare enthalten:
 
 +
 *** FilesystemID = FSX_Filesystem_id
-*** User = FSX_User
+*** Benutzername = FSx_user
 *** Passwort = user_password
 
 
@@ -248,7 +248,7 @@ Problem:: Das Geheimnis liegt nicht im richtigen Format vor.
 Das Secret sollte die folgenden Schlüssel-gültigen Paare enthalten:
 
 * FilesystemID = FSX_Filesystem_id
-* User = FSX_User
+* Benutzername = FSx_user
 * Passwort = user_password
 
 

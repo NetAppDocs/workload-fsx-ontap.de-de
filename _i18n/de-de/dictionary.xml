@@ -1694,7 +1694,6 @@
   <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS Secrets Manager: Geben Sie den geheimen ARN ein.</block>
   <block id="0481a079b29497027474b2f22074dd5a" category="paragraph">Das geheime ARN muss die folgenden Schlüssel-gültigen Paare enthalten:</block>
   <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">FilesystemID = FSX_Filesystem_id</block>
-  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">User = FSX_User</block>
   <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">Passwort = user_password</block>
   <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">Der Link ist mit dem Dateisystem FSX für ONTAP verknüpft. Sie können erweiterte ONTAP-Vorgänge ausführen.</block>
   <block id="db9a0ca8d6bb6376ddaad7f254b049aa" category="section-title">Fehlerbehebung bei Problemen mit der AWS Secrets Manager-Link-Authentifizierung</block>
@@ -1938,4 +1937,5 @@
   <block id="2ccb6b87f6c03ced811ff29d2a5f5ede" category="paragraph">Um eine Speicher-VM auf ein anderes FSx for ONTAP-Dateisystem zu replizieren, müssen Sie einen Link zuordnen. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.</block>
   <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">Um ein geklontes Volume aufzuteilen, müssen Sie einen Link zuordnen. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.</block>
   <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">Sowohl dem On-Premises-ONTAP-Cluster als auch dem für die Replikationsbeziehung verwendeten FSX for ONTAP-Dateisystem muss ein Link zugeordnet sein. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.</block>
+  <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">Benutzername = FSx_user</block>
 </blocks>
