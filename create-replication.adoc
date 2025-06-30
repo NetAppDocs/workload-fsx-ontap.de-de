@@ -20,6 +20,8 @@ Dieser Vorgang erzeugt eine Replikationsbeziehung für ein oder alle Quell-Volum
 
 Replizierte Volumes im Zieldateisystem sind Datensicherungs-Volumes (DP) und folgen dem Namensformat: `{OriginalVolumeName}_copy`.
 
+Beim Replizieren eines Quellvolumes mit unveränderlichen Dateien werden das Zielvolume und das Dateisystem gesperrt, bis die Aufbewahrungsfrist der unveränderlichen Dateien im Quellvolume endet. Die Funktion für unveränderliche Dateien ist verfügbar, wenn Sie link:create-volume.html["Erstellen Sie ein Volume"] für ein FSx für ONTAP-Dateisystem.
+
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie beginnen.
 
@@ -47,7 +49,7 @@ Wählen Sie in der Tabelle Volumes ein oder mehrere Volumes aus und wählen Sie 
 . Geben Sie auf der Seite Daten replizieren unter Replikationsziel Folgendes an:
 +
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
-.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
+.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
 .. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
 .. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus. Je nach ausgewähltem Anwendungsfall füllt die Workload Factory das Formular mit den empfohlenen Werten gemäß den Best Practices aus. Sie können die empfohlenen Werte akzeptieren oder Änderungen vornehmen, während Sie das Formular ausfüllen.
 +
@@ -102,16 +104,13 @@ NOTE: Zur langfristigen Aufbewahrung sind passende Quell- und Zieletiketten erfo
 
 +
 *** *Wählen Sie eine vorhandene Richtlinie*: Wählen Sie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
-*** *Erstellen Sie eine neue Richtlinie*: Geben Sie Folgendes an:
-+
-**** *Richtlinienname*: Geben Sie einen Richtliniennamen ein.
-**** Optional: Unveränderliche Snapshots aktivieren
-+
-***** Wählen Sie *Enable Immanable Snapshots* aus, um zu verhindern, dass in dieser Richtlinie ergriffene Snapshots während des Aufbewahrungszeitraums gelöscht werden.
-***** Legen Sie die *Aufbewahrungsfrist* in Stunden, Tagen, Monaten oder Jahren fest.
+*** *Neue Richtlinie erstellen*: Geben Sie einen *Richtliniennamen* ein.
 
 
-**** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
+.. *Unveränderliche Snapshots*: Optional. Wählen Sie *Enable Immanable Snapshots* aus, um zu verhindern, dass in dieser Richtlinie ergriffene Snapshots während des Aufbewahrungszeitraums gelöscht werden.
++
+*** Legen Sie die *Aufbewahrungsfrist* in Stunden, Tagen, Monaten oder Jahren fest.
+*** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
 
 
 

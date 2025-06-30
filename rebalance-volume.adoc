@@ -11,58 +11,115 @@ summary: Überprüfen und balancieren Sie die Kapazität eines Volumes aus, um U
 
 
 [role="lead"]
-Prüfen Sie die Balance der FlexGroup Volume-Kapazität und gleichen Sie die Volume-Kapazität aus, um Dateien gleichmäßig auf alle Komponenten zu verteilen, damit alle Nodes am Workload eines einzelnen Flex Group Volumes teilnehmen.
+Überprüfen Sie die Balance der FlexVol- oder FlexGroup-Volume-Kapazität und gleichen Sie die Volume-Kapazität neu aus, um die Dateien gleichmäßig auf alle FlexVol-Volumes in einem Knoten oder auf alle Bestandteile zu verteilen, sodass alle Knoten an der Arbeitslast eines einzelnen FlexGroup-Volumes beteiligt sind.
 
 .Über diese Aufgabe
-Die FlexGroup-Volume-Kapazität ist in einem Scale-out-FSX für ONTAP-Filesystem mit zwei oder mehr HA-Paaren über eine Reihe von Komponenten verteilt. Jede Komponente ist ein Container, der die maximale einzelne Dateigröße vorgibt. FSX for ONTAP verteilt Dateien gleichmäßig über alle Komponenten, sodass alle Nodes am Workload eines einzelnen FlexGroup Volumes teilnehmen.
+Die Neuausrichtung der Volume-Kapazität wird für FlexVol-Volumes und FlexGroup-Volumes unterstützt. Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei. Volume-Transfervorgänge verbrauchen Filesystem-Ressourcen.
+
+Jeder Volumetyp und jede Neuausgleichsoperation unterscheidet sich wie folgt.
+
+FlexVol Volumes:: FlexVol-Volumes sind logische Container, die Flexibilität bei der Datenverwaltung bieten und Erweiterung, Verkleinerung, Verschiebung und effizientes Kopieren ermöglichen. Sie können in NAS- und SAN-Umgebungen eingesetzt werden.
++
+--
+Ein FlexVol-Volume kann im Verhältnis zu anderen FlexVol-Volumes innerhalb eines Knotens in einem FSx for ONTAP-Dateisystem ausgeglichen werden. Wenn das Dateisystem nur über ein einziges FlexVol-Volume verfügt, ist ein Neuausgleich nicht möglich. Wenn das Dateisystem mehr als ein FlexVol-Volume pro Knoten hat und ein einzelnes FlexVol-Volume ausgewählt ist, wird das FlexVol-Volume im Kontext aller FlexVols ausgeglichen, aber nur das ausgewählte Volume darf verschoben werden.
+
+--
+FlexGroup Volumes:: FlexGroup-Volumes hingegen sind skalierbare NAS-Container, die auf hohe Leistung und automatische Lastverteilung ausgelegt sind. Sie bestehen aus mehreren Mitgliedsvolumes (Bestandteilen), die den Datenverkehr transparent teilen. FlexGroup-Volumes bieten enorme Kapazität und übertreffen die FlexVol-Grenzen mit bis zu 60 PB Kapazität und 400 Milliarden Dateien. Sie vereinfachen die Verwaltung durch die Bereitstellung eines einzigen Namespace-Containers.
++
+--
+Die Kapazität wird auf eine Reihe von Komponenten in einem Scale-Out-FSx für ONTAP-Dateisystem mit zwei oder mehr Hochverfügbarkeitspaaren (HA) verteilt. Jede Komponente ist ein Container, der die maximale einzelne Dateigröße vorgibt. FSX for ONTAP verteilt Dateien gleichmäßig über alle Komponenten, sodass alle Nodes am Workload eines einzelnen FlexGroup Volumes teilnehmen.
 
 Wenn die Komponenten nicht gleichmäßig über alle Nodes verteilt werden, sinkt die Volume-Performance von FlexGroup.
 
 Die Überprüfung des Gleichgewichts der FlexGroup Volume-Kapazität schließt die Bewertung des aktuellen Layouts der Komponenten ein. Wenn Sie die Kapazität des Volumes neu verteilen, entwickelt BlueXP  Workload Factory ein neues Komponenten-Layout mit einer geraden Anzahl an Komponenten, um die Daten gleichmäßig über alle HA-Paare zu verteilen. Der Service führt den Ausgleichsplan durch, der wiederum die Lese- und Schreibvorgänge verbessert.
 
-Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei. Volume-Transfervorgänge verbrauchen Filesystem-Ressourcen.
-
-
-NOTE: Rebalancing wird nur für FlexGroup Volumes unterstützt, nicht jedoch für iSCSI- oder NVMe FlexGroup-Volumes.
+--
 
 
 
-== Überprüfen Sie den Ausgleich eines FlexGroup Volumes
+NOTE: Für SAN-Volumes wie iSCSI und NVMe wird die Neuverteilung nicht unterstützt.
 
-Prüfen Sie den Ausgleich eines aktiven FlexGroup Volumes.
+
+
+== Überprüfen Sie den Saldo Ihrer Volumina
+
+Überprüfen Sie den Kontostand der FlexVol- oder FlexGroup-Volumes in einem FSx für ONTAP-Dateisystem.
 
 .Bevor Sie beginnen
 * FlexGroup Volume Balance ist nur für FSX for ONTAP-Filesysteme mit einer Scale-out-Implementierung mit mindestens zwei HA-Paaren verfügbar.
-* Der Volumenstil muss ein FlexGroup-Volume sein.
-* Um den Kontostand eines FlexGroup-Volumens zu prüfen, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Um den Saldo eines Volumens zu prüfen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"] . Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
+. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Drei-Punkte-Menü des Dateisystems aus, das die neu auszugleichenden Volumes enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte „Volumes“ oben in der Tabelle die Option „Volumenbilanz prüfen“ aus.
+. Überprüfen Sie im Fenster „Volumenbilanz“ den Bilanzstatus von:
++
+** FlexGroup Volumes
+** FlexVol Volumes
++
+Wenn ein Volumen unausgeglichen ist, berücksichtigen Sie <<Rebalance a volume,Neuausrichtung>> .
+
+
+
+
+
+
+
+== Volumenkapazität neu ausbalancieren
+
+Gleichen Sie ein oder mehrere Volumes aus, die keinen Lastausgleich vornehmen.
+
+
+NOTE: Ein Workload Factory-Administrator kann <<Stoppen eines Volume-Neuausgleichsvorgangs,Stoppen Sie die Neugewichtung>> während der Operation.
+
+.Bevor Sie beginnen
+* <<Überprüfen Sie den Saldo Ihrer Volumina,Überprüfen Sie den Saldo eines Volumens>> Vor der Ausbalancierung von Volumes.
+* Um ein Volume neu auszurichten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Beachten Sie, dass bestehende Snapshots auf Volumes, die Sie ausgleichen, teilweise werden und nicht zur Wiederherstellung von Volume-Daten verwendet werden können. Neue Snapshots nach der Ausbalancierung können jedoch zur Wiederherstellung von Volume-Daten verwendet werden.
+* FlexVol-Volumes werden am besten komplett neu ausbalanciert, um alle Volume-Ressourcen gleichmäßig zu verteilen. Abgewählte Volumes nehmen nicht aktiv am Ausgleichsprozess teil.
+
+
+[role="tabbed-block"]
+====
+.FlexVol Volume
+--
+Ein FlexVol-Volume kann im Verhältnis zu anderen FlexVol-Volumes innerhalb eines Knotens in einem FSx for ONTAP-Dateisystem ausgeglichen werden. Wenn das Dateisystem mehr als ein FlexVol-Volume pro Knoten hat und ein einzelnes FlexVol-Volume ausgewählt ist, wird das FlexVol-Volume im Kontext aller FlexVols ausgeglichen, aber nur das ausgewählte Volume darf verschoben werden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
 . Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume zum Ausgleich enthält, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte Volumes oben in der Tabelle *FlexGroup-Balance prüfen* aus.
-. Überprüfen Sie im FlexGroup Balance-Fenster den Ausgleichstatus aller FlexGroup Volumes im FSX für ONTAP File-System.
+. Wählen Sie auf der Registerkarte „Volumes“ oben in der Tabelle die Option „Volumenbilanz prüfen“ aus.
+. Wählen Sie im Fenster „Volumes-Balance“ optional *Datenverteilung* in der FlexVol-Balanceübersicht aus, um die genutzte Kapazität pro Aggregat anzuzeigen.
+. Wählen Sie *Neu ausbalancieren*, um ein oder mehrere unausgeglichene Volumes neu auszubalancieren.
+. Befolgen Sie die Schritte im Neuausgleichsassistenten.
 +
-Wenn ein FlexGroup-Volume unausgeglichen ist, beachten Sie <<Neuausrichtung eines FlexGroup Volumes,Neuausrichtung>>.
+.. *Maximale Übertragungsrate*: Optional. Standardmäßig deaktiviert. Aktivieren Sie die Drosselung, um die Bandbreite einer Volume-Verschiebung auf dem Dateisystem zu begrenzen und den Datenverkehr der ausgehenden Volume-Replikation zu verlangsamen.
++
+Geben Sie den Drosselungswert in MB/s. ein
+
++
+Wählen Sie *Weiter*.
+
+.. Überprüfen Sie die aktuellen und vorgeschlagenen Layouts aller FlexVol-Volumes und wählen Sie dann *Weiter*.
+.. Lesen Sie sorgfältig, was passieren wird, und lesen Sie die Anmerkung, bevor Sie mit dem Neuausgleichsvorgang beginnen.
 
 
+. Wählen Sie * Neuausgleich*.
 
 
+.Ergebnis
+Das FlexVol-Volume wird neu ausbalanciert. Wenn der Vorgang abgeschlossen ist, wird das Dateisystem auf den ursprünglichen Wert zurückgedrosselt.
 
-== Neuausrichtung eines FlexGroup Volumes
-
-Gleichen Sie ein oder mehrere Volumes aus, die keinen Lastausgleich vornehmen. Daten werden zum Ausgleich des FlexGroup Volumes auf Mitglied-Volumes verteilt. Abhängig vom bevorzugten Datenverteilungs-Layout kann der Ausgleichsoperation FlexGroup Member Volumes hinzufügen und die Größe bereitgestellter Volumes erhöhen.
-
-
-NOTE: Ein werkseitiger Workload-Administrator kann die Ausbalancierung während des Vorgangs stoppen.
-
-.Bevor Sie beginnen
-* <<Überprüfen Sie den Ausgleich eines FlexGroup Volumes,Überprüfen Sie den Ausgleich eines FlexGroup Volumes>> Vor der Ausbalancierung von Volumes.
-* Um ein Volume neu auszugleichen, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
-* Beachten Sie, dass bestehende Snapshots auf Volumes, die Sie ausgleichen, teilweise werden und nicht zur Wiederherstellung von Volume-Daten verwendet werden können. Neue Snapshots nach der Ausbalancierung können jedoch zur Wiederherstellung von Volume-Daten verwendet werden.
-
+--
+.FlexGroup Volume
+--
+Daten werden zum Ausgleich des FlexGroup Volumes auf Mitglied-Volumes verteilt. Basierend auf dem von Ihnen gewählten Layout kann der Neuausgleichsvorgang FlexGroup-Mitgliedsvolumes hinzufügen und die Größe der bereitgestellten Volumes erhöhen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -93,4 +150,22 @@ Geben Sie den Drosselungswert in MB/s. ein
 
 
 .Ergebnis
-Je nachdem, wie viele FlexGroup Member Volumes zu der FlexGroup hinzugefügt werden, erfolgt die Verschiebung eines einzelnen FlexGroup Volume-Mitglieds gleichzeitig. Wenn der Vorgang abgeschlossen ist, wird das Dateisystem auf den ursprünglichen Wert zurückgedrosselt.
+Die Volumes der FlexGroup-Mitglieder werden beim Neuausgleich einzeln verschoben. Wenn der Vorgang abgeschlossen ist, wird das Dateisystem auf den ursprünglichen Wert zurückgedrosselt.
+
+--
+====
+
+
+== Stoppen eines Volume-Neuausgleichsvorgangs
+
+Sie können einen Neuausgleichsvorgang jederzeit abbrechen. Er verursacht keine Unterbrechungen. Durch das Abbrechen des Vorgangs werden aktive Volume-Verschiebungen abgebrochen.
+
+Sie können später einen weiteren Neuausgleichsvorgang starten.
+
+.Schritte
+. Nachdem Sie mit dem Neuausgleich begonnen haben, wählen Sie auf der Seite „Volumenausgleich“ die Option „Neuausgleich beenden“ aus.
+. Wählen Sie im Dialogfeld „Neuausgleich beenden“ die Option „Stoppen“ aus.
+
+
+.Ergebnis
+Der Vorgang zum Neuausgleich des Volumes wird gestoppt und die aktiven Volume-Verschiebungen werden abgebrochen.

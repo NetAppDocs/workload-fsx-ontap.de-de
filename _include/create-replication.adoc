@@ -1,0 +1,68 @@
+= 
+:allow-uri-read: 
+
+
+. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
+. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
+. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus. Je nach ausgewähltem Anwendungsfall füllt die Workload Factory das Formular mit den empfohlenen Werten gemäß den Best Practices aus. Sie können die empfohlenen Werte akzeptieren oder Änderungen vornehmen, während Sie das Formular ausfüllen.
++
+** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
+** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
+** Disaster Recovery in kalten oder archivierten Daten:
++
+*** Cold Disaster Recovery: Verwendet längere Recovery-Zeitvorgaben (RTO) und Recovery-Zeitpunkte (RPO) zur Senkung der Kosten
+*** Archiv: Replizierung von Daten für langfristige Speicherung und Compliance
+
+
+** Sonstiges
++
+Darüber hinaus bestimmt die Auswahl des Anwendungsfalls die Replikationsrichtlinie oder die SnapMirror Policy (ONTAP). Die Begriffe, die zur Beschreibung von Replikationsrichtlinien verwendet link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9-Dokumentation"^]werden, stammen aus .
+
++
+*** Für die Migration und andere wird die Replikationsrichtlinie _MirrorAllSnapshots_ genannt. _MirrorAllSnapshots_ ist eine asynchrone Richtlinie zur Spiegelung aller Snapshots und des aktuellen aktiven Dateisystems.
+*** Für Disaster Recovery mit heißen, kalten oder archivierten Daten wird die Replikationsrichtlinie _MirrorAndVault_ genannt. _MirrorAndVault_ ist eine asynchrone und Vault-Richtlinie zur Spiegelung des neuesten aktiven Dateisystems und der täglichen und wöchentlichen Snapshots.
++
+Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die standardmäßige Replikationsrichtlinie für alle Anwendungsfälle _MirrorAndVault_.
+
+
+
+
+
+. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
++
+_Balanced (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP. Beachten Sie, dass Workload Factory für Tiering-Richtlinien auf Basis von Anwendungsfällen in der Workload Factory verwendet und Tiering-Richtliniennamen für FSX für ONTAP in Klammern enthält.
+
++
+Wenn Sie den Anwendungsfall für die Migration ausgewählt haben, wählt die Workload Factory automatisch aus, die Tiering-Richtlinie des Quell-Volume auf das Ziel-Volume zu kopieren. Sie können das Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die auf das für die Replikation ausgewählte Volume zutrifft.
+
+. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
++
+Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden. . Geben Sie unter Replikationseinstellungen Folgendes an:
+
+. *Replikationsintervall*: Wählen Sie die Häufigkeit, mit der Snapshots vom Quell-Volume auf das Ziel-Volume übertragen werden.
+. *Langfristige Aufbewahrung*: Optional können Snapshots für die langfristige Aufbewahrung aktiviert werden. Dank der langfristigen Aufbewahrung können Business-Services auch bei einem vollständigen Standortausfall weiterlaufen und Applikationen mithilfe einer sekundären Kopie einen transparenten Failover unterstützen.
++
+Replikationen ohne langfristige Aufbewahrung verwenden die Richtlinie _MirrorAllSnapshots_. Durch Aktivieren der langfristigen Aufbewahrung wird der Replikation die Richtlinie _MirrorAndVault_ zugewiesen.
+
++
+Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
+
++
+
+NOTE: Zur langfristigen Aufbewahrung sind passende Quell- und Zieletiketten erforderlich. Auf Wunsch kann Workload Factory fehlende Etiketten für Sie erstellen.
+
++
+** *Wählen Sie eine vorhandene Richtlinie*: Wählen Sie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+** *Neue Richtlinie erstellen*: Geben Sie einen *Richtliniennamen* ein.
+
+
+. *Unveränderliche Snapshots*: Optional. Wählen Sie *Enable Immanable Snapshots* aus, um zu verhindern, dass in dieser Richtlinie ergriffene Snapshots während des Aufbewahrungszeitraums gelöscht werden.
++
+** Legen Sie die *Aufbewahrungsfrist* in Stunden, Tagen, Monaten oder Jahren fest.
+** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
+
+
+
+
+. Wählen Sie *Erstellen*.
+

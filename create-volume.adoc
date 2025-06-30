@@ -26,7 +26,7 @@ Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 .Bevor Sie beginnen
 Überprüfen Sie die folgenden Voraussetzungen, bevor Sie ein Volume erstellen:
 
-* Sie müssen ein FSX für ONTAP-Filesystem in der Workload-Fabrik haben.
+* Sie müssen über ein FSx für ONTAP-Dateisystem in der Workload Factory-Konsole verfügen.
 * Sie benötigen eine Storage-VM.
 * Für den Zugriff auf das Protokoll müssen Sie Folgendes ausführen:
 +
@@ -58,7 +58,7 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 Standardmäßig ist ein FlexVol-Volume-Stil ausgewählt.
 
 +
-Die Volume-Größe von FlexGroup hängt von der Anzahl der Komponenten ab. Pro Komponente sind 100 gib erforderlich.
+Die Größe des FlexGroup-Volumes hängt von der Anzahl der Bestandteile ab und erfordert 100 GiB pro Bestandteil.
 
 .. *Volumengröße*: Geben Sie die Volumengröße und Einheit ein.
 +
@@ -66,7 +66,7 @@ Aktivieren Sie optional Volume Autogrow. Diese Option ist verfügbar, wenn Sie *
 
 .. *Volume-Autogrow*: Aktivieren Sie optional die Funktion „Volume-Autogrow“, um die Volume-Kapazität automatisch zu erweitern, bis das Volume die maximale Größe erreicht. Diese Funktion trägt der steigenden Datennutzung Rechnung und gewährleistet einen unterbrechungsfreien Betrieb.
 +
-Geben Sie die maximale Größe und Einheit für das Volumewachstum an. Die maximale Wachstumsgröße kann nicht kleiner als die aktuelle Volumegröße sein.
+Geben Sie die maximale Größe und Einheit für das Volumewachstum an. Sie können die maximale Wachstumsgröße nicht kleiner als die aktuelle Volumegröße einstellen
 
 .. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
 
@@ -125,9 +125,35 @@ Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzuri
 +
 .. *Speichereffizienz*: Standardmäßig aktiviert. Wählen Sie diese Option, um die Funktion zu deaktivieren.
 +
-Die Storage-Effizienz wird durch Nutzung der Deduplizierungs- und Komprimierungsfunktionen von ONTAP erreicht. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können.
+ONTAP erreicht Speichereffizienz durch Deduplizierungs- und Komprimierungsfunktionen. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können.
 
-.. *Unveränderliche Dateien*: Dieses Feature, auch SnapLock genannt, ist standardmäßig deaktiviert. Durch die Aktivierung unveränderlicher Dateien wird verhindert, dass Daten für einen bestimmten Zeitraum gelöscht oder überschrieben werden. Die Aktivierung dieser Funktion ist nur während der Volume-Erstellung möglich. Nachdem die Funktion aktiviert wurde, kann sie nicht deaktiviert werden. Dies ist eine Premium-Funktion für FSX für ONTAP, die eine zusätzliche Gebühr in Rechnung stellt. Weitere Informationen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["So funktioniert SnapLock"^]in der Dokumentation zu Amazon FSX for NetApp ONTAP.
+.. *Snapshot Policy*: Wählen Sie die Snapshot Policy aus, um die Häufigkeit und Aufbewahrung von Snapshots festzulegen.
++
+Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Für benutzerdefinierte Snapshot-Richtlinien müssen Sie link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"] .
+
++
+`default`:: Diese Richtlinie erstellt automatisch Snapshots nach dem folgenden Zeitplan. Die ältesten Snapshot-Kopien werden gelöscht, um Platz für neuere Kopien zu schaffen:
++
+--
+*** Maximal sechs stündliche Snapshots wurden fünf Minuten nach der Stunde erstellt.
+*** Maximal zwei Snapshots täglich von Montag bis Samstag um 10 Minuten nach Mitternacht.
+*** Maximal zwei wöchentliche Schnappschüsse, die jeden Sonntag um 15 Minuten nach Mitternacht erstellt wurden.
++
+
+NOTE: Snapshot-Zeiten basieren auf der Zeitzone des Dateisystems, die standardmäßig auf Coordinated Universal Time (UTC) eingestellt ist. Informationen zum Ändern der Zeitzone finden Sie in link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Anzeigen und Einstellen der Systemzeitzone"^] der NetApp-Supportdokumentation.
+
+
+
+--
+`default-1weekly`:: Diese Richtlinie funktioniert auf die gleiche Weise wie die `default` Richtlinie, außer dass nur ein Snapshot aus dem wöchentlichen Zeitplan aufbewahrt wird.
+`none`:: Diese Richtlinie erstellt keine Snapshots. Sie können diese Richtlinie Volumes zuweisen, um die automatische Erstellung von Snapshots zu verhindern.
+
+
+.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Volume gespeicherten Daten.
++
+_Balanced (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP. Beachten Sie, dass Workload Factory für Tiering-Richtlinien auf Basis von Anwendungsfällen in der Workload Factory verwendet und Tiering-Richtliniennamen für FSX für ONTAP in Klammern enthält.
+
+.. *Unveränderliche Dateien*: Dieses Feature, auch SnapLock genannt, ist standardmäßig deaktiviert. Durch die Aktivierung unveränderlicher Dateien wird das Löschen oder Überschreiben von Daten für einen festgelegten Zeitraum verhindert. Die Aktivierung dieser Funktion ist nur während der Volume-Erstellung möglich. Nachdem die Funktion aktiviert wurde, kann sie nicht deaktiviert werden. Dies ist eine Premium-Funktion für FSX für ONTAP, die eine zusätzliche Gebühr in Rechnung stellt. Weitere Informationen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["So funktioniert SnapLock"^]in der Dokumentation zu Amazon FSX for NetApp ONTAP.
 +
 Durch die Aktivierung der Funktion „unveränderliche Dateien“ werden Dateien in diesem Volume dauerhaft in einen unveränderlichen WORM-Zustand (Write-Once-Read-Many) versetzt.
 
@@ -147,7 +173,7 @@ HINWEIS:: Selbst wenn die Aufbewahrungsfrist abgelaufen ist, können Sie keine W
 
 
 --
-Automatisches Commit:: Sie haben die Möglichkeit, die Autocommit-Funktion zu aktivieren. Die Autocommit-Funktion beüberträgt eine Datei in den WORM-Zustand auf einem SnapLock Volume, wenn sich die Datei für die Dauer des Autocommit nicht geändert hat. Die Funktion Autocommit ist standardmäßig deaktiviert. Die Dateien, die automatisch übertragen werden sollen, müssen auf einem SnapLock-Volume gespeichert sein.
+Automatisches Commit:: Sie haben die Möglichkeit, die Autocommit-Funktion zu aktivieren. Die Autocommit-Funktion beüberträgt eine Datei in den WORM-Zustand auf einem SnapLock Volume, wenn sich die Datei für die Dauer des Autocommit nicht geändert hat. Die Funktion Autocommit ist standardmäßig deaktiviert. Sie müssen sicherstellen, dass sich die Dateien, die Sie automatisch festschreiben möchten, auf einem SnapLock-Volume befinden.
 Volume Append-Modus:: Vorhandene Daten in einer WORM-geschützten Datei können nicht geändert werden. Unveränderliche Dateien ermöglichen es Ihnen jedoch, mithilfe von WORM-anhängen-baren Dateien den Schutz bestehender Daten zu erhalten. So können Sie beispielsweise Protokolldateien generieren oder Audio- oder Videostreaming-Daten erhalten, während Sie Daten inkrementell auf sie schreiben. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Erfahren Sie mehr über den Volume-Append-Modus"^] In der Dokumentation zu Amazon FSX for NetApp ONTAP.
 +
 --
@@ -179,31 +205,15 @@ Volume Append-Modus:: Vorhandene Daten in einer WORM-geschützten Datei können 
 --
 
 
-.. *Snapshot Policy*: Wählen Sie die Snapshot Policy aus, um die Häufigkeit und Aufbewahrung von Snapshots festzulegen.
+.. *ARP/AI*: NetApp Autonomous Ransomware Protection mit AI (ARP/AI) ist standardmäßig aktiviert, wenn ein Link mit dem Dateisystem verknüpft ist. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["Erfahren Sie mehr über ARP/AI"]. Akzeptieren Sie die Aussage, um fortzufahren.
 +
-Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Für benutzerdefinierte Snapshot-Richtlinien müssen Sie link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"] .
+Wenn die Funktion nicht verfügbar ist, kann dies einen der folgenden Gründe haben:
 
 +
-`default`:: Diese Richtlinie erstellt automatisch Snapshots nach dem folgenden Zeitplan. Die ältesten Snapshot-Kopien werden gelöscht, um Platz für neuere Kopien zu schaffen:
-+
---
-*** Maximal sechs stündliche Snapshots wurden fünf Minuten nach der Stunde erstellt.
-*** Maximal zwei Snapshots täglich von Montag bis Samstag um 10 Minuten nach Mitternacht.
-*** Maximal zwei wöchentliche Schnappschüsse, die jeden Sonntag um 15 Minuten nach Mitternacht erstellt wurden.
-+
+*** Dem Dateisystem ist kein Link zugeordnet. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+*** Volumes mit unveränderlichen Dateien und Volumes mit iSCSI- und NVMe-Protokollen werden für ARP/AI nicht unterstützt.
+*** Das Dateisystem verfügt bereits über eine ARP/AI-Richtlinie.
 
-NOTE: Snapshot-Zeiten basieren auf der Zeitzone des Dateisystems, die standardmäßig auf Coordinated Universal Time (UTC) eingestellt ist. Informationen zum Ändern der Zeitzone finden Sie in link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Anzeigen und Einstellen der Systemzeitzone"^] der NetApp-Supportdokumentation.
-
-
-
---
-`default-1weekly`:: Diese Richtlinie funktioniert auf die gleiche Weise wie die `default` Richtlinie, außer dass nur ein Snapshot aus dem wöchentlichen Zeitplan aufbewahrt wird.
-`none`:: Diese Richtlinie erstellt keine Snapshots. Sie können diese Richtlinie Volumes zuweisen, um die automatische Erstellung von Snapshots zu verhindern.
-
-
-.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Volume gespeicherten Daten.
-+
-_Balanced (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP. Beachten Sie, dass Workload Factory für Tiering-Richtlinien auf Basis von Anwendungsfällen in der Workload Factory verwendet und Tiering-Richtliniennamen für FSX für ONTAP in Klammern enthält.
 
 
 
@@ -218,4 +228,4 @@ _Balanced (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volum
 
 
 .Ergebnis
-Volume-Erstellung wird gestartet. Nach der Erstellung wird das neue Volume auf der Registerkarte Volumes angezeigt.
+Die Workload Factory initiiert die Volume-Erstellung. Nach der Erstellung wird das neue Volume auf der Registerkarte „Volumes“ angezeigt.
