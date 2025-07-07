@@ -112,7 +112,7 @@ Sie können entweder Geheimnisse im Einklang mit den Standardberechtigungen erst
 
 .. *Linkberechtigungen*: Wählen Sie eine der folgenden Optionen für Linkberechtigungen:
 +
-*** *Automatisch*: Wählen Sie diese Option, damit der AWS CloudFormation- oder Terraform-Code automatisch die Lambda-Berechtigungsrichtlinie und Ausführungsrolle erstellt.
+*** *Automatisch*: Wählen Sie diese Option, damit der AWS CloudFormation-Code automatisch die Lambda-Berechtigungsrichtlinie und Ausführungsrolle erstellt.
 *** *Vom Benutzer bereitgestellt*: Wählen Sie diese Option, um dem Lambda-Link eine bestimmte Lambda-Ausführungsrolle und die zugehörigen Richtlinien zuzuweisen. Für die Lambda-Berechtigungsrichtlinie sind die folgenden Berechtigungen erforderlich. Die  `secretsmanager:GetSecretValue` Die Berechtigung ist nur erforderlich, wenn Sie AWS Secrets Manager aktiviert haben.
 +
 [source, json]

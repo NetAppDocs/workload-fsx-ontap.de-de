@@ -11,7 +11,7 @@ summary: Mit BlueXP  Workload Factory können Sie ein FSX für ONTAP Dateisyste
 
 
 [role="lead"]
-Mit BlueXP  Workload Factory können Sie ein FSX für ONTAP Dateisystem erstellen, um Volumes und zusätzliche Datenservices hinzuzufügen und zu verwalten.
+Mit der BlueXP Workload Factory können Sie FSx für ONTAP-Dateisysteme der ersten und zweiten Generation erstellen, um Volumes und zusätzliche Datendienste hinzuzufügen und zu verwalten.
 
 .Über diese Aufgabe
 Bei der Erstellung des Filesystems werden eine Storage-VM und eine Sicherheitsgruppe erstellt.
@@ -38,7 +38,7 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 --
 Die schnelle Erstellung ermöglicht Ihnen die Verwendung einer empfohlenen Best-Practice-Konfiguration. Sie können die meisten Einstellungen ändern, nachdem Sie ein FSX für ONTAP-Dateisystem erstellt haben.
 
-FSx for ONTAP-Dateisysteme der zweiten Generation sind der Standardbereitstellungstyp. Der Bereitstellungstyp wechselt zur ersten Generation, wenn die Region FSx for ONTAP-Dateisysteme der zweiten Generation nicht unterstützt.
+FSx für ONTAP-Dateisysteme der zweiten Generation sind der Standardbereitstellungstyp für die schnelle Erstellung, es sei denn, die ausgewählte Region unterstützt keine FSx für ONTAP-Dateisysteme der zweiten Generation.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -124,22 +124,24 @@ Sie können auch eine gespeicherte Konfiguration laden.
 .. *AWS-Zugangsdaten*: Wählen Sie, um AWS-Anmeldeinformationen in der Workload Factory hinzuzufügen oder ohne Anmeldedaten fortzufahren.
 .. *Dateisystemname*: Geben Sie einen Namen für das Dateisystem ein.
 .. *Region & VPC*: Wählen Sie die Region und VPC für das Dateisystem.
-.. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp und eine Dateisystemgeneration aus.
+.. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp und eine Dateisystemgeneration aus. Die Verfügbarkeit eines Dateisystems der zweiten Generation hängt von der ausgewählten Region ab. Wenn die ausgewählte Region FSx for ONTAP-Dateisysteme der zweiten Generation nicht unterstützt, wechselt der Bereitstellungstyp zur ersten Generation.
 +
 *** Implementierung von Single Availability Zone (Single-AZ): Bietet Verfügbarkeit durch Überwachung auf Hardwareausfälle und automatischer Austausch von Infrastrukturkomponenten bei einem Ausfall. Erzielt hohe Beständigkeit durch automatische Replizierung Ihrer Daten in einer Verfügbarkeitszone zum Schutz vor Komponentenausfall.
 +
-*Dateisystemgeneration*: Wählen Sie eine der folgenden Optionen: ** *Zweite Generation*: Diese Konfiguration wird für Hochleistungs-Workloads empfohlen oder wenn die Workloads zunächst klein sind und schrittweise auf 72 GB/s Durchsatz und 2,4 Millionen IOPS skaliert werden. ** *Erste Generation*: Diese Konfiguration ist ideal für Workloads, die bis zu 4 GB/s oder 160.000 IOPS erfordern. Dateisysteme der ersten Generation können die Kapazität nur erhöhen.
+*Dateisystemgenerierung*: Wählen Sie eine der folgenden Optionen:
 
 +
-+ Die Verfügbarkeit des Dateisystems der zweiten Generation hängt von der ausgewählten Region ab. Wenn die ausgewählte Region FSx für ONTAP-Dateisysteme der zweiten Generation nicht unterstützt, wechselt der Bereitstellungstyp zur ersten Generation.
+**** *Zweite Generation*: Diese Konfiguration wird für Hochleistungs-Workloads empfohlen oder wenn die Workloads klein beginnen und schrittweise auf 72 GB/s Durchsatz und 2,4 Millionen IOPS skaliert werden.
+**** *Erste Generation*: Diese Konfiguration eignet sich ideal für Workloads, die bis zu 4 GB/s oder 160.000 IOPS erfordern. Dateisysteme der ersten Generation können die Kapazität lediglich erhöhen.
+
 
 *** Implementierung mit mehreren Verfügbarkeitszonen (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Verfügbarkeitszone nicht verfügbar ist. Ein Filesystem mit mehreren Verfügbarkeitszonen wurde für geschäftskritische Produktions-Workloads konzipiert, die Hochverfügbarkeit für gemeinsam genutzte ONTAP-Dateidaten erfordern und Storage mit integrierter Replizierung über Verfügbarkeitszonen hinweg benötigen.
 +
+*Dateisystemgenerierung*: Wählen Sie eine der folgenden Optionen:
+
++
 **** *Zweite Generation*: Diese Konfiguration mit einem einzelnen HA-Paar wird für Workloads empfohlen, die einen Durchsatz von bis zu 6 GB/s oder 200.000 IOPS erfordern. In einem Multi-AZ- und Dateisystem der zweiten Generation kann die Kapazität je nach Workload-Anforderungen erhöht oder verringert werden.
 **** *Erste Generation*: Diese Konfiguration eignet sich ideal für Workloads, die bis zu 4 GB/s oder 160.000 IOPS erfordern. Dateisysteme der ersten Generation können die Kapazität lediglich erhöhen.
-+
-Die Verfügbarkeit des Dateisystems der zweiten Generation hängt von der ausgewählten Region ab. Wenn die ausgewählte Region FSx for ONTAP-Dateisysteme der zweiten Generation nicht unterstützt, wechselt der Bereitstellungstyp zur ersten Generation.
-
 
 
 

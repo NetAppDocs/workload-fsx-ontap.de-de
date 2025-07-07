@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: rebalance-volume.html 
 keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: Überprüfen und balancieren Sie die Kapazität eines Volumes aus, um Ungleichgewichte zu vermeiden, die sich im Laufe der Zeit entwickeln. 
+summary: Überprüfen und gleichen Sie die Volumenkapazität neu aus, um mit der Zeit entstehende Ungleichgewichte zu vermeiden. 
 ---
-= Überprüfung und Neuausrichtung der Kapazität eines Volumes
+= Überprüfen und Neuausgleichen der Volume-Kapazität
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
