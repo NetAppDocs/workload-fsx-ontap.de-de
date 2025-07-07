@@ -61,7 +61,7 @@ NOTE: Für SAN-Volumes wie iSCSI und NVMe wird die Neuverteilung nicht unterstü
 ** FlexGroup Volumes
 ** FlexVol Volumes
 +
-Wenn ein Volumen unausgeglichen ist, berücksichtigen Sie <<Rebalance a volume,Neuausrichtung>> .
+Wenn ein Volumen unausgeglichen ist, berücksichtigen Sie <<Volumenkapazität neu ausbalancieren,Neuausrichtung>> .
 
 
 

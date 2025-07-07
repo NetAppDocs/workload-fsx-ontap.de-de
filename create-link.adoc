@@ -34,7 +34,7 @@ Die Verknüpfung eines neuen Links umfasst die Erstellung und Verknüpfung.
 Sie haben in diesem Workflow zwei Möglichkeiten, Links zu erstellen – automatisch oder manuell. Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Link zu erstellen.
 
 * Automatisch: Erstellt eine Verknüpfung mit automatischer Registrierung über Workload Factory. Ein automatisch erstellter Link erfordert Token für die Automatisierung der Workload-Farm. Der CloudFormation-Code ist von kurzer Dauer. Er kann nur für bis zu sechs Stunden verwendet werden.
-* Manuell: Erstellt einen Link mit manueller Registrierung über CloudFormation oder Terraform aus der Codebox. Der Code bleibt bestehen, sodass Sie mehr Zeit haben, den Vorgang abzuschließen. Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Sicherheit und DevOps zusammenarbeiten, die möglicherweise zuerst die erforderlichen Berechtigungen für die vollständige Link-Erstellung erteilen müssen.
+* Manuell: Erstellt einen Link mit manueller Registrierung. Der CloudFormation-Code bleibt bestehen und gibt Ihnen mehr Zeit, um den Vorgang abzuschließen. Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Sicherheit und DevOps zusammenarbeiten, die möglicherweise zuerst die erforderlichen Berechtigungen für die vollständige Link-Erstellung erteilen müssen.
 
 
 .Bevor Sie beginnen
@@ -161,7 +161,7 @@ Sie können den Status der Verknüpfungserstellung auf der Seite Ereignisse übe
 --
 .Manuell erstellen
 --
-Mit dieser Option extrahieren Sie die ARN für den Link und melden sie hier. Workload Factory registriert den Link manuell für Sie. Sie können einen Link mit zwei Infrastructure-as-Code (IaC)-Tools aus der Codebox erstellen: CloudFormation oder Terraform.
+Mit dieser Option extrahieren Sie den ARN für den Link aus AWS CloudFormation und melden ihn hier. Workload Factory registriert den Link manuell für Sie.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -183,7 +183,7 @@ Sie können entweder Geheimnisse im Einklang mit den Standardberechtigungen erst
 
 .. *Linkberechtigungen*: Wählen Sie eine der folgenden Optionen für Linkberechtigungen:
 +
-*** *Automatisch*: Wählen Sie diese Option, damit der AWS CloudFormation- oder Terraform-Code automatisch die Lambda-Berechtigungsrichtlinie und Ausführungsrolle erstellt.
+*** *Automatisch*: Wählen Sie diese Option, damit der AWS CloudFormation-Code automatisch die Lambda-Berechtigungsrichtlinie und Ausführungsrolle erstellt.
 *** *Vom Benutzer bereitgestellt*: Wählen Sie diese Option, um dem Lambda-Link eine bestimmte Lambda-Ausführungsrolle und die zugehörigen Richtlinien zuzuweisen. Für die Lambda-Berechtigungsrichtlinie sind die folgenden Berechtigungen erforderlich. Die  `secretsmanager:GetSecretValue` Die Berechtigung ist nur erforderlich, wenn Sie AWS Secrets Manager aktiviert haben.
 +
 [source, json]
