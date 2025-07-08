@@ -63,6 +63,3 @@ NOTE: Zur langfristigen Aufbewahrung sind passende Quell- und Zieletiketten erfo
 
 
 
-
-. Wählen Sie *Erstellen*.
-
