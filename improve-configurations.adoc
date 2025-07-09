@@ -11,12 +11,14 @@ summary: Die BlueXP  Workload-Farm für Datenbanken scannt Microsoft SQL Server
 
 
 [role="lead"]
-Nutzen Sie mithilfe der Erkenntnisse aus der Konfigurationsanalyse und -Empfehlungen die BlueXP  Workload Factory, um Best Practices für Ihre FSX für ONTAP-Filesysteme zu implementieren. Sie können Probleme leicht finden und Maßnahmen ergreifen, um die Architektur von Systemen zu verbessern, die nicht im Hinblick auf Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
+Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und implementieren Sie Best Practices für Ihre FSx for ONTAP Dateisysteme mithilfe der Workload Factory. Sie können den Status der ordnungsgemäßen Architektur problemlos überprüfen, sich über Probleme mit Ihren Konfigurationen informieren und Maßnahmen ergreifen, um die Architektur von Systemen zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
+
+link:configuration-analysis.html["Erfahren Sie mehr über die Konfigurationsanalyse und den Status einer guten Architektur in der Workload Factory."]
 
 .Über diese Aufgabe
-BlueXP  analysiert täglich die Konfigurationen für die Dateisystembereitstellung von Amazon FSX für NetApp ONTAP. Die tägliche Analyse bietet Einblicke und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, sodass Ihr Filesystem den Best Practices entspricht.
+Workload Factory analysiert täglich die Konfigurationen der Amazon FSx for NetApp ONTAP Dateisysteme. Die tägliche Analyse liefert den Status der ordnungsgemäßen Architektur sowie Einblicke und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, damit Ihr Dateisystem Best Practices entspricht.
 
-Es stehen Ihnen Optionen zur Verfügung, die Empfehlungen für Konfigurationsprobleme mit Ihren Dateisystemen zu prüfen und diese Probleme aus der Speicherinventarisierung in der Workload-Factory-Konsole zu beheben.
+Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme mit Ihren Dateisystemen zu überprüfen und die Probleme aus dem Speicherinventar in der Workload Factory-Konsole zu beheben.
 
 Was analysiert wird:: Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
 +
