@@ -96,6 +96,23 @@ Wenn Sie eine vorhandene Exportrichtlinie ausgewählt haben, geben Sie einen neu
 .... *CIFS-Share*: Geben Sie Folgendes an:
 +
 ..... *Name*: Geben Sie den CIFS-Share-Namen ein, um SMB-Zugriff zu ermöglichen.
+..... *Pfad*: Definieren Sie den Pfad entweder mit dem Standard-Volume-Namen oder stellen Sie eine Freigabe für ein internes Verzeichnis bereit.
++
+Gültige Pfadeingaben für den Datenträgernamen, beispielsweise „Avocado“, sind wie folgt:
+
++
+****** /Avocado
+****** /avocado/ordner
+****** /avocado/Ordner/Unterordner
+****** /avocado/dateiname
++
+Gültige Pfadangaben für den Freigabenamen, beispielsweise „Server“, sind wie folgt:
+
+****** \\Server
+****** \\Server\Projekte
+****** \\Server\Projekte\Gemeinsame Ressourcen
+
+
 ..... *Berechtigungen*: Wählen Sie Vollzugriff, Lesen/Schreiben, Lesen oder keinen Zugriff und geben Sie dann die Benutzer oder Gruppen getrennt durch ein Semikolon ( ; ) ein. Bei Benutzern oder Gruppen wird zwischen Groß- und Kleinschreibung unterschieden, und die Domäne des Benutzers muss im Format „Domain\username“ enthalten sein.
 
 
