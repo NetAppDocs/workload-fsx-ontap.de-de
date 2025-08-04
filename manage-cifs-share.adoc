@@ -1,30 +1,30 @@
 ---
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
-keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
-summary: Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik umfasst die Erstellung, die Bestimmung des Zugriffs auf Benutzer und Gruppen sowie das Löschen. 
+keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create 
+summary: Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in der Workload Factory umfasst das Erstellen, Bestimmen des Benutzer- und Gruppenzugriffs und das Löschen. 
 ---
-= Verwalten Sie die CIFS-Freigabe für ein Volume in der BlueXP  Workload Factory
+= Verwalten der SMB/CIFS-Freigabe für ein Volume in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Das Management der CIFS-Freigabe eines Volumes in der BlueXP -Workload-Fabrik umfasst die Erstellung von CIFS-Freigaben, die Bestimmung der Benutzer und Gruppen, denen Zugriff gewährt werden soll, sowie die Berechtigungsstufe, die ihnen erteilt werden soll, und das Löschen von CIFS-Freigaben.
+Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in der Workload Factory umfasst die Erstellung von SMB/CIFS-Freigaben, die Bestimmung der Benutzer und Gruppen, denen Zugriff gewährt werden soll, und der ihnen zu erteilenden Berechtigungsstufe sowie das Löschen von SMB/CIFS-Freigaben.
 
 .Bevor Sie beginnen
 Bevor Sie beginnen, gehen Sie wie folgt vor:
 
-* Um CIFS-Freigaben zu verwalten, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Um SMB/CIFS-Freigaben zu verwalten, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."] .  Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
 * Legen Sie die Benutzer oder Gruppen fest, denen Zugriff gewährt werden soll, und legen Sie die Berechtigungsstufe fest.
 
 
 
 
-== Erstellen Sie eine CIFS-Freigabe für ein Volume
+== Erstellen einer SMB/CIFS-Freigabe für ein Volume
 
-Führen Sie die Schritte aus, um eine CIFS-Freigabe für ein Volume zu erstellen.
+Befolgen Sie die Schritte zum Erstellen einer SMB/CIFS-Freigabe für ein Volume.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -32,25 +32,39 @@ Führen Sie die Schritte aus, um eine CIFS-Freigabe für ein Volume zu erstellen
 . Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
-. Wählen Sie *Advanced Actions* und dann *Manage CIFS Shares*.
-. Wählen Sie auf der Seite CIFS-Freigabe verwalten die Option *CIFS-Freigabe erstellen* aus.
-. Geben Sie im Dialogfeld CIFS-Freigabe erstellen Folgendes ein:
+. Wählen Sie *Erweiterte Aktionen* und dann *SMB/CIFS-Freigaben verwalten*.
+. Wählen Sie auf der Seite „SMB/CIFS-Freigaben verwalten“ die Option *SMB/CIFS-Freigabe erstellen* aus.
+. Geben Sie im Dialogfeld „SMB/CIFS-Freigabe erstellen“ Folgendes ein:
 +
-.. *Name*: Geben Sie den Namen der CIFS-Freigabe ein.
+.. *Name*: Geben Sie den Namen der SMB/CIFS-Freigabe ein.
+.. *Pfad*: Definieren Sie den Pfad entweder mit dem Standard-Volume-Namen oder stellen Sie eine Freigabe für ein internes Verzeichnis bereit.
++
+Gültige Pfadeingaben für den Datenträgernamen, beispielsweise „Avocado“, sind wie folgt:
+
++
+*** /Avocado
+*** /avocado/ordner
+*** /avocado/Ordner/Unterordner
+*** /avocado/dateiname
++
+Gültige Pfadangaben für den Freigabenamen, beispielsweise „Server“, sind wie folgt:
+
+*** \\Server
+*** \\Server\Projekte
+*** \\Server\Projekte\Gemeinsame Ressourcen
+
+
 .. *Berechtigungen*: Wählen Sie Vollzugriff, Lesen/Schreiben, Lesen oder keinen Zugriff und geben Sie dann die Benutzer oder Gruppen getrennt durch ein Semikolon ( ; ) ein. Bei Benutzern oder Gruppen wird zwischen Groß- und Kleinschreibung unterschieden, und die Domäne des Benutzers muss im Format „Domain\username“ enthalten sein.
 
 
 . Wählen Sie *Erstellen*.
 
 
-.Ergebnis
-Die CIFS-Freigabe für das Volume wird erstellt.
 
 
+== Ändern einer SMB/CIFS-Freigabe für ein Volume
 
-== Ändern Sie eine CIFS-Freigabe für ein Volume
-
-Führen Sie die Schritte aus, um die CIFS-Freigabeeinstellungen für ein Volume zu ändern.
+Befolgen Sie die Schritte, um die SMB/CIFS-Freigabeeinstellungen für ein Volume zu ändern.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -58,23 +72,20 @@ Führen Sie die Schritte aus, um die CIFS-Freigabeeinstellungen für ein Volume 
 . Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
-. Wählen Sie *Advanced Actions* und dann *Manage CIFS Shares*.
-. Bewegen Sie auf der Seite CIFS-Freigabe managen den Mauszeiger über eine CIFS-Freigabe und wählen Sie das Bleistiftsymbol, um Änderungen vorzunehmen.
-. Ändern Sie die CIFS-Zugriffsberechtigungen oder die Benutzer oder Gruppen, denen Berechtigungen zugewiesen werden sollen.
+. Wählen Sie *Erweiterte Aktionen* und dann *SMB/CIFS-Freigaben verwalten*.
+. Wählen Sie auf der Seite „SMB/CIFS-Freigaben verwalten“ die Option „Anzeigen und bearbeiten“ aus.
+. Ändern Sie die SMB/CIFS-Zugriffsberechtigungen oder die Benutzer oder Gruppen, denen Berechtigungen erteilt werden sollen.
 +
-Änderungen können dazu führen, dass aktuelle Benutzer oder Gruppen den Zugriff auf die CIFS-Freigabe verlieren.
+Änderungen können dazu führen, dass aktuelle Benutzer oder Gruppen den Zugriff auf die SMB/CIFS-Freigabe verlieren.
 
 . Wählen Sie *Übernehmen*, um die Änderungen zu speichern.
 
 
-.Ergebnis
-Der CIFS-Share für das Volume wird aktualisiert.
 
 
+== Löschen einer SMB/CIFS-Freigabe für ein Volume
 
-== Löschen Sie eine CIFS-Freigabe für ein Volume
-
-Führen Sie die Schritte aus, um eine CIFS-Freigabe für ein Volume zu löschen.
+Befolgen Sie die Schritte zum Löschen einer SMB/CIFS-Freigabe für ein Volume.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -82,13 +93,10 @@ Führen Sie die Schritte aus, um eine CIFS-Freigabe für ein Volume zu löschen.
 . Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
-. Wählen Sie *Advanced Actions* und dann *Manage CIFS Shares*.
-. Bewegen Sie auf der Seite CIFS-Freigabe verwalten den Mauszeiger über eine CIFS-Freigabe und wählen Sie das Papierkorb-Symbol aus, um sie zu löschen.
+. Wählen Sie *Erweiterte Aktionen* und dann *SMB/CIFS-Freigaben verwalten*.
+. Wählen Sie auf der Seite „SMB/CIFS-Freigaben verwalten“ das Drei-Punkte-Menü der SMB/CIFS-Freigabe und dann *Löschen* aus.
 +
-Wenn Sie die CIFS-Freigabe löschen, ist sie für Benutzer, die sie mounten möchten, nicht verfügbar und kann nicht darauf zugegriffen werden.
+Durch das Löschen der SMB/CIFS-Freigabe ist sie für alle Benutzer, die sie mounten möchten, nicht mehr verfügbar und nicht mehr zugänglich.
 
-. Wählen Sie *Löschen*, um den Löschvorgang zu bestätigen.
+. Wählen Sie im Dialogfeld „SMB/CIFS-Freigabe löschen“ *Löschen* aus, um den Löschvorgang zu bestätigen.
 
-
-.Ergebnis
-Die CIFS-Freigabe für das Volume wird gelöscht.

@@ -18,7 +18,7 @@ FSx für ONTAP-Volumes gruppieren Daten virtuell, bestimmen, wie Daten gespeiche
 
 Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 
-* CIFS: File-Storage-Protokoll für Windows-Betriebssysteme
+* SMB/CIFS: Dateispeicherprotokoll für Windows-Betriebssysteme
 * NFS: File-Storage-Protokoll für Unix Betriebssysteme
 * ISCSI: Block-Storage-Protokoll
 
@@ -31,7 +31,7 @@ Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 * Für den Zugriff auf das Protokoll müssen Sie Folgendes ausführen:
 +
 ** Um den Zugriff auf das Volume zu konfigurieren, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
-** Sie müssen den Zugriff für das ausgewählte Protokoll konfigurieren, entweder CIFS, NFS oder iSCSI.
+** Sie müssen den Zugriff für das von Ihnen ausgewählte Protokoll konfigurieren, entweder SMB/CIFS, NFS oder iSCSI.
 
 
 
@@ -93,9 +93,9 @@ Wenn Sie eine vorhandene Exportrichtlinie ausgewählt haben, geben Sie einen neu
 ..... *Export Policy Rule* hinzufügen: Optional können Sie für eine benutzerdefinierte Export Policy Regeln zur Export Policy hinzufügen.
 
 
-.... *CIFS-Share*: Geben Sie Folgendes an:
+.... *SMB/CIFS-Freigabe*: Geben Sie Folgendes an:
 +
-..... *Name*: Geben Sie den CIFS-Share-Namen ein, um SMB-Zugriff zu ermöglichen.
+..... *Name*: Geben Sie den SMB/CIFS-Freigabenamen ein, um Zugriff zu gewähren.
 ..... *Pfad*: Definieren Sie den Pfad entweder mit dem Standard-Volume-Namen oder stellen Sie eine Freigabe für ein internes Verzeichnis bereit.
 +
 Gültige Pfadeingaben für den Datenträgernamen, beispielsweise „Avocado“, sind wie folgt:

@@ -34,7 +34,7 @@ Die Verknüpfung eines neuen Links umfasst die Erstellung und Verknüpfung.
 Sie haben in diesem Workflow zwei Möglichkeiten, Links zu erstellen – automatisch oder manuell. Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Link zu erstellen.
 
 * Automatisch: Erstellt einen Link mit automatischer Registrierung über die Workload Factory.  Dies erfordert Token für die Workload-Fabrikautomatisierung und der CloudFormation-Code ist kurzlebig und bis zu sechs Stunden nutzbar.
-* Manuell: Erstellt einen Link mit manueller Registrierung. Der CloudFormation-Code bleibt bestehen und gibt Ihnen mehr Zeit, um den Vorgang abzuschließen. Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Sicherheit und DevOps zusammenarbeiten, die möglicherweise zuerst die erforderlichen Berechtigungen für die vollständige Link-Erstellung erteilen müssen.
+* Manuell: Erstellt einen Link mit manueller Registrierung mithilfe von CloudFormation oder Terraform aus der Codebox.  Der Code bleibt bestehen und gibt Ihnen mehr Zeit, den Vorgang abzuschließen.  Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Security und DevOps arbeiten, die möglicherweise zuerst die erforderlichen Berechtigungen erteilen müssen, um die Linkerstellung abzuschließen.
 
 
 .Bevor Sie beginnen
@@ -161,14 +161,14 @@ Sie können den Status der Linkerstellung auf der Seite „Ereignisse“ überwa
 --
 .Manuell erstellen
 --
-Mit dieser Option extrahieren Sie den ARN für den Link aus AWS CloudFormation und melden ihn hier. Workload Factory registriert den Link manuell für Sie.
+Sie können eine Verknüpfung mit zwei Infrastructure-as-Code (IaC)-Tools aus der Codebox erstellen: CloudFormation oder Terraform.  Mit dieser Option extrahieren Sie die ARN für den Link aus AWS CloudFormation und melden sie hier.  Workload Factory registriert den Link manuell für Sie.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
 . Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
-. Geben Sie auf der Seite „Link erstellen“ Folgendes an:
+. Wählen Sie auf der Seite „Link erstellen“ CloudFormation oder Terraform aus der Codebox aus und geben Sie dann Folgendes ein:
 +
 .. *Linkname*: Geben Sie den Namen ein, den Sie für diesen Link verwenden möchten. Der Name muss innerhalb Ihres Kontos eindeutig sein.
 .. *AWS Secrets Manager*: Optional. Ermöglicht es der Workload Factory, FSX for ONTAP Zugangsdaten von Ihrem AWS Secrets Manager abzurufen.
@@ -201,7 +201,7 @@ Geben Sie die ARN der Lambda-Ausführungsrolle in das Textfeld ein.
 
 
 .. *Tags*: Fügen Sie optional alle Tags hinzu, die Sie mit diesem Link verknüpfen möchten, damit Sie Ihre Ressourcen einfacher kategorisieren können. Sie könnten beispielsweise ein Tag hinzufügen, das diesen Link als von FSX für ONTAP-Dateisystemen verwendet identifiziert.
-.. *Linkregistrierung*: Wählen Sie den Dropdown-Pfeil aus, um die Anweisungen zum Registrieren des Links vom AWS CloudFormation-Dienst oder mit Terraform einzublenden. Befolgen Sie die Anweisungen.
+.. *Linkregistrierung*: Wählen Sie CloudFormation oder Terraform für die Anweisungen zur Registrierung des Links aus und folgen Sie den Anweisungen.
 +
 Beachten Sie, dass Lambda drei Berechtigungen erteilt werden, wenn Sie die CloudFormation-Vorlage starten. Workload Factory verwendet diese Berechtigungen bei der Verwendung von Links.
 
