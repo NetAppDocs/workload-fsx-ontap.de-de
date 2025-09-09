@@ -197,13 +197,8 @@
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">*Name*: Geben Sie einen Namen für die Speicher-VM ein.</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">*Speicher-VM-Anmeldeinformationen*: Geben Sie ein Passwort für den Benutzer dieser Speicher-VM ein<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> oder verwenden Sie die Benutzeranmeldeinformationen des Dateisystems<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> .</block>
   <block id="34cc44a6e06f592c6033a57f8671a67a" category="list-text">*Sicherheitsstil des Root-Volumes*: Wählen Sie den Sicherheitstyp des Root-Volumes abhängig von der Art der Clients, die auf Ihre Daten zugreifen - UNIX (Linux-Clients), NTFS (Windows-Clients) oder gemischt.</block>
-  <block id="1bc82fa8aedf24369834db8950935e12" category="doc">Erstellen Sie aus einem Snapshot ein neues FSX für ONTAP-Volume</block>
-  <block id="94bf5ecde85890bdfbccd00fad3fbd70" category="paragraph">Ein Snapshot ist ein schreibgeschütztes Abbild eines FSX für ONTAP Volumes, das zu einem Zeitpunkt erstellt wurde. Die Erstellung eines neuen Volumes aus einem Snapshot macht eine Kopie eines gesamten Volumes innerhalb von wenigen Sekunden unabhängig von der Volume-Größe. Die neu erstellte Kopie stellt ein neues Volume dar.</block>
   <block id="dd92a94c350d15b3e750c8345c72be14" category="paragraph">Beachten Sie die folgenden Einschränkungen, bevor Sie ein Volume aus einem Snapshot erstellen:</block>
   <block id="aa598f48818753dcf8598b6294e34d5b" category="list-text">Änderungen an Berechtigungsmodellen: Wenn Sie diesen Vorgang zum Umschalten des Protokolltyps des Network-Attached Storage (NAS) verwenden, kann er auch das Berechtigungsmodell wechseln, das der Sicherheitstyp bereitstellt. Es kann zu Problemen mit Dateizugriffsberechtigungen kommen, die Sie nur manuell mit Administratorzugriff mithilfe der NAS-Client-Tools für die Berechtigungseinstellung beheben können.</block>
-  <block id="0d9c537067f7d4fbde0af7c35b682638" category="list-text">Erhöhter Datenträgerverbrauch: Nachdem Sie ein Volume aus einem Snapshot erstellt haben, haben Sie zwei unabhängige Volumes, und beide verbrauchen Kapazität vom Host-Dateisystem.</block>
-  <block id="749bb7d7b85b238efdd51a2af6612da7" category="list-text">Wählen Sie *Data Protection actions*, *Snapshots* und dann *Create a Volume from a Snapshot*.</block>
-  <block id="7703989c08fa05b728e233f271b4650e" category="list-text">Geben Sie im Dialogfeld Volume aus einem Snapshot erstellen den Snapshot-Namen ein.</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">Erstellen eines FSX für ONTAP-Volumes</block>
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS: File-Storage-Protokoll für Unix Betriebssysteme</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">ISCSI: Block-Storage-Protokoll</block>
@@ -399,15 +394,11 @@
   <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Fall schließen*: Geben Sie Einzelheiten darüber an, warum Sie den Fall schließen und wählen Sie *Fall schließen*.</block>
   <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Ein Screenshot, der die Aktionen zeigt, die Sie nach Auswahl des Menüs in der letzten Spalte der Tabelle durchführen können.</block>
   <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0a2f587a53fd97b6d49adac14c5ef1b6" category="summary">Erhöhen Sie die SSD-Speicherkapazität eines FSX für ONTAP-Dateisystems manuell, wenn die verwendete SSD-Speicherkapazität einen von Ihnen angegebenen Schwellenwert überschreitet.</block>
   <block id="d1c1f85063b5f4742efda82442c2ddff" category="doc">Erhöhen Sie die Kapazität des Filesystems</block>
   <block id="7db52e1b6d399a07ae2a24a19f03a6ad" category="inline-link-macro">Aktivieren Sie die automatische Kapazitätsverwaltungsfunktion</block>
-  <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">Das Erhöhen der Filesystem-Kapazität wirkt sich auf die IOPS für Ihr FSX for ONTAP Filesystem aus.</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">Bereitstellung von IOPS</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">Weitere Informationen zu SSD-Storage-Kapazitätsbeschränkungen finden Sie <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> in der Dokumentation zu AWS FSX für NetApp ONTAP.</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">Deaktivieren Sie das automatische Kapazitätsmanagement</block>
-  <block id="e58acd1760f609c958f436e6f19a798d" category="paragraph">Um die Kapazität eines Dateisystems zu erhöhen, müssen Sie zuerst <block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block>.</block>
-  <block id="3f43f703da21affaf8c9fe7bb0026712" category="list-text">Geben Sie im Dialogfeld SSD-Speichergröße eine Zahl für *bereitgestellte Kapazität* ein.</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">Wählen Sie die Einheit für die bereitgestellte Kapazität aus.</block>
   <block id="ceadc0f7d6f2330af477eb47568a259b" category="doc">Höhere Volume-Kapazität</block>
   <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">Aktivieren Sie die Autogrow Funktion</block>
@@ -550,11 +541,7 @@
   <block id="c5cce99928ce0d8af5b82b7d22ea310e" category="list-text">*Name des wiederhergestellten Volumes*: Geben Sie den Namen des wiederhergestellten Volumes ein.</block>
   <block id="67b0d8b6788b457b2c8385033f28756f" category="summary">Stellen Sie ein FSX für ONTAP-Volume von einem Snapshot wieder her, wenn das Volume gelöschte oder beschädigte Dateien enthält.</block>
   <block id="c90683522eadafc05ec442d8c440363f" category="doc">Wiederherstellen eines Volumes aus einem Snapshot</block>
-  <block id="028c5ca154a90ad525b01ec66b26fa3f" category="paragraph">Mit diesem Vorgang werden Daten aus einem Snapshot auf einem neuen Volume wiederhergestellt.</block>
   <block id="71fa8628af6f2038af0eab0c8ca9c4cf" category="paragraph">Sie können ein Volume nur aus einem Snapshot wiederherstellen, wenn Sie über eine vorhandene Snapshot-Kopie des Volumes verfügen.</block>
-  <block id="4905114f3925ed2863baa2d94439902b" category="paragraph">Stellen Sie sicher, dass Sie über genügend Kapazität verfügen, um diesen Vorgang abzuschließen.</block>
-  <block id="3d7743d27e7346a7094199a8317979a9" category="list-text">Wählen Sie *Data Protection actions*, *Snapshots* und dann *Restore Volume from a Snapshot*.</block>
-  <block id="cd311f58436ee68a7677fa7444318b66" category="list-text">Wählen Sie im Dialogfeld Wiederherstellungsdatenträger aus einem Snapshot im Feld *Snapshot-Name* den wiederherzustellenden Snapshot aus dem Dropdown-Menü aus.</block>
   <block id="dfb1565e1ec2734dcbcb24e6b43c9919" category="list-text">Geben Sie im Feld *restored Volume Name* einen eindeutigen Namen für das wiederherzustellende Volume ein.</block>
   <block id="4f1846b15b8a356a7b4e9cd679e14ad1" category="summary">Wenden Sie eine Replikationsbeziehung um, damit das Ziel-Volume das Quell-Volume wird.</block>
   <block id="11d688dbb6757a0fe68e53ad308bce54" category="doc">Eine Replikationsbeziehung umkehren</block>
@@ -663,10 +650,7 @@
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="sidebar">Verwalten von Snapshots</block>
   <block id="af9c364e0933200b7b8c1e7e13947ccf" category="sidebar">Erstellen Sie einen Snapshot</block>
   <block id="e807ebdf213353b8a415f991a2cade81" category="sidebar">Erstellen einer Snapshot-Richtlinie</block>
-  <block id="ea8c9a66e2636ce9b98d1a110a02791e" category="sidebar">Erstellen Sie ein neues Volume aus einem Snapshot</block>
-  <block id="cb230ad17b1cab1fba2436fdf9a4222a" category="sidebar">Managen Sie Backups in Objektspeicher</block>
   <block id="c650dc131eb6eb56a3ed637559a17a3f" category="sidebar">Erstellen Sie eine manuelle Sicherung</block>
-  <block id="3baac809cc5d7dd36919afed53778b41" category="sidebar">Managen Sie die Replikation</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">Administration und Überwachung</block>
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">Volume-Administration</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">Bearbeiten Sie Volume Autogrow</block>
@@ -682,7 +666,6 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">Stellen Sie IOPS für ein Filesystem bereit</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Referenz</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">Fehlerbehebung</block>
-  <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">Bei automatischer beziehen Sie <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> auf ein Dateisystem erhöht sich der IOPS um 3 IOPS bei jeder Erhöhung der SSD-Kapazität um 1 gib.</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">Sie können ein FSX für ONTAP-Dateisystem mit _Quick create_ oder _Advanced create_ erstellen. Sie können auch die folgenden Werkzeuge verwenden, die in der Codebox verfügbar sind: REST API, CloudFormation und Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie kopieren oder herunterladen, ausgeblendet<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> und<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> Passwörter. Sie müssen die Passwörter erneut eingeben, wenn Sie den Code ausführen.</block>
@@ -828,9 +811,6 @@
   <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">Erstellen Sie eine Storage-VM (SVM) für ein FSX für ONTAP Filesystem, um auf Storage- und Datenservices virtuell für Ihre Workloads in der BlueXP  Workload-Fabrik zuzugreifen.</block>
   <block id="54f16768a20bbfb09d736f2fa0a731aa" category="paragraph">Storage-VMs sind isolierte File Server, mit denen Sie auf die Daten von jedem Workload im Workload Factory Storage zugreifen können. Jede SVM verfügt über eigene Administrationsanmeldedaten und Endpunkte für die Verwaltung und den Zugriff auf Daten.</block>
   <block id="08e2fd9fd4dc9adfe3d5f817b3499842" category="paragraph">Sie können eine Storage-VM über die Workload-Factory-Konsole erstellen. Sie können auch die folgenden Werkzeuge verwenden, die in der Codebox verfügbar sind: REST API, CloudFormation und Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
-  <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">Erstellen Sie aus einem Snapshot in der BlueXP -Workload-Farm ein neues FSX für ONTAP-Volume, um Point-in-Time-Recovery zu ermöglichen.</block>
-  <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume-Snapshot aus und wählen Sie dann *Verwalten*.</block>
-  <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü für das Volume aus, auf dem der Snapshot erstellt werden soll.</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">Um ein Dateisystem in der BlueXP -Workload-Fabrik zu löschen, müssen Sie zunächst alle Volumes, Speicher-VMs oder Replikationsbeziehungen löschen, die mit dem Dateisystem verknüpft sind.</block>
   <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">Löschen Sie ein Dateisystem in der BlueXP -Workload-Fabrik</block>
   <block id="a3101c3638d17143df93e5cfcc3c3a0a" category="list-text">Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des FSX für ONTAP-Dateisystems aus, das Sie löschen möchten.</block>
@@ -869,10 +849,7 @@
   <block id="b136689ec8046bd4fb76df787393258d" category="list-text">Im _Automate_-Modus können Sie das Dateisystem FSX für ONTAP direkt aus der Workload-Fabrik implementieren. Sie können den Inhalt auch aus dem Codebox-Fenster kopieren und das System mit einer der Codebox-Methoden bereitstellen.</block>
   <block id="42342e81c625fd1c1141771fe2b6b202" category="summary">NetApp bietet Support für die Workload-Farm und ihre Cloud-Services auf verschiedene Arten. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
   <block id="cf0e6c8d239f09812e12102f2415bb94" category="doc">Holen Sie sich Hilfe zu FSX für ONTAP für die Workload-Fabrik</block>
-  <block id="4788b71d4c5e86a9696627d3c900127a" category="doc">Erhöhen Sie die Kapazität des Filesystems in den Werkseinstellungen des BlueXP  Workloads</block>
   <block id="9d5344a986b0470d38d0c3e88e507b26" category="paragraph">Alternativ können Sie <block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block>mit so Workload Factory die Dateisystemkapazität für Sie verwalten.</block>
-  <block id="1eacd22d13fd6fa8174d7a166e0e9e6b" category="list-text">Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, um die Kapazität für zu erhöhen.</block>
-  <block id="b809bcb34d202de3370d7e6db448a949" category="list-text">Wählen Sie unter Information das Bleistiftsymbol neben *Kapazitätsverteilung*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *Kapazitätsverteilung* schwebt.</block>
   <block id="56878af0f0856af0f2eb7d58b284ec98" category="summary">Sie können die Volume-Kapazität eines Volumes in der BlueXP -Workload-Fabrik jederzeit manuell erhöhen.</block>
   <block id="9a043b713e882184d11ad1a7919816bc" category="doc">Erhöhen Sie die Volume-Kapazität in der BlueXP  Workload-Fabrik</block>
   <block id="9aebf119a4043534b3bad38302a5a426" category="paragraph">Erhöhen Sie die Volume-Kapazität eines Volumes jederzeit manuell in der BlueXP  Workload-Fabrik.</block>
@@ -964,8 +941,6 @@
   <block id="a961210a0ba733961532745ff6f57f44" category="paragraph">In der BlueXP -Workload-Fabrik können Sie ein Volume aus einem Backup auf einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wiederherstellen.</block>
   <block id="81d97c35dd4fb198942dc29738189b53" category="list-text">Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das von einem Backup wiederhergestellt werden soll.</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">Wählen Sie *Wiederherstellen*.</block>
-  <block id="c044800449646a715ebe323cce453c98" category="doc">Stellen Sie ein Volume aus einem Snapshot in der BlueXP -Workload-Fabrik wieder her</block>
-  <block id="52f33bacfd6c28493dc1bdae553bb3cd" category="paragraph">In der BlueXP  Workload Factory können Sie ein FSX für ONTAP-Volume aus einem Snapshot wiederherstellen, wenn das Volume gelöschte oder beschädigte Dateien enthält.</block>
   <block id="e17e241599862dc1177ef32c2eeba1d6" category="list-text">Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das von einem Snapshot wiederhergestellt werden soll.</block>
   <block id="ce4e51fb870a92120876371d3bddc3aa" category="doc">Wenden Sie eine Replikationsbeziehung in der BlueXP  Workload Factory um</block>
   <block id="b3c4745e4516364034e0070ca832f670" category="paragraph">Wenden Sie eine Replikationsbeziehung in der BlueXP  Workload Factory zurück, so dass das Ziel-Volume das Quell-Volume wird.</block>
@@ -1259,9 +1234,6 @@
   <block id="78c187892204fa9a888a00a5635447c9" category="list-text">Optional: Unveränderliche Snapshots aktivieren</block>
   <block id="bac08643512e190f9a6a6c2a8e9b983b" category="list-text">Wählen Sie *Enable Immanable Snapshots* aus, um zu verhindern, dass in dieser Richtlinie ergriffene Snapshots während des Aufbewahrungszeitraums gelöscht werden.</block>
   <block id="4e41f89501d754d5c6885a51e74ac5f0" category="list-text">Legen Sie die *Aufbewahrungsfrist* in Stunden, Tagen, Monaten oder Jahren fest.</block>
-  <block id="58defc647621cf2147bca50eba3d13f5" category="summary">Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für eine Storage-VM in einer BlueXP  Workload Factory.</block>
-  <block id="2a07132290664925d6acf392c1b389ba" category="doc">Erstellen Sie eine Snapshot-Richtlinie für Storage-VMs in der BlueXP  Workload Factory</block>
-  <block id="2f8e07938edc25be83cf584fa9baa96b" category="paragraph">Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für Storage-VMs in der BlueXP  Workload Factory. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für eine Storage-VM erstellt. Sie können eine Snapshot-Richtlinie für eine Storage-VM in einem Filesystem FSX für ONTAP erstellen. Sie können die Richtlinie auch über mehrere Storage-VMs hinweg gemeinsam nutzen.</block>
   <block id="cf6066b0e9e3a71171e38923cf6da6f9" category="list-text">Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.</block>
   <block id="f74e735c048e3c0f84c80e2fade1fb56" category="list-text">Wählen Sie auf der Registerkarte *Storage VMs* das drei-Punkt-Menü für das Volume aus, das mit geplanten Snapshots geschützt werden soll, dann *Advanced Actions* und dann *Manage Snapshot Policies*.</block>
   <block id="c92307c84c3661374297e6b2cb6a8af4" category="list-text">Wählen Sie auf der Seite Snapshot Policy Management *Create Snapshot Policy* aus.</block>
@@ -1271,16 +1243,10 @@
   <block id="c4f08518809bffff8a2b5046db374241" category="list-text">Optional: Aktivieren Sie *unveränderliche Snapshots* für alle benötigten Zeitpläne, legen Sie die *Aufbewahrungsfrist* für jeden Zeitplan fest und akzeptieren Sie die Anweisung, um fortzufahren.</block>
   <block id="fbe63591e4efcbefdcee988dc8bc46ae" category="paragraph">Wenn Sie unveränderliche Snapshots aktivieren, werden alle Snapshots in dieser Snapshot-Richtlinie gesperrt, um zu verhindern, dass die Snapshots während des Aufbewahrungszeitraums gelöscht werden.</block>
   <block id="67e792ffec4a29b646fa11aff1d8c441" category="list-text">*Freigabe über Storage-VMs*: Standardmäßig aktiviert. Wenn diese Option aktiviert ist, wird die Snapshot-Richtlinie für alle Storage-VMs im File-System freigegeben. Deaktivieren Sie, um eine Snapshot-Richtlinie für eine einzelne Storage-VM zu erstellen.</block>
-  <block id="bcdd10c1cff7243af519e9d8eec8dbd8" category="paragraph">Die Snapshot-Richtlinie wird erstellt.</block>
   <block id="c30e0acb90fa2137d90a80462f560839" category="list-text">Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume enthält, für das Sie einen Snapshot erstellen möchten, und wählen Sie dann *Verwalten* aus.</block>
   <block id="fefc3b8b375d96e8bf83d73c262aab57" category="list-text">Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das mit Snapshots geschützt werden soll.</block>
-  <block id="f01fa636d7ab2112e7dd3793a4da0345" category="list-text">Wählen Sie *Data Protection actions*, *Snapshots* und dann *Create a Snapshot*.</block>
-  <block id="84c4fbf0889e2d552cef58742fbb6561" category="list-text">Geben Sie im Dialogfeld Snapshot erstellen einen Snapshot-Namen in das Feld *Snapshot-Name* ein.</block>
-  <block id="6ed24439c49aa780b53884f3cee8e455" category="list-text">Optional: Machen Sie den Snapshot unveränderlich, um zu verhindern, dass der Snapshot während des Aufbewahrungszeitraums gelöscht wird.</block>
-  <block id="497a3a6d6896389f61471114110cc7fe" category="list-text">Aktivieren Sie *unveränderliche Snapshots*.</block>
   <block id="be418a0bf2ad3249acf7833b04db3bd5" category="list-text">Legen Sie die *Aufbewahrungsfrist* als Anzahl von Stunden, Tagen, Monaten oder Jahren fest.</block>
   <block id="6612ee3812a7ecc1b61dc6f585b1c26f" category="list-text">Akzeptieren Sie die Aussage zu unveränderlichen Snapshots.</block>
-  <block id="a07e25b28678b53fe808a082369fda80" category="paragraph">Das Volume verfügt über eine Snapshot-Kopie.</block>
   <block id="86ee35c0029c920dce9ef56d88935e8e" category="paragraph">Die folgenden Protokolle können für Ihre Volumes verwendet werden:</block>
   <block id="8feb9be2f7d30e723f1c8aa899250dae" category="list-text">*Blockzugriff*: Ermöglicht Hosts, die kritische Geschäftsanwendungen ausführen, den Zugriff auf das Volume über das iSCSI-Protokoll. Der Block-Zugriff ist nur verfügbar, wenn die horizontal skalierbare Filesystem-Implementierung maximal sechs HA-Paare umfasst.</block>
   <block id="f122287653386d74229199bd670f4990" category="list-text">Die Aufbewahrungsfrist hat zwei Einstellungen - _Retention Policy_ und _Retention Periods_. Die _Retention Policy_ definiert, wie lange Dateien in einem unveränderlichen WORM-Zustand aufbewahrt werden sollen. Sie können Ihre eigene Aufbewahrungsrichtlinie festlegen oder die Standardaufbewahrungsrichtlinie (nicht spezifiziert) verwenden, die 30 Jahre beträgt. Die minimalen und maximalen _Aufbewahrungsfristen_ definieren den zulässigen Zeitbereich für das Sperren von Dateien.</block>
@@ -2115,4 +2081,94 @@
   <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">03. August 2025</block>
   <block id="1595965c84afe577a4228c0f8a132a00" category="sidebar">Verwalten von SMB/CIFS-Freigaben</block>
   <block id="b8bfbf72dc92e989a0b91cd409144076" category="summary">Workload Factory durchsucht Amazon FSx for NetApp ONTAP -Konfigurationen und liefert Erkenntnisse und Empfehlungen, die Ihnen dabei helfen, betriebliche Höchstleistungen zu erzielen.</block>
+  <block id="d1e5e17e5a4cb355117a41318746c4a4" category="doc">Verbesserungen des Speicherinventarberichts</block>
+  <block id="b749705b43261f48fe8b1309cb366d90" category="paragraph">Workload Factory hat die für Ihre FSx for ONTAP -Dateisysteme gemeldeten Daten verbessert.  Der herunterladbare Bericht von der FSx for ONTAP -Inventarseite enthält die folgenden neuen Spalten:</block>
+  <block id="c61468edc77ab93ea17568f678793bdd" category="list-text">Verwendete SSD: Zeigt den Wert der verwendeten SSD-Kapazität an</block>
+  <block id="a1a4ea0fabd62225adb4786dd703d1a7" category="list-text">SSD-Auslastung: zeigt den Prozentsatz der verwendeten SSD-Kapazität an</block>
+  <block id="c016cb9916988a0ea698d070fd6b702a" category="list-text">Durchsatzauslastung: zeigt die durchschnittliche und Spitzenauslastung der letzten 30 Tage</block>
+  <block id="197af635c10bcbf35ba56184f54cb088" category="list-text">IO-Auslastung: zeigt die durchschnittliche und maximale IO-Auslastung der letzten 30 Tage</block>
+  <block id="92bce71ffaebc031ec78d565e6ad7032" category="list-text">CPU-Auslastung: zeigt die durchschnittliche und maximale CPU-Auslastung der letzten 30 Tage</block>
+  <block id="95851c89a4d869fdb94916625564bb6c" category="section-title">Verbesserungen bei der Snapshot-Verwaltung</block>
+  <block id="fbb3322fb25c1109310e7be3bcc20fd5" category="paragraph">Workload Factory hat mehrere Verbesserungen vorgenommen, um Volume-Snapshot-Details anzuzeigen und Volume-Snapshots zu verwalten.  Diese Verbesserungen erleichtern Ihnen das Verständnis des Status Ihrer Snapshots und den Schutz Ihrer Daten.</block>
+  <block id="3ecb130f0ffe2d8e485cb11c629b90b5" category="inline-image-macro">Screenshot, der das FSx für ONTAP Volume-Menü mit grundlegenden Aktionen und anschließender Anzeige der Volume-Details zeigt.</block>
+  <block id="d26eb7e0d00b2e5069d790d2b9be49ba" category="paragraph"><block ref="d26eb7e0d00b2e5069d790d2b9be49ba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cb34ab44253ae9c736786f23dc173879" category="paragraph">Weitere Elemente werden in den Volumedetails unter der Registerkarte „Schutz“ angezeigt:</block>
+  <block id="6d4b26be686dd37e202e23010a22bf04" category="list-text">Name der Snapshot-Richtlinie</block>
+  <block id="a81cec6ec43470b1419a033e0457112d" category="list-text">Snapshot-Speicherplatzreservierung</block>
+  <block id="c04d4554f0391d80036dceaa0e930ee2" category="list-text">Kapazität der Snapshot-Speicherplatzreservierung</block>
+  <block id="06fd2134099fd30808caa961b2bc9b21" category="inline-image-macro">Screenshot, der FSx für ONTAP -Volumedetails mit geöffneter Registerkarte „Schutz“ zeigt.</block>
+  <block id="b52491919b24cba6fd1efad7447c7798" category="paragraph"><block ref="b52491919b24cba6fd1efad7447c7798" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e987130d3b26cda391ff2f1e5149f444" category="paragraph">Der neue Bildschirm zur Snapshot-Verwaltung ist von einem Volume aus zugänglich. Er bietet Informationen zur Snapshot-Richtlinie für das Volume und enthält eine Tabelle mit allen Volume-Snapshots.  Die Tabelle zeigt die folgenden Snapshot-Details an: Erstellungszeit, Größe, Ablaufzeit, unveränderlicher Snapshot-Schutz und Bezeichnungen.  Auf dem Verwaltungsbildschirm können Sie die Snapshot-Richtlinie für das Volume ändern, manuell einen Snapshot erstellen und Snapshots bearbeiten, darauf zugreifen, sie wiederherstellen und löschen.</block>
+  <block id="ad8f55b88a50703984e58a23e36e9026" category="inline-image-macro">Screenshot, der den Bildschirm zum Verwalten von Snapshots zeigt.</block>
+  <block id="404a59509c6a806310ecbd1d601e0ee6" category="paragraph"><block ref="404a59509c6a806310ecbd1d601e0ee6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="52574bdc9ce79e7e568096fa39264d72" category="section-title">Reduzierung der SSD-Speicherkapazität möglich</block>
+  <block id="0cc6e64eaa35165d8791def1903c483a" category="paragraph">Workload Factory unterstützt die Verringerung der Solid-State-Drive-Kapazität (SSD) Ihrer Dateisysteme der ersten und zweiten Generation.  Mit der elastischen Dateisystemkapazität können Sie die Kapazität Ihrer Dateisysteme dynamisch an die Anforderungen Ihrer Arbeitslasten anpassen.</block>
+  <block id="298ae1d1e13ebe1f0f22936b7ea9ce33" category="inline-link-macro">Passen Sie die Dateisystemkapazität an</block>
+  <block id="6b4be3b501bf6ae8984293c02d4d610b" category="paragraph"><block ref="6b4be3b501bf6ae8984293c02d4d610b" category="inline-link-macro-rx"></block></block>
+  <block id="14fc4cc175abaf53d8e3d6a080ba96e8" category="summary">Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für eine Speicher-VM in der Workload Factory.</block>
+  <block id="12b776fb2d015f7638890feb17b66bf6" category="doc">Erstellen einer Snapshot-Richtlinie für Speicher-VMs in der Workload Factory</block>
+  <block id="2908297e977ab153ee0bec5fba041d6f" category="paragraph">Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für Speicher-VMs in der Workload Factory, um die Erstellung und Aufbewahrung von Snapshots zu verwalten.  Eine Snapshot-Richtlinie definiert, wie das System Snapshots für eine Speicher-VM erstellt.  Sie können eine Snapshot-Richtlinie für eine Speicher-VM in einem FSx for ONTAP -Dateisystem erstellen.  Sie können die Richtlinie auch für mehrere Speicher-VMs freigeben.</block>
+  <block id="1528c852e43be2a99e8719b76138fb44" category="list-text">Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.</block>
+  <block id="f4a331106cfb59d634afb478ec8cfccb" category="list-text">Wählen Sie auf der Seite „Snapshots verwalten“ die Option „Snapshot erstellen“ aus.</block>
+  <block id="75aba4f0296caf05917e327be4ed5543" category="list-text">Führen Sie im Dialogfeld „Snapshot erstellen“ die folgenden Schritte aus:</block>
+  <block id="0322f0a521f84e22afd1df9ed7f765db" category="list-text">Geben Sie im Feld *Snapshot-Name* einen Snapshot-Namen ein.</block>
+  <block id="4c01998cfbe91538bc592922c3e8734f" category="list-text">Wählen Sie optional ein Etikett aus oder erstellen Sie ein neues Etikett.</block>
+  <block id="923a0a2b244437dc531c8a64263b0020" category="list-text">Optional: *Machen Sie diesen Snapshot unveränderlich*, um zu verhindern, dass der Snapshot während der Aufbewahrungsfrist gelöscht wird.</block>
+  <block id="f7485ffd44c64cac23a73493d66e3cf4" category="summary">Passen Sie die SSD-Speicherkapazität eines FSx for ONTAP -Dateisystems manuell an, um die Anforderungen Ihrer projektbasierten Workloads mit unterschiedlichen aktiven Arbeitssätzen zu erfüllen.</block>
+  <block id="f091318898763a58ec22bd1c8c205e0b" category="doc">Passen Sie die Dateisystemkapazität in der Workload Factory an</block>
+  <block id="36ce9e23b4485aac42f272cf012cfd85" category="paragraph">Passen Sie die Speicherkapazität des Solid-State-Laufwerks (SSD) eines FSx for ONTAP Dateisystems manuell an, um die Anforderungen Ihrer projektbasierten Workloads mit unterschiedlichen aktiven Arbeitssätzen zu erfüllen.</block>
+  <block id="383573d373c886b1029b549fd3ab5636" category="paragraph">Erhöhen Sie die SSD-Speicherkapazität eines FSx for ONTAP -Dateisystems, wenn die Menge der verwendeten SSD-Speicherkapazität einen von Ihnen angegebenen Schwellenwert überschreitet, oder verringern Sie die SSD-Speicherkapazität, wenn Arbeitssätze inaktiv sind, um die Kosteneffizienz zu verbessern.</block>
+  <block id="3c600356591a28f18cc21513190e4cb5" category="paragraph">Mit der elastischen Dateisystemkapazität können Sie die Kapazität Ihrer Dateisysteme dynamisch an die Anforderungen Ihrer Arbeitslasten anpassen.</block>
+  <block id="33f1d74921ddc533e52016f4d1a89af9" category="paragraph">Das Anpassen der Dateisystemkapazität wirkt sich auf die IOPS Ihres FSx for ONTAP Dateisystems aus.</block>
+  <block id="fa86270fd952d04b42ae4b5586eabdef" category="paragraph">Wenn Sie automatisch<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> Bei einem Dateisystem erhöhen oder verringern sich die IOPS um 3 IOPS, wenn die SSD-Kapazität um 1 GiB erhöht oder verringert wird.</block>
+  <block id="7c4988a80f96ebde3a91c80963bb725d" category="paragraph">Um die Kapazität eines Dateisystems anzupassen, müssen Sie zunächst<block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block> .</block>
+  <block id="c58a7814e09e2136ba19c01a85ca87cb" category="list-text">Wählen Sie im Dashboard *SSD-Kapazität anpassen*.</block>
+  <block id="22bc230291a62283fe347ecaef11e64d" category="list-text">Wählen Sie das Dateisystem aus, für das Sie die Kapazität anpassen möchten, und wählen Sie dann *Weiter*.</block>
+  <block id="c68dcfd2e9aa85bd2ccb1ef7efb36856" category="paragraph">*Einsparpotenzial* ist die Empfehlung zur Kapazitätsreduzierung.</block>
+  <block id="ab60333415618ec9fe15bd79adf222ee" category="list-text">Geben Sie im Dialogfeld „SSD-Kapazität anpassen“ eine Zahl für „Bereitgestellte Kapazität“ ein.</block>
+  <block id="a7c0ac9b435ae713a713a271638a992c" category="summary">Bearbeiten Sie Snapshot-Einstellungen, aktivieren Sie den Verzeichniszugriff und löschen Sie Snapshots, um Ihre Snapshots und den Datenschutz in der Workload Factory zu verwalten.</block>
+  <block id="3893740c49122217b62d6529f246ffc7" category="doc">Verwalten von Snapshots eines FSx for ONTAP -Volumes</block>
+  <block id="57e53df8f66509e4ecdabdca5294937b" category="section-title">Bearbeiten eines Schnappschusses</block>
+  <block id="5c5cf4cdf8dd88c1f0fa6aea2ecac35e" category="paragraph">Bearbeiten Sie den Namen, die Bezeichnung und die Aufbewahrungsdauer eines Snapshots.  Wenn der Snapshot noch nicht unveränderlich ist, können Sie ihn unveränderlich machen.</block>
+  <block id="c0f24431ed90baa037117b26a5a22d22" category="list-text">Wählen Sie auf der Registerkarte *Volumes* das Drei-Punkte-Menü für das Volume mit dem zu bearbeitenden Snapshot aus.</block>
+  <block id="a8221bf4844208248f5cb74e74c739fd" category="list-text">Wählen Sie auf der Seite „Snapshots verwalten“ das Drei-Punkte-Menü für den zu bearbeitenden Snapshot und dann *Bearbeiten* aus.</block>
+  <block id="bea584725867b5b5e974a646929f56b4" category="list-text">Im Dialogfeld „Snapshot bearbeiten“ können Sie Folgendes bearbeiten:</block>
+  <block id="22d1cb21d295d88b771f81456e349920" category="list-text">Ändern Sie den Namen.</block>
+  <block id="3cdc796d3f8c10c8504e7f62ac85a560" category="list-text">Ändern Sie die Bezeichnung.</block>
+  <block id="c51b9f8bfc3d25cb60ce2f85fa473dab" category="list-text">Ändern Sie die Aufbewahrungsdauer.</block>
+  <block id="a461891ce745b6e53163499dd6a76301" category="paragraph">Wenn der Snapshot bereits unveränderlich ist, können Sie diese Einstellung nicht bearbeiten.</block>
+  <block id="56581c15d8f7e3ec52e678e2807f1810" category="section-title">Auf einen Snapshot zugreifen</block>
+  <block id="1733a9f5d8e959e38355a0dbe35d5065" category="paragraph">Aktivieren Sie den Zugriff auf das Snapshot-Verzeichnis, um Benutzern die Möglichkeit zu geben, selbstständig auf Snapshots zuzugreifen.</block>
+  <block id="85e036beddd0153b2b24fc252c5930af" category="list-text">Wählen Sie auf der Registerkarte *Volumes* das Drei-Punkte-Menü für das Volume mit dem Snapshot aus, auf das Sie zugreifen möchten.</block>
+  <block id="5221d99ac8e89eb52e64918972f35b5a" category="list-text">Wählen Sie auf der Seite „Snapshots verwalten“ das Drei-Punkte-Menü für den Snapshot aus, auf den Sie zugreifen möchten, und wählen Sie dann *Zugriff*.</block>
+  <block id="07c4a8c1c625be343c227870575c8d87" category="list-text">Wählen Sie im Dialogfeld „Auf Snapshot zugreifen“ die Option „Zugriff auf Snapshot-Verzeichnis aktivieren“, um auf diesen Volume-Snapshot und alle Snapshots des Volumes zuzugreifen.</block>
+  <block id="b222a1837d5e9867712802dd2a235a98" category="list-text">Für NFS-Volumes: Wählen Sie *NFS-Zugriffspfad*, um den NFS-Pfad für den Snapshot anzuzeigen.</block>
+  <block id="3dae4cd8dcc7270203f2f8ea0d079815" category="list-text">Für SMB/CIFS-Volumes: Wählen Sie *SMB-Zugriffspfad*, um den SMB-Pfad für den Snapshot anzuzeigen.</block>
+  <block id="8695344671e89445641e5521e94e092a" category="list-text">Kopieren Sie den Zugriffspfad.</block>
+  <block id="f4b128dfa4315b7560d911b08c3653c2" category="section-title">Wiederherstellen von Daten aus einem Snapshot</block>
+  <block id="05f173e81abaca211df63916cfac7a74" category="paragraph">Sie haben die Möglichkeit, Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherzustellen.</block>
+  <block id="6520c3672c5d01c2976ef1980c6c4f4b" category="paragraph"><block ref="6520c3672c5d01c2976ef1980c6c4f4b" category="inline-link-macro-rx"></block></block>
+  <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">Löschen eines Snapshots</block>
+  <block id="6dbf69edbee88e5a8078a8a4e008a3b8" category="paragraph">Löschen Sie einen Snapshot, um Speicherplatz freizugeben.</block>
+  <block id="65231a1c4b836cdc3226241028b6f5c1" category="paragraph">Unveränderliche Snapshots können erst gelöscht werden, wenn die Aufbewahrungsfrist abgelaufen ist.</block>
+  <block id="ea6e0fbfc66a50ad275a34ced4baee30" category="list-text">Wählen Sie auf der Registerkarte *Volumes* das Drei-Punkte-Menü für das Volume mit dem zu löschenden Snapshot aus.</block>
+  <block id="18c5c678d2db682d1c0c828b0712359a" category="list-text">Wählen Sie auf der Seite „Snapshots verwalten“ das Drei-Punkte-Menü für den zu löschenden Snapshot und dann *Löschen* aus.</block>
+  <block id="89e6716d68072489564767a766ad91b4" category="list-text">Geben Sie im Dialogfeld „Snapshot löschen“ „delete“ ein.</block>
+  <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">Wählen Sie *Löschen*, um den Löschvorgang zu bestätigen.</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="list-title">Ähnliche Informationen</block>
+  <block id="6d2771dfb9453c665603cef4b0fbb11a" category="list-text"><block ref="6d2771dfb9453c665603cef4b0fbb11a" category="inline-link-macro-rx"></block></block>
+  <block id="83920bb8c8a04a2372e330bd4db6becc" category="list-text"><block ref="83920bb8c8a04a2372e330bd4db6becc" category="inline-link-macro-rx"></block></block>
+  <block id="2e5c50a11ce0216fa9a931d0e31f38fb" category="list-text"><block ref="2e5c50a11ce0216fa9a931d0e31f38fb" category="inline-link-macro-rx"></block></block>
+  <block id="5555c9991f89f798392b8981015a49d6" category="doc">Wiederherstellen eines Volumes aus einem Snapshot in der Workload Factory</block>
+  <block id="fedae93e45eef0cf99ae9d3e2dbff802" category="paragraph">In der Workload Factory können Sie Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherstellen.  Der Wiederherstellungsvorgang ermöglicht eine zeitpunktbezogene Wiederherstellung, wenn ein Volume gelöschte oder beschädigte Dateien enthält.</block>
+  <block id="d53b53fb3880fbcc2120f4ebdcb4b727" category="paragraph">Durch die Erstellung eines neuen Volumes aus einem Snapshot wird innerhalb weniger Sekunden eine Kopie eines gesamten Volumes erstellt, unabhängig von der Volumegröße.  Die neu erstellte Kopie stellt ein neues Volume dar.</block>
+  <block id="22509908f6a972a65b5370b282ed646c" category="list-text">Erhöhter Volumeverbrauch: Nachdem Sie ein Volume aus einem Snapshot erstellt haben, verfügen Sie über zwei unabhängige Volumes, die beide Kapazität des Host-Dateisystems verbrauchen.  Stellen Sie sicher, dass Sie über genügend Kapazität verfügen, um diesen Vorgang abzuschließen.</block>
+  <block id="8babf692a891c5060bb678dacf1bb2ad" category="list-text">Wählen Sie auf der Seite „Snapshots verwalten“ das Drei-Punkte-Menü für den wiederherzustellenden Snapshot und dann *Wiederherstellen* aus.</block>
+  <block id="0c5f6f3cf9344efbd61695ffdf90106f" category="list-text">Wählen Sie im Dialogfeld „Volume aus einem Snapshot wiederherstellen“ eine der folgenden Optionen aus:</block>
+  <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">Wählen Sie mit dem Schalter „Als neues Volume wiederherstellen“ aus.</block>
+  <block id="2321232f7bb400db057064cec47f4904" category="list-text">Stellen Sie Daten aus einem Snapshot auf einem vorhandenen Volume wieder her.  Dieser Vorgang löscht dauerhaft alle Daten, die nach der Erstellung des Snapshots geändert wurden.</block>
+  <block id="b271a75b2d121a8cb5f59ae458394323" category="section-title">09. September 2025</block>
+  <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">Verwenden von Snapshots</block>
+  <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">Verwenden Sie Backups im Objektspeicher</block>
+  <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">Verwenden der Replikation</block>
 </blocks>

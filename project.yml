@@ -53,7 +53,7 @@ sidebar:
       entries:
       - title: Datensicherung im Überblick
         url: "/data-protection-overview.html"
-      - title: Verwalten von Snapshots
+      - title: Verwenden von Snapshots
         entries:
         - title: Erstellen Sie einen Snapshot
           url: "/create-snapshot.html"
@@ -61,15 +61,13 @@ sidebar:
           url: "/create-snapshot-policy.html"
         - title: Wiederherstellen eines Volumes aus einem Snapshot
           url: "/restore-volume-from-snapshot.html"
-        - title: Erstellen Sie ein neues Volume aus einem Snapshot
-          url: "/create-volume-from-snapshot.html"
-      - title: Managen Sie Backups in Objektspeicher
+      - title: Verwenden Sie Backups im Objektspeicher
         entries:
         - title: Erstellen Sie eine manuelle Sicherung
           url: "/create-backup.html"
         - title: Stellen Sie ein Volume aus einem Backup wieder her
           url: "/restore-from-backup.html"
-      - title: Managen Sie die Replikation
+      - title: Verwenden der Replikation
         entries:
         - title: Erstellen einer Replikationsbeziehung
           url: "/create-replication.html"
@@ -145,6 +143,8 @@ sidebar:
           url: "/manage-snapshot-policy.html"
         - title: Aktivieren und bearbeiten Sie Snapshots für die langfristige Aufbewahrung
           url: "/enable-snapshots-long-term.html"
+        - title: Verwalten von Snapshots
+          url: "/manage-snapshots.html"
       - title: Backups
         entries:
         - title: Management des FSX für ONTAP-Backup-Zeitplans

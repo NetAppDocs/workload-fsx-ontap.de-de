@@ -29,17 +29,18 @@ Sie müssen einen Link zuordnen, um einen manuellen Snapshot eines Volumes zu er
 . Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume enthält, für das Sie einen Snapshot erstellen möchten, und wählen Sie dann *Verwalten* aus.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das mit Snapshots geschützt werden soll.
-. Wählen Sie *Data Protection actions*, *Snapshots* und dann *Create a Snapshot*.
-. Geben Sie im Dialogfeld Snapshot erstellen einen Snapshot-Namen in das Feld *Snapshot-Name* ein.
-. Optional: Machen Sie den Snapshot unveränderlich, um zu verhindern, dass der Snapshot während des Aufbewahrungszeitraums gelöscht wird.
+. Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
+. Wählen Sie auf der Seite „Snapshots verwalten“ die Option „Snapshot erstellen“ aus.
+. Führen Sie im Dialogfeld „Snapshot erstellen“ die folgenden Schritte aus:
 +
-.. Aktivieren Sie *unveränderliche Snapshots*.
+.. Geben Sie im Feld *Snapshot-Name* einen Snapshot-Namen ein.
+.. Wählen Sie optional ein Etikett aus oder erstellen Sie ein neues Etikett.
 .. Legen Sie die *Aufbewahrungsfrist* als Anzahl von Stunden, Tagen, Monaten oder Jahren fest.
-.. Akzeptieren Sie die Aussage zu unveränderlichen Snapshots.
+.. Optional: *Machen Sie diesen Snapshot unveränderlich*, um zu verhindern, dass der Snapshot während der Aufbewahrungsfrist gelöscht wird.
++
+Akzeptieren Sie die Aussage zu unveränderlichen Snapshots.
+
 
 
 . Wählen Sie *Erstellen*.
 
-
-.Ergebnis
-Das Volume verfügt über eine Snapshot-Kopie.

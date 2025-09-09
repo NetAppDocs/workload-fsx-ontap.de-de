@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für eine Storage-VM in einer BlueXP  Workload Factory. 
+summary: Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für eine Speicher-VM in der Workload Factory. 
 ---
-= Erstellen Sie eine Snapshot-Richtlinie für Storage-VMs in der BlueXP  Workload Factory
+= Erstellen einer Snapshot-Richtlinie für Speicher-VMs in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für Storage-VMs in der BlueXP  Workload Factory. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für eine Storage-VM erstellt. Sie können eine Snapshot-Richtlinie für eine Storage-VM in einem Filesystem FSX für ONTAP erstellen. Sie können die Richtlinie auch über mehrere Storage-VMs hinweg gemeinsam nutzen.
+Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für Speicher-VMs in der Workload Factory, um die Erstellung und Aufbewahrung von Snapshots zu verwalten.  Eine Snapshot-Richtlinie definiert, wie das System Snapshots für eine Speicher-VM erstellt.  Sie können eine Snapshot-Richtlinie für eine Speicher-VM in einem FSx for ONTAP -Dateisystem erstellen.  Sie können die Richtlinie auch für mehrere Speicher-VMs freigeben.
 
 .Über diese Aufgabe
 Sie können eine benutzerdefinierte Snapshot-Richtlinie erstellen, die sich von den drei integrierten Snapshot-Richtlinien für FSX für ONTAP unterscheidet:
@@ -65,6 +65,3 @@ Wenn Sie unveränderliche Snapshots aktivieren, werden alle Snapshots in dieser 
 . *Freigabe über Storage-VMs*: Standardmäßig aktiviert. Wenn diese Option aktiviert ist, wird die Snapshot-Richtlinie für alle Storage-VMs im File-System freigegeben. Deaktivieren Sie, um eine Snapshot-Richtlinie für eine einzelne Storage-VM zu erstellen.
 . Wählen Sie *Erstellen*.
 
-
-.Ergebnis
-Die Snapshot-Richtlinie wird erstellt.

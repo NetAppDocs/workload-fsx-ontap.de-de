@@ -4,22 +4,27 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Stellen Sie ein FSX für ONTAP-Volume von einem Snapshot wieder her, wenn das Volume gelöschte oder beschädigte Dateien enthält. 
 ---
-= Stellen Sie ein Volume aus einem Snapshot in der BlueXP -Workload-Fabrik wieder her
+= Wiederherstellen eines Volumes aus einem Snapshot in der Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-In der BlueXP  Workload Factory können Sie ein FSX für ONTAP-Volume aus einem Snapshot wiederherstellen, wenn das Volume gelöschte oder beschädigte Dateien enthält.
+In der Workload Factory können Sie Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherstellen.  Der Wiederherstellungsvorgang ermöglicht eine zeitpunktbezogene Wiederherstellung, wenn ein Volume gelöschte oder beschädigte Dateien enthält.
 
 .Über diese Aufgabe
-Mit diesem Vorgang werden Daten aus einem Snapshot auf einem neuen Volume wiederhergestellt.
+Sie haben die Möglichkeit, Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherzustellen.
+
+Durch die Erstellung eines neuen Volumes aus einem Snapshot wird innerhalb weniger Sekunden eine Kopie eines gesamten Volumes erstellt, unabhängig von der Volumegröße.  Die neu erstellte Kopie stellt ein neues Volume dar.
 
 .Bevor Sie beginnen
-Sie können ein Volume nur aus einem Snapshot wiederherstellen, wenn Sie über eine vorhandene Snapshot-Kopie des Volumes verfügen.
+Beachten Sie die folgenden Einschränkungen, bevor Sie ein Volume aus einem Snapshot erstellen:
 
-Stellen Sie sicher, dass Sie über genügend Kapazität verfügen, um diesen Vorgang abzuschließen.
+* Sie können ein Volume nur aus einem Snapshot wiederherstellen, wenn Sie über eine vorhandene Snapshot-Kopie des Volumes verfügen.
+* Änderungen an Berechtigungsmodellen: Wenn Sie diesen Vorgang zum Umschalten des Protokolltyps des Network-Attached Storage (NAS) verwenden, kann er auch das Berechtigungsmodell wechseln, das der Sicherheitstyp bereitstellt. Es kann zu Problemen mit Dateizugriffsberechtigungen kommen, die Sie nur manuell mit Administratorzugriff mithilfe der NAS-Client-Tools für die Berechtigungseinstellung beheben können.
+* Erhöhter Volumeverbrauch: Nachdem Sie ein Volume aus einem Snapshot erstellt haben, verfügen Sie über zwei unabhängige Volumes, die beide Kapazität des Host-Dateisystems verbrauchen.  Stellen Sie sicher, dass Sie über genügend Kapazität verfügen, um diesen Vorgang abzuschließen.
+
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -27,8 +32,19 @@ Stellen Sie sicher, dass Sie über genügend Kapazität verfügen, um diesen Vor
 . Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das von einem Snapshot wiederhergestellt werden soll.
-. Wählen Sie *Data Protection actions*, *Snapshots* und dann *Restore Volume from a Snapshot*.
-. Wählen Sie im Dialogfeld Wiederherstellungsdatenträger aus einem Snapshot im Feld *Snapshot-Name* den wiederherzustellenden Snapshot aus dem Dropdown-Menü aus.
-. Geben Sie im Feld *restored Volume Name* einen eindeutigen Namen für das wiederherzustellende Volume ein.
+. Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
+. Wählen Sie auf der Seite „Snapshots verwalten“ das Drei-Punkte-Menü für den wiederherzustellenden Snapshot und dann *Wiederherstellen* aus.
+. Wählen Sie im Dialogfeld „Volume aus einem Snapshot wiederherstellen“ eine der folgenden Optionen aus:
++
+** Wählen Sie mit dem Schalter „Als neues Volume wiederherstellen“ aus.
++
+Geben Sie im Feld *restored Volume Name* einen eindeutigen Namen für das wiederherzustellende Volume ein.
+
+** Stellen Sie Daten aus einem Snapshot auf einem vorhandenen Volume wieder her.  Dieser Vorgang löscht dauerhaft alle Daten, die nach der Erstellung des Snapshots geändert wurden.
++
+Akzeptieren Sie die Aussage, um fortzufahren.
+
+
+
 . Wählen Sie *Wiederherstellen*.
 
