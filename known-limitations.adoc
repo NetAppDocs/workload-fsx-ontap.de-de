@@ -15,6 +15,18 @@ Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, d
 
 
 
+== Regionale Unterstützung
+
+Die folgenden AWS-Regionen werden nicht unterstützt:
+
+* Regionen Chinas
+* GovCloud (USA)-Regionen
+* Geheime Cloud
+* Streng geheime Cloud
+
+
+
+
 == Einschränkungen bei HA-Paaren
 
 * Dieser Vorgang kann etwa 30 Minuten dauern.
