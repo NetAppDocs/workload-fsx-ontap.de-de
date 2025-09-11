@@ -23,7 +23,6 @@ Beachten Sie die folgenden Einschränkungen, bevor Sie ein Volume aus einem Snap
 
 * Sie können ein Volume nur aus einem Snapshot wiederherstellen, wenn Sie über eine vorhandene Snapshot-Kopie des Volumes verfügen.
 * Änderungen an Berechtigungsmodellen: Wenn Sie diesen Vorgang zum Umschalten des Protokolltyps des Network-Attached Storage (NAS) verwenden, kann er auch das Berechtigungsmodell wechseln, das der Sicherheitstyp bereitstellt. Es kann zu Problemen mit Dateizugriffsberechtigungen kommen, die Sie nur manuell mit Administratorzugriff mithilfe der NAS-Client-Tools für die Berechtigungseinstellung beheben können.
-* Erhöhter Volumeverbrauch: Nachdem Sie ein Volume aus einem Snapshot erstellt haben, verfügen Sie über zwei unabhängige Volumes, die beide Kapazität des Host-Dateisystems verbrauchen.  Stellen Sie sicher, dass Sie über genügend Kapazität verfügen, um diesen Vorgang abzuschließen.
 
 
 .Schritte
