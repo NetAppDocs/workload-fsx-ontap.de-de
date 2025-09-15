@@ -17,6 +17,9 @@ Erhöhen Sie die SSD-Speicherkapazität eines FSx for ONTAP -Dateisystems, wenn 
 
 Alternativ können Sie link:enable-auto-capacity-management.html["Aktivieren Sie die automatische Kapazitätsverwaltungsfunktion"]mit so Workload Factory die Dateisystemkapazität für Sie verwalten.
 
+
+NOTE: Die Verringerung der SSD-Speicherkapazität wird nur für Dateisysteme der zweiten Generation unterstützt.
+
 .Über diese Aufgabe
 Mit der elastischen Dateisystemkapazität können Sie die Kapazität Ihrer Dateisysteme dynamisch an die Anforderungen Ihrer Arbeitslasten anpassen.
 
