@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-nfs-export-policy.html 
 keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
-summary: Managen Sie die NFS-Exportrichtlinie für ein Volume, das in der BlueXP  Workload-Fabrik NFSv3- oder NFSv4.1-Protokolltypen verwendet. 
+summary: Verwalten Sie die NFS-Exportrichtlinie für ein Volume, das die Protokolltypen NFSv3 oder NFSv4.1 in NetApp Workload Factory verwendet. 
 ---
-= Managen Sie die NFS-Exportrichtlinie für ein Volume in der BlueXP  Workload Factory
+= Verwalten der NFS-Exportrichtlinie für ein Volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Managen Sie die NFS-Exportrichtlinie für ein Volume, das in der BlueXP  Workload-Fabrik NFSv3- oder NFSv4.1-Protokolltypen verwendet.
+Verwalten Sie die NFS-Exportrichtlinie für ein Volume, das die Protokolltypen NFSv3 oder NFSv4.1 in NetApp Workload Factory verwendet.
 
 .Über diese Aufgabe
 Beim Management der Exportrichtlinie eines Volumes werden Regeln für den Export hinzugefügt, die Client-Spezifikationen, Zugriffssteuerung, Super-User-Zugriff und NFS-Version detailliert beschreiben. Sie können mehr als eine Exportrichtlinie hinzufügen und sie priorisieren.
@@ -29,10 +29,11 @@ Bestimmen Sie die Clientspezifikationen für die Regeln der Exportrichtlinie. G�
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü für das Volume aus, um die NFS-Exportrichtlinie für zu ändern.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie die NFS-Exportrichtlinie ändern möchten.
 . Wählen Sie *Erweiterte Aktionen* und dann *NFS-Exportrichtlinie bearbeiten*.
 . Geben Sie auf der Seite „NFS-Exportrichtlinie bearbeiten“ Folgendes an:
 +

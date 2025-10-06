@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-link.html 
 keywords: connect, connection, link, lambda link, associate link, create link, authenticate link 
-summary: Sie können Links erstellen und verwalten, um eine Vertrauensbeziehung und Konnektivität zwischen einem BlueXP -Workload-Werkskonto und einem oder mehreren FSX for ONTAP-Dateisystemen bereitzustellen. 
+summary: Sie können Links erstellen und verwalten, um eine Vertrauensbeziehung und Konnektivität zwischen einem NetApp Workload Factory-Konto und einem oder mehreren FSx for ONTAP -Dateisystemen bereitzustellen. 
 ---
 = Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Sie können Links erstellen und verwalten, um eine Vertrauensbeziehung 
 
 
 [role="lead"]
-Um erweiterte ONTAP Verwaltungsvorgänge durchzuführen, richten Sie eine Verbindung zwischen Ihrem Workload Factory-Konto und einem oder mehreren FSx for ONTAP -Dateisystemen ein.  Dabei werden neue und bestehende Lambda-Links verknüpft und die Links authentifiziert.  Mithilfe der Link-Zuordnung können Sie bestimmte Funktionen direkt vom FSx for ONTAP -Dateisystem aus überwachen und verwalten, die über die Amazon FSx for ONTAP -API nicht verfügbar sind.
+Um erweiterte ONTAP Verwaltungsvorgänge durchzuführen, richten Sie eine Verbindung zwischen Ihrem Workload Factory-Konto und einem oder mehreren FSx for ONTAP -Dateisystemen ein. Dabei werden neue und bestehende Lambda-Links verknüpft und die Links authentifiziert. Mithilfe der Link-Zuordnung können Sie bestimmte Funktionen direkt vom FSx for ONTAP -Dateisystem aus überwachen und verwalten, die über die Amazon FSx for ONTAP -API nicht verfügbar sind.
 
 link:links-overview.html["Weitere Informationen zu Links"].
 
@@ -20,7 +20,7 @@ Links nutzen AWS Lambda, um Code als Reaktion auf Ereignisse auszuführen und di
 
 Sie können in Ihrem Konto einen Link erstellen, wenn Sie ein FSx für ONTAP Dateisystem definieren.  Der Link wird für dieses Dateisystem verwendet und kann für andere FSx for ONTAP Dateisysteme verwendet werden.  Sie können auch später einen Link für ein Dateisystem zuordnen.
 
-Für Links ist eine Authentifizierung erforderlich.  Sie können Links mithilfe von Anmeldeinformationen authentifizieren, die im Anmeldeinformationsdienst der Workload Factory gespeichert sind, oder mit Ihren Anmeldeinformationen, die im AWS Secrets Manager gespeichert sind.  Pro Link wird nur eine Authentifizierungsmethode unterstützt.  Wenn Sie beispielsweise die Link-Authentifizierung mit AWS Secrets Manager auswählen, können Sie die Authentifizierungsmethode später nicht mehr ändern.
+Für Links ist eine Authentifizierung erforderlich. Sie können Links mithilfe von Anmeldeinformationen authentifizieren, die im Anmeldeinformationsdienst von Workload Factory gespeichert sind, oder mithilfe Ihrer Anmeldeinformationen, die im AWS Secrets Manager gespeichert sind. Pro Link wird nur eine Authentifizierungsmethode unterstützt. Wenn Sie beispielsweise die Link-Authentifizierung mit AWS Secrets Manager auswählen, können Sie die Authentifizierungsmethode später nicht mehr ändern.
 
 
 NOTE: AWS Secrets Manager wird bei der Verwendung eines Connectors nicht unterstützt.
@@ -33,13 +33,13 @@ Die Verknüpfung eines neuen Links umfasst die Erstellung und Verknüpfung.
 
 Sie haben in diesem Workflow zwei Möglichkeiten, Links zu erstellen – automatisch oder manuell. Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Link zu erstellen.
 
-* Automatisch: Erstellt einen Link mit automatischer Registrierung über die Workload Factory.  Dies erfordert Token für die Workload-Fabrikautomatisierung und der CloudFormation-Code ist kurzlebig und bis zu sechs Stunden nutzbar.
+* Automatisch: Erstellt einen Link mit automatischer Registrierung über Workload Factory.  Ein automatisch erstellter Link erfordert Token für die Workload Factory-Automatisierung und der CloudFormation-Code ist kurzlebig.  Die Nutzungsdauer beträgt maximal sechs Stunden.
 * Manuell: Erstellt einen Link mit manueller Registrierung mithilfe von CloudFormation oder Terraform aus der Codebox.  Der Code bleibt bestehen und gibt Ihnen mehr Zeit, den Vorgang abzuschließen.  Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Security und DevOps arbeiten, die möglicherweise zuerst die erforderlichen Berechtigungen erteilen müssen, um die Linkerstellung abzuschließen.
 
 
 .Bevor Sie beginnen
 * Sie sollten überlegen, welche Link-Erstelloption Sie verwenden.
-* Sie benötigen mindestens ein FSX für ONTAP-Dateisystem in der Workload-Fabrik. Um FSx for ONTAP-Dateisysteme zu erkennen oder zu erstellen, benötigen Sie ein AWS-Konto mit Berechtigungen für FSx for ONTAP-Instanzen und link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["Fügen Sie Anmeldeinformationen in der Workload Factory hinzu"^] mit _Nur-Lese_- oder _Lese-/Schreib_-Berechtigungen für die Speicherverwaltung.
+* Sie müssen mindestens ein FSx für ONTAP Dateisystem in Workload Factory haben.  Um FSx for ONTAP Dateisysteme zu erkennen oder zu erstellen, benötigen Sie ein AWS-Konto mit Berechtigungen für FSx for ONTAP Instanzen undlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["Anmeldeinformationen in Workload Factory hinzufügen"^] mit _Nur-Lese_- oder _Lese-/Schreib_-Berechtigungen für die Speicherverwaltung.
 * Die folgenden Ports müssen in der mit dem FSx for ONTAP-Dateisystem verknüpften Sicherheitsgruppe für die Link-Konnektivität geöffnet sein.
 +
 ** Für die Workload Factory-Konsole: Port 443 (HTTPS)
@@ -90,17 +90,18 @@ Sie haben in diesem Workflow zwei Möglichkeiten, Links zu erstellen – automat
 ====
 .Automatisch erstellen
 --
-Erstellen und registrieren Sie den Link mit CloudFormation automatisch innerhalb der Workload Factory.
+Verwenden Sie CloudFormation, um den Link automatisch in Workload Factory zu erstellen und zu registrieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Link zuordnen*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, dem Sie einen Link zuordnen möchten, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
 . Geben Sie auf der Seite „Link erstellen“ Folgendes an:
 +
 .. *Linkname*: Geben Sie den Namen ein, den Sie für diesen Link verwenden möchten. Der Name muss innerhalb Ihres Kontos eindeutig sein.
-.. *AWS Secrets Manager*: Optional. Ermöglicht es der Workload Factory, FSX for ONTAP Zugangsdaten von Ihrem AWS Secrets Manager abzurufen.
+.. *AWS Secrets Manager*: Optional.  Ermöglicht Workload Factory, FSx für ONTAP -Zugriffsdaten von Ihrem AWS Secrets Manager abzurufen.
 +
 Der Link-Bereitstellungsstapel fügt der Lambda-Berechtigungsrichtlinie automatisch den folgenden standardmäßigen ARN-Regex des geheimen Managers hinzu: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` .
 
@@ -155,7 +156,7 @@ Beachten Sie, dass Lambda drei Berechtigungen erteilt werden, wenn Sie die Cloud
 +
 Sie können den Status der Linkerstellung auf der Seite „Ereignisse“ überwachen.  Dies sollte nicht länger als 5 Minuten dauern.
 
-. Kehren Sie zur Workload-Werkseinstellungen zurück, und Sie sehen, dass der Link mit dem FSX für ONTAP-Dateisystem verknüpft ist.
+. Kehren Sie zur Workload Factory-Schnittstelle zurück und Sie werden sehen, dass der Link mit dem FSx for ONTAP -Dateisystem verknüpft ist.
 
 
 --
@@ -165,13 +166,14 @@ Sie können eine Verknüpfung mit zwei Infrastructure-as-Code (IaC)-Tools aus de
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Link zuordnen*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, dem Sie einen Link zuordnen möchten, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
 . Wählen Sie auf der Seite „Link erstellen“ CloudFormation oder Terraform aus der Codebox aus und geben Sie dann Folgendes ein:
 +
 .. *Linkname*: Geben Sie den Namen ein, den Sie für diesen Link verwenden möchten. Der Name muss innerhalb Ihres Kontos eindeutig sein.
-.. *AWS Secrets Manager*: Optional. Ermöglicht es der Workload Factory, FSX for ONTAP Zugangsdaten von Ihrem AWS Secrets Manager abzurufen.
+.. *AWS Secrets Manager*: Optional.  Ermöglicht Workload Factory, FSx für ONTAP -Zugriffsdaten von Ihrem AWS Secrets Manager abzurufen.
 +
 Der Link-Bereitstellungsstapel fügt der Lambda-Berechtigungsrichtlinie automatisch den folgenden standardmäßigen ARN-Regex des geheimen Managers hinzu: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` .
 
@@ -222,7 +224,7 @@ Nachdem Sie den Stapel erfolgreich erstellt haben, fügen Sie die Lambda-ARN in 
 +
 Sie können den Status der Linkerstellung auf der Seite „Ereignisse“ überwachen.  Dies sollte nicht länger als 5 Minuten dauern.
 
-. Kehren Sie zur Workload-Werkseinstellungen zurück, und Sie sehen, dass der Link mit dem FSX für ONTAP-Dateisystem verknüpft ist.
+. Kehren Sie zur Workload Factory-Schnittstelle zurück und Sie werden sehen, dass der Link mit dem FSx for ONTAP -Dateisystem verknüpft ist.
 
 
 --
@@ -238,8 +240,9 @@ Nachdem Sie einen Link erstellt haben, verknüpfen Sie ihn mit einem oder mehrer
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um einen Link zu verknüpfen, und wählen Sie dann *Link zuordnen*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, dem Sie einen Link zuordnen möchten, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie auf der Link-Seite „Mitarbeiter“ die Option *vorhandenen Link verknüpfen*, wählen Sie den Link aus und wählen Sie *Weiter*.
 . Wählen Sie den Authentifizierungsmodus aus.
 +

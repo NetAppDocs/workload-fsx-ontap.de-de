@@ -11,14 +11,15 @@ summary: Aktualisieren Sie Snapshot-Daten, die in einer Replikationsbeziehung zu
 
 
 [role="lead"]
-Eine Replizierungsbeziehung verfügt über einen festgelegten Replizierungszeitplan. Sie können jedoch die zwischen Quell- und Ziel-Volumes in der BlueXP  Workload-Fabrik übertragenen Snapshot-Daten jederzeit manuell aktualisieren.
+Eine Replikationsbeziehung verfügt über einen festgelegten Replikationsplan, Sie können die zwischen Quell- und Zielvolumes übertragenen Snapshot-Daten in NetApp Workload Factory jedoch jederzeit manuell aktualisieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der zu aktualisierenden Replikationsbeziehung aus.
+. Wählen Sie auf der Registerkarte „Replikationsbeziehungen“ das Aktionsmenü der zu aktualisierenden Replikationsbeziehung aus.
 . Wählen Sie *Jetzt aktualisieren*.
 . Wählen Sie im Dialogfeld Aktualisieren die Option *Jetzt aktualisieren*.
 

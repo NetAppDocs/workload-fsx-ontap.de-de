@@ -4,14 +4,14 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication 
 summary: Wenden Sie eine Replikationsbeziehung um, damit das Ziel-Volume das Quell-Volume wird. 
 ---
-= Wenden Sie eine Replikationsbeziehung in der BlueXP  Workload Factory um
+= Umkehren einer Replikationsbeziehung in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Wenden Sie eine Replikationsbeziehung in der BlueXP  Workload Factory zurück, so dass das Ziel-Volume das Quell-Volume wird.
+Kehren Sie eine Replikationsbeziehung in NetApp Workload Factory um, sodass das Zielvolume zum Quellvolume wird.
 
 Rückwärtsgänge werden für folgende Vorgänge unterstützt:
 
@@ -32,10 +32,11 @@ Stellen Sie sicher, dass Sie die aktuellen und zukünftigen Rollen Ihrer Quell- 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der Replikationsbeziehung aus, die umgekehrt werden soll.
+. Wählen Sie auf der Registerkarte „Replikationsbeziehungen“ das Aktionsmenü der Replikationsbeziehung aus, die Sie umkehren möchten.
 . Wählen Sie *Beziehung umkehren*.
 . Wählen Sie im Dialogfeld Beziehung umkehren die Option *Umkehren* aus.
 

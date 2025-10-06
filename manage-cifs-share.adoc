@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create 
-summary: Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in der Workload Factory umfasst das Erstellen, Bestimmen des Benutzer- und Gruppenzugriffs und das Löschen. 
+summary: Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in Workload Factory umfasst das Erstellen, Bestimmen des Benutzer- und Gruppenzugriffs sowie das Löschen. 
 ---
-= Verwalten der SMB/CIFS-Freigabe für ein Volume in der Workload Factory
+= Verwalten der SMB/CIFS-Freigabe für ein Volume in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in der Workload Factory umfasst die Erstellung von SMB/CIFS-Freigaben, die Bestimmung der Benutzer und Gruppen, denen Zugriff gewährt werden soll, und der ihnen zu erteilenden Berechtigungsstufe sowie das Löschen von SMB/CIFS-Freigaben.
+Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in Workload Factory umfasst das Erstellen von SMB/CIFS-Freigaben, das Bestimmen der Benutzer und Gruppen, denen Zugriff gewährt werden soll, und der ihnen zu erteilenden Berechtigungsstufe sowie das Löschen von SMB/CIFS-Freigaben.
 
 .Bevor Sie beginnen
 Bevor Sie beginnen, gehen Sie wie folgt vor:
@@ -28,10 +28,11 @@ Befolgen Sie die Schritte zum Erstellen einer SMB/CIFS-Freigabe für ein Volume.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
 . Wählen Sie *Erweiterte Aktionen* und dann *SMB/CIFS-Freigaben verwalten*.
 . Wählen Sie auf der Seite „SMB/CIFS-Freigaben verwalten“ die Option *SMB/CIFS-Freigabe erstellen* aus.
 . Geben Sie im Dialogfeld „SMB/CIFS-Freigabe erstellen“ Folgendes ein:
@@ -68,10 +69,10 @@ Befolgen Sie die Schritte, um die SMB/CIFS-Freigabeeinstellungen für ein Volume
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
 . Wählen Sie *Erweiterte Aktionen* und dann *SMB/CIFS-Freigaben verwalten*.
 . Wählen Sie auf der Seite „SMB/CIFS-Freigaben verwalten“ die Option „Anzeigen und bearbeiten“ aus.
 . Ändern Sie die SMB/CIFS-Zugriffsberechtigungen oder die Benutzer oder Gruppen, denen Berechtigungen erteilt werden sollen.
@@ -89,12 +90,12 @@ Befolgen Sie die Schritte zum Löschen einer SMB/CIFS-Freigabe für ein Volume.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.
 . Wählen Sie *Erweiterte Aktionen* und dann *SMB/CIFS-Freigaben verwalten*.
-. Wählen Sie auf der Seite „SMB/CIFS-Freigaben verwalten“ das Drei-Punkte-Menü der SMB/CIFS-Freigabe und dann *Löschen* aus.
+. Wählen Sie auf der Seite „SMB/CIFS-Freigaben verwalten“ das Aktionsmenü der SMB/CIFS-Freigabe und dann *Löschen* aus.
 +
 Durch das Löschen der SMB/CIFS-Freigabe ist sie für alle Benutzer, die sie mounten möchten, nicht mehr verfügbar und nicht mehr zugänglich.
 

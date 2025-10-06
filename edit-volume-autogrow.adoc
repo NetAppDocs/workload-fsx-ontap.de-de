@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: Aktivieren Sie die automatische Volumevergrößerung, damit die Workload Factory die Volumekapazität für Sie verwalten kann. Sie können sie jederzeit deaktivieren. 
+summary: Aktivieren Sie die automatische Volumevergrößerung, damit Workload Factory die Volumekapazität für Sie verwalten kann.  Sie können es jederzeit deaktivieren. 
 ---
-= Aktivieren Sie die automatische Volumevergrößerung in der Workload Factory
+= Aktivieren Sie die automatische Volumevergrößerung in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aktivieren Sie die automatische Volumevergrößerung, damit die Workload Factory die Volumekapazität für Sie verwalten kann. Sie können sie jederzeit deaktivieren.
+Aktivieren Sie die automatische Volumevergrößerung, damit Workload Factory die Volumekapazität für Sie verwalten kann.  Sie können es jederzeit deaktivieren.
 
 Optional können Sie die Volume-Kapazität eines Volumes jederzeit manuell über die erhöhen link:increase-volume-capacity.html["Erhöhen Sie die Volume-Kapazität"].
 
@@ -23,10 +23,11 @@ Um die automatische Volumenvergrößerung zu aktivieren, müssen Sie einen Link 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte FSX for ONTAP das drei-Punkt-Menü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü für das Volume aus, das Sie ändern möchten.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, das Sie ändern möchten.
 . Wählen Sie *Grundlegende Aktionen* und dann *Automatische Lautstärkevergrößerung festlegen*.
 . Aktivieren Sie im Dialogfeld „Automatische Vergrößerung festlegen“ die automatische Vergrößerung des Volumes, um die Volume-Kapazität automatisch zu erweitern, bis das Volume die maximale Größe erreicht. Diese Funktion trägt der steigenden Datennutzung Rechnung und gewährleistet einen unterbrechungsfreien Betrieb.
 +

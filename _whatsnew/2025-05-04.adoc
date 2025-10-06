@@ -44,7 +44,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Erstel
 
 ==== Unterstützung für umgekehrte Replizierung von FSX für ONTAP nach On-Premises
 
-Die umgekehrte Replizierung ist jetzt von einem FSX für ONTAP-Filesystem zu einem lokalen ONTAP-Cluster in der Workload-Factory-Konsole verfügbar.
+Die umgekehrte Replikation von einem FSx für ONTAP -Dateisystem zu einem lokalen ONTAP Cluster ist jetzt innerhalb der Workload Factory-Konsole verfügbar.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html["Umgekehrte Replikation"]
 
@@ -124,4 +124,4 @@ Workload Factory unterstützt jetzt alternative Sätze von ONTAP-Anmeldeinformat
 
 === Terminologie für Berechtigungen wurde aktualisiert
 
-In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.
+In der Benutzeroberfläche und Dokumentation von Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.

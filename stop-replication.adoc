@@ -2,23 +2,24 @@
 sidebar: sidebar 
 permalink: stop-replication.html 
 keywords: stop replication, break replication 
-summary: Stoppen einer Replikationsbeziehung zwischen Quell- und Ziel-Volumes in der BlueXP  Workload Factory. 
+summary: Beenden Sie eine Replikationsbeziehung zwischen Quell- und Zielvolumes in NetApp Workload Factory. 
 ---
-= Stoppen Sie eine Replizierungsbeziehung in der BlueXP  Workload Factory
+= Beenden einer Replikationsbeziehung in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Stoppen Sie eine Replizierungsbeziehung in der BlueXP  Workload Factory. Wenn Sie eine Replikationsbeziehung anhalten, werden geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume angehalten. Das Ziel-Volume wechselt von schreibgeschützt zu Lese-/Schreibzugriff.
+Beenden Sie eine Replikationsbeziehung in NetApp Workload Factory.  Wenn Sie eine Replikationsbeziehung beenden, werden geplante Replikationsaktualisierungen vom Quellvolume zum Zielvolume angehalten.  Der Zieldatenträger wechselt vom schreibgeschützten zum Lese-/Schreibzugriff.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü der Replikationsbeziehung aus, die angehalten werden soll.
+. Wählen Sie auf der Registerkarte „Replikationsbeziehungen“ das Aktionsmenü der Replikationsbeziehung aus, die Sie beenden möchten.
 . Wählen Sie *Pause*.
 . Wählen Sie im Dialogfeld Replikation unterbrechen *Break* aus.
 

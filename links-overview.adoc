@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: Eine Workload-Factory-Verbindung erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen einem Workload-Factory-Konto und einem oder mehreren FSX für ONTAP-Dateisystemen. 
+summary: Ein Workload Factory-Link erstellt eine Vertrauensbeziehung und Konnektivität zwischen einem Workload Factory-Konto und einem oder mehreren FSx for ONTAP Dateisystemen. 
 ---
-= Weitere Informationen zu den BlueXP -Workload-Werkseinstellungen
+= Erfahren Sie mehr über NetApp Workload Factory-Links
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Ein werkseitiger BlueXP -Workload-Link erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen einem werkseitigen Workload-Konto und einem oder mehreren FSX für ONTAP-Dateisystemen. So können Sie bestimmte Filesystem-Funktionen direkt über die ONTAP-REST-API-Aufrufe überwachen und managen, die über die Amazon FSX for ONTAP-API nicht verfügbar sind.
+Ein NetApp Workload Factory-Link erstellt eine Vertrauensbeziehung und Konnektivität zwischen einem Workload Factory-Konto und einem oder mehreren FSx for ONTAP -Dateisystemen.  Auf diese Weise können Sie bestimmte Dateisystemfunktionen direkt über die ONTAP REST-API-Aufrufe überwachen und verwalten, die über die Amazon FSx for ONTAP -API nicht verfügbar sind.
 
-Sie benötigen keinen Link, um mit der Workload Factory zu beginnen, aber in einigen Fällen müssen Sie einen Link erstellen, um alle Workload Factory-Funktionen und Workload-Funktionen freizuschalten.
+Sie benötigen keinen Link, um mit Workload Factory zu beginnen, aber in einigen Fällen müssen Sie einen Link erstellen, um alle Funktionen und Workload-Funktionen von Workload Factory freizuschalten.
 
 
 
 == Warum Links von Vorteil sind
 
-Links sind vorteilhaft, da sie der Workload Factory die Ausführung von Vorgängen ermöglichen, die über die Amazon FSx for ONTAP API nicht nativ verfügbar sind. Links ermöglichen erweiterte ONTAP Funktionen und Automatisierungen, die die Verwaltung von FSx for ONTAP Dateisystemen verbessern.
+Links sind von Vorteil, da sie es Workload Factory ermöglichen, Vorgänge auszuführen, die über die Amazon FSx for ONTAP -API nicht nativ verfügbar sind.  Links ermöglichen erweiterte ONTAP Funktionen und -Automatisierungen, die die Verwaltung von FSx für ONTAP Dateisysteme verbessern.
 
 Hier sind einige Vorteile der Verwendung von Links:
 
-* Über die Verknüpfung kann BlueXP ONTAP -Befehle direkt an Ihr FSx für ONTAP Dateisystem senden und so erweiterte ONTAP Funktionen bereitstellen, die über das hinausgehen, was AWS nativ bietet.
+* Über die Verknüpfung kann die NetApp Konsole ONTAP -Befehle direkt an Ihr FSx für ONTAP Dateisystem senden und so erweiterte ONTAP Funktionen bereitstellen, die über das hinausgehen, was AWS nativ bietet.
 * Links nutzen AWS Lambda, um Code als Reaktion auf Ereignisse auszuführen. Dieser serverlose Ansatz beseitigt die Abhängigkeit von einer in Ihrer VPC ausgeführten Instanz.
 
 
@@ -35,15 +35,15 @@ Links nutzen AWS Lambda Lambda führt Code als Reaktion auf Ereignisse aus und v
 
 Nachdem Sie einen Link erstellt haben, können Sie ihn mit einem oder mehreren FSx for ONTAP -Dateisystemen verknüpfen. Jedes Dateisystem kann nur einem Link im selben NetApp-Konto zugeordnet werden. Wenn Sie mehrere NetApp-Konten haben, kann ein einziges Dateisystem mit zusätzlichen Links unter verschiedenen NetApp-Konten verknüpft werden.
 
-Sie erstellen und verknüpfen Links aus der Speicherarbeitslast in der Arbeitslastfabrik.
+Sie erstellen und verknüpfen Links aus der Speicherarbeitslast in Workload Factory.
 
-Sie können Links mithilfe von Anmeldeinformationen authentifizieren, die im Anmeldeinformationsdienst der Workload Factory gespeichert sind, oder mit Ihren im AWS Secrets Manager gespeicherten Anmeldeinformationen. Workload Factory unterstützt keine Änderung der Authentifizierungsmodi.
+Sie können Links mithilfe von Anmeldeinformationen authentifizieren, die im Anmeldeinformationsdienst von Workload Factory gespeichert sind, oder mithilfe Ihrer Anmeldeinformationen, die im AWS Secrets Manager gespeichert sind.  Die Workload Factory unterstützt keine Änderung des Authentifizierungsmodus.
 
 
 
 == Kosten
 
-Jede Transaktion, die Lambda durchführt, ist kostenpflichtig. Da Lambda als Proxy zwischen den beiden Systemen fungiert, fällt eine Gebühr an, wenn Lambda eine Anforderung an die ONTAP-REST-API auf einem Dateisystem sendet und die Antwort zurück an die Workload-Fabrik sendet.
+Für jede von Lambda durchgeführte Transaktion fallen Gebühren an.  Da Lambda als Proxy zwischen den beiden Systemen fungiert, fallen Gebühren an, wenn Lambda eine Anfrage an die ONTAP REST API auf einem Dateisystem sendet und wenn es die Antwort zurück an Workload Factory sendet.
 
 link:https://aws.amazon.com/lambda/pricing/["Informieren Sie sich über die Kosten bei der Nutzung von AWS Lambda"^]
 
@@ -51,7 +51,7 @@ link:https://aws.amazon.com/lambda/pricing/["Informieren Sie sich über die Kost
 
 == Wenn ein Link erforderlich ist
 
-Workload Factory erfordert einen Link, um einige Informationen anzuzeigen und einige Aufgaben auszuführen. Wenn Sie versuchen, einen Vorgang auszuführen, der einen Link erfordert, und Sie keinen Link mit dem FSx for ONTAP Dateisystem verknüpft haben, werden Sie von der Workload Factory benachrichtigt, dass für den Vorgang ein Link erforderlich ist.
+Workload Factory benötigt einen Link, um bestimmte Informationen anzuzeigen und bestimmte Aufgaben auszuführen.  Wenn Sie versuchen, einen Vorgang auszuführen, der einen Link erfordert, und Sie keinen Link mit dem FSx for ONTAP Dateisystem verknüpft haben, benachrichtigt Sie Workload Factory, dass für den Vorgang ein Link erforderlich ist.
 
 Zu den Funktionen, für die ein Link erforderlich ist, gehören:
 

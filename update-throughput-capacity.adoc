@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: update-throughput-capacity.html 
 keywords: update throughput, change throughput, throughput capacity 
-summary: Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSX für ONTAP-Filesystem in der BlueXP -Workload-Fabrik. 
+summary: Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSx für ONTAP Dateisystem in NetApp Workload Factory. 
 ---
 = Aktualisieren der Durchsatzkapazität eines Dateisystems
 :allow-uri-read: 
@@ -11,14 +11,15 @@ summary: Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSX für 
 
 
 [role="lead"]
-Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSX für ONTAP-Filesystem in der BlueXP -Workload-Fabrik.
+Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSx für ONTAP Dateisystem in NetApp Workload Factory.
 
 Weitere Informationen zu Durchsatzkapazitätsgrenzen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] in der Dokumentation zu AWS FSX for NetApp ONTAP.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, um die Durchsatzkapazität zu aktualisieren, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, für das Sie die Durchsatzkapazität aktualisieren möchten, und wählen Sie dann *Verwalten*.
 . Wählen Sie unter Information das Bleistiftsymbol neben *Durchsatzkapazität*. Das Bleistiftsymbol wird neben dem Dropdown-Pfeil angezeigt, wenn die Maus über die Zeile *Durchsatzkapazität* schwebt.
 . Wählen Sie im Dialogfeld Durchsatzkapazität die benötigte Durchsatzkapazität aus.
 . Wählen Sie *Übernehmen*, um die Änderungen zu speichern.

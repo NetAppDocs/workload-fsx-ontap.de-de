@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
-summary: Verwalten Sie Snapshot-Richtlinien für FSx für ONTAP-Volumes in der Workload Factory. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt. 
+summary: Verwalten Sie Snapshot-Richtlinien für FSx for ONTAP -Volumes in Workload Factory.  Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt. 
 ---
 = Verwalten von Snapshot-Richtlinien
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Verwalten Sie Snapshot-Richtlinien für FSx für ONTAP-Volumes in der W
 
 
 [role="lead"]
-Verwalten Sie Snapshot-Richtlinien für FSx für ONTAP-Volumes in der Workload Factory. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt.
+Verwalten Sie Snapshot-Richtlinien für FSx for ONTAP -Volumes in Workload Factory.  Eine Snapshot-Richtlinie definiert, wie das System Snapshots für ein Volume erstellt.
 
 .Über diese Aufgabe
 Snapshot-Managementvorgänge wie das Zuweisen, Ändern und Löschen von Snapshot-Richtlinien für Volumes in einem Filesystem von FSX für ONTAP werden auf der Storage-VM-Ebene gemanagt. Snapshot-Richtlinien können für eine einzelne Storage-VM oder für alle Storage-VMs freigegeben werden.
 
-Für einige Verwaltungsaufgaben müssen Sie einen Link mit dem FSx for ONTAP-Dateisystem verknüpfen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere Informationen zu Workload Factory-Links"].
+Für einige Verwaltungsaufgaben müssen Sie einen Link mit dem FSx for ONTAP Dateisystem verknüpfen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Informationen zu Workload Factory-Links"] .
 
 Standardmäßig ist jedes Volume mit der Snapshot-Richtlinie des Dateisystems verknüpft `default` . Wir empfehlen, diese Richtlinie für die meisten Workloads zu verwenden.
 
@@ -31,11 +31,11 @@ Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie einen Link zuordnen. 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus und wählen Sie dann *Verwalten*.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte *Storage VMs* das drei-Punkt-Menü für die Speicher-VM, die das Volume enthält, das mit geplanten Snapshots geschützt werden soll, dann *Advanced Actions* und dann *Manage Snapshot Policies*.
-. Wählen Sie auf der Seite Snapshot Policy Management das drei-Punkt-Menü für die zu ändernde Snapshot Policy aus und wählen Sie dann *Edit*.
+. Wählen Sie auf der Registerkarte *Storage-VMs* das Aktionsmenü für die Storage-VM aus, die das mit geplanten Snapshots zu schützende Volume enthält, dann *Erweiterte Aktionen* und dann *Snapshot-Richtlinien verwalten*.
+. Wählen Sie auf der Seite „Snapshot-Richtlinienverwaltung“ das Aktionsmenü für die zu ändernde Snapshot-Richtlinie aus und wählen Sie dann *Bearbeiten*.
 . Nehmen Sie im Dialogfeld Snapshot-Richtlinie bearbeiten die erforderlichen Änderungen an der Snapshot-Richtlinie vor.
 . Wählen Sie *Anwenden*.
 
@@ -54,10 +54,10 @@ Sie müssen einen Link zuordnen, um unveränderliche Snapshots zu aktivieren. li
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume enthält, für das Snapshots gesperrt werden sollen, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das das Volume enthält, für das Snapshots gesperrt werden sollen, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das zu schützende Volume aus.
+. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das zu schützende Volume aus.
 . Wählen Sie *Data Protection actions*, *Snapshots*, dann *make a Snapshot unveränderlich*.
 . Gehen Sie im Dialogfeld Snapshot unveränderlich erstellen wie folgt vor:
 +
@@ -83,11 +83,11 @@ Sie müssen einen Link zuordnen, um eine Snapshot-Richtlinie zuzuweisen. link:ht
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume enthält, dem eine Snapshot-Richtlinie zugewiesen werden soll, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das das Volume enthält, dem Sie eine Snapshot-Richtlinie zuweisen möchten, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte *Storage VMs* das drei-Punkt-Menü für die Speicher-VM, die das Volume enthält, das mit geplanten Snapshots geschützt werden soll, dann *Advanced Actions* und dann *Manage Snapshot Policies*.
-. Wählen Sie auf der Seite Snapshot Policy Management das drei-Punkt-Menü der Snapshot Policy aus und wählen Sie dann *Assign Policy to Volume* aus.
+. Wählen Sie auf der Registerkarte *Storage-VMs* das Aktionsmenü für die Storage-VM aus, die das mit geplanten Snapshots zu schützende Volume enthält, dann *Erweiterte Aktionen* und dann *Snapshot-Richtlinien verwalten*.
+. Wählen Sie auf der Seite „Snapshot-Richtlinienverwaltung“ das Aktionsmenü der Snapshot-Richtlinie und dann *Richtlinie dem Volume zuweisen* aus.
 . Wählen Sie im Dialogfeld Snapshot-Richtlinie zuweisen eine Snapshot-Richtlinie aus, die dem Volume zugewiesen werden soll, und überprüfen Sie den Richtlinienzeitplan.
 +
 Wenn die Richtlinie unveränderliche Snapshots enthält und Sie diese verwenden möchten, akzeptieren Sie die Anweisung.
@@ -109,11 +109,11 @@ Sie müssen einen Link zuordnen, um eine Snapshot-Richtlinie zu entfernen. link:
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume enthält, dem eine Snapshot-Richtlinie zugewiesen werden soll, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das das Volume enthält, dem Sie eine Snapshot-Richtlinie zuweisen möchten, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte *Storage VMs* das drei-Punkt-Menü für die Speicher-VM, die das Volume enthält, das mit geplanten Snapshots geschützt werden soll, dann *Advanced Actions* und dann *Manage Snapshot Policies*.
-. Wählen Sie auf der Seite Snapshot Policy Management das drei-Punkt-Menü der Snapshot Policy aus und wählen Sie dann *Assign Policy to Volume* aus.
+. Wählen Sie auf der Registerkarte *Storage-VMs* das Aktionsmenü für die Storage-VM aus, die das mit geplanten Snapshots zu schützende Volume enthält, dann *Erweiterte Aktionen* und dann *Snapshot-Richtlinien verwalten*.
+. Wählen Sie auf der Seite „Snapshot-Richtlinienverwaltung“ das Aktionsmenü der Snapshot-Richtlinie und dann *Richtlinie dem Volume zuweisen* aus.
 . Wählen Sie im Dialogfeld Snapshot-Richtlinie zuweisen die Option *Keine* aus, um die Snapshot-Richtlinie zu entfernen.
 . Wählen Sie *Zuweisen*.
 
@@ -131,13 +131,11 @@ Wenn eine Snapshot-Richtlinie mehr als einem Volume zugewiesen ist, müssen Sie 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte *Storage VMs* das drei-Punkt-Menü der Speicher-VM mit der zu löschenden Snapshot-Richtlinie, dann *Advanced Actions* und dann *Manage Snapshot Policies*.
-. Wählen Sie auf der Seite Snapshot Policy Management das drei-Punkt-Menü aus, das die Snapshot Policy löschen soll, und wählen Sie dann *Delete* aus.
+. Wählen Sie auf der Registerkarte *Storage-VMs* das Aktionsmenü der Storage-VM mit der zu löschenden Snapshot-Richtlinie, dann *Erweiterte Aktionen* und dann *Snapshot-Richtlinien verwalten*.
+. Wählen Sie auf der Seite „Snapshot-Richtlinienverwaltung“ das Aktionsmenü für die zu löschende Snapshot-Richtlinie aus und wählen Sie dann *Löschen*.
 . Wählen Sie im Dialogfeld Löschen *Löschen*, um die Richtlinie zu löschen.
 
-
-.Ergebnis
-Die Snapshot-Richtlinie wird gelöscht.

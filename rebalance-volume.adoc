@@ -13,28 +13,27 @@ summary: Überprüfen und gleichen Sie die Volumenkapazität neu aus, um mit der
 [role="lead"]
 Überprüfen Sie die Balance der FlexVol- oder FlexGroup-Volume-Kapazität und gleichen Sie die Volume-Kapazität neu aus, um die Dateien gleichmäßig auf alle FlexVol-Volumes in einem Knoten oder auf alle Bestandteile zu verteilen, sodass alle Knoten an der Arbeitslast eines einzelnen FlexGroup-Volumes beteiligt sind.
 
-.Über diese Aufgabe
+
+
+== Über diese Aufgabe
+
 Die Neuausrichtung der Volume-Kapazität wird für FlexVol-Volumes und FlexGroup-Volumes unterstützt. Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei. Volume-Transfervorgänge verbrauchen Filesystem-Ressourcen.
 
 Jeder Volumetyp und jede Neuausgleichsoperation unterscheidet sich wie folgt.
 
-FlexVol Volumes:: FlexVol-Volumes sind logische Container, die Flexibilität bei der Datenverwaltung bieten und Erweiterung, Verkleinerung, Verschiebung und effizientes Kopieren ermöglichen. Sie können in NAS- und SAN-Umgebungen eingesetzt werden.
-+
---
+.FlexVol Volumes
+FlexVol-Volumes sind logische Container, die Flexibilität bei der Datenverwaltung bieten und Erweiterung, Verkleinerung, Verschiebung und effizientes Kopieren ermöglichen. Sie können in NAS- und SAN-Umgebungen eingesetzt werden.
+
 Ein FlexVol-Volume kann im Verhältnis zu anderen FlexVol-Volumes innerhalb eines Knotens in einem FSx for ONTAP-Dateisystem ausgeglichen werden. Wenn das Dateisystem nur über ein einziges FlexVol-Volume verfügt, ist ein Neuausgleich nicht möglich. Wenn das Dateisystem mehr als ein FlexVol-Volume pro Knoten hat und ein einzelnes FlexVol-Volume ausgewählt ist, wird das FlexVol-Volume im Kontext aller FlexVols ausgeglichen, aber nur das ausgewählte Volume darf verschoben werden.
 
---
-FlexGroup Volumes:: FlexGroup-Volumes hingegen sind skalierbare NAS-Container, die auf hohe Leistung und automatische Lastverteilung ausgelegt sind. Sie bestehen aus mehreren Mitgliedsvolumes (Bestandteilen), die den Datenverkehr transparent teilen. FlexGroup-Volumes bieten enorme Kapazität und übertreffen die FlexVol-Grenzen mit bis zu 60 PB Kapazität und 400 Milliarden Dateien. Sie vereinfachen die Verwaltung durch die Bereitstellung eines einzigen Namespace-Containers.
-+
---
+.FlexGroup Volumes
+FlexGroup-Volumes hingegen sind skalierbare NAS-Container, die auf hohe Leistung und automatische Lastverteilung ausgelegt sind. Sie bestehen aus mehreren Mitgliedsvolumes (Bestandteilen), die den Datenverkehr transparent teilen. FlexGroup-Volumes bieten enorme Kapazität und übertreffen die FlexVol-Grenzen mit bis zu 60 PB Kapazität und 400 Milliarden Dateien. Sie vereinfachen die Verwaltung durch die Bereitstellung eines einzigen Namespace-Containers.
+
 Die Kapazität wird auf eine Reihe von Komponenten in einem Scale-Out-FSx für ONTAP-Dateisystem mit zwei oder mehr Hochverfügbarkeitspaaren (HA) verteilt. Jede Komponente ist ein Container, der die maximale einzelne Dateigröße vorgibt. FSX for ONTAP verteilt Dateien gleichmäßig über alle Komponenten, sodass alle Nodes am Workload eines einzelnen FlexGroup Volumes teilnehmen.
 
 Wenn die Komponenten nicht gleichmäßig über alle Nodes verteilt werden, sinkt die Volume-Performance von FlexGroup.
 
-Die Überprüfung des Gleichgewichts der FlexGroup Volume-Kapazität schließt die Bewertung des aktuellen Layouts der Komponenten ein. Wenn Sie die Kapazität des Volumes neu verteilen, entwickelt BlueXP  Workload Factory ein neues Komponenten-Layout mit einer geraden Anzahl an Komponenten, um die Daten gleichmäßig über alle HA-Paare zu verteilen. Der Service führt den Ausgleichsplan durch, der wiederum die Lese- und Schreibvorgänge verbessert.
-
---
-
+Zur Überprüfung der Ausgewogenheit der FlexGroup Volumenkapazität gehört auch die Beurteilung der aktuellen Zusammensetzung der Bestandteile.  Wenn Sie die Kapazität des Volumes neu ausbalancieren, entwirft NetApp Workload Factory ein neues Komponentenlayout mit einer geraden Anzahl von Komponenten, um die Daten gleichmäßig auf alle HA-Paare zu verteilen.  Der Dienst führt den Neuausgleichsplan aus, der wiederum die Lese- und Schreibvorgänge verbessert.
 
 
 NOTE: Für SAN-Volumes wie iSCSI und NVMe wird die Neuverteilung nicht unterstützt.
@@ -52,8 +51,9 @@ NOTE: Für SAN-Volumes wie iSCSI und NVMe wird die Neuverteilung nicht unterstü
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Drei-Punkte-Menü des Dateisystems aus, das die neu auszugleichenden Volumes enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das die neu auszugleichenden Volumes enthält, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte „Volumes“ oben in der Tabelle die Option „Volumenbilanz prüfen“ aus.
 . Überprüfen Sie im Fenster „Volumenbilanz“ den Bilanzstatus von:
@@ -74,7 +74,7 @@ Wenn ein Volumen unausgeglichen ist, berücksichtigen Sie <<Volumenkapazität ne
 Gleichen Sie ein oder mehrere Volumes aus, die keinen Lastausgleich vornehmen.
 
 
-NOTE: Ein Workload Factory-Administrator kann <<Stoppen eines Volume-Neuausgleichsvorgangs,Stoppen Sie die Neugewichtung>> während der Operation.
+NOTE: Ein Workload Factory-Administrator kann<<Stoppen eines Volume-Neuausgleichsvorgangs,Stoppen Sie die Neugewichtung>> während der Operation.
 
 .Bevor Sie beginnen
 * <<Überprüfen Sie den Saldo Ihrer Volumina,Überprüfen Sie den Saldo eines Volumens>> Vor der Ausbalancierung von Volumes.
@@ -91,8 +91,9 @@ Ein FlexVol-Volume kann im Verhältnis zu anderen FlexVol-Volumes innerhalb eine
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume zum Ausgleich enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das das neu auszugleichende Volume enthält, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte „Volumes“ oben in der Tabelle die Option „Volumenbilanz prüfen“ aus.
 . Wählen Sie im Fenster „Volumes-Balance“ optional *Datenverteilung* in der FlexVol-Balanceübersicht aus, um die genutzte Kapazität pro Aggregat anzuzeigen.
@@ -123,8 +124,9 @@ Daten werden zum Ausgleich des FlexGroup Volumes auf Mitglied-Volumes verteilt. 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume zum Ausgleich enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das das neu auszugleichende Volume enthält, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte Volumes oben in der Tabelle *FlexGroup-Balance prüfen* aus.
 . Wählen Sie im Fenster FlexGroup Balance *Rebalance* aus, um ein oder mehrere unausgeglichene Volumes auszugleichen.

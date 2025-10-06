@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für eine Speicher-VM in der Workload Factory. 
+summary: Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für eine Speicher-VM in Workload Factory. 
 ---
-= Erstellen einer Snapshot-Richtlinie für Speicher-VMs in der Workload Factory
+= Erstellen einer Snapshot-Richtlinie für Speicher-VMs in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für Speicher-VMs in der Workload Factory, um die Erstellung und Aufbewahrung von Snapshots zu verwalten.  Eine Snapshot-Richtlinie definiert, wie das System Snapshots für eine Speicher-VM erstellt.  Sie können eine Snapshot-Richtlinie für eine Speicher-VM in einem FSx for ONTAP -Dateisystem erstellen.  Sie können die Richtlinie auch für mehrere Speicher-VMs freigeben.
+Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für Speicher-VMs in Workload Factory, um die Erstellung und Aufbewahrung von Snapshots zu verwalten. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für eine Speicher-VM erstellt. Sie können eine Snapshot-Richtlinie für eine Speicher-VM in einem FSx for ONTAP -Dateisystem erstellen. Sie können die Richtlinie auch für mehrere Speicher-VMs freigeben.
 
 .Über diese Aufgabe
 Sie können eine benutzerdefinierte Snapshot-Richtlinie erstellen, die sich von den drei integrierten Snapshot-Richtlinien für FSX für ONTAP unterscheidet:
@@ -38,10 +38,11 @@ Durch das Anpassen einer Richtlinie können Sie festlegen, wann Snapshots erstel
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte *Storage VMs* das drei-Punkt-Menü für das Volume aus, das mit geplanten Snapshots geschützt werden soll, dann *Advanced Actions* und dann *Manage Snapshot Policies*.
+. Wählen Sie auf der Registerkarte *Storage-VMs* das Aktionsmenü für das Volume aus, das mit geplanten Snapshots geschützt werden soll, dann *Erweiterte Aktionen* und dann *Snapshot-Richtlinien verwalten*.
 . Wählen Sie auf der Seite Snapshot Policy Management *Create Snapshot Policy* aus.
 . Geben Sie im Feld *Snapshot Policy Name* einen Namen für die Snapshot Policy ein.
 . Geben Sie optional eine Beschreibung für die Snapshot-Richtlinie ein.

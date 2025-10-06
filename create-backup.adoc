@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-backup.html 
 keywords: create backup, volume backup, back up a volume 
-summary: Erstellen Sie ein manuelles Backup eines Volumes in der BlueXP -Workload-Fabrik außerhalb der regelmäßig geplanten Backups. 
+summary: Erstellen Sie außerhalb regelmäßig geplanter Sicherungen eine manuelle Sicherung eines Volumes in NetApp Workload Factory. 
 ---
-= Erstellen Sie ein manuelles Backup eines Volumes in der BlueXP  Workload Factory
+= Erstellen Sie eine manuelle Sicherung eines Volumes in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Erstellen Sie ein manuelles Backup eines Volumes außerhalb von regelmäßig geplanten Backups in der BlueXP  Workload-Fabrik.
+Erstellen Sie eine manuelle Sicherung eines Volumes außerhalb regelmäßig geplanter Sicherungen in NetApp Workload Factory.
 
 .Über diese Aufgabe
 FSX für ONTAP-Backups erfolgen pro Volume, sodass jedes Backup nur die Daten in einem bestimmten Volume enthält.
@@ -23,10 +23,11 @@ Um Backups Ihrer Volumes zu erstellen, müssen sowohl das Volume als auch das Da
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für die Lautstärke aus, die gesichert werden soll.
+. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das zu sichernde Volume aus.
 . Wählen Sie *Data Protection Actions*, *FSX for ONTAP Backup* und dann *Manual Backup*.
 . Geben Sie im Dialogfeld Manuelle Sicherung einen Namen für das Backup ein.
 . Wählen Sie *Backup*.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configure-active-directory.html 
 keywords: configure AD, configure active directory, update ad, edit active directory 
-summary: Active Directory für eine Storage-VM in einem FSX für ONTAP-Dateisystem in der BlueXP -Workload-Fabrik konfigurieren und aktualisieren 
+summary: Konfigurieren und aktualisieren Sie Active Directory für eine Speicher-VM in einem FSx für ONTAP Dateisystem in NetApp Workload Factory. 
 ---
 = Active Directory für eine Storage-VM konfigurieren und aktualisieren
 :allow-uri-read: 
@@ -11,17 +11,18 @@ summary: Active Directory für eine Storage-VM in einem FSX für ONTAP-Dateisyst
 
 
 [role="lead"]
-Active Directory für eine Storage-VM in einem FSX für ONTAP-Dateisystem in der BlueXP -Workload-Fabrik konfigurieren und aktualisieren
+Konfigurieren und aktualisieren Sie Active Directory für eine Speicher-VM in einem FSx für ONTAP Dateisystem in NetApp Workload Factory.
 
 .Über diese Aufgabe
 Die gleichen Schritte gelten für die Konfiguration und Aktualisierung von Active Directory für eine Speicher-VM.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit der zu aktualisierenden Speicher-VM aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems mit der zu aktualisierenden Speicher-VM und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte Storage VMs das drei-Punkt-Menü der Storage-VM aus, für die Active Directory konfiguriert werden soll.
+. Wählen Sie auf der Registerkarte „Storage-VMs“ das Aktionsmenü der Storage-VM aus, für die Sie Active Directory konfigurieren möchten.
 . Wählen Sie *AD-Konfiguration verwalten*.
 . Geben Sie auf der Seite AD-Konfiguration managen Folgendes an:
 +

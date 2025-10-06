@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: Um ein Dateisystem in der BlueXP -Workload-Fabrik zu löschen, müssen Sie zunächst alle Volumes, Speicher-VMs oder Replikationsbeziehungen löschen, die mit dem Dateisystem verknüpft sind. 
+summary: Um ein Dateisystem in NetApp Workload Factory zu löschen, müssen Sie zunächst alle mit dem Dateisystem verknüpften Volumes, Speicher-VMs oder Replikationsbeziehungen löschen. 
 ---
-= Löschen Sie ein Dateisystem in der BlueXP -Workload-Fabrik
+= Löschen eines Dateisystems in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Um ein Dateisystem in der BlueXP -Workload-Fabrik zu löschen, müssen Sie zunächst alle Volumes, Speicher-VMs oder Replikationsbeziehungen löschen, die mit dem Dateisystem verknüpft sind.
+Um ein Dateisystem in NetApp Workload Factory zu löschen, müssen Sie zunächst alle mit dem Dateisystem verknüpften Volumes, Speicher-VMs oder Replikationsbeziehungen löschen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des FSX für ONTAP-Dateisystems aus, das Sie löschen möchten.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des FSx for ONTAP -Dateisystems aus, das Sie löschen möchten.
 . Wählen Sie *Verwalten*.
-. Wählen Sie auf der Registerkarte *Übersicht* das drei-Punkt-Menü aus.
+. Wählen Sie auf der Registerkarte *Übersicht* das Aktionsmenü aus.
 . Wählen Sie *Löschen*.
 . Geben Sie im Dialogfeld FSX für ONTAP-Dateisystem löschen den Namen des zu löschenden FSX für ONTAP-Dateisystems ein.
-. Wählen Sie *Löschen*.
+. Wählen Sie zur Bestätigung *Löschen*.
 

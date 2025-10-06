@@ -6,7 +6,7 @@
 
 === CloudShell in der BlueXP -Workload-Factory-Konsole
 
-CloudShell ist eine integrierte CLI-Funktion, die in der BlueXP -Workload-Farm für Storage verfügbar ist. Sie können CloudShell verwenden, um ONTAP- oder AWS-CLI-Befehle von mehreren Sitzungen in einer Shell-ähnlichen Umgebung in der Workload-Factory-Konsole zu erstellen, zu teilen und auszuführen.
+CloudShell ist eine eingebettete CLI-Funktion, die in der BlueXP workload factory für Speicher verfügbar ist.  Sie können CloudShell verwenden, um ONTAP oder AWS CLI-Befehle aus mehreren Sitzungen in einer Shell-ähnlichen Umgebung innerhalb der Workload Factory-Konsole zu erstellen, freizugeben und auszuführen.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Erfahren Sie mehr über CloudShell in der BlueXP -Workload-Farm"]
 
@@ -16,7 +16,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Erf
 
 Sie können jetzt FSX für ONTAP-Bestandsdaten in eine Microsoft Excel- oder CSV-Datei von Speicher in BlueXP  Workload Factory herunterladen.
 
-image:screenshot-fsx-inventory-download.png["Ein Screenshot von Speicher in der BlueXP  Workload-Fabrik zeigt die neue Download-Schaltfläche zum Herunterladen von FSX für ONTAP File-System-Bestandsdaten."]
+image:screenshot-fsx-inventory-download.png["Ein Screenshot des Speichers in der BlueXP workload factory, der die neue Download-Schaltfläche zum Herunterladen von FSx für ONTAP -Dateisysteminventardaten zeigt."]
 
 
 
@@ -59,7 +59,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 === Unterstützung für die zweite Generation von Amazon FSX für NetApp ONTAP-Filesystemen
 
-Sie können jetzt Amazon FSX for NetApp ONTAP Filesysteme der zweiten Generation in einer BlueXP -Workload-Fabrik verwenden. FSX für ONTAP Single-AZ-Filesysteme der zweiten Generation werden mit bis zu 12 HA-Paaren unterstützt, die einen Durchsatz von bis zu 72 Gbit/s und 2,400,000 SSD-IOPS liefern können. FSX für ONTAP Multi-AZ-Filesysteme der zweiten Generation werden mit einem HA-Paar betrieben. Sie bieten einen Durchsatz von 6 GB/s und 200,000 SSD-IOPS.
+Sie können jetzt Amazon FSx for NetApp ONTAP Dateisysteme der zweiten Generation in NetApp Workload Factory verwenden.  FSx für ONTAP Single-AZ-Dateisysteme der zweiten Generation werden von bis zu 12 HA-Paaren unterstützt, die eine Durchsatzkapazität von bis zu 72 GBps und 2.400.000 SSD-IOPS liefern können.  FSx für ONTAP Multi-AZ-Dateisysteme der zweiten Generation werden von einem HA-Paar betrieben und bieten eine Durchsatzkapazität von 6 GB/s und 200.000 SSD-IOPS.
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/add-ha-pairs.html["Fügen Sie Hochverfügbarkeitspaare hinzu"]
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente und Grenzen für Amazon FSX for NetApp ONTAP"^]

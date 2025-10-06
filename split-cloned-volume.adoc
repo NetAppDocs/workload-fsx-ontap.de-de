@@ -4,14 +4,14 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume 
 summary: Teilen Sie eine Klon-FlexVol volume von seinem übergeordneten Volume auf, um den Klon zu einer normalen Lese-/Schreib-FlexVol volume zu machen. 
 ---
-= Teilen Sie ein geklontes Volume in der BlueXP  Workload Factory auf
+= Teilen Sie ein geklontes Volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Teilen Sie eine geklonte FlexVol volume von seinem übergeordneten Volume auf, um für den Klon eine normale Lese-/Schreib-FlexVol volume in der BlueXP  Workload-Fabrik zu erstellen.
+Trennen Sie ein geklontes FlexVol volume von seinem übergeordneten Volume, um den Klon in ein normales FlexVol volume mit Lese-/Schreibzugriff in NetApp Workload Factory zu machen.
 
 Auf Daten kann auf dem Klon und auf dem übergeordneten Element während der Teilung zugegriffen werden. Der Split-Vorgang aktualisiert nur Metadaten und erfordert minimale I/O-Vorgänge. Es werden keine Datenblöcke kopiert.
 
@@ -35,9 +35,11 @@ Vor dem Aufteilen eines geklonten Volume sollten Sie Folgendes beachten:
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie die Registerkarte *Volumes*.
-. Wählen Sie auf der Registerkarte Volumes das drei-Punkt-Menü des Volumes aus, in das das geklonte Volume aufgeteilt werden soll.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu teilenden Volume-Klon und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü des Volumes mit dem zu teilenden geklonten Volume aus.
 . Wählen Sie *Data Protection Actions* und dann *Split geklontes Volume*.
 . Wählen Sie im Dialogfeld „Volumen teilen“ die Option *Löschen*.
 

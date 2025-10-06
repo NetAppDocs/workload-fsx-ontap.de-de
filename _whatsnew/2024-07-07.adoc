@@ -1,9 +1,9 @@
-= Erstversion der Workload-Fabrik für Amazon FSX für NetApp ONTAP
+= Erstveröffentlichung von Workload Factory für Amazon FSx for NetApp ONTAP
 :allow-uri-read: 
 
 
 
 
-=== Erstversion der Workload-Fabrik für Amazon FSX für NetApp ONTAP
+=== Erstveröffentlichung von Workload Factory für Amazon FSx for NetApp ONTAP
 
 Amazon FSX für NetApp ONTAP ist jetzt allgemein in der BlueXP  Workload-Fabrik verfügbar.

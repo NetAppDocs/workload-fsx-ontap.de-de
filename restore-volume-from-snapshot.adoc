@@ -4,14 +4,14 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Stellen Sie ein FSX für ONTAP-Volume von einem Snapshot wieder her, wenn das Volume gelöschte oder beschädigte Dateien enthält. 
 ---
-= Wiederherstellen eines Volumes aus einem Snapshot in der Workload Factory
+= Wiederherstellen eines Volumes aus einem Snapshot in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-In der Workload Factory können Sie Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherstellen.  Der Wiederherstellungsvorgang ermöglicht eine zeitpunktbezogene Wiederherstellung, wenn ein Volume gelöschte oder beschädigte Dateien enthält.
+In Workload Factory können Sie Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherstellen. Der Wiederherstellungsvorgang ermöglicht eine zeitpunktbezogene Wiederherstellung, wenn ein Volume gelöschte oder beschädigte Dateien enthält.
 
 .Über diese Aufgabe
 Sie haben die Möglichkeit, Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherzustellen.
@@ -27,12 +27,13 @@ Beachten Sie die folgenden Einschränkungen, bevor Sie ein Volume aus einem Snap
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das von einem Snapshot wiederhergestellt werden soll.
+. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume aus, das aus einem Snapshot wiederhergestellt werden soll.
 . Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
-. Wählen Sie auf der Seite „Snapshots verwalten“ das Drei-Punkte-Menü für den wiederherzustellenden Snapshot und dann *Wiederherstellen* aus.
+. Wählen Sie auf der Seite „Snapshots verwalten“ das Aktionsmenü für den wiederherzustellenden Snapshot und dann *Wiederherstellen* aus.
 . Wählen Sie im Dialogfeld „Volume aus einem Snapshot wiederherstellen“ eine der folgenden Optionen aus:
 +
 ** Wählen Sie mit dem Schalter „Als neues Volume wiederherstellen“ aus.

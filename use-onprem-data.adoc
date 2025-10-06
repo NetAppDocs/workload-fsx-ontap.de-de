@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: On-Premises-ONTAP-Daten in BlueXP -Workload-Farm erkennen und replizieren, damit sie zur Erweiterung von KI-Knowledge-Base genutzt werden können. 
+summary: Entdecken und replizieren Sie lokale ONTAP -Daten in NetApp Workload Factory, damit diese zur Anreicherung von KI-Wissensdatenbanken verwendet werden können. 
 ---
-= Verwenden Sie lokale ONTAP-Cluster-Daten in der BlueXP -Workload-Fabrik
+= Verwenden Sie lokale ONTAP Clusterdaten in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-On-Premises-ONTAP-Daten in BlueXP -Workload-Farm erkennen und replizieren, damit sie zur Erweiterung von KI-Knowledge-Base genutzt werden können.
+Entdecken und replizieren Sie lokale ONTAP -Daten in NetApp Workload Factory, damit diese zur Anreicherung von KI-Wissensdatenbanken verwendet werden können.
 
 .Über diese Aufgabe
 Um Daten aus einem lokalen ONTAP Cluster zu verwenden, müssen Sie zuerst den lokalen ONTAP Cluster erkennen. Nach der Erkennung eines lokalen ONTAP-Clusters können Sie die Daten für jeden der folgenden Anwendungsfälle verwenden:
@@ -31,7 +31,7 @@ Anwendungsfälle:: Beachten Sie, dass der primäre Anwendungsfall für den GenAI
 
 == Ermitteln eines lokalen ONTAP Clusters
 
-Ermitteln Sie ein On-Premises-ONTAP-Cluster in der BlueXP -Workload-Farm, um Daten in ein Amazon FSX für NetApp ONTAP-Filesystem zu replizieren.
+Entdecken Sie einen lokalen ONTAP Cluster in NetApp Workload Factory, damit Sie die Daten auf ein Amazon FSx for NetApp ONTAP Dateisystem replizieren können.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Folgendes haben, bevor Sie beginnen:
@@ -48,13 +48,13 @@ image:screenshot-on-prem-connectivity.png["Screenshot, der zeigt, wie ein On-Pre
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
 . Wählen Sie die Registerkarte *On-Premise ONTAP*.
 . Wählen Sie * Entdecken*.
 . Überprüfen Sie die Voraussetzungen und wählen Sie *Weiter*.
 . Geben Sie auf der Seite ONTAP vor Ort ermitteln unter *Clusterkonfiguration* Folgendes ein:
 +
-.. *Link*: Wählen Sie einen Link. Die Verbindung wird dem On-Premises-Cluster zugeordnet, um eine Verbindung zwischen dem Cluster und der Workload-Fabrik herzustellen.
+.. *Link*: Wählen Sie einen Link aus.  Der Link wird mit dem lokalen Cluster verknüpft, um eine Konnektivität zwischen dem Cluster und Workload Factory herzustellen.
 +
 Wenn Sie keinen Link erstellt haben, folgen Sie den Anweisungen, kehren Sie zu diesem Vorgang zurück, und wählen Sie den Link aus.
 
@@ -84,8 +84,8 @@ Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für O
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie die Registerkarte *On-Premise ONTAP*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *On-Premises ONTAP* aus.
 . Um Volumes nach Storage VM zu finden, können Sie *Storage VM* aus der Dropdown-Liste auswählen.
 . Wählen Sie ein oder mehrere Volumes aus, die repliziert werden sollen, und wählen Sie dann *replicate* aus.
 . Geben Sie auf der Seite Replikation erstellen unter Replikationsziel Folgendes an:
@@ -95,7 +95,7 @@ Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für O
 .. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
 .. *Tiering-Daten*: Wählen Sie die Tiering-Richtlinie für die im Ziel-Volume gespeicherten Daten.
 +
-*** *Auto*: Die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory FSX für ONTAP Benutzeroberfläche. Verschiebt alle kalten Daten, einschließlich Benutzerdaten und Snapshots, über einen bestimmten Zeitraum auf die Storage-Tier im Kapazitäts-Pool.
+*** *Auto*: Die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mithilfe der Workload Factory FSx for ONTAP -Benutzeroberfläche.  Ordnet alle kalten Daten, einschließlich Benutzerdaten und Snapshots, für einen bestimmten Zeitraum der Speicherebene des Kapazitätspools zu.
 *** *Nur Snapshot*: Verschiebt nur Snapshot-Daten auf den Storage Tier des Kapazitäts-Pools.
 *** *Keine*: Speichert alle Daten Ihres Volumes auf dem primären Storage Tier.
 *** *All*: Markiert alle Benutzerdaten und Snapshot-Daten als „kalt“ und speichert sie im Kapazitäts-Pool-Speicher-Tier.
@@ -140,20 +140,20 @@ Die Replikationsbeziehung wird auf der Registerkarte *Replikationsbeziehungen* i
 
 
 
-== Entfernen eines lokalen ONTAP-Clusters aus der BlueXP  Workload-Fabrik
+== Entfernen eines lokalen ONTAP Clusters aus der NetApp Workload Factory
 
-Entfernen Sie bei Bedarf ein lokales ONTAP-Cluster aus der BlueXP -Workload-Fabrik.
+Entfernen Sie bei Bedarf einen lokalen ONTAP Cluster aus der NetApp Workload Factory.
 
 .Bevor Sie beginnen
 Vor dem Entfernen des Clusters müssen Sie link:delete-replication.html["Löschen Sie alle vorhandenen Replikationsbeziehungen"]alle Volumes im On-Premises-ONTAP-Cluster berücksichtigen, damit keine unterbrochenen Beziehungen mehr erhalten bleiben.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie die Registerkarte *On-Premise ONTAP*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *On-Premises ONTAP* aus.
 . Wählen Sie das lokale ONTAP-Cluster aus, das entfernt werden soll.
-. Wählen Sie das Menü mit drei Punkten und dann *aus Workload Factory entfernen*.
+. Wählen Sie das Aktionsmenü und wählen Sie *Aus Workload Factory entfernen*.
 
 
 .Ergebnis
-Das lokale ONTAP Cluster wird aus der BlueXP  Workload-Fabrik entfernt.
+Der lokale ONTAP Cluster wird aus der NetApp Workload Factory entfernt.

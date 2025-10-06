@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: Die BlueXP -Workload-Werkseinstellungen analysieren die Konfigurationen des Amazon FSX for NetApp ONTAP-Dateisystems regelmäßig, um Probleme zu ermitteln. 
+summary: NetApp Workload Factory analysiert regelmäßig die Dateisystemkonfigurationen von Amazon FSx for NetApp ONTAP, um festzustellen, ob Probleme vorliegen. 
 ---
 = Konfigurationsanalyse für FSX für ONTAP-Dateisysteme
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Die BlueXP -Workload-Werkseinstellungen analysieren die Konfiguratione
 
 
 [role="lead"]
-Die BlueXP -Workload-Werkseinstellungen analysieren die Konfigurationen des Amazon FSX for NetApp ONTAP-Dateisystems regelmäßig, um Probleme zu ermitteln. Wenn Probleme gefunden werden, zeigt Workload Factory Ihnen die Probleme an und erklärt, welche Änderungen erforderlich sind, um sicherzustellen, dass Ihr Dateisystem-Speicher optimale Performance, Kosteneffizienz und Einhaltung von Best Practices erreicht.
+NetApp Workload Factory analysiert regelmäßig die Dateisystemkonfigurationen von Amazon FSx for NetApp ONTAP, um festzustellen, ob Probleme vorliegen.  Wenn Probleme gefunden werden, zeigt Ihnen Workload Factory, um welche Probleme es sich handelt, und erklärt, was geändert werden muss, um sicherzustellen, dass Ihr Dateisystemspeicher Spitzenleistung, Kosteneffizienz und die Einhaltung bewährter Methoden erreicht.
 
 Die wichtigsten Funktionen:
 
@@ -26,7 +26,7 @@ Die wichtigsten Funktionen:
 
 == Zustand der Architektur gut
 
-In der Workload-Factory-Konsole auf Filesystem-Ebene wird der gut konzipierte Status für alle FSX for ONTAP-Dateisysteme aufgeführt. Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut strukturiert“ kategorisiert. Wenn Sie den Status „gut strukturiert“ auswählen, werden Sie auf die Registerkarte „gut strukturiert“ im Dateisystem weitergeleitet, auf der Sie die gut konzipierte Punktzahl, die Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden können.
+In der Workload Factory-Konsole wird auf Dateisystemebene der Status „Well-Architected“ für alle FSx for ONTAP -Dateisysteme aufgelistet.  Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut konzipiert“ kategorisiert.  Wenn Sie den Status „Well-Architected“ auswählen, werden Sie zur Registerkarte „Well-Architected-Status“ im Dateisystem weitergeleitet, wo Sie die Well-Architected-Bewertung, Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden.
 
 Gut konzipierte Punktzahl:: Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.
 Konfigurationskategorien:: Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.
@@ -46,7 +46,7 @@ Konfigurationskategorien:: Die Filesystem-Konfigurationen werden in Kategorien o
 
 == Analyseanforderungen
 
-Für eine vollständige Dateisystemanalyse müssen Sie einen Link zuordnen. Dank der Link-Konnektivität kann die Workload Factory alle Dateisystemkonfigurationen wie Datensicherung und Performance analysieren.
+Für eine vollständige Dateisystemanalyse müssen Sie einen Link zuordnen.  Durch die Link-Konnektivität kann Workload Factory alle Dateisystemkonfigurationen wie Datenschutz und Leistung analysieren.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."].
 

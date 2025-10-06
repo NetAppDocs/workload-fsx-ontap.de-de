@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: add-ha-pairs.html 
 keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
-summary: Fügen Sie Hochverfügbarkeitspaare zu einem Filesystem in der BlueXP -Workload-Fabrik hinzu, um das Filesystem horizontal zu skalieren. 
+summary: Fügen Sie einem Dateisystem in NetApp Workload Factory Hochverfügbarkeitspaare hinzu, um das Dateisystem zu skalieren. 
 ---
-= Fügen Sie HA-Paare zu einem Filesystem in der BlueXP  Workload Factory hinzu
+= Hinzufügen von HA-Paaren zu einem Dateisystem in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Fügen Sie Hochverfügbarkeitspaare (HA) hinzu, um ein FSX für ONTAP Single-AZ-Filesystem der zweiten Generation in der Fabrik der BlueXP -Workloads horizontal zu skalieren, um Performance und Kapazität zu steigern. Diese Erweiterung sorgt im Vergleich zu Filesystemen der ersten Generation für eine bessere Performance-Skalierbarkeit und -Flexibilität.
+Fügen Sie Hochverfügbarkeitspaare (HA) hinzu, um ein FSx für ONTAP Single-AZ-Dateisystem der zweiten Generation in NetApp Workload Factory zu skalieren und so Leistung und Kapazität zu erhöhen.  Diese Erweiterung bietet Ihnen mehr Leistungsskalierbarkeit und Flexibilität im Vergleich zu Dateisystemen der ersten Generation.
 
 .Über diese Aufgabe
 Die neuen HA-Paare werden auf der gleichen SKU und der gleichen Kapazität pro HA-Paar hinzugefügt.
@@ -43,8 +43,9 @@ Führen Sie die folgenden Schritte aus, bevor Sie HA-Paare zu einem Dateisystem 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* unter *Information* das Bleistiftsymbol neben *HA-Paaren* aus.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx für ONTAP* unter *Informationen* das Stiftsymbol neben *HA-Paaren* aus.
 . Wählen Sie im Dialogfeld *HA-Paare hinzufügen* die Anzahl der HA-Paare aus, die dem Dateisystem hinzugefügt werden sollen.
 . Wählen Sie *Add*, um das Hinzufügen der HA-Paare zu bestätigen.
 

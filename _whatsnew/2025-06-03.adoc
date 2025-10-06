@@ -22,13 +22,13 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 === Verbesserungen des Speicher-Dashboards
 
-Wenn Sie ab sofort den Storage-Workload über die Workload Factory-Konsole öffnen, wird Ihnen das Dashboard angezeigt. Das neu gestaltete Dashboard bietet eine ganzheitliche Ansicht Ihrer FSx for ONTAP-Systeme, einschließlich der Anzahl der Dateisysteme, der gesamten SSD-Kapazität, der Statusübersicht, der Datenschutzübersicht und der Integrität der Replikationsbeziehungen.
+Wenn Sie ab heute die Speicherarbeitslast über die Workload Factory-Konsole öffnen, wird das *Dashboard* angezeigt.  Das neu gestaltete Dashboard bietet eine ganzheitliche Ansicht Ihrer FSx for ONTAP -Systeme, einschließlich der Anzahl der Dateisysteme, der gesamten SSD-Kapazität, der gut strukturierten Statusübersicht, der Datenschutzübersicht und der Integrität der Replikationsbeziehung.
 
 
 
 === Verbesserungen der Registerkarte „Volumes“
 
-Die Storage-Workload hat Verbesserungen an der Registerkarte „Volumes“ innerhalb eines FSx for ONTAP-Dateisystems in der Workload-Factory-Konsole vorgenommen. Die Verbesserungen umfassen:
+Die Speicher-Workload hat Verbesserungen an der Registerkarte „Volumes“ innerhalb eines FSx for ONTAP Dateisystems in der Workload Factory-Konsole vorgenommen.  Zu den Verbesserungen gehören:
 
 * *Neue Karten*: SSD-Kapazität, Kapazitätspool und Autonomous Ransomware Protection (ARP)
 * *Neue Spalten*: Kapazitätsverteilung, genutzte SSD-Kapazität, genutzter Kapazitätspool und SSD-Effizienz
@@ -40,4 +40,4 @@ Die Storage-Workload hat Verbesserungen an der Registerkarte „Volumes“ inner
 
 Beim Erstellen eines neuen Volumes werden Speichereffizienzen wie Datenkomprimierung, Komprimierung und Deduplizierung standardmäßig aktiviert.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Erstellen Sie ein neues Volume in der Workload Factory"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Erstellen Sie ein neues Volume in Workload Factory"]

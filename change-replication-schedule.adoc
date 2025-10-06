@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replikationsbeziehung in der BlueXP  Workload Factory. 
+summary: Ändern Sie den Replikationszeitplan des Quellvolumes in einer Replikationsbeziehung in NetApp Workload Factory. 
 ---
 = Ändern Sie den Replikationszeitplan eines Quell-Volumes
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replika
 
 
 [role="lead"]
-Ändern Sie den Replikationszeitplan des Quell-Volumes in einer Replikationsbeziehung in der BlueXP  Workload Factory.
+Ändern Sie den Replikationszeitplan des Quellvolumes in einer Replikationsbeziehung in NetApp Workload Factory.
 
 Legen Sie fest, wie oft Snapshots vom Quell-Volume auf das replizierte Volume übertragen werden, um die erforderlichen Point Objectives (RPOs) zu erfüllen.
 
@@ -19,10 +19,11 @@ Wenn ein On-Premises-ONTAP-Cluster Ziel der Replikationsbeziehung ist, wird eine
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü des Zeitplans für die Replikationsbeziehung aus, das geändert werden soll.
+. Wählen Sie auf der Registerkarte „Replikationsbeziehungen“ das Aktionsmenü des zu ändernden Replikationsbeziehungszeitplans aus.
 . Wählen Sie *Replikationsintervall bearbeiten*.
 . Wählen Sie im Dialogfeld Replikationsintervall bearbeiten die Häufigkeit der Snapshot-Übertragung vom Quell-Volume aus. Sie können zwischen den folgenden Frequenzen wählen:
 +

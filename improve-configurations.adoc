@@ -11,39 +11,28 @@ summary: Workload Factory durchsucht Amazon FSx for NetApp ONTAP -Konfiguratione
 
 
 [role="lead"]
-Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und nutzen Sie die Workload Factory, um Best Practices für Ihre FSx for ONTAP Dateisysteme zu implementieren.  Sie können den Status der ordnungsgemäßen Architektur problemlos überprüfen, sich über Probleme mit Ihren Konfigurationen informieren und Maßnahmen ergreifen, um die Architektur aller Systeme zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
+Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und nutzen Sie Workload Factory, um Best Practices für Ihre FSx for ONTAP Dateisysteme zu implementieren. Sie können den Status der ordnungsgemäßen Architektur problemlos überprüfen, sich über Probleme mit Ihren Konfigurationen informieren und Maßnahmen ergreifen, um die Architektur aller Systeme zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
 
 Sie können die Analyse bestimmter Speicherkonfigurationen, die nicht auf Ihre Speicherumgebung zutreffen, auch ablehnen, um unnötige Warnungen und ungenaue Optimierungsergebnisse zu vermeiden.
 
-link:configuration-analysis.html["Erfahren Sie mehr über die Konfigurationsanalyse und den Status einer guten Architektur in der Workload Factory."]
+link:configuration-analysis.html["Erfahren Sie mehr über die Konfigurationsanalyse und den Status „Well-Architected“ in Workload Factory."]
 
 .Über diese Aufgabe
 Workload Factory analysiert täglich die Konfigurationen der Amazon FSx for NetApp ONTAP Dateisysteme. Die tägliche Analyse liefert den Status der ordnungsgemäßen Architektur sowie Einblicke und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, damit Ihr Dateisystem Best Practices entspricht.
 
-Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme mit Ihren Dateisystemen zu überprüfen und die Probleme aus dem Speicherinventar in der Workload Factory-Konsole zu beheben.
+Durch die Link-Konnektivität kann Workload Factory nach Problemen mit Leistung, Datenschutz und Konfigurationen suchen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"] für die umfassendste Analyse Ihrer Dateisystemressourcen.
+
+Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme mit Ihren Dateisystemen zu überprüfen und die Probleme vom Speicher aus in der Workload Factory-Konsole zu beheben.
 
 Da die Anforderungen an Speicherkonfigurationen unterschiedlich sind, können Sie die Analyse bestimmter Konfigurationen, die nicht auf Ihre Speicherumgebung zutreffen, verwerfen.  Dadurch vermeiden Sie unnötige Warnmeldungen und ungenaue Optimierungsergebnisse.  Wenn eine bestimmte Konfigurationsanalyse verworfen wird, wird die Konfiguration nicht in die Gesamtpunktzahl der Optimierung einbezogen.
 
-Was analysiert wird:: Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
-+
---
-* Schwellenwert für SSD-Kapazität
-* Daten-Tiering
-* Geplante lokale Snapshots
-* FSx für ONTAP-Backups
-* Remote-Datenreplizierung
-* Storage-Effizienz
-* Automatisches Kapazitätsmanagement
-* Autonomer Ransomware-Schutz von NetApp mit KI (ARP/AI)
-* Datenzuverlässigkeit für die langfristige Aufbewahrung
+.Was analysiert wird
+Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
 
-
---
-
-
-.Bevor Sie beginnen
-* Sie müssen über Anmeldeinformationen mit Nur-Lese- oder Lese-/Schreibberechtigung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie in Ihrem AWS-Konto Berechtigungen erteilen"^].
-* Überprüfen Sie jede Empfehlung sorgfältig, bevor Sie eine Einstellung oder Konfiguration korrigieren.
+* Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, FSx für ONTAP Backups, Remote-Datenreplikation und Datenzuverlässigkeit für die langfristige Aufbewahrung
+* Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI)
+* Operative Exzellenz: Speichereffizienz, automatisches Kapazitätsmanagement und Schwellenwert für die Kapazitätsauslastung von Volume-Dateien
+* Kostenoptimierung: Speichereffizienz und Daten-Tiering
 
 
 
@@ -52,15 +41,20 @@ Was analysiert wird:: Die Workload-Farm analysiert den gut konzipierten Status d
 
 Sie können Konfigurationsprobleme für ein FSx for ONTAP Dateisystem oder für ausgewählte Volumes in einem Dateisystem beheben.  Sie können eine oder mehrere zu reparierende Konfigurationen auswählen.
 
+.Bevor Sie beginnen
+* Sie müssen über Anmeldeinformationen mit Nur-Lese- oder Lese-/Schreibberechtigung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie in Ihrem AWS-Konto Berechtigungen erteilen"^].
+* Der Behebungsprozess kann zu Instanzausfallzeiten oder Dienstunterbrechungen führen. Stellen Sie sicher, dass Sie jede Empfehlung sorgfältig prüfen, bevor Sie sich für die Behebung eines Konfigurationsproblems entscheiden.
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"]für die umfassendste Analyse Ihrer Dateisystemressourcen.
 
-NOTE: Die Problembehebung kann zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Überprüfen Sie die Empfehlung sorgfältig, bevor Sie ein Konfigurationsproblem beheben.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicherinventar gehen“ aus.
-. Navigieren Sie auf der Registerkarte *FSX für ONTAP* zur Spalte *gut gestaltter Status* und wählen Sie die Probleme aus, die das Dateisystem beheben soll.
-. Filtern Sie im gut konzipierten Dashboard für das Filesystem Konfigurationsprobleme nach Kategorien, Unterkategorien, Status, Schweregrad und Tags.
-. Wählen Sie den Dropdown-Pfeil aus, um die Empfehlung für eine beliebige Konfiguration anzuzeigen. Überprüfen Sie die Empfehlung sorgfältig.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
+. Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
+. Filtern Sie Konfigurationsprobleme optional nach Kategorien, Unterkategorien, Status, Schweregrad und Tags.
+. Wählen Sie für jede Konfiguration *Empfehlung anzeigen*.  Lesen Sie die Empfehlung sorgfältig durch.
 +
 Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.
 
@@ -89,8 +83,9 @@ Verwerfen, um eine Konfigurationsanalyse für ein FSx for ONTAP Dateisystem auf 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicherinventar gehen“ aus.
-. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Drei-Punkte-Menü und dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
 . Identifizieren Sie unter *Konfigurationen* die Konfiguration, die Sie verwerfen möchten, und wählen Sie *Verwerfen* aus.
 . Wählen Sie *Ablehnen*, um die Analyse für die Konfiguration zu beenden.
@@ -101,13 +96,14 @@ Verwerfen, um eine Konfigurationsanalyse für ein FSx for ONTAP Dateisystem auf 
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicherinventar gehen“ aus.
-. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Drei-Punkte-Menü und dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
 . Identifizieren Sie unter *Konfigurationen* die Konfiguration, die für ausgewählte Volumes verworfen werden soll, und wählen Sie *Anzeigen und reparieren* aus.
 . Identifizieren Sie die Volumes, die aus der Konfigurationsanalyse ausgeschlossen werden sollen.
 +
-** Für ein Volume: Wählen Sie das Drei-Punkte-Menü und dann *Volume schließen*.
+** Für ein Volume: Wählen Sie das Aktionsmenü und dann *Volume schließen*.
 ** Für mehrere Volumes: Wählen Sie die Volumes aus und wählen Sie dann neben „Massenaktion“ die Option „Verwerfen“.
 
 
@@ -134,8 +130,9 @@ Sie können eine abgebrochene Konfigurationsanalyse jederzeit wieder aktivieren.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicherinventar gehen“ aus.
-. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Drei-Punkte-Menü und dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
 . Wählen Sie neben *Konfigurationen* die Option *Abgelehnte Konfigurationen* aus.
 . Identifizieren Sie die Konfiguration, die Sie reaktivieren möchten, und wählen Sie *Reaktivieren*.
@@ -146,13 +143,14 @@ Sie können eine abgebrochene Konfigurationsanalyse jederzeit wieder aktivieren.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicherinventar gehen“ aus.
-. Wählen Sie auf der Registerkarte *FSx for ONTAP* das Drei-Punkte-Menü und dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
 . Identifizieren Sie unter *Konfigurationen* die Konfiguration, die für ausgewählte Volumes reaktiviert werden soll, und wählen Sie *Anzeigen und reparieren* aus.
 . Identifizieren Sie die Volumes, die anhand der Konfigurationsanalyse reaktiviert werden sollen.
 +
-** Für ein Volume: Wählen Sie das Drei-Punkte-Menü und dann *Volume reaktivieren*.
+** Für ein Volume: Wählen Sie das Aktionsmenü und dann *Volume reaktivieren*.
 ** Für mehrere Volumes: Wählen Sie die Volumes aus und wählen Sie dann neben Massenaktion die Option *Reaktivieren*.
 
 

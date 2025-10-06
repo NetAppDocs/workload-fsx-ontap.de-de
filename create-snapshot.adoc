@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot.html 
 keywords: create snapshot, snapshot 
-summary: Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. Snapshots sind Point-in-Time-Versionen des Inhalts Ihres Volumes. 
+summary: Erstellen Sie einen manuellen Snapshot eines FSx für ONTAP -Volumes in NetApp Workload Factory.  Snapshots sind zeitpunktbezogene Versionen des Inhalts Ihres Volumes. 
 ---
 = Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes in 
 
 
 [role="lead"]
-Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes in der BlueXP -Workload-Fabrik. Snapshots sind Point-in-Time-Versionen des Inhalts Ihres Volumes.
+Erstellen Sie einen manuellen Snapshot eines FSx für ONTAP -Volumes in NetApp Workload Factory.  Snapshots sind zeitpunktbezogene Versionen des Inhalts Ihres Volumes.
 
 Snapshots sind Ressourcen von Volumes und sofortige Erfassung von Daten, die nur für geänderte Daten Speicherplatz verbrauchen. Da sich die Daten im Laufe der Zeit ändern, belegen Snapshots in der Regel mit zunehmendem Alter mehr Speicherplatz.
 
@@ -25,10 +25,11 @@ Sie müssen einen Link zuordnen, um einen manuellen Snapshot eines Volumes zu er
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des Dateisystems aus, das das Volume enthält, für das Sie einen Snapshot erstellen möchten, und wählen Sie dann *Verwalten* aus.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das das Volume enthält, für das ein Snapshot erstellt werden soll, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das mit Snapshots geschützt werden soll.
+. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume aus, das mit Snapshots geschützt werden soll.
 . Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
 . Wählen Sie auf der Seite „Snapshots verwalten“ die Option „Snapshot erstellen“ aus.
 . Führen Sie im Dialogfeld „Snapshot erstellen“ die folgenden Schritte aus:

@@ -11,7 +11,7 @@ summary: Aktivieren Sie Snapshots für die langfristige Aufbewahrung, wodurch Si
 
 
 [role="lead"]
-In der BlueXP  Workload Factory können Sie Snapshots für die langfristige Aufbewahrung aktivieren, mit denen Sie spezifische Snapshots für langfristige Disaster Recovery replizieren können.
+In NetApp Workload Factory können Sie Snapshots für die langfristige Aufbewahrung aktivieren, wodurch Sie bestimmte Snapshots für die langfristige Notfallwiederherstellung replizieren können.
 
 Dank der langfristigen Aufbewahrung können Business Services auch bei einem vollständigen Standortausfall weiterarbeiten und einen transparenten Failover von Applikationen mithilfe einer sekundären Kopie unterstützen.
 
@@ -21,10 +21,11 @@ Wenn ein lokaler ONTAP Cluster als Ziel für die Replizierungsbeziehung dient, w
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX für ONTAP* das drei-Punkt-Menü des zu aktualisierenden Dateisystems aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Wählen Sie auf der Registerkarte Replikationsbeziehungen das drei-Punkt-Menü des Zeitplans für die Replikationsbeziehung aus, das geändert werden soll.
+. Wählen Sie auf der Registerkarte „Replikationsbeziehungen“ das Aktionsmenü des zu ändernden Replikationsbeziehungszeitplans aus.
 . Wählen Sie *langfristige Aufbewahrung bearbeiten*.
 . Aktivieren oder deaktivieren Sie im Dialogfeld „langfristige Aufbewahrung bearbeiten“ Snapshots für die langfristige Aufbewahrung.
 . Wenn Sie Snapshots für die langfristige Aufbewahrung deaktivieren möchten, wählen Sie *Anwenden*, um diesen Vorgang abzuschließen.

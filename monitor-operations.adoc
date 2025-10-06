@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-operations.html 
 keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: Überwachen Sie FSX für ONTAP, Zugangsdaten und Link-Vorgänge und überwachen Sie den Job-Fortschritt mit Tracker in der BlueXP  Workload-Fabrik für Storage. 
+summary: Verfolgen Sie FSx für ONTAP, Anmeldeinformationen und Linkvorgänge und überwachen Sie den Jobfortschritt mit Tracker in NetApp Workload Factory für Storage. 
 ---
-= Überwachen Sie den Storage-Betrieb mit Tracker im BlueXP  Workload-Werk
+= Überwachen Sie Speichervorgänge mit Tracker in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Mit Tracker in der BlueXP  Workload-Fabrik überwachen und verfolgen Sie die Ausführung von FSX für ONTAP- und Zugangsdaten sowie Linkvorgänge und überwachen den Aufgabenfortschritt.
+Überwachen und verfolgen Sie die Ausführung von FSx für ONTAP, Anmeldeinformationen und Linkvorgängen und überwachen Sie den Aufgabenfortschritt mit Tracker in NetApp Workload Factory.
 
 .Über diese Aufgabe
 Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der Sie den Fortschritt und Status von FSX for ONTAP, Anmeldeinformationen und Link-Operationen überwachen und verfolgen können, Details für Betriebsaufgaben und untergeordnete Aufgaben überprüfen und Probleme oder Fehler diagnostizieren können.
@@ -42,12 +42,12 @@ Aufbewahrung von Ereignissen:: Ereignisse werden 30 Tage lang in der Benutzerobe
 
 == Verfolgen und überwachen Sie Vorgänge
 
-Überwachen und verfolgen Sie den Betrieb in BlueXP  mit Tracker.
+Verfolgen und überwachen Sie Vorgänge in der NetApp -Konsole mit Tracker.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie aus dem Lagerbestand das Menü Kontoeinstellungen und dann *Tracker*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *Verwaltung* und dann *Links*.
 +
 image:screenshot-menu-tracker-option.png["Ein Screenshot des Menüs „Kontoeinstellungen“ mit markierter Tracker-Option."]
 
@@ -62,7 +62,7 @@ Zeigen Sie die API-Anforderung in der Codebox für eine Aufgabe in Tracker an.
 
 .Schritte
 . Wählen Sie in Tracker eine Aufgabe aus.
-. Wählen Sie das drei-Punkt-Menü aus und wählen Sie dann *API-Anforderung anzeigen*.
+. Wählen Sie das Aktionsmenü und dann *API-Anforderung anzeigen*.
 
 
 
@@ -76,7 +76,7 @@ NOTE: Für einen fehlgeschlagenen Vorgang sind nur x Wiederholungen zulässig.
 
 .Schritte
 . Wählen Sie in Tracker einen fehlgeschlagenen Vorgang aus.
-. Wählen Sie das drei-Punkt-Menü und dann *Wiederholen*.
+. Wählen Sie das Aktionsmenü und dann *Wiederholen*.
 
 
 .Ergebnis
@@ -90,7 +90,7 @@ Bearbeiten Sie die Parameter des fehlgeschlagenen Vorgangs, und versuchen Sie de
 
 .Schritte
 . Wählen Sie in Tracker einen fehlgeschlagenen Vorgang aus.
-. Wählen Sie das drei-Punkt-Menü und dann *Bearbeiten und erneut versuchen*.
+. Wählen Sie das Aktionsmenü und dann *Bearbeiten und erneut versuchen*.
 +
 Sie werden zur Seite Operation weitergeleitet, auf der Sie die Parameter bearbeiten und den Vorgang wiederholen können.
 

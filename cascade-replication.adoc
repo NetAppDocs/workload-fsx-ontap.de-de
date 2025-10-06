@@ -4,7 +4,7 @@ permalink: cascade-replication.html
 keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
 summary: Replizieren Sie Datensicherungs-Volumes oder Kaskadenreplikation von Volume-Daten, um die Datensicherung auf tertiäre Systeme zu erweitern oder Ihre Daten zu migrieren. 
 ---
-= Replizieren Sie Datensicherungs-Volumes in der BlueXP  Workload-Fabrik
+= Replizieren Sie Datensicherungsvolumes in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -14,7 +14,7 @@ summary: Replizieren Sie Datensicherungs-Volumes oder Kaskadenreplikation von Vo
 Replizieren Sie Datensicherungs-Volumes oder Kaskadenreplikation von Volume-Daten, um die Datensicherung auf tertiäre Systeme zu erweitern oder Ihre Daten zu migrieren.
 
 .Über diese Aufgabe
-Die BlueXP  Workload-Farm unterstützt die Replizierung von Datensicherungs-Volumes, auch „Cascade Deployments“ genannt. Eine _Kaskadenbereitstellung_ besteht aus einer Beziehungskette, in der ein Quell-Volume auf ein sekundäres Volume gespiegelt wird (erster Hop) und das sekundäre Volume auf ein tertiäres Volume gespiegelt wird (zweiter Hop). Falls das sekundäre Volume nicht mehr verfügbar ist, können Sie die Beziehung zwischen dem primären und dem tertiären Volume synchronisieren, ohne einen neuen Basistransfer durchführen zu müssen.
+NetApp Workload Factory unterstützt die Replikation von Datensicherungsvolumes, auch _kaskadierte Bereitstellungen_ genannt.  Eine _kaskadierte Bereitstellung_ besteht aus einer Kette von Beziehungen, in der ein Quellvolume auf ein sekundäres Volume gespiegelt wird (erster Hop) und das sekundäre Volume auf ein tertiäres Volume gespiegelt wird (zweiter Hop).  Wenn das sekundäre Volume nicht mehr verfügbar ist, können Sie die Beziehung zwischen dem primären und dem tertiären Volume synchronisieren, ohne eine neue Baseline-Übertragung durchzuführen.
 
 Diese Funktion wird für FSX für ONTAP-Dateisysteme mit ONTAP Version 9.6 und höher unterstützt. Siehe link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["ONTAP-Dokumentation für kompatible ONTAP-Versionen"^].
 
@@ -30,8 +30,9 @@ Beachten Sie Folgendes, bevor Sie beginnen:
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, das die zu replizierenden Volumes enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das die zu replizierenden Volumes enthält, und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie in der Tabelle Volumes ein oder mehrere Data Protection Volumes (DP/Replicated Volumes) aus und wählen Sie dann *Replicate Data* aus.
 . Geben Sie auf der Seite Daten replizieren unter Replikationsziel Folgendes an:
@@ -39,7 +40,7 @@ Beachten Sie Folgendes, bevor Sie beginnen:
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
 .. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.
 .. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
-.. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus. Je nach ausgewähltem Anwendungsfall füllt die Workload Factory das Formular mit den empfohlenen Werten gemäß den Best Practices aus. Sie können die empfohlenen Werte akzeptieren oder Änderungen vornehmen, während Sie das Formular ausfüllen.
+.. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus.  Abhängig vom ausgewählten Anwendungsfall füllt Workload Factory das Formular gemäß Best Practices mit empfohlenen Werten aus.  Sie können die empfohlenen Werte akzeptieren oder beim Ausfüllen des Formulars Änderungen vornehmen.
 +
 *** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
 *** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
@@ -54,10 +55,10 @@ Beachten Sie Folgendes, bevor Sie beginnen:
 
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
 +
-_Balanced (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP. Beachten Sie, dass Workload Factory für Tiering-Richtlinien auf Basis von Anwendungsfällen in der Workload Factory verwendet und Tiering-Richtliniennamen für FSX für ONTAP in Klammern enthält.
+_Ausgeglichen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole.  Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie unterlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der AWS FSx für NetApp ONTAP -Dokumentation.  Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx für ONTAP -Tiering-Richtliniennamen in Klammern einschließt.
 
 +
-Wenn Sie den Anwendungsfall für die Migration ausgewählt haben, wählt die Workload Factory automatisch aus, die Tiering-Richtlinie des Quell-Volume auf das Ziel-Volume zu kopieren. Sie können das Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die auf das für die Replikation ausgewählte Volume zutrifft.
+Wenn Sie den Migrationsanwendungsfall ausgewählt haben, wählt Workload Factory automatisch aus, dass die Tiering-Richtlinie des Quellvolumes auf das Zielvolume kopiert werden soll.  Sie können die Option zum Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die für das für die Replikation ausgewählte Volume gilt.
 
 .. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
 +

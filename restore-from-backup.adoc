@@ -4,23 +4,24 @@ permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup 
 summary: Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wieder her. 
 ---
-= Stellen Sie ein Volume aus einem Backup in der BlueXP  Workload Factory wieder her
+= Wiederherstellen eines Volumes aus einer Sicherung in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-In der BlueXP -Workload-Fabrik können Sie ein Volume aus einem Backup auf einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wiederherstellen.
+In NetApp Workload Factory können Sie ein Volume aus einer Sicherung auf einem beliebigen FSx for ONTAP -Dateisystem in Ihrem AWS-Konto wiederherstellen.
 
 Workload Factory legt fest, ob Sie über genügend Kapazität für die Wiederherstellung verfügen, und kann automatisch SSD-Speicher-Tier-Kapazität hinzufügen, wenn nicht.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems mit dem Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das drei-Punkt-Menü für das Volume aus, das von einem Backup wiederhergestellt werden soll.
+. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume aus, das aus einer Sicherung wiederhergestellt werden soll.
 . Wählen Sie *Data Protection Actions*, *FSX for ONTAP Backup* und dann *Restore from a Backup*.
 . Geben Sie im Dialogfeld Wiederherstellen von einem Backup Folgendes an:
 +
@@ -35,8 +36,8 @@ Workload Factory legt fest, ob Sie über genügend Kapazität für die Wiederher
 Wenn die Kapazität des Dateisystems begrenzt ist, kann Folgendes auftreten:
 
 +
-** Die Wiederherstellung kann die genutzte Kapazität über den angegebenen Schwellenwert übertragen. Sie können den Wiederherstellungsvorgang abschließen. Erwägen link:increase-file-system-capacity.html["Manuelles Hinzufügen von SSD-Storage-Tier-Kapazität"] oder wählen Sie für die Workload-Fabrik aus, um automatisch SSD-Storage-Tier-Kapazität hinzuzufügen.
-** Die Wiederherstellung erfordert zusätzliche SSD-Kapazität. Sie müssen für die Workload-Fabrik auswählen, um automatisch SSD-Storage-Tier-Kapazität hinzuzufügen, um fortzufahren.
+** Durch die Wiederherstellung kann die genutzte Kapazität den von Ihnen angegebenen Schwellenwert überschreiten.  Sie können den Wiederherstellungsvorgang abschließen.  In Betracht ziehenlink:increase-file-system-capacity.html["Manuelles Hinzufügen von SSD-Storage-Tier-Kapazität"] oder wählen Sie „Workload Factory“ aus, um automatisch SSD-Speicherebenenkapazität hinzuzufügen.
+** Die Wiederherstellung erfordert zusätzliche SSD-Kapazität.  Um fortzufahren, müssen Sie für Workload Factory auswählen, dass automatisch SSD-Speicherebenenkapazität hinzugefügt wird.
 
 
 . Wählen Sie *Wiederherstellen*.

@@ -63,7 +63,7 @@ Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis z
 
 == Storage-VMs
 
-Die Anzahl der Storage-VMs ist pro SKU begrenzt. In der Workload-Fabrik wird nicht unterstützt, Storage-VMs über die Begrenzung hinaus zu erstellen.^1^
+Die Anzahl der Speicher-VMs ist pro SKU begrenzt.  Das Erstellen von Speicher-VMs über die Beschränkung hinaus wird in Workload Factory nicht unterstützt.^1^
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Management von FSX für ONTAP Storage Virtual Machines"^]In der AWS-Dokumentation finden Sie Informationen zur maximalen Anzahl von SVMs pro Filesystem.
 
@@ -117,7 +117,7 @@ System Manager unterstützt keine Links für FSX for ONTAP-Konnektivität.
 
 == Unterstützung von AWS Secrets Manager
 
-AWS Secrets Manager wird bei der Verwendung eines Connectors nicht unterstützt.
+AWS Secrets Manager wird bei Verwendung eines Konsolenagenten nicht unterstützt.
 
 Hinweis:
 

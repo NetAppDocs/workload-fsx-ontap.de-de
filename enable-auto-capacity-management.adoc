@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: enable-auto-capacity-management.html 
 keywords: auto capacity, automatic capacity management, file system capacity 
-summary: Wenn diese Funktion aktiviert ist, kann die Workload Factory einem Dateisystem von FSX für ONTAP automatisch inkrementellen Speicher hinzufügen, wenn sich die Kapazitätsanforderungen im Laufe der Zeit ändern. 
+summary: Durch Aktivieren dieser Funktion kann Workload Factory einem FSx für ONTAP Dateisystem automatisch inkrementellen Speicher hinzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert. 
 ---
 = Aktivieren Sie das automatische Kapazitätsmanagement für ein FSX für ONTAP-Filesystem
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Wenn diese Funktion aktiviert ist, kann die Workload Factory einem Date
 
 
 [role="lead"]
-Durch die Aktivierung des automatischen Kapazitätsmanagements kann die BlueXP Workload Factory automatisch inkrementellen Speicher zu einem FSx for ONTAP-Dateisystem hinzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert. Darüber hinaus entfällt durch die Aktivierung dieser Funktion die manuelle Überwachung der Kapazität und das Risiko von Lese- und Schreibvorgängen von Anwendungsdaten, die Auswirkungen haben können, wird verringert.
+Durch die Aktivierung der automatischen Kapazitätsverwaltung kann NetApp Workload Factory einem FSx für ONTAP Dateisystem automatisch inkrementellen Speicher hinzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert.  Darüber hinaus entfällt durch die Aktivierung dieser Funktion die Notwendigkeit, die Kapazität manuell zu überwachen, und das Risiko von Lese- und Schreibvorgängen von Anwendungsdaten mit negativen Auswirkungen wird verringert.
 
 .Über diese Aufgabe
 Ein Scan des FSX für ONTAP-Dateisystems findet alle 30 Minuten statt, um zu bestimmen, ob inkrementeller Storage hinzugefügt werden muss, und um verfügbare Volume-Inodes oder die maximale Anzahl an Dateien und Ordnern in einem Volume zu prüfen, sodass ihre Anzahl entsprechend den konfigurierten Schwellenwerten für das automatische Kapazitätsmanagement steigt.
@@ -23,15 +23,16 @@ Die maximale Menge an SSD-Speicherkapazität für alle FSX für ONTAP-Dateisyste
 .Bevor Sie beginnen
 Beachten Sie Folgendes, bevor Sie beginnen:
 
-* Sie müssen über Anmeldeinformationen mit Lese-/Schreibberechtigungen in der Workload Factory verfügen, um diese Aufgabe abzuschließen.
+* Sie müssen über Anmeldeinformationen mit Lese-/Schreibberechtigungen in Workload Factory verfügen, um diese Aufgabe abzuschließen.
 * Um sicherzustellen, dass die Volume-Inodes zusammen mit der Speicherkapazität zunehmen, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 * Sie sollten diese Funktion während der Datenmigration nicht aktivieren, da AWS zwischen SSD-Kapazitätserhöhungen eine Abkühlphase von mindestens sechs Stunden vorschreibt. Diese Einschränkung kann Anpassungen verzögern. Planen Sie daher entsprechend.
 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, um die automatische Kapazitätsverwaltung zu aktivieren.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, für das Sie die automatische Kapazitätsverwaltung aktivieren möchten.
 . Wählen Sie *Verwalten*.
 . Wählen Sie unter Information das Bleistiftsymbol neben *Automatic Capacity Management*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *Automatic Capacity Management* schwebt.
 . Geben Sie im Dialogfeld *Automatic Capacity Management* Folgendes an:

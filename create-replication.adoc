@@ -4,14 +4,14 @@ permalink: create-replication.html
 keywords: replication, replicate 
 summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisystem, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden. 
 ---
-= Erstellen Sie eine Replizierungsbeziehung in der BlueXP  Workload-Fabrik
+= Erstellen einer Replikationsbeziehung in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisystem in BlueXP -Workload-Fabrik, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden.
+Erstellen Sie eine Replikationsbeziehung für ein FSx für ONTAP -Dateisystem in NetApp Workload Factory, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden.
 
 .Über diese Aufgabe
 Die Replizierung ist eine zusätzliche Datensicherungsschicht, die im Falle eines Ausfalls der Region, in der Ihre Daten gespeichert sind, von wesentlicher Bedeutung ist. Durch regionsübergreifende Replizierung kann Datenverlust vermieden werden.
@@ -25,7 +25,7 @@ Beim Replizieren eines Quellvolumes mit unveränderlichen Dateien werden das Zie
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie beginnen.
 
-* Sie müssen über zwei verfügbare Dateisysteme in Ihrem Speicherbestand verfügen, um eine Replikationsbeziehung zu erstellen.
+* Um eine Replikationsbeziehung zu erstellen, müssen in Ihrem Speicher zwei verfügbare Dateisysteme vorhanden sein.
 * Den beiden Dateisystemen, die Sie für die Replikationsbeziehung verwenden, muss eine Verknüpfung zugeordnet sein. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
 
 
@@ -35,8 +35,9 @@ Sie können ein Quell-Volume (Lese-/Schreibvorgänge) oder ein Datensicherungs-V
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie auf der Registerkarte *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus, das die zu replizierenden Volumes enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das die zu replizierenden Volumes enthält, und wählen Sie dann *Verwalten*.
 . Replizieren Sie entweder alle Volumes in einem Dateisystem oder replizieren Sie ausgewählte Volumes.
 +
 ** Um alle Volumes in einem Dateisystem zu replizieren: Wählen Sie in der Dateisystemübersicht *Daten replizieren*.
@@ -51,7 +52,7 @@ Wählen Sie in der Tabelle Volumes ein oder mehrere Volumes aus und wählen Sie 
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
 .. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
 .. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
-.. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus. Je nach ausgewähltem Anwendungsfall füllt die Workload Factory das Formular mit den empfohlenen Werten gemäß den Best Practices aus. Sie können die empfohlenen Werte akzeptieren oder Änderungen vornehmen, während Sie das Formular ausfüllen.
+.. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus.  Abhängig vom ausgewählten Anwendungsfall füllt Workload Factory das Formular gemäß Best Practices mit empfohlenen Werten aus.  Sie können die empfohlenen Werte akzeptieren oder beim Ausfüllen des Formulars Änderungen vornehmen.
 +
 *** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
 *** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
@@ -77,10 +78,10 @@ Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die sta
 
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
 +
-_Balanced (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole. Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSX for NetApp ONTAP. Beachten Sie, dass Workload Factory für Tiering-Richtlinien auf Basis von Anwendungsfällen in der Workload Factory verwendet und Tiering-Richtliniennamen für FSX für ONTAP in Klammern enthält.
+_Ausgeglichen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole.  Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie unterlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der AWS FSx für NetApp ONTAP -Dokumentation.  Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx für ONTAP -Tiering-Richtliniennamen in Klammern einschließt.
 
 +
-Wenn Sie den Anwendungsfall für die Migration ausgewählt haben, wählt die Workload Factory automatisch aus, die Tiering-Richtlinie des Quell-Volume auf das Ziel-Volume zu kopieren. Sie können das Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die auf das für die Replikation ausgewählte Volume zutrifft.
+Wenn Sie den Migrationsanwendungsfall ausgewählt haben, wählt Workload Factory automatisch aus, dass die Tiering-Richtlinie des Quellvolumes auf das Zielvolume kopiert werden soll.  Sie können die Option zum Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die für das für die Replikation ausgewählte Volume gilt.
 
 .. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
 +

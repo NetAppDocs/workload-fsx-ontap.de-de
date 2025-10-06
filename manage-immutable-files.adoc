@@ -4,7 +4,7 @@ permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files 
 summary: Sie können bestimmte Einstellungen für unveränderliche Dateien aktualisieren, wenn die Funktion aktiviert ist. 
 ---
-= Verwalten Sie unveränderliche Dateien für ein Volume in der BlueXP  Workload-Fabrik
+= Verwalten unveränderlicher Dateien für ein Volume in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,9 +17,10 @@ Beachten Sie, dass die Aktivierung unveränderlicher Dateien nur während mögli
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter Speicher die Option *Gehe zu Lagerbestandsbestand* aus.
-. Wählen Sie die Registerkarte *Volumes*.
-. Wählen Sie auf der Registerkarte Volumes das Menü drei Punkte des Volumes aus, das geklont werden soll.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü des zu klonenden Volumes aus.
 . Wählen Sie *Data Protection actions* und dann *Manage Immanable files*.
 . Auf der Seite „unveränderliche Dateien verwalten“ können Sie Folgendes aktualisieren:
 +
@@ -35,6 +36,7 @@ Beachten Sie, dass die Aktivierung unveränderlicher Dateien nur während mögli
 
 
 ** *Autocommit*: Aktivieren oder deaktivieren Sie die Funktion, um Dateien, die während der Autocommit-Periode nicht geändert wurden, automatisch an WORM zu übergeben.
+** *Privilegiertes Löschen*: Aktivieren oder deaktivieren Sie die Funktion.  Durch Aktivieren der Funktion kann ein SnapLock Administrator ein nicht abgelaufenes WORM-Volume löschen.  Diese Funktion wird nur im Enterprise-Aufbewahrungsmodus unterstützt.
 ** *Volume Append-Modus*: Aktivieren oder deaktivieren Sie die Funktion. Durch die Aktivierung des Modus „Anhängen von Volumes“ können Sie WORM-Dateien neuen Inhalt hinzufügen.
 
 
