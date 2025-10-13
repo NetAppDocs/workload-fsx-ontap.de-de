@@ -2163,7 +2163,6 @@
   <block id="0b9457a2973ff10b39045b865037dcb8" category="list-text">Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das die neu auszugleichenden Volumes enthält, und wählen Sie dann *Verwalten*.</block>
   <block id="bf1c457139c3a04a33b336ab43865dad" category="admonition">Ein Workload Factory-Administrator kann<block ref="6089e6bc679073f1388a01bc136ad00e" category="inline-xref-macro-rx"></block> während der Operation.</block>
   <block id="59dfa377d2b15b40ba2bddd83dcb5c53" category="list-text">Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das das neu auszugleichende Volume enthält, und wählen Sie dann *Verwalten*.</block>
-  <block id="2465211fab7d73457701958a158bbf39" category="list-text">Wählen Sie unter *Speicher* die Option *Zum Speicher gehen</block>
   <block id="fbf1bac8c72be0440c190a08fabc8dc0" category="paragraph">Das Replizieren einer Speicher-VM auf ein anderes FSx für ONTAP Dateisystem in NetApp Workload Factory bietet eine Schutzebene für den Datenzugriff im Falle eines Datenverlusts.  Dieser Vorgang repliziert alle Volumes in einer Speicher-VM auf ein anderes FSx für ONTAP Dateisystem.</block>
   <block id="e42fc3e4b35126c00393bef5dd43abb0" category="list-text">Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems mit der zu replizierenden Speicher-VM und wählen Sie dann *Verwalten*.</block>
   <block id="f762650128ec007cd0d70b6659361ba3" category="list-text">Wählen Sie auf der Registerkarte „Storage-VMs“ das Aktionsmenü der Storage-VM aus, für die Sie eine SVM replizieren möchten.</block>
@@ -2238,4 +2237,9 @@
   <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">NetApp Konsole</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Datenservices</block>
   <block id="aea7c72083066ee89008056089d95877" category="sidebar">Ermitteln und Anzeigen von Cache-Volumes</block>
+  <block id="ea7d4002457b002b29ca2cb9a498c0bc" category="section-title">Neue Benachrichtigung für Speicher</block>
+  <block id="ba72fdb3bdfd568a9dee9e12c3566da1" category="paragraph">Der Workload Factory-Benachrichtigungsdienst umfasst Erfolgs- und Fehlerbenachrichtigungen für die automatische Kapazitätsverwaltung für Speicher.</block>
+  <block id="28a2c493e9a663d617e582302e1bcf28" category="inline-link-macro">Benachrichtigungen für die BlueXP workload factory</block>
+  <block id="165f0ade723f657a5d7981bfecbfc75a" category="paragraph"><block ref="165f0ade723f657a5d7981bfecbfc75a" category="inline-link-macro-rx"></block></block>
+  <block id="419085fd5f19a39001679a5f52b0acdf" category="list-text">Wählen Sie unter *Speicher* die Option *Zum Speicher*</block>
 </blocks>
