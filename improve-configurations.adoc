@@ -30,8 +30,8 @@ Da die Anforderungen an Speicherkonfigurationen unterschiedlich sind, können Si
 Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
 
 * Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, FSx für ONTAP Backups, Remote-Datenreplikation und Datenzuverlässigkeit für die langfristige Aufbewahrung
-* Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI)
-* Operative Exzellenz: Speichereffizienz, automatisches Kapazitätsmanagement und Schwellenwert für die Kapazitätsauslastung von Volume-Dateien
+* Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI) und Schutz vor unberechtigtem Zugriff auf Volumes
+* Operative Exzellenz: automatisches Kapazitätsmanagement, Schwellenwert für die Auslastung der Datenvolumenkapazität und nahezu vollständige Auslastung des Datenvolumens
 * Kostenoptimierung: Speichereffizienz und Daten-Tiering
 
 
@@ -42,7 +42,7 @@ Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigura
 Sie können Konfigurationsprobleme für ein FSx for ONTAP Dateisystem oder für ausgewählte Volumes in einem Dateisystem beheben.  Sie können eine oder mehrere zu reparierende Konfigurationen auswählen.
 
 .Bevor Sie beginnen
-* Sie müssen über Anmeldeinformationen mit Nur-Lese- oder Lese-/Schreibberechtigung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie in Ihrem AWS-Konto Berechtigungen erteilen"^].
+* Du musstlink:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto.
 * Der Behebungsprozess kann zu Instanzausfallzeiten oder Dienstunterbrechungen führen. Stellen Sie sicher, dass Sie jede Empfehlung sorgfältig prüfen, bevor Sie sich für die Behebung eines Konfigurationsproblems entscheiden.
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"]für die umfassendste Analyse Ihrer Dateisystemressourcen.
 

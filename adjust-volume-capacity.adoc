@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: adjust-volume-capacity.html 
+keywords: increase capacity, volume capacity 
+summary: Die Speicherkapazität eines Volumes in NetApp Workload Factory kann jederzeit manuell angepasst werden. 
+---
+= Volumenkapazität in NetApp Workload Factory anpassen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Speicherkapazität eines Volumes kann jederzeit manuell über die NetApp Workload Factory Konsole angepasst werden.
+
+Optional können Sielink:edit-volume-autogrow.html["Aktivieren Sie die Autogrow Funktion"] damit Workload Factory die Volume-Kapazität für Sie verwalten kann.
+
+.Über diese Aufgabe
+Sie können die Speicherkapazität anpassen, indem Sie die bereitgestellte Größe eines Volumes erhöhen oder verringern.  Die folgende Tabelle zeigt die minimalen und maximalen Volumengrößen nach Volumentyp:
+
+[cols="1,1,1"]
+|===
+| Datenträgertyp | Mindestgröße | Maximale Größe 
+
+
+| FlexVol Volume | 20 MiB | 300 TiB 
+
+
+| FlexGroup Volume | 800 GiB | 2 PiB 
+|===
+Bei einer iSCSI-LUN führt die Vergrößerung des Volumes auch zu einer Vergrößerung der Host-LUN.  Nachdem Sie die Speicherkapazität erhöht haben, befolgen Sie die Anweisungen Ihres Host-Betriebssystems, um die neue Größe der LUN zu ermitteln und das Dateisystem der LUN zu erweitern.
+
+Die Verringerung der Volume-Größe wird nur für NFS- und SMB/CIFS-Volumes unterstützt.
+
+.Bevor Sie beginnen
+Um die Lautstärke anzupassen, müssen Sie eine Verknüpfung herstellen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü des Volumes aus, dessen Kapazität Sie anpassen möchten.
+. Wählen Sie *Grundlegende Aktionen* und anschließend *Lautstärke anpassen*.
+. Im Dialogfeld „Volumenkapazität anpassen“ legen Sie die *Bereitgestellte Kapazität* und die Einheit fest.
+. Wählen Sie *Anpassen*, um die Änderungen anzuwenden.
+
+
+.Ähnliche Informationen
+* link:edit-volume-autogrow.html["Aktivieren Sie die automatische Volumevergrößerung in Workload Factory"]
+* link:rebalance-volume.html["Volumen in Workload Factory neu ausbalancieren"]
+

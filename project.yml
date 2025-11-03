@@ -81,6 +81,8 @@ sidebar:
         url: "/clone-volume.html"
       - title: Lokale ONTAP-Daten nutzen
         url: "/use-onprem-data.html"
+      - title: Erstellen Sie einen Cyber-Tresor zum Schutz Ihrer Daten
+        url: "/create-cyber-vault.html"
   - title: Administration und Überwachung
     entries:
     - title: Überwachen Sie den Betrieb mit Tracker
@@ -95,14 +97,16 @@ sidebar:
       entries:
       - title: Bearbeiten Sie Volume Autogrow
         url: "/edit-volume-autogrow.html"
-      - title: Höhere Volume-Kapazität
-        url: "/increase-volume-capacity.html"
+      - title: Lautstärke anpassen
+        url: "/adjust-volume-capacity.html"
+      - title: Volumenkapazität neu ausbalancieren
+        url: "/rebalance-volume.html"
       - title: Management unveränderlicher Dateien
         url: "/manage-immutable-files.html"
       - title: Verwalten von Volume-Tags
         url: "/manage-volume-tags.html"
-      - title: Volumenkapazität neu ausbalancieren
-        url: "/rebalance-volume.html"
+      - title: Cache-Volumes verwalten
+        url: "/manage-cache-volumes.html"
       - title: Tiering-Richtlinie ändern
         url: "/change-tiering-policy.html"
       - title: Aktualisieren Sie die Storage-Effizienz
@@ -119,7 +123,7 @@ sidebar:
       entries:
       - title: Passen Sie die Dateisystemkapazität an
         url: "/increase-file-system-capacity.html"
-      - title: Aktivieren Sie das automatische Kapazitätsmanagement
+      - title: Automatische Kapazitäts- und Inode-Verwaltung aktivieren
         url: "/enable-auto-capacity-management.html"
       - title: Fsxadmin-Kennwort zurücksetzen
         url: "/reset-fsxadmin-password.html"

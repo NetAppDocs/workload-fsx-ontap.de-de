@@ -13,7 +13,7 @@ summary: Aktivieren Sie die automatische Volumevergrößerung, damit Workload Fa
 [role="lead"]
 Aktivieren Sie die automatische Volumevergrößerung, damit Workload Factory die Volumekapazität für Sie verwalten kann.  Sie können es jederzeit deaktivieren.
 
-Optional können Sie die Volume-Kapazität eines Volumes jederzeit manuell über die erhöhen link:increase-volume-capacity.html["Erhöhen Sie die Volume-Kapazität"].
+Optional können Sie die Speicherkapazität eines Volumes jederzeit manuell erhöhen.link:adjust-volume-capacity.html["Funktion zum Anpassen der Lautstärkekapazität"] Die
 
 
 NOTE: Volume Autogrow wird für iSCSI Volumes nicht unterstützt.

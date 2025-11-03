@@ -39,7 +39,7 @@ Sie haben in diesem Workflow zwei Möglichkeiten, Links zu erstellen – automat
 
 .Bevor Sie beginnen
 * Sie sollten überlegen, welche Link-Erstelloption Sie verwenden.
-* Sie müssen mindestens ein FSx für ONTAP Dateisystem in Workload Factory haben.  Um FSx for ONTAP Dateisysteme zu erkennen oder zu erstellen, benötigen Sie ein AWS-Konto mit Berechtigungen für FSx for ONTAP Instanzen undlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["Anmeldeinformationen in Workload Factory hinzufügen"^] mit _Nur-Lese_- oder _Lese-/Schreib_-Berechtigungen für die Speicherverwaltung.
+* Sie benötigen mindestens ein FSx for ONTAP Dateisystem in Workload Factory.  Um FSx for ONTAP Dateisysteme zu erkennen, benötigen Sie ein AWS-Konto mit Berechtigungen für FSx for ONTAP Instanzen undlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["Anmeldeinformationen in Workload Factory hinzufügen"^] mit den Berechtigungen _view, planning, and analysis_ für die Speicherverwaltung.
 * Die folgenden Ports müssen in der mit dem FSx for ONTAP-Dateisystem verknüpften Sicherheitsgruppe für die Link-Konnektivität geöffnet sein.
 +
 ** Für die Workload Factory-Konsole: Port 443 (HTTPS)

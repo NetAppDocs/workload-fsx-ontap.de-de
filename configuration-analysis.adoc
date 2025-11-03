@@ -46,9 +46,17 @@ Konfigurationskategorien:: Die Filesystem-Konfigurationen werden in Kategorien o
 
 == Analyseanforderungen
 
-Für eine vollständige Dateisystemanalyse müssen Sie einen Link zuordnen.  Durch die Link-Konnektivität kann Workload Factory alle Dateisystemkonfigurationen wie Datenschutz und Leistung analysieren.
+Für eine vollständige Dateisystemanalyse müssen Sie Folgendes tun:
 
+* Verknüpfen Sie einen Link.  Die Link-Konnektivität ermöglicht es Workload Factory, alle Dateisystemkonfigurationen wie Datenschutz und Leistung zu analysieren.
++
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."].
+
+* Gewähren Sie in Ihrem AWS-Konto die Berechtigungen _view, planning, and analysis_.
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie einem AWS-Konto Berechtigungen erteilen"^]
+
+
 
 .Wie es weiter geht
 link:improve-configurations.html["Sorgfältig konzipierte Filesystem-Konfigurationen implementieren"]

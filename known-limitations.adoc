@@ -73,6 +73,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 
 * Das iSCSI-Protokoll ist nur für FlexVol-Volumes verfügbar. ^1^
 * Es kann nur eine einzelne LUN pro Volume konfiguriert werden.
+* Die Verkleinerung von Volumes wird für iSCSI-Volumes nicht unterstützt.
 
 
 

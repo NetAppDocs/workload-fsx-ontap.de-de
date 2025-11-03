@@ -23,13 +23,13 @@ Sie müssenlink:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Fügen Sie Anmeldeinformationen und Berechtigungen hinzu
 [role="quick-margin-para"]
-Wählen Sie zwischen _einfach_, _schreibgeschützt_ und _lesen/schreiben_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Betriebsmodi"^]
+Wählen Sie dielink:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Berechtigungsrichtlinien"^] um Ihren Bedürfnissen gerecht zu werden.
 
 [role="quick-margin-para"]
-Wenn Sie sich für den Betrieb im _Basismodus_ entscheiden, müssen Sie nicht weiter gehen.  Sie können mit der Verwendung von Workload Factory für FSx for ONTAP beginnen, um teilweise fertiggestellte Codebeispiele zu kopieren.
+Wenn Sie keine Berechtigungen erteilen, können Sie mit Workload Factory für FSx für ONTAP beginnen, um teilweise fertiggestellte Codebeispiele zu kopieren.
 
 [role="quick-margin-para"]
-Wenn Sie im _Nur-Lese-Modus_ oder _Lesen/Schreiben_ arbeiten, müssen Sie link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Fügen Sie einem Konto manuell Anmeldeinformationen hinzu"^] Dazu gehört die Auswahl von Workload-Funktionen wie Datenbanken und KI sowie die Erstellung der IAM-Richtlinien, um sicherzustellen, dass Sie über die richtigen Berechtigungen für den Betrieb im _Nur-Lese_- oder _Lese-/Schreib_-Modus verfügen.
+Wenn Sie Berechtigungen erteilen möchten, müssen Sie Folgendes tun:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Fügen Sie einem Konto manuell Anmeldeinformationen hinzu"^] Dies umfasst die Auswahl von Workload-Funktionen wie Datenbanken und KI sowie die Erstellung der IAM-Richtlinien für die erforderlichen Berechtigungen.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"] Erstellen Sie ein Dateisystem
 [role="quick-margin-para"]

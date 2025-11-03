@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: create-cyber-vault.html 
+keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
+summary: Erfahren Sie mehr über NetApp Cyber ​​Vaults und wie Sie eine Cyber-Vault-Architektur implementieren, um Ihre Daten vor Ransomware und Cyberbedrohungen zu schützen. 
+---
+= Schützen Sie Ihre Daten mit einem Cyber-Tresor.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ein Cyber-Vault-Volume ist ein isolierter, sicherer Speicherort, der zum Speichern von Sicherungskopien Ihrer Daten verwendet wird und diese vor Ransomware-Angriffen und anderen Cyberbedrohungen schützt.  Im Rahmen der Vault-Erstellung erstellen Sie ein Cyber-Vault-Volume, deaktivieren alle Client-Protokolle, richten eine Replikationsbeziehung zwischen dem Quell-Volume und dem Cyber-Vault-Volume ein und erstellen unveränderliche Snapshots auf dem Cyber-Vault-Volume.
+
+.Was ist ein Cyber-Tresor?
+Ein Cyber-Tresor ist eine spezielle Datenschutztechnik, bei der kritische Daten in einer isolierten Umgebung, getrennt von der primären IT-Infrastruktur, gespeichert werden.
+
+Der Cyber-Tresor ist ein vom Rest des Netzwerks abgeschottetes, unveränderliches und unauslöschliches Datenrepository, das immun gegen Bedrohungen ist, die das Hauptnetzwerk betreffen, wie Malware, Ransomware oder sogar Insider-Bedrohungen.  Ein Cyber-Tresor lässt sich mit unveränderlichen und unauslöschlichen Snapshots realisieren.
+
+Bei Air-Gapping-Backups mit herkömmlichen Methoden müssen Platz geschaffen und das primäre und sekundäre Medium physisch getrennt werden. Durch die Verlagerung der Medien an einen anderen Standort und/oder die Trennung der Verbindung haben böswillige Akteure keinen Zugriff auf die Daten. Dies schützt die Daten, kann jedoch zu längeren Wiederherstellungszeiten führen.
+
+.FSx für ONTAP Cyber-Tresore
+Amazon FSx for NetApp ONTAP wird als Cyber-Vault-Quelle und -Ziel unterstützt.
+
+.Durchführung
+Workload Factory bietet Unterstützung bei der Erstellung einer Cyber-Vault-Architektur.  Nachdem Sie NetApp kontaktiert haben, um Ihr Interesse an der Implementierung eines Cyber-Vaults zu bekunden, setzt sich ein NetApp Spezialist mit Ihnen in Verbindung, um Ihre Anforderungen zu besprechen.
+
+Senden Sie eine E-Mail an ng-FSx-CyberVault@netapp.com, um loszulegen.
+
+.Ähnliche Informationen
+Weitere Informationen zu Cyber-Tresoren und deren Einrichtung finden Sie unter:link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["ONTAP Cyber ​​Vault-Dokumentation"^] Die
