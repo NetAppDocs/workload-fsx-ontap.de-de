@@ -32,7 +32,8 @@ Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigura
 * Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, FSx für ONTAP Backups, Remote-Datenreplikation und Datenzuverlässigkeit für die langfristige Aufbewahrung
 * Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI) und Schutz vor unberechtigtem Zugriff auf Volumes
 * Operative Exzellenz: automatisches Kapazitätsmanagement, Schwellenwert für die Auslastung der Datenvolumenkapazität und nahezu vollständige Auslastung des Datenvolumens
-* Kostenoptimierung: Speichereffizienz und Daten-Tiering
+* Kostenoptimierung: Speichereffizienz, Daten-Tiering und unnötige Snapshot-Löschung
+* Leistungsoptimierung: FlexGroup Volumen-Rebalancing
 
 
 

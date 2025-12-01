@@ -583,14 +583,6 @@
   <block id="241ea6618170a92484ea213e4cade854" category="doc">Aktualisieren der Durchsatzkapazität eines Dateisystems</block>
   <block id="6cc2a35072ede8f6e3bef70bce54ed8c" category="paragraph">Weitere Informationen zu Durchsatzkapazitätsgrenzen finden Sie <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> in der Dokumentation zu AWS FSX for NetApp ONTAP.</block>
   <block id="77fe58178c324bbc70fcb16af3bf2b46" category="list-text">Wählen Sie im Dialogfeld Durchsatzkapazität die benötigte Durchsatzkapazität aus.</block>
-  <block id="885fd24663ae2a75b6cf326e1cb1c8a0" category="summary">Zeigen Sie Volume-Details, Verteilung, Nutzung, Zugriff und Sicherung an.</block>
-  <block id="67fd29a6cc928abe6b6f86ff09e307f2" category="paragraph">Volume-Details werden erst angezeigt, nachdem ein Volume in einem Dateisystem erstellt wurde.</block>
-  <block id="6d861bb7f63e6cf47b5c554ee05eac67" category="list-text">Wählen Sie *Basic actions* und dann *View Volume Details*.</block>
-  <block id="439d42a534fe0bae9413648240777bfc" category="list-text">Wählen Sie unter *Volume Details* die Registerkarten aus, um die folgenden Volume-Details anzuzeigen:</block>
-  <block id="1c7942ef9895243b7d4ef6b21c58b5c4" category="list-text">*Verteilung*: Umfasst Hosting-Aggregate, Volume-Stil (FlexGroup oder FlexVol), Komponenten (nur FlexGroup) und Ausgleichverhältnis (nur FlexGroup - hoch, mittel oder niedrig).</block>
-  <block id="ebf624cb45bff65c163a51dc14608a8e" category="list-text">*Verbrauch*: Umfasst Größe, verwendete SSD, verwendeten Kapazitäts-Pool, Autogrow-Einstellung, maximale Wachstumsgröße, Einstellung der Storage-Effizienz, eingesparte Komprimierung, eingesparte Deduplizierung, Tiering-Richtlinie und Arbeitstage</block>
-  <block id="5c56dce0204190e932ff7e64632a6971" category="list-text">*Access*: Umfasst Verbindungspfad, Sicherheitsstil, Exportrichtlinie und NFS-Version für NFS und Active Directory, CIFS-Freigabename, Benutzer oder Gruppen und Berechtigungen für SMB/CIFS sowie Initiatorgruppen und Host-IQNs für iSCSI.</block>
-  <block id="541f0f17fbfba6b941c5b77a421fb336" category="list-text">*Schutz*: Beinhaltet lokalen Snapshot, Snapshot Policy Name, Remote-Replikation und FSX für ONTAP Backup.</block>
   <block id="69a94f722f40461d326d0d87f7643499" category="summary">Informieren Sie sich über die Neuerungen bei Amazon FSX for NetApp ONTAP.</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Los geht's</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Versionshinweise</block>
@@ -686,7 +678,6 @@
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">7 Juli 2024</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">Dateisysteme und Storage-VMs können Sie nun mit Terraform von der Codebox implementieren.</block>
   <block id="f0881d896f399a09e86122a09c00b74d" category="doc">Lesemodus-Unterstützung für Speicherverwaltung</block>
-  <block id="06fdd4e2a129920e1eda56425068ba01" category="inline-link-macro">Weitere Informationen zum Lesemodus</block>
   <block id="fc30083e7a76ed4c8eb6167ea377c198" category="section-title">Unterstützung für Backup vor dem Löschen von Volumes</block>
   <block id="8b97ffb47ece0280994594aa00a04a55" category="paragraph">Sie können jetzt ein Volume sichern, bevor Sie es löschen. Die Sicherung bleibt im Dateisystem, bis sie gelöscht wird.</block>
   <block id="7dd9587dbbaf30e59e9c0550bb88b5cd" category="list-text">Gehen Sie im Dialogfeld Volume löschen wie folgt vor:</block>
@@ -715,7 +706,6 @@
   <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
   <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
-  <block id="f584ba5824f9f0b7bb3a173d45332dd3" category="paragraph"><block ref="f584ba5824f9f0b7bb3a173d45332dd3" category="inline-link-macro-rx"></block></block>
   <block id="a0fbee91270a9c1ec1d2bc9b56f87ff3" category="paragraph"><block ref="a0fbee91270a9c1ec1d2bc9b56f87ff3" category="inline-link-macro-rx"></block></block>
   <block id="3874612023324fe909b90a886072b352" category="paragraph"><block ref="3874612023324fe909b90a886072b352" category="inline-link-macro-rx"></block></block>
   <block id="0d2c81cd9ea6f82a77b580a488c5e8aa" category="doc">Zugriff auf Ihre FSX for ONTAP-Dateisystemdaten</block>
@@ -1060,7 +1050,6 @@
   <block id="ceb833d216db0e056b9ab7d22ba4f023" category="paragraph">Ohne Einschränkung kann die Netzwerk- und Applikations-Performance abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.</block>
   <block id="c4ee13228c56b3c8a94bcef6d8d6d357" category="summary">Teilen Sie eine Klon-FlexVol volume von seinem übergeordneten Volume auf, um den Klon zu einer normalen Lese-/Schreib-FlexVol volume zu machen.</block>
   <block id="dde14eef9b53344c34a3e3e63830d29e" category="paragraph">Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für ONTAP Filesystem. Nach der Replizierung können diese Daten zur Erweiterung von KI-Wissensdatenbanken verwendet werden.</block>
-  <block id="8b02e3f5a15bae20358e2221cac45d83" category="list-text">*Allgemeine Details*: Umfasst Volume-Name, Volume-UUID, Volume-ID, Erstellungszeit, Status, Volume-Typ (Lese-/Schreib-/Datenschutz (RW/DP) oder schreibgeschützt), Snapshot-Richtlinienname, Hosting-Storage-VM (SVM) und Tags.</block>
   <block id="95712b1074d83e6727c42aa16be5af5a" category="paragraph"><block ref="95712b1074d83e6727c42aa16be5af5a" category="inline-link-macro-rx"></block></block>
   <block id="815e02f013485997d1d56438f0bf1505" category="paragraph"><block ref="815e02f013485997d1d56438f0bf1505" category="inline-link-macro-rx"></block></block>
   <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">Stufe 1 (Aufgabe): Verfolgt die Dateisystembereitstellung.</block>
@@ -1992,7 +1981,6 @@
   <block id="f899a571558dc3581836d9ffe17218ed" category="paragraph">Durch die Link-Konnektivität kann Workload Factory nach Problemen mit Leistung, Datenschutz und Konfigurationen suchen. <block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block> für die umfassendste Analyse Ihrer Dateisystemressourcen.</block>
   <block id="efa540b6730dc694889e9447404ff68a" category="paragraph">Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme mit Ihren Dateisystemen zu überprüfen und die Probleme vom Speicher aus in der Workload Factory-Konsole zu beheben.</block>
   <block id="73b9ca32e75f36a5247f70e0ac6f7034" category="list-text">Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, FSx für ONTAP Backups, Remote-Datenreplikation und Datenzuverlässigkeit für die langfristige Aufbewahrung</block>
-  <block id="24ef9c1deb4b27b9f21ac5bafe0b447a" category="list-text">Kostenoptimierung: Speichereffizienz und Daten-Tiering</block>
   <block id="f4620ec86c292b6ceff91a8418771488" category="list-text">Der Behebungsprozess kann zu Instanzausfallzeiten oder Dienstunterbrechungen führen. Stellen Sie sicher, dass Sie jede Empfehlung sorgfältig prüfen, bevor Sie sich für die Behebung eines Konfigurationsproblems entscheiden.</block>
   <block id="bdcff0916b9de421b3f836810688eb67" category="list-text"><block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>für die umfassendste Analyse Ihrer Dateisystemressourcen.</block>
   <block id="99647ce863ab632fcdb252345dc9e76b" category="list-text">Filtern Sie Konfigurationsprobleme optional nach Kategorien, Unterkategorien, Status, Schweregrad und Tags.</block>
@@ -2193,8 +2181,6 @@
   <block id="ed6e985965d3239d89b208e6d5a24ba4" category="paragraph">Entfernen Sie bei Bedarf einen lokalen ONTAP Cluster aus der NetApp Workload Factory.</block>
   <block id="0463237fa8bae60d5bd9fc513e1c72f2" category="list-text">Wählen Sie das Aktionsmenü und wählen Sie *Aus Workload Factory entfernen*.</block>
   <block id="da4b7454793816018fbc84be4732006d" category="paragraph">Der lokale ONTAP Cluster wird aus der NetApp Workload Factory entfernt.</block>
-  <block id="0638752c3b8f96a63528f3ba5d76579e" category="doc">Volumedetails in NetApp Workload Factory anzeigen</block>
-  <block id="1f46e6bdd9d9415125871b73f726d3bb" category="list-text">Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, das Sie ändern möchten.</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06. Oktober 2025</block>
   <block id="7fe837fc0a93acdad81da1d440ee3fd2" category="section-title">05. Oktober 2025</block>
   <block id="5cc3bb62b21de598b940e08376ed73b6" category="sidebar">Amazon FSx for NetApp ONTAP bringt die vollständigen Funktionen von ONTAP in einen nativen, von AWS verwalteten Service und bietet ein konsistentes Hybrid-Cloud-Erlebnis.  In dieser Dokumentation wird beschrieben, wie FSx für ONTAP mithilfe von NetApp Workload Factory verwaltet wird.</block>
@@ -2318,10 +2304,6 @@
   <block id="052dbb930400a0ed10fd9a2369d6e91b" category="list-text">Du musst<block ref="31bad9d191bee3fabcae484ca4efec82" category="inline-link-macro-rx"></block> in Ihrem AWS-Konto.</block>
   <block id="8397e16109313045973558b01bfb9915" category="list-text">Die Verkleinerung von Volumes wird für iSCSI-Volumes nicht unterstützt.</block>
   <block id="00e4e6045ee76f2899377d5370d56a36" category="summary">Verwalten Sie bei Bedarf die Cache-Volumes für ein FSx for ONTAP -Dateisystem in NetApp Workload Factory .</block>
-  <block id="77202d5f206e842a17a7c71e4612af8c" category="doc">Verwalten der Cache-Volumes für ein FSx for ONTAP Dateisystem</block>
-  <block id="6d6084417b916dd2a1b60499b04dad76" category="paragraph">Über die NetApp Workload Factory Konsole können Sie die Cache-Volumes für Ihre FSx for ONTAP Dateisysteme verwalten.  Zu den Verwaltungsaufgaben gehören das Bearbeiten des Cache-Namens, das Erhöhen der Cache-Kapazität, das Bearbeiten der Exportrichtlinie, das Ändern der Caching-Methode, das Vorbefüllen des Caches und das Löschen des Cache-Volumes, wenn es nicht mehr benötigt wird.</block>
-  <block id="c0c5d63ff1a1fe8bf6fe4f26c7af37c8" category="paragraph">Sie können Cache-Volumes verwalten, die mit Cache-Beziehungen verknüpft sind, ohne die NetApp Workload Factory Konsole zu verlassen.</block>
-  <block id="fe39e5a751393e260c8760e626d46663" category="list-text">Sie müssen einen Link zur Verwaltung von Cache-Volumes und -Beziehungen verknüpfen. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.</block>
   <block id="2923b8d05b469dec564ede3ae38cab32" category="list-text">Zum Bearbeiten muss ein vorhandenes Cache-Volume vorhanden sein.</block>
   <block id="9741f5c69b66c193b24db8c6b064d449" category="section-title">Bearbeiten Sie den Namen des Cache-Volumes</block>
   <block id="dd9dbeec9d1d47721414517e8ceb1003" category="paragraph">Sie können den Namen eines vorhandenen Cache-Volumes jederzeit ändern.</block>
@@ -2330,27 +2312,20 @@
   <block id="91c9dd0465d889c4cd7dcd9d00c3cff9" category="list-text">Wählen Sie in der Dateisystemübersicht die Registerkarte *Cache-Beziehungen* aus.</block>
   <block id="704333b75cf6acba4392d7ad809dfb1d" category="list-text">Wählen Sie im Aktionsmenü das Cache-Volume aus, das Sie ändern möchten, und wählen Sie dann *Cache-Namen bearbeiten*.</block>
   <block id="19b0e87ba7ed54521f11cd8489003533" category="list-text">Geben Sie im Dialogfeld *Cache-Namen bearbeiten* den neuen Namen für das Cache-Volume ein und wählen Sie dann *Anwenden*.</block>
-  <block id="f25e64c5391d2a162a25bbb460a7f886" category="paragraph">Sollten Sie die Kapazität eines bestehenden Cache-Volumes erhöhen müssen, können Sie dies jederzeit tun.</block>
-  <block id="dc97b6b6257816c273cb4b23c4be1923" category="list-text">Wählen Sie im Aktionsmenü das Cache-Volume aus, das Sie ändern möchten, und wählen Sie dann *Cache-Kapazität erhöhen*.</block>
-  <block id="1a6d17f42b3c06ad6ef47079b2b7d2bf" category="list-text">Geben Sie im Dialogfeld *Cache-Kapazität erhöhen* die neue Kapazität für das Cache-Volume in Prozent oder in Einheiten ein und wählen Sie dann *Anwenden*.</block>
   <block id="d34bce37c8d5cf5a3814d3185867c80e" category="section-title">Bearbeiten Sie die Exportrichtlinie für Cache-Volumes.</block>
   <block id="3591b370a6ba1fccb018417aa452f30e" category="paragraph">Ändern Sie den Mount-Pfad oder die Exportrichtlinie, die einem vorhandenen Cache-Volume zugewiesen ist.</block>
   <block id="19bb8592aa45eac21fc3a0ff7043f17f" category="list-text">Wählen Sie im Aktionsmenü das Cache-Volume aus, das Sie ändern möchten, und wählen Sie dann *Exportrichtlinie bearbeiten*.</block>
   <block id="a23d30d9dbd5b5de5e3ee67a9ded5242" category="list-text">Im Dialogfeld *Exportrichtlinie bearbeiten* können Sie den Mount-Pfad ändern oder eine andere Exportrichtlinie auswählen, die dem Cache-Volume zugewiesen werden soll.</block>
   <block id="7f7e450958b0a4653cfea4189d6ed995" category="section-title">Ändern Sie die Caching-Methode für ein Cache-Volume.</block>
-  <block id="3e5271b8379ddcabf8c8d8673b311437" category="paragraph">Ändern Sie die Caching-Methode bzw. den Modus für ein vorhandenes Cache-Volume auf Write-Around oder Write-Back.</block>
   <block id="cabfeb9da681d3ace757106e0813cd8f" category="inline-link-macro">Schreibmodi</block>
   <block id="38fdf5539761bcae25e0fc465e40d97f" category="paragraph">Erfahren Sie mehr über<block ref="956f54ba6b1d39caea9bd76790adf811" category="inline-link-macro-rx"></block> .</block>
   <block id="a3e52bd74056f56571702f1d78113945" category="list-text">Wählen Sie im Menü „Aktionen“ das Cache-Volume aus, das Sie ändern möchten, und wählen Sie dann *Caching-Methode ändern*.</block>
   <block id="0ec532fce8b15ab5badcbf1146af5bef" category="list-text">Im Dialogfeld *Caching-Methode ändern* wählen Sie die neue Caching-Methode aus und klicken anschließend auf *Anwenden*.</block>
-  <block id="aef7f37d9224e6cdc84773fd0752841c" category="paragraph">Um den Zugriff auf zwischengespeicherte Daten zu beschleunigen, sollte ein Cache-Volume vorab mit Daten aus dem Ursprungsvolume gefüllt werden.</block>
   <block id="03b8e2cae40fcbf80cad40862d5d0025" category="list-text">Wählen Sie im Menü „Aktionen“ das Cache-Volume aus, das Sie ändern möchten, und wählen Sie dann *Cache vorbefüllen*.</block>
   <block id="d451f44672ea0a78b72fd7dd794c481e" category="list-text">Im Dialogfeld *Cache vorbefüllen* geben Sie den Pfad zum Datensatz an, der für die Vorbefüllung verwendet werden soll, und wählen dann *Anwenden*.</block>
-  <block id="0eb48cd23b461a05c76d8f751c427193" category="paragraph">Durch das Löschen eines Cache-Volumes wird die Cache-Beziehung zwischen dem Ursprungsvolume und dem Cache-Volume gelöscht.  Nach dem Löschen sind die zwischengespeicherten Daten nicht mehr verfügbar.</block>
   <block id="9bed233fd25bae0dceb43f72350d951b" category="list-text">Wählen Sie im Aktionsmenü das Cache-Volume aus, das Sie löschen möchten, und wählen Sie dann *Cache-Volume löschen*.</block>
   <block id="c150fc012517f3e827497fc4aa6b609a" category="list-text">Bestätigen Sie im Dialogfeld *Cache-Volume löschen* den Löschvorgang und wählen Sie dann *Löschen*.</block>
   <block id="51bf12717b370e03e3310859db67cac6" category="inline-link-macro">Berechtigungsrichtlinien</block>
-  <block id="1b9d0264ffd97a37d34b3626026426a0" category="paragraph">Wählen Sie die<block ref="7dcfcf538adde0d607dcea20e99b9fe9" category="inline-link-macro-rx"></block> um Ihren Bedürfnissen gerecht zu werden.</block>
   <block id="d15741d42f2a6f5f82721fc70d54b6a4" category="paragraph">Wenn Sie keine Berechtigungen erteilen, können Sie mit Workload Factory für FSx für ONTAP beginnen, um teilweise fertiggestellte Codebeispiele zu kopieren.</block>
   <block id="38c4c72673e051381c12c32e1dd20f50" category="paragraph">Wenn Sie Berechtigungen erteilen möchten, müssen Sie Folgendes tun:<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> Dies umfasst die Auswahl von Workload-Funktionen wie Datenbanken und KI sowie die Erstellung der IAM-Richtlinien für die erforderlichen Berechtigungen.</block>
   <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">02. November 2025</block>
@@ -2362,4 +2337,129 @@
   <block id="7999c939951d1cfce0556df15a76a345" category="paragraph"><block ref="7999c939951d1cfce0556df15a76a345" category="inline-link-macro-rx"></block></block>
   <block id="1aa6907369c233df8f3cc388c26b9890" category="paragraph"><block ref="1aa6907369c233df8f3cc388c26b9890" category="inline-link-macro-rx"></block></block>
   <block id="9241eb0a9aab7657dc2b300da8931da7" category="paragraph">Weitere Informationen zu Cyber-Tresoren und deren Einrichtung finden Sie unter: <block ref="5ee11ce3f9bfc218d47e808a1ac01a55" category="inline-link-macro-rx"></block>Die</block>
+  <block id="081af9c5870a1e2b72453c8137d7fc73" category="doc">Blockgeräteunterstützung in NetApp Workload Factory</block>
+  <block id="41c0f3170443e12c1081a0a411a2c7a4" category="paragraph">Verwalten Sie Ihre Blockgeräte effektiver mit der neu eingeführten Blockgeräteunterstützung in NetApp Workload Factory.  Diese Funktion ermöglicht es Ihnen, Details anzuzeigen und die Kapazität von iSCSI-LUNs zu erhöhen, wodurch Sie mehr Flexibilität für Ihre Speicheranforderungen erhalten.</block>
+  <block id="83fd7a4dba0970697d173ce4398c1b71" category="inline-link-macro">Blockgeräte in Workload Factory verwalten</block>
+  <block id="e739cb7976f49d4295e9ffa8e259037b" category="paragraph"><block ref="e739cb7976f49d4295e9ffa8e259037b" category="inline-link-macro-rx"></block></block>
+  <block id="90b40f16cf91d89fc22fbcc0a38efa7c" category="list-text">Unnötige Snapshot-Löschung: Prüft, ob Volumes veraltete und unnötige Snapshots enthalten, die gelöscht werden können, um Kosten zu reduzieren.</block>
+  <block id="2945c0b218624e42ee523aefde446d66" category="list-text">FlexGroup -Volumes-Rebalance: Prüft, ob die FlexGroup Volumes gleichmäßig auf die einzelnen Mitgliedsvolumes verteilt sind, um eine optimale Performance zu gewährleisten.</block>
+  <block id="0f80b197268947adedcc0297fc4a4efd" category="section-title">KI-Analysator für EMS-Ereignisse in NetApp Workload Factory</block>
+  <block id="b0e5de397c4ec9c39df271c0f4cf05e1" category="paragraph">NetApp Workload Factory stellt einen KI-gestützten Analysator für ONTAP Event Management System (EMS)-Ereignisse vor.  Diese Funktion hilft Ihnen, Probleme schnell zu erkennen und zu beheben, indem sie auf der Grundlage der Analyse von EMS-Ereignisdaten Erkenntnisse und Empfehlungen liefert.</block>
+  <block id="a661f5e2ef22dbf468d0f8427ad8323e" category="inline-link-macro">Analysieren Sie EMS-Ereignisse in Workload Factory.</block>
+  <block id="8121ebebfc076bea222c1f4c838b09ec" category="paragraph"><block ref="8121ebebfc076bea222c1f4c838b09ec" category="inline-link-macro-rx"></block></block>
+  <block id="1df24a9e91a6f6d01b5ce32608b6f3f7" category="section-title">Überwachen Sie Kosten- und Nutzungstrends für FSx für ONTAP Dateisysteme</block>
+  <block id="56a2825e2abb3758584b94544cfdba40" category="paragraph">Sie können die Kosten- und Nutzungstrends Ihrer FSx for ONTAP -Dateisysteme direkt über die NetApp Workload Factory Konsole überwachen.  Diese Funktion liefert Kennzahlen zum Speicherverbrauch und zu den Kosten sowie detaillierte Kostenaufstellungen und hilft Ihnen so, Ihre Ressourcenzuweisung und Budgetplanung zu optimieren.</block>
+  <block id="bd89bba18a943a5ad32117396fcdea90" category="inline-link-macro">Verfolgen Sie die Kosten für FSx für ONTAP Dateisysteme in Workload Factory</block>
+  <block id="d5905c9d9cba2248871f04654e4f9b1d" category="paragraph"><block ref="d5905c9d9cba2248871f04654e4f9b1d" category="inline-link-macro-rx"></block></block>
+  <block id="5b58af6390ae44b5a39c726b4820fffb" category="section-title">Verwalten von FSx-Tags für ein Dateisystem in NetApp Workload Factory</block>
+  <block id="543e684a4a914d6bef4f91873d32e315" category="paragraph">Verwalten Sie Ihre FSx-Tags für ein Dateisystem ganz einfach direkt über die NetApp Workload Factory Konsole.  Diese Funktion ermöglicht das Hinzufügen, Bearbeiten oder Entfernen von Tags und ermöglicht so eine bessere Organisation und Kategorisierung Ihrer FSx for ONTAP -Dateisysteme.</block>
+  <block id="8945587d036e5b09c39322767239857a" category="inline-link-macro">Verwalten Sie FSx-Tags in Workload Factory</block>
+  <block id="3c57420160e53dc4967d9ca75a5d5d06" category="paragraph"><block ref="3c57420160e53dc4967d9ca75a5d5d06" category="inline-link-macro-rx"></block></block>
+  <block id="1b931c0909a42d2dd6b1b28eeb36252c" category="section-title">Cache-Kapazität für FSx für ONTAP Dateisysteme anpassen</block>
+  <block id="aed1296ef373ba8df468af355d85d3ce" category="paragraph">Über die Workload Factory-Konsole können Sie die Kapazität für Cache-Volumes erhöhen und verringern.</block>
+  <block id="012110073acf8459d2a77ef54f547130" category="inline-link-macro">Cache-Volumes in Workload Factory verwalten</block>
+  <block id="cfd839007fdba7ba7d7a5a35de4aa55a" category="paragraph"><block ref="cfd839007fdba7ba7d7a5a35de4aa55a" category="inline-link-macro-rx"></block></block>
+  <block id="07236cc47c70c5fd568c5a75720db649" category="summary">Analysieren Sie EMS-Ereignisse innerhalb der NetApp Workload Factory für FSx für ONTAP.</block>
+  <block id="12f4e0399e2df3c2e6f5c6d078ccfcb7" category="doc">Analysieren Sie FSx auf ONTAP EMS-Ereignisse in NetApp Workload Factory</block>
+  <block id="ab6bb38002e21094a77f3fc386f75b81" category="paragraph">Mit dem intelligenten Ereignisanalysator können Sie Ereignisse des Event Management Systems (EMS) für FSx for ONTAP -Dateisysteme in NetApp Workload Factory automatisch extrahieren und analysieren, um Probleme schnell zu erkennen und zu beheben. Die auf Agentic AI basierende Analyse erfordert eine Amazon Bedrock-Integration.</block>
+  <block id="69b4c5d1a10df7b24661fa3357de7164" category="paragraph">Speicheradministratoren reagieren auf FSx for ONTAP EMS-Ereignisse oft erst nach Kundenbeschwerden oder durch die Erstellung benutzerdefinierter Skripte und Alarme.  Dieser reaktive Ansatz verlangsamt die Problembehebung, erhöht die Ausfallzeiten und macht den Betrieb weniger effizient.</block>
+  <block id="2579e7ab91941f10b5b5ff1d62950587" category="paragraph">Der Ereignisanalysator extrahiert FSx for ONTAP EMS-Ereignisse und analysiert sie, um Ihnen bei der Aufrechterhaltung des Zustands und der Leistungsfähigkeit von FSx for ONTAP -Dateisystemen zu helfen.</block>
+  <block id="950a30dbe6160d51c93dd8570573b0b1" category="paragraph">Zu den wichtigsten Vorteilen gehören:</block>
+  <block id="ff395ce69e116ba9c811e7b5e4d30150" category="list-text">Erweiterte Fehlerbehebung: Nutzt KI, um Ereignisse proaktiv zu erkennen und zu analysieren und bietet klare Lösungsschritte für ONTAP EMS-Ereignisse, die Aufmerksamkeit erfordern.</block>
+  <block id="e81b4c6e0ef57eb1b12f2dee109f70a5" category="list-text">Bewährte Vorgehensweise zur Fehlerbehebung: Bietet klare Schritte zur Behebung von Problemen mit FSx für ONTAP, basierend auf Ihrer Umgebung, sodass jeder Probleme lösen kann.</block>
+  <block id="8b6e7c06cc47e464865ce794c06c1cdc" category="paragraph">Bei der Verwendung des Ereignisanalysators behalten Sie die volle Kontrolle über Ihre Umgebung und profitieren gleichzeitig von fortschrittlichen KI-Analysen.</block>
+  <block id="9885b601634edd1a14ff24653669df48" category="paragraph">Um den Ereignisanalysator zu verwenden, müssen Sie Amazon Bedrock aktivieren, das von Workload Factory verwendete Modell auswählen, einen privaten Endpunkt erstellen, um eine Verbindung zu Amazon Bedrock herzustellen, Berechtigungen hinzufügen und eine Unternehmenslizenz erstellen.</block>
+  <block id="888aee60b948bfcee3f85cb52d4d62f0" category="inline-link-macro">Amazon Bedrock-Preise</block>
+  <block id="2064dc6bc6a42df41c5d58cafe4e5108" category="paragraph"><block ref="2064dc6bc6a42df41c5d58cafe4e5108" category="inline-link-macro-rx"></block></block>
+  <block id="bf71ae5aa16f5632361df660e7d643c6" category="section-title">Datenschutz und Datensicherheit</block>
+  <block id="4156616e317ae39855b5f4857b036da9" category="paragraph">Diese Funktion gewährleistet Datenschutz und Datensicherheit durch folgende Maßnahmen:</block>
+  <block id="a492925ae64557e89b32f29da418b5eb" category="paragraph-title">Datensouveränität</block>
+  <block id="6c9fd6facdeb8075fa50e4efcd8bf208" category="paragraph">Daten und Aggregationen verbleiben innerhalb Ihres AWS-Kontos und werden über einen privaten VPC-Endpunkt (Amazon Bedrock) kommuniziert, wodurch eine Offenlegung im öffentlichen Internet ausgeschlossen wird.</block>
+  <block id="2405b8bbe1eec9accdcb22235860c3f2" category="paragraph-title">Kein KI-Training</block>
+  <block id="ff8598dd406774c1ca9008fc13afdda5" category="inline-link-macro">Amazon Bedrock-Datenschutzdokumentation</block>
+  <block id="5ccaf9841b400d75e00f4c8e0a92737d" category="paragraph">Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet.  Amazon Bedrock verarbeitet Ereignisse in Echtzeit, trainiert aber nicht mit Ihren Daten.  Die Ergebnisse werden in Ihrer Umgebung nur zu Referenzzwecken gespeichert.  Weitere Einzelheiten finden Sie unter<block ref="b066fd87fd1e8a2b8d520c5977ecc43e" category="inline-link-macro-rx"></block> Die</block>
+  <block id="300fe33bee6926cbc2c265a3ccde1b0f" category="paragraph">Um den Ereignisanalysator nutzen zu können, müssen Sie folgende Voraussetzungen erfüllen:</block>
+  <block id="5f12cac6e522ac73a1f518e795d5d742" category="list-text">Du musst<block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block> in Ihrem AWS-Konto, um Ereignisse für FSx for ONTAP -Dateisysteme anzuzeigen.</block>
+  <block id="709be97721c78cba90770231b1263a14" category="inline-link-macro">Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her.</block>
+  <block id="35f42184479bd0858fd2a493aa10006d" category="list-text">Du musst<block ref="13912c59a5ea303190d1db0c6a5f11f5" category="inline-link-macro-rx"></block> den EMS-Ereignisanalysator verwenden.</block>
+  <block id="ffbf1245cc8098f00c47babcce153016" category="list-text">Sie müssen außerdem die folgenden Anforderungen erfüllen.  Das System fordert Sie auf, diese Schritte durchzuführen, wenn Sie Protokollfehler analysieren.</block>
+  <block id="b731c0685ba6b81efc2a3730248eb9d5" category="list-text">*Amazon Bedrock-Aktivierung*</block>
+  <block id="2a1c67a7dc28732cbee29b267a4a9af7" category="paragraph">Der Ereignisanalysator nutzt Amazon Bedrock APIs, um KI-basierte Erkenntnisse für FSx for ONTAP -Ereignisse bereitzustellen.</block>
+  <block id="3e7827ba3fa976aec6ad1122b7da30fe" category="paragraph">Empfohlenes Modell: Amazon Bedrock Model (anthropic.claude-sonnet-4-20250514-v1:0).  Sie müssen den Inferenzprofil-ARN für dieses Modell in der ausgewählten Region angeben.</block>
+  <block id="b523b0335680ab84edd50860caeed123" category="list-text">*Link zur Workload Factory*</block>
+  <block id="bd3978e078bba2f9f1743c27d1db8462" category="paragraph">Sie müssen eine Verknüpfung zu einem FSx for ONTAP Dateisystem erstellen und zuordnen, um die KI-gestützte Ereignisanalyse zu ermöglichen.  Diese Verknüpfung stellt eine Vertrauensbeziehung zwischen Workload Factory und einem oder mehreren FSx for ONTAP -Dateisystemen her und nutzt AWS Lambda.</block>
+  <block id="72fa279f5dbab8677f6a4a2b563e0629" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.</block>
+  <block id="7ed47c99073de0aed63f1c44842de720" category="list-text">*AWS IAM-Berechtigungen*</block>
+  <block id="fb6d7ca6557e4fecfffa8ab3a6a96421" category="paragraph">Sie müssen der mit der Workload Factory IAM-Rolle verknüpften Richtlinie die folgenden Berechtigungen hinzufügen.</block>
+  <block id="47160e55fc85c2702f6f616e65ff73cd" category="list-text">Berechtigungen:<block ref="93804e96d3f417a0088c564647dd28e9" prefix=" " category="inline-code"></block> Und<block ref="00fe52afa6e3b9a0d389f529a2b88242" prefix=" " category="inline-code"></block></block>
+  <block id="69e9daf6e587a39e4b6dea7dda714604" category="paragraph">Diese Berechtigungen ermöglichen es Workload Factory, Bedrock-Modelle für die proaktive Fehleranalyse und die Bereitstellung von Hinweisen zur Fehlerbehebung aufzurufen. Dieses Profil gewährleistet zudem einen sicheren KI-Zugriff für maßgeschneiderte Erkenntnisse.</block>
+  <block id="84f81cf573c6d781702f75eaf12f08f0" category="list-text">AWS-Anmeldeinformationen, die mit Workload Factory verknüpft sind:<block ref="c812f1cb829c6d16da192b12e04d78ff" prefix=" " category="inline-code"></block> Und<block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix=" " category="inline-code"></block> Berechtigungen</block>
+  <block id="3fc6364e2f4555bc71d109a7ba02fef1" category="paragraph">Diese Berechtigungen bestätigen die Verfügbarkeit des Modells.</block>
+  <block id="3c9bac4bc86cac9a309d9792f5bb65df" category="section-title">EMS-Ereignisse für FSx für ONTAP anzeigen und analysieren</block>
+  <block id="6baf937b798e7ea8fa07c50ef6c201f9" category="paragraph">Verwenden Sie die Workload Factory-Konsole, um EMS-Ereignisse für FSx for ONTAP -Dateisysteme anzuzeigen und zu analysieren.</block>
+  <block id="7f4aea97afc4fe9bca082673b0935315" category="list-text">Im Menü „Speicher“ wählen Sie *Analyse*.</block>
+  <block id="50d875c26d87da128f69cb933227d1a5" category="list-text">Wählen Sie im Analysebildschirm die AWS-Konten, Anmeldeinformationen und Regionen aus, die die FSx for ONTAP -Dateisysteme enthalten, die Sie analysieren möchten.</block>
+  <block id="3508b6e4bf84f2b46e5223cd82593789" category="paragraph">Nur FSx für ONTAP Dateisysteme mit Ereignisanzeige auf dem Bildschirm.</block>
+  <block id="18aee431fdcb283a94abf2d0c207e76d" category="list-text">Falls erforderlich, vervollständigen Sie die *Einrichtungsvoraussetzungen für die KI-Analyse*, indem Sie den Anweisungen auf dem Bildschirm folgen, um etwaige fehlende Voraussetzungen zu erfüllen.</block>
+  <block id="0b8feb0f50822d2155836ac6630dcff8" category="list-text">Suchen Sie das FSx for ONTAP -Dateisystem, das Sie analysieren möchten, und wählen Sie dann *Ereignisse anzeigen*.</block>
+  <block id="dacb27092cd2afb431a6b906c5beb313" category="list-text">Lesen Sie die detaillierten Veranstaltungsinformationen.</block>
+  <block id="f96fb00c03e55e8700536f390d41e78b" category="list-text">Kostenoptimierung: Speichereffizienz, Daten-Tiering und unnötige Snapshot-Löschung</block>
+  <block id="a5f8aee6e945eb0dbb1da60eaac3110f" category="list-text">Leistungsoptimierung: FlexGroup Volumen-Rebalancing</block>
+  <block id="36e5c8637cbc6d751b3ef3aea28243c2" category="summary">Blockgeräte für ein FSx for ONTAP -Dateisystem in NetApp Workload Factory verwalten.</block>
+  <block id="c596ea1662cbb07d0ef3b729c17d7ed2" category="doc">Verwalten der Blockgeräte für ein FSx for ONTAP -Dateisystem</block>
+  <block id="f0fdc7a12fb16089bbf1f5d134742921" category="paragraph">Über die NetApp Workload Factory Konsole können Sie die Blockgeräte für Ihre FSx for ONTAP -Dateisysteme verwalten.  Zu den Managementaufgaben gehören das Anzeigen von Blockgerätedetails und die Erhöhung der Kapazität.</block>
+  <block id="2bdf5c50f504c8de4e3490f942010338" category="paragraph">Blockgeräte oder LUNs (logische Einheitennummern) sind Datenträger, die Dateisysteme in einer SAN-Umgebung enthalten und von Hosts über ein Netzwerk aufgerufen werden können.</block>
+  <block id="2a29012d549070ee593fcda2b2383198" category="paragraph">Sie können Blockgeräte für FSx for ONTAP -Dateisysteme verwalten, die das iSCSI-Protokoll verwenden.</block>
+  <block id="11f86c8098f50365bfc25a2fb87568db" category="list-text">Sie müssen einen Link zur Verwaltung von Blockgeräten verknüpfen. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>.  Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.</block>
+  <block id="ab333c71570d582979f29ab5f2f547f5" category="list-text">Sie benötigen ein vorhandenes Blockgerät, um es anzuzeigen und zu verwalten.</block>
+  <block id="934c3d38b90775eafeecd6f5f7490e2c" category="section-title">Details zum Blockgerät anzeigen</block>
+  <block id="12a66c1ef123e6c23c139c511d70f3f4" category="paragraph">Die Details eines bestehenden Blockgeräts können jederzeit eingesehen werden.</block>
+  <block id="1ee5303f1904e713e5abd28b233031e0" category="list-text">Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.</block>
+  <block id="cd659e59124101049c18f2e95358f822" category="list-text">Navigieren Sie zum Aktionsmenü für das Blockgerät und wählen Sie dann *Details anzeigen*.</block>
+  <block id="69f69d356f75e18a9b5cc248282a325f" category="paragraph">Es werden allgemeine Details, Verbrauchs-, Zugriffs- und Schutzinformationen für das Blockgerät angezeigt.</block>
+  <block id="563aa0194a1babc41517b2ffa3c46c5d" category="section-title">Erhöhen Sie die Kapazität eines Blockgeräts</block>
+  <block id="5dc92058914c7c5082569828d0258972" category="paragraph">Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.</block>
+  <block id="ea25ef7373f521d52fbd5ca2a47bca2f" category="list-text">Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Kapazität erhöhen*.</block>
+  <block id="f038e534cccdfa3eb80bc4f41d03b815" category="list-text">Geben Sie die neue Kapazität für das Blockgerät ein und wählen Sie die Einheit aus.</block>
+  <block id="a513f9168d077dcb464740ecedeeeebe" category="list-text">Wählen Sie *Erhöhen*, um die Änderungen anzuwenden.</block>
+  <block id="fc550a6b2bee383ed3285311141dfd90" category="admonition">Nachdem Sie die Größe des Blockgeräts erhöht haben, befolgen Sie die Anweisungen Ihres Host-Betriebssystems, um die neue Größe des Blockgeräts zu ermitteln und das darauf befindliche Dateisystem zu erweitern.</block>
+  <block id="5731c6f2c2af81018b15a6dc509612e7" category="doc">Verwalten Sie FSx for ONTAP Cache-Volumes mit NetApp Workload Factory</block>
+  <block id="434453d056f84022d78f78e508e2c9e4" category="paragraph">Verwenden Sie die NetApp Workload Factory Konsole, um Cache-Volumes für FSx for ONTAP -Dateisysteme zu verwalten.  Caching, eine Methode zur temporären Speicherung von Daten, verbessert die Datenzugriffsleistung durch Verkürzung der Abrufzeit.  Sie können den Cache-Namen bearbeiten, die Kapazität anpassen, die Exportrichtlinie ändern, eine Caching-Methode auswählen, den Cache vorab befüllen oder Cache-Volumes löschen.</block>
+  <block id="511fe435e8165aed773eaad3ed9390d2" category="paragraph">In der NetApp Workload Factory -Konsole können Sie Cache-Volumes verwalten, die mit Cache-Beziehungen verknüpft sind.</block>
+  <block id="427f7328ade7fa24ab13c85e87e8bbfd" category="list-text">Sie müssen einen Link zur Verwaltung von Cache-Volumes und -Beziehungen verknüpfen. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.</block>
+  <block id="70c7c51ab85c821261f3ba2480abf1db" category="section-title">Passen Sie die Kapazität eines Cache-Volumes an.</block>
+  <block id="5ed1aecee1798642ab9b691b328aa8ab" category="paragraph">Sie können die Kapazität eines vorhandenen Cache-Volumes jederzeit anpassen.</block>
+  <block id="fe3be7f306e31f68a5be5e69e70a8b52" category="list-text">Wählen Sie im Aktionsmenü das Cache-Volume aus, das Sie ändern möchten, und wählen Sie dann *Cache-Kapazität anpassen*.</block>
+  <block id="77b996cd23d489eedaf364444f3767e7" category="list-text">Im Dialogfeld *Cache-Kapazität anpassen* geben Sie die neue Kapazität für das Cache-Volume in Prozent oder in Einheiten ein und wählen dann *Anwenden*.</block>
+  <block id="193ef2bb6385a35be8ff3b84833c39e4" category="paragraph">Sie können die Funktionsweise des Caches für ein bestehendes Cache-Volume auf Write-Around oder Write-Back ändern.</block>
+  <block id="9b56249d55afe0d9c4ba3cc38ab4b64a" category="paragraph">Füllen Sie das Cache-Volume mit Daten vom Ursprungsvolume, bevor Sie es verwenden, um zwischengespeicherte Daten schneller verfügbar zu machen.</block>
+  <block id="0e4f2d0a44a5351cf8fa58d69ca7867e" category="paragraph">Wenn Sie ein Cache-Volume löschen, entfernen Sie dessen Cache-Beziehung.  Die zwischengespeicherten Daten sind nicht mehr verfügbar.</block>
+  <block id="c5ef40517475cde4aa83a5451658e49f" category="summary">FSx for ONTAP -Dateisystemtags für ein Dateisystem können jederzeit hinzugefügt, aktualisiert oder entfernt werden.</block>
+  <block id="eb4fc4352d1165f11c777d937df4f824" category="doc">Verwalten von FSx for ONTAP Dateisystemtags in NetApp Workload Factory</block>
+  <block id="46512aa67048f4a43e843b7f1767367e" category="paragraph">Tags können Ihnen dabei helfen, Ihre Ressourcen zu kategorisieren.  In NetApp Workload Factory können Sie jederzeit Tags für ein Dateisystem hinzufügen, bearbeiten und entfernen.</block>
+  <block id="0212093392893715fbbcaff6318bf12c" category="list-text">Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und anschließend *Dateisystem-Tags verwalten*.</block>
+  <block id="9b3a1ad5abecf153aceb732b418aab4f" category="list-text">Im Dialogfeld *Dateisystem-Tags verwalten* können Sie nach Bedarf Tags hinzufügen, bearbeiten oder entfernen.</block>
+  <block id="e8c1165d9931bb1b1cf9a7e8b496158d" category="paragraph">Die maximale Anzahl von Tags, die Sie einem Dateisystem zuweisen können, beträgt 50.</block>
+  <block id="4e9dffb84355d8e05d841ef09cb0b14f" category="paragraph">Wählen Sie die<block ref="7cb8f01033b9f51b50ad23ef165f92b6" category="inline-link-macro-rx"></block> um Ihren Bedürfnissen gerecht zu werden.</block>
+  <block id="01fae763ec208cbe8aba55abc3b09866" category="summary">Verfolgen Sie die Kosten für Ihre FSx for ONTAP -Dateisystemressourcen in NetApp Workload Factory.</block>
+  <block id="032c10b11ebbd33bcfb1d9c697658530" category="doc">Verfolgen Sie die Kosten Ihrer Ressourcen in NetApp Workload Factory.</block>
+  <block id="d4c186d67cf8c08158cf00710c119d5c" category="paragraph">Mit NetApp Workload Factory können Sie die Kosten und die Nutzung des FSx for ONTAP -Dateisystems in einer konsolidierten Ansicht verfolgen.  Die Kostendaten helfen Ihnen, Budgets zu verwalten und Ressourcen effektiv zu optimieren.  AWS Cost Explorer liefert die Kostendaten.</block>
+  <block id="a9e1e30ff98d7ffed745988d1a4fc1fb" category="paragraph">Kosten- und Nutzungsdaten für Ihre FSx for ONTAP -Dateisystemressourcen werden mit den folgenden Berechtigungen aus dem AWS Cost Explorer extrahiert:</block>
+  <block id="2340e78cb09237db2f23f58bd9bd22a3" category="list-text"><block ref="bba6542a0e46014b21a818003b1e41d2" prefix="" category="inline-code"></block></block>
+  <block id="eb31a5b8779c15ebaec006efc85981a3" category="list-text"><block ref="f74e5982a82afd7d2755b24355dd08c6" prefix="" category="inline-code"></block></block>
+  <block id="c5722965ac58717f7a4510137bda582a" category="inline-link-macro">Erteilen Sie Anmeldeinformationen mit der Berechtigungsrichtlinie „Ansicht, Planung und Analyse“.</block>
+  <block id="108b346d0d8c9cf596528ad0d2a7de34" category="paragraph"><block ref="5763d95ed6eefefde40388c1a7624c69" category="inline-link-macro-rx"></block>in Workload Factory, um FSx für ONTAP Kosten zu verfolgen.</block>
+  <block id="45eecb5efbc4c958be178611070d560c" category="list-text">Im Menü „Speicher“ wählen Sie *Kosten*.</block>
+  <block id="a95a893b7dafb6da5604234e0936ce1c" category="list-text">Filtern Sie auf der Kostenseite die Kosten- und Kapazitätsdaten für Ihre FSx for ONTAP -Ressourcen, indem Sie Folgendes angeben:</block>
+  <block id="f4654cadb5477c95a6a0e93a5be01b7b" category="list-text">*AWS-Konten*: Wählen Sie die Konten aus, für die Sie die Kostendaten anzeigen möchten.</block>
+  <block id="5ef42bc94075bca2b4d7247474fbb5f3" category="list-text">*Anmeldeinformationen*: Wählen Sie Anmeldeinformationen mit den Berechtigungen _Anzeigen, Planen und Analysieren_ aus.</block>
+  <block id="63d9c4239e3de8cd030beef46a2ba8c6" category="list-text">*Regionen*: Wählen Sie die AWS-Regionen aus, für die Sie Kostendaten anzeigen möchten.</block>
+  <block id="ccb042e2bddd0b77b8fffd5210de4f5a" category="list-text">*Kostendatenbereich*: Wählen Sie den Zeitraum aus, in dem die Kostendaten angezeigt werden sollen.</block>
+  <block id="db2c0720daa95b2841a73d2a13c0e539" category="list-text">Sehen Sie sich die *Kostendetails* für Ihre FSx for ONTAP -Ressourcen an.</block>
+  <block id="815e75619b370a1b845eccec6979ed74" category="section-title">27. November 2025</block>
+  <block id="7ba9e316fdb6ba8e077283db064835f0" category="sidebar">FSx hinsichtlich ONTAP Kosten verfolgen und analysieren</block>
+  <block id="74475e9b626ebe70ba32217725555fb2" category="sidebar">Analysiere FSx auf ONTAP -Ereignisse</block>
+  <block id="7afacf82c5a68418fd34140a4a69b555" category="sidebar">Blockgeräteverwaltung</block>
+  <block id="b312d49b502ea93d7b1d38b92313f502" category="sidebar">Blockgeräte verwalten</block>
+  <block id="9f83e27b7a1a59c38fc7d458de16054a" category="sidebar">Dateisystem-Tags verwalten</block>
 </blocks>

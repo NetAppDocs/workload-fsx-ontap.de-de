@@ -4,20 +4,20 @@ permalink: manage-cache-volumes.html
 keywords: cache volumes, manage cache, FSx for ONTAP cache 
 summary: Verwalten Sie bei Bedarf die Cache-Volumes für ein FSx for ONTAP -Dateisystem in NetApp Workload Factory . 
 ---
-= Verwalten der Cache-Volumes für ein FSx for ONTAP Dateisystem
+= Verwalten Sie FSx for ONTAP Cache-Volumes mit NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Über die NetApp Workload Factory Konsole können Sie die Cache-Volumes für Ihre FSx for ONTAP Dateisysteme verwalten.  Zu den Verwaltungsaufgaben gehören das Bearbeiten des Cache-Namens, das Erhöhen der Cache-Kapazität, das Bearbeiten der Exportrichtlinie, das Ändern der Caching-Methode, das Vorbefüllen des Caches und das Löschen des Cache-Volumes, wenn es nicht mehr benötigt wird.
+Verwenden Sie die NetApp Workload Factory Konsole, um Cache-Volumes für FSx for ONTAP -Dateisysteme zu verwalten.  Caching, eine Methode zur temporären Speicherung von Daten, verbessert die Datenzugriffsleistung durch Verkürzung der Abrufzeit.  Sie können den Cache-Namen bearbeiten, die Kapazität anpassen, die Exportrichtlinie ändern, eine Caching-Methode auswählen, den Cache vorab befüllen oder Cache-Volumes löschen.
 
 .Über diese Aufgabe
-Sie können Cache-Volumes verwalten, die mit Cache-Beziehungen verknüpft sind, ohne die NetApp Workload Factory Konsole zu verlassen.
+In der NetApp Workload Factory -Konsole können Sie Cache-Volumes verwalten, die mit Cache-Beziehungen verknüpft sind.
 
 .Bevor Sie beginnen
-* Sie müssen einen Link zur Verwaltung von Cache-Volumes und -Beziehungen verknüpfen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
+* Sie müssen einen Link zur Verwaltung von Cache-Volumes und -Beziehungen verknüpfen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
 * Zum Bearbeiten muss ein vorhandenes Cache-Volume vorhanden sein.
 
 
@@ -39,9 +39,9 @@ Sie können den Namen eines vorhandenen Cache-Volumes jederzeit ändern.
 
 
 
-== Erhöhen Sie die Kapazität eines Cache-Volumes
+== Passen Sie die Kapazität eines Cache-Volumes an.
 
-Sollten Sie die Kapazität eines bestehenden Cache-Volumes erhöhen müssen, können Sie dies jederzeit tun.
+Sie können die Kapazität eines vorhandenen Cache-Volumes jederzeit anpassen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -49,8 +49,8 @@ Sollten Sie die Kapazität eines bestehenden Cache-Volumes erhöhen müssen, kö
 . Wählen Sie im Menü „Speicher“ die Option „FSx für ONTAP“.
 . Wählen Sie in FSx for ONTAP das Aktionsmenü des Dateisystems mit dem Cache-Volume und anschließend *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Cache-Beziehungen* aus.
-. Wählen Sie im Aktionsmenü das Cache-Volume aus, das Sie ändern möchten, und wählen Sie dann *Cache-Kapazität erhöhen*.
-. Geben Sie im Dialogfeld *Cache-Kapazität erhöhen* die neue Kapazität für das Cache-Volume in Prozent oder in Einheiten ein und wählen Sie dann *Anwenden*.
+. Wählen Sie im Aktionsmenü das Cache-Volume aus, das Sie ändern möchten, und wählen Sie dann *Cache-Kapazität anpassen*.
+. Im Dialogfeld *Cache-Kapazität anpassen* geben Sie die neue Kapazität für das Cache-Volume in Prozent oder in Einheiten ein und wählen dann *Anwenden*.
 
 
 
@@ -74,7 +74,7 @@ Sollten Sie die Kapazität eines bestehenden Cache-Volumes erhöhen müssen, kö
 
 == Ändern Sie die Caching-Methode für ein Cache-Volume.
 
-Ändern Sie die Caching-Methode bzw. den Modus für ein vorhandenes Cache-Volume auf Write-Around oder Write-Back.
+Sie können die Funktionsweise des Caches für ein bestehendes Cache-Volume auf Write-Around oder Write-Back ändern.
 
 Erfahren Sie mehr überlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["Schreibmodi"^] .
 
@@ -92,7 +92,7 @@ Erfahren Sie mehr überlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/us
 
 == Cache-Volume vorbefüllen
 
-Um den Zugriff auf zwischengespeicherte Daten zu beschleunigen, sollte ein Cache-Volume vorab mit Daten aus dem Ursprungsvolume gefüllt werden.
+Füllen Sie das Cache-Volume mit Daten vom Ursprungsvolume, bevor Sie es verwenden, um zwischengespeicherte Daten schneller verfügbar zu machen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -108,7 +108,7 @@ Um den Zugriff auf zwischengespeicherte Daten zu beschleunigen, sollte ein Cache
 
 == Löschen eines Cache-Volumes
 
-Durch das Löschen eines Cache-Volumes wird die Cache-Beziehung zwischen dem Ursprungsvolume und dem Cache-Volume gelöscht.  Nach dem Löschen sind die zwischengespeicherten Daten nicht mehr verfügbar.
+Wenn Sie ein Cache-Volume löschen, entfernen Sie dessen Cache-Beziehung.  Die zwischengespeicherten Daten sind nicht mehr verfügbar.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

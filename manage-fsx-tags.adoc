@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: manage-fsx-tags.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags 
+summary: FSx for ONTAP -Dateisystemtags für ein Dateisystem können jederzeit hinzugefügt, aktualisiert oder entfernt werden. 
+---
+= Verwalten von FSx for ONTAP Dateisystemtags in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Tags können Ihnen dabei helfen, Ihre Ressourcen zu kategorisieren.  In NetApp Workload Factory können Sie jederzeit Tags für ein Dateisystem hinzufügen, bearbeiten und entfernen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und anschließend *Dateisystem-Tags verwalten*.
+. Im Dialogfeld *Dateisystem-Tags verwalten* können Sie nach Bedarf Tags hinzufügen, bearbeiten oder entfernen.
++
+Die maximale Anzahl von Tags, die Sie einem Dateisystem zuweisen können, beträgt 50.
+
+. Wählen Sie *Anwenden*.
+

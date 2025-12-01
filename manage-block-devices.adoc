@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: manage-block-devices.html 
+keywords: block devices, manage luns, manage iscsi 
+summary: Blockgeräte für ein FSx for ONTAP -Dateisystem in NetApp Workload Factory verwalten. 
+---
+= Verwalten der Blockgeräte für ein FSx for ONTAP -Dateisystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Über die NetApp Workload Factory Konsole können Sie die Blockgeräte für Ihre FSx for ONTAP -Dateisysteme verwalten.  Zu den Managementaufgaben gehören das Anzeigen von Blockgerätedetails und die Erhöhung der Kapazität.
+
+.Über diese Aufgabe
+Blockgeräte oder LUNs (logische Einheitennummern) sind Datenträger, die Dateisysteme in einer SAN-Umgebung enthalten und von Hosts über ein Netzwerk aufgerufen werden können.
+
+Sie können Blockgeräte für FSx for ONTAP -Dateisysteme verwalten, die das iSCSI-Protokoll verwenden.
+
+.Bevor Sie beginnen
+* Sie müssen einen Link zur Verwaltung von Blockgeräten verknüpfen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."].  Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
+* Sie benötigen ein vorhandenes Blockgerät, um es anzuzeigen und zu verwalten.
+
+
+
+
+== Details zum Blockgerät anzeigen
+
+Die Details eines bestehenden Blockgeräts können jederzeit eingesehen werden.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Navigieren Sie zum Aktionsmenü für das Blockgerät und wählen Sie dann *Details anzeigen*.
++
+Es werden allgemeine Details, Verbrauchs-, Zugriffs- und Schutzinformationen für das Blockgerät angezeigt.
+
+
+
+
+
+== Erhöhen Sie die Kapazität eines Blockgeräts
+
+Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Kapazität erhöhen*.
+. Geben Sie die neue Kapazität für das Blockgerät ein und wählen Sie die Einheit aus.
+. Wählen Sie *Erhöhen*, um die Änderungen anzuwenden.
+
+
+
+NOTE: Nachdem Sie die Größe des Blockgeräts erhöht haben, befolgen Sie die Anweisungen Ihres Host-Betriebssystems, um die neue Größe des Blockgeräts zu ermitteln und das darauf befindliche Dateisystem zu erweitern.

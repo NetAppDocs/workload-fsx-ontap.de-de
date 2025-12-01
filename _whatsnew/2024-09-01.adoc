@@ -8,8 +8,6 @@
 
 Der Lesemodus ist für die Speicherverwaltung in Workload Factory verfügbar.  Der Lesemodus verbessert die Erfahrung des Basismodus, indem er schreibgeschützte Berechtigungen hinzufügt, sodass die Infrastructure-as-Code-Vorlagen mit Ihren spezifischen Variablen gefüllt werden.  Die Infrastructure-as-Code-Vorlagen können direkt von Ihrem AWS-Konto aus ausgeführt werden, ohne dass Sie Workload Factory Änderungsberechtigungen erteilen müssen.
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Weitere Informationen zum Lesemodus"]
-
 
 
 === Unterstützung für Backup vor dem Löschen von Volumes
