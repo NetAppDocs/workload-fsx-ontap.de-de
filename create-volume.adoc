@@ -26,6 +26,8 @@ Die folgenden Protokolle können für Ihre Volumes verwendet werden:
 * ISCSI: Block-Storage-Protokoll
 
 
+S3-Endpunkte können an ein FSx for ONTAP Volume angehängt werden. Mithilfe eines S3-Zugriffspunkts können Sie über die AWS S3-APIs auf Dateidaten zugreifen, die sich auf SMB/CIFS- oder NFS-Volumes befinden. Dies ermöglicht Ihnen die Integration Ihrer vorhandenen Daten mit GenAI, ML und Analysen von AWS-Diensten, die S3-Zugriffspunkte unterstützen.
+
 
 
 === Details zu den Lautstärkeeinstellungen
@@ -149,9 +151,9 @@ Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzuri
 
 
 
-.. *S3-Endpunkt*: Fügen Sie optional einen S3-Endpunkt hinzu, um über AWS S3-APIs auf FSx für ONTAP -Dateisystemdaten zuzugreifen, die sich auf NFS- oder SMB/CIFS-Volumes befinden.  Es wird nur der Dateizugriffstyp unterstützt.  Geben Sie die folgenden Details an:
+.. *S3-Zugriffspunkt*: Optional kann ein S3-Zugriffspunkt angehängt werden, um über AWS S3-APIs auf FSx for ONTAP -Dateisystemdaten zuzugreifen, die sich auf NFS- oder SMB/CIFS-Volumes befinden. Es wird nur der Dateizugriffstyp unterstützt. Bitte geben Sie folgende Details an:
 +
-*** *S3-Endpunktname*: Geben Sie den Namen des S3-Endpunkts ein.
+*** *Name des S3-Zugangspunkts*: Geben Sie den Namen des S3-Zugangspunkts ein.
 *** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.
 *** *Benutzertyp*: Wählen Sie als Benutzertyp *UNIX* oder *Windows* aus.
 

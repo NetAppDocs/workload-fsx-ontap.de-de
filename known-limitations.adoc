@@ -120,6 +120,12 @@ System Manager unterstützt keine Links für FSX for ONTAP-Konnektivität.
 
 AWS Secrets Manager wird bei Verwendung eines Konsolenagenten nicht unterstützt.
 
+
+
+== Beschränkung der Amazon S3-Zugriffspunkte
+
+Die maximale Anzahl an S3-Zugriffspunkten pro Speicher-VM beträgt 4.000.
+
 Hinweis:
 
 . Gilt für Amazon FSX for NetApp ONTAP
