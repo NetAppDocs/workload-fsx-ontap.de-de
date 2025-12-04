@@ -119,6 +119,8 @@ sidebar:
         url: "/manage-nfs-export-policy.html"
       - title: Verwalten von SMB/CIFS-Freigaben
         url: "/manage-cifs-share.html"
+      - title: S3-Zugriffspunkte verwalten
+        url: "/manage-s3-access-points.html"
       - title: Teilen Sie ein geklontes Volume auf
         url: "/split-cloned-volume.html"
       - title: Löschen Sie ein Volume

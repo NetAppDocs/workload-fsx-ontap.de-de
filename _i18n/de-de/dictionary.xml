@@ -1472,7 +1472,6 @@
   <block id="9e46846308a6940deed12bb97a4f8290" category="list-text">Dem Dateisystem ist kein Link zugeordnet. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.</block>
   <block id="7c3e31cda0e937f8fa1edeeb89e9fe70" category="list-text">Volumes mit unveränderlichen Dateien und Volumes mit iSCSI- und NVMe-Protokollen werden für ARP/AI nicht unterstützt.</block>
   <block id="df1195db43983cb33962d0fe23f28da4" category="list-text">Das Dateisystem verfügt bereits über eine ARP/AI-Richtlinie.</block>
-  <block id="0bce1227be581635db9bb209f22cf4e6" category="paragraph">Die Workload Factory initiiert die Volume-Erstellung. Nach der Erstellung wird das neue Volume auf der Registerkarte „Volumes“ angezeigt.</block>
   <block id="817a91472106a30911a7a081b0284ff7" category="paragraph">Überprüfen Sie die Balance der FlexVol- oder FlexGroup-Volume-Kapazität und gleichen Sie die Volume-Kapazität neu aus, um die Dateien gleichmäßig auf alle FlexVol-Volumes in einem Knoten oder auf alle Bestandteile zu verteilen, sodass alle Knoten an der Arbeitslast eines einzelnen FlexGroup-Volumes beteiligt sind.</block>
   <block id="46119f30376fd007e4806359f116810d" category="paragraph">Die Neuausrichtung der Volume-Kapazität wird für FlexVol-Volumes und FlexGroup-Volumes unterstützt. Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei. Volume-Transfervorgänge verbrauchen Filesystem-Ressourcen.</block>
   <block id="bbf6fdac51a56da72339e09ef6a7537c" category="paragraph">Jeder Volumetyp und jede Neuausgleichsoperation unterscheidet sich wie folgt.</block>
@@ -2467,4 +2466,29 @@
   <block id="f553bab80aec86e43829abd15b816ce5" category="section-title">Beschränkung der Amazon S3-Zugriffspunkte</block>
   <block id="19dc991ee5919c74b5a565fe2ea70176" category="paragraph">Die maximale Anzahl an S3-Zugriffspunkten pro Speicher-VM beträgt 4.000.</block>
   <block id="ef6c8d59ba70b1efd5437dd31e63efcb" category="section-title">04. Dezember 2025</block>
+  <block id="bf9dc967c38bf5f6366aea1d464016b5" category="inline-link-macro">Erstellen Sie ein Volume mithilfe von S3-Zugriffspunkten</block>
+  <block id="9650d80f3b4a8975eb2cc3145efe97fd" category="list-text"><block ref="9650d80f3b4a8975eb2cc3145efe97fd" category="inline-link-macro-rx"></block></block>
+  <block id="3e2c74c8c2d6921bd86b94a0e3ce7846" category="inline-link-macro">Verwalten von S3-Zugriffspunkten für ein Volume</block>
+  <block id="bec075d59b91517943ea96b4d56e06de" category="list-text"><block ref="bec075d59b91517943ea96b4d56e06de" category="inline-link-macro-rx"></block></block>
+  <block id="a008e298246d26d679639f7bc96ba6ac" category="inline-link-macro">Volumenkapazität in Workload Factory anpassen</block>
+  <block id="6397bacd7d32cf08e4bf24faa5700a5a" category="list-text"><block ref="6397bacd7d32cf08e4bf24faa5700a5a" category="inline-link-macro-rx"></block></block>
+  <block id="d8774a6076f48d902ee122d2219887a0" category="inline-link-macro">Ändern der Volumen-Tiering-Richtlinie in Workload Factory</block>
+  <block id="15edb6ed53ce8a32fd0631a4517d7fc7" category="list-text"><block ref="15edb6ed53ce8a32fd0631a4517d7fc7" category="inline-link-macro-rx"></block></block>
+  <block id="d628678d4875b2f8f6ea7ca8dab6ade0" category="inline-link-macro">Verwalten von S3-Zugriffspunkten in Workload Factory</block>
+  <block id="81cca59ad3bedd27880ab1c747ae8b70" category="list-text"><block ref="81cca59ad3bedd27880ab1c747ae8b70" category="inline-link-macro-rx"></block></block>
+  <block id="e89e0732eb8fbeb9c1bb216d5b1fe2c8" category="summary">Verwalten Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory.</block>
+  <block id="7caacaed323c9582bdf146f33b338930" category="doc">Verwalten der S3-Zugriffspunkte für ein Volume in NetApp Workload Factory</block>
+  <block id="c03be794767b179eaf0a48a2bc06884b" category="paragraph">Verwalten Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory. Mit der Workload Factory-Konsole können Sie S3-Zugriffspunkte vorhandenen Volumes zuweisen oder S3-Zugriffspunkte löschen.</block>
+  <block id="1f26d72d95cf276540f7a69b509645fe" category="paragraph">Sie benötigen ein bestehendes Volume mit einem S3-Zugangspunkt.</block>
+  <block id="be929bcd251acd28106548a34c8a067b" category="list-text">Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.</block>
+  <block id="7fcc02a075c6d0b859fd9a03f5250e5f" category="list-text">Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie die S3-Zugriffspunkte verwalten möchten, und wählen Sie dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.</block>
+  <block id="056da7279a8392afebe1b20256f8656b" category="list-text">Auf der Seite „S3-Zugriffspunkte verwalten“ können Sie Zugriffspunkte erstellen und zuordnen oder vorhandene Zugriffspunkte löschen.</block>
+  <block id="4dc9fa88ed74bd072e88bad92a1f17c6" category="open-title">Erstellen und Anfügen von S3-Zugriffspunkten an ein vorhandenes Volume</block>
+  <block id="c57302a0d02305ff8c144fb37bb2fab9" category="list-text">Wählen Sie *S3-Zugriffspunkt erstellen und anhängen*.</block>
+  <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">Geben Sie im Dialogfeld *S3-Zugriffspunkt erstellen und verbinden* die folgenden Informationen an:</block>
+  <block id="0802ef324b114effd397e5e5ac619733" category="list-text">Wählen Sie *Erstellen und anhängen*.</block>
+  <block id="f4e2e090f540d174d8e07c3527c25962" category="open-title">Vorhandene S3-Zugriffspunkte aus einem Volume löschen</block>
+  <block id="a87127d2d5ce747338342d2d926d9cc4" category="list-text">Wählen Sie im Aktionsmenü den S3-Zugriffspunkt zum Löschen aus und wählen Sie dann *Trennen*.</block>
+  <block id="8d755d1f354bf995e33c13051ecdaeca" category="list-text">Im Dialogfeld *S3-Zugriffspunkt trennen und entfernen* wählen Sie *Trennen und entfernen*, um den S3-Zugriffspunkt vom Volume zu löschen.</block>
+  <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">S3-Zugriffspunkte verwalten</block>
 </blocks>

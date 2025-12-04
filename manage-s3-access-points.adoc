@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: manage-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: Verwalten Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory. 
+---
+= Verwalten der S3-Zugriffspunkte für ein Volume in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verwalten Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory. Mit der Workload Factory-Konsole können Sie S3-Zugriffspunkte vorhandenen Volumes zuweisen oder S3-Zugriffspunkte löschen.
+
+.Bevor Sie beginnen
+Sie benötigen ein bestehendes Volume mit einem S3-Zugangspunkt.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie die S3-Zugriffspunkte verwalten möchten, und wählen Sie dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Auf der Seite „S3-Zugriffspunkte verwalten“ können Sie Zugriffspunkte erstellen und zuordnen oder vorhandene Zugriffspunkte löschen.
++
+[role="tabbed-block"]
+====
+.Erstellen und Anfügen von S3-Zugriffspunkten an ein vorhandenes Volume
+--
+.. Wählen Sie *S3-Zugriffspunkt erstellen und anhängen*.
+.. Geben Sie im Dialogfeld *S3-Zugriffspunkt erstellen und verbinden* die folgenden Informationen an:
++
+*** *Name des S3-Zugangspunkts*: Geben Sie den Namen des S3-Zugangspunkts ein.
+*** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.
+*** *Benutzertyp*: Wählen Sie als Benutzertyp *UNIX* oder *Windows* aus.
+
+
+.. Wählen Sie *Erstellen und anhängen*.
+
+
+--
+.Vorhandene S3-Zugriffspunkte aus einem Volume löschen
+--
+.. Wählen Sie im Aktionsmenü den S3-Zugriffspunkt zum Löschen aus und wählen Sie dann *Trennen*.
+.. Im Dialogfeld *S3-Zugriffspunkt trennen und entfernen* wählen Sie *Trennen und entfernen*, um den S3-Zugriffspunkt vom Volume zu löschen.
+
+
+--
+====
+

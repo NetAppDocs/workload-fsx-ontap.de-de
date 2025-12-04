@@ -241,5 +241,8 @@ Wenn die Funktion nicht verfügbar ist, kann dies einen der folgenden Gründe ha
 . Wählen Sie *Erstellen*.
 
 
-.Ergebnis
-Die Workload Factory initiiert die Volume-Erstellung. Nach der Erstellung wird das neue Volume auf der Registerkarte „Volumes“ angezeigt.
+.Ähnliche Informationen
+* link:adjust-volume-capacity.html["Volumenkapazität in Workload Factory anpassen"]
+* link:change-tiering-policy.html["Ändern der Volumen-Tiering-Richtlinie in Workload Factory"]
+* link:manage-s3-access-points.html["Verwalten von S3-Zugriffspunkten in Workload Factory"]
+
