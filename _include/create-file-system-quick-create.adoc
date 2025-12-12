@@ -1,0 +1,65 @@
+= 
+:allow-uri-read: 
+
+
+. Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Schnellerstellung* aus.
++
+Sie können auch eine gespeicherte Konfiguration laden.
+
+. Geben Sie unter Allgemeine Dateisystemkonfiguration Folgendes an:
++
+.. *AWS-Anmeldeinformationen*: Wählen Sie diese Option aus, um AWS-Anmeldeinformationen in Workload Factory hinzuzufügen oder ohne Anmeldeinformationen fortzufahren.
+.. *Dateisystemname*: Geben Sie einen Namen für das Dateisystem ein.
+.. *Region & VPC*: Wählen Sie die Region und VPC für das Dateisystem.
+.. *Bereitstellungstyp*: Wählen Sie einen Bereitstellungstyp aus.
++
+*** Implementierung von Single Availability Zone (Single-AZ): Bietet Verfügbarkeit durch Überwachung auf Hardwareausfälle und automatischer Austausch von Infrastrukturkomponenten bei einem Ausfall. Erzielt hohe Beständigkeit durch automatische Replizierung Ihrer Daten in einer Verfügbarkeitszone zum Schutz vor Komponentenausfall.
++
+Diese Konfiguration wird für Hochleistungs-Workloads empfohlen oder wenn die Workloads klein beginnen und schrittweise auf einen Durchsatz von 72 GB/s und 2,4 Millionen IOPS skaliert werden.
+
+*** Implementierung mit mehreren Verfügbarkeitszonen (Multi-AZ): Bietet kontinuierliche Datenverfügbarkeit, auch wenn eine Verfügbarkeitszone nicht verfügbar ist. Ein Filesystem mit mehreren Verfügbarkeitszonen wurde für geschäftskritische Produktions-Workloads konzipiert, die Hochverfügbarkeit für gemeinsam genutzte ONTAP-Dateidaten erfordern und Storage mit integrierter Replizierung über Verfügbarkeitszonen hinweg benötigen.
++
+Diese einzelne HA-Paar-Konfiguration wird für Workloads empfohlen, die einen Durchsatz von bis zu 6 GB/s oder 200.000 IOPS erfordern.
+
+
+
+.. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
+
+
+. Geben Sie unter *Dateisystemdetails* Folgendes an:
++
+.. *SSD-Speicherkapazität*: Geben Sie die Speicherkapazität ein und wählen Sie die Speicherkapazitätseinheit aus.
++
+*** Bei Bereitstellungen der ersten Generation können Sie die Kapazität nach der Erstellung des Dateisystems nicht mehr verringern.
+*** Bei Bereitstellungen der zweiten Generation können Sie die Kapazität nach der Erstellung des Dateisystems erhöhen.
+
+
+.. *ONTAP Credentials*: Optional. Geben Sie Ihren ONTAP-Benutzernamen und Ihr Kennwort ein. Das Passwort kann jetzt oder später festgelegt werden.
++
+Wenn der von Ihnen eingegebene Benutzer nicht der Benutzer fsxadmin ist und Sie später das Passwort fsxadmin zurücksetzen müssen, können Sie dies über die AWS-Konsole tun.
+
+.. *SMB/CIFS Setup*: Optional. Wenn Sie Vorhaben, das SMB/CIFS-Protokoll für den Zugriff auf Volumes zu verwenden, müssen Sie das Active Directory für die Storage-VM während der Erstellung des Filesystems konfigurieren. Geben Sie die folgenden Details für die Speicher-VM ein, die für dieses Dateisystem erstellt wurde.
++
+... *Active Directory-Domain zu verbinden*: Geben Sie den vollständig qualifizierten Domainnamen (FQDN) für das Active Directory ein.
+... *DNS-IP-Adressen*: Geben Sie bis zu drei DNS-IP-Adressen durch Kommas getrennt ein.
+... *SMB-Server NetBIOS-Name*: Geben Sie den SMB-Server NetBIOS-Namen des Active Directory-Computerobjekts ein, das für Ihre Speicher-VM erstellt werden soll. Dies ist der Name dieser Speicher-VM im Active Directory.
+... *Benutzername*: Geben Sie den Benutzernamen des Dienstkontos in Ihr vorhandenes Active Directory ein.
++
+Geben Sie kein Domänenpräfix oder Suffix ein. Für `EXAMPLE\ADMIN`, verwenden `ADMIN`.
+
+... *Passwort*: Geben Sie das Passwort für das Service-Konto ein.
+... *Organisationseinheit*: Geben Sie optional den Namen der Organisationseinheit ein, in der Sie das Computerkonto für FSX für ONTAP erstellen möchten. Die Organisationseinheit ist der Distinguished Path Name der Organisationseinheit, der Sie dem Dateisystem beitreten möchten.
+... *Delegierte Administratorengruppe*: Geben Sie optional den Namen der Gruppe in Ihrem Active Directory ein, die Ihr Dateisystem verwalten kann.
++
+Wenn Sie Microsoft AD von AWS Managed verwenden, müssen Sie eine Gruppe wie AWS Delegated FSX Administrators, AWS Delegated Administrators oder eine benutzerdefinierte Gruppe mit delegierten Berechtigungen für die Organisationseinheit angeben.
+
++
+Wenn Sie einem selbstverwalteten AD beitreten, verwenden Sie den Namen der Gruppe in Ihrem AD. Die Standardgruppe ist `Domain Admins`.
+
+
+
+
+
+. Öffnen Sie die *Zusammenfassung*, um die von Ihnen definierte Konfiguration zu überprüfen. Bei Bedarf können Sie zu diesem Zeitpunkt jede Einstellung ändern, bevor Sie das Dateisystem speichern oder erstellen.
+. Speichern oder erstellen Sie das Dateisystem.
+
