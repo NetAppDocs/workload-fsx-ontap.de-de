@@ -51,6 +51,8 @@ sidebar:
         url: "/create-volume.html"
       - title: Zugriff auf Ihre Daten
         url: "/access-data.html"
+    - title: Erstellen Sie ein Blockgerät
+      url: "/create-block-device.html"
     - title: Erstellen einer Storage-VM
       url: "/create-storage-vm.html"
     - title: Sichern Sie Ihre Daten

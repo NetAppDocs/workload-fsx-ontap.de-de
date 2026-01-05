@@ -58,3 +58,9 @@ Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
 
 
 NOTE: Nachdem Sie die Größe des Blockgeräts erhöht haben, befolgen Sie die Anweisungen Ihres Host-Betriebssystems, um die neue Größe des Blockgeräts zu ermitteln und das darauf befindliche Dateisystem zu erweitern.
+
+
+
+== Ähnliche Informationen
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Erstellen eines Blockgeräts für ein FSx for ONTAP -Dateisystem"]

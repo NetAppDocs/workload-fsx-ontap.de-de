@@ -21,10 +21,9 @@ Um eine Speicher-VM auf ein anderes FSx for ONTAP-Dateisystem zu replizieren, m�
 . Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems mit der zu replizierenden Speicher-VM und wählen Sie dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte „Storage-VMs“ das Aktionsmenü der Storage-VM aus, für die Sie eine SVM replizieren möchten.
-. Wählen Sie *Replicate Storage VM* aus.
-. Geben Sie auf der Seite Replikation erstellen unter Replikationsziel Folgendes an:
+. Wählen Sie in der Dateisystemübersicht unter „Speicher-VMs“ die Option „Verwalten“.
+. Wählen Sie im Bildschirm „Speicher-VMs verwalten“ das Aktionsmenü der Speicher-VM aus, für die eine SVM repliziert werden soll, und wählen Sie dann *Erweiterte Aktionen* > *Speicher-VM replizieren*.
+. Geben Sie auf der Seite Daten replizieren unter Replikationsziel Folgendes an:
 +
 .. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
 .. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus.

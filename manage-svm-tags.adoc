@@ -18,9 +18,8 @@ Tags können Ihnen dabei helfen, Ihre Ressourcen zu kategorisieren.  Sie können
 . Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems mit der zu aktualisierenden Speicher-VM und wählen Sie dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte „Storage-VMs“ das Aktionsmenü der Storage-VM aus, für die Sie Tags bearbeiten möchten.
-. Wählen Sie *Storage VM Tags bearbeiten*.
+. Wählen Sie in der Dateisystemübersicht unter „Speicher-VMs“ die Option „Verwalten“.
+. Wählen Sie im Bildschirm „Speicher-VMs verwalten“ das Aktionsmenü der Speicher-VM aus, deren Tags Sie bearbeiten möchten, und wählen Sie dann *Grundlegende Aktionen* > *Speicher-VM-Tags bearbeiten*.
 . Auf der Seite Storage-VM-Tags bearbeiten können Sie Tags hinzufügen, bearbeiten oder entfernen.
 +
 Auf eine Storage-VM können Sie maximal 50 Tags anwenden.

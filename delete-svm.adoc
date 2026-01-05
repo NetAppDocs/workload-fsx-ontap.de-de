@@ -25,8 +25,8 @@ Löschen Sie eine Storage-VM (SVM), die Sie nicht mehr benötigen, aus der FSX f
 . Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
-. Wählen Sie auf der Registerkarte „Storage-VMs“ das Aktionsmenü der Storage-VM aus, für die Sie Active Directory konfigurieren möchten.
+. Wählen Sie in der Dateisystemübersicht unter „Speicher-VMs“ die Option „Verwalten“.
+. Wählen Sie im Bildschirm „Speicher-VMs verwalten“ das Aktionsmenü der zu löschenden Speicher-VM aus.
 . Wählen Sie *Speicher-VM löschen*.
 . Geben Sie im Dialogfeld „Storage-VM löschen“ den Befehl „delete“ ein, um die Storage-VM zu löschen.
 . Wählen Sie zur Bestätigung *Löschen*.

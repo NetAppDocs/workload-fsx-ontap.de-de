@@ -168,7 +168,7 @@ ONTAP erreicht Speichereffizienz durch Deduplizierungs- und Komprimierungsfunkti
 
 .. *Snapshot Policy*: Wählen Sie die Snapshot Policy aus, um die Häufigkeit und Aufbewahrung von Snapshots festzulegen.
 +
-Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Für benutzerdefinierte Snapshot-Richtlinien müssen Sie link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"] .
+Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"]Die
 
 +
 `default`:: Diese Richtlinie erstellt automatisch Snapshots nach dem folgenden Zeitplan. Die ältesten Snapshot-Kopien werden gelöscht, um Platz für neuere Kopien zu schaffen:
@@ -190,7 +190,7 @@ NOTE: Snapshot-Zeiten basieren auf der Zeitzone des Dateisystems, die standardm�
 
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Volume gespeicherten Daten.
 +
-_Ausgeglichen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole.  Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie unterlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der AWS FSx für NetApp ONTAP -Dokumentation.  Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx für ONTAP -Tiering-Richtliniennamen in Klammern einschließt.
+_Ausgewogen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes über die Workload Factory-Konsole. Weitere Informationen zu den Richtlinien für die Mengenstaffelung finden Sie unter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der AWS FSx für NetApp ONTAP Dokumentation. Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx for ONTAP Tiering-Richtliniennamen in Klammern angibt.
 
 .. *Unveränderliche Dateien*: Durch Aktivieren der Funktion „Unveränderliche Dateien“ werden Dateien in diesem Volume dauerhaft in einen unveränderlichen WORM-Status (Write-Once-Read-Many) versetzt.  Geben Sie die folgenden Details an:
 +
