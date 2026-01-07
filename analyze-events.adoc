@@ -52,12 +52,17 @@ Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet. 
 Um den Ereignisanalysator nutzen zu können, müssen Sie folgende Voraussetzungen erfüllen:
 
 * Du musstlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto, um Ereignisse für FSx for ONTAP -Dateisysteme anzuzeigen.
+* Für die EMS-Ereignisanalyse muss der folgende Port in der Sicherheitsgruppe, die dem FSx for ONTAP -Dateisystem zugeordnet ist, geöffnet sein.
++
+** Port 22 (SSH)
+
+
 * Du musstlink:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her."] den EMS-Ereignisanalysator verwenden.
 * Sie müssen außerdem die folgenden Anforderungen erfüllen.  Das System fordert Sie auf, diese Schritte durchzuführen, wenn Sie Protokollfehler analysieren.
 +
 ** *Amazon Bedrock-Modell*
 +
-Der Ereignisanalysator nutzt Ihre Amazon Bedrock APIs, um KI-basierte Erkenntnisse für FSx for ONTAP -Ereignisse bereitzustellen.
+Der Ereignisanalysator nutzt Amazon Bedrock APIs, um KI-basierte Erkenntnisse für FSx for ONTAP -Ereignisse bereitzustellen. Konfigurieren Sie Amazon Bedrock für jedes AWS-Konto separat.
 
 +
 Empfohlenes Modell: Amazon Bedrock Model (anthropic.claude-sonnet-4-20250514-v1:0).  Sie müssen den Inferenzprofil-ARN für dieses Modell in der ausgewählten Region angeben.

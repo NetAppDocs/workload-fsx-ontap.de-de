@@ -56,6 +56,7 @@ Workload Factory benötigt einen Link, um bestimmte Informationen anzuzeigen und
 Zu den Funktionen, für die ein Link erforderlich ist, gehören:
 
 * Gut strukturierter Status der FSx for ONTAP Dateisystemkonfigurationen für proaktive Wartung, Zuverlässigkeit und Kosten-Leistungs-Optimierung
+* ONTAP EMS Ereignisüberwachung und Alarmierung
 * Autonomer Ransomware-Schutz (ARP/AI) von NetApp
 * Verbesserte ganzheitliche Kapazitätsbeobachtung über FSx für ONTAP Dateisysteme
 * Datenreplikation, Verwaltung und Überwachung von Volume- und Storage-VMs
