@@ -30,10 +30,9 @@ Da die Anforderungen an Speicherkonfigurationen unterschiedlich sind, können Si
 Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
 
 * Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, FSx für ONTAP Backups, Remote-Datenreplikation und Datenzuverlässigkeit für die langfristige Aufbewahrung
-* Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI) und Schutz vor unberechtigtem Zugriff auf Volumes
-* Operative Exzellenz: automatisches Kapazitätsmanagement, Schwellenwert für die Auslastung der Datenvolumenkapazität und nahezu vollständige Auslastung des Datenvolumens
-* Kostenoptimierung: Speichereffizienz, Daten-Tiering und unnötige Snapshot-Löschung
-* Leistungsoptimierung: FlexGroup Volumen-Rebalancing
+* Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI) deaktiviert und unberechtigter Zugriff auf Volumes
+* Operative Exzellenz: Automatisches Kapazitätsmanagement, Schwellenwert für die Auslastung der Volume-Dateikapazität, nahezu vollständige Volume-Auslastung und Schreibmodus für Cache-Beziehungen
+* Kostenoptimierung: Speichereffizienz, Daten-Tiering, unnötiges Löschen von Snapshots und Backups
 
 
 
@@ -50,7 +49,7 @@ Sie können Konfigurationsprobleme für ein FSx for ONTAP Dateisystem oder für 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
@@ -84,7 +83,7 @@ Verwerfen, um eine Konfigurationsanalyse für ein FSx for ONTAP Dateisystem auf 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
@@ -97,7 +96,7 @@ Verwerfen, um eine Konfigurationsanalyse für ein FSx for ONTAP Dateisystem auf 
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
@@ -131,7 +130,7 @@ Sie können eine abgebrochene Konfigurationsanalyse jederzeit wieder aktivieren.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.
@@ -144,7 +143,7 @@ Sie können eine abgebrochene Konfigurationsanalyse jederzeit wieder aktivieren.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems und dann *Verwalten*.
 . Navigieren Sie von der FSx for ONTAP Dateisystemübersicht zur Registerkarte *Gut konzipierter Status*.

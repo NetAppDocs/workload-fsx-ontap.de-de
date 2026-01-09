@@ -41,7 +41,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Einsparungen erkunden“ und dann „Amazon Elastic Block Store (EBS)“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Menü „Speicher“ die Option „Einsparungen entdecken“ und anschließend die Registerkarte „Amazon Elastic Block Store (EBS)“.
 . Geben Sie im Rechner für Storage-Einsparungen folgende Informationen an:
 +
 .. *Anwendungsfall*: Erforderlich. Wählen Sie im Dropdown-Menü einen Anwendungsfall aus. Der ausgewählte Anwendungsfall legt die Eigenschaften des Filesystems FSX für ONTAP für den Vergleich fest.
@@ -62,7 +63,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Einsparungen erkunden“ und dann „Amazon FSx für Windows File Server“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Menü „Speicher“ die Option „Einsparungen entdecken“ und anschließend die Registerkarte „Amazon Elastic Block Store (EBS)“.
 . Geben Sie im Rechner für Storage-Einsparungen folgende Informationen an:
 +
 .. *Anwendungsfall*: Erforderlich. Wählen Sie im Dropdown-Menü einen Anwendungsfall aus. Der ausgewählte Anwendungsfall legt die Eigenschaften des Filesystems FSX für ONTAP für den Vergleich fest.
@@ -84,7 +86,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Einsparungen erkunden“ und dann „Amazon Elastic File System (EFS)“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Menü „Speicher“ die Option „Einsparungen entdecken“ und anschließend die Registerkarte „Amazon Elastic Block Store (EBS)“.
 . Geben Sie im Rechner für Storage-Einsparungen folgende Informationen an:
 +
 .. *Anwendungsfall*: Erforderlich. Wählen Sie im Dropdown-Menü einen Anwendungsfall aus. Der ausgewählte Anwendungsfall legt die Eigenschaften des Filesystems FSX für ONTAP für den Vergleich fest.
@@ -129,8 +132,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
-. Wählen Sie im Speichermenü *Einsparungen erkunden* aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Menü „Speicher“ die Option „Einsparungen entdecken“ und anschließend die Registerkarte „Amazon Elastic Block Store (EBS)“.
 . Wählen Sie auf der Registerkarte *Elastic Block Store (EBS)* die Instanz(en) aus, die Sie mit FSX for ONTAP vergleichen möchten, und wählen Sie *Einsparungen erkunden* aus.
 . Der Rechner für Storage-Einsparungen wird angezeigt. Die folgenden Merkmale des Speichersystems werden basierend auf den ausgewählten Instanzen vorausgefüllt:
 +
@@ -148,8 +151,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
-. Wählen Sie im Speichermenü *Einsparungen erkunden* aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Menü „Speicher“ die Option „Einsparungen entdecken“ und anschließend die Registerkarte „Amazon FSx für Windows-Dateiserver“.
 . Wählen Sie auf der Registerkarte *Amazon FSX für Windows-Dateiserver* die Instanz(en) aus, die mit FSX für ONTAP verglichen werden soll, und wählen Sie *Einsparungen erkunden*.
 . Der Rechner für Storage-Einsparungen wird angezeigt. Die folgenden Merkmale des Speichersystems werden basierend auf dem Bereitstellungstyp der ausgewählten Instanz(en) vorausgefüllt:
 +
@@ -167,8 +170,8 @@ Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
-. Wählen Sie im Speichermenü *Einsparungen erkunden* aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Menü „Speicher“ die Option „Einsparungen erkunden“ und anschließend die Registerkarte „Amazon Elastic File System (EFS)“.
 . Wählen Sie auf der Registerkarte * Elastic File System (EFS)* die Instanz(en) aus, die mit FSX for ONTAP verglichen werden sollen, und wählen Sie *Einsparungen erkunden*.
 . Der Rechner für Storage-Einsparungen wird angezeigt. Die folgenden Merkmale des Speichersystems werden basierend auf den ausgewählten Instanzen vorausgefüllt:
 +

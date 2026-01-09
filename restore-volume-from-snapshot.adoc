@@ -27,7 +27,7 @@ Beachten Sie die folgenden Einschränkungen, bevor Sie ein Volume aus einem Snap
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie unter *Speicher* die Option *Zum Speicher gehen*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.

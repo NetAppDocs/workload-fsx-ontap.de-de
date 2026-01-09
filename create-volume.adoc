@@ -78,7 +78,7 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, in dem Sie ein Volume erstellen möchten, und wählen Sie *Volume erstellen*.
 . Geben Sie auf der Seite Volume erstellen unter Allgemeine Details die folgenden Details ein:
@@ -168,7 +168,7 @@ ONTAP erreicht Speichereffizienz durch Deduplizierungs- und Komprimierungsfunkti
 
 .. *Snapshot Policy*: Wählen Sie die Snapshot Policy aus, um die Häufigkeit und Aufbewahrung von Snapshots festzulegen.
 +
-Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"]Die
+Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"]Die
 
 +
 `default`:: Diese Richtlinie erstellt automatisch Snapshots nach dem folgenden Zeitplan. Die ältesten Snapshot-Kopien werden gelöscht, um Platz für neuere Kopien zu schaffen:

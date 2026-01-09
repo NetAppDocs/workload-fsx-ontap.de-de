@@ -36,12 +36,9 @@ Um die Kapazität eines Dateisystems anzupassen, müssen Sie zunächstlink:enabl
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Dashboard *SSD-Kapazität anpassen*.
 . Wählen Sie das Dateisystem aus, für das Sie die Kapazität anpassen möchten, und wählen Sie dann *Weiter*.
-+
-*Einsparpotenzial* ist die Empfehlung zur Kapazitätsreduzierung.
-
 . Geben Sie im Dialogfeld „SSD-Kapazität anpassen“ eine Zahl für „Bereitgestellte Kapazität“ ein.
 . Wählen Sie die Einheit für die bereitgestellte Kapazität aus.
 . Wählen Sie *Anwenden*.

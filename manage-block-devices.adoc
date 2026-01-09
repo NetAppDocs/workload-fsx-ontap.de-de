@@ -4,14 +4,14 @@ permalink: manage-block-devices.html
 keywords: block devices, manage luns, manage iscsi 
 summary: Blockgeräte für ein FSx for ONTAP -Dateisystem in NetApp Workload Factory verwalten. 
 ---
-= Verwalten der Blockgeräte für ein FSx for ONTAP -Dateisystem
+= Verwalten der Blockgeräte für ein Dateisystem in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Über die NetApp Workload Factory Konsole können Sie die Blockgeräte für Ihre FSx for ONTAP -Dateisysteme verwalten.  Zu den Managementaufgaben gehören das Anzeigen von Blockgerätedetails und die Erhöhung der Kapazität.
+Über die NetApp Workload Factory Konsole können Sie die Blockgeräte für Ihre FSx for ONTAP -Dateisysteme verwalten. Zu den Verwaltungsaufgaben gehören das Anzeigen von Blockgerätedetails, das Erhöhen der Kapazität, das Verwalten des Clientzugriffs, das Archivieren von Blockgerätedaten und das Löschen von Blockgeräten.
 
 .Über diese Aufgabe
 Blockgeräte oder LUNs (logische Einheitennummern) sind Datenträger, die Dateisysteme in einer SAN-Umgebung enthalten und von Hosts über ein Netzwerk aufgerufen werden können.
@@ -31,7 +31,7 @@ Die Details eines bestehenden Blockgeräts können jederzeit eingesehen werden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
 . Navigieren Sie zum Aktionsmenü für das Blockgerät und wählen Sie dann *Details anzeigen*.
@@ -48,7 +48,7 @@ Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
 . Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Kapazität erhöhen*.
@@ -58,6 +58,63 @@ Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
 
 
 NOTE: Nachdem Sie die Größe des Blockgeräts erhöht haben, befolgen Sie die Anweisungen Ihres Host-Betriebssystems, um die neue Größe des Blockgeräts zu ermitteln und das darauf befindliche Dateisystem zu erweitern.
+
+
+
+== Clientzugriff für ein Blockgerät verwalten
+
+Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalten, indem Sie igroups erstellen und Blockgeräte sowie Host-Initiatoren hinzufügen oder entfernen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Clientzugriff verwalten*.
+. Falls keine igroup existiert, erstellen Sie eine neue igroup, indem Sie *igroup erstellen* auswählen, und gehen Sie dann wie folgt vor:
++
+.. *Blockgerätename*: Geben Sie einen Blockgerätenamen ein. Sie können mehrere Blockgeräte auswählen, die der igroup zugeordnet werden sollen.
+.. *Betriebssystemtyp*: Wählen Sie den Betriebssystemtyp aus.
+.. *igroup name*: Geben Sie einen igroup-Namen ein.
+.. *igroup-Beschreibung*: Optional können Sie eine igroup-Beschreibung eingeben.
+.. *Host-Initiatoren*: Geben Sie einen oder mehrere Host-Initiatoren ein. Diese Initiatoren müssen dem iSCSI-qualifizierten (IQN) Format entsprechen.
+.. Wählen Sie *Erstellen*.
+
+
+. Falls bereits eine igroup existiert, wählen Sie *Clientzugriff bearbeiten*, um Blockgeräte und Hostinitiatoren zur igroup hinzuzufügen oder daraus zu entfernen, und wählen Sie anschließend *Anwenden*.
+
+
+
+
+== Archivieren Sie die Daten eines verwaisten Blockgeräts
+
+Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als verwaiste Blockgeräte klassifiziert. Sie können die Daten eines verwaisten Blockgeräts in die Kapazitätspoolebene archivieren, um SSD-Kapazität zurückzugewinnen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Wählen Sie unter „Verwaiste Geräte“ die Option „Kapazität anzeigen und wiederherstellen“.
+. Auf dem Bildschirm „Speicherplatz für ungenutzte Blockgeräte freigeben“ können Sie ein oder mehrere Blockgeräte auswählen, um die Daten zu archivieren und die Kapazität freizugeben.
+. Wählen Sie *Archiv*.
+
+
+
+
+== Löschen eines Blockgeräts
+
+Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als verwaiste Blockgeräte klassifiziert. Dieser Vorgang hebt die Zuordnung des ausgewählten Blockgeräts auf und löscht es. Wenn das Host FlexVol volume keine Blockgeräte enthält, wird es von Workload Factory ebenfalls gelöscht.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Wählen Sie unter „Verwaiste Geräte“ die Option „Kapazität anzeigen und wiederherstellen“.
+. Auf dem Bildschirm „Speicherplatz für ungenutzte Blockgeräte freigeben“ können Sie ein oder mehrere Blockgeräte auswählen, um die Daten zu archivieren und die Kapazität freizugeben.
+. Wählen Sie *Löschen*.
+
 
 
 

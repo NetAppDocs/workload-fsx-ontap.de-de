@@ -48,7 +48,7 @@ image:screenshot-on-prem-connectivity.png["Screenshot, der zeigt, wie ein On-Pre
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie die Registerkarte *On-Premise ONTAP*.
 . Wählen Sie * Entdecken*.
 . Überprüfen Sie die Voraussetzungen und wählen Sie *Weiter*.
@@ -84,7 +84,7 @@ Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für O
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *On-Premises ONTAP* aus.
 . Um Volumes nach Storage VM zu finden, können Sie *Storage VM* aus der Dropdown-Liste auswählen.
 . Wählen Sie ein oder mehrere Volumes aus, die repliziert werden sollen, und wählen Sie dann *replicate* aus.
@@ -149,7 +149,7 @@ Vor dem Entfernen des Clusters müssen Sie link:delete-replication.html["Lösche
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *On-Premises ONTAP* aus.
 . Wählen Sie das lokale ONTAP-Cluster aus, das entfernt werden soll.
 . Wählen Sie das Aktionsmenü und wählen Sie *Aus Workload Factory entfernen*.

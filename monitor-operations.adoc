@@ -46,7 +46,7 @@ Verfolgen und überwachen Sie Vorgänge in der NetApp -Konsole mit Tracker.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *Verwaltung* und dann *Links*.
 +
 image:screenshot-menu-tracker-option.png["Ein Screenshot des Menüs „Kontoeinstellungen“ mit markierter Tracker-Option."]

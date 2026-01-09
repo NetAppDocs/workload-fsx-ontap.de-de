@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Erweitertes Erstellen* aus.
+. Wählen Sie auf der Seite "FSx für ONTAP -Dateisystem erstellen" die Option "Erweiterte Erstellung" aus.
 +
 Sie können auch eine gespeicherte Konfiguration laden.
 

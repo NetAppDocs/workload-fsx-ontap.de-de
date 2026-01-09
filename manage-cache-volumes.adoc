@@ -29,7 +29,7 @@ Sie können den Namen eines vorhandenen Cache-Volumes jederzeit ändern.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Menü „Speicher“ die Option „FSx für ONTAP“.
 . Wählen Sie in FSx for ONTAP das Aktionsmenü des Dateisystems mit dem Cache-Volume und anschließend *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Cache-Beziehungen* aus.
@@ -45,7 +45,7 @@ Sie können die Kapazität eines vorhandenen Cache-Volumes jederzeit anpassen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Menü „Speicher“ die Option „FSx für ONTAP“.
 . Wählen Sie in FSx for ONTAP das Aktionsmenü des Dateisystems mit dem Cache-Volume und anschließend *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Cache-Beziehungen* aus.
@@ -61,7 +61,7 @@ Sie können die Kapazität eines vorhandenen Cache-Volumes jederzeit anpassen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Menü „Speicher“ die Option „FSx für ONTAP“.
 . Wählen Sie in FSx for ONTAP das Aktionsmenü des Dateisystems mit dem Cache-Volume und anschließend *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Cache-Beziehungen* aus.
@@ -80,7 +80,7 @@ Erfahren Sie mehr überlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/us
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Menü „Speicher“ die Option „FSx für ONTAP“.
 . Wählen Sie in FSx for ONTAP das Aktionsmenü des Dateisystems mit dem Cache-Volume und anschließend *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Cache-Beziehungen* aus.
@@ -96,7 +96,7 @@ Füllen Sie das Cache-Volume mit Daten vom Ursprungsvolume, bevor Sie es verwend
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Menü „Speicher“ die Option „FSx für ONTAP“.
 . Wählen Sie in FSx for ONTAP das Aktionsmenü des Dateisystems mit dem Cache-Volume und anschließend *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Cache-Beziehungen* aus.
@@ -112,7 +112,7 @@ Wenn Sie ein Cache-Volume löschen, entfernen Sie dessen Cache-Beziehung.  Die z
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Menü „Speicher“ die Option „FSx für ONTAP“.
 . Wählen Sie in FSx for ONTAP das Aktionsmenü des Dateisystems mit dem Cache-Volume und anschließend *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Cache-Beziehungen* aus.

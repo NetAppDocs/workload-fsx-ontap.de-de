@@ -24,7 +24,7 @@ Damit ein geklontes Volume alle Daten des übergeordneten Volume und alle neuen 
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des FSx for ONTAP -Dateisystems aus, das das zu klonende Volume enthält, und wählen Sie dann *Verwalten*.
 . Wählen Sie auf der Registerkarte Übersicht des Dateisystems die Registerkarte *Volumes* aus.

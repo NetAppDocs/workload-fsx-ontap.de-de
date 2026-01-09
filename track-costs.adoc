@@ -25,7 +25,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Er
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Im Menü „Speicher“ wählen Sie *Kosten*.
 . Filtern Sie auf der Kostenseite die Kosten- und Kapazitätsdaten für Ihre FSx for ONTAP -Ressourcen, indem Sie Folgendes angeben:
 +

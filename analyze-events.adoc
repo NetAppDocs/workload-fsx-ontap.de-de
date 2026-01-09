@@ -101,11 +101,13 @@ Verwenden Sie die Workload Factory-Konsole, um EMS-Ereignisse für FSx for ONTAP
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
-. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie das FSx for ONTAP Dateisystem zur Analyse aus und klicken Sie anschließend auf *Verwalten*.
-. Wählen Sie die Registerkarte *Analyse*.
-. Falls erforderlich, vervollständigen Sie die *Einrichtungsvoraussetzungen für die KI-Analyse*, indem Sie den Anweisungen auf dem Bildschirm folgen, um etwaige fehlende Voraussetzungen zu erfüllen.
-. Wählen Sie *Analysieren*.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ wählen Sie *Analyse*.
+. Wählen Sie im Analysebildschirm die AWS-Konten, Anmeldeinformationen und Regionen aus, die die FSx for ONTAP -Dateisysteme enthalten, die Sie analysieren möchten.
++
+Nur FSx für ONTAP Dateisysteme mit Ereignisanzeige auf dem Bildschirm.
+
+. Falls erforderlich, vervollständigen Sie die Einrichtungsvoraussetzungen für die KI-Analyse, indem Sie den Anweisungen auf dem Bildschirm folgen, um etwaige fehlende Voraussetzungen zu erfüllen.
+. Suchen Sie das FSx for ONTAP -Dateisystem, das Sie analysieren möchten, und wählen Sie dann *Ereignisse anzeigen*.
 . Lesen Sie die detaillierten Veranstaltungsinformationen.
 

@@ -42,8 +42,9 @@ FSx für ONTAP-Dateisysteme der zweiten Generation sind der Standardbereitstellu
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „FSx für ONTAP erstellen“ aus.
-. Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Schnellerstellung* aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speicher-Dashboard die Option *Dateisystem erstellen*.
+. Wählen Sie auf der Seite „FSx for ONTAP -Dateisystem erstellen“ die Option „Schnell erstellen“ aus.
 +
 Sie können auch eine gespeicherte Konfiguration laden.
 
@@ -115,7 +116,7 @@ Mit Advanced Create können Sie alle Konfigurationsoptionen festlegen, einschlie
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie in der Kachel „Speicher“ die Option „FSx für ONTAP erstellen“ aus.
-. Wählen Sie auf der Seite FSX für ONTAP erstellen die Option *Erweitertes Erstellen* aus.
+. Wählen Sie auf der Seite "FSx für ONTAP -Dateisystem erstellen" die Option "Erweiterte Erstellung" aus.
 +
 Sie können auch eine gespeicherte Konfiguration laden.
 

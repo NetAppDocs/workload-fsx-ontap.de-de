@@ -94,7 +94,7 @@ Verwenden Sie CloudFormation, um den Link automatisch in Workload Factory zu ers
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, dem Sie einen Link zuordnen möchten, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
@@ -166,7 +166,7 @@ Sie können eine Verknüpfung mit zwei Infrastructure-as-Code (IaC)-Tools aus de
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, dem Sie einen Link zuordnen möchten, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
@@ -240,7 +240,7 @@ Nachdem Sie einen Link erstellt haben, verknüpfen Sie ihn mit einem oder mehrer
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie in der Kachel „Speicher“ die Option „Zum Speicher gehen“ aus.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, dem Sie einen Link zuordnen möchten, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie auf der Link-Seite „Mitarbeiter“ die Option *vorhandenen Link verknüpfen*, wählen Sie den Link aus und wählen Sie *Weiter*.
