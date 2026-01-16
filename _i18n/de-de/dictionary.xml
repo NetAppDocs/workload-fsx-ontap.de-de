@@ -1240,7 +1240,6 @@
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">Wenn der von Ihnen eingegebene Benutzer nicht der Benutzer fsxadmin ist und Sie später das Passwort fsxadmin zurücksetzen müssen, können Sie dies über die AWS-Konsole tun.</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">*Storage VM Credentials*: Optional. Geben Sie Ihren Benutzernamen ein. Das Kennwort kann spezifisch für dieses Dateisystem sein, oder Sie können dasselbe Kennwort verwenden, das für die ONTAP-Anmeldeinformationen eingegeben wurde. Das Passwort kann jetzt oder später festgelegt werden.</block>
   <block id="37b002845528ac0296b86d28bb71e5a5" category="doc">Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her</block>
-  <block id="3909315ab3cc8353eec0cd02ce0845da" category="admonition">AWS Secrets Manager wird bei der Verwendung eines Connectors nicht unterstützt.</block>
   <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">Neuen Link zuordnen</block>
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">Die Verknüpfung eines neuen Links umfasst die Erstellung und Verknüpfung.</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">Sie können entweder Geheimnisse im Einklang mit den Standardberechtigungen erstellen oder Ihre benutzerdefinierten Berechtigungen für die Link-Richtlinie zuweisen.</block>
@@ -2560,4 +2559,5 @@
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">Wählen Sie *Archiv*.</block>
   <block id="b06e53572a17ccf08cb282ac59af4b93" category="paragraph">Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als verwaiste Blockgeräte klassifiziert. Dieser Vorgang hebt die Zuordnung des ausgewählten Blockgeräts auf und löscht es. Wenn das Host FlexVol volume keine Blockgeräte enthält, wird es von Workload Factory ebenfalls gelöscht.</block>
   <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">FlexVol Volumes, die ein Blockgerät enthalten, starten ARP/AI im aktiven Modus.</block>
+  <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">Die Verbindung muss zu folgendem Endpunkt möglich sein: \https://api.workloads.netapp.com. Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP Workloads zu verwalten und zu betreiben.</block>
 </blocks>

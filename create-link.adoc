@@ -23,7 +23,7 @@ Sie können in Ihrem Konto einen Link erstellen, wenn Sie ein FSx für ONTAP Dat
 Für Links ist eine Authentifizierung erforderlich. Sie können Links mithilfe von Anmeldeinformationen authentifizieren, die im Anmeldeinformationsdienst von Workload Factory gespeichert sind, oder mithilfe Ihrer Anmeldeinformationen, die im AWS Secrets Manager gespeichert sind. Pro Link wird nur eine Authentifizierungsmethode unterstützt. Wenn Sie beispielsweise die Link-Authentifizierung mit AWS Secrets Manager auswählen, können Sie die Authentifizierungsmethode später nicht mehr ändern.
 
 
-NOTE: AWS Secrets Manager wird bei der Verwendung eines Connectors nicht unterstützt.
+NOTE: AWS Secrets Manager wird bei Verwendung eines Konsolenagenten nicht unterstützt.
 
 
 
@@ -46,6 +46,7 @@ Sie haben in diesem Workflow zwei Möglichkeiten, Links zu erstellen – automat
 ** Für die Ereignisanalyse des Notfallmanagementsystems (EMS) mit CloudShell und FSx für ONTAP : Port 22 (SSH)
 
 
+* Die Verbindung muss zu folgendem Endpunkt möglich sein: \https://api.workloads.netapp.com. Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP Workloads zu verwalten und zu betreiben.
 * Sie müssen über die folgenden Berechtigungen in Ihrem AWS-Konto verfügen, wenn Sie einen Link mit einem CloudFormation-Stack hinzufügen:
 +
 [%collapsible]
