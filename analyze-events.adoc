@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: analyze-events.html 
-keywords: analyze events, events, FSx for ONTAP events, troubleshoot FSx for ONTAP 
+keywords: analyze events, events, FSx for ONTAP events, EMS, troubleshoot FSx for ONTAP 
 summary: Analysieren Sie EMS-Ereignisse innerhalb der NetApp Workload Factory für FSx für ONTAP. 
 ---
 = Analysieren Sie FSx auf ONTAP EMS-Ereignisse in NetApp Workload Factory
@@ -11,25 +11,27 @@ summary: Analysieren Sie EMS-Ereignisse innerhalb der NetApp Workload Factory f�
 
 
 [role="lead"]
-Mit dem intelligenten Ereignisanalysator können Sie Ereignisse des Event Management Systems (EMS) für FSx for ONTAP -Dateisysteme in NetApp Workload Factory automatisch extrahieren und analysieren, um Probleme schnell zu erkennen und zu beheben. Die auf Agentic AI basierende Analyse erfordert eine Amazon Bedrock-Integration.
+Identifizieren und beheben Sie schnell FSx for ONTAP-Dateisystemprobleme mit dem intelligenten Ereignisanalysator in NetApp Workload Factory. Der Ereignisanalysator extrahiert und analysiert automatisch FSx for ONTAP Event Management System (EMS)-Ereignisse und nutzt dabei Agentic AI mit Amazon Bedrock-Integration.
 
 
 
 == Über diese Aufgabe
 
-Speicheradministratoren reagieren auf FSx for ONTAP EMS-Ereignisse oft erst nach Kundenbeschwerden oder durch die Erstellung benutzerdefinierter Skripte und Alarme.  Dieser reaktive Ansatz verlangsamt die Problembehebung, erhöht die Ausfallzeiten und macht den Betrieb weniger effizient.
+Speicheradministratoren reagieren auf FSx for ONTAP EMS-Ereignisse oft erst nach Kundenbeschwerden oder durch die Pflege benutzerdefinierter Skripte und Alarme. Dieser reaktive Ansatz kann die Effizienz verringern, die Problemlösung verzögern und Ausfallzeiten erhöhen.
 
-Der Ereignisanalysator extrahiert FSx for ONTAP EMS-Ereignisse und analysiert sie, um Ihnen bei der Aufrechterhaltung des Zustands und der Leistungsfähigkeit von FSx for ONTAP -Dateisystemen zu helfen. Workload Factory zeigt nur Ereignisse an, die in den letzten 72 Stunden aufgetreten sind.
+Der Ereignisanalysator extrahiert automatisch Fehler-, Warn- und Notfall-EMS-Ereignisse aus FSx for ONTAP-Dateisystemen. Sie können diese Ereignisse durch link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verbindung zum Dateisystem über einen Link"] und durch link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_Anzeigen-, Planungs- und Analyse_-Berechtigungen erteilen"^] in Ihrem AWS-Konto einsehen. Ereignisse werden 72 Stunden lang angezeigt, bevor Entfernung.
+
+Mit der Amazon Bedrock-Integration verwendet Workload Factory KI, um Ereignisse zu analysieren und umsetzbare Erkenntnisse bereitzustellen, damit die Integrität und Leistung Ihrer FSx for ONTAP File Systems erhalten bleibt.
 
 Zu den wichtigsten Vorteilen gehören:
 
-* Erweiterte Fehlerbehebung: Nutzt KI, um Ereignisse proaktiv zu erkennen und zu analysieren und bietet klare Lösungsschritte für ONTAP EMS-Ereignisse, die Aufmerksamkeit erfordern.
-* Bewährte Vorgehensweise zur Fehlerbehebung: Bietet klare Schritte zur Behebung von Problemen mit FSx für ONTAP, basierend auf Ihrer Umgebung, sodass jeder Probleme lösen kann.
+* Erweiterte Fehlerbehebung: KI identifiziert, analysiert und liefert automatisch Erkenntnisse zur Behebung von FSx for ONTAP EMS-Ereignissen, wodurch die manuelle Untersuchungszeit reduziert wird.
+* Best-practice-Fehlerbehebung: Der Ereignisanalysator bietet klare, umsetzbare Schritte zur Behebung von FSx for ONTAP EMS-Ereignissen.
 
 
-Bei der Verwendung des Ereignisanalysators behalten Sie die volle Kontrolle über Ihre Umgebung und profitieren gleichzeitig von fortschrittlichen KI-Analysen.
+Bei der Verwendung des Ereignisanalysators haben Sie die volle Kontrolle über Ihre Umgebung, während Sie von fortschrittlichen KI-Analysen profitieren.
 
-Um den Ereignisanalysator zu verwenden, müssen Sie Amazon Bedrock aktivieren, das von Workload Factory verwendete Modell auswählen, einen privaten Endpunkt erstellen, um eine Verbindung zu Amazon Bedrock herzustellen, Berechtigungen hinzufügen und eine Unternehmenslizenz erstellen.
+Damit Workload Factory Ereignisse analysieren kann, müssen Sie Amazon Bedrock aktivieren, das Modell auswählen, das Workload Factory verwendet, einen privaten Endpunkt zur Verbindung mit Amazon Bedrock erstellen, Berechtigungen hinzufügen und eine Enterprise-Lizenz erstellen.
 
 link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock-Preise"^]
 
@@ -37,57 +39,57 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock-Preise"^]
 
 === Datenschutz und Datensicherheit
 
-Diese Funktion gewährleistet Datenschutz und Datensicherheit durch folgende Maßnahmen:
+Ihr Datenschutz und Ihre Sicherheit werden geschützt durch:
 
-.Datensouveränität
-Daten und Aggregationen verbleiben innerhalb Ihres AWS-Kontos und werden über einen privaten VPC-Endpunkt (Amazon Bedrock) kommuniziert, wodurch eine Offenlegung im öffentlichen Internet ausgeschlossen wird.
+* *Datenhoheit*: Alle Daten und Aggregationen verbleiben innerhalb Ihres AWS-Kontos und werden über einen privaten VPC-Endpunkt (Amazon Bedrock) kommuniziert, ohne öffentliche Internetverbindung.
+* *Kein KI-Training*: Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet. Amazon Bedrock verarbeitet Ereignisse in Echtzeit, trainiert aber nicht mit Ihren Daten. Ergebnisse werden nur in Ihrer Umgebung gespeichert.
 
-.Kein KI-Training
-Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet.  Amazon Bedrock verarbeitet Ereignisse in Echtzeit, trainiert aber nicht mit Ihren Daten.  Die Ergebnisse werden in Ihrer Umgebung nur zu Referenzzwecken gespeichert.  Weitere Einzelheiten finden Sie unterlink:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Amazon Bedrock-Datenschutzdokumentation"^] Die
+
+Weitere Einzelheiten finden Sie in der link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Amazon Bedrock-Datenschutzdokumentation"^].
 
 
 
 == Bevor Sie beginnen
 
-Um den Ereignisanalysator nutzen zu können, müssen Sie folgende Voraussetzungen erfüllen:
+Um den Ereignisanalysator zu verwenden, stellen Sie Folgendes sicher:
 
-* Du musstlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto, um Ereignisse für FSx for ONTAP -Dateisysteme anzuzeigen.
-* Für die EMS-Ereignisanalyse muss der folgende Port in der Sicherheitsgruppe, die dem FSx for ONTAP -Dateisystem zugeordnet ist, geöffnet sein.
-+
-** Port 22 (SSH)
+* Sie haben link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_Berechtigungen für Operationen und Fehlerbehebung_"^] in Ihrem AWS-Konto, um Ereignisse für FSx for ONTAP-Dateisysteme zu analysieren.
+* Port 22 (SSH) ist in der Sicherheitsgruppe geöffnet, die Ihrem FSx for ONTAP file system zugeordnet ist.
 
 
-* Du musstlink:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her."] den EMS-Ereignisanalysator verwenden.
-* Sie müssen außerdem die folgenden Anforderungen erfüllen.  Das System fordert Sie auf, diese Schritte durchzuführen, wenn Sie Protokollfehler analysieren.
+Zusätzliche Anforderungen (das System wird Sie während der Protokollfehleranalyse dazu auffordern):
+
+* *Amazon Bedrock-Modell*
 +
-** *Amazon Bedrock-Modell*
-+
-Der Ereignisanalysator nutzt Amazon Bedrock APIs, um KI-basierte Erkenntnisse für FSx for ONTAP -Ereignisse bereitzustellen. Konfigurieren Sie Amazon Bedrock für jedes AWS-Konto separat.
+Konfigurieren Sie die Amazon Bedrock APIs für jedes AWS-Konto. Amazon BedRock APIs werden verwendet, um Einblicke in FSx for ONTAP-Ereignisse zu gewinnen.
 
 +
-Empfohlenes Modell: Amazon Bedrock Model (anthropic.claude-sonnet-4-20250514-v1:0).  Sie müssen den Inferenzprofil-ARN für dieses Modell in der ausgewählten Region angeben.
+Empfohlenes Modell: `anthropic.claude-sonnet-4-20250514-v1:0`. Geben Sie den ARN des Inferenzprofils für Ihre ausgewählte Region an.
 
-** *Link zur Workload Factory*
+* *Link zur Workload Factory*
 +
-Sie müssen eine Verknüpfung zu einem FSx for ONTAP Dateisystem erstellen und zuordnen, um die KI-gestützte Ereignisanalyse zu ermöglichen.  Diese Verknüpfung stellt eine Vertrauensbeziehung zwischen Workload Factory und einem oder mehreren FSx for ONTAP -Dateisystemen her und nutzt AWS Lambda.
+Erstellen und verknüpfen Sie einen Link mit einem FSx for ONTAP-Dateisystem, um KI-gestützte Ereignisanalysen zu ermöglichen. Ein Link stellt eine Vertrauensbeziehung zwischen Workload Factory und einem oder mehreren FSx for ONTAP-Dateisystemen her und nutzt AWS Lambda.
 
 +
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
 
-** *AWS IAM-Berechtigungen*
+* *AWS IAM-Berechtigungen*
 +
-Sie müssen der mit der Workload Factory IAM-Rolle verknüpften Richtlinie die folgenden Berechtigungen hinzufügen.
+Fügen Sie der mit der Workload Factory IAM-Rolle verknüpften Richtlinie die folgenden Berechtigungen hinzu.
 
 +
-*** Berechtigungen: `bedrock:InvokeModel` Und `bedrock:InvokeModelWithResponseStream`
+** `bedrock:InvokeModel`
+** `bedrock:InvokeModelWithResponseStream`
 +
-Diese Berechtigungen ermöglichen es Workload Factory, Bedrock-Modelle für die proaktive Fehleranalyse und die Bereitstellung von Hinweisen zur Fehlerbehebung aufzurufen. Dieses Profil gewährleistet zudem einen sicheren KI-Zugriff für maßgeschneiderte Erkenntnisse.
+Diese Berechtigungen ermöglichen Workload Factory, Bedrock-Modelle zur Fehleruntersuchung und Anleitung zur Behebung aufzurufen. Dieses Profil gewährleistet außerdem sicheren KI-Zugriff für maßgeschneiderte Erkenntnisse.
 
-*** AWS-Anmeldeinformationen, die mit Workload Factory verknüpft sind: `bedrock:GetInferenceProfile` Und `bedrock:ListInferenceProfiles` Berechtigungen
++
+Fügen Sie außerdem die folgenden Berechtigungen für die mit Workload Factory verknüpften AWS credentials hinzu:
+
+** `bedrock:GetInferenceProfile`
+** `bedrock:ListInferenceProfiles`
 +
 Diese Berechtigungen bestätigen die Verfügbarkeit des Modells.
-
-
 
 
 
