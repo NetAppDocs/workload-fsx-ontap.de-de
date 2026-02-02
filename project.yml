@@ -51,8 +51,12 @@ sidebar:
         url: "/create-volume.html"
       - title: Zugriff auf Ihre Daten
         url: "/access-data.html"
-    - title: Erstellen Sie ein Blockgerät
-      url: "/create-block-device.html"
+    - title: Blockspeicherressourcen erstellen
+      entries:
+      - title: Erstellen Sie eine Initiatorgruppe
+        url: "/create-igroup.html"
+      - title: Erstellen Sie ein Blockgerät
+        url: "/create-block-device.html"
     - title: Erstellen einer Storage-VM
       url: "/create-storage-vm.html"
     - title: Sichern Sie Ihre Daten
@@ -127,8 +131,10 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: Löschen Sie ein Volume
         url: "/delete-volume.html"
-    - title: Blockgeräteverwaltung
+    - title: Blockspeicherverwaltung
       entries:
+      - title: Initiatorgruppen verwalten
+        url: "/manage-igroups.html"
       - title: Blockgeräte verwalten
         url: "/manage-block-devices.html"
     - title: Filesystem-Administration

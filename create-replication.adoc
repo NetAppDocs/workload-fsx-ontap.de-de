@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: create-replication.html 
-keywords: replication, replicate 
+keywords: replication, replicate, data protection, disaster recovery, data loss 
 summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisystem, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden. 
 ---
 = Erstellen einer Replikationsbeziehung in NetApp Workload Factory
@@ -11,27 +11,33 @@ summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisyst
 
 
 [role="lead"]
-Erstellen Sie eine Replikationsbeziehung für ein FSx für ONTAP -Dateisystem in NetApp Workload Factory, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden.
+Erstellen Sie eine Replikationsbeziehung für ein FSx for ONTAP-Dateisystem in NetApp Workload Factory, um Datenverlust im Falle eines unvorhergesehenen Ausfalls zu vermeiden. Die Replikation wird zwischen zwei FSx for ONTAP-Dateisystemen sowie zwischen Cloud Volumes ONTAP oder einem lokalen ONTAP System und einem FSx for ONTAP-Dateisystem unterstützt.
 
 .Über diese Aufgabe
-Die Replizierung ist eine zusätzliche Datensicherungsschicht, die im Falle eines Ausfalls der Region, in der Ihre Daten gespeichert sind, von wesentlicher Bedeutung ist. Durch regionsübergreifende Replizierung kann Datenverlust vermieden werden.
+Die Replikation bietet Schutz vor Datenverlust, falls die Region, in der sich Ihre Daten befinden, von einer Katastrophe betroffen ist.
 
-Dieser Vorgang erzeugt eine Replikationsbeziehung für ein oder alle Quell-Volumes in einem FSX für ONTAP-Dateisystem.
+Dieser Vorgang erstellt eine Replikationsbeziehung für Quell-Volumes in einem FSx for ONTAP Dateisystem, einem On-Premises ONTAP System oder Cloud Volumes ONTAP System.
 
 Replizierte Volumes im Zieldateisystem sind Datensicherungs-Volumes (DP) und folgen dem Namensformat: `{OriginalVolumeName}_copy`.
 
-Beim Replizieren eines Quellvolumes mit unveränderlichen Dateien werden das Zielvolume und das Dateisystem gesperrt, bis die Aufbewahrungsfrist der unveränderlichen Dateien im Quellvolume endet. Die Funktion für unveränderliche Dateien ist verfügbar, wenn Sie link:create-volume.html["Erstellen Sie ein Volume"] für ein FSx für ONTAP-Dateisystem.
+Wenn Sie ein Quell-Volume mit unveränderlichen Dateien replizieren, bleiben das Ziel-Volume und das Dateisystem gesperrt, bis die Aufbewahrungsfrist der unveränderlichen Dateien im Quell-Volume endet. Die Funktion für unveränderliche Dateien ist verfügbar, wenn Sie link:create-volume.html["Erstellen Sie ein Volume"] für ein FSx for ONTAP-Dateisystem.
 
+[NOTE]
+====
+* Die Replikation wird für Block-Volumes mit iSCSI- oder NVMe-Protokollen nicht unterstützt.
+* Sie können ein Quell-Volume (Lese-/Schreibvorgänge) oder ein Datensicherungs-Volume replizieren. Eine kaskadierende Replikation wird unterstützt, ein dritter Hop aber nicht. Erfahren Sie mehr über link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["Kaskadierende Replizierung"^].
+
+
+====
 .Bevor Sie beginnen
-Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie beginnen.
+Beachten Sie Folgendes, bevor Sie beginnen.
 
-* Um eine Replikationsbeziehung zu erstellen, müssen in Ihrem Speicher zwei verfügbare Dateisysteme vorhanden sein.
-* Den beiden Dateisystemen, die Sie für die Replikationsbeziehung verwenden, muss eine Verknüpfung zugeordnet sein. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Sie müssen über ein FSx for ONTAP-Dateisystem verfügen, das als Ziel in der Replikationsbeziehung verwendet wird.
+* Das FSx for ONTAP-Dateisystem, das Sie für die Replikationsbeziehung verwenden, muss über eine zugeordnete Verknüpfung verfügen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
+* Für die Datenreplizierung von einem lokalen ONTAP-System zu einem FSx for ONTAP-Dateisystem stellen Sie sicher, dass das lokale ONTAP-System erkannt wurde.
 
 
-Führen Sie die folgenden Schritte aus, um ausgewählte Volumes zu replizieren oder alle Volumes in einem Dateisystem zu replizieren.
-
-Sie können ein Quell-Volume (Lese-/Schreibvorgänge) oder ein Datensicherungs-Volume replizieren. Eine kaskadierende Replikation wird unterstützt, ein dritter Hop aber nicht. Erfahren Sie mehr über link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["Kaskadierende Replizierung"^].
+Führen Sie diese Schritte aus, um bestimmte oder alle Volumes in einem Dateisystem zu replizieren.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -49,9 +55,6 @@ Wählen Sie in der Tabelle Volumes ein oder mehrere Volumes aus und wählen Sie 
 
 . Geben Sie auf der Seite Daten replizieren unter Replikationsziel Folgendes an:
 +
-.. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
-.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
-.. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
 .. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus.  Abhängig vom ausgewählten Anwendungsfall füllt Workload Factory das Formular gemäß Best Practices mit empfohlenen Werten aus.  Sie können die empfohlenen Werte akzeptieren oder beim Ausfüllen des Formulars Änderungen vornehmen.
 +
 *** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
@@ -76,6 +79,9 @@ Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die sta
 
 
 
+.. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
+.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
+.. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
 +
 _Ausgeglichen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes mit der Workload Factory-Konsole.  Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie unterlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der AWS FSx für NetApp ONTAP -Dokumentation.  Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx für ONTAP -Tiering-Richtliniennamen in Klammern einschließt.
@@ -114,6 +120,16 @@ NOTE: Zur langfristigen Aufbewahrung sind passende Quell- und Zieletiketten erfo
 *** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
 
 
+.. *S3-Zugriffspunkt*: Optional kann ein S3-Zugriffspunkt angehängt werden, um über AWS S3-APIs auf FSx for ONTAP -Dateisystemdaten zuzugreifen, die sich auf NFS- oder SMB/CIFS-Volumes befinden. Es wird nur der Dateizugriffstyp unterstützt. Bitte geben Sie folgende Details an:
++
+*** *Name des S3-Zugangspunkts*: Geben Sie den Namen des S3-Zugangspunkts ein.
+*** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.
+*** *Benutzertyp*: Wählen Sie als Benutzertyp *UNIX* oder *Windows* aus.
+*** *Netzwerkkonfiguration*: Wählen Sie *Internet* oder *Virtual private cloud (VPC)*. Der von Ihnen gewählte Netzwerktyp bestimmt, ob der Zugangspunkt aus dem Internet erreichbar ist oder auf eine bestimmte VPC beschränkt ist.
+*** *Metadaten aktivieren*: Durch die Aktivierung von Metadaten wird eine S3-Tabelle erstellt, die alle über den S3-Zugangspunkt zugänglichen Objekte enthält, die Sie für Audits, Governance, Automatisierung, Analyse und Optimierung verwenden können. Die Aktivierung von Metadaten verursacht zusätzliche AWS-Kosten. Weitere Informationen finden Sie unter link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^].
+
+
+.. *S3 access point tags*: Optional können Sie bis zu 50 Tags hinzufügen.
 
 
 

@@ -156,8 +156,11 @@ Füllen Sie die folgenden Felder aus, um den Blockzugriff auf das Volume einzuri
 *** *Name des S3-Zugangspunkts*: Geben Sie den Namen des S3-Zugangspunkts ein.
 *** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.
 *** *Benutzertyp*: Wählen Sie als Benutzertyp *UNIX* oder *Windows* aus.
+*** *Netzwerkkonfiguration*: Wählen Sie *Internet* oder *Virtual private cloud (VPC)*. Der von Ihnen gewählte Netzwerktyp bestimmt, ob der Zugangspunkt aus dem Internet erreichbar ist oder auf eine bestimmte VPC beschränkt ist.
+*** *Metadaten aktivieren*: Durch die Aktivierung von Metadaten wird eine S3-Tabelle erstellt, die alle über den S3-Zugangspunkt zugänglichen Objekte enthält, die Sie für Audits, Governance, Automatisierung, Analyse und Optimierung verwenden können. Die Aktivierung von Metadaten verursacht zusätzliche AWS-Kosten. Weitere Informationen finden Sie unter link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^].
 
 
+.. *S3 access point tags*: Optional können Sie bis zu 50 Tags hinzufügen oder entfernen.
 
 
 . Geben Sie unter Effizienz und Sicherung folgende Informationen an:

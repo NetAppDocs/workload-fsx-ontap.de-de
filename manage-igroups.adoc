@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: manage-igroups.html 
+keywords: igroup, manage igroups, manage client access, delete igroup 
+summary: Verwalten von Initiatorgruppen für ein FSx for ONTAP-Dateisystem in NetApp Workload Factory. 
+---
+= Verwalten der Initiatorgruppen für ein Dateisystem in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verwenden Sie die NetApp Workload Factory-Konsole, um Initiatorgruppen zu verwalten und den Clientzugriff auf FSx for ONTAP-Blockgeräte zu steuern. Sie können Initiatorgruppen-Details anzeigen, den Clientzugriff verwalten und Initiatorgruppen löschen.
+
+.Bevor Sie beginnen
+* Sie müssen eine Verknüpfung herstellen, um Initiatorgruppen zu verwalten. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
+* Sie müssen über eine bestehende Initiatorgruppe verfügen, um sie anzeigen und verwalten zu können.
+
+
+
+
+== Clientzugriff für eine Initiatorgruppe verwalten
+
+Sie können den Clientzugriff für eine bestehende Initiatorgruppe jederzeit verwalten.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Wählen Sie den Ressourcentyp *Initiator groups (igroups)* aus, um vorhandene Initiatorgruppen anzuzeigen.
+. Gehen Sie zum Aktionsmenü für das Blockgerät und wählen Sie *Clientzugriff verwalten*.
+. Überprüfen Sie die für die Initiatorgruppe angezeigten Client-Zugriffsdetails.
+. Um Änderungen am Clientzugriff vorzunehmen, wählen Sie *Clientzugriff bearbeiten*.
+. Im Dialogfeld *Clientzugriff bearbeiten* können Sie Folgendes bearbeiten:
++
+** *Initiatorgruppenname*
+** *Initiatorgruppe Beschreibung*
+** *Name der Storage-VM*
+** *Name des Blockgeräts*
+** *Betriebssystemtyp*
+** *Host-Initiatoren*
+
+
+. Wählen Sie *Anwenden*.
+
+
+
+
+== Eine Initiatorgruppe löschen
+
+Sie können eine bestehende Initiatorgruppe löschen, wenn sie nicht mehr benötigt wird.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Wählen Sie den Ressourcentyp *Initiator groups (igroups)* aus, um vorhandene Initiatorgruppen anzuzeigen.
+. Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Initiatorgruppe löschen*.
+. Geben Sie im Dialogfeld „Initiatorgruppe (igroup) löschen“ „delete“ ein, um zu bestätigen, dass Sie die Initiatorgruppe löschen möchten, und wählen Sie dann *Löschen* aus.
+
+
+
+
+== Ähnliche Informationen
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["Erstellen einer Initiatorgruppe für ein FSx for ONTAP file system"]
