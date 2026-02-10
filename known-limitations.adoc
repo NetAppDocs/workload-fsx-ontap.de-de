@@ -72,7 +72,6 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 == ISCSI-Protokoll unterstützt
 
 * Das iSCSI-Protokoll ist nur für FlexVol-Volumes verfügbar. ^1^
-* Es kann nur eine einzelne LUN pro Volume konfiguriert werden.
 * Die Verkleinerung von Volumes wird für iSCSI-Volumes nicht unterstützt.
 
 
@@ -107,12 +106,6 @@ Der Rechner für Storage-Einsparungen berechnet die Kosteneinsparungen für die 
 * Elastic Block Store (EBS): st1-, sc1- und Standard-Volume-Typen
 * Elastic File System (EFS): Bursting-Durchsatzmodus
 
-
-
-
-== System Manager
-
-System Manager unterstützt keine Links für FSX for ONTAP-Konnektivität.
 
 
 

@@ -19,7 +19,7 @@ Identifizieren und beheben Sie schnell FSx for ONTAP-Dateisystemprobleme mit dem
 
 Speicheradministratoren reagieren auf FSx for ONTAP EMS-Ereignisse oft erst nach Kundenbeschwerden oder durch die Pflege benutzerdefinierter Skripte und Alarme. Dieser reaktive Ansatz kann die Effizienz verringern, die Problemlösung verzögern und Ausfallzeiten erhöhen.
 
-Der Ereignisanalysator extrahiert automatisch Fehler-, Warn- und Notfall-EMS-Ereignisse aus FSx for ONTAP-Dateisystemen. Sie können diese Ereignisse durch link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verbindung zum Dateisystem über einen Link"] und durch link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_Anzeigen-, Planungs- und Analyse_-Berechtigungen erteilen"^] in Ihrem AWS-Konto einsehen. Ereignisse werden 72 Stunden lang angezeigt, bevor Entfernung.
+Der Ereignisanalysator extrahiert automatisch Fehler-, Warn- und Notfall-EMS-Ereignisse aus FSx for ONTAP-Dateisystemen. Sie können diese Ereignisse durch link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verbindung zum Dateisystem über einen Link"] und durch link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_Anzeigen-, Planungs- und Analyse_-Berechtigungen erteilen"^] in Ihrem AWS-Konto einsehen. Ereignisse werden 72 Stunden lang angezeigt, bevor sie entfernt werden.
 
 Mit der Amazon Bedrock-Integration verwendet Workload Factory KI, um Ereignisse zu analysieren und umsetzbare Erkenntnisse bereitzustellen, damit die Integrität und Leistung Ihrer FSx for ONTAP File Systems erhalten bleibt.
 
