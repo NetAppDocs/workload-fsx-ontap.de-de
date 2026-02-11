@@ -11,12 +11,12 @@ summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisyst
 
 
 [role="lead"]
-Erstellen Sie eine Replikationsbeziehung für ein FSx for ONTAP-Dateisystem in NetApp Workload Factory, um Datenverlust im Falle eines unvorhergesehenen Ausfalls zu vermeiden. Die Replikation wird zwischen zwei FSx for ONTAP-Dateisystemen sowie zwischen Cloud Volumes ONTAP oder einem lokalen ONTAP System und einem FSx for ONTAP-Dateisystem unterstützt.
+Erstellen Sie eine Replikationsbeziehung für ein FSx for ONTAP-Dateisystem in NetApp Workload Factory, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden. Die Replikation wird zwischen zwei FSx for ONTAP-Dateisystemen sowie zwischen einem lokalen ONTAP-System und einem FSx for ONTAP-Dateisystem unterstützt.
 
 .Über diese Aufgabe
-Die Replikation bietet Schutz vor Datenverlust, falls die Region, in der sich Ihre Daten befinden, von einer Katastrophe betroffen ist.
+Die Replikation schützt Ihre Daten, wenn eine Katastrophe Ihre Region betrifft.
 
-Dieser Vorgang erstellt eine Replikationsbeziehung für Quell-Volumes in einem FSx for ONTAP Dateisystem, einem On-Premises ONTAP System oder Cloud Volumes ONTAP System.
+Dieser Vorgang erstellt eine Replikationsbeziehung für Quellvolumes in einem FSx for ONTAP File System oder einem On-Premises ONTAP System.
 
 Replizierte Volumes im Zieldateisystem sind Datensicherungs-Volumes (DP) und folgen dem Namensformat: `{OriginalVolumeName}_copy`.
 
@@ -30,7 +30,7 @@ Wenn Sie ein Quell-Volume mit unveränderlichen Dateien replizieren, bleiben das
 
 ====
 .Bevor Sie beginnen
-Beachten Sie Folgendes, bevor Sie beginnen.
+Überprüfen Sie diese Anforderungen, bevor Sie beginnen.
 
 * Sie müssen über ein FSx for ONTAP-Dateisystem verfügen, das als Ziel in der Replikationsbeziehung verwendet wird.
 * Das FSx for ONTAP-Dateisystem, das Sie für die Replikationsbeziehung verwenden, muss über eine zugeordnete Verknüpfung verfügen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
