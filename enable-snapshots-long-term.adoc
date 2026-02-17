@@ -19,6 +19,9 @@ Die gleichen Schritte gelten für die Aktivierung und Bearbeitung von Snapshots 
 
 Wenn ein lokaler ONTAP Cluster als Ziel für die Replizierungsbeziehung dient, wird das Ändern von Snapshots für die langfristige Aufbewahrung nicht unterstützt.
 
+
+NOTE: Die Bearbeitung der Langzeitaufbewahrung ist beim Replizieren von Storage-VM-Daten und Konfigurationseinstellungen nicht möglich.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.

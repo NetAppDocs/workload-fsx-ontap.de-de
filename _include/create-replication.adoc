@@ -5,6 +5,9 @@
 . *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus.  Abhängig vom ausgewählten Anwendungsfall füllt Workload Factory das Formular gemäß Best Practices mit empfohlenen Werten aus.  Sie können die empfohlenen Werte akzeptieren oder beim Ausfüllen des Formulars Änderungen vornehmen.
 +
 ** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
++
+*Replikation der Speicher-VM-Konfiguration*: Optional können Sie auswählen, die Daten und Konfigurationseinstellungen einer einzelnen Speicher-VM zu replizieren. Wenn Sie Daten und Konfigurationseinstellungen gleichzeitig migrieren, stellen Sie sicher, dass die letzte Replikation für das Volume in den letzten 24 Stunden abgeschlossen wurde. Alle Volumes in derselben Speicher-VM müssen ausgewählt werden, um diese Funktion zu nutzen. Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
+
 ** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
 ** Disaster Recovery in kalten oder archivierten Daten:
 +

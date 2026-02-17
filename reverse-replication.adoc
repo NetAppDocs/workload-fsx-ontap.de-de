@@ -16,7 +16,7 @@ Kehren Sie eine Replikationsbeziehung in NetApp Workload Factory um, sodass das 
 Rückwärtsgänge werden für folgende Vorgänge unterstützt:
 
 * Zwei FSX für ONTAP-Dateisysteme
-* Ein FSX für ONTAP-Filesystem und ein On-Premises-ONTAP-Cluster
+* Ein FSx for ONTAP Dateisystem und ein lokales ONTAP System
 
 
 Nachdem Sie die Replikation beendet und Änderungen am Ziel-Volume vorgenommen haben, können Sie diese Änderungen zurück auf das Quell-Volume replizieren. Dieser Prozess ist in einem Disaster-Recovery-Szenario üblich, in dem Sie eine Weile auf dem Ziel-Volume arbeiten und die Rollen der Volumes wechseln möchten.
@@ -24,9 +24,15 @@ Nachdem Sie die Replikation beendet und Änderungen am Ziel-Volume vorgenommen h
 .Über diese Aufgabe
 Wenn Sie eine Replikation rückgängig machen und wieder aufnehmen, wechselt sie die Quell- und Zielrollen der Volumes, das Ziel-Volume wird das neue Quell-Volume und das Quell-Volume wird das neue Ziel-Volume. Bei der Umkehrung wird auch der Inhalt des neuen Ziel-Volume mit dem Inhalt des neuen Quell-Volume überschrieben. Wenn Sie eine Replikation zweimal umkehren, wird die ursprüngliche Replikationsrichtung neu erstellt.
 
+[]
+====
+HINWEIS:
 
-NOTE: Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierung des Quell-Volumes auf das ursprüngliche Quell-Volume geschrieben wurden, bleiben nicht erhalten.
+* Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierung des Quell-Volumes auf das ursprüngliche Quell-Volume geschrieben wurden, bleiben nicht erhalten.
+* Die umgekehrte Replikation ist beim Replizieren von Storage-VM-Daten und Konfigurationseinstellungen nicht verfügbar.
 
+
+====
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die aktuellen und zukünftigen Rollen Ihrer Quell- und Ziel-Volumes kennen, da Änderungen am neuen Ziel-Volume mit dem neuen Quell-Volume überschrieben werden. Bei unsachgemäßer Verwendung kann es zu unbeabsichtigten Datenverlusten kommen.
 

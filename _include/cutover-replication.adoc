@@ -1,0 +1,10 @@
+= 
+:allow-uri-read: 
+
+
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Dateisystem aus, das die Volume(s) enthält, die repliziert werden sollen.
+. Wählen Sie die Registerkarte *Replication relationships* aus.
+. Wählen Sie in der Tabelle Replication relationships die Replikationsbeziehung aus, die umgestellt werden soll, und wählen Sie dann *Cut over replication* aus.
+. Überprüfen Sie die Informationen im Dialogfeld Cut over replication und geben Sie dann _cut over_ ein, um zu bestätigen.
+
