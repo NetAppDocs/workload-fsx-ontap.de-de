@@ -54,7 +54,7 @@ Workload Factory unterstützt die Migrationsreplikation zwischen den folgenden S
 Um Storage-VM-Daten und Konfigurationseinstellungen zu migrieren, müssen Sie zwei Vorgänge abschließen.
 
 . <<Erstellen einer Replikationsbeziehung,Erstellen einer Replikationsbeziehung>>, wählen Sie *Migration* als Anwendungsfall und wählen Sie *Speicher-VM-Konfiguration replizieren* aus.
-. <<Cut over replication,Cutover-Replikation>> um Daten und Konfigurationseinstellungen dauerhaft vom Quelldateisystem auf das Ziel-FSx for ONTAP-Dateisystem zu migrieren.
+. <<Umstellung der Replikation für Migrationsanwendungsfälle,Umstellung der Replikation für Migrationsanwendungsfälle>> um Daten und Konfigurationseinstellungen dauerhaft vom Quelldateisystem auf das Ziel-FSx for ONTAP-Dateisystem zu migrieren.
 
 
 
