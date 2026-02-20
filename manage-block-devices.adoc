@@ -86,9 +86,9 @@ Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalt
 
 
 
-== Archivieren Sie die Daten eines verwaisten Blockgeräts
+== Archivieren Sie die Daten eines inaktiven Blockgeräts
 
-Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als verwaiste Blockgeräte klassifiziert. Sie können die Daten eines verwaisten Blockgeräts in die Kapazitätspoolebene archivieren, um SSD-Kapazität zurückzugewinnen.
+Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als inaktive Blockgeräte klassifiziert. Sie können die Daten eines inaktiven Blockgeräts in die Kapazitätspool-Ebene archivieren, um SSD-Kapazität zurückzugewinnen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -104,7 +104,7 @@ Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungen
 
 == Löschen eines Blockgeräts
 
-Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als verwaiste Blockgeräte klassifiziert. Dieser Vorgang hebt die Zuordnung des ausgewählten Blockgeräts auf und löscht es. Wenn das Host FlexVol volume keine Blockgeräte enthält, wird es von Workload Factory ebenfalls gelöscht.
+Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang nicht verwendet wurden, werden als inaktive Blockgeräte eingestuft. Durch diesen Vorgang wird das ausgewählte Blockgerät ausgehängt und gelöscht. Wenn das Host-FlexVol volume keine Blockgeräte enthält, wird es von Workload Factory ebenfalls gelöscht.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
