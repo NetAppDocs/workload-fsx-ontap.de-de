@@ -1,31 +1,95 @@
 ---
 sidebar: sidebar 
-permalink: manage-block-devices.html 
-keywords: block devices, manage luns, manage iscsi 
-summary: Blockgeräte für ein FSx for ONTAP -Dateisystem in NetApp Workload Factory verwalten. 
+permalink: manage-block-storage.html 
+keywords: block storage, manage block storage, igroups, block devices, client access, delete block device 
+summary: Blockspeicher für ein FSx for ONTAP-Dateisystem in NetApp Workload Factory verwalten. 
 ---
-= Verwalten der Blockgeräte für ein Dateisystem in NetApp Workload Factory
+= Blockspeicher für ein Dateisystem in NetApp Workload Factory verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Über die NetApp Workload Factory Konsole können Sie die Blockgeräte für Ihre FSx for ONTAP -Dateisysteme verwalten. Zu den Verwaltungsaufgaben gehören das Anzeigen von Blockgerätedetails, das Erhöhen der Kapazität, das Verwalten des Clientzugriffs, das Archivieren von Blockgerätedaten und das Löschen von Blockgeräten.
+Verwenden Sie NetApp Workload Factory, um die Verwaltung Ihrer Blockspeicherressourcen, einschließlich Initiatorgruppen und Blockgeräten, zu vereinfachen und den Clientzugriff auf FSx for ONTAP Blockgeräte zu steuern, um optimale Leistung zu erzielen und die Kosten zu minimieren.
 
 .Über diese Aufgabe
-Blockgeräte oder LUNs (logische Einheitennummern) sind Datenträger, die Dateisysteme in einer SAN-Umgebung enthalten und von Hosts über ein Netzwerk aufgerufen werden können.
+Über die Workload Factory-Konsole können Sie Initiatorgruppen (igroups) verwalten, um den Clientzugriff auf Blockgeräte zu steuern. Sie können außerdem Details zu Blockgeräten anzeigen, die Kapazität erhöhen, den Clientzugriff verwalten, Daten für inaktive Blockgeräte archivieren und Blockgeräte löschen.
+
+Prüfen Sie das Blockspeicherdiagramm, um Folgendes zu überprüfen:
+
+* Clientverbindungen
+* Blockgerätestatus
+* Knoten-Client-Beziehung
+* Möglicherweise fehlerhafte Clientverbindungen
+
+
+.Bevor Sie beginnen
+* Sie müssen eine Verknüpfung herstellen, um Initiatorgruppen zu verwalten. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
+* Sie müssen über eine vorhandene Initiatorgruppe oder ein Blockgerät verfügen, um sie anzuzeigen und zu verwalten.
+
+
+
+
+== Initiatorgruppen verwalten
+
+Sie können Initiatorgruppen-Details anzeigen, den Clientzugriff verwalten und Initiatorgruppen löschen.
+
+
+
+=== Clientzugriff für eine Initiatorgruppe verwalten
+
+Verwalten Sie den Clientzugriff für eine bestehende Initiatorgruppe jederzeit.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Wählen Sie den Ressourcentyp *Initiator groups (igroups)* aus, um vorhandene Initiatorgruppen anzuzeigen.
+. Gehen Sie zum Aktionsmenü für das Blockgerät und wählen Sie *Clientzugriff verwalten*.
+. Überprüfen Sie die für die Initiatorgruppe angezeigten Client-Zugriffsdetails.
+. Um Änderungen am Clientzugriff vorzunehmen, wählen Sie *Clientzugriff bearbeiten*.
+. Im Dialogfeld *Clientzugriff bearbeiten* können Sie Folgendes bearbeiten:
++
+** *Initiatorgruppenname*
+** *Initiatorgruppe Beschreibung*
+** *Name der Storage-VM*
+** *Name des Blockgeräts*
+** *Betriebssystemtyp*
+** *Host-Initiatoren*
+
+
+. Wählen Sie *Anwenden*.
+
+
+
+
+=== Eine Initiatorgruppe löschen
+
+Löschen Sie eine Initiatorgruppe, wenn sie nicht mehr benötigt wird.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Wählen Sie den Ressourcentyp *Initiator groups (igroups)* aus, um vorhandene Initiatorgruppen anzuzeigen.
+. Gehen Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Initiatorgruppe löschen*.
+. Geben Sie im Dialogfeld „Initiatorgruppe (igroup) löschen“ „delete“ ein, um zu bestätigen, dass Sie die Initiatorgruppe löschen möchten, und wählen Sie dann *Löschen* aus.
+
+
+
+
+== Blockgeräte für eine Initiatorgruppe verwalten
+
+Blockgeräte oder LUNs (logische Einheitennummern) sind Volumes mit Dateisystemen in einer SAN-Umgebung, die über ein Netzwerk für Hosts zugänglich sind.
 
 Sie können Blockgeräte für FSx for ONTAP -Dateisysteme verwalten, die das iSCSI-Protokoll verwenden.
 
-.Bevor Sie beginnen
-* Sie müssen einen Link zur Verwaltung von Blockgeräten verknüpfen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."].  Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
-* Sie benötigen ein vorhandenes Blockgerät, um es anzuzeigen und zu verwalten.
 
 
-
-
-== Details zum Blockgerät anzeigen
+=== Details zum Blockgerät anzeigen
 
 Die Details eines bestehenden Blockgeräts können jederzeit eingesehen werden.
 
@@ -42,7 +106,7 @@ Es werden allgemeine Details, Verbrauchs-, Zugriffs- und Schutzinformationen fü
 
 
 
-== Erhöhen Sie die Kapazität eines Blockgeräts
+=== Erhöhen Sie die Kapazität eines Blockgeräts
 
 Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
 
@@ -57,11 +121,11 @@ Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
 
 
 
-NOTE: Nachdem Sie die Größe des Blockgeräts erhöht haben, befolgen Sie die Anweisungen Ihres Host-Betriebssystems, um die neue Größe des Blockgeräts zu ermitteln und das darauf befindliche Dateisystem zu erweitern.
+NOTE: Nach der Vergrößerung des Blockgeräts befolgen Sie die Vorgehensweise Ihres Host-Betriebssystems, um die neue Größe zu ermitteln und das Dateisystem zu erweitern.
 
 
 
-== Clientzugriff für ein Blockgerät verwalten
+=== Clientzugriff für ein Blockgerät verwalten
 
 Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalten, indem Sie igroups erstellen und Blockgeräte sowie Host-Initiatoren hinzufügen oder entfernen.
 
@@ -86,7 +150,7 @@ Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalt
 
 
 
-== Archivieren Sie die Daten eines inaktiven Blockgeräts
+=== Archivieren Sie die Daten eines inaktiven Blockgeräts
 
 Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als inaktive Blockgeräte klassifiziert. Sie können die Daten eines inaktiven Blockgeräts in die Kapazitätspool-Ebene archivieren, um SSD-Kapazität zurückzugewinnen.
 
@@ -102,9 +166,9 @@ Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungen
 
 
 
-== Löschen eines Blockgeräts
+=== Löschen eines Blockgeräts
 
-Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang nicht verwendet wurden, werden als inaktive Blockgeräte eingestuft. Durch diesen Vorgang wird das ausgewählte Blockgerät ausgehängt und gelöscht. Wenn das Host-FlexVol volume keine Blockgeräte enthält, wird es von Workload Factory ebenfalls gelöscht.
+Blockgeräte, die keinem Client zugeordnet sind oder sieben Tage lang nicht verwendet wurden, sind inaktive Blockgeräte. Durch diesen Vorgang wird die Zuordnung des ausgewählten Blockgeräts aufgehoben und es gelöscht. Wenn das Host-FlexVol-Volume keine Blockgeräte enthält, wird es von Workload Factory gelöscht.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -120,4 +184,6 @@ Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang nicht
 
 == Ähnliche Informationen
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Erstellen eines Blockgeräts für ein FSx for ONTAP -Dateisystem"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["Erstellen einer Initiatorgruppe für ein FSx for ONTAP file system"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Erstellen eines Blockgeräts für ein FSx for ONTAP -Dateisystem"]
+

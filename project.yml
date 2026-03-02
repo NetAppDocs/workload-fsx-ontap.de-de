@@ -133,16 +133,14 @@ sidebar:
         url: "/delete-volume.html"
     - title: Blockspeicherverwaltung
       entries:
-      - title: Initiatorgruppen verwalten
-        url: "/manage-igroups.html"
-      - title: Blockgeräte verwalten
-        url: "/manage-block-devices.html"
+      - title: Blockspeicher verwalten
+        url: "/manage-block-storage.html"
     - title: Filesystem-Administration
       entries:
-      - title: Passen Sie die Dateisystemkapazität an
+      - title: Dateisystemkapazität manuell anpassen
         url: "/increase-file-system-capacity.html"
-      - title: Automatische Kapazitäts- und Inode-Verwaltung aktivieren
-        url: "/enable-auto-capacity-management.html"
+      - title: Dateisystemkapazität automatisch verwalten
+        url: "/manage-capacity-automatically.html"
       - title: Dateisystem-Tags verwalten
         url: "/manage-fsx-tags.html"
       - title: Fsxadmin-Kennwort zurücksetzen

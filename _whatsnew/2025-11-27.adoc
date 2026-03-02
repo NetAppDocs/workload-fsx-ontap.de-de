@@ -8,7 +8,7 @@
 
 Verwalten Sie Ihre Blockgeräte effektiver mit der neu eingeführten Blockgeräteunterstützung in NetApp Workload Factory.  Diese Funktion ermöglicht es Ihnen, Details anzuzeigen und die Kapazität von iSCSI-LUNs zu erhöhen, wodurch Sie mehr Flexibilität für Ihre Speicheranforderungen erhalten.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html["Blockgeräte in Workload Factory verwalten"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["Blockgeräte in Workload Factory verwalten"]
 
 
 

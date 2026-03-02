@@ -4,7 +4,7 @@ permalink: increase-file-system-capacity.html
 keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
 summary: Passen Sie die SSD-Speicherkapazität eines FSx for ONTAP -Dateisystems manuell an, um die Anforderungen Ihrer projektbasierten Workloads mit unterschiedlichen aktiven Arbeitssätzen zu erfüllen. 
 ---
-= Passen Sie die Dateisystemkapazität in Workload Factory an
+= Dateisystemkapazität in NetApp Workload Factory manuell anpassen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -13,9 +13,9 @@ summary: Passen Sie die SSD-Speicherkapazität eines FSx for ONTAP -Dateisystems
 [role="lead"]
 Passen Sie die Speicherkapazität des Solid-State-Laufwerks (SSD) eines FSx for ONTAP Dateisystems manuell an, um die Anforderungen Ihrer projektbasierten Workloads mit unterschiedlichen aktiven Arbeitssätzen zu erfüllen.
 
-Erhöhen Sie die SSD-Speicherkapazität eines FSx for ONTAP -Dateisystems, wenn die Menge der verwendeten SSD-Speicherkapazität einen von Ihnen angegebenen Schwellenwert überschreitet, oder verringern Sie die SSD-Speicherkapazität, wenn Arbeitssätze inaktiv sind, um die Kosteneffizienz zu verbessern.
+Erhöhen Sie die SSD-Speicherkapazität, wenn die Nutzung den von Ihnen festgelegten Schwellenwert überschreitet. Reduzieren Sie die SSD-Speicherkapazität, wenn Sie die Arbeitssätze nicht verwenden, um Geld zu sparen.
 
-Alternativ können Sielink:enable-auto-capacity-management.html["Aktivieren Sie die automatische Kapazitätsverwaltungsfunktion"] Daher verwaltet Workload Factory die Dateisystemkapazität für Sie.
+Alternativ können Sie link:manage-capacity-automatically.html["automatisches Kapazitätsmanagement aktivieren"], sodass NetApp Workload Factory die Dateisystemkapazität für Sie verwaltet.
 
 
 NOTE: Die Verringerung der SSD-Speicherkapazität wird nur für Dateisysteme der zweiten Generation unterstützt.
@@ -23,7 +23,7 @@ NOTE: Die Verringerung der SSD-Speicherkapazität wird nur für Dateisysteme der
 .Über diese Aufgabe
 Mit der elastischen Dateisystemkapazität können Sie die Kapazität Ihrer Dateisysteme dynamisch an die Anforderungen Ihrer Arbeitslasten anpassen.
 
-Das Anpassen der Dateisystemkapazität wirkt sich auf die IOPS Ihres FSx for ONTAP Dateisystems aus.
+Eine Änderung der Dateisystemkapazität wirkt sich auf die IOPS Ihres FSx for ONTAP file system aus.
 
 Wenn Sie automatischlink:provision-iops.html["Bereitstellung von IOPS"] Bei einem Dateisystem erhöhen oder verringern sich die IOPS um 3 IOPS, wenn die SSD-Kapazität um 1 GiB erhöht oder verringert wird.
 
@@ -32,7 +32,7 @@ Wenn Sie link:provision-iops.html["Bereitstellung von IOPS"] manuell arbeiten, m
 Weitere Informationen zu SSD-Storage-Kapazitätsbeschränkungen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] in der Dokumentation zu AWS FSX für NetApp ONTAP.
 
 .Bevor Sie beginnen
-Um die Kapazität eines Dateisystems anzupassen, müssen Sie zunächstlink:enable-auto-capacity-management.html["Deaktivieren Sie das automatische Kapazitätsmanagement"] .
+Um die Kapazität eines Dateisystems anzupassen, müssen Sie zuerst link:manage-capacity-automatically.html["Deaktivieren Sie das automatische Kapazitätsmanagement"].
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

@@ -4,6 +4,7 @@
 
 . *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus.  Abhängig vom ausgewählten Anwendungsfall füllt Workload Factory das Formular gemäß Best Practices mit empfohlenen Werten aus.  Sie können die empfohlenen Werte akzeptieren oder beim Ausfüllen des Formulars Änderungen vornehmen.
 +
+** Künstliche Intelligenz (KI) und maschinelles Lernen (ML): Replizieren Sie Ihre lokalen ONTAP-Daten zu FSx for ONTAP und erstellen Sie S3-Zugriffspunkte, um das Training von KI und ML in der Cloud zu unterstützen
 ** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
 +
 *Replikation der Speicher-VM-Konfiguration*: Optional können Sie auswählen, die Daten und Konfigurationseinstellungen einer einzelnen Speicher-VM zu replizieren. Wenn Sie Daten und Konfigurationseinstellungen gleichzeitig migrieren, stellen Sie sicher, dass die letzte Replikation für das Volume in den letzten 24 Stunden abgeschlossen wurde. Alle Volumes in derselben Speicher-VM müssen ausgewählt werden, um diese Funktion zu nutzen. Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
@@ -72,7 +73,7 @@ NOTE: Zur langfristigen Aufbewahrung sind passende Quell- und Zieletiketten erfo
 ** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.
 ** *Benutzertyp*: Wählen Sie als Benutzertyp *UNIX* oder *Windows* aus.
 ** *Netzwerkkonfiguration*: Wählen Sie *Internet* oder *Virtual private cloud (VPC)*. Der von Ihnen gewählte Netzwerktyp bestimmt, ob der Zugangspunkt aus dem Internet erreichbar ist oder auf eine bestimmte VPC beschränkt ist.
-** *Metadaten aktivieren*: Durch die Aktivierung von Metadaten wird eine S3-Tabelle erstellt, die alle über den S3-Zugangspunkt zugänglichen Objekte enthält, die Sie für Audits, Governance, Automatisierung, Analyse und Optimierung verwenden können. Die Aktivierung von Metadaten verursacht zusätzliche AWS-Kosten. Weitere Informationen finden Sie unter link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^].
+** *Inventartabelle aktivieren*: Wenn Sie die Inventartabelle für das Volume aktivieren, generiert das System Metadaten für alle Objekte, die über den S3-Zugriffspunkt zugänglich sind, und es fallen AWS S3-Anfragekosten an. Weitere Informationen finden Sie unter link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^].
 
 
 . *S3 access point tags*: Optional können Sie bis zu 50 Tags hinzufügen.

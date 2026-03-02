@@ -32,10 +32,10 @@ Da die Anforderungen an Speicherkonfigurationen unterschiedlich sind, können Si
 .Was analysiert wird
 Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
 
-* Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, FSx für ONTAP Backups, Remote-Datenreplikation und Datenzuverlässigkeit für die langfristige Aufbewahrung
+* Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, geplante Volume-Backups, Remote Datenreplizierung und Datenzuverlässigkeit für die Langzeitaufbewahrung
 * Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI) deaktiviert und unberechtigter Zugriff auf Volumes
 * Operative Exzellenz: automatisches Kapazitätsmanagement, Schwellenwert für die Kapazitätsauslastung von Volume-Dateien, nahezu vollständige Volume-Auslastung, Schreibmodus für Cache-Beziehungen, Optimierung der Cache-Volume-Größe und Berichterstattung über die logische Volume-Kapazität
-* Kostenoptimierung: Speichereffizienzen, Daten-Tiering, unnötiges Löschen von Snapshots und Backups sowie inaktive Blockgeräte
+* Kostenoptimierung: Speichereffizienzen, Daten-Tiering, unnötiges Löschen von Snapshots und Backups, inaktive Blockgeräte und ungenutzte SSD-Kapazität
 
 
 

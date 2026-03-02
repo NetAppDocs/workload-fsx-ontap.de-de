@@ -41,4 +41,4 @@ Sie müssen eine Verknüpfung herstellen, um Initiatorgruppen zu erstellen. link
 
 
 .Ähnliche Informationen
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html["Verwalten der Initiatorgruppen für ein FSx for ONTAP-Dateisystem"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["Verwalten des Blockspeichers für ein FSx for ONTAP file system"]

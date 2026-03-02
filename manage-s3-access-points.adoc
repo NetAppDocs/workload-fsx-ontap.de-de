@@ -14,13 +14,13 @@ summary: Verwalten Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload 
 Verwalten Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory. Sie können die Workload Factory-Konsole verwenden, um vorhandenen Volumes S3-Zugriffspunkte zuzuweisen, Details zu Ihren S3-Buckets anzuzeigen, Änderungen an vorhandenen Zugriffspunkten vorzunehmen oder S3-Zugriffspunkte zu löschen.
 
 .Über diese Aufgabe
-Amazon FSx for NetApp ONTAP unterstützt S3-Datenzugriff auf NFS- und SMB-Dateisysteme und ermöglicht deren Integration mit Dutzenden von S3-basierten AWS-Services wie Amazon Bedrock, SageMaker, Athena, AWS Glue und mehr. Sie können AWS-Services mit all Ihren Objektspeicherdaten verbinden.
+Amazon FSx for NetApp ONTAP ermöglicht NFS- und SMB-Dateisystemen den Zugriff auf S3-Daten und die Anbindung an AWS-Services wie Amazon Bedrock, SageMaker, Athena, AWS Glue und mehr. Sie können AWS-Services mit all Ihren Objektspeicherdaten verbinden.
 
-Durch das Einbinden von S3-Zugriffspunkten in NFS- und SMB-Volumes eines FSx for ONTAP-Dateisystems können die in diesen Volumes gespeicherten Dateien von allen AWS-Services so abgerufen werden, als befänden sie sich in einem S3-Bucket. Beim Einbinden des Zugriffspunkts definieren Sie dessen eindeutige ID, geben den Dateizugriffstyp (UNIX oder Windows) an und fügen einen Benutzernamen zur Autorisierung von Dateizugriffsanfragen durch den Zugriffspunkt hinzu.
+Binden Sie S3-Zugriffspunkte an NFS- und SMB-Volumes in einem FSx for ONTAP-Dateisystem an, damit AWS-Services auf Dateien zugreifen können, als befänden sie sich in einem S3-Bucket. Definieren Sie beim Anbinden des Zugriffspunkts eine eindeutige ID, wählen Sie den Dateizugriffstyp (UNIX oder Windows) aus und fügen Sie einen Benutzernamen für die Zugriffsberechtigung hinzu.
 
-Nachdem der S3-Zugriffspunkt eingebunden wurde, erscheint er in der AWS Management Console und verfügt über einen eindeutigen Zugriffspunktalias. Dieser Alias wird als S3-Bucket-Name für die AWS-Services verwendet, mit denen Sie eine Verbindung herstellen möchten. Beispielsweise können Sie den Alias einer Amazon Bedrock knowledge base zuweisen, und diese verwendet dann die Dateien im FSx for ONTAP-Volume, um kontextbezogene Antworten auf Anfragen zu liefern.
+Nachdem Sie den S3-Zugriffspunkt eingebunden haben, wird er in der AWS Management Console mit einem eindeutigen Alias angezeigt. Verwenden Sie diesen Alias als S3-Bucket-Namen für AWS Services, wie Amazon Bedrock, um auf Dateien im FSx for ONTAP Volume zuzugreifen.
 
-Sie können mehrere S3-Zugriffspunkte an ein einzelnes FSx for ONTAP Volume anhängen, jeder mit seiner eigenen eindeutigen Zugangsstufe, sodass Sie eine Verbindung zu so vielen AWS-Services herstellen können, wie erforderlich.
+Sie können mehrere S3-Zugriffspunkte an ein einzelnes FSx for ONTAP volume anhängen, jeder mit einer eindeutigen Zugangsstufe, um eine Verbindung zu mehreren AWS Services herzustellen.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
@@ -41,14 +41,18 @@ Erstellen und verknüpfen Sie S3-Zugriffspunkte mit einem vorhandenen Volume in 
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Dateisystem mit dem zu aktualisierenden Volume aus.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie die S3-Zugriffspunkte verwalten möchten, und wählen Sie dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Wählen Sie auf der Registerkarte Volumes das Aktionsmenü für das Volume aus, für das Sie die S3 access points verwalten möchten, und wählen Sie dann *Advanced actions* und anschließend *Manage S3 access points*.
 . Wählen Sie *S3-Zugriffspunkt erstellen und anhängen*.
 . Geben Sie im Dialogfeld *S3-Zugriffspunkt erstellen und verbinden* die folgenden Informationen an:
 +
 ** *Name des S3-Zugangspunkts*: Geben Sie den Namen des S3-Zugangspunkts ein.
 ** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.
 ** *Benutzertyp*: Wählen Sie als Benutzertyp *UNIX* oder *Windows* aus.
-** *Metadatenkatalog aktivieren*: Wählen Sie diese Option, um Metadaten auf dem Volume zu aktivieren und so ein Metadateninventar für alle Objekte zu generieren, auf die der S3-Zugriffspunkt zugreifen kann. Für diese Funktion fallen AWS-Kosten für S3-Anfragen an.
+** *Inventartabelle aktivieren*: Wenn Sie die Inventartabelle für das Volume aktivieren, generiert das System Metadaten für alle Objekte, die über den S3-Zugriffspunkt zugänglich sind, und es fallen AWS S3-Anfragekosten an. Weitere Informationen finden Sie unter link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^].
++
+... *S3 access point tags*: Optional können Sie bis zu 50 Tags hinzufügen oder entfernen.
+
+
 
 
 . Wählen Sie *Erstellen und anhängen*.
@@ -58,17 +62,17 @@ Erstellen und verknüpfen Sie S3-Zugriffspunkte mit einem vorhandenen Volume in 
 
 == Details anzeigen
 
-Alias, ARN und S3 URI sind verfügbare Zugriffspunktdetails, ohne dass Metadaten aktiviert sind.
+Sie können den Alias, den ARN und den S3 URI als Zugriffspunktdetails anzeigen, wenn die Inventartabelle nicht aktiviert ist.
 
-Wenn Metadaten für das Volume aktiviert sind, können Sie Zugriffspunkt-, Inventartabellen- und Tabellen-Bucket-Details der vorhandenen S3-Zugriffspunkte anzeigen, die mit dem Volume verbunden sind. Ein Link zur Inventartabelle in der AWS Management Console wird ebenfalls bereitgestellt.
+Wenn die Inventartabelle für das Volume aktiviert ist, können Sie Zugriffspunkt-, Inventartabellen- und Bucket-Details der vorhandenen S3-Zugriffspunkte anzeigen, die mit dem Volume verbunden sind. Das System stellt außerdem einen Link zur Inventartabelle in der AWS Management Console bereit.
 
-Zugangspunktdetails sind kopierbar und können in anderen Anwendungen verwendet werden.
+Sie können die Zugangspunktdetails kopieren, um sie in anderen Anwendungen zu verwenden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie S3-Zugriffspunkte verwalten möchten, dann wählen Sie *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie die S3-Zugriffspunkte verwalten möchten, und wählen Sie dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
 . Wählen Sie auf dem Bildschirm *S3-Zugriffspunkte verwalten* das Menü Aktionen und dann *Details anzeigen*.
@@ -86,7 +90,7 @@ Zugangspunktdetails sind kopierbar und können in anderen Anwendungen verwendet 
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie die S3-Zugriffspunkte verwalten möchten, und wählen Sie dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie S3-Zugriffspunkte verwalten möchten, dann wählen Sie *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
 . Wählen Sie auf dem Bildschirm *S3-Zugriffspunkte verwalten* das Menü Aktionen und dann *Zugriffspunkt bearbeiten* aus.
 . Nehmen Sie Aktualisierungen vor und wählen Sie dann *Anwenden*.
 
@@ -103,7 +107,7 @@ Fügen Sie Tags zu einem vorhandenen S3-Zugriffspunkt hinzu oder entfernen Sie s
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie die S3-Zugriffspunkte verwalten möchten, und wählen Sie dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie S3-Zugriffspunkte verwalten möchten, dann wählen Sie *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
 . Wählen Sie auf dem Bildschirm *S3-Zugriffspunkte verwalten* das Aktionsmenü und dann *Tags verwalten* aus.
 . Im Dialogfeld „S3-Zugriffspunkt-Tags verwalten“ können Sie bis zu 50 Tags hinzufügen oder Tags für den S3-Zugriffspunkt entfernen.
 . Wählen Sie *Anwenden*.
@@ -121,7 +125,10 @@ Löschen Sie vorhandene S3-Zugriffspunkte von einem Volume in NetApp Workload Fa
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie die S3-Zugriffspunkte verwalten möchten, und wählen Sie dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
-. Wählen Sie im Aktionsmenü den S3-Zugriffspunkt zum Löschen aus und wählen Sie dann *Trennen*.
-. Im Dialogfeld *S3-Zugriffspunkt trennen und entfernen* wählen Sie *Trennen und entfernen*, um den S3-Zugriffspunkt vom Volume zu löschen.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie S3-Zugriffspunkte verwalten möchten, dann wählen Sie *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Wählen Sie das Aktionsmenü für den S3-Zugriffspunkt, den Sie löschen möchten, und wählen Sie dann *Löschen*.
+. Im Dialogfeld *S3-Zugriffspunkt löschen* wählen Sie *Löschen*, um den S3-Zugriffspunkt vom Volume zu löschen.
++
+Die Workload Factory-Konsole entfernt keine Metadaten, aber Sie können sie über die AWS Management Console entfernen.
+
 
