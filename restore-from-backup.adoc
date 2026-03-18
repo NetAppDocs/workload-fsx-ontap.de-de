@@ -22,7 +22,7 @@ Workload Factory legt fest, ob Sie über genügend Kapazität für die Wiederher
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume aus, das aus einer Sicherung wiederhergestellt werden soll.
-. Wählen Sie *Data Protection Actions*, *FSX for ONTAP Backup* und dann *Restore from a Backup*.
+. Wählen Sie *Data protection actions*, *Volume backups* und anschließend *Restore from a backup*.
 . Geben Sie im Dialogfeld Wiederherstellen von einem Backup Folgendes an:
 +
 .. *Zieldateisystem*: Wählen Sie das Zieldateisystem aus dem Dropdown-Menü aus.

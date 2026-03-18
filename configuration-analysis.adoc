@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: NetApp Workload Factory analysiert regelmäßig die Dateisystemkonfigurationen von Amazon FSx for NetApp ONTAP, um festzustellen, ob Probleme vorliegen. 
+summary: NetApp Workload Factory analysiert Amazon FSx for NetApp ONTAP-Dateisystemkonfigurationen regelmäßig, um festzustellen, ob Konfigurationsprobleme vorliegen. 
 ---
 = Konfigurationsanalyse für FSX für ONTAP-Dateisysteme
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: NetApp Workload Factory analysiert regelmäßig die Dateisystemkonfigur
 
 
 [role="lead"]
-NetApp Workload Factory analysiert regelmäßig die Dateisystemkonfigurationen von Amazon FSx for NetApp ONTAP, um festzustellen, ob Probleme vorliegen.  Wenn Probleme gefunden werden, zeigt Ihnen Workload Factory, um welche Probleme es sich handelt, und erklärt, was geändert werden muss, um sicherzustellen, dass Ihr Dateisystemspeicher Spitzenleistung, Kosteneffizienz und die Einhaltung bewährter Methoden erreicht.
+NetApp Workload Factory analysiert Amazon FSx for NetApp ONTAP-Dateisystemkonfigurationen regelmäßig, um festzustellen, ob Konfigurationsprobleme vorliegen. Werden Probleme gefunden, zeigt Workload Factory an, worin die Probleme bestehen, und erklärt, was geändert werden muss, damit Ihr Dateisystemspeicher optimale Leistung, Kosteneffizienz und die Einhaltung bewährter Verfahren erreicht.
 
 Die wichtigsten Funktionen:
 
@@ -24,23 +24,19 @@ Die wichtigsten Funktionen:
 
 
 
-== Zustand der Architektur gut
+== So funktioniert es
 
-In der Workload Factory-Konsole wird auf Dateisystemebene der Status „Well-Architected“ für alle FSx for ONTAP -Dateisysteme aufgelistet.  Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut konzipiert“ kategorisiert.  Wenn Sie den Status „Well-Architected“ auswählen, werden Sie zur Registerkarte „Well-Architected-Status“ im Dateisystem weitergeleitet, wo Sie die Well-Architected-Bewertung, Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden.
+Workload Factory analysiert täglich Ihre Workloads, die auf Amazon FSx for NetApp ONTAP-Dateisystembereitstellungen laufen. Die Analyse liefert well-architected Status, Erkenntnisse und Empfehlungen.
 
-Gut konzipierte Punktzahl:: Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.
-Konfigurationskategorien:: Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.
-+
---
-* _Reliability_: Stellt sicher, dass Workloads ihre beabsichtigten Funktionen auch bei Störungen korrekt und konsistent ausführen. Eine Beispielkonfiguration ist FSX für ONTAP-Backups.
-* _Security_: Legt den Schwerpunkt auf den Schutz von Daten, Systemen und Assets durch Risikobewertungen und Minderungsstrategien.
-* _Operational Excellence_: Konzentriert sich auf die Bereitstellung der optimalen Architektur und des geschäftlichen Nutzens.
-* _Kostenoptimierung_: Zielt darauf ab, einen geschäftlichen Nutzen zu erzielen und gleichzeitig Kosten zu minimieren.
-* _Performance Efficiency_: Konzentriert sich darauf, Ressourcen effizient zu nutzen, um die Systemanforderungen zu erfüllen und eine optimale Leistung bei sich ändernden Anforderungen aufrechtzuerhalten.
+Nach Abschluss der täglichen Analyse werden die Konfigurationen im Well-architected Dashboard für die Bereitstellung als „optimiert“ oder „nicht optimiert“ angezeigt. Sie finden die Gesamtoptimierungspunktzahl, Konfigurationsprobleme nach Kategorie und eine Liste der Konfigurationsprobleme und Empfehlungen. Sie können die Empfehlungen zu den Konfigurationsproblemen überprüfen. Einige Probleme können automatisch von Workload Factory behoben werden, während andere eine manuelle Intervention erfordern. In diesem Fall stellt Workload Factory detaillierte Anweisungen bereit, um Ihnen bei der Umsetzung der empfohlenen Änderungen zu helfen.
+
+Sie können die Analyse von Konfigurationen, die für Ihre Umgebungen nicht gelten, ausblenden. Dadurch werden unnötige Warnmeldungen und ungenaue Optimierungsergebnisse vermieden. Wenn Sie eine bestimmte Konfigurationsanalyse ausblenden, berücksichtigt Workload Factory die Konfiguration nicht in der Gesamtoptimierungsbewertung.
 
 
---
 
+== Warum es wichtig ist
+
+Workload Factory wendet Best Practices auf große Speicher-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Analysen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen, die in der Workload Factory-Konsole angewendet werden, reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.
 
 
 
@@ -55,6 +51,126 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren
 * Gewähren Sie in Ihrem AWS-Konto die Berechtigungen _view, planning, and analysis_.
 +
 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erfahren Sie, wie Sie einem AWS-Konto Berechtigungen erteilen"^]
+
+
+
+
+
+== Bewährte Verfahren und Empfehlungen für Speicher-Workloads
+
+Workload Factory analysiert Speicherkonfigurationen, um einen detaillierten Überblick über Best Practices für die ONTAP-Konfiguration und die Einhaltung des AWS Well-Architected Frameworks zu bieten. Die Analyse empfiehlt außerdem Verbesserungen und Fehlerbehebungen.
+
+Die gut strukturierte Analyse kategorisiert Konfigurationen in den folgenden Säulen des Rahmenwerks: _Zuverlässigkeit_, _Sicherheit_, _operative Exzellenz_, _Kostenoptimierung_ und _Leistungseffizienz_.
+
+
+
+=== Zuverlässigkeit
+
+Zuverlässigkeit gewährleistet, dass Arbeitslasten ihre beabsichtigten Funktionen korrekt und konsistent erfüllen, selbst wenn es zu Störungen kommt.
+
+* *Volume-Backups planen*
++
+Die Sicherung Ihrer Volumes unterstützt die Einhaltung von Aufbewahrungs- und Compliance-Anforderungen. Verwenden Sie Volume-Backups, um automatisierte Backups und Aufbewahrung für Ihre Daten einzurichten.
+
+* *Lokale Snapshots planen*
++
+Planen Sie lokale Snapshots für effiziente Datensicherung und schnelle Wiederherstellung. Snapshots sind sofortige, zeitpunktgenaue Abbilder Ihrer Volumes.
+
+* *Regionenübergreifende Replikation*
++
+Die regionsübergreifende Replikation stellt sicher, dass Ihre Daten in eine andere AWS-Region repliziert werden und bietet so eine verbesserte Datenbeständigkeit und Verfügbarkeit. Workload Factory empfiehlt die Einrichtung der regionsübergreifenden Replikation, um bei der Notfallwiederherstellung und Compliance zu unterstützen.
+
+* *Datenreplizierung*
++
+Um die Datenzuverlässigkeit zu erhöhen, können Daten auf ein FSx for ONTAP-Dateisystem in derselben Region oder in einer anderen Region repliziert werden. Richten Sie Datenreplizierung ein, um Migration, Notfallwiederherstellung und langfristige Aufbewahrung über verschiedene Dateisysteme hinweg zu unterstützen.
+
+* *SSD-Kapazitätsschwelle erhöhen*
++
+Die SSD-Speicherebene sollte dauerhaft nicht mehr als 80 % Kapazitätsauslastung aufweisen. Dies kann sich auf das Lesen und Schreiben von Daten auf Ihrer Kapazitätspool-Speicherebene auswirken und die Durchsatzkapazität Ihres Dateisystems beeinträchtigen. Ein Kapazitätsmangel kann dazu führen, dass Daten-Volumes schreibgeschützt werden und Dienste, die versuchen, neue Daten zu schreiben, fehlschlagen.
+
+* *Beschriftungen abgleichen, um die Datenzuverlässigkeit sicherzustellen*
++
+Die Snapshot-Richtlinienbezeichnungen des Quellvolumes und die Replikationsrichtlinienbezeichnungen müssen übereinstimmen, um die Datenzuverlässigkeit zu gewährleisten.
+
+* *Dateikapazitätsschwelle erhöhen*
++
+Um die Kapazitätsgrenze des Volumes nicht zu erreichen, sollte der Schwellenwert für die Dateikapazität erhöht werden. Eine geringe Dateikapazität (Inodes) verhindert das Schreiben weiterer Daten auf das Volume. Workload Factory empfiehlt, die Auslastung der verfügbaren Dateikapazität dauerhaft unter 80% zu halten. Verfügbare Dateikapazität ist erforderlich, um neue Dateien im Volume zu erstellen.
+
+
+
+
+
+=== Sicherheit
+
+Sicherheit betont den Schutz von Daten, Systemen und Vermögenswerten durch Risikobewertungen und Risikominderungsstrategien.
+
+* *ARP/AI aktivieren*
++
+NetApp Autonomous Ransomware Protection mit KI (ARP/AI) hilft, Ihre Volumes vor Ransomware-Bedrohungen zu schützen. Workload Factory empfiehlt, ARP/AI für alle Volumes zu aktivieren.
+
+* *Unbefugter Zugriff auf Volumes*
++
+Volumes, die Anwendungsdaten über iSCSI bereitstellen, sollten keinen parallelen NAS-Zugriff ermöglichen. Workload Factory empfiehlt, dass Volumes, auf die über das iSCSI-Protokoll zugegriffen wird, auf jegliche zusätzlichen Protokolle beschränkt werden sollten.
+
+
+
+
+
+=== Operative Exzellenz
+
+Operative Exzellenz konzentriert sich auf die Bereitstellung der optimalsten Architektur und des größten Geschäftswerts.
+
+* *Automatisches Kapazitätsmanagement aktivieren*
++
+Automatisches Kapazitätsmanagement sollte aktiviert werden, um regelmäßig sicherzustellen, dass die SSD-Ebene den Schwellenwert nicht überschreitet.
+
+* *Kapazitätsauslastungsschwellenwert*
++
+Workload Factory empfiehlt, dass die Volume-Kapazität die Kapazitätsauslastung von 80 % auf fortlaufender Basis nicht überschreitet. Dies kann sich auf das Lesen und Schreiben von Daten in Ihrer Anwendung auswirken. Volume-Kapazitätserhöhungen können manuell oder automatisch mithilfe der Volume-Autogrow-Funktion erfolgen.
+
+* *Volumenauslastung nähert sich der Vollauslastung*
++
+Wenn ein Volume sich der vollen Kapazität nähert, empfiehlt Workload Factory, Maßnahmen zu ergreifen, um die Volume-Kapazität zu erhöhen und potenzielle Anwendungsunterbrechungen zu vermeiden.
+
+* *Schreibmodus für Cache-Beziehungen*
++
+Für optimale Leistung empfiehlt Workload Factory den Cache-Beziehungs-Schreibmodus, der am besten zu Ihrer Arbeitslast passt. Der Write-Around-Modus bietet eine bessere Leistung für leseintensive Arbeitslasten mit kleinen Dateien, während der Write-Back-Modus eine bessere Leistung für schreibintensive Arbeitslasten mit großen Dateien bietet.
+
+* *Cache-Volume-Größe optimieren*
++
+Workload Factory empfiehlt, die automatische Größenanpassung und das Scrubbing auf Cache-Volumes zu aktivieren, um eine optimale Größe beizubehalten und den Cache auf Hot Data für maximale Effizienz zu fokussieren.
+
+* *Logische Berichterstellung für Storage-VMs*
++
+Workload Factory empfiehlt, dass die Standardeinstellung für die Berichtserstellung für eine Speicher-VM auf logisch gesetzt wird, um eine bessere Sichtbarkeit der Speichernutzung auf Volume-Ebene zu bieten.
+
+
+
+
+
+=== Kostenoptimierung
+
+Kostenoptimierung hilft Ihnen, den größtmöglichen Nutzen für Ihr Unternehmen zu erzielen und gleichzeitig die Kosten niedrig zu halten.
+
+* *Optimieren Sie die Gesamtbetriebskosten durch das Tiering von Kaltdaten*
++
+Cold data tiering sollte aktiviert werden, um die Auslastung der SSD-Speicherebene zu reduzieren. Es wird empfohlen, auf jedes Volume eine Tiering-Richtlinie anzuwenden. FSx for ONTAP scannt die Daten kontinuierlich, um kalte Daten zu erkennen und sie ohne Unterbrechung in die Kapazitäts-Speicherpool-Ebene zu verschieben.
+
+* *Speichereffizienzen aktivieren*
++
+Speichereffizienzen wie Verdichtung, Komprimierung und Deduplizierung sollten aktiviert werden, um die Speicherauslastung zu optimieren und die Kosten der SSD-Ebene zu senken.
+
+* *Unnötige Snapshot- und Backup-Löschung*
++
+Snapshots und Backups, die nicht mehr benötigt werden, sollten gelöscht werden, um Kosten zu reduzieren.
+
+* *Inaktive Blockgeräte*
++
+Nachdem ein Blockgerät sieben Tage lang nicht verwendet wurde, empfiehlt Workload Factory, die Blockgerätedaten zu archivieren oder das ungenutzte Blockgerät zu löschen, um Kosten zu senken.
+
+* *Nicht ausgelastete SSD-Kapazität*
++
+Eine nicht voll ausgelastete SSD-Kapazitätsebene kann unnötige Kosten verursachen. Workload Factory empfiehlt, die SSD-Kapazität zu reduzieren und dabei einen freien Speicherpuffer von 20 % über der aktuell genutzten Kapazität beizubehalten. Eine Verringerungsoperation kann mehrere Stunden bis mehrere Tage dauern, und andere Dateisystemoperationen werden während dieser Zeit nicht unterstützt.
 
 
 

@@ -83,11 +83,8 @@
   <block id="ef13ae21eedaa1ecccd02fb7ddd30bb1" category="list-text">*Delegierte Administratorengruppe*: Geben Sie optional die Gruppe Delegierte Dateisystemadministratoren ein.</block>
   <block id="85912990c5413ea32362225e50fc2629" category="paragraph">Wenn Sie Microsoft AD von AWS Managed verwenden, müssen Sie eine Gruppe wie AWS Delegated FSX Administrators, AWS Delegated Administrators oder eine benutzerdefinierte Gruppe mit delegierten Berechtigungen für die Organisationseinheit angeben.</block>
   <block id="3fd21f2222285241b7bbfebc4759ab56" category="paragraph">Wenn Sie einem selbstverwalteten AD beitreten, verwenden Sie den Namen der Gruppe in Ihrem AD. Die Standardgruppe ist<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>.</block>
-  <block id="6705427f56dd0e2d84c82d8ce7b8e137" category="paragraph">FSX für ONTAP-Backups erfolgen pro Volume, sodass jedes Backup nur die Daten in einem bestimmten Volume enthält.</block>
-  <block id="5d34cf2e67586f6adc1c52bd11363230" category="paragraph">FSX für ONTAP-Backups sind inkrementell, was bedeutet, dass nur die Daten auf dem Volume, die sich nach Ihrem letzten Backup geändert haben, gespeichert werden. Dies minimiert die zur Erstellung des Backups benötigte Zeit und den für das Backup benötigten Storage-Bedarf. Dadurch sparen Sie Storage-Kosten, da Daten nicht dupliziert werden.</block>
   <block id="ad999f7438a6c6743b334836cd6d2765" category="paragraph">Um Backups Ihrer Volumes zu erstellen, müssen sowohl das Volume als auch das Dateisystem über ausreichend SSD-Speicherkapazität verfügen, um den Backup-Snapshot zu speichern. Bei der Erstellung eines Backup-Snapshots kann die zusätzliche Speicherkapazität, die durch den Snapshot verbraucht wird, nicht dazu führen, dass das Volume SSD-Storage-Auslastung von über 98 % überschreitet. In diesem Fall schlägt die Sicherung fehl.</block>
   <block id="a7e91b4f0b8cb9a002ae712f6a8e8856" category="list-text">Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.</block>
-  <block id="c90eb480f69fa94333471c53a08ebfb9" category="list-text">Wählen Sie *Data Protection Actions*, *FSX for ONTAP Backup* und dann *Manual Backup*.</block>
   <block id="efb6cdeb8b2e5095e65f43be813e1f3d" category="list-text">Geben Sie im Dialogfeld Manuelle Sicherung einen Namen für das Backup ein.</block>
   <block id="2fdd0cbe402a8ae2149e0cdf4e1d9b9c" category="doc">Erstellen Sie ein FSX für ONTAP-Dateisystem</block>
   <block id="d0e7f7527c3a0ceae557c9f12bb1d5e7" category="paragraph">Bevor Sie Ihr FSX für ONTAP-Dateisystem erstellen, benötigen Sie:</block>
@@ -124,7 +121,6 @@
   <block id="adf3b9421185cf4dc6b3d80fb9c26d9b" category="list-text">*Verschlüsselung*: Wählen Sie den Namen des Verschlüsselungsschlüssels aus der Dropdown-Liste aus.</block>
   <block id="909443f15178d32af4981d109af80748" category="list-text">Geben Sie unter Dateisystemdetails Folgendes an:</block>
   <block id="31846199ab330eacea22764e7bc1ab7a" category="list-text">Geben Sie unter Backup und Wartung Folgendes an:</block>
-  <block id="5a7b83bad76b38a063667e0b80bd78d6" category="list-text">*FSX für ONTAP-Sicherung*: Tägliche automatische Backups sind standardmäßig aktiviert. Bei Bedarf deaktivieren.</block>
   <block id="f009614070b8aab7ff6edcea9473b3dc" category="list-text">*Automatische Backup-Aufbewahrungsfrist*: Geben Sie die Anzahl der Tage ein, um automatische Backups zu behalten.</block>
   <block id="1972e6c134f87506bf46fce45a157104" category="list-text">*Tägliches automatisches Backup-Fenster*: Wählen Sie entweder *Keine Präferenz* (für Sie wird eine tägliche Backup-Startzeit ausgewählt) oder *Startzeit für tägliche Backups auswählen* und eine Startzeit angeben.</block>
   <block id="86405f997495dd34a1622331050968f1" category="list-text">*Wöchentliches Wartungsfenster*: Wählen Sie entweder *Keine Präferenz* (eine wöchentliche Startzeit des Wartungsfensters wird für Sie ausgewählt) oder *Startzeit für 30-minütiges wöchentliches Wartungsfenster* und geben Sie eine Startzeit an.</block>
@@ -176,7 +172,6 @@
   <block id="736ef7205c037a078bc461f368c6a21f" category="doc">Erstellen Sie einen manuellen Snapshot eines FSX für ONTAP-Volumes</block>
   <block id="5b10cd7d19a8a16358cb05922f38a69e" category="paragraph">Snapshots sind Ressourcen von Volumes und sofortige Erfassung von Daten, die nur für geänderte Daten Speicherplatz verbrauchen. Da sich die Daten im Laufe der Zeit ändern, belegen Snapshots in der Regel mit zunehmendem Alter mehr Speicherplatz.</block>
   <block id="bbc11127132b3f6e8be58ad79bf66689" category="paragraph">FSX für ONTAP-Volumes verwenden Just-in-Time Copy-on-Write, sodass unveränderte Dateien in Snapshots keine Kapazität des Volumes beanspruchen.</block>
-  <block id="4eb3a89899e681d1b9380bde026db85c" category="admonition">Snapshots sind keine Kopien Ihrer Daten. Wenn Sie Kopien Ihrer Daten erstellen möchten, sollten Sie FSX für ONTAP-Backups oder Volume-Replizierungsfunktionen in Erwägung ziehen.</block>
   <block id="644e775d0497e56fe0475dde3829ce1e" category="doc">Erstellen Sie eine Storage-VM für ein FSX für ONTAP-Filesystem</block>
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">Wenn Sie mit SVMs auf Daten in FSX for ONTAP zugreifen, mounten Ihre Clients und Workstations über den Endpunkt (IP-Adresse) der SVM ein Volume, eine CIFS/SMB-Freigabe oder eine iSCSI-LUN, die von einer SVM gehostet wird.</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">Management von FSX für ONTAP Storage Virtual Machines</block>
@@ -269,7 +264,6 @@
   <block id="8e9a64bda9d21f945b6489df2e7946e1" category="doc">Löschen Sie ein Volume</block>
   <block id="c4037415f2f0cfbaf2d8633bef548eca" category="paragraph">Beachten Sie Folgendes, bevor Sie ein Volume löschen:</block>
   <block id="7ba3b681b508a24c70a973831af6f1ad" category="list-text">Lokale Schnappschüsse: Alle Snapshots, die mit diesem FSX für ONTAP-Dateisystem verbunden sind, werden dauerhaft gelöscht.</block>
-  <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">FSX für ONTAP-Backup: FSX für ONTAP-Backup-Kopien werden bleiben und Sie können sie weiterhin verwenden.</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">Wählen Sie *Basic actions* und dann *Delete Volume*.</block>
   <block id="321fbbd6f40d9b084f632750d5190dc8" category="summary">Hinzufügen, Aktualisieren oder Entfernen von Storage-VM-Tags für eine Storage-VM jederzeit.</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">Auf der Seite Storage-VM-Tags bearbeiten können Sie Tags hinzufügen, bearbeiten oder entfernen.</block>
@@ -488,7 +482,6 @@
   <block id="ebb4bf732c3ade314c393d5284af8715" category="list-text">*Passwort bestätigen*: Geben Sie das neue Passwort zur Bestätigung erneut ein.</block>
   <block id="8b0e8407f70ad599b0ea28ad2aba3c8d" category="summary">Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ONTAP-Dateisystem in Ihrem AWS-Konto wieder her.</block>
   <block id="669e24f4895025d47b6321e03f0890e4" category="doc">Stellen Sie ein Volume aus einem Backup wieder her</block>
-  <block id="04b1c243101a3b35e04f4796a82296b7" category="list-text">Wählen Sie *Data Protection Actions*, *FSX for ONTAP Backup* und dann *Restore from a Backup*.</block>
   <block id="954f91e5419aff167b9c5ff119492972" category="list-text">Geben Sie im Dialogfeld Wiederherstellen von einem Backup Folgendes an:</block>
   <block id="1db91acefbe1be544aa103101dea1eea" category="list-text">*Zieldateisystem*: Wählen Sie das Zieldateisystem aus dem Dropdown-Menü aus.</block>
   <block id="dce3fffc0f825635bb1abc80d4fad0d8" category="list-text">*Ziel-Speicher-VM*: Wählen Sie die Ziel-Speicher-VM aus dem Dropdown-Menü.</block>
@@ -561,7 +554,6 @@
   <block id="fa6e79d91adacad3ba5d3684079b4ea1" category="summary">Die Dokumentation zu Amazon FSX for NetApp ONTAP enthält Fehlerbehebungsthemen für Ihre Referenz.</block>
   <block id="025110220989dd80d639c418b593cad3" category="inline-link-macro">Fehlerbehebung bei Amazon FSX for NetApp ONTAP</block>
   <block id="aa3f4a232768328d892056c200f23b5f" category="paragraph">Weitere Informationen finden Sie unter <block ref="39d4d71bb679e33c9314f282da47094c" category="inline-link-macro-rx"></block> .</block>
-  <block id="c3b25a5d5a44f6b35c6e6497598499eb" category="list-text">Geben Sie im Dialogfeld *FSX for ONTAP Backup* Folgendes an:</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">Aktualisieren Sie Snapshot-Daten, die in einer Replikationsbeziehung zu jedem Zeitpunkt zwischen Quell- und Ziel-Volumes übertragen werden, manuell.</block>
   <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">Aktualisieren von Snapshot-Daten in einer Replikationsbeziehung</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">Wählen Sie *Jetzt aktualisieren*.</block>
@@ -722,7 +714,6 @@
   <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">*Storage-Kostenvergleich*: Vergleicht die Storage-Kosten für Windows File Server mit FSX für ONTAP mit Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File Server. Über den Rechner erfahren Sie, wie FSX für ONTAP Storage-Konfigurationen potenzielle Einsparungen ermöglichen und Ihren Wechsel zu FSX für ONTAP Storage planen.</block>
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">*Workload Factory Benutzeroberfläche*: Bietet _Quick create_ und _Advanced create_ Bereitstellungsmodus Optionen. Schnelle Erstellung: Best Practices für Ihre Storage-Konfigurationen für AWS, NetApp und Branchenstandards</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">Managen des Backup-Zeitplans für ein FSX für ONTAP-Filesystem</block>
-  <block id="4a74309dc15865035b8b93cec28f2a96" category="list-text">Wählen Sie unter Information das Bleistiftsymbol neben *FSX for ONTAP Backup*. Das Bleistiftsymbol erscheint neben dem Dropdown-Pfeil, wenn die Maus über die Zeile *FSX for ONTAP Backup* schwebt.</block>
   <block id="9f16bb4c9cbb656a02f2d0ac20ae70a8" category="list-text">*Tägliche automatische Backups*: Aktivieren oder deaktivieren Sie die Funktion. Wenn Sie die Funktion deaktivieren, wählen Sie *Anwenden*. Wenn Sie die Funktion aktivieren, führen Sie die folgenden Schritte aus.</block>
   <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">*Tägliches automatisches Backup-Fenster*: Wählen Sie entweder *Keine Präferenz* (für Sie wird eine tägliche Backup-Startzeit ausgewählt) oder *Startzeit für tägliche Backups auswählen* und eine Startzeit angeben.</block>
   <block id="eeba2ebb020e2a04f72c79660c1af4c0" category="inline-link-macro">Erweiterung der Dateisystemkapazität</block>
@@ -738,7 +729,6 @@
   <block id="1bab530ca9dd117d24aa1c1510692003" category="doc">Neuerungen bei Amazon FSX for NetApp ONTAP</block>
   <block id="d151342d67a639e871ca8c57524ca7f8" category="sidebar">Verwalten von Volume-Tags</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">Managen Sie Storage-VM-Tags</block>
-  <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">Management des FSX für ONTAP-Backup-Zeitplans</block>
   <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">Block-Storage für Scale-out-FSX für ONTAP-Filesysteme</block>
   <block id="152983842f852ef5bae46ac675caec95" category="paragraph">Sie können jetzt Block-Storage über FSX für ONTAP bereitstellen, wenn Sie eine Scale-out-Filesystem-Implementierung mit bis zu 6 HA-Paaren verwenden.</block>
   <block id="8cce6f6c21973d5dff1898076cddb209" category="paragraph"><block ref="8cce6f6c21973d5dff1898076cddb209" category="inline-link-macro-rx"></block></block>
@@ -1215,16 +1205,6 @@
   <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">Proaktive Beobachtbarkeit</block>
   <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">Einblick in Aktion</block>
   <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">AWS hat eine gut konzipierte Framework Advisor Architektur</block>
-  <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">Zustand der Architektur gut</block>
-  <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">Gut konzipierte Punktzahl</block>
-  <block id="3ae4c18410c2fa4fdf19fa3a943ef362" category="list-text">Die Bewertung umfasst alle derzeit analysierten Konfigurationen und wird als Prozentsatz angezeigt. Ein Ergebnis von 25 % bedeutet, dass 25 % der Filesystem-Konfigurationen gut konzipiert sind.</block>
-  <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">Konfigurationskategorien</block>
-  <block id="d24dfe9869a3af3c94d86b476bc18a3d" category="list-text">Die Filesystem-Konfigurationen werden in Kategorien organisiert, die auf die folgenden fünf Säulen des AWS „well-Architected Framework“ ausgerichtet sind.</block>
-  <block id="b88f659b2eb7813471f331b19c9d7f02" category="list-text">_Reliability_: Stellt sicher, dass Workloads ihre beabsichtigten Funktionen auch bei Störungen korrekt und konsistent ausführen. Eine Beispielkonfiguration ist FSX für ONTAP-Backups.</block>
-  <block id="6a940b53f011e22baccafe058e7df66e" category="list-text">_Security_: Legt den Schwerpunkt auf den Schutz von Daten, Systemen und Assets durch Risikobewertungen und Minderungsstrategien.</block>
-  <block id="d5f464c28ed994054fe98db4934a7da1" category="list-text">_Operational Excellence_: Konzentriert sich auf die Bereitstellung der optimalen Architektur und des geschäftlichen Nutzens.</block>
-  <block id="03be89b5f488a61c9b35832aa58745c1" category="list-text">_Kostenoptimierung_: Zielt darauf ab, einen geschäftlichen Nutzen zu erzielen und gleichzeitig Kosten zu minimieren.</block>
-  <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_Performance Efficiency_: Konzentriert sich darauf, Ressourcen effizient zu nutzen, um die Systemanforderungen zu erfüllen und eine optimale Leistung bei sich ändernden Anforderungen aufrechtzuerhalten.</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">Analyseanforderungen</block>
   <block id="02f2e108af721f7fc825883d8811e77a" category="list-text">*ONTAP Credentials*: Optional. Geben Sie Ihren ONTAP-Benutzernamen und Ihr Kennwort ein. Das Passwort kann jetzt oder später festgelegt werden.</block>
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">Wenn der von Ihnen eingegebene Benutzer nicht der Benutzer fsxadmin ist und Sie später das Passwort fsxadmin zurücksetzen müssen, können Sie dies über die AWS-Konsole tun.</block>
@@ -1803,15 +1783,11 @@
   <block id="21c979f4327cd67644d8ab5b64a762c7" category="doc">Klonen eines Volumes in NetApp Workload Factory</block>
   <block id="6681a3fb664c63dc897bbc8182969165" category="list-text">Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des FSx for ONTAP -Dateisystems aus, das das zu klonende Volume enthält, und wählen Sie dann *Verwalten*.</block>
   <block id="6b74b1eeb944b58dcf027766f050311f" category="list-text">Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü des zu klonenden Volumes aus.</block>
-  <block id="43b56786015efd5716b466b10628735f" category="summary">NetApp Workload Factory analysiert regelmäßig die Dateisystemkonfigurationen von Amazon FSx for NetApp ONTAP, um festzustellen, ob Probleme vorliegen.</block>
-  <block id="25c58ec67af5ce4deef895fad9566aa0" category="paragraph">NetApp Workload Factory analysiert regelmäßig die Dateisystemkonfigurationen von Amazon FSx for NetApp ONTAP, um festzustellen, ob Probleme vorliegen.  Wenn Probleme gefunden werden, zeigt Ihnen Workload Factory, um welche Probleme es sich handelt, und erklärt, was geändert werden muss, um sicherzustellen, dass Ihr Dateisystemspeicher Spitzenleistung, Kosteneffizienz und die Einhaltung bewährter Methoden erreicht.</block>
-  <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">In der Workload Factory-Konsole wird auf Dateisystemebene der Status „Well-Architected“ für alle FSx for ONTAP -Dateisysteme aufgelistet.  Gut konzipierte Status werden als „Probleme“, „nicht analysiert“ oder „gut konzipiert“ kategorisiert.  Wenn Sie den Status „Well-Architected“ auswählen, werden Sie zur Registerkarte „Well-Architected-Status“ im Dateisystem weitergeleitet, wo Sie die Well-Architected-Bewertung, Konfigurationskategorien und alle Konfigurationen für das Dateisystem finden.</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">Konfigurieren und aktualisieren Sie Active Directory für eine Speicher-VM in einem FSx für ONTAP Dateisystem in NetApp Workload Factory.</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems mit der zu aktualisierenden Speicher-VM und wählen Sie dann *Verwalten*.</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">Erstellen Sie außerhalb regelmäßig geplanter Sicherungen eine manuelle Sicherung eines Volumes in NetApp Workload Factory.</block>
   <block id="54fe537cb8aa5bbba8b6f2002f13d69c" category="doc">Erstellen Sie eine manuelle Sicherung eines Volumes in NetApp Workload Factory</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">Erstellen Sie eine manuelle Sicherung eines Volumes außerhalb regelmäßig geplanter Sicherungen in NetApp Workload Factory.</block>
-  <block id="54c39ca8203b6aca3fa33c7e87a0ede7" category="list-text">Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das zu sichernde Volume aus.</block>
   <block id="cc481e5a678e1d84e7207782a75f9a18" category="summary">Mit NetApp Workload Factory können Sie ein FSx für ONTAP Dateisystem erstellen, um Volumes und zusätzliche Datendienste hinzuzufügen und zu verwalten.</block>
   <block id="9b19e4522ce9145cc667b5fcceaba11d" category="doc">Erstellen Sie ein FSx für ONTAP -Dateisystem in NetApp Workload Factory</block>
   <block id="ebb1274f47205fb0c6d6d8988b0944b0" category="paragraph">Mit NetApp Workload Factory können Sie FSx für ONTAP Dateisysteme der ersten und zweiten Generation erstellen, um Volumes und zusätzliche Datendienste hinzuzufügen und zu verwalten.</block>
@@ -2740,4 +2716,74 @@
   <block id="f9b8d8043e7f357d7b5805e6dfd01b25" category="sidebar">Blockspeicher verwalten</block>
   <block id="90fbacfd00a759e142437ac247a4317c" category="sidebar">Dateisystemkapazität manuell anpassen</block>
   <block id="241296c9db6f3205e0e5738da7ec12ef" category="sidebar">Dateisystemkapazität automatisch verwalten</block>
+  <block id="62790b093d67bd09f77b7088f1cf32a6" category="list-text">*Volume-Backups*: Tägliche automatische Backups sind standardmäßig aktiviert. Deaktivieren, falls gewünscht.</block>
+  <block id="94a3e141996b9431c4516ae849425040" category="summary">NetApp Workload Factory analysiert Amazon FSx for NetApp ONTAP-Dateisystemkonfigurationen regelmäßig, um festzustellen, ob Konfigurationsprobleme vorliegen.</block>
+  <block id="eb2b721313223c7264abb769bf627d20" category="paragraph">NetApp Workload Factory analysiert Amazon FSx for NetApp ONTAP-Dateisystemkonfigurationen regelmäßig, um festzustellen, ob Konfigurationsprobleme vorliegen. Werden Probleme gefunden, zeigt Workload Factory an, worin die Probleme bestehen, und erklärt, was geändert werden muss, damit Ihr Dateisystemspeicher optimale Leistung, Kosteneffizienz und die Einhaltung bewährter Verfahren erreicht.</block>
+  <block id="9ffdb95250e26c7a6b468126ac7c75b0" category="section-title">So funktioniert es</block>
+  <block id="2888fa977354ad1bf513fa2f17fdd7df" category="paragraph">Workload Factory analysiert täglich Ihre Workloads, die auf Amazon FSx for NetApp ONTAP-Dateisystembereitstellungen laufen. Die Analyse liefert well-architected Status, Erkenntnisse und Empfehlungen.</block>
+  <block id="678b83ba882b41e4bae10f8e48f4a766" category="paragraph">Nach Abschluss der täglichen Analyse werden die Konfigurationen im Well-architected Dashboard für die Bereitstellung als „optimiert“ oder „nicht optimiert“ angezeigt. Sie finden die Gesamtoptimierungspunktzahl, Konfigurationsprobleme nach Kategorie und eine Liste der Konfigurationsprobleme und Empfehlungen. Sie können die Empfehlungen zu den Konfigurationsproblemen überprüfen. Einige Probleme können automatisch von Workload Factory behoben werden, während andere eine manuelle Intervention erfordern. In diesem Fall stellt Workload Factory detaillierte Anweisungen bereit, um Ihnen bei der Umsetzung der empfohlenen Änderungen zu helfen.</block>
+  <block id="1fab3ff575faec37f5f5855ba6c44e9b" category="paragraph">Sie können die Analyse von Konfigurationen, die für Ihre Umgebungen nicht gelten, ausblenden. Dadurch werden unnötige Warnmeldungen und ungenaue Optimierungsergebnisse vermieden. Wenn Sie eine bestimmte Konfigurationsanalyse ausblenden, berücksichtigt Workload Factory die Konfiguration nicht in der Gesamtoptimierungsbewertung.</block>
+  <block id="ee25e0b6cd574166f206b4c5b7f02df3" category="section-title">Warum es wichtig ist</block>
+  <block id="1ae45cc8915c23757127ca10c1cc4000" category="paragraph">Workload Factory wendet Best Practices auf große Speicher-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Analysen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen, die in der Workload Factory-Konsole angewendet werden, reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.</block>
+  <block id="c6ee17dfa8bb85cfb470ccbc889f031c" category="section-title">Bewährte Verfahren und Empfehlungen für Speicher-Workloads</block>
+  <block id="9302fb8b1312c354620e74d118c4a66d" category="paragraph">Workload Factory analysiert Speicherkonfigurationen, um einen detaillierten Überblick über Best Practices für die ONTAP-Konfiguration und die Einhaltung des AWS Well-Architected Frameworks zu bieten. Die Analyse empfiehlt außerdem Verbesserungen und Fehlerbehebungen.</block>
+  <block id="ffd9fc00ab43b8283346c6266e00d684" category="paragraph">Die gut strukturierte Analyse kategorisiert Konfigurationen in den folgenden Säulen des Rahmenwerks: _Zuverlässigkeit_, _Sicherheit_, _operative Exzellenz_, _Kostenoptimierung_ und _Leistungseffizienz_.</block>
+  <block id="820b8f74ad843d1574106ec4cadfc07e" category="section-title">Zuverlässigkeit</block>
+  <block id="32293fdcb7dff0798e6d06da4b108ce6" category="paragraph">Zuverlässigkeit gewährleistet, dass Arbeitslasten ihre beabsichtigten Funktionen korrekt und konsistent erfüllen, selbst wenn es zu Störungen kommt.</block>
+  <block id="8994ec75ad87cef8edf4cf8eae6b4e4c" category="list-text">*Volume-Backups planen*</block>
+  <block id="3bacc0d1986b203b432f61110667b3d7" category="paragraph">Die Sicherung Ihrer Volumes unterstützt die Einhaltung von Aufbewahrungs- und Compliance-Anforderungen. Verwenden Sie Volume-Backups, um automatisierte Backups und Aufbewahrung für Ihre Daten einzurichten.</block>
+  <block id="277088f7a0bc1d2b0023dc08b1d30e37" category="list-text">*Lokale Snapshots planen*</block>
+  <block id="ce36269ae95cd0ab7422d78bb843b720" category="paragraph">Planen Sie lokale Snapshots für effiziente Datensicherung und schnelle Wiederherstellung. Snapshots sind sofortige, zeitpunktgenaue Abbilder Ihrer Volumes.</block>
+  <block id="b34347ddf6e48f7eb5aee09d6f7b92a6" category="list-text">*Regionenübergreifende Replikation*</block>
+  <block id="152d89843ca63a94df485f882e2be60d" category="paragraph">Die regionsübergreifende Replikation stellt sicher, dass Ihre Daten in eine andere AWS-Region repliziert werden und bietet so eine verbesserte Datenbeständigkeit und Verfügbarkeit. Workload Factory empfiehlt die Einrichtung der regionsübergreifenden Replikation, um bei der Notfallwiederherstellung und Compliance zu unterstützen.</block>
+  <block id="1efec9308ce64129e1db77dd8baa679c" category="list-text">*Datenreplizierung*</block>
+  <block id="793435fc062d4d74518687597c405959" category="paragraph">Um die Datenzuverlässigkeit zu erhöhen, können Daten auf ein FSx for ONTAP-Dateisystem in derselben Region oder in einer anderen Region repliziert werden. Richten Sie Datenreplizierung ein, um Migration, Notfallwiederherstellung und langfristige Aufbewahrung über verschiedene Dateisysteme hinweg zu unterstützen.</block>
+  <block id="4776b32ae8a508cea6dc14786e7b1d3f" category="list-text">*SSD-Kapazitätsschwelle erhöhen*</block>
+  <block id="e48d5f7bfc0f630823696ef4d2f1861d" category="paragraph">Die SSD-Speicherebene sollte dauerhaft nicht mehr als 80 % Kapazitätsauslastung aufweisen. Dies kann sich auf das Lesen und Schreiben von Daten auf Ihrer Kapazitätspool-Speicherebene auswirken und die Durchsatzkapazität Ihres Dateisystems beeinträchtigen. Ein Kapazitätsmangel kann dazu führen, dass Daten-Volumes schreibgeschützt werden und Dienste, die versuchen, neue Daten zu schreiben, fehlschlagen.</block>
+  <block id="52dcb980883fc7c1570f6f9c4c6e4f47" category="list-text">*Beschriftungen abgleichen, um die Datenzuverlässigkeit sicherzustellen*</block>
+  <block id="6b684c41f8808f2d21748ed56ee909d7" category="paragraph">Die Snapshot-Richtlinienbezeichnungen des Quellvolumes und die Replikationsrichtlinienbezeichnungen müssen übereinstimmen, um die Datenzuverlässigkeit zu gewährleisten.</block>
+  <block id="ec75a1c7b766068775fc7894ddaf83e4" category="list-text">*Dateikapazitätsschwelle erhöhen*</block>
+  <block id="0d73092e450f3018847f6e8ff85e28c0" category="paragraph">Um die Kapazitätsgrenze des Volumes nicht zu erreichen, sollte der Schwellenwert für die Dateikapazität erhöht werden. Eine geringe Dateikapazität (Inodes) verhindert das Schreiben weiterer Daten auf das Volume. Workload Factory empfiehlt, die Auslastung der verfügbaren Dateikapazität dauerhaft unter 80% zu halten. Verfügbare Dateikapazität ist erforderlich, um neue Dateien im Volume zu erstellen.</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">Sicherheit</block>
+  <block id="7d7265a6929882bb433fc74e8bee871a" category="paragraph">Sicherheit betont den Schutz von Daten, Systemen und Vermögenswerten durch Risikobewertungen und Risikominderungsstrategien.</block>
+  <block id="6b164cf17f1cd008f12b094341cb3264" category="list-text">*ARP/AI aktivieren*</block>
+  <block id="3c93b584a7552b941c7752fec865d7f1" category="paragraph">NetApp Autonomous Ransomware Protection mit KI (ARP/AI) hilft, Ihre Volumes vor Ransomware-Bedrohungen zu schützen. Workload Factory empfiehlt, ARP/AI für alle Volumes zu aktivieren.</block>
+  <block id="1218a704bef91508c259c867ba832d76" category="list-text">*Unbefugter Zugriff auf Volumes*</block>
+  <block id="0f47a13bb4c0929efc89421b05c0e209" category="paragraph">Volumes, die Anwendungsdaten über iSCSI bereitstellen, sollten keinen parallelen NAS-Zugriff ermöglichen. Workload Factory empfiehlt, dass Volumes, auf die über das iSCSI-Protokoll zugegriffen wird, auf jegliche zusätzlichen Protokolle beschränkt werden sollten.</block>
+  <block id="17d2a91a4f3c01de4c2f05b2242e49d3" category="section-title">Operative Exzellenz</block>
+  <block id="aae272278ce139a51849ab88adc7d597" category="paragraph">Operative Exzellenz konzentriert sich auf die Bereitstellung der optimalsten Architektur und des größten Geschäftswerts.</block>
+  <block id="2e8c868875c81824742ded82e0ff9518" category="list-text">*Automatisches Kapazitätsmanagement aktivieren*</block>
+  <block id="c2af0d35add26707ebd7d7030d750beb" category="paragraph">Automatisches Kapazitätsmanagement sollte aktiviert werden, um regelmäßig sicherzustellen, dass die SSD-Ebene den Schwellenwert nicht überschreitet.</block>
+  <block id="32438b829cdc61174e9727896ad00733" category="list-text">*Kapazitätsauslastungsschwellenwert*</block>
+  <block id="938de8c74e8e4f67c370d24df8ab0411" category="paragraph">Workload Factory empfiehlt, dass die Volume-Kapazität die Kapazitätsauslastung von 80 % auf fortlaufender Basis nicht überschreitet. Dies kann sich auf das Lesen und Schreiben von Daten in Ihrer Anwendung auswirken. Volume-Kapazitätserhöhungen können manuell oder automatisch mithilfe der Volume-Autogrow-Funktion erfolgen.</block>
+  <block id="900f4b8178b38a2b7075005f38bd4a08" category="list-text">*Volumenauslastung nähert sich der Vollauslastung*</block>
+  <block id="1771306e58ae20ceab27a04d0b17adcd" category="paragraph">Wenn ein Volume sich der vollen Kapazität nähert, empfiehlt Workload Factory, Maßnahmen zu ergreifen, um die Volume-Kapazität zu erhöhen und potenzielle Anwendungsunterbrechungen zu vermeiden.</block>
+  <block id="dea8be5f351d7ba412ea10951c1fe16c" category="list-text">*Schreibmodus für Cache-Beziehungen*</block>
+  <block id="a58ce95d0ee8f9d592643a6f31d60878" category="paragraph">Für optimale Leistung empfiehlt Workload Factory den Cache-Beziehungs-Schreibmodus, der am besten zu Ihrer Arbeitslast passt. Der Write-Around-Modus bietet eine bessere Leistung für leseintensive Arbeitslasten mit kleinen Dateien, während der Write-Back-Modus eine bessere Leistung für schreibintensive Arbeitslasten mit großen Dateien bietet.</block>
+  <block id="3a3b30a3337caa5b953626eb873e3e6b" category="list-text">*Cache-Volume-Größe optimieren*</block>
+  <block id="3f8b3943fba700ffad94c47ef4638509" category="paragraph">Workload Factory empfiehlt, die automatische Größenanpassung und das Scrubbing auf Cache-Volumes zu aktivieren, um eine optimale Größe beizubehalten und den Cache auf Hot Data für maximale Effizienz zu fokussieren.</block>
+  <block id="a49bf929860657a29ec7b321ff7a63ba" category="list-text">*Logische Berichterstellung für Storage-VMs*</block>
+  <block id="7edda8ec9be79d47927f4aa7e27bd776" category="paragraph">Workload Factory empfiehlt, dass die Standardeinstellung für die Berichtserstellung für eine Speicher-VM auf logisch gesetzt wird, um eine bessere Sichtbarkeit der Speichernutzung auf Volume-Ebene zu bieten.</block>
+  <block id="a39ae09f8be4327fc176cfeb76a0e366" category="section-title">Kostenoptimierung</block>
+  <block id="394c926099d3d2cf7e0d7477f17faf38" category="paragraph">Kostenoptimierung hilft Ihnen, den größtmöglichen Nutzen für Ihr Unternehmen zu erzielen und gleichzeitig die Kosten niedrig zu halten.</block>
+  <block id="ff879d0ae47ba423426718c1437f43bc" category="list-text">*Optimieren Sie die Gesamtbetriebskosten durch das Tiering von Kaltdaten*</block>
+  <block id="3fa1db8a8be8ef91cca2bf931c2698f3" category="paragraph">Cold data tiering sollte aktiviert werden, um die Auslastung der SSD-Speicherebene zu reduzieren. Es wird empfohlen, auf jedes Volume eine Tiering-Richtlinie anzuwenden. FSx for ONTAP scannt die Daten kontinuierlich, um kalte Daten zu erkennen und sie ohne Unterbrechung in die Kapazitäts-Speicherpool-Ebene zu verschieben.</block>
+  <block id="7cee9f2699d966625a5743c41334d168" category="list-text">*Speichereffizienzen aktivieren*</block>
+  <block id="4ac28dca7ab7f0f38a67c27c947662d5" category="paragraph">Speichereffizienzen wie Verdichtung, Komprimierung und Deduplizierung sollten aktiviert werden, um die Speicherauslastung zu optimieren und die Kosten der SSD-Ebene zu senken.</block>
+  <block id="fed8dca8f704b8520ccccb85704d4336" category="list-text">*Unnötige Snapshot- und Backup-Löschung*</block>
+  <block id="0c3c1c3be816da545548a0d1ddb8eab2" category="paragraph">Snapshots und Backups, die nicht mehr benötigt werden, sollten gelöscht werden, um Kosten zu reduzieren.</block>
+  <block id="c359614024935abd3712075452782fa3" category="list-text">*Inaktive Blockgeräte*</block>
+  <block id="934ae55c0ac8033312b0dd4fc00ad677" category="paragraph">Nachdem ein Blockgerät sieben Tage lang nicht verwendet wurde, empfiehlt Workload Factory, die Blockgerätedaten zu archivieren oder das ungenutzte Blockgerät zu löschen, um Kosten zu senken.</block>
+  <block id="f915580ac605b8302594b2e8b9e200c4" category="list-text">*Nicht ausgelastete SSD-Kapazität*</block>
+  <block id="20f19e4030e406a0bbc3f71b51e9b885" category="paragraph">Eine nicht voll ausgelastete SSD-Kapazitätsebene kann unnötige Kosten verursachen. Workload Factory empfiehlt, die SSD-Kapazität zu reduzieren und dabei einen freien Speicherpuffer von 20 % über der aktuell genutzten Kapazität beizubehalten. Eine Verringerungsoperation kann mehrere Stunden bis mehrere Tage dauern, und andere Dateisystemoperationen werden während dieser Zeit nicht unterstützt.</block>
+  <block id="3224742265d3111d23b216e2a1d3036c" category="paragraph">Volume-Backups werden pro Volume erstellt, sodass jedes Backup nur die Daten in einem bestimmten Volume enthält.</block>
+  <block id="9b1c40247bbd6b430d06045ce9149bf4" category="paragraph">Volume-Backups sind inkrementell, was bedeutet, dass nur die Daten auf dem Volume gespeichert werden, die sich nach Ihrem letzten Backup geändert haben. Dadurch werden die für die Erstellung des Backups benötigte Zeit und der für das Backup benötigte Speicherplatz minimiert, was Speicherkosten spart, da keine Daten dupliziert werden.</block>
+  <block id="40e95cbe82fc979afaca404d45ab88c7" category="list-text">Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume aus, das gesichert werden soll.</block>
+  <block id="0b3a2f729072cb80e423288abd69fa27" category="list-text">Wählen Sie *Datenschutzmaßnahmen*, *Volume-Backups* und anschließend *manuelle Sicherung*.</block>
+  <block id="108be83f8740c01bf49fb6d51d4b134e" category="admonition">Snapshots sind keine Kopien Ihrer Daten. Wenn Sie Kopien Ihrer Daten erstellen möchten, sollten Sie die Funktionen für Volume-Backups oder Volume-Replikation verwenden.</block>
+  <block id="d6a7c6eb08e4e62d76793fd3d8b368d4" category="list-text">Volume backups: Die Volume-Backup-Kopien bleiben erhalten und können weiterhin verwendet werden.</block>
+  <block id="e18aace8bf973f70c990d2b81fcba316" category="list-text">Wählen Sie unter Information das Stiftsymbol neben *Volume backups* aus. Das Stiftsymbol erscheint neben dem Dropdown-Pfeil, wenn der Mauszeiger über die Zeile *Volume backups* bewegt wird.</block>
+  <block id="8650af0fa3c7b902ba6a94894d28c472" category="list-text">Geben Sie im Dialogfeld *Volume backups* Folgendes an:</block>
+  <block id="5e9b88efcc8c9692790f512327a22476" category="list-text">Wählen Sie *Data protection actions*, *Volume backups* und anschließend *Restore from a backup*.</block>
+  <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">Volume-Backup-Zeitplan verwalten</block>
 </blocks>

@@ -211,7 +211,7 @@ Eine Beschreibung der Sicherheitsgruppenprotokolle, Ports und Rollen finden Sie 
 
 . Geben Sie unter Backup und Wartung Folgendes an:
 +
-.. *FSX für ONTAP-Sicherung*: Tägliche automatische Backups sind standardmäßig aktiviert. Bei Bedarf deaktivieren.
+.. *Volume-Backups*: Tägliche automatische Backups sind standardmäßig aktiviert. Deaktivieren, falls gewünscht.
 +
 ... *Automatische Backup-Aufbewahrungsfrist*: Geben Sie die Anzahl der Tage ein, um automatische Backups zu behalten.
 ... *Tägliches automatisches Backup-Fenster*: Wählen Sie entweder *Keine Präferenz* (für Sie wird eine tägliche Backup-Startzeit ausgewählt) oder *Startzeit für tägliche Backups auswählen* und eine Startzeit angeben.
