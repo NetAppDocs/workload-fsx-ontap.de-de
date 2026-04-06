@@ -36,6 +36,7 @@ Die Blockgröße muss kleiner sein als die verfügbare FlexVol volume Volumengr�
 *** Wählen Sie ein vorhandenes Volume aus.
 
 
+.. *Aggregatname*: Wählen Sie das Aggregat aus, das das neue Volume aufnehmen soll.
 .. *Speicher-VM*: Wählen Sie eine Speicher-VM aus.
 .. *Lautstärkestil*: Der Standard-Lautstärkestil ist * FlexVol*.
 .. *Volumengröße*: Geben Sie die Volumengröße ein und wählen Sie die Einheit aus. Die maximale Größe pro FlexVol volume beträgt 100 TiB.

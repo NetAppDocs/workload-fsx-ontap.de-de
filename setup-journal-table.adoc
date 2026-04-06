@@ -1,0 +1,500 @@
+---
+sidebar: sidebar 
+permalink: setup-journal-table.html 
+keywords: S3, s3, access points, journal table, setup journal table, NetApp Workload Factory 
+summary: Richten Sie die Journaltabelleninfrastruktur für S3-Zugriffspunkte in NetApp Workload Factory ein. 
+---
+= Einrichtung der Journaltabelleninfrastruktur für NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Richten Sie die Journaltabelleninfrastruktur ein, um Audit-Logs von Benutzerzugriffsereignissen und Objektoperationen über Amazon FSx for ONTAP Volumezugriffspunkte hinweg zu erfassen und zu speichern. Mehrere Schritte sind erforderlich, um die Infrastruktur für AWS-Services wie AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, AWS Identity and Access Management (IAM) und AWS S3 Tables einzurichten, damit die Protokollereignisse korrekt durch die Pipeline gelangen und von Workload Factory gelesen werden.
+
+
+
+== Über diese Aufgabe
+
+Die Journaltabellenfunktion erfasst S3-Datenebenenereignisse (PutObject, GetObject, DeleteObject usw.) für überwachte FSx for ONTAP S3-Zugriffspunkte. Sie nutzt eine Kette von AWS-Services, die in Ihrem AWS-Konto bereitgestellt werden. Wenn Sie die Infrastruktur korrekt einrichten, stellt sie eine Verbindung zum FSx for ONTAP-Volume-Zugriffspunkt her und richtet die Pipeline ein, die Benutzerzugriffs- und Objektoperations-Audit-Ereignisse in der Journaltabelle erfasst.
+
+Die folgende Tabelle listet die AWS-Services auf, die Teil der Infrastruktur sind, ihre jeweiligen Ressourcennamensmuster und den Zweck des Services in der Pipeline.
+
+[cols="1,1,1"]
+|===
+| AWS-Service | Ressourcennamensmuster | Zweck 
+
+
+| AWS CloudFormation | netapp-metadata-* | Stellt die gesamte Infrastruktur als Stack bereit 
+
+
+| AWS S3-Bucket | netapp-metadata-cloudtrail-events-logs-{uuid} | Speichert rohe CloudTrail-Protokolldateien 
+
+
+| AWS CloudTrail | netapp-metadata-journal-data-events-trail-{uuid} | Erfasst S3-Datenereignisse für bestimmte Zugriffspunkte 
+
+
+| AWS CloudWatch-Protokollgruppe | netapp-metadata-journal-data-events-{uuid} | Empfängt CloudTrail-Ereignisse als strukturierte Protokolleinträge 
+
+
+| IAM-Rollen  a| 
+* netapp-metadata-cloudtrail-cw-role-{uuid}
+* netapp-metadata-s3table-integration-role-{uuid}
+
+| Aktive Integration 
+
+
+| ObservabilityAdmin | S3TableIntegration | Bridges CloudWatch Logs in eine S3 Tables-Tabelle 
+
+
+| S3-Tabellen | aws-cloudwatch Bucket → logs.aws_cloudtrail__data | Speichert strukturierte, abfragbare CloudTrail-Ereignisse im Iceberg-Format 
+|===
+Das {uuid} ist eine zufällige 8-stellige Kennung, die beim Erstellen der Vorlage generiert wird.
+
+
+
+== Bevor Sie beginnen
+
+Um die Journaltabellenfunktion zu aktivieren, führen Sie folgende Schritte aus:
+
+* Sie haben ein bestehendes Volume mit einem S3-Zugangspunkt. link:create-volume.html["Erstellen Sie ein Volume mit einem S3-Zugriffspunkt"]
+* Stellen Sie die Netzwerkkonfiguration für den S3-Zugangspunkt auf *Internet* ein. link:edit-s3-access-point.adoc["Netzwerkkonfiguration für den S3-Zugangspunkt bearbeiten"].
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Gewähren Sie die Berechtigungen für _operations and remediation_"^] zu Ihren Workload Factory-Anmeldeinformationen.
+* Fügen Sie dem AWS-Konto, das Sie zum Ausführen der CloudFormation-Bereitstellung verwenden, die folgenden IAM-Richtlinienberechtigungen hinzu, um die Journaltabelle einzurichten.
++
+.IAM-Richtlinienberechtigungen für die Journaltabelleneinrichtung
+[%collapsible]
+====
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CFNStack",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:CreateStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents"
+            ],
+            "Resource": "arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*"
+        },
+        {
+            "Sid": "StarResources",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:GetTemplateSummary",
+                "cloudtrail:DescribeTrails",
+                "logs:DescribeLogGroups",
+                "logs:ListSourcesForS3TableIntegration",
+                "observabilityadmin:CreateS3TableIntegration",
+                "observabilityadmin:GetS3TableIntegration",
+                "observabilityadmin:TagResource",
+                "observabilityadmin:ListTagsForResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3Bucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:PutBucketPolicy",
+                "s3:PutBucketTagging"
+            ],
+            "Resource": "arn:aws:s3:::netapp-metadata-*"
+        },
+        {
+            "Sid": "IAMRoles",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:TagRole",
+                "iam:GetRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/netapp-metadata-*"
+        },
+        {
+            "Sid": "PassRole",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::*:role/netapp-metadata-*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": [
+                        "cloudtrail.amazonaws.com",
+                        "logs.amazonaws.com"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "CloudTrail",
+            "Effect": "Allow",
+            "Action": [
+                "cloudtrail:CreateTrail",
+                "cloudtrail:StartLogging",
+                "cloudtrail:AddTags",
+                "cloudtrail:PutEventSelectors"
+            ],
+            "Resource": "arn:aws:cloudtrail:*:*:trail/netapp-metadata-*"
+        },
+        {
+            "Sid": "CWLogGroup",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:DeleteLogGroup",
+                "logs:PutRetentionPolicy",
+                "logs:TagResource",
+                "logs:AssociateSourceToS3TableIntegration"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:netapp-metadata-*"
+        },
+        {
+            "Sid": "S3Table",
+            "Effect": "Allow",
+            "Action": [
+                "s3tables:CreateTableBucket",
+                "s3tables:PutTableBucketEncryption",
+                "s3tables:PutTableBucketPolicy"
+            ],
+            "Resource": "arn:aws:s3tables:*:*:bucket/aws-cloudwatch"
+        }
+    ]
+}
+----
+====
+
+
+
+
+== Einrichtung der Journaltabelleninfrastruktur
+
+Richten Sie die Infrastruktur so ein, dass AWS-Serviceereignisse vom S3-Zugriffspunkt in der Journaltabelle erfasst werden.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie S3-Zugriffspunkte verwalten möchten, dann wählen Sie *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Wählen Sie auf dem Bildschirm *S3-Zugriffspunkte verwalten* das Menü Aktionen und dann *Zugriffspunkt bearbeiten* aus.
+. Im Dialogfeld *S3-Zugriffspunkt bearbeiten* stellen Sie sicher, dass die Netzwerkkonfiguration auf *Internet* eingestellt ist.
+. Folgen Sie den Anweisungen im Dialogfeld, um die Infrastruktur für die Journaltabellenfunktion einzurichten.
+. Laden Sie die CloudFormation-Vorlage herunter.
+. Stellen Sie den CloudFormation Stack in Ihrem AWS-Konto bereit.
++
+.. Speichern Sie die JSON-Vorlage in einer Datei.
+.. Stellen Sie die Vorlage mithilfe der AWS CLI oder der AWS Management Console bereit.
+.. Warten Sie, bis der Stapel den  `CREATE_COMPLETE` Status erreicht hat.
+.. Ermitteln Sie den CloudTrail ARN aus den Stack-Ausgaben.
+
+
+. Kehren Sie zur Workload Factory-Konsole zurück und dann zurück zum Volume, für das Sie S3-Zugriffspunkte verwalten möchten.
+. Wählen Sie im Menü für Volume-Aktionen die Option *Details anzeigen* aus.
+. Geben Sie im Tab *Journaltabelle* die CloudTrail ARN ein.
+. Wählen Sie *Anwenden*.
+
+
+Sollte einer der Schritte fehlschlagen, <<Troubleshoot the infrastructure setup,Fehlerbehebung bei der Infrastruktureinrichtung für die Journaltabelle>> oder wenden Sie sich an den NetApp Support, um Hilfe zu erhalten.
+
+
+
+== Beheben Sie Probleme bei der Infrastruktureinrichtung für die Journaltabelle
+
+Mithilfe der AWS Management Console oder der AWS CLI können Sie Fehler während der CloudFormation-Stack-Bereitstellung und der von ihr erstellten Ressourcen beheben.
+
+Nach Behebung des Problems übermitteln Sie den CloudTrail ARN erneut, um die Einrichtung der Journaltabelle neu zu starten.
+
+
+
+=== Häufige CloudFormation Bereitstellungsfehler
+
+
+
+==== Unzureichende IAM-Berechtigungen
+
+Die Rolle/der Benutzer, der die Bereitstellung durchführt, benötigt bestimmte Berechtigungen. Siehe <<Bevor Sie beginnen,Bevor Sie beginnen>> für die vollständige Richtlinie.
+
+Falls der Stack mit einem  `AccessDenied` oder  `InsufficientPermission` Fehler fehlschlägt, überprüfen Sie die Stack-Ereignisse und suchen Sie im  `ResourceStatusReason` Feld nach der fehlenden Berechtigung.
+
+
+
+==== CloudTrail-Limit
+
+AWS legt standardmäßig ein Limit von 5 Trails pro Region fest. Wenn das Konto bereits 5 Trails enthält, `the FsxDataEventTrail` schlägt die Ressource mit folgender Fehlermeldung fehl: Maximum number of trails (5) exceeded. Sie können die Anzahl der Trails auf regionaler Ebene mit folgendem Befehl überprüfen:
+
+[source, cli]
+----
+aws cloudtrail describe-trails \
+  --no-include-shadow-trails \
+  --region <region> \
+  --query "length(trailList)"
+----
+.Auflösungsoptionen
+* Option 1: Löschen Sie einen nicht verwendeten Pfad in der Region, um Platz zu schaffen.
+* Option 2: Verwenden Sie einen vorhandenen Trail. Entfernen Sie die  `FsxDataEventTrail`, `CloudTrailBucket`, `CloudTrailBucketPolicy`, und  `CloudTrailToCloudWatchRole` Ressourcen aus der Vorlage, bevor Sie den CloudFormation Stack erneut bereitstellen. Übergeben Sie dann den ARN Ihres vorhandenen Trails während des Initialisierungsschritts. Der vorhandene Trail muss eine CloudWatch Loggruppe konfiguriert haben, eine mit der Loggruppe verknüpfte S3TableIntegration besitzen und Datenereignisse protokollieren.
+
+
+
+
+==== Die S3-Tabellenintegration ist bereits vorhanden.
+
+Wenn das Konto bereits eine S3TableIntegration für die Datenquelle aws_cloudtrail besitzt, schlägt die Ressource LogsToS3TableIntegration fehl.
+
+.Auflösung
+Entfernen Sie die  `LogsToS3TableIntegration` und  `S3TableIntegrationRole` Ressourcen aus der Vorlage, bevor Sie den CloudFormation-Stack erneut bereitstellen. Das System verwendet automatisch die bestehende Integration, solange Sie diese für aws_cloudtrail data events konfigurieren.
+
+Um zu prüfen, ob eine Integration bereits besteht:
+
+[source, cli]
+----
+aws observabilityadmin list-s3-table-integrations --region <your-region>
+----
+
+
+==== S3-Bucket-Name existiert bereits
+
+Der Bucket-Name `netapp-metadata-cloudtrail-events-logs-{uuid}` ist weltweit eindeutig. Bei einer Namenskollision muss die Vorlage erneut angefordert werden, um eine neue UUID zu erhalten.
+
+
+
+==== IAM-Rolle existiert bereits
+
+Falls bei einer vorherigen Teilbereitstellung IAM-Rollen mit dem `netapp-metadata-*` Namensmuster zurückgeblieben sind, schlägt die Rollenerstellung im Stack fehl. Löschen Sie zuerst die verwaisten Rollen:
+
+[source, json]
+----
+aws iam delete-role-policy \
+  --role-name netapp-metadata-cloudtrail-cw-role-<uuid> \
+  --policy-name <policy-name>
+aws iam delete-role \
+  --role-name netapp-metadata-cloudtrail-cw-role-<uuid>
+----
+
+
+=== Fehler nach Aktivierung der Journaltabelle
+
+Nach der Übermittlung des CloudTrail ARN validiert Workload Factory die gesamte Ressourcenpipeline, indem automatisch ein Seed- (Test-)Ereignis gesendet wird. Bei Erfolg wird das Seed-Ereignis in der S3 Tables-Tabelle angezeigt. Der Test dauert etwa 10 Minuten.
+
+Wenn die Testvalidierung fehlschlägt, erhalten Sie möglicherweise eine der folgenden Fehlermeldungen:
+
+[cols="1,1"]
+|===
+| Fehlermeldung | Bedeutung 
+
+
+| Die Tabelle aws_cloudtrail__data wurde nicht in {bucket} erstellt. Überprüfen Sie die Berechtigungen für s3table. | S3TableIntegration hat die von CloudWatch verwaltete Tabelle nicht erstellt. Die Pipeline zwischen CloudWatch Logs und S3-Tabellen ist unterbrochen. 
+
+
+| Die Tabelle ist vorhanden, aber das Journal-Seed-Ereignis wird nicht angezeigt. Überprüfen Sie CloudTrail und CloudWatch Berechtigungen. | Die Tabelle existiert, aber das entsprechende Seed-Ereignis ist nie eingetroffen. Die Pipeline ist zwischen CloudTrail und der S3 Tables-Tabelle unterbrochen. 
+
+
+| Die Einrichtung des Journals ist fehlgeschlagen. ... | Beim Hintergrundprozess (Seed/Poll) ist ein Fehler aufgetreten. Prüfen Sie die nachfolgende Meldung für Details. 
+|===
+.Lösungsschritte
+Wenn das Journal den Status „FEHLGESCHLAGEN“ erreicht, verfolgen Sie das Ausgangsereignis durch die Pipeline-Phasen, um genau zu ermitteln, wo es abgebrochen wurde. Jeder Schritt ist einer bestimmten AWS-Ressource zugeordnet, die von der Vorlage erstellt wurde.
+
+. Überprüfen Sie den CloudTrail S3-Bucket.
++
+Der Trail schreibt Rohereignisprotokolle in den S3-Bucket `netapp-metadata-cloudtrail-events-logs`. Suchen Sie nach den neuesten Protokolldateien.
+
++
+Wenn keine Protokolldateien vorhanden sind, erfasst CloudTrail keine Ereignisse. Überprüfen Sie Folgendes:
+
++
+** Der Trail wird protokolliert (`IsLogging: true`)
+** Die erweiterten Ereignisselektoren enthalten den korrekten Zugriffspunkt-ARN
+** Die erweiterten Ereignisselektoren umfassen die Filter für `eventCategory = Data` und `resources.type = AWS::S3::AccessPoint`
+
+
+. Überprüfen Sie die CloudWatch Log Group.
++
+Der Pfad übermittelt außerdem Ereignisse an die CloudWatch Log Group. Der Name der Log Group beginnt mit `netapp-metadata-journal-data-events-<uuid>`.
+
++
+** Wenn die Protokollgruppe leer ist, liefert CloudTrail keine Ereignisse an CloudWatch. Überprüfen Sie, ob die  `CloudTrailToCloudWatchRole` IAM-Rolle existiert und über  `logs:CreateLogStream` und  `logs:PutLogEvents` Berechtigungen verfügt und ob der Trail mit den korrekten  `CloudWatchLogsLogGroupArn` und  `CloudWatchLogsRoleArn` konfiguriert ist.
+** Wenn das Ausgangsereignis in der Protokollgruppe erscheint, liegt das Problem in einem nachfolgenden Schritt – fahren Sie mit Schritt 3 fort.
+
+
+. Überprüfen Sie die Tabelle S3 Tables (`aws-cloudwatch`).
++
+Die S3TableIntegration erstellt automatisch einen Tabellen-Bucket namens aws-cloudwatch und füllt eine Tabelle unter logs.aws_cloudtrail__data. Diese Tabelle wird erst erstellt, nachdem das erste Ereignis verarbeitet wurde.
+
++
+** Wenn der aws-cloudwatch-Tabellen-Bucket nicht existiert, dann fehlen die `S3TableIntegrationRole` Berechtigungen. Es benötigt `s3tables:CreateTableBucket`, `s3tables:PutTableBucketEncryption` und `s3tables:PutTableBucketPolicy` — alle beschränkt auf `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`.
+** Wenn der Tabellen-Bucket existiert, aber `logs.aws_cloudtrail__data` nicht, dann leitet die Integration keine Ereignisse weiter. Die Integration muss `Status: ACTIVE` anzeigen und `aws_cloudtrail` als Protokollquelle einbinden.
+** Existiert die Tabelle, ist das entsprechende Ereignis aber nicht darin enthalten, befindet es sich möglicherweise noch in der Übertragung. Die Datenaufnahme in S3-Tabellen kann eine gewisse Latenz aufweisen. Warten Sie einige Minuten. Sollte das Ereignis nach 15–20 Minuten immer noch nicht angezeigt werden, ist die Integration möglicherweise fehlgeschlagen.
+
+
+. Fragen Sie das Seed-Ereignis direkt ab.
++
+.. Öffnen Sie die S3-Tabellen in der AWS-Managementkonsole.
+.. Navigieren Sie zum aws-cloudwatch table bucket → aws_cloudtrail__data table und verwenden Sie die Schaltfläche *Vorschau*, um eine Schnellabfrage direkt im Browser auszuführen.
+.. Wenn das Ereignis in der Tabelle vorhanden ist, das Journal aber immer noch  `FAILED` anzeigt, dann ist das Abfragefenster möglicherweise abgelaufen, bevor das Ereignis eingetreten ist.
+
+
+
+
+Nachdem das Problem behoben wurde, kehren Sie zur Workload Factory-Konsole zurück. Versuchen Sie es <<Einrichtung der Journaltabelleninfrastruktur,Initialisierung der Journaltabelleneinrichtung>> erneut, indem Sie den Trail-ARN erneut übermitteln.
+
+. Sollte die Einrichtung weiterhin fehlschlagen, wenden Sie sich an den NetApp Support, um Unterstützung zu erhalten.
+
+
+
+
+== Berechtigungsreferenz für die Einrichtung der Journaltabelle
+
+Die IAM-Rolle, die den CloudFormation-Stack zur Aktivierung der Journaltabellenfunktion bereitstellt, benötigt die folgenden Berechtigungen. Siehe <<Bevor Sie beginnen,Bevor Sie beginnen>> für eine kopierbare JSON-Richtlinie mit den erforderlichen Berechtigungen.
+
+
+
+=== Stapeloperationen
+
+[cols="1,1,1"]
+|===
+| Berechtigung | Ressource | Warum 
+
+
+| cloudformation:CreateStack | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | Erstellen Sie den Stapel 
+
+
+| cloudformation:DescribeStacks | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | Stack-Status überwachen 
+
+
+| cloudformation:DescribeStackEvents | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | Diagnose von Fehlern auf Ressourcenebene cloudformation:GetTemplateSummary * Vorabprüfung der Vorlage 
+|===
+
+
+=== CloudTrail
+
+[cols="1,1,1"]
+|===
+| Berechtigung | Ressource | Warum 
+
+
+| cloudtrail:CreateTrail | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | Erstelle den Pfad 
+
+
+| cloudtrail:StartLogging | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | Protokollierung aktivieren 
+
+
+| cloudtrail:AddTags | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | Identifikationsetikett anbringen 
+
+
+| cloudtrail:PutEventSelectors | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | Datenerfassungsereignisse konfigurieren 
+
+
+| cloudtrail:DescribeTrails | * | Trail-ARN für Stack-Ausgabe auflösen 
+|===
+
+
+=== S3
+
+[cols="1,1,1"]
+|===
+| Berechtigung | Ressource | Warum 
+
+
+| s3:CreateBucket | arn:aws:s3:::netapp-metadata-* | Erstelle den CloudTrail Log-Bucket 
+
+
+| s3:PutBucketPolicy | arn:aws:s3:::netapp-metadata-* | Erlauben Sie CloudTrail, Protokolle zu schreiben 
+
+
+| s3:PutBucketTagging | arn:aws:s3:::netapp-metadata-* | Identifikationsetikett anbringen 
+|===
+
+
+=== IAM
+
+[cols="1,1,1"]
+|===
+| Berechtigung | Ressource | Warum 
+
+
+| iam:CreateRole | arn:aws:iam::*:role/netapp-metadata-* | Erstellen Sie beide IAM-Rollen 
+
+
+| iam:PutRolePolicy | arn:aws:iam::*:role/netapp-metadata-* | Inline-Richtlinien anhängen 
+
+
+| iam:TagRole | arn:aws:iam::*:role/netapp-metadata-* | Identifikationsetikett anbringen 
+
+
+| iam:GetRole | arn:aws:iam::*:role/netapp-metadata-* | Bestätigen, dass die Rolle aktiv ist 
+
+
+| iam:PassRole | arn:aws:iam::*:role/netapp-metadata-* (Bedingung: PassedToService = cloudtrail.amazonaws.com, logs.amazonaws.com) | Rollen an CloudTrail und CloudWatch Logs übergeben 
+|===
+
+
+=== CloudWatch Logs
+
+[cols="1,1,1"]
+|===
+| Berechtigung | Ressource | Warum 
+
+
+| Protokolle:CreateLogGroup | arn:aws:logs:*:*:log-group:netapp-metadata-* | Protokollgruppe erstellen 
+
+
+| Protokolle:DeleteLogGroup | arn:aws:logs:*:*:log-group:netapp-metadata-* | Protokollgruppe bereinigen, falls die Erstellung fehlgeschlagen ist 
+
+
+| Protokolle:PutRetentionPolicy | arn:aws:logs:*:*:log-group:netapp-metadata-* | 30-tägige Aufbewahrungsfrist festlegen 
+
+
+| Protokolle:TagResource | arn:aws:logs:*:*:log-group:netapp-metadata-* | Identifikationsetikett anbringen 
+
+
+| logs:AssociateSourceToS3TableIntegration | arn:aws:logs:*:*:log-group:netapp-metadata-* | Verknüpfen Sie die CloudTrail-Quelle mit S3-Tabellen 
+
+
+| Protokolle:DescribeLogGroups | * | Prüfen Sie, ob die Protokollgruppe existiert 
+
+
+| logs:ListSourcesForS3TableIntegration | * | Integrationsassoziation bestätigen 
+|===
+
+
+=== ObservabilityAdmin
+
+[cols="1,1,1"]
+|===
+| Berechtigung | Ressource | Warum 
+
+
+| observabilityadmin:CreateS3TableIntegration | * | Erstellen Sie die CloudWatch → S3-Tabellen-Brücke 
+
+
+| observabilityadmin:GetS3TableIntegration | * | Bestätigen Sie, dass die Integration aktiv ist. 
+
+
+| observabilityadmin:TagResource | * | Identifikationsetikett anbringen 
+
+
+| observabilityadmin:ListTagsForResource | * | Drifterkennung 
+|===
+
+
+=== S3-Tabellen
+
+[cols="1,1,1"]
+|===
+| Berechtigung | Ressource | Warum 
+
+
+| s3tables:CreateTableBucket | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | Erstellen Sie den S3-Tables-Bucket (über die Integrationsrolle) 
+
+
+| s3tables:PutTableBucketEncryption | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | AES256-Verschlüsselung einstellen 
+
+
+| s3tables:PutTableBucketPolicy | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | Zugriff auf CloudWatch Logs zulassen 
+|===

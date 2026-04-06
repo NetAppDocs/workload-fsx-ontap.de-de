@@ -87,14 +87,16 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 .. *Name der Speicher-VM*: Geben Sie optional einen Namen der Speicher-VM ein.
 .. *Lautstärkestil*: Wählen Sie *FlexVol* oder *FlexGroup* Lautstärke.
 +
-Standardmäßig ist ein FlexVol-Volume-Stil ausgewählt.
+*** Ein _FlexVol Volume_ ist eine Art von logischem Speicher in ONTAP, mit dem Sie Daten verwalten können. FlexVol Volumes können zwischen Aggregaten oder Knoten innerhalb derselben Storage Virtual Machine (SVM) verschoben werden, ohne den Client-Zugriff zu unterbrechen. Der FlexVol Volume-Stil ist standardmäßig ausgewählt.
+*** Ein FlexGroup-Volume ist ein horizontal skalierbarer NAS-Container, der hohe Leistung sowie automatische Lastverteilung und Skalierbarkeit bietet. Es besteht aus mehreren Mitgliedsvolumes (Bestandteilen), die als zugrundeliegende FlexVol Volumes den Datenverkehr transparent teilen.
 
-+
-Die Größe des FlexGroup-Volumes hängt von der Anzahl der Bestandteile ab und erfordert 100 GiB pro Bestandteil.
 
 .. *Volumengröße*: Geben Sie die Volumengröße und Einheit ein.
 +
 Aktivieren Sie optional Volume Autogrow. Diese Option ist verfügbar, wenn Sie *Dateizugriff* als Zugriffstyp für das Volume auswählen.
+
++
++ FlexGroup Volume hängt die Größe vom Anzahl der Bestandteile ab und erfordert 100 GiB pro Bestandteil.
 
 .. *Volume-Autogrow*: Aktivieren Sie optional die Funktion „Volume-Autogrow“, um die Volume-Kapazität automatisch zu erweitern, bis das Volume die maximale Größe erreicht. Diese Funktion trägt der steigenden Datennutzung Rechnung und gewährleistet einen unterbrechungsfreien Betrieb.
 +
@@ -234,9 +236,10 @@ Wenn die Funktion nicht verfügbar ist, kann dies einen der folgenden Gründe ha
 
 
 
-. Geben Sie unter Erweiterte Konfiguration Folgendes an:
+. Geben Sie unter „Erweiterte Konfiguration“ die folgenden Details ein. Die Felder in diesem Abschnitt unterscheiden sich je nach gewähltem Volume-Stil.
 +
 .. *Verbindungspfad*: Geben Sie den Speicherort im Namespace der Speicher-VM ein, an dem das Volume gemountet wird. Der Standard-Verbindungspfad ist `/<volume-name>`.
+.. *Aggregatname*: Nur für FlexVol volumes. Wählen Sie das Aggregat aus, das das neue Volume aufnehmen soll.
 .. *Aggregatliste*: Nur für FlexGroup Volumes. Hinzufügen oder Entfernen von Aggregaten Die Mindestanzahl an Aggregaten ist eins.
 .. *Anzahl der Komponenten*: Nur für FlexGroup-Volumes. Geben Sie die Anzahl der Bestandteile pro Aggregat ein. Pro Komponente sind 100 gib erforderlich.
 

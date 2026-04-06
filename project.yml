@@ -126,7 +126,17 @@ sidebar:
       - title: Verwalten von SMB/CIFS-Freigaben
         url: "/manage-cifs-share.html"
       - title: S3-Zugriffspunkte verwalten
-        url: "/manage-s3-access-points.html"
+        entries:
+        - title: S3-Zugriffspunkte erstellen und anhängen
+          url: "/create-s3-access-points.html"
+        - title: S3-Zugangspunkte bearbeiten
+          url: "/edit-s3-access-points.html"
+        - title: Einrichtung der Journaltabelleninfrastruktur
+          url: "/setup-journal-table.html"
+        - title: Details zu S3-Zugangspunkten anzeigen
+          url: "/view-s3-details.html"
+        - title: S3-Zugangspunkte löschen
+          url: "/delete-s3-access-points.html"
       - title: Teilen Sie ein geklontes Volume auf
         url: "/split-cloned-volume.html"
       - title: Löschen Sie ein Volume
@@ -209,8 +219,6 @@ sidebar:
       url: "/support-registration.html"
     - title: Holen Sie sich Hilfe
       url: "/get-help.html"
-    - title: Fehlerbehebung
-      url: "/troubleshooting.html"
   - title: Rechtliche Hinweise
     url: "/legal-notices.html"
 product-family:

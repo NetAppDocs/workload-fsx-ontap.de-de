@@ -172,6 +172,10 @@ Nachdem ein Blockgerät sieben Tage lang nicht verwendet wurde, empfiehlt Worklo
 +
 Eine nicht voll ausgelastete SSD-Kapazitätsebene kann unnötige Kosten verursachen. Workload Factory empfiehlt, die SSD-Kapazität zu reduzieren und dabei einen freien Speicherpuffer von 20 % über der aktuell genutzten Kapazität beizubehalten. Eine Verringerungsoperation kann mehrere Stunden bis mehrere Tage dauern, und andere Dateisystemoperationen werden während dieser Zeit nicht unterstützt.
 
+* *Inaktive NAS-Volumes*
++
+Die Konfigurationsanalyse identifiziert NAS-Volumes, die nicht aktiv genutzt werden, und empfiehlt, die Volumes zu löschen oder zu archivieren, um Kosten zu reduzieren.
+
 
 
 .Wie es weiter geht

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: edit-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: Bearbeiten Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory. 
+---
+= Bearbeiten Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Aktualisieren Sie die S3-Zugriffspunktdetails und verwalten Sie die Tags für ein Volume in NetApp Workload Factory.
+
+Sie können die *Inventartabelle* für den Zugriffspunkt aktivieren oder deaktivieren. Die Inventartabelle generiert Metadaten für alle Objekte, auf die der S3-Zugriffspunkt zugreifen kann, und verursacht AWS S3-Anfragekosten. Weitere Informationen finden Sie unter link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^].
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, dessen S3-Zugriffspunkte Sie bearbeiten möchten, dann wählen Sie *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Wählen Sie auf dem Bildschirm *S3-Zugriffspunkte verwalten* das Menü Aktionen und dann *Zugriffspunkt bearbeiten* aus.
+. Nehmen Sie Aktualisierungen vor und wählen Sie dann *Anwenden*.
++
+Um die Infrastruktur für die Journaltabellenfunktion einzurichten, müssen Sie *Internet* als Netzwerkkonfiguration für den S3-Zugriffspunkt auswählen. link:setup-journal-table.adoc["Erfahren Sie, wie Sie die Journaltabelleninfrastruktur für NetApp Workload Factory einrichten."].
+
+

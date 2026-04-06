@@ -135,7 +135,7 @@ Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalt
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
 . Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Clientzugriff verwalten*.
-. Falls keine igroup existiert, erstellen Sie eine neue igroup, indem Sie *igroup erstellen* auswählen, und gehen Sie dann wie folgt vor:
+. Falls keine Initiatorgruppe existiert, erstellen Sie eine neue Initiatorgruppe, indem Sie *Map igroup > Create igroup* auswählen, und gehen Sie dann wie folgt vor:
 +
 .. *Blockgerätename*: Geben Sie einen Blockgerätenamen ein. Sie können mehrere Blockgeräte auswählen, die der igroup zugeordnet werden sollen.
 .. *Betriebssystemtyp*: Wählen Sie den Betriebssystemtyp aus.
@@ -145,7 +145,7 @@ Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalt
 .. Wählen Sie *Erstellen*.
 
 
-. Falls bereits eine igroup existiert, wählen Sie *Clientzugriff bearbeiten*, um Blockgeräte und Hostinitiatoren zur igroup hinzuzufügen oder daraus zu entfernen, und wählen Sie anschließend *Anwenden*.
+. Wenn bereits eine Initiatorgruppe (igroup) existiert, wählen Sie *Initiatorgruppe zuordnen > Vorhandene Initiatorgruppe zuordnen*, um Blockgeräte und Host-Initiatoren zur Initiatorgruppe hinzuzufügen oder daraus zu entfernen, und wählen Sie dann *Zuordnen*.
 
 
 

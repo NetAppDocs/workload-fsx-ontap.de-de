@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: delete-s3-access-points.html 
+keywords: S3, s3, access points, delete access points, remove access points 
+summary: Löschen Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory. 
+---
+= Löschen Sie die S3-Zugriffspunkte für ein Volume in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Löschen Sie vorhandene S3-Zugriffspunkte von einem Volume in NetApp Workload Factory.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem zu aktualisierenden Volume aus und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie S3-Zugriffspunkte verwalten möchten, dann wählen Sie *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Wählen Sie das Aktionsmenü für den S3-Zugriffspunkt, den Sie löschen möchten, und wählen Sie dann *Löschen*.
+. Im Dialogfeld *S3-Zugriffspunkt löschen* wählen Sie *Löschen*, um den S3-Zugriffspunkt vom Volume zu löschen.
++
+Workload Factory löscht weder die Inventar- noch die Journaltabelle, aber Sie können sie manuell über die AWS Management Console entfernen.
+
+
