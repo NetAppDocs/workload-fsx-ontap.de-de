@@ -59,7 +59,7 @@ Das {uuid} ist eine zufällige 8-stellige Kennung, die beim Erstellen der Vorlag
 Um die Journaltabellenfunktion zu aktivieren, führen Sie folgende Schritte aus:
 
 * Sie haben ein bestehendes Volume mit einem S3-Zugangspunkt. link:create-volume.html["Erstellen Sie ein Volume mit einem S3-Zugriffspunkt"]
-* Stellen Sie die Netzwerkkonfiguration für den S3-Zugangspunkt auf *Internet* ein. link:edit-s3-access-point.adoc["Netzwerkkonfiguration für den S3-Zugangspunkt bearbeiten"].
+* Stellen Sie die Netzwerkkonfiguration für den S3-Zugangspunkt auf *Internet* ein. link:edit-s3-access-points.html["Netzwerkkonfiguration für den S3-Zugangspunkt bearbeiten"].
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Gewähren Sie die Berechtigungen für _operations and remediation_"^] zu Ihren Workload Factory-Anmeldeinformationen.
 * Fügen Sie dem AWS-Konto, das Sie zum Ausführen der CloudFormation-Bereitstellung verwenden, die folgenden IAM-Richtlinienberechtigungen hinzu, um die Journaltabelle einzurichten.
 +
@@ -201,7 +201,7 @@ Richten Sie die Infrastruktur so ein, dass AWS-Serviceereignisse vom S3-Zugriffs
 . Wählen Sie *Anwenden*.
 
 
-Sollte einer der Schritte fehlschlagen, <<Troubleshoot the infrastructure setup,Fehlerbehebung bei der Infrastruktureinrichtung für die Journaltabelle>> oder wenden Sie sich an den NetApp Support, um Hilfe zu erhalten.
+Sollte einer der Schritte fehlschlagen, <<Beheben Sie Probleme bei der Infrastruktureinrichtung für die Journaltabelle,Fehlerbehebung bei der Infrastruktureinrichtung für die Journaltabelle>> oder wenden Sie sich an den NetApp Support, um Hilfe zu erhalten.
 
 
 

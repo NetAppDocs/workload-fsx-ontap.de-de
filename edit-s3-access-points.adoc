@@ -25,6 +25,6 @@ Sie können die *Inventartabelle* für den Zugriffspunkt aktivieren oder deaktiv
 . Wählen Sie auf dem Bildschirm *S3-Zugriffspunkte verwalten* das Menü Aktionen und dann *Zugriffspunkt bearbeiten* aus.
 . Nehmen Sie Aktualisierungen vor und wählen Sie dann *Anwenden*.
 +
-Um die Infrastruktur für die Journaltabellenfunktion einzurichten, müssen Sie *Internet* als Netzwerkkonfiguration für den S3-Zugriffspunkt auswählen. link:setup-journal-table.adoc["Erfahren Sie, wie Sie die Journaltabelleninfrastruktur für NetApp Workload Factory einrichten."].
+Um die Infrastruktur für die Journaltabellenfunktion einzurichten, müssen Sie *Internet* als Netzwerkkonfiguration für den S3-Zugriffspunkt auswählen. link:setup-journal-table.html["Erfahren Sie, wie Sie die Journaltabelleninfrastruktur für NetApp Workload Factory einrichten."].
 
 

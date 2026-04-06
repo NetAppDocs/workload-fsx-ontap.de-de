@@ -51,7 +51,7 @@ Bitte erfüllen Sie die folgenden Anforderungen, bevor Sie beginnen.
 
 
 .Ähnliche Informationen
-Optional können Sie die Journaltabellenfunktion mit S3-Zugriffspunkten in Workload Factory verwenden. Die Journaltabelleninfrastruktur erfasst und speichert Audit-Protokolle von Benutzerzugriffsereignissen und Objektoperationen über Amazon FSx for ONTAP volume access points hinweg. Um die Journaltabellenfunktion zu aktivieren, müssen Sie die erforderliche AWS-Infrastruktur einrichten, einschließlich AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch Protokollgruppen sowie AWS Identity and Access Management (IAM)-Rollen und -Richtlinien. link:setup-journal-table.adoc["Richten Sie die Journaltabelleninfrastruktur für NetApp Workload Factory ein."^].
+Optional können Sie die Journaltabellenfunktion mit S3-Zugriffspunkten in Workload Factory verwenden. Die Journaltabelleninfrastruktur erfasst und speichert Audit-Protokolle von Benutzerzugriffsereignissen und Objektoperationen über Amazon FSx for ONTAP volume access points hinweg. Um die Journaltabellenfunktion zu aktivieren, müssen Sie die erforderliche AWS-Infrastruktur einrichten, einschließlich AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch Protokollgruppen sowie AWS Identity and Access Management (IAM)-Rollen und -Richtlinien. link:setup-journal-table.html["Richten Sie die Journaltabelleninfrastruktur für NetApp Workload Factory ein."^].
 
 Weitere verwandte Themen:
 

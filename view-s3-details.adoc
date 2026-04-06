@@ -35,5 +35,5 @@ Die Details werden unter vier Registerkarten angezeigt: *Zugriffspunkt*, *Invent
 
 
 .Ähnliche Informationen
-* link:setup-journal-table.html["Richten Sie die Journaltabelleninfrastruktur ein und beheben Sie Einrichtungsprobleme für die Journaltabelle in NetApp Workload Factory."]
+* link:setup-journal-table.html["Einrichtung der Journaltabelleninfrastruktur"]
 
