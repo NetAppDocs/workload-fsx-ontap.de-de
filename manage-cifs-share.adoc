@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create 
-summary: Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in Workload Factory umfasst das Erstellen, Bestimmen des Benutzer- und Gruppenzugriffs sowie das Löschen. 
+summary: Die Verwaltung einer SMB- oder CIFS-Freigabe eines Volumes in Workload Factory umfasst die Erstellung, die Festlegung des Benutzer- und Gruppenzugriffs sowie die Löschung. 
 ---
 = Verwalten der SMB/CIFS-Freigabe für ein Volume in Workload Factory
 :allow-uri-read: 

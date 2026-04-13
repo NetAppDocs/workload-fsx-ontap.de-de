@@ -1941,7 +1941,6 @@
   <block id="df22e5c72d75cea7ae766daf660bd529" category="summary">Verwalten Sie bei Bedarf den Sicherungszeitplan für ein FSx for ONTAP -Dateisystem in NetApp Workload Factory.</block>
   <block id="be1c92aa6bef23dd57df3395c46827bb" category="paragraph">Verwalten Sie den Sicherungszeitplan für ein FSx for ONTAP -Dateisystem in NetApp Workload Factory.</block>
   <block id="93ae473ca3e8f97f82687e6f98eab1da" category="list-text">Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, für das Sie den Sicherungszeitplan aktualisieren möchten, und wählen Sie dann *Verwalten*.</block>
-  <block id="da0f0bd52c148eab60b2dfefe8e25fa3" category="summary">Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in Workload Factory umfasst das Erstellen, Bestimmen des Benutzer- und Gruppenzugriffs sowie das Löschen.</block>
   <block id="f73fd134806728f0a5ac79982e11ead7" category="doc">Verwalten der SMB/CIFS-Freigabe für ein Volume in Workload Factory</block>
   <block id="c69f3e9214ff94aa0825993b6fb1b85a" category="paragraph">Die Verwaltung der SMB/CIFS-Freigabe eines Volumes in Workload Factory umfasst das Erstellen von SMB/CIFS-Freigaben, das Bestimmen der Benutzer und Gruppen, denen Zugriff gewährt werden soll, und der ihnen zu erteilenden Berechtigungsstufe sowie das Löschen von SMB/CIFS-Freigaben.</block>
   <block id="4b898528f057698b461041b6d7447cfe" category="list-text">Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü des Volumes aus, für das Sie die SMB-Freigabe ändern möchten.</block>
@@ -3001,4 +3000,7 @@
   <block id="58ff05ec25b45f54f79eb1afc9e31b9c" category="list-text">Stellen Sie die Netzwerkkonfiguration für den S3-Zugangspunkt auf *Internet* ein. <block ref="f5b1c6fb53ebc8db45e1c55bd4e00f01" category="inline-link-macro-rx"></block>.</block>
   <block id="559b775ce267386e1398935c6753e6f3" category="paragraph">Sollte einer der Schritte fehlschlagen, <block ref="05993fa90b9226bcf7edb149f0761729" category="inline-xref-macro-rx"></block> oder wenden Sie sich an den NetApp Support, um Hilfe zu erhalten.</block>
   <block id="e520cc743022825140834d2b02cc8cba" category="list-text"><block ref="e520cc743022825140834d2b02cc8cba" category="inline-link-macro-rx"></block></block>
+  <block id="d08fabf4c0fdff2290096692a4ffa28a" category="section-title">Letzter Zugriffszeitpunkt für Blockgeräte</block>
+  <block id="fa4bdc942217a8579f785220b2742233" category="paragraph">Workload Factory meldet den letzten Zugriffszeitpunkt für Blockgeräte. Dieser Zeitpunkt basiert auf dem letzten Zugriff auf die Initiatorgruppe in Workload Factory. Die Kenntnis des letzten Zugriffszeitpunkts jedes Blockgeräts ermöglicht die Optimierung Ihrer Ressourcen.</block>
+  <block id="9b6ea8e99ee787981ebaca2de09e7c7f" category="summary">Die Verwaltung einer SMB- oder CIFS-Freigabe eines Volumes in Workload Factory umfasst die Erstellung, die Festlegung des Benutzer- und Gruppenzugriffs sowie die Löschung.</block>
 </blocks>
