@@ -119,6 +119,14 @@ AWS Secrets Manager wird bei Verwendung eines Konsolenagenten nicht unterstützt
 
 Die maximale Anzahl an S3-Zugriffspunkten pro Speicher-VM beträgt 4.000.
 
+
+
+== Einschränkungen bei der Migrationsreplikation von Storage-VMs
+
+* Workload Factory unterstützt keine Migrationsreplikation für Storage-VMs zwischen FSx for ONTAP-Dateisystemen der ersten und zweiten Generation.
+* Die Replikation bei Systemumschaltung wird für Volumes mit S3-Zugriffspunkten oder ONTAP S3-Konfigurationen, einschließlich object-store-server, buckets, users, groups oder policies auf dem vserver, nicht unterstützt.
+
+
 Hinweis:
 
 . Gilt für Amazon FSX for NetApp ONTAP
