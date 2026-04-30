@@ -11,7 +11,7 @@ summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisyst
 
 
 [role="lead"]
-Erstellen Sie eine Replikationsbeziehung für ein FSx for ONTAP-Dateisystem in der NetApp Workload Factory, um Datenverlust im Falle eines unvorhergesehenen Ausfalls zu vermeiden. Sie können Daten zwischen zwei FSx for ONTAP-Dateisystemen oder zwischen einem lokalen ONTAP-System und einem FSx for ONTAP-Dateisystem replizieren.
+Replizieren Sie Daten in NetApp Workload Factory, um sich gegen Datenverlust zu schützen, falls die Region, in der sich Ihre Daten befinden, von einer Katastrophe betroffen ist. Die Datenreplikation wird zwischen FSx for ONTAP-Dateisystemen und lokalen ONTAP-Systemen oder Cloud Volumes ONTAP unterstützt.
 
 Beim Replizieren von Speicher-VM-Daten und Konfigurationseinstellungen müssen Sie zuerst die Replikationsbeziehung erstellen und initialisieren und dann mindestens einmal warten, bis die Daten synchronisiert sind, bevor Sie den Umstellungsvorgang abschließen können.
 
@@ -61,7 +61,7 @@ Für die Migration der Speicher-VM-Daten und Konfigurationseinstellungen müssen
 
 == Schritt 1: Replikationsbeziehung erstellen
 
-Replizieren Sie Daten zwischen zwei FSx for ONTAP-Dateisystemen oder zwischen einem lokalen ONTAP-System und einem FSx for ONTAP-Dateisystem.
+Replizieren Sie Daten zwischen zwei FSx for ONTAP-Dateisystemen, zwischen einem lokalen ONTAP-System und einem FSx for ONTAP-Dateisystem oder zwischen Cloud Volumes ONTAP und einem FSx for ONTAP-Dateisystem.
 
 .Bevor Sie beginnen
 Überprüfen Sie diese Anforderungen, bevor Sie beginnen.
