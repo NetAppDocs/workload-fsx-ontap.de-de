@@ -43,14 +43,12 @@ sidebar:
         url: "/create-link.html"
       - title: Links verwalten
         url: "/manage-links.html"
+    - title: Erstellen eines Volumes
+      url: "/create-volume.html"
     - title: Ermitteln und Anzeigen von Cache-Volumes
       url: "/discover-cache-volumes.html"
-    - title: Volumes managen
-      entries:
-      - title: Erstellen eines Volumes
-        url: "/create-volume.html"
-      - title: Zugriff auf Ihre Daten
-        url: "/access-data.html"
+    - title: Zugriff auf Ihre Daten
+      url: "/access-data.html"
     - title: Blockspeicherressourcen erstellen
       entries:
       - title: Erstellen Sie eine Initiatorgruppe
@@ -143,6 +141,8 @@ sidebar:
       entries:
       - title: Blockspeicher verwalten
         url: "/manage-block-storage.html"
+      - title: Tags auf Blockgeräte anwenden
+        url: "/apply-block-device-tags.html"
     - title: Filesystem-Administration
       entries:
       - title: Dateisystemkapazität manuell anpassen

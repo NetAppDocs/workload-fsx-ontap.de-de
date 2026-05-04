@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: apply-block-device-tags.html 
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block devices 
+summary: Wenden Sie ONTAP-Tags automatisch auf Ihre Blockgeräte an, um Ressourcenmanagement in NetApp Workload Factory zu ermöglichen. 
+---
+= Wenden Sie ONTAP-Tags auf Blockgeräte in NetApp Workload Factory an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nutzen Sie das native EC2-Benutzerdatenskript von NetApp Workload Factory, um Blockgeräte während der AWS EC2-Instance-Bereitstellung automatisch zu erstellen und zu taggen. Fügen Sie das EC2-Benutzerdatenskript der Vorlage des Assistenten zum Starten von Instances hinzu, wenn Sie eine EC2-Instance über die AWS EC2-Konsole bereitstellen. Nach der Bereitstellung verwendet Workload Factory die vom Skript erfassten Metadaten, um Ihren Blockgeräten ONTAP-Tags zuzuweisen. Mithilfe dieser Tags können Sie erkennen, welcher Host welches Blockgerät verwendet, sodass Sie die Nutzung bei der Fehlerbehebung oder im Rahmen von Audits schnell dem zuständigen Host zuordnen können.
+
+.Über diese Aufgabe
+Das EC2-Benutzerdatenskript erstellt Blockgeräte und wendet während der EC2-Instanzbereitstellung EC2-Tags auf ONTAP-Ebene auf die Blockgeräte an.
+
+Das dem Blockgerät zugewiesene _EC2-Tag_ enthält den EC2-Namen, die EC2-ID und den Mount-Pfad für das/die Blockgerät(e) innerhalb der EC2-Instanz.
+
+.Schritte
+. Folgen Sie link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html["Die Amazon Elastic Compute Cloud-Anleitung zum Starten einer EC2-Instanz"] dem Assistenten zum Starten der Instanz in der AWS EC2-Konsole.
+. Fügen Sie das EC2-Benutzerdatenskript zur Vorlage des Assistenten zum Starten von Instanzen hinzu, um Blockgeräte automatisch zu erstellen und zu kennzeichnen.
++
+Gehen Sie zu unserem GitHub-Repository FSx-ONTAP-sample-scripts, um die link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount["EC2-Benutzerdatenskript"] zu erhalten.
+
+. Starten Sie die Instanz.
++
+Das EC2-Benutzerdatenskript wendet automatisch ONTAP-Tags auf neue Blockspeichergeräte an, die auf der EC2-Instanz gehostet werden.
+
+. Bei bestehenden EC2-Instanzen werden Benutzerdatenskripte erst nach einem Neustart wirksam.
+
+
+.Ergebnis
+EC2-Tags erscheinen in der Blockgerätetabelle innerhalb des zugehörigen FSx for ONTAP file system.
+
+.Ähnliche Informationen
+* link:create-igroup.html["Erstellen Sie Initiatorgruppen (igroups) für ein Dateisystem in NetApp Workload Factory"]
+* link:manage-block-storage.html["Blockspeicher für ein Dateisystem in NetApp Workload Factory verwalten"]
+

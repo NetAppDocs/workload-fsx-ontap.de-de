@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-block-storage.html 
-keywords: block storage, manage block storage, igroups, block devices, client access, delete block device 
+keywords: block storage, manage block storage, igroups, block devices, view details, clone, client access, delete block device 
 summary: Blockspeicher für ein FSx for ONTAP-Dateisystem in NetApp Workload Factory verwalten. 
 ---
 = Blockspeicher für ein Dateisystem in NetApp Workload Factory verwalten
@@ -14,7 +14,7 @@ summary: Blockspeicher für ein FSx for ONTAP-Dateisystem in NetApp Workload Fac
 Verwenden Sie NetApp Workload Factory, um die Verwaltung Ihrer Blockspeicherressourcen, einschließlich Initiatorgruppen und Blockgeräten, zu vereinfachen und den Clientzugriff auf FSx for ONTAP Blockgeräte zu steuern, um optimale Leistung zu erzielen und die Kosten zu minimieren.
 
 .Über diese Aufgabe
-Über die Workload Factory-Konsole können Sie Initiatorgruppen (igroups) verwalten, um den Clientzugriff auf Blockgeräte zu steuern. Sie können außerdem Details zu Blockgeräten anzeigen, die Kapazität erhöhen, den Clientzugriff verwalten, Daten für inaktive Blockgeräte archivieren und Blockgeräte löschen.
+Über die Workload Factory-Konsole können Sie Initiatorgruppen (igroups) verwalten, um den Clientzugriff auf Blockgeräte zu steuern. Außerdem können Sie Details zu Blockgeräten anzeigen, die Kapazität erhöhen, Klone erstellen, den Clientzugriff verwalten, Daten inaktiver Blockgeräte archivieren und Blockgeräte löschen.
 
 Prüfen Sie das Blockspeicherdiagramm, um Folgendes zu überprüfen:
 
@@ -106,25 +106,6 @@ Es werden allgemeine Details, Verbrauchs-, Zugriffs- und Schutzinformationen fü
 
 
 
-=== Erhöhen Sie die Kapazität eines Blockgeräts
-
-Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
-
-.Schritte
-. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
-. Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Kapazität erhöhen*.
-. Geben Sie die neue Kapazität für das Blockgerät ein und wählen Sie die Einheit aus.
-. Wählen Sie *Erhöhen*, um die Änderungen anzuwenden.
-
-
-
-NOTE: Nach der Vergrößerung des Blockgeräts befolgen Sie die Vorgehensweise Ihres Host-Betriebssystems, um die neue Größe zu ermitteln und das Dateisystem zu erweitern.
-
-
-
 === Clientzugriff für ein Blockgerät verwalten
 
 Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalten, indem Sie igroups erstellen und Blockgeräte sowie Host-Initiatoren hinzufügen oder entfernen.
@@ -146,6 +127,54 @@ Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalt
 
 
 . Wenn bereits eine Initiatorgruppe (igroup) existiert, wählen Sie *Initiatorgruppe zuordnen > Vorhandene Initiatorgruppe zuordnen*, um Blockgeräte und Host-Initiatoren zur Initiatorgruppe hinzuzufügen oder daraus zu entfernen, und wählen Sie dann *Zuordnen*.
+
+
+
+
+=== Erhöhen Sie die Kapazität eines Blockgeräts
+
+Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Kapazität erhöhen*.
+. Geben Sie die neue Kapazität für das Blockgerät ein und wählen Sie die Einheit aus.
+. Wählen Sie *Erhöhen*, um die Änderungen anzuwenden.
+
+
+
+NOTE: Nach der Vergrößerung des Blockgeräts befolgen Sie die Vorgehensweise Ihres Host-Betriebssystems, um die neue Größe zu ermitteln und das Dateisystem zu erweitern.
+
+
+
+=== Klonen eines Blockgeräts
+
+Sie können jederzeit einen Klon eines bestehenden Blockgeräts erstellen. Ein Blockgeräte-Klon ist eine beschreibbare Kopie des Original-Blockgeräts, die dieselben Datenblöcke verwendet, bis Änderungen entweder am Original oder am Klon vorgenommen werden. Das Klonen eines Blockgeräts ist eine schnelle und effiziente Methode, um wiederverwendbare Kopien Ihrer Daten zu erstellen, ohne zusätzlichen Storage zu verbrauchen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
+. Navigieren Sie zum Aktionsmenü des Blockgeräts und wählen Sie dann *Blockgerät klonen*.
+. Geben Sie im Dialogfeld „Blockgerät klonen“ einen Namen für das geklonte Blockgerät ein.
+. Optional kann die automatische Löschung aktiviert werden, um das geklonte Blockgerät automatisch zu löschen, wenn der Speicherplatz auf dem Volume knapp wird.
+. *iSCSI-Konfiguration*: Optional. Um den Blockgeräteklon mit Host-Initiatoren zu verbinden, erstellen Sie entweder eine neue Initiatorgruppe oder ordnen Sie ihn einer vorhandenen Initiatorgruppe zu.
++
+** *Neue Initiatorgruppe erstellen*: Wählen Sie diese Option, um eine neue Initiatorgruppe für den Klon des Blockgeräts zu erstellen. Geben Sie die folgenden Details ein:
++
+... *Host-Betriebssystem*: Wählen Sie den Typ des Host-Betriebssystems aus.
+... *Name der Initiatorgruppe*: Geben Sie einen Initiatorgruppen-Namen ein.
+... *Host-Initiatoren*: Geben Sie einen oder mehrere Host-Initiatoren ein. Diese Initiatoren müssen dem iSCSI-qualifizierten (IQN) Format entsprechen.
+
+
+** *Zuordnung zu einer bestehenden Initiatorgruppe*: Wählen Sie diese Option, um den Klon des Blockgeräts einer bestehenden Initiatorgruppe zuzuordnen. Wählen Sie eine oder mehrere Initiatorgruppen aus, denen das Blockgerät zugeordnet werden soll.
+
+
+. Wählen Sie *Klonen*, um den Klon des Blockgeräts zu erstellen.
 
 
 

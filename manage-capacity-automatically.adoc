@@ -27,9 +27,9 @@ Die maximale Menge an SSD-Speicherkapazität für alle FSX für ONTAP-Dateisyste
 
 
 
-== Aktivieren Sie das automatische Kapazitätsmanagement
+== Automatisches Kapazitätsmanagement und Kapazitätsbenachrichtigungen aktivieren
 
-Aktivieren Sie die automatische Kapazitätsverwaltung, um automatisch inkrementellen Speicherplatz bis zur maximalen Größenbeschränkung für ein FSx for ONTAP -Dateisystem hinzuzufügen.
+Aktivieren Sie das automatische Kapazitätsmanagement, um inkrementellen Storage eines FSx for ONTAP-Dateisystems automatisch bis zur maximalen Größenbegrenzung hinzuzufügen. Richten Sie Benachrichtigungen ein, um Warnungen zu erhalten, wenn das Dateisystem einen bestimmten Kapazitätsschwellenwert erreicht.
 
 .Bevor Sie beginnen
 Beachten Sie Folgendes, bevor Sie beginnen:
@@ -43,66 +43,43 @@ Beachten Sie Folgendes, bevor Sie beginnen:
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, für das Sie die automatische Kapazitätsverwaltung aktivieren möchten.
-. Wählen Sie *Verwalten*.
-. Wählen Sie unter Informationen das Stiftsymbol neben  aus. Das Stiftsymbol erscheint neben dem Dropdown-Pfeil, wenn Sie den Mauszeiger über die Zeile  bewegen.
-. Geben Sie im Dialogfeld *Capacity management* Folgendes an:
+. Wählen Sie unter *FSx for ONTAP* das Dateisystem aus, für das die automatische Kapazität aktiviert werden soll.
+. Wählen Sie in der Karte „Automatisches Kapazitätsmanagement“ *Verwalten* aus.
+. Wählen Sie die Kapazitätsmanagement-Methode. Zur Auswahl stehen inkrementelle und adaptive Modi.
 +
-.. *Zugangsdaten*: Wählen Sie aus dem Dropdown-Menü Zugangsdaten mit _Automate_ Berechtigungen aus.
-.. Klicken Sie auf die Schaltfläche Aktivieren, um das automatische Kapazitätsmanagement * zu aktivieren.
+** *Inkrementell*: Erhöht die Kapazität um einen festen Betrag bei Erreichen bestimmter Schwellenwerte.
 +
-Alternativ können Sie die Funktion deaktivieren. Wenn Sie die Kapazität des Dateisystems erhöhen müssen, müssen Sie zunächst die automatische Kapazitätsverwaltung deaktivieren.
+*** *Schwellenwert*: Legen Sie einen Schwellenwert fest, der unterhalb der inkrementellen Erhöhung liegt, um eine Benachrichtigung vom Workload Factory Benachrichtigungsdienst auszulösen. Der Standardwert beträgt 70%.
++
+Die Schwellenwerteinstellung ist nur verfügbar, wenn Sie link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Der Workload Factory-Benachrichtigungsdienst wurde aktiviert."^].
 
-.. *Modus*: Wählen Sie den Modus, um die Kapazität automatisch zu verwalten. Die Optionen sind inkrementeller und adaptiver Modus.
-+
-*** *Inkrementeller Modus*: Erhöht die Kapazität um einen festen Betrag bei Schwellenwerten.
-+
-**** *Warnschwelle*: Setzen Sie die Warnschwelle niedriger als die Schwellenerhöhung, um eine Benachrichtigung vom Workload Factory-Benachrichtigungsdienst auszulösen.  Der Standardwert beträgt 70 %.
-+
-Die Einstellung des Warnschwellenwerts ist nur verfügbar, wenn Sielink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Der Workload Factory-Benachrichtigungsdienst wurde aktiviert."^] Die
-
-**** *Schwellenwerterhöhung*: Geben Sie die maximale prozentuale Erhöhung für das FSx for ONTAP -Dateisystem ein.  Der Standardwert beträgt 80 %.
+*** *Schrittweise Erhöhung*: Geben Sie die maximale prozentuale Erhöhung für das FSx for ONTAP-Dateisystem ein. Der Standardwert beträgt 80%.
 +
 Dies ist der Schwellenwert, ab dem Workload Factory einen Auftrag zur Kapazitätserhöhung auslöst. Wenn beispielsweise das Dateisystem 80 % der Kapazität erreicht, erhöht Workload Factory die Kapazität.
 
 
 
-*** *Adaptiver Modus*: Prognostiziert und ändert die Kapazität basierend auf historischen Daten.
+** *Adaptiv*: Prognostiziert und ändert die Kapazität auf Basis historischer Daten.
 +
-**** *Analysezeitraum*: Legen Sie den Analysezeitraum in Stunden fest, um zu bestimmen, wie viele historische Daten für Kapazitätsprognosen berücksichtigt werden sollen. Der Standardwert beträgt 120 Stunden.
-**** *Geplante Pufferzeit*: Legen Sie die Pufferzeit in Stunden fest, um sicherzustellen, dass die Kapazität erhöht wird, bevor sie tatsächlich benötigt wird. Der Standardwert beträgt 48 Stunden.
+*** *Rückblick*: Legen Sie den Analysezeitraum in Stunden fest, um zu bestimmen, wie viele historische Daten für Kapazitätsprognosen berücksichtigt werden sollen. Der Standardwert beträgt 120 Stunden.
+*** *Planen Sie im Voraus*: Legen Sie die Pufferzeit in Stunden fest, um sicherzustellen, dass die Kapazität erhöht wird, bevor sie tatsächlich benötigt wird. Der Standardwert beträgt 48 Stunden.
 
 
 
 
+. Wählen Sie *Automatisches Kapazitätsmanagement* und die Berechtigungen _view, planning, and analysis_ aus.
++
+Alternativ können Sie die Funktion deaktivieren. Wenn Sie die Kapazität des Dateisystems erhöhen müssen, müssen Sie zunächst die automatische Kapazitätsverwaltung deaktivieren.
 
+. Wählen Sie *Kapazitätsbenachrichtigungen aktivieren*, um Benachrichtigungen zu erhalten, wenn die Kapazität den von Ihnen festgelegten Schwellenwert erreicht und wenn NetApp Workload Factory eine automatische Kapazitätserhöhung durchführt. Der Standardwert beträgt 70%.
++
+Die Einstellung für Kapazitätsbenachrichtigungen ist nur verfügbar, wenn Sie link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Der Workload Factory-Benachrichtigungsdienst wurde aktiviert."^] und wenn automatisches Kapazitätsmanagement aktiviert ist.
 
 . Wählen Sie *Anwenden*.
 
 
 .Ergebnis
 Alle 30 Minuten wird ein Dateisystemscan durchgeführt, um festzustellen, ob zusätzliche Kapazität benötigt wird.
-
-
-
-== Kapazitätsbenachrichtigungen aktivieren
-
-Richten Sie Benachrichtigungen ein, um Warnungen zu erhalten, wenn das Dateisystem eine bestimmte Kapazitätsschwelle erreicht.
-
-.Bevor Sie beginnen
-Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Aktivieren Sie den Workload Factory-Benachrichtigungsdienst"^] verwenden, um diese Funktion zu nutzen.
-
-.Schritte
-. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, für das Sie die automatische Kapazitätsverwaltung aktivieren möchten.
-. Wählen Sie *Verwalten*.
-. Wählen Sie unter Informationen das Stiftsymbol neben  aus. Das Stiftsymbol erscheint neben dem Dropdown-Pfeil, wenn Sie den Mauszeiger über die Zeile  bewegen.
-. Im Dialogfeld *Kapazitätsmanagement* wählen Sie *Kapazitätsbenachrichtigungen aktivieren* aus, um Benachrichtigungen zu aktivieren, wenn die Kapazität den Schwellenwert erreicht und wann immer Workload Factory eine automatische Kapazitätserhöhung durchführt.
-. Legen Sie den *Benachrichtigungsschwellenwert* fest, um Benachrichtigungen zu erhalten, sobald das Dateisystem einen bestimmten Kapazitätsprozentsatz erreicht. Der Standardwert beträgt 70%.
-. Wählen Sie *Anwenden*.
-
 
 
 
