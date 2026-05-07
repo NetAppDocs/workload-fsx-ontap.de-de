@@ -26,6 +26,7 @@ Beachten Sie Folgendes, bevor Sie beginnen:
 * Beachten Sie, dass die erneute Synchronisierung von Volumes, die Teil einer Kaskadenkonfiguration sind, länger dauern kann.
 * Wenn das Quell-Volume der Beziehung ein Data-Protection-Volume ist und ein Ziel einer anderen Beziehung ist, wird das Umkehren der Replikationsbeziehung nicht unterstützt.
 * Es wird ein Replikat eines Data-Protection-Volumes (oder ein zweiter Hop) unterstützt. Es gilt nicht als Best Practice, ein zweites Replikat eines Datensicherheitsvolumes (oder einen dritten Hop) zu erstellen.
+* Stellen Sie sicher, dass die TCP-Ports 11104 und 11105 geöffnet sind, um sicheren Datentransfer und Verwaltung zwischen den Speichersystemen zu ermöglichen.
 
 
 .Schritte
