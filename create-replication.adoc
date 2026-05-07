@@ -67,6 +67,7 @@ Replizieren Sie Daten zwischen zwei FSx for ONTAP-Dateisystemen, zwischen einem 
 Überprüfen Sie diese Anforderungen, bevor Sie beginnen.
 
 * Stellen Sie sicher, dass ein FSx for ONTAP-Dateisystem für das Ziel in der Replikationsbeziehung zur Verfügung steht.
+* Stellen Sie sicher, dass die TCP-Ports 11105 und 11105 geöffnet sind, um sicheren Datentransfer und Verwaltung zwischen den Speichersystemen zu ermöglichen.
 * Das FSx for ONTAP-Dateisystem, das Sie für die Replikationsbeziehung verwenden, muss über eine zugeordnete Verknüpfung verfügen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
 * Für die Datenreplizierung von einem lokalen ONTAP-System zu einem FSx for ONTAP-Dateisystem stellen Sie sicher, dass das lokale ONTAP-System erkannt wurde.
 * Die Replikation wird nicht unterstützt für Volumes, die sich in einem anderen Status als verfügbar, erstellt oder falsch konfiguriert befinden, und wenn die ONTAP-Version nicht kompatibel ist.
@@ -218,7 +219,12 @@ Nachdem die Replikationsbeziehung für einen Migrationsanwendungsfall erstellt w
 Berücksichtigen Sie Folgendes bei der Planung des Umstellungsprozesses für Migrationsanwendungsfälle.
 
 * *Unterstützung der Replikationsversion*: Quell- und Zielspeichersysteme müssen dieselbe ONTAP Hauptversion aufweisen. Wenn beispielsweise auf dem Quellsystem ONTAP Version 9.18.1 ausgeführt wird, muss auch auf dem Zielsystem eine Version von 9.18.1 ausgeführt werden.
-* *Konfigurationseinstellungen der Speicher-VM*: Beim Umstellungsvorgang werden nicht alle Konfigurationseinstellungen der Speicher-VM auf die Ziel-Speicher-VM migriert. Beispielsweise werden iSCSI-, Broadcast-Domain-MTU- und DNS-Einstellungen nicht migriert. Aktualisieren Sie diese Einstellungen nach der Umstellung manuell auf der Ziel-Speicher-VM. Weitere Informationen finden Sie im <<Konfigurationseinstellungen nach der Umstellung aktualisieren,Konfigurationseinstellungen nach der Umstellung aktualisieren>> Abschnitt.
+* *Konfigurationseinstellungen für Storage-VMs*:
++
+** Beim Umstellungsvorgang werden nicht alle Konfigurationseinstellungen der Speicher-VM auf die Ziel-Speicher-VM migriert. Beispielsweise werden iSCSI-, Broadcast-Domain-MTU- und DNS-Einstellungen nicht migriert. Aktualisieren Sie diese Einstellungen nach der Umstellung manuell auf der Ziel-Speicher-VM. Weitere Informationen finden Sie im <<Konfigurationseinstellungen nach der Umstellung aktualisieren,Konfigurationseinstellungen nach der Umstellung aktualisieren>> Abschnitt.
+** Wenn Ihre Storage-VM die Domänentunnel-Authentifizierung verwendet, richten Sie vor Beginn der Migration einen Domänentunnel auf dem Zieldateisystem ein und aktivieren Sie ihn.
+
+
 * *Klone*: Klone werden als einzelne Volumes migriert und belegen daher mehr Speicherplatz auf dem Ziel-FSx for ONTAP-Dateisystem. Erwägen Sie, die Klone vor der Umstellung zu löschen, um eine erhöhte Kapazität auf dem Ziel zu vermeiden.
 * *Cache-Volumes*: Für ONTAP FlexCache 9.17.x oder älter. Quell-Speicher-VMs, die Cache-Volumes enthalten, werden bei der Umstellung nicht unterstützt. Entfernen Sie die ONTAP FlexCache-Beziehung vor der Umstellung, um Migrationsfehler zu vermeiden.
 * *AWS S3-Zugriffspunkte*: Die Cutover-Replikation für Migrationsanwendungsfälle wird für Volumes mit S3-Zugriffspunkten nicht unterstützt. Löschen Sie die S3-Zugriffspunkte vom Quellvolume, um Migrationsfehler zu vermeiden.
