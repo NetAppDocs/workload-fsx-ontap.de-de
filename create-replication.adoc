@@ -29,7 +29,7 @@ Wenn Sie ein Quellvolume mit unveränderlichen Dateien replizieren, bleiben das 
 
 [NOTE]
 ====
-Sie können ein Quell-Volume (Lese-/Schreibvorgänge) oder ein Datensicherungs-Volume replizieren. Eine kaskadierende Replikation wird unterstützt, ein dritter Hop aber nicht. Erfahren Sie mehr über link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["Kaskadierende Replizierung"^].
+Sie können ein Quellvolume (lesen/schreiben) oder ein Datensicherungsvolume (DP) replizieren. Kaskadierende Replikation wird unterstützt, aber ein dritter Hop wird nicht unterstützt. Weitere Informationen zu link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["Kaskadierende Replizierung"].
 
 ====
 

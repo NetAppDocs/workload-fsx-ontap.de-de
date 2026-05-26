@@ -77,4 +77,4 @@ Sie können jetzt SMB/CIFS-Freigaben erstellen, die auf Verzeichnisse innerhalb 
 
 Bei Datensicherungsvolumes umfasst der Ablauf zum Erstellen einer SMB/CIFS-Freigabe jetzt die Erstellung eines Verbindungspfads zum Volume für Bereitstellungszwecke.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume["Erstellen Sie eine CIFS-Freigabe für ein Volume"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html#create-a-cifs-share-for-a-volume["Erstellen Sie eine CIFS-Freigabe für ein Volume"]

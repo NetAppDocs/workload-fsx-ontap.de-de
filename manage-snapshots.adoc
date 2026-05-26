@@ -76,7 +76,7 @@ Aktivieren Sie den Zugriff auf das Snapshot-Verzeichnis, um Benutzern die Mögli
 
 Sie haben die Möglichkeit, Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherzustellen.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["Wiederherstellen eines Volumes aus einem Snapshot"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Wiederherstellen eines Volumes aus einem Snapshot"]
 
 
 

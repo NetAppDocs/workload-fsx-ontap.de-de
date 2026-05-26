@@ -68,7 +68,7 @@ ONTAP erreicht Speichereffizienz durch Deduplizierungs- und Komprimierungsfunkti
 
 .. *Snapshot Policy*: Wählen Sie die Snapshot Policy aus, um die Häufigkeit und Aufbewahrung von Snapshots festzulegen.
 +
-Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"]Die
+Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"]Die
 
 +
 `default`:: Diese Richtlinie erstellt automatisch Snapshots nach dem folgenden Zeitplan. Die ältesten Snapshot-Kopien werden gelöscht, um Platz für neuere Kopien zu schaffen:
