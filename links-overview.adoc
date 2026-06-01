@@ -39,6 +39,8 @@ Sie erstellen und verknüpfen Links aus der Speicherarbeitslast in Workload Fact
 
 Sie können Links mithilfe von Anmeldeinformationen authentifizieren, die im Anmeldeinformationsdienst von Workload Factory gespeichert sind, oder mithilfe Ihrer Anmeldeinformationen, die im AWS Secrets Manager gespeichert sind.  Die Workload Factory unterstützt keine Änderung des Authentifizierungsmodus.
 
+Die Verbindung von GovCloud-Konten wird unterstützt. Workload Factory verwendet GovCloud-Authentifizierungsschlüssel und ermöglicht so einen sicheren, agentenlosen Zugriff auf FSx für ONTAP-Operationen über GovCloud-genehmigte Mechanismen.
+
 
 
 == Kosten
@@ -67,6 +69,7 @@ Zu den Funktionen, für die ein Link erforderlich ist, gehören:
 * Automatisches Volumenwachstum für elastische Skalierung
 * Erstellen und Verwalten von Klonen für sofortiges, direktes Klonen von Daten
 * Anzeige zusätzlicher Metriken direkt aus ONTAP , wie z. B. die ONTAP Version
+* Anzeige der Details zu Speicher-VMs und Cluster-LIFs, einschließlich Rollen, Endpunkten, Knoten, IP-Adressen und Status
 
 
 Erfahren Sie, wie man link:create-link.html["Verbinden Sie einen Link mit einem FSx für ONTAP Dateisystem"].

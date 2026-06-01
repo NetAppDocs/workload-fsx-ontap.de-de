@@ -59,7 +59,12 @@ image:screenshot-on-prem-connectivity.png["Screenshot, der zeigt, wie ein On-Pre
 Wenn Sie keinen Link erstellt haben, folgen Sie den Anweisungen, kehren Sie zu diesem Vorgang zurück, und wählen Sie den Link aus.
 
 .. *Cluster-IP-Adresse*: Geben Sie die IP-Adresse für den lokalen ONTAP-Cluster an, der repliziert werden soll.
-.. *ONTAP Credentials*: Geben Sie die ONTAP Credentials für den On-Premises ONTAP Cluster ein. Stellen Sie sicher, dass der Benutzer über die erforderlichen Berechtigungen verfügt.
+.. *ONTAP-Zugangsdaten*: Bitte geben Sie Folgendes an:
++
+*** GovCloud accounts: Geben Sie die ARN mit ONTAP Zugangsdaten ein.
+*** Alle anderen Konten: Geben Sie die ONTAP-Anmeldeinformationen für den lokalen ONTAP Cluster ein. Stellen Sie sicher, dass der Benutzer über die erforderlichen Berechtigungen verfügt.
+
+
 
 
 . Wählen Sie *Discover*, um den Erkennungsvorgang zu starten.

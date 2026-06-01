@@ -31,7 +31,7 @@ NOTE: AWS Secrets Manager wird bei Verwendung eines Konsolenagenten nicht unters
 
 Die Verknüpfung eines neuen Links umfasst die Erstellung und Verknüpfung.
 
-Sie haben in diesem Workflow zwei Möglichkeiten, Links zu erstellen – automatisch oder manuell. Sie müssen einen AWS CloudFormation-Stack in Ihrem AWS-Konto starten, um den Link zu erstellen.
+In diesem Workflow haben Sie zwei Möglichkeiten, Links zu erstellen – automatisch oder manuell. Wenn Sie ein AWS GovCloud Konto haben, müssen Sie einen neuen Link manuell erstellen.
 
 * Automatisch: Erstellt einen Link mit automatischer Registrierung über Workload Factory.  Ein automatisch erstellter Link erfordert Token für die Workload Factory-Automatisierung und der CloudFormation-Code ist kurzlebig.  Die Nutzungsdauer beträgt maximal sechs Stunden.
 * Manuell: Erstellt einen Link mit manueller Registrierung mithilfe von CloudFormation oder Terraform aus der Codebox.  Der Code bleibt bestehen und gibt Ihnen mehr Zeit, den Vorgang abzuschließen.  Dies ist nützlich, wenn Sie mit verschiedenen Teams wie Security und DevOps arbeiten, die möglicherweise zuerst die erforderlichen Berechtigungen erteilen müssen, um die Linkerstellung abzuschließen.
@@ -92,6 +92,9 @@ Sie haben in diesem Workflow zwei Möglichkeiten, Links zu erstellen – automat
 .Automatisch erstellen
 --
 Verwenden Sie CloudFormation, um den Link automatisch in Workload Factory zu erstellen und zu registrieren.
+
+
+NOTE: Die automatische Linkerstellung wird für AWS GovCloud accounts nicht unterstützt.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -169,15 +172,12 @@ Sie können eine Verknüpfung mit zwei Infrastructure-as-Code (IaC)-Tools aus de
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, dem Sie einen Link zuordnen möchten, und wählen Sie dann *Link zuordnen*.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, dem Sie einen Link zuordnen möchten, und wählen Sie dann *Link zuordnen*.
 . Wählen Sie im Dialogfeld „Verknüpfung zuordnen“ die Option *Neuen Link erstellen* und wählen Sie *Weiter*.
 . Wählen Sie auf der Seite „Link erstellen“ CloudFormation oder Terraform aus der Codebox aus und geben Sie dann Folgendes ein:
 +
 .. *Linkname*: Geben Sie den Namen ein, den Sie für diesen Link verwenden möchten. Der Name muss innerhalb Ihres Kontos eindeutig sein.
-.. *AWS Secrets Manager*: Optional.  Ermöglicht Workload Factory, FSx für ONTAP -Zugriffsdaten von Ihrem AWS Secrets Manager abzurufen.
-+
-Der Link-Bereitstellungsstapel fügt der Lambda-Berechtigungsrichtlinie automatisch den folgenden standardmäßigen ARN-Regex des geheimen Managers hinzu: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` .
-
+.. *AWS Secrets Manager*: Immer aktiviert für GovCloud-Konten. Optional für andere Konten. Ermöglicht NetApp Workload Factory, die FSx for ONTAP-Zugangsdaten aus Ihrem AWS Secrets Manager abzurufen.
 +
 Sie können entweder Geheimnisse im Einklang mit den Standardberechtigungen erstellen oder Ihre benutzerdefinierten Berechtigungen für die Link-Richtlinie zuweisen.
 
@@ -187,7 +187,7 @@ Sie können entweder Geheimnisse im Einklang mit den Standardberechtigungen erst
 .. *Linkberechtigungen*: Wählen Sie eine der folgenden Optionen für Linkberechtigungen:
 +
 *** *Automatisch*: Wählen Sie diese Option, damit der AWS CloudFormation-Code automatisch die Lambda-Berechtigungsrichtlinie und Ausführungsrolle erstellt.
-*** *Vom Benutzer bereitgestellt*: Wählen Sie diese Option, um dem Lambda-Link eine bestimmte Lambda-Ausführungsrolle und die zugehörigen Richtlinien zuzuweisen. Für die Lambda-Berechtigungsrichtlinie sind die folgenden Berechtigungen erforderlich. Die  `secretsmanager:GetSecretValue` Die Berechtigung ist nur erforderlich, wenn Sie AWS Secrets Manager aktiviert haben.
+*** *Benutzerdefiniert*: Wählen Sie diese Option, um eine bestimmte Lambda-Ausführungsrolle und die zugehörigen Richtlinien dem Lambda-Link zuzuweisen. Für die Lambda-Berechtigungsrichtlinie sind die folgenden Berechtigungen erforderlich. Die  `secretsmanager:GetSecretValue`Berechtigung ist nur bei Verwendung von AWS Secrets Manager erforderlich.
 +
 [source, json]
 ----
@@ -206,7 +206,7 @@ Geben Sie die ARN der Lambda-Ausführungsrolle in das Textfeld ein.
 .. *Tags*: Fügen Sie optional alle Tags hinzu, die Sie mit diesem Link verknüpfen möchten, damit Sie Ihre Ressourcen einfacher kategorisieren können. Sie könnten beispielsweise ein Tag hinzufügen, das diesen Link als von FSX für ONTAP-Dateisystemen verwendet identifiziert.
 .. *Linkregistrierung*: Wählen Sie CloudFormation oder Terraform für die Anweisungen zur Registrierung des Links aus und folgen Sie den Anweisungen.
 +
-Beachten Sie, dass Lambda drei Berechtigungen erteilt werden, wenn Sie die CloudFormation-Vorlage starten. Workload Factory verwendet diese Berechtigungen bei der Verwendung von Links.
+Beachten Sie, dass Lambda beim Starten der CloudFormation-Vorlage drei Berechtigungen erteilt werden. Workload Factory verwendet diese Berechtigungen bei der Verwendung von Links.
 
 +
 [source, json]
@@ -216,22 +216,21 @@ Beachten Sie, dass Lambda drei Berechtigungen erteilt werden, wenn Sie die Cloud
 "lambda:UpdateFunctionCode"
 ----
 +
-Nachdem Sie den Stapel erfolgreich erstellt haben, fügen Sie die Lambda-ARN in das Textfeld ein.
-
-.. Workload Factory ruft automatisch das AWS-Konto, den Standort und die Sicherheitsgruppe basierend auf dem FSx for ONTAP -Dateisystem ab.
-
-
-. Wählen Sie *Erstellen*.
+... Nachdem Sie den Stack erfolgreich erstellt haben, fügen Sie den Lambda-ARN in das Textfeld in der Workload Factory-Konsole ein. Workload Factory ruft automatisch das AWS-Konto, den Standort und die Sicherheitsgruppe basierend auf dem FSx for ONTAP-Dateisystem ab.
+... Wählen Sie *Erstellen*.
 +
 Sie können den Status der Linkerstellung auf der Seite „Ereignisse“ überwachen.  Dies sollte nicht länger als 5 Minuten dauern.
 
-. Kehren Sie zur Workload Factory-Schnittstelle zurück und Sie werden sehen, dass der Link mit dem FSx for ONTAP -Dateisystem verknüpft ist.
+
+
+
+
 
 
 --
 ====
 .Ergebnis
-Workload Factory verknüpft den Link mit dem FSx for ONTAP Dateisystem.  Sie können erweiterte ONTAP -Operationen durchführen.
+Workload Factory verknüpft die Verbindung mit dem FSx for ONTAP-Dateisystem. Sie können erweiterte ONTAP-Operationen durchführen.
 
 
 
@@ -269,6 +268,9 @@ NOTE: Für die Authentifizierung mit AWS Secrets Manager ist ein Benutzer erford
 
 .Ergebnis
 Der Link ist mit dem Dateisystem FSX für ONTAP verknüpft. Sie können erweiterte ONTAP-Vorgänge ausführen.
+
+.Ähnliche Informationen
+link:links-overview.html#when-a-link-is-required["Weitere Informationen zu Links"].
 
 
 

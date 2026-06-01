@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: track-replication-delays.html 
+keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
+summary: Aktivieren Sie die Nachverfolgung, um Verzögerungen für alle Replikationsbeziehungen in Ihrem Konto zu überwachen. 
+---
+= Replikationsverzögerungen verfolgen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Aktivieren Sie die Nachverfolgung, um Verzögerungen für alle Replikationsbeziehungen in Ihrem Konto zu überwachen. Workload Factory überwacht Replikationsverzögerungen mithilfe von Schwellenwerten. Standardmäßig legen wir einen Schwellenwert von 150 % des Replikationsintervalls fest, um normale Übertragungszeiten zu ermöglichen und Fehlalarme zu vermeiden. Sie können den Schwellenwert basierend auf Ihrem RPO anpassen. Sie können Benachrichtigungen erhalten, wenn die Verzögerung den Schwellenwert überschreitet.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
+. Wählen Sie *Tracking aktivieren*.
+. Im Dialogfeld „Replikationsverzögerungsverlauf aktivieren“ wählen Sie *Enable*.
+. Zurück in der Kachel „Replikationsverzögerungsverlauf“ wählen Sie *Schwellenwert anpassen*, um Ihren bevorzugten Schwellenwert festzulegen.
+. Im Dialogfeld „Verzögerungszeitschwelle anpassen“ geben Sie die Schwelle in Stunden und Minuten ein.
+. Optional können Sie *Benachrichtigungen bei Verzögerungen aktivieren* auswählen, um Benachrichtigungen zu erhalten, wenn Replikationsverzögerungen den Schwellenwert überschreiten.
+. Wählen Sie *Anwenden*.
+
+
+.Ähnliche Informationen
+link:manage-replication.html["Replikationsbeziehungen verwalten"^]

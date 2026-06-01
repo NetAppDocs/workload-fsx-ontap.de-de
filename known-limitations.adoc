@@ -20,7 +20,6 @@ Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funktionen, die
 Die folgenden AWS-Regionen werden nicht unterstützt:
 
 * Regionen Chinas
-* GovCloud (USA)-Regionen
 * Geheime Cloud
 * Streng geheime Cloud
 

@@ -77,7 +77,6 @@ Workload Factory wird in allen kommerziellen Regionen unterstützt, in denen FSx
 Die folgenden AWS-Regionen werden nicht unterstützt:
 
 * Regionen Chinas
-* GovCloud (USA)-Regionen
 * Geheime Cloud
 * Streng geheime Cloud
 

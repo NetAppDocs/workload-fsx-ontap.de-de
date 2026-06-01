@@ -7,7 +7,13 @@
 ** Künstliche Intelligenz (KI) und maschinelles Lernen (ML): Replizieren Sie Ihre lokalen ONTAP-Daten zu FSx for ONTAP und erstellen Sie S3-Zugriffspunkte, um das Training von KI und ML in der Cloud zu unterstützen
 ** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
 +
-*Replikation der Speicher-VM-Konfiguration*: Optional können Sie auswählen, die Daten und Konfigurationseinstellungen einer einzelnen Speicher-VM zu replizieren. Wenn Sie Daten und Konfigurationseinstellungen gleichzeitig migrieren, stellen Sie sicher, dass die letzte Replikation für das Volume in den letzten 24 Stunden abgeschlossen wurde. Alle Volumes in derselben Speicher-VM müssen ausgewählt werden, um diese Funktion zu nutzen. Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
+*Replikation der Speicher-VM-Konfiguration*: Optional können Sie die Replikation der Speicher-VM-Daten und -Konfigurationseinstellungen für eine einzelne Speicher-VM auswählen. Bei der Migration von Daten und Einstellungen müssen alle Volumes innerhalb der letzten 24 Stunden repliziert und anschließend gleichzeitig umgeschaltet werden.
+
++
+Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
+
++
+Während der Migration greifen Clients auf Daten des Quell-ONTAP-Dateisystems zu. Nach der Umstellung sind die Volumes über die Ziel-FSx for ONTAP-Dateisystem-IP-Adressen verfügbar. Aktualisieren Sie alle Clients oder Ressourcen, die noch die alte IP-Adresse verwenden.
 
 ** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
 ** Disaster Recovery in kalten oder archivierten Daten:
@@ -31,7 +37,10 @@ Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die sta
 
 
 . * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
-. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus dem Dropdown-Menü aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
+. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
++
+Wenn die Namen der Quell- und Ziel-Storage-VMs identisch sind, erstellen wir einen Dateisystemalias für die Ziel-Storage-VM-Namen, um Peering-Konflikte zu vermeiden.
+
 . *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
 . *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
 +
@@ -44,6 +53,10 @@ Wenn Sie den Migrationsanwendungsfall ausgewählt haben, wählt Workload Factory
 +
 Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden. . Geben Sie unter Replikationseinstellungen Folgendes an:
 
+. *Replikationsbeziehung initialisieren*: Wählen Sie, ob die Replikationsbeziehung direkt nach ihrer Erstellung oder später initialisiert werden soll. Beachten Sie, dass die Initialisierung zeitaufwändig sein kann, und Sie möchten den Basistransfer möglicherweise außerhalb der Spitzenzeiten durchführen.
++
+Um die Initialisierung später manuell durchzuführen, beachten Sie die Anweisungen in <<Schritt 2: Replikationsbeziehung initialisieren,Schritt 2: Replikationsbeziehung initialisieren>>.
+
 . *Replikationsintervall*: Wählen Sie die Häufigkeit, mit der Snapshots vom Quell-Volume auf das Ziel-Volume übertragen werden.
 . *Langfristige Aufbewahrung*: Optional können Snapshots für die langfristige Aufbewahrung aktiviert werden. Dank der langfristigen Aufbewahrung können Business-Services auch bei einem vollständigen Standortausfall weiterlaufen und Applikationen mithilfe einer sekundären Kopie einen transparenten Failover unterstützen.
 +
@@ -54,10 +67,10 @@ Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene R
 
 +
 
-NOTE: Zur langfristigen Aufbewahrung sind passende Quell- und Zieletiketten erforderlich. Auf Wunsch kann Workload Factory fehlende Etiketten für Sie erstellen.
+NOTE: Für die Langzeitarchivierung sind übereinstimmende Quell- und Zielbezeichnungen erforderlich. Auf Wunsch kann Workload Factory fehlende Bezeichnungen für Sie erstellen.
 
 +
-** *Wählen Sie eine vorhandene Richtlinie*: Wählen Sie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.
+** *Eine bestehende Richtlinie auswählen*: Wählen Sie eine bestehende Richtlinie aus.
 ** *Neue Richtlinie erstellen*: Geben Sie einen *Richtliniennamen* ein.
 
 

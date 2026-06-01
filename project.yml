@@ -75,10 +75,8 @@ sidebar:
           url: "/create-backup.html"
         - title: Stellen Sie ein Volume aus einem Backup wieder her
           url: "/restore-from-backup.html"
-      - title: Verwenden der Replikation
-        entries:
-        - title: Datenreplizierung
-          url: "/create-replication.html"
+      - title: Datenreplizierung
+        url: "/create-replication.html"
       - title: Autonomer Ransomware-Schutz für Daten
         url: "/ransomware-protection.html"
       - title: Klonen Sie ein Volume
@@ -105,6 +103,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Lautstärke anpassen
         url: "/adjust-volume-capacity.html"
+      - title: Volume-Latenzschwellenwerte festlegen
+        url: "/set-volume-latency-thresholds.html"
       - title: Volumenkapazität neu ausbalancieren
         url: "/rebalance-volume.html"
       - title: Management unveränderlicher Dateien
@@ -185,20 +185,10 @@ sidebar:
         entries:
         - title: Replizierung eines Datensicherheitsvolumes
           url: "/cascade-replication.html"
-        - title: Eine Replikationsbeziehung umkehren
-          url: "/reverse-replication.html"
-        - title: Ändern Sie den Replikationszeitplan eines Quell-Volumes
-          url: "/change-replication-schedule.html"
-        - title: Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung
-          url: "/limit-transfer-rate.html"
-        - title: Manuelles Update von Snapshot-Daten in einer Replikationsbeziehung
-          url: "/update-snapshot-replication.html"
-        - title: Anhalten und Wiederaufnehmen einer Replikationsbeziehung
-          url: "/pause-resume-replication.html"
-        - title: Anhalten einer Replikationsbeziehung
-          url: "/stop-replication.html"
-        - title: Löschen einer Replikationsbeziehung
-          url: "/delete-replication.html"
+        - title: Replikationsverzögerungen verfolgen
+          url: "/track-replication-delays.html"
+        - title: Replikationsbeziehungen verwalten
+          url: "/manage-replication.html"
     - title: Performance-Administration
       entries:
       - title: Stellen Sie IOPS für ein Filesystem bereit

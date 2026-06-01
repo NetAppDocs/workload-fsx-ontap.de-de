@@ -2,38 +2,78 @@
 sidebar: sidebar 
 permalink: track-costs.html 
 keywords: cost, consumption, Cost Explorer 
-summary: Verfolgen Sie die Kosten für Ihre FSx for ONTAP -Dateisystemressourcen in NetApp Workload Factory. 
+summary: Verfolgen Sie die Kosten und erstellen Sie Berichte für Ihre FSx for ONTAP Dateisystemressourcen in NetApp Workload Factory. 
 ---
-= Verfolgen Sie die Kosten Ihrer Ressourcen in NetApp Workload Factory.
+= Verfolgen Sie Kosten und erhalten Sie Berichte zu Ressourcen in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Mit NetApp Workload Factory können Sie die Kosten und die Nutzung des FSx for ONTAP -Dateisystems in einer konsolidierten Ansicht verfolgen.  Die Kostendaten helfen Ihnen, Budgets zu verwalten und Ressourcen effektiv zu optimieren.  AWS Cost Explorer liefert die Kostendaten.
+Verfolgen Sie die Kosten und die Nutzung des FSx for ONTAP-Dateisystems in einer konsolidierten Ansicht in der NetApp Workload Factory-Konsole. Die Kostendaten unterstützen Sie bei der Budgetverwaltung und Ressourcenoptimierung. Workload Factory generiert außerdem Kostenberichte für Ihre FSx for ONTAP-Dateisystemressourcen, die Sie mit Stakeholdern teilen können.
 
-.Über diese Aufgabe
-Kosten- und Nutzungsdaten für Ihre FSx for ONTAP -Dateisystemressourcen werden mit den folgenden Berechtigungen aus dem AWS Cost Explorer extrahiert:
 
-* `ce:GetCostAndUsage`
-* `ce:GetTags`
 
+== Über diese Aufgabe
+
+Workload Factory verfolgt die Kosten und die Nutzung des FSx for ONTAP-Dateisystems, indem es Kostendaten vom AWS Cost Explorer abruft. Die folgenden Kostendetails werden erfasst: Nutzungsart, Nutzungs-SKU, Bereitstellungstyp, Nutzung und Gesamtkosten.
+
+Für individuelle Ressourcen berechnet Workload Factory die Kosten anhand der tatsächlichen Nutzung der Leistungsstufe, eines anteiligen Kostenfaktors für bereitgestellten, aber ungenutzten Speicherplatz, der nach Kapazität verteilten Leistungszuweisungen und der Kapazitätspoolnutzung. Jede Komponente wird mit ihrem Preis pro Einheit für die jeweilige Dimension multipliziert, und die Ergebnisse werden summiert, um die Gesamtkosten für jede Ressource zu ermitteln.
+
+Im Kosten-Dashboard können Sie Kosten- und Nutzungsdaten nach AWS-Konten, Anmeldeinformationen, einer oder mehreren Regionen und Zeiträumen filtern, um Ihren FSx for ONTAP-Dateisystemverbrauch zu verstehen. Die Daten werden stets monatsweise angezeigt.
+
+Wir rufen Kosten- und Nutzungsdaten für Ihre FSx for ONTAP-Dateisystemressourcen vom AWS Cost Explorer mit den folgenden Berechtigungen ab: `ce:GetCostAndUsage`and `ce:GetTags`. Wir berechnen die Gesamtkosten mithilfe der AWS Cost API und unserer Schätzungen. `
+
+AWS-Zuordnungs-Tag-Schlüssel und Tag-Schlüssel-Werte bieten eine zusätzliche Filterebene, um spezifische Kosten zu ermitteln. Ein Tag besteht aus einem Schlüssel und einem Wert. Um nach Tag-Schlüsseln und Tag-Schlüssel-Werten zu filtern, weisen Sie Ihren FSx for ONTAP-Dateisystemen Tags zu. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Erfahren Sie mehr über AWS-Kostenverteilungs-Tags."^]
+
+Zusätzlich zu den Kostendaten im Kosten-Dashboard können Sie Kostenberichte für Ihre FSx for ONTAP-Dateisystemressourcen erstellen. Die Daten im Kostenbericht enthalten Informationen zu spezifischen Dateisystemen und Volumes. Der Bericht ist eine herunterladbare PDF-Datei, die Sie mit Stakeholdern teilen können.
+
+
+
+== Kosten nachverfolgen
+
+Die in der Workload Factory-Konsole im Kosten-Dashboard angezeigten Kosten basieren auf den Daten von AWS Cost Explorer, die alle 24 Stunden aktualisiert werden.
 
 .Bevor Sie beginnen
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Erteilen Sie Anmeldeinformationen mit der Berechtigungsrichtlinie „Ansicht, Planung und Analyse“."^]in Workload Factory, um FSx für ONTAP Kosten zu verfolgen.
+Stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
+
+* Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten mit der Berechtigungsrichtlinie „Anzeigen, Planen und Analysieren“ erteilen"^] in Workload Factory die FSx for ONTAP-Kosten nachverfolgen.
+* Um nach AWS-Zuordnungs-Tags zu filtern, stellen Sie sicher, dass Ihren FSx for ONTAP File Systems Tags zugewiesen sind.
+
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Im Menü „Speicher“ wählen Sie *Kosten*.
-. Filtern Sie auf der Kostenseite die Kosten- und Kapazitätsdaten für Ihre FSx for ONTAP -Ressourcen, indem Sie Folgendes angeben:
+. Filtern Sie im Kosten-Dashboard die Kosten- und Kapazitätsdaten Ihrer FSx for ONTAP-Ressourcen, indem Sie Folgendes angeben:
 +
 .. *AWS-Konten*: Wählen Sie die Konten aus, für die Sie die Kostendaten anzeigen möchten.
 .. *Anmeldeinformationen*: Wählen Sie Anmeldeinformationen mit den Berechtigungen _Anzeigen, Planen und Analysieren_ aus.
 .. *Regionen*: Wählen Sie die AWS-Regionen aus, für die Sie Kostendaten anzeigen möchten.
 .. *Kostendatenbereich*: Wählen Sie den Zeitraum aus, in dem die Kostendaten angezeigt werden sollen.
+.. *Zuordnungs-Tag-Schlüssel*: (Optional) Wählen Sie einen Zuordnungs-Tag-Schlüssel und dessen Wert aus, um einen detaillierten Kostenbericht für alle FSx for ONTAP-Dateisysteme zu erstellen, die dem AWS-Tag zugeordnet sind.
+.. *Zuordnungs-Tag-Werte*: (Optional) Wählen Sie den Zuordnungs-Tag-Schlüsselwert aus, der dem Zuordnungs-Tag-Schlüssel zugeordnet ist, um einen detaillierten Kostenbericht für alle FSx for ONTAP-Dateisysteme zu generieren, die dem AWS-Tag zugeordnet sind.
 
 
 . Sehen Sie sich die *Kostendetails* für Ihre FSx for ONTAP -Ressourcen an.
 
+
+
+
+== Generieren Sie Kostenberichte für Ihre FSx for ONTAP-Ressourcen
+
+Erstellen Sie Kostenberichte für spezifische FSx for ONTAP-Dateisystemressourcen, um diese mit den Stakeholdern zu teilen.
+
+.Schritte
+. Im Kosten-Dashboard wählen Sie *Bericht generieren*.
+. Geben Sie im Berichtsfenster folgende Informationen an:
++
+.. *Dateisystem*: Wählen Sie ein oder mehrere FSx for ONTAP-Dateisysteme aus, die in den Bericht aufgenommen werden sollen.
+.. *Volume*: (Optional) Wählen Sie ein oder mehrere Volumes aus, die in den Bericht aufgenommen werden sollen.
+
+
+
+
+.Ergebnis
+Es wird ein PDF-Bericht generiert, der heruntergeladen werden kann.
