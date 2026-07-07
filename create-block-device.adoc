@@ -11,7 +11,7 @@ summary: 'Erstellen Sie Blockgeräte, um die Anforderungen Ihrer Geschäftsanwen
 
 
 [role="lead"]
-Erstellen Sie Blockgeräte, um die Anforderungen Ihrer Geschäftsanwendungen (LOB) zu erfüllen.
+Blockgeräte können erstellt werden, um die Applikationsanforderungen Ihres Geschäftsbereichs zu unterstützen. Blockgeräte können in einem bestehenden Volume erstellt, ein neues Volume für das neue Blockgerät angelegt oder ein neues Volume aus einem Snapshot für das neue Blockgerät erstellt werden.
 
 .Über diese Aufgabe
 In NetApp Workload Factory werden für Blockgeräte ausschließlich FlexVol -Volumes unterstützt. Sie können Blockgeräte mithilfe des iSCSI-Protokolls erstellen.
@@ -34,6 +34,7 @@ Die Blockgröße muss kleiner sein als die verfügbare FlexVol volume Volumengr�
 +
 *** Erstellen Sie ein neues Volume und geben Sie einen Namen für das Volume ein.
 *** Wählen Sie ein vorhandenes Volume aus.
+*** Aus einem Volume-Snapshot erstellen. Den Namen des Quellvolumes und den Snapshot-Namen auswählen. Nur Volumes ohne Blockgeräte sind verfügbar.
 
 
 .. *Aggregatname*: Wählen Sie das Aggregat aus, das das neue Volume aufnehmen soll.

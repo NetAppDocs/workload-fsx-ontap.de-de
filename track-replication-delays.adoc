@@ -11,7 +11,7 @@ summary: Aktivieren Sie die Nachverfolgung, um Verzögerungen für alle Replikat
 
 
 [role="lead"]
-Aktivieren Sie die Nachverfolgung, um Verzögerungen für alle Replikationsbeziehungen in Ihrem Konto zu überwachen. Workload Factory überwacht Replikationsverzögerungen mithilfe von Schwellenwerten. Standardmäßig legen wir einen Schwellenwert von 150 % des Replikationsintervalls fest, um normale Übertragungszeiten zu ermöglichen und Fehlalarme zu vermeiden. Sie können den Schwellenwert basierend auf Ihrem RPO anpassen. Sie können Benachrichtigungen erhalten, wenn die Verzögerung den Schwellenwert überschreitet.
+Die Nachverfolgung kann aktiviert werden, um Replikationsverzögerungen in Ihrem Konto zu überwachen. Workload Factory benachrichtigt Sie, wenn Verzögerungen einen festgelegten Schwellenwert überschreiten. Standardmäßig beträgt der Schwellenwert 150 % des Replikationsintervalls, um normale Übertragungszeiten zu ermöglichen und Fehlalarme zu reduzieren. Der Schwellenwert kann an Ihr RPO angepasst werden, sodass Benachrichtigungen erfolgen, wenn Verzögerungen diesen überschreiten. Die Daten können außerdem zur weiteren Analyse in eine CSV-Datei exportiert werden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -24,6 +24,18 @@ Aktivieren Sie die Nachverfolgung, um Verzögerungen für alle Replikationsbezie
 . Zurück in der Kachel „Replikationsverzögerungsverlauf“ wählen Sie *Schwellenwert anpassen*, um Ihren bevorzugten Schwellenwert festzulegen.
 . Im Dialogfeld „Verzögerungszeitschwelle anpassen“ geben Sie die Schwelle in Stunden und Minuten ein.
 . Optional können Sie *Benachrichtigungen bei Verzögerungen aktivieren* auswählen, um Benachrichtigungen zu erhalten, wenn Replikationsverzögerungen den Schwellenwert überschreiten.
++
+Benachrichtigungen erfolgen per E-Mail und beinhalten:
+
++
+** Quelldateisystem
+** Quellvolumen
+** Zieldateisystem
+** Zielvolumen
+** Schwellenwert für Verzögerungszeit wurde überschritten
+** Link zur Replikationsbeziehung
+
+
 . Wählen Sie *Anwenden*.
 
 

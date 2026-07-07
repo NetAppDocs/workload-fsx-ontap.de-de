@@ -96,6 +96,10 @@ Die Snapshot-Richtlinienbezeichnungen des Quellvolumes und die Replikationsricht
 +
 Um die Kapazitätsgrenze des Volumes nicht zu erreichen, sollte der Schwellenwert für die Dateikapazität erhöht werden. Eine geringe Dateikapazität (Inodes) verhindert das Schreiben weiterer Daten auf das Volume. Workload Factory empfiehlt, die Auslastung der verfügbaren Dateikapazität dauerhaft unter 80% zu halten. Verfügbare Dateikapazität ist erforderlich, um neue Dateien im Volume zu erstellen.
 
+* *Host mit Failover-Knoten verbinden*
++
+Workload Factory empfiehlt, Hosts mit dem Failover-Knoten zu verbinden, um die Konnektivität aufrechtzuerhalten und Unterbrechungen während Failover-Vorgängen zu vermeiden.
+
 
 
 
@@ -175,6 +179,18 @@ Eine nicht voll ausgelastete SSD-Kapazitätsebene kann unnötige Kosten verursac
 * *Inaktive NAS-Volumes*
 +
 Die Konfigurationsanalyse identifiziert NAS-Volumes, die nicht aktiv genutzt werden, und empfiehlt, die Volumes zu löschen oder zu archivieren, um Kosten zu reduzieren.
+
+
+
+
+
+=== Performance-Effizienz
+
+Leistungseffizienz konzentriert sich auf die effiziente Nutzung von IT- und Computerressourcen.
+
+* *Host mit bevorzugtem Node verbinden*
++
+In einem hochverfügbaren FSx for ONTAP Bereitstellungsmodell sollten Hosts direkt mit dem Knoten verbunden sein, der das Blockgerät bereitstellt, um direkten Zugriff und optimale Leistung sicherzustellen.
 
 
 

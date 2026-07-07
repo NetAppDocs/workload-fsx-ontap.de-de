@@ -15,6 +15,62 @@ Informieren Sie sich über die Neuerungen bei Amazon FSX for NetApp ONTAP.
 
 
 
+== 05. Juli 2026
+
+
+
+=== Neues, gut strukturiertes Dashboard für alle FSx for ONTAP Systeme verfügbar.
+
+Die Well-Architected-Analyse ist jetzt für FSx for ONTAP Dateisysteme über das neue Well-Architected-Dashboard in NetApp Workload Factory verfügbar. Das neue Dashboard bietet eine zentrale Übersicht über alle Ihre Dateisysteme in allen Konten und Regionen sowie deren Konfigurationen an einem Ort. Eine Popup-Benachrichtigung erscheint, wenn der *Well-architected*-Tab von einem Dateisystem aus aufgerufen wird. Das neue Dashboard ist über die Auswahl von *Well-architected* im linken Navigationsmenü in Workload Factory zugänglich.
+
+Der Zugriff auf die Well-Architected-Analyse für ein bestimmtes Dateisystem sowie über die Menüoption *Well-architected* im Storage ist weiterhin möglich.
+
+
+
+=== Neue Empfehlungen in der Well-Architected-Analyse
+
+Workload Factory umfasst nun die folgenden Konfigurationen in der Well-Architected Analysis für FSx for ONTAP file systems:
+
+* Host mit Failover-Knoten verbinden: Überprüft, ob Hosts in einem Aktiv/Passiv FSx for ONTAP Dateisystem mit dem Failover-Knoten verbunden sind, und schlägt vor, Hosts aus Gründen der Zuverlässigkeit mit dem Failover-Knoten zu verbinden.
+* Verbindung des Hosts mit dem bevorzugten Knoten: Es wird geprüft, ob Hosts über den bevorzugten Knoten mit ihren Blockgeräten verbunden sind, und es wird empfohlen, Hosts zur Effizienzsteigerung mit dem bevorzugten Knoten zu verbinden.
+
+
+
+
+=== Volumes Explorer
+
+Volumes Explorer bietet eine einfache, durchsuchbare Ansicht aller Volumes in NetApp Workload Factory. Es wird schnell ersichtlich, welche Volumes Block- oder Datei-Workloads bedienen. Die logische Größe, die physisch genutzte Kapazität und die Nutzung von Speichereffizienzfunktionen (Komprimierung, Deduplizierung und Verdichtung) jedes Volumes werden angezeigt. Eine Filterung und Sortierung nach Name, Status (verfügbar/ausgefallen), Latenz, Größe, genutzter Kapazität und Schutzfunktionen ist möglich.
+
+
+
+=== Verbesserungen der Replikationsverzögerung
+
+
+
+==== Verbesserte E-Mail-Benachrichtigungen bei Replikationsverzögerungen
+
+E-Mail-Benachrichtigungen über Replikationsverzögerungen enthalten jetzt detailliertere Informationen zur betroffenen Beziehung. Die Benachrichtigung ermöglicht eine schnelle Identifizierung der betroffenen Beziehung und eine weitere Untersuchung in der Workload Factory Konsole.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html["Benachrichtigungen für Replikationsverzögerungen aktivieren"]
+
+
+
+==== Replikationsverzögerungsdaten in eine CSV-Datei exportieren
+
+Sie können nun Replikationsverzögerungsdaten in eine CSV-Datei exportieren, um die Daten in einer Tabellenkalkulation zu analysieren und sie mit anderen zu teilen.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html["Replikationsverzögerungen verfolgen"]
+
+
+
+=== Verbesserung der Blockgeräteerstellung
+
+Workload Factory unterstützt die Erstellung von Blockgeräten aus einem Volume Snapshot.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["Ein Blockgerät aus einem Volume-Snapshot in Workload Factory erstellen"]
+
+
+
 == 31. Mai 2026
 
 
