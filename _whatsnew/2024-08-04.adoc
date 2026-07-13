@@ -4,6 +4,7 @@
 
 
 
+[[terraform-support]]
 === Terraform-Unterstützung
 
 Dateisysteme und Storage-VMs können Sie nun mit Terraform von der Codebox implementieren.
@@ -15,6 +16,7 @@ Dateisysteme und Storage-VMs können Sie nun mit Terraform von der Codebox imple
 
 
 
+[[throughput-and-iops-recommendations-in-the-storage-calculator]]
 === Empfehlungen zu Durchsatz und IOPS im Storage-Rechner
 
 Der Storage-Rechner gibt Empfehlungen für die Konfiguration des Filesystems FSX für ONTAP für Durchsatz und IOPS auf Basis von AWS Best Practices ab, damit Sie optimale Hinweise für Ihre Auswahl erhalten.

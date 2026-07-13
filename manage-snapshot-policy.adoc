@@ -22,6 +22,7 @@ Standardmäßig ist jedes Volume mit der Snapshot-Richtlinie des Dateisystems ve
 
 
 
+[[change-a-snapshot-policy]]
 == Ändern Sie eine Snapshot-Richtlinie
 
 Sie können den Namen der Snapshot-Richtlinie, den Zeitplan und die Anzahl der beizubehaltenden Kopien ändern sowie unveränderliche Snapshots aktivieren oder deaktivieren. Die Richtlinienfreigabe für Storage-VMs kann nicht aktiviert oder deaktiviert werden. Diese Option ist nur während der Erstellung der Snapshot-Richtlinie verfügbar.
@@ -45,6 +46,7 @@ Die Snapshot-Richtlinie wird aktualisiert.
 
 
 
+[[enable-immutable-snapshots]]
 == Aktivieren Sie unveränderliche Snapshots
 
 Sperren Sie Snapshots, um zu verhindern, dass sie während des Aufbewahrungszeitraums gelöscht werden.
@@ -74,6 +76,7 @@ Der Volume-Snapshot ist jetzt gesperrt.
 
 
 
+[[assign-a-snapshot-policy-to-a-volume]]
 == Weisen Sie einem Volume eine Snapshot-Richtlinie zu
 
 Sie können einem einzelnen Volume eine Snapshot-Richtlinie zuweisen, um geplante Snapshots für das Volume zu erstellen.
@@ -100,6 +103,7 @@ Die Snapshot-Richtlinie ist dem Volume zugewiesen.
 
 
 
+[[remove-a-snapshot-policy-from-a-volume]]
 == Entfernen einer Snapshot-Richtlinie aus einem Volume
 
 Entfernen Sie eine Snapshot-Richtlinie aus einem Volume, da Sie keine Snapshots des Volumes mehr möchten oder eine Snapshot-Richtlinie löschen möchten, die mehreren Volumes zugewiesen ist. <<Löschen einer Snapshot-Richtlinie,Löschen einer Snapshot-Richtlinie>>Wenn diesem Volume mehr als ein Volume zugewiesen ist, müssen Sie es manuell aus allen Volumes entfernen.
@@ -123,6 +127,7 @@ Die Snapshot-Richtlinie wird aus dem Volume entfernt.
 
 
 
+[[delete-a-snapshot-policy]]
 == Löschen einer Snapshot-Richtlinie
 
 Löschen Sie eine Snapshot-Richtlinie, wenn sie nicht mehr benötigt wird.

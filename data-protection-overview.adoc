@@ -15,6 +15,7 @@ FSx für ONTAP unterstützt Snapshots, NetApp Autonomous Ransomware Protection m
 
 
 
+[[types-of-data-protection]]
 == Arten der Datensicherung
 
 Datensicherung Ihrer Workloads gewährleistet, dass nach jedem Datenverlust jederzeit ein Recovery durchgeführt werden kann. Informieren Sie sich über die Arten der Datensicherung, bevor Sie die zu verwendenden Funktionen auswählen.
@@ -39,6 +40,7 @@ image:diagram-fsx-data-protection.png["Screenshot zeigt die Datensicherung für 
 
 
 
+[[best-practices-for-protecting-your-workload-data]]
 == Best Practices zum Schutz Ihrer Workload-Daten
 
 FSX für ONTAP bietet mehrere Datensicherungsoptionen, die miteinander kombiniert werden können, um die Recovery-Zeitpunkte und -Zeiten Ihrer Wahl zu erreichen. Für den bestmöglichen Schutz empfehlen wir, sowohl Volume-Snapshots als auch Volume-Backups zu verwenden.
@@ -47,30 +49,35 @@ Ein Recovery-Zeitpunkt (Recovery Point Objective, RPO) beschreibt, wie häufig d
 
 
 
+[[protect-your-workload-data-with-snapshots]]
 == Schützen Sie Ihre Workload-Daten mit Snapshots
 
 Snapshots sind virtuelle Point-in-Time-Versionen eines Volumes, die nach einem Zeitplan erstellt werden. Sie können mithilfe von standardmäßigen Dateisystembefehlen auf Snapshots zugreifen. Snapshots stellen einen RPO von nur einer Stunde bereit. Die RTO hängt von der wiederherzustellenden Datenmenge ab und ist in erster Linie durch das Volume-Durchsatzlimit begrenzt. Snapshots ermöglichen Benutzern auch die Wiederherstellung spezifischer Dateien und Verzeichnisse, wodurch die RTO noch weiter verringert wird. Snapshots verbrauchen nur zusätzlichen Volume-Speicherplatz für Änderungen, die am Volume vorgenommen werden.
 
 
 
+[[protect-your-workload-data-with-netapp-autonomous-ransomware-protection-with-ai]]
 == Schützen Sie Ihre Workload-Daten mit NetApp Autonomous Ransomware Protection mit KI
 
 NetApp Autonomous Ransomware Protection mit KI (ARP/AI) fungiert als wichtige zusätzliche Verteidigungsebene, wenn die Antivirensoftware einen Eindringling nicht erkennen konnte.  Durch das Festlegen einer ARP/AI-Richtlinie wird diese für alle Speicher-VMs und alle vorhandenen und neu erstellten Volumes aktiviert.  Nach der Aktivierung erkennt und schützt ARP/AI alle Volumes und Speicher-VMs.  Wenn eine Dateierweiterung als abnormal gekennzeichnet ist, sollten Sie die Warnung auswerten.
 
 
 
+[[protect-your-workload-data-with-volume-replication]]
 == Schutz von Workload-Daten durch Volume-Replizierung
 
 Volume Replication erstellt eine Kopie der neuesten Daten eines Volumes einschließlich aller Snapshots in einer anderen Region. Wenn Sie sich keine mehrstündigen RTOs für eine vollständige Volume-Wiederherstellung von einem Volume-Backup leisten können, sollten Sie eine Volume-Replikation in Erwägung ziehen. Die Volume-Replikation stellt zwar sicher, dass aktuelle Daten in einer anderen Region zur Verfügung stehen, Sie müssen jedoch Ihre Clients anpassen, um das Volume in der anderen Region zu verwenden.
 
 
 
+[[protect-your-workload-data-with-backups]]
 == Schutz von Workload-Daten durch Backups
 
 Volume Backups ermöglichen unabhängige, zeitpunktgenaue Kopien Ihres Volumes. Sie können dazu verwendet werden, alte Backups zu speichern und die erforderliche zweite Kopie Ihrer Daten bereitzustellen. Tägliche, wöchentliche und monatliche Backup-Zeitpläne ermöglichen die Einhaltung von RPOs ab einem Tag. Volume Backups können nur als Ganzes wiederhergestellt werden. Das Erstellen eines Volumes aus einem Backup (RTO) kann je nach Größe des Backups Stunden bis viele Tage dauern.
 
 
 
+[[recommendations-for-protecting-your-workload-data]]
 == Empfehlungen zum Schutz Ihrer Workload-Daten
 
 Berücksichtigen Sie die folgenden Empfehlungen zum Schutz Ihrer Workload-Daten.

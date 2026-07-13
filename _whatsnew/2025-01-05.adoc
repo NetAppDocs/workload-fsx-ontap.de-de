@@ -4,6 +4,7 @@
 
 
 
+[[volume-cifs-share-enhancements]]
 === Verbesserungen der Volume-CIFS-Freigabe
 
 Die folgenden Verbesserungen sind für das Management von CIFS-Freigaben für Volumes in einem Dateisystem von Amazon FSX für ONTAP in der BlueXP -Workload-Fabrik verfügbar:

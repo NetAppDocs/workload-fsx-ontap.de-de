@@ -17,6 +17,7 @@ Beim Replizieren von Speicher-VM-Daten und Konfigurationseinstellungen müssen S
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Die Replikation schützt Ihre Daten, wenn eine Katastrophe Ihre Region betrifft; sie kann auch für Migrationszwecke verwendet werden.
@@ -34,6 +35,7 @@ Sie können ein Quellvolume (lesen/schreiben) oder ein Datensicherungsvolume (DP
 ====
 
 
+[[migration-use-cases]]
 === Migrationsanwendungsfälle
 
 Für die Migration können Sie die Daten und Konfigurationseinstellungen einer Storage-VM replizieren. Wenn Sie Daten und Konfigurationseinstellungen gemeinsam migrieren, stellen Sie sicher, dass die letzte Replikation des Volumes innerhalb der letzten 24 Stunden abgeschlossen wurde. Sie müssen alle Volumes in derselben Storage-VM auswählen, um diese Funktion zu nutzen. Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
@@ -59,6 +61,7 @@ Für die Migration der Speicher-VM-Daten und Konfigurationseinstellungen müssen
 
 
 
+[[step-1-create-the-replication-relationship]]
 == Schritt 1: Replikationsbeziehung erstellen
 
 Replizieren Sie Daten zwischen zwei FSx for ONTAP-Dateisystemen, zwischen einem lokalen ONTAP-System und einem FSx for ONTAP-Dateisystem oder zwischen Cloud Volumes ONTAP und einem FSx for ONTAP-Dateisystem.
@@ -196,6 +199,7 @@ Wenn Sie eine Replikationsbeziehung für Migrationszwecke erstellt haben, müsse
 
 
 
+[[step-2-initialize-the-replication-relationship]]
 == Schritt 2: Replikationsbeziehung initialisieren
 
 Initialisieren Sie eine Replikationsbeziehung zwischen Quell- und Zielvolumes, um den Snapshot und alle Datenblöcke in NetApp Workload Factory zu übertragen.
@@ -221,12 +225,14 @@ Wenn der Replikationsstatus *Leerlauf* anzeigt, ist der Datentransfer abgeschlos
 
 
 
+[[step-3-cut-over-replication-for-migration-use-cases]]
 == Schritt 3: Umstellung der Replikation für Migrationsanwendungsfälle
 
 Nachdem die Replikationsbeziehung für einen Migrationsanwendungsfall erstellt wurde, muss die Replikation umgestellt werden, um die Migration der Storage-VM-Daten und Konfigurationseinstellungen auf das Ziel-FSx for ONTAP-Dateisystem abzuschließen. Die Umstellung der Replikation migriert Daten und Storage-VM-Konfigurationseinstellungen dauerhaft vom Quellsystem auf das Ziel-FSx for ONTAP-Dateisystem. Während der Umstellung werden die Daten ein letztes Mal repliziert. Die Quell-Storage-VM wird offline geschaltet, wenn die Umstellung beginnt.
 
 
 
+[[plan-for-the-cutover-operation]]
 === Planen Sie den Cutover-Vorgang
 
 Berücksichtigen Sie Folgendes bei der Planung des Umstellungsprozesses für Migrationsanwendungsfälle.
@@ -276,6 +282,7 @@ Nach Einleitung der Umstellung wird die Quellspeicher-VM offline genommen.
 
 
 
+[[update-configuration-settings-after-cutover]]
 === Konfigurationseinstellungen nach der Umstellung aktualisieren
 
 Nachdem Sie die Replikation für Migrationsszenarien umgestellt haben, aktualisieren Sie die folgenden Speicher-VM-Konfigurationseinstellungen auf der Ziel-Speicher-VM.
@@ -294,6 +301,7 @@ Nachdem Sie die Replikation für Migrationsszenarien umgestellt haben, aktualisi
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 link:change-tiering-policy.html["Die Tiering-Richtlinie ändern"] für das/die Ziel-Volume nach der Umstellung.

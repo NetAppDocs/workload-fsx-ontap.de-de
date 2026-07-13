@@ -19,6 +19,7 @@ Wenn der Speicherrechner ermittelt, dass FSx für ONTAP der kostengünstigste Sp
 
 
 
+[[calculator-options]]
 == Berechnungsoptionen
 
 Für den Vergleich der Kosten zwischen Ihren Systemen und FSX for ONTAP stehen zwei Rechner-Optionen zur Verfügung – Anpassung und automatische Erkennung für Ihre Amazon Storage-Umgebungen.
@@ -31,6 +32,7 @@ Darüber hinaus können Sie link:https://docs.netapp.com/us-en/workload-setup-ad
 
 
 
+[[explore-savings-via-customization]]
 == Entdecken Sie Einsparungen durch Anpassung
 
 Führen Sie die Schritte unter der Registerkarte für Ihre Speicherauswahl aus.
@@ -116,6 +118,7 @@ Um zu FSX für ONTAP zu wechseln, folgen Sie den Anweisungen zu <<Implementieren
 
 
 
+[[explore-savings-for-detected-storage-environments]]
 == Entdecken Sie die Einsparungen bei erkannten Speicherumgebungen
 
 .Bevor Sie beginnen
@@ -198,6 +201,7 @@ Scrollen Sie außerdem nach unten zum Ende der Seite, um den Bericht anzuzeigen,
 
 
 
+[[deploy-fsx-for-ontap-file-systems]]
 == Implementieren von FSX für ONTAP-Dateisysteme
 
 Wenn Sie zu FSX für ONTAP wechseln möchten, um Kosteneinsparungen zu erzielen, wählen Sie *Erstellen*, um das Dateisystem direkt aus dem Assistenten zum Erstellen eines FSX für ONTAP-Dateisystems zu erstellen, oder wählen Sie *Speichern*, um die empfohlenen Konfigurationen für später zu speichern.

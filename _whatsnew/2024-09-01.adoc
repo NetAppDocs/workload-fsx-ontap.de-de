@@ -4,12 +4,14 @@
 
 
 
+[[read-mode-support-for-storage-management]]
 === Lesemodus-Unterstützung für Speicherverwaltung
 
 Der Lesemodus ist für die Speicherverwaltung in Workload Factory verfügbar.  Der Lesemodus verbessert die Erfahrung des Basismodus, indem er schreibgeschützte Berechtigungen hinzufügt, sodass die Infrastructure-as-Code-Vorlagen mit Ihren spezifischen Variablen gefüllt werden.  Die Infrastructure-as-Code-Vorlagen können direkt von Ihrem AWS-Konto aus ausgeführt werden, ohne dass Sie Workload Factory Änderungsberechtigungen erteilen müssen.
 
 
 
+[[backup-before-volume-deletion-support]]
 === Unterstützung für Backup vor dem Löschen von Volumes
 
 Sie können jetzt ein Volume sichern, bevor Sie es löschen. Die Sicherung bleibt im Dateisystem, bis sie gelöscht wird.

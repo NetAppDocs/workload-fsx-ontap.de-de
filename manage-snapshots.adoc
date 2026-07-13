@@ -15,6 +15,7 @@ Bearbeiten Sie Snapshot-Einstellungen, aktivieren Sie den Verzeichniszugriff und
 
 
 
+[[edit-a-snapshot]]
 == Bearbeiten eines Schnappschusses
 
 Bearbeiten Sie den Namen, die Bezeichnung und die Aufbewahrungsdauer eines Snapshots.  Wenn der Snapshot noch nicht unveränderlich ist, können Sie ihn unveränderlich machen.
@@ -47,6 +48,7 @@ Akzeptieren Sie die Aussage zu unveränderlichen Snapshots.
 
 
 
+[[access-a-snapshot]]
 == Auf einen Snapshot zugreifen
 
 Aktivieren Sie den Zugriff auf das Snapshot-Verzeichnis, um Benutzern die Möglichkeit zu geben, selbstständig auf Snapshots zuzugreifen.
@@ -72,6 +74,7 @@ Aktivieren Sie den Zugriff auf das Snapshot-Verzeichnis, um Benutzern die Mögli
 
 
 
+[[restore-data-from-a-snapshot]]
 == Wiederherstellen von Daten aus einem Snapshot
 
 Sie haben die Möglichkeit, Daten aus einem Snapshot auf einem vorhandenen oder einem neuen Volume wiederherzustellen.
@@ -80,6 +83,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 
 
 
+[[delete-a-snapshot]]
 == Löschen eines Snapshots
 
 Löschen Sie einen Snapshot, um Speicherplatz freizugeben.

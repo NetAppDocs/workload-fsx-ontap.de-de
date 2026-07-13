@@ -29,6 +29,7 @@ Anwendungsfälle:: Beachten Sie, dass der primäre Anwendungsfall für den GenAI
 
 
 
+[[discover-an-on-premises-ontap-cluster]]
 == Ermitteln eines lokalen ONTAP Clusters
 
 Entdecken Sie einen lokalen ONTAP Cluster in NetApp Workload Factory, damit Sie die Daten auf ein Amazon FSx for NetApp ONTAP Dateisystem replizieren können.
@@ -77,6 +78,7 @@ Sie können jetzt die Daten in Ihrem lokalen ONTAP-Cluster und anzeigen<<Volume-
 
 
 
+[[replicate-volume-data-from-an-on-premises-ontap-cluster]]
 == Volume-Daten aus einem lokalen ONTAP Cluster replizieren
 
 Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für ONTAP Filesystem. Nach der Replizierung können diese Daten zur Erweiterung von KI-Wissensdatenbanken verwendet werden.
@@ -145,6 +147,7 @@ Die Replikationsbeziehung wird auf der Registerkarte *Replikationsbeziehungen* i
 
 
 
+[[remove-an-on-premises-ontap-cluster-from-netapp-workload-factory]]
 == Entfernen eines lokalen ONTAP Clusters aus der NetApp Workload Factory
 
 Entfernen Sie bei Bedarf einen lokalen ONTAP Cluster aus der NetApp Workload Factory.

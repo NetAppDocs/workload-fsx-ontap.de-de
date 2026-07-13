@@ -23,6 +23,7 @@ In der NetApp Workload Factory -Konsole können Sie Cache-Volumes verwalten, die
 
 
 
+[[edit-the-cache-volume-name]]
 == Bearbeiten Sie den Namen des Cache-Volumes
 
 Sie können den Namen eines vorhandenen Cache-Volumes jederzeit ändern.
@@ -39,6 +40,7 @@ Sie können den Namen eines vorhandenen Cache-Volumes jederzeit ändern.
 
 
 
+[[adjust-the-capacity-of-a-cache-volume]]
 == Passen Sie die Kapazität eines Cache-Volumes an.
 
 Sie können die Kapazität eines vorhandenen Cache-Volumes jederzeit anpassen.
@@ -55,6 +57,7 @@ Sie können die Kapazität eines vorhandenen Cache-Volumes jederzeit anpassen.
 
 
 
+[[edit-the-cache-volume-export-policy]]
 == Bearbeiten Sie die Exportrichtlinie für Cache-Volumes.
 
 Ändern Sie den Mount-Pfad oder die Exportrichtlinie, die einem vorhandenen Cache-Volume zugewiesen ist.
@@ -72,6 +75,7 @@ Sie können die Kapazität eines vorhandenen Cache-Volumes jederzeit anpassen.
 
 
 
+[[change-the-caching-method-for-a-cache-volume]]
 == Ändern Sie die Caching-Methode für ein Cache-Volume.
 
 Sie können die Funktionsweise des Caches für ein bestehendes Cache-Volume auf Write-Around oder Write-Back ändern.
@@ -90,6 +94,7 @@ Erfahren Sie mehr überlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/us
 
 
 
+[[prepopulate-a-cache-volume]]
 == Cache-Volume vorbefüllen
 
 Füllen Sie das Cache-Volume mit Daten vom Ursprungsvolume, bevor Sie es verwenden, um zwischengespeicherte Daten schneller verfügbar zu machen.
@@ -106,6 +111,7 @@ Füllen Sie das Cache-Volume mit Daten vom Ursprungsvolume, bevor Sie es verwend
 
 
 
+[[delete-a-cache-volume]]
 == Löschen eines Cache-Volumes
 
 Wenn Sie ein Cache-Volume löschen, entfernen Sie dessen Cache-Beziehung.  Die zwischengespeicherten Daten sind nicht mehr verfügbar.

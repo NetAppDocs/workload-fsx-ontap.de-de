@@ -15,6 +15,7 @@ Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funktionen, die
 
 
 
+[[region-support]]
 == Regionale Unterstützung
 
 Die folgenden AWS-Regionen werden nicht unterstützt:
@@ -26,6 +27,7 @@ Die folgenden AWS-Regionen werden nicht unterstützt:
 
 
 
+[[adding-ha-pairs-limitations]]
 == Einschränkungen bei HA-Paaren
 
 * Dieser Vorgang kann etwa 30 Minuten dauern.
@@ -34,22 +36,26 @@ Die folgenden AWS-Regionen werden nicht unterstützt:
 
 
 
+[[throughput-capacity-region-support]]
 == Unterstützung für Durchsatzkapazität in Regionen
 
 
 
+[[scale-up-deployments]]
 === Vertikal skalierbare Implementierungen
 
 Scale-up-Konfigurationen werden in allen Regionen bis zu 2 Gbit/s unterstützt. Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 4 Gbit/s für Scale-up-Bereitstellungen: Region US East (Ohio), Region US East (N. Virginia), Region US West (Oregon) und Europa (Irland).
 
 
 
+[[scale-out-deployments]]
 === Horizontal skalierbare Implementierungen
 
 Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis zu 6 GB/s für Scale-Out-Bereitstellungen: USA Ost (Nord-Virginia und Ohio), USA West (Nordkalifornien und Oregon), Europa (Frankfurt, Irland und Stockholm) sowie Asien-Pazifik (Singapur und Sydney).
 
 
 
+[[capacity-management]]
 == Kapazitätsmanagement
 
 * Die Volume Autogrow-Funktion wird derzeit für das iSCSI-Protokoll nicht unterstützt.
@@ -60,6 +66,7 @@ Die folgenden Regionen unterstützen eine maximale Durchsatzkapazität von bis z
 
 
 
+[[storage-vms]]
 == Storage-VMs
 
 Die Anzahl der Speicher-VMs ist pro SKU begrenzt.  Das Erstellen von Speicher-VMs über die Beschränkung hinaus wird in Workload Factory nicht unterstützt.^1^
@@ -68,6 +75,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 
 
 
+[[iscsi-protocol-support]]
 == ISCSI-Protokoll unterstützt
 
 * Das iSCSI-Protokoll ist nur für FlexVol-Volumes verfügbar. ^1^
@@ -76,6 +84,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 
 
 
+[[data-protection]]
 == Datensicherung
 
 * Snapshots können nicht gelöscht werden.
@@ -97,6 +106,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-sv
 
 
 
+[[storage-savings-calculator]]
 == Rechner für Storage-Einsparungen
 
 Der Rechner für Storage-Einsparungen berechnet die Kosteneinsparungen für die folgenden Konfigurationen nicht:
@@ -108,18 +118,21 @@ Der Rechner für Storage-Einsparungen berechnet die Kosteneinsparungen für die 
 
 
 
+[[aws-secrets-manager-support]]
 == Unterstützung von AWS Secrets Manager
 
 AWS Secrets Manager wird bei Verwendung eines Konsolenagenten nicht unterstützt.
 
 
 
+[[amazon-s3-access-points-limitation]]
 == Beschränkung der Amazon S3-Zugriffspunkte
 
 Die maximale Anzahl an S3-Zugriffspunkten pro Speicher-VM beträgt 4.000.
 
 
 
+[[limitations-for-storage-vm-migration-replication]]
 == Einschränkungen bei der Migrationsreplikation von Storage-VMs
 
 * Workload Factory unterstützt keine Migrationsreplikation für Storage-VMs zwischen FSx for ONTAP-Dateisystemen der ersten und zweiten Generation.

@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-updates]]
 === Gut strukturierte Analyse-Updates
 
 Workload Factory analysiert Ihre FSx for ONTAP -Dateisysteme für die folgenden Konfigurationen:
@@ -14,6 +15,7 @@ Workload Factory analysiert Ihre FSx for ONTAP -Dateisysteme für die folgenden 
 
 
 
+[[workload-factory-supports-ai-ml-use-case-for-replication]]
 === Workload Factory unterstützt KI- und ML-Anwendungsfälle für die Replikation
 
 Workload Factory unterstützt die Replikation von On-Premises ONTAP-Daten zu Amazon FSx for NetApp ONTAP und die Erstellung von S3-Zugriffspunkten für AWS Artificial Intelligence (AI) und Machine Learning (ML) Services, um AI/ML-Workflows zu beschleunigen.
@@ -22,6 +24,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["R
 
 
 
+[[editing-existing-s3-access-points]]
 === Bearbeiten vorhandener S3-Zugangspunkte
 
 Sie können den Benutzer und den Benutzertyp für einen vorhandenen, mit einem Volume verbundenen S3-Zugriffspunkt ändern. Sie können außerdem Metadaten für den Zugriffspunkt aktivieren oder deaktivieren.
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-s3-access-points.html
 
 
 
+[[added-block-storage-diagram]]
 === Blockspeicherdiagramm hinzugefügt
 
 Wenn Sie Blockspeicher verwenden, können Sie das Blockspeicherdiagramm anzeigen, um zu visualisieren, wie Blockgeräte mit Knoten und Initiatorgruppen verbunden sind. Das Diagramm hilft Ihnen, Ihren Blockspeicher zu verstehen und zu verwalten.
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[
 
 
 
+[[update-to-automatic-capacity-management-feature]]
 === Aktualisierung der automatischen Kapazitätsmanagement-Funktion
 
 Dieses Update teilt die Funktion in zwei separate Funktionen auf: automatisches Kapazitätsmanagement und Kapazitätsbenachrichtigungen.
@@ -50,6 +55,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Neues „Ask Me“-Lesezeichen in Workload Factory verfügbar
 
 Wir haben auf jedem Bildschirm in der Workload Factory-Konsole ein neues Ask Me-Lesezeichen hinzugefügt. Diese Verbesserung macht es für Sie einfacher und schneller, auf Ask Me zuzugreifen, wann immer Sie Hilfe benötigen. Ask Me ist unser KI-Assistent. Sie können Fragen zu Ihren Workload-Umgebungen stellen, personalisierte Einblicke erhalten und frühere Konversationen überprüfen.

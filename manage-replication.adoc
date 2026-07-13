@@ -15,6 +15,7 @@ Verwalten Sie Ihre Replikationsbeziehungen in NetApp Workload Factory. Sie könn
 
 
 
+[[change-the-replication-schedule-of-a-source-volume]]
 == Ändern Sie den Replikationszeitplan eines Quell-Volumes
 
 Ändern Sie den Replikationszeitplan des Quellvolumes in einer Replikationsbeziehung in NetApp Workload Factory.
@@ -45,6 +46,7 @@ Wenn ein On-Premises-ONTAP-Cluster Ziel der Replikationsbeziehung ist, wird eine
 
 
 
+[[limit-the-max-transfer-rate-of-a-replication-relationship]]
 == Begrenzen Sie die maximale Übertragungsrate einer Replikationsbeziehung
 
 Die Begrenzung der maximalen Übertragungsrate ist optional, wird jedoch empfohlen. Ohne Einschränkung kann die Netzwerk- und Applikations-Performance abnehmen.
@@ -71,6 +73,7 @@ Alternativ wählen Sie *Unlimited*.
 
 
 
+[[manually-update-snapshot-data-in-a-replication-relationship]]
 == Snapshot-Daten in einer Replikationsbeziehung manuell aktualisieren
 
 Eine Replikationsbeziehung verfügt über einen festgelegten Replikationsplan, Sie können die zwischen Quell- und Zielvolumes übertragenen Snapshot-Daten in NetApp Workload Factory jedoch jederzeit manuell aktualisieren.
@@ -88,6 +91,7 @@ Eine Replikationsbeziehung verfügt über einen festgelegten Replikationsplan, S
 
 
 
+[[pause-a-replication-relationship]]
 == Anhalten einer Replikationsbeziehung
 
 Halten Sie eine Replikationsbeziehung an, um geplante Replikationsaktualisierungen vom Quell-Volume auf das Ziel-Volume zu stoppen. Das Ziel-Volume wechselt von schreibgeschützt zu Lese-/Schreibzugriff. Beide Volumes verwenden weiterhin den letzten Replizierungs-Snapshot als neue Basis für eine spätere Neusynchronisierung.
@@ -111,6 +115,7 @@ Die Beziehung hält an und ihr Status wird als „angehalten“ angezeigt.
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Nehmen Sie eine angehaltene Replikationsbeziehung wieder auf
 
 Wenn Sie eine Replikationsbeziehung wiederherstellen, werden alle Änderungen am Ziel-Volume, die während der Unterbrechung der Replikation vorgenommen wurden, gelöscht. Das Ziel-Volume wechselt vom lesen/schreiben in den Nur-Lese-Modus und empfängt wieder Aktualisierungen vom Quell-Volume im geplanten Replikationsintervall.
@@ -134,6 +139,7 @@ Die Beziehung wird fortgesetzt und ihr Status wird als „repliziert“ angezeig
 
 
 
+[[reverse-a-replication-relationship]]
 == Eine Replikationsbeziehung umkehren
 
 Wenden Sie eine Replikationsbeziehung um, damit das Ziel-Volume das Quell-Volume wird.
@@ -173,6 +179,7 @@ Stellen Sie sicher, dass Sie die aktuellen und zukünftigen Rollen Ihrer Quell- 
 
 
 
+[[stop-a-replication-relationship]]
 == Anhalten einer Replikationsbeziehung
 
 Beenden Sie eine Replikationsbeziehung in NetApp Workload Factory.  Wenn Sie eine Replikationsbeziehung beenden, werden geplante Replikationsaktualisierungen vom Quellvolume zum Zielvolume angehalten.  Der Zieldatenträger wechselt vom schreibgeschützten zum Lese-/Schreibzugriff.
@@ -193,6 +200,7 @@ Der Replikationsstatus des Volumes ändert sich in *broken*. Das Ziel-Volume wir
 
 
 
+[[delete-a-replication-relationship]]
 == Löschen einer Replikationsbeziehung
 
 Löschen Sie eine Replikationsbeziehung in NetApp Workload Factory.  Wenn Sie eine Replikationsbeziehung löschen, wird die Replikationsbeziehung zwischen dem Quell- und dem Zielvolume entfernt.  Nachdem die Replikationsbeziehung gelöscht wurde, bestehen beide Volumes mit den aktuellen Daten, die sie enthalten, weiterhin unabhängig voneinander fort.

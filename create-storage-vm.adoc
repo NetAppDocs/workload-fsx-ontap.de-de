@@ -23,6 +23,7 @@ Wenn Sie mit SVMs auf Daten in FSX for ONTAP zugreifen, mounten Ihre Clients und
 
 
 
+[[create-a-storage-vm]]
 == Erstellen einer Storage-VM
 
 Sie können eine Speicher-VM über die Workload Factory-Konsole erstellen.  Sie können auch die folgenden in der Codebox verfügbaren Tools verwenden: REST API, CloudFormation und Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Erfahren Sie, wie Sie Codebox für die Automatisierung verwenden"^] .

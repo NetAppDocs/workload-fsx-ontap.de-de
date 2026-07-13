@@ -27,6 +27,7 @@ NOTE: AWS Secrets Manager wird bei Verwendung eines Konsolenagenten nicht unters
 
 
 
+[[associate-a-new-link]]
 == Neuen Link zuordnen
 
 Die Verknüpfung eines neuen Links umfasst die Erstellung und Verknüpfung.
@@ -234,6 +235,7 @@ Workload Factory verknüpft die Verbindung mit dem FSx for ONTAP-Dateisystem. Si
 
 
 
+[[associate-an-existing-link-with-an-fsx-for-ontap-file-system]]
 == Verknüpfen Sie einen vorhandenen Link mit einem FSX for ONTAP-Dateisystem
 
 Nachdem Sie einen Link erstellt haben, verknüpfen Sie ihn mit einem oder mehreren FSX for ONTAP-Dateisystemen.
@@ -274,6 +276,7 @@ link:links-overview.html#when-a-link-is-required["Weitere Informationen zu Links
 
 
 
+[[troubleshoot-issues-with-aws-secrets-manager-link-authentication]]
 == Fehlerbehebung bei Problemen mit der AWS Secrets Manager-Link-Authentifizierung
 
 Problem:: Der Link verfügt nicht über die erforderlichen Berechtigungen zum Abrufen des Geheimnisses.

@@ -4,6 +4,7 @@
 
 
 
+[[volume-autogrow-enhancement]]
 === Verbesserung der automatischen Volumevergrößerung
 
 Jetzt können Sie die Autogrow-Größe Ihrer Volumes so einstellen, dass die Volumegröße über die bereitgestellte Größe für Geschäftsanforderungen und Anwendungsanforderungen hinaus wachsen kann.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[
 
 
 
+[[well-architected-analysis-update]]
 === Gut strukturiertes Analyse-Update
 
 Workload Factory analysiert jetzt Ihre FSx for ONTAP-Dateisysteme, um zu prüfen, ob Speichereffizienzen wie Datenkomprimierung, -komprimierung und -deduplizierung genutzt werden. Die Speichereffizienz misst, wie effektiv die Dateisysteme den verfügbaren Speicherplatz nutzen.
@@ -20,12 +22,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-dashboard-enhancements]]
 === Verbesserungen des Speicher-Dashboards
 
 Wenn Sie ab heute die Speicherarbeitslast über die Workload Factory-Konsole öffnen, wird das *Dashboard* angezeigt.  Das neu gestaltete Dashboard bietet eine ganzheitliche Ansicht Ihrer FSx for ONTAP -Systeme, einschließlich der Anzahl der Dateisysteme, der gesamten SSD-Kapazität, der gut strukturierten Statusübersicht, der Datenschutzübersicht und der Integrität der Replikationsbeziehung.
 
 
 
+[[volumes-tab-enhancements]]
 === Verbesserungen der Registerkarte „Volumes“
 
 Die Speicher-Workload hat Verbesserungen an der Registerkarte „Volumes“ innerhalb eines FSx for ONTAP Dateisystems in der Workload Factory-Konsole vorgenommen.  Zu den Verbesserungen gehören:
@@ -36,6 +40,7 @@ Die Speicher-Workload hat Verbesserungen an der Registerkarte „Volumes“ inne
 
 
 
+[[storage-efficiencies-update-for-volume-creation]]
 === Aktualisierung der Speichereffizienz für die Volume-Erstellung
 
 Beim Erstellen eines neuen Volumes werden Speichereffizienzen wie Datenkomprimierung, Komprimierung und Deduplizierung standardmäßig aktiviert.

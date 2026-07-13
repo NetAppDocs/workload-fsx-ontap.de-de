@@ -15,6 +15,7 @@ summary: Überprüfen und gleichen Sie die Volumenkapazität neu aus, um mit der
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Die Neuausrichtung der Volume-Kapazität wird für FlexVol-Volumes und FlexGroup-Volumes unterstützt. Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei. Volume-Transfervorgänge verbrauchen Filesystem-Ressourcen.
@@ -40,6 +41,7 @@ NOTE: Für SAN-Volumes wie iSCSI und NVMe wird die Neuverteilung nicht unterstü
 
 
 
+[[check-the-balance-of-your-volumes]]
 == Überprüfen Sie den Saldo Ihrer Volumina
 
 Überprüfen Sie den Kontostand der FlexVol- oder FlexGroup-Volumes in einem FSx für ONTAP-Dateisystem.
@@ -69,6 +71,7 @@ Wenn ein Volumen unausgeglichen ist, berücksichtigen Sie <<Volumenkapazität ne
 
 
 
+[[rebalance-volume-capacity]]
 == Volumenkapazität neu ausbalancieren
 
 Gleichen Sie ein oder mehrere Volumes aus, die keinen Lastausgleich vornehmen.
@@ -158,6 +161,7 @@ Die Volumes der FlexGroup-Mitglieder werden beim Neuausgleich einzeln verschoben
 ====
 
 
+[[stop-a-volume-rebalance-operation]]
 == Stoppen eines Volume-Neuausgleichsvorgangs
 
 Sie können einen Neuausgleichsvorgang jederzeit abbrechen. Er verursacht keine Unterbrechungen. Durch das Abbrechen des Vorgangs werden aktive Volume-Verschiebungen abgebrochen.

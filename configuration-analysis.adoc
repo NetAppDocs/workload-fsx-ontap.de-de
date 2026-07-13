@@ -24,6 +24,7 @@ Die wichtigsten Funktionen:
 
 
 
+[[how-it-works]]
 == So funktioniert es
 
 Workload Factory analysiert täglich Ihre Workloads, die auf Amazon FSx for NetApp ONTAP-Dateisystembereitstellungen laufen. Die Analyse liefert well-architected Status, Erkenntnisse und Empfehlungen.
@@ -34,12 +35,14 @@ Sie können die Analyse von Konfigurationen, die für Ihre Umgebungen nicht gelt
 
 
 
+[[why-it-matters]]
 == Warum es wichtig ist
 
 Workload Factory wendet Best Practices auf große Speicher-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Analysen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen, die in der Workload Factory-Konsole angewendet werden, reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.
 
 
 
+[[analysis-requirements]]
 == Analyseanforderungen
 
 Für eine vollständige Dateisystemanalyse müssen Sie Folgendes tun:
@@ -56,6 +59,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Er
 
 
 
+[[best-practices-and-recommendations-for-storage-workloads]]
 == Bewährte Verfahren und Empfehlungen für Speicher-Workloads
 
 Workload Factory analysiert Speicherkonfigurationen, um einen detaillierten Überblick über Best Practices für die ONTAP-Konfiguration und die Einhaltung des AWS Well-Architected Frameworks zu bieten. Die Analyse empfiehlt außerdem Verbesserungen und Fehlerbehebungen.
@@ -64,6 +68,7 @@ Die gut strukturierte Analyse kategorisiert Konfigurationen in den folgenden Sä
 
 
 
+[[reliability]]
 === Zuverlässigkeit
 
 Zuverlässigkeit gewährleistet, dass Arbeitslasten ihre beabsichtigten Funktionen korrekt und konsistent erfüllen, selbst wenn es zu Störungen kommt.
@@ -96,14 +101,11 @@ Die Snapshot-Richtlinienbezeichnungen des Quellvolumes und die Replikationsricht
 +
 Um die Kapazitätsgrenze des Volumes nicht zu erreichen, sollte der Schwellenwert für die Dateikapazität erhöht werden. Eine geringe Dateikapazität (Inodes) verhindert das Schreiben weiterer Daten auf das Volume. Workload Factory empfiehlt, die Auslastung der verfügbaren Dateikapazität dauerhaft unter 80% zu halten. Verfügbare Dateikapazität ist erforderlich, um neue Dateien im Volume zu erstellen.
 
-* *Host mit Failover-Knoten verbinden*
-+
-Workload Factory empfiehlt, Hosts mit dem Failover-Knoten zu verbinden, um die Konnektivität aufrechtzuerhalten und Unterbrechungen während Failover-Vorgängen zu vermeiden.
 
 
 
 
-
+[[security]]
 === Sicherheit
 
 Sicherheit betont den Schutz von Daten, Systemen und Vermögenswerten durch Risikobewertungen und Risikominderungsstrategien.
@@ -120,6 +122,7 @@ Volumes, die Anwendungsdaten über iSCSI bereitstellen, sollten keinen parallele
 
 
 
+[[operational-excellence]]
 === Operative Exzellenz
 
 Operative Exzellenz konzentriert sich auf die Bereitstellung der optimalsten Architektur und des größten Geschäftswerts.
@@ -152,6 +155,7 @@ Workload Factory empfiehlt, dass die Standardeinstellung für die Berichtserstel
 
 
 
+[[cost-optimization]]
 === Kostenoptimierung
 
 Kostenoptimierung hilft Ihnen, den größtmöglichen Nutzen für Ihr Unternehmen zu erzielen und gleichzeitig die Kosten niedrig zu halten.
@@ -179,18 +183,6 @@ Eine nicht voll ausgelastete SSD-Kapazitätsebene kann unnötige Kosten verursac
 * *Inaktive NAS-Volumes*
 +
 Die Konfigurationsanalyse identifiziert NAS-Volumes, die nicht aktiv genutzt werden, und empfiehlt, die Volumes zu löschen oder zu archivieren, um Kosten zu reduzieren.
-
-
-
-
-
-=== Performance-Effizienz
-
-Leistungseffizienz konzentriert sich auf die effiziente Nutzung von IT- und Computerressourcen.
-
-* *Host mit bevorzugtem Node verbinden*
-+
-In einem hochverfügbaren FSx for ONTAP Bereitstellungsmodell sollten Hosts direkt mit dem Knoten verbunden sein, der das Blockgerät bereitstellt, um direkten Zugriff und optimale Leistung sicherzustellen.
 
 
 

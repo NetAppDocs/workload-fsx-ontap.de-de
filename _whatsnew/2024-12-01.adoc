@@ -4,6 +4,7 @@
 
 
 
+[[block-storage-for-scale-out-fsx-for-ontap-file-systems]]
 === Block-Storage für Scale-out-FSX für ONTAP-Filesysteme
 
 Sie können jetzt Block-Storage über FSX für ONTAP bereitstellen, wenn Sie eine Scale-out-Filesystem-Implementierung mit bis zu 6 HA-Paaren verwenden.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["E
 
 
 
+[[mount-command-available]]
 === Mount-Befehl verfügbar
 
 Für den NFS- und CIFS-Zugriff auf ein Volume sind nun Mount-Befehle verfügbar. Sie können den Mount-Punkt für ein Volume innerhalb eines FSX für ONTAP-Dateisystems erhalten, indem Sie *Basisaktionen* und dann *Mount-Befehl anzeigen* auswählen.
@@ -22,6 +24,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/access-data.html["Zeigen S
 
 
 
+[[update-storage-efficiency-after-volume-creation]]
 === Aktualisierung der Storage-Effizienz nach der Volume-Erstellung
 
 Sie können jetzt die Storage-Effizienz für FlexVol Volumes nach der Volume-Erstellung aktivieren oder deaktivieren. Storage-Effizienz umfasst Deduplizierung, Datenkomprimierung und Data-Compaction. Durch Aktivierung der Storage-Effizienz erzielen Sie optimale Platzeinsparungen mit einer FlexVol volume.
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/update-storage-efficiency.
 
 
 
+[[on-premises-ontap-cluster-discovery-and-replication]]
 === Erkennung und Replizierung von lokalen ONTAP Clustern
 
 Ermitteln und replizieren Sie On-Premises-ONTAP-Cluster-Daten auf ein FSX for ONTAP-Filesystem, damit es für eine Erweiterung von KI-Knowledge-Basen verwendet werden kann. Alle lokalen Erkennungs- und Replikations-Workflows sind über die neue Registerkarte *On-Premises ONTAP* im Speicherbestand möglich.
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Ermi
 
 
 
+[[aws-credentials-improve-savings-calculator-analysis]]
 === AWS Zugangsdaten verbessern die Einsparungsrechner-Analyse
 
 Sie haben jetzt die Möglichkeit, AWS Zugangsdaten aus dem Einsparungsrechner hinzuzufügen. Das Hinzufügen von Zugangsdaten verbessert die Genauigkeit der Einsparungsrechner-Analyse Ihrer Amazon Elastic Block Store, Elastic File Systems und FSX für Windows File Server Storage-Umgebungen im Vergleich zu FSX für ONTAP.

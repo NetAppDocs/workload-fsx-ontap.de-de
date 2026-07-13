@@ -11,7 +11,7 @@ summary: Aktivieren Sie die Nachverfolgung, um Verzögerungen für alle Replikat
 
 
 [role="lead"]
-Die Nachverfolgung kann aktiviert werden, um Replikationsverzögerungen in Ihrem Konto zu überwachen. Workload Factory benachrichtigt Sie, wenn Verzögerungen einen festgelegten Schwellenwert überschreiten. Standardmäßig beträgt der Schwellenwert 150 % des Replikationsintervalls, um normale Übertragungszeiten zu ermöglichen und Fehlalarme zu reduzieren. Der Schwellenwert kann an Ihr RPO angepasst werden, sodass Benachrichtigungen erfolgen, wenn Verzögerungen diesen überschreiten. Die Daten können außerdem zur weiteren Analyse in eine CSV-Datei exportiert werden.
+Die Nachverfolgung kann aktiviert werden, um Replikationsverzögerungen in Ihrem Konto zu überwachen. Workload Factory benachrichtigt Sie, wenn Verzögerungen einen festgelegten Schwellenwert überschreiten. Standardmäßig beträgt der Schwellenwert 150 % des Replikationsintervalls, um normale Übertragungszeiten zu ermöglichen und Fehlalarme zu reduzieren. Der Schwellenwert kann an Ihr RPO angepasst werden, sodass Benachrichtigungen erfolgen, wenn Verzögerungen diesen überschreiten.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

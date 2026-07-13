@@ -4,6 +4,7 @@
 
 
 
+[[support-for-storage-vm-migration]]
 === Unterstützung für die Migration von Storage-VMs
 
 NetApp Workload Factory unterstützt jetzt die Migration für Speicher-VMs. Diese Funktion ermöglicht die Migration von ONTAP-Speichersystemdaten und -konfigurationen von lokalen ONTAP-Systemen oder FSx for ONTAP-Dateisystemen der ersten Generation auf FSx for ONTAP-Dateisysteme der zweiten Generation. Sie können Speicher-VM-Daten und -Konfigurationseinstellungen replizieren, um mit minimalen Ausfallzeiten und geringen Beeinträchtigungen für Benutzer und Anwendungen auf das neue Dateisystem zu migrieren.

@@ -23,6 +23,7 @@ Wenn Sie anhalten, während eine Übertragung ausgeführt wird, wird die Übertr
 
 
 
+[[pause-a-replication-relationship]]
 == Anhalten einer Replikationsbeziehung
 
 .Schritte
@@ -41,6 +42,7 @@ Die Beziehung hält an und ihr Status wird als „angehalten“ angezeigt.
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Nehmen Sie eine angehaltene Replikationsbeziehung wieder auf
 
 Wenn Sie eine Replikationsbeziehung wiederaufnehmen, werden alle Änderungen am Zielvolume gelöscht, während die Replikation angehalten wurde.

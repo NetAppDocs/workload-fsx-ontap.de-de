@@ -31,12 +31,14 @@ Prüfen Sie das Blockspeicherdiagramm, um Folgendes zu überprüfen:
 
 
 
+[[manage-igroups]]
 == Initiatorgruppen verwalten
 
 Sie können Initiatorgruppen-Details anzeigen, den Clientzugriff verwalten und Initiatorgruppen löschen.
 
 
 
+[[manage-client-access-for-an-igroup]]
 === Clientzugriff für eine Initiatorgruppe verwalten
 
 Verwalten Sie den Clientzugriff für eine bestehende Initiatorgruppe jederzeit.
@@ -65,6 +67,7 @@ Verwalten Sie den Clientzugriff für eine bestehende Initiatorgruppe jederzeit.
 
 
 
+[[delete-an-igroup]]
 === Eine Initiatorgruppe löschen
 
 Löschen Sie eine Initiatorgruppe, wenn sie nicht mehr benötigt wird.
@@ -81,6 +84,7 @@ Löschen Sie eine Initiatorgruppe, wenn sie nicht mehr benötigt wird.
 
 
 
+[[manage-block-devices-for-an-igroup]]
 == Blockgeräte für eine Initiatorgruppe verwalten
 
 Blockgeräte oder LUNs (logische Einheitennummern) sind Volumes mit Dateisystemen in einer SAN-Umgebung, die über ein Netzwerk für Hosts zugänglich sind.
@@ -89,6 +93,7 @@ Sie können Blockgeräte für FSx for ONTAP -Dateisysteme verwalten, die das iSC
 
 
 
+[[view-block-device-details]]
 === Details zum Blockgerät anzeigen
 
 Die Details eines bestehenden Blockgeräts können jederzeit eingesehen werden.
@@ -106,6 +111,7 @@ Es werden allgemeine Details, Verbrauchs-, Zugriffs- und Schutzinformationen fü
 
 
 
+[[manage-client-access-for-a-block-device]]
 === Clientzugriff für ein Blockgerät verwalten
 
 Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalten, indem Sie igroups erstellen und Blockgeräte sowie Host-Initiatoren hinzufügen oder entfernen.
@@ -131,6 +137,7 @@ Sie können den Clientzugriff für ein vorhandenes Blockgerät jederzeit verwalt
 
 
 
+[[increase-the-capacity-of-a-block-device]]
 === Erhöhen Sie die Kapazität eines Blockgeräts
 
 Die Kapazität eines bestehenden Blockgeräts kann jederzeit erhöht werden.
@@ -150,6 +157,7 @@ NOTE: Nach der Vergrößerung des Blockgeräts befolgen Sie die Vorgehensweise I
 
 
 
+[[clone-a-block-device]]
 === Klonen eines Blockgeräts
 
 Sie können jederzeit einen Klon eines bestehenden Blockgeräts erstellen. Ein Blockgeräte-Klon ist eine beschreibbare Kopie des Original-Blockgeräts, die dieselben Datenblöcke verwendet, bis Änderungen entweder am Original oder am Klon vorgenommen werden. Das Klonen eines Blockgeräts ist eine schnelle und effiziente Methode, um wiederverwendbare Kopien Ihrer Daten zu erstellen, ohne zusätzlichen Storage zu verbrauchen.
@@ -179,6 +187,7 @@ Sie können jederzeit einen Klon eines bestehenden Blockgeräts erstellen. Ein B
 
 
 
+[[archive-the-data-of-an-inactive-block-device]]
 === Archivieren Sie die Daten eines inaktiven Blockgeräts
 
 Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als inaktive Blockgeräte klassifiziert. Sie können die Daten eines inaktiven Blockgeräts in die Kapazitätspool-Ebene archivieren, um SSD-Kapazität zurückzugewinnen.
@@ -195,6 +204,7 @@ Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungen
 
 
 
+[[delete-a-block-device]]
 === Löschen eines Blockgeräts
 
 Blockgeräte, die keinem Client zugeordnet sind oder sieben Tage lang nicht verwendet wurden, sind inaktive Blockgeräte. Durch diesen Vorgang wird die Zuordnung des ausgewählten Blockgeräts aufgehoben und es gelöscht. Wenn das Host-FlexVol-Volume keine Blockgeräte enthält, wird es von Workload Factory gelöscht.
@@ -211,6 +221,7 @@ Blockgeräte, die keinem Client zugeordnet sind oder sieben Tage lang nicht verw
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["Erstellen einer Initiatorgruppe für ein FSx for ONTAP file system"]

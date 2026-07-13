@@ -15,6 +15,7 @@ Durch die Aktivierung von Kapazitätsmanagement kann NetApp Workload Factory aut
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Das System scannt das FSx for ONTAP-Dateisystem alle 30 Minuten. Es prüft, ob inkrementeller Storage hinzugefügt werden muss und verifiziert die verfügbaren Volume-Inodes. Die Anzahl erhöht sich basierend auf den Schwellenwerten des automatischen Kapazitätsmanagements.
@@ -27,6 +28,7 @@ Die maximale Menge an SSD-Speicherkapazität für alle FSX für ONTAP-Dateisyste
 
 
 
+[[enable-automatic-capacity-management-and-capacity-notifications]]
 == Automatisches Kapazitätsmanagement und Kapazitätsbenachrichtigungen aktivieren
 
 Aktivieren Sie das automatische Kapazitätsmanagement, um inkrementellen Storage eines FSx for ONTAP-Dateisystems automatisch bis zur maximalen Größenbegrenzung hinzuzufügen. Richten Sie Benachrichtigungen ein, um Warnungen zu erhalten, wenn das Dateisystem einen bestimmten Kapazitätsschwellenwert erreicht.
@@ -83,6 +85,7 @@ Alle 30 Minuten wird ein Dateisystemscan durchgeführt, um festzustellen, ob zus
 
 
 
+[[enable-inode-management-for-a-file-system]]
 == Inode-Verwaltung für ein Dateisystem aktivieren
 
 Aktivieren Sie die automatische Inode-Verwaltung, um die Anzahl der Inodes (Dateien) pro Volume bis zum zulässigen Limit zu erhöhen.

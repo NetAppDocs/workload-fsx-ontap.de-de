@@ -19,6 +19,7 @@ Sie können den Einhängepunkt für Volumes auch in NetApp Workload Factory abru
 
 
 
+[[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == Holen Sie sich den Mount-Punkt für Volumes in NetApp Workload Factory
 
 Holen Sie sich den Mount-Punkt für ein Volume, um eine Freigabe auf einer CIFS-Freigabe oder einem NFS-Client zu mounten.
@@ -35,6 +36,7 @@ Holen Sie sich den Mount-Punkt für ein Volume, um eine Freigabe auf einer CIFS-
 
 
 
+[[connect-to-nas-clients]]
 == Stellen Sie eine Verbindung mit NAS-Clients her
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-linux-client.html["Mounten Sie ein Volume auf Linux-Clients"^]
@@ -44,6 +46,7 @@ Holen Sie sich den Mount-Punkt für ein Volume, um eine Freigabe auf einer CIFS-
 
 
 
+[[connect-to-san-clients]]
 == Stellen Sie eine Verbindung mit SAN-Clients her
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-luns-linux.html["Mounten Sie eine iSCSI-LUN auf Linux-Clients"^]

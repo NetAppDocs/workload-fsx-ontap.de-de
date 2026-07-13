@@ -15,6 +15,7 @@ Richten Sie die Journaltabelleninfrastruktur ein, um Audit-Logs von Benutzerzugr
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Die Journaltabellenfunktion erfasst S3-Datenebenenereignisse (PutObject, GetObject, DeleteObject usw.) für überwachte FSx for ONTAP S3-Zugriffspunkte. Sie nutzt eine Kette von AWS-Services, die in Ihrem AWS-Konto bereitgestellt werden. Wenn Sie die Infrastruktur korrekt einrichten, stellt sie eine Verbindung zum FSx for ONTAP-Volume-Zugriffspunkt her und richtet die Pipeline ein, die Benutzerzugriffs- und Objektoperations-Audit-Ereignisse in der Journaltabelle erfasst.
@@ -54,6 +55,7 @@ Das {uuid} ist eine zufällige 8-stellige Kennung, die beim Erstellen der Vorlag
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Um die Journaltabellenfunktion zu aktivieren, führen Sie folgende Schritte aus:
@@ -172,6 +174,7 @@ Um die Journaltabellenfunktion zu aktivieren, führen Sie folgende Schritte aus:
 
 
 
+[[set-up-the-journal-table-infrastructure]]
 == Einrichtung der Journaltabelleninfrastruktur
 
 Richten Sie die Infrastruktur so ein, dass AWS-Serviceereignisse vom S3-Zugriffspunkt in der Journaltabelle erfasst werden.
@@ -205,6 +208,7 @@ Sollte einer der Schritte fehlschlagen, <<Beheben Sie Probleme bei der Infrastru
 
 
 
+[[troubleshoot-the-infrastructure-setup-for-the-journal-table]]
 == Beheben Sie Probleme bei der Infrastruktureinrichtung für die Journaltabelle
 
 Mithilfe der AWS Management Console oder der AWS CLI können Sie Fehler während der CloudFormation-Stack-Bereitstellung und der von ihr erstellten Ressourcen beheben.
@@ -213,6 +217,7 @@ Nach Behebung des Problems übermitteln Sie den CloudTrail ARN erneut, um die Ei
 
 
 
+[[common-cloudformation-deployment-failures]]
 === Häufige CloudFormation Bereitstellungsfehler
 
 
@@ -278,6 +283,7 @@ aws iam delete-role \
 ----
 
 
+[[failures-after-journal-table-enablement]]
 === Fehler nach Aktivierung der Journaltabelle
 
 Nach der Übermittlung des CloudTrail ARN validiert Workload Factory die gesamte Ressourcenpipeline, indem automatisch ein Seed- (Test-)Ereignis gesendet wird. Bei Erfolg wird das Seed-Ereignis in der S3 Tables-Tabelle angezeigt. Der Test dauert etwa 10 Minuten.
@@ -348,12 +354,14 @@ Nachdem das Problem behoben wurde, kehren Sie zur Workload Factory-Konsole zurü
 
 
 
+[[permissions-reference-for-the-journal-table-setup]]
 == Berechtigungsreferenz für die Einrichtung der Journaltabelle
 
 Die IAM-Rolle, die den CloudFormation-Stack zur Aktivierung der Journaltabellenfunktion bereitstellt, benötigt die folgenden Berechtigungen. Siehe <<Bevor Sie beginnen,Bevor Sie beginnen>> für eine kopierbare JSON-Richtlinie mit den erforderlichen Berechtigungen.
 
 
 
+[[stack-operations]]
 === Stapeloperationen
 
 [cols="1,1,1"]
@@ -371,6 +379,7 @@ Die IAM-Rolle, die den CloudFormation-Stack zur Aktivierung der Journaltabellenf
 |===
 
 
+[[cloudtrail]]
 === CloudTrail
 
 [cols="1,1,1"]
@@ -394,6 +403,7 @@ Die IAM-Rolle, die den CloudFormation-Stack zur Aktivierung der Journaltabellenf
 |===
 
 
+[[s3]]
 === S3
 
 [cols="1,1,1"]
@@ -411,6 +421,7 @@ Die IAM-Rolle, die den CloudFormation-Stack zur Aktivierung der Journaltabellenf
 |===
 
 
+[[iam]]
 === IAM
 
 [cols="1,1,1"]
@@ -434,6 +445,7 @@ Die IAM-Rolle, die den CloudFormation-Stack zur Aktivierung der Journaltabellenf
 |===
 
 
+[[cloudwatch-logs]]
 === CloudWatch Logs
 
 [cols="1,1,1"]
@@ -463,6 +475,7 @@ Die IAM-Rolle, die den CloudFormation-Stack zur Aktivierung der Journaltabellenf
 |===
 
 
+[[observabilityadmin]]
 === ObservabilityAdmin
 
 [cols="1,1,1"]
@@ -483,6 +496,7 @@ Die IAM-Rolle, die den CloudFormation-Stack zur Aktivierung der Journaltabellenf
 |===
 
 
+[[s3-tables]]
 === S3-Tabellen
 
 [cols="1,1,1"]

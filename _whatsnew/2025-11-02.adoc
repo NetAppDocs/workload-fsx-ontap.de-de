@@ -4,6 +4,7 @@
 
 
 
+[[cache-volume-management]]
 === Cache-Volume-Verwaltung
 
 Die folgenden Vorgänge zur Verwaltung des Cache-Volumes können Sie in der Workload Factory-Konsole durchführen:
@@ -20,6 +21,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html[
 
 
 
+[[automatic-inode-management-available]]
 === Automatisches Inode-Management verfügbar
 
 Die automatische Inode-Verwaltung kann aktiviert werden, ohne dass die automatische Kapazitätsverwaltung aktiviert werden muss.
@@ -28,12 +30,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[threshold-warning-setting-for-capacity-and-inode-usage]]
 === Schwellenwertwarnung für Kapazitäts- und Inode-Nutzung
 
 Schwellenwertwarnungen sind sowohl für die Kapazität als auch für die Inode-Auslastung verfügbar.  Diese Schwellenwerte können Sie beim Aktivieren der automatischen Kapazitäts- oder Inode-Verwaltung festlegen.  Um diese Einstellung zu verwenden, müssen Sie Benachrichtigungen mithilfe der folgenden Funktion konfigurieren:link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factory Benachrichtigungsdienst"^] Die
 
 
 
+[[volume-size-decrease-available]]
 === Volumenverkleinerung möglich
 
 Sie können die Größe von NFS- und SMB/CIFS-Volumes in NetApp Workload Factory verringern.  Diese Funktion ermöglicht eine bessere Verwaltung der Speicherressourcen, indem sie es Ihnen erlaubt, die Größe von Volumes zu reduzieren, die in ihrer aktuellen Kapazität nicht mehr benötigt werden.
@@ -42,12 +46,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/adjust-volume-capacity.htm
 
 
 
+[[enhanced-fsx-for-ontap-resource-state]]
 === Erweiterter FSx für ONTAP Ressourcenstatus
 
 Workload Factory hat den Ressourcenstatus „falsch konfiguriert“ um eine Erläuterung des eigentlichen Problems für die Ressource erweitert.
 
 
 
+[[well-architected-analysis-updates]]
 === Gut strukturierte Analyse-Updates
 
 Workload Factory analysiert Ihre FSx for ONTAP Dateisysteme für die folgenden Konfigurationen:
@@ -58,6 +64,7 @@ Workload Factory analysiert Ihre FSx for ONTAP Dateisysteme für die folgenden K
 
 
 
+[[permissions-changes-for-workload-factory-for-storage]]
 === Berechtigungsänderungen für Workload Factory für Speicher
 
 Workload Factory bietet mehr Klarheit darüber, welche Berechtigungen für bestimmte Aktionen erforderlich sind, und ermöglicht die detaillierte Auswahl nur der benötigten Berechtigungen.  Wenn Sie Anmeldeinformationen hinzufügen, stehen Ihnen drei Berechtigungsoptionen zur Auswahl, anstatt des bisherigen Berechtigungsmodells mit den Optionen „Nur lesen“ und „Lesen/Schreiben“.  Das neue Berechtigungsmodell unterteilt die Berechtigungsrichtlinien wie folgt:
@@ -73,6 +80,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[fsx-for-ontap-cyber-vault-support]]
 === FSx für ONTAP Cyber ​​Vault-Unterstützung
 
 Sie können einen Cyber-Tresor erstellen, indem Sie FSx für ONTAP als Quelle oder Ziel in der Cyber-Tresor-Architektur verwenden.  Cyber-Tresore bieten eine sichere und isolierte Umgebung zur Speicherung kritischer Daten und schützen diese vor Ransomware und anderen Cyberbedrohungen.

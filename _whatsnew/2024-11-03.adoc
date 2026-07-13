@@ -4,6 +4,7 @@
 
 
 
+[[tab-views-in-storage-inventory]]
 === Registerkartenansichten im Speicherbestand
 
 Der Bestand des Speichers wurde auf eine Ansicht mit zwei Registerkarten aktualisiert:

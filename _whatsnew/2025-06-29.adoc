@@ -4,6 +4,7 @@
 
 
 
+[[bluexp-workload-factory-notification-service-support]]
 === Unterstützung des BlueXP Workload Factory-Benachrichtigungsdienstes
 
 Der Benachrichtigungsdienst der BlueXP Workload Factory ermöglicht es der Workload Factory, Benachrichtigungen an den BlueXP-Warndienst oder an ein Amazon SNS-Thema zu senden. An BlueXP-Warnmeldungen gesendete Benachrichtigungen werden im BlueXP-Warnmeldungsbereich angezeigt. Wenn die Workload Factory Benachrichtigungen an ein Amazon SNS-Thema veröffentlicht, erhalten Abonnenten des Themas (z. B. Benutzer oder andere Anwendungen) die Benachrichtigungen an den für das Thema konfigurierten Endpunkten (z. B. per E-Mail oder SMS).
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[storage-dashboard-enhancements]]
 === Verbesserungen des Speicher-Dashboards
 
 Das Storage-Dashboard in der Workload Factory-Konsole enthält neue Karten für Einsparmöglichkeiten.  Die Karte oben im Dashboard zeigt die Anzahl der Einsparmöglichkeiten für Speicherumgebungen an, die auf Amazon Elastic Block Store (EBS), Amazon FSx für Windows File Server und Amazon Elastic File Systems (EFS) ausgeführt werden.  Unten im Dashboard zeigen drei neue Karten Einsparmöglichkeiten durch den Amazon-Speicherdienst an – EBS, FSx für Windows File Server und EFS.  Bei allen Karten können Sie die Sparmöglichkeiten genauer erkunden.
@@ -20,12 +22,14 @@ Anhand der FSx for ONTAP-Schutzabdeckungskarte und der Integritätskarte für Re
 
 
 
+[[volume-tab-enhancements]]
 === Verbesserungen der Registerkarte „Lautstärke“
 
 Die Registerkarte „Volumes“ in der Workload Factory-Konsole wurde erweitert, um eine umfassendere Ansicht Ihrer FSx for ONTAP Dateisysteme bereitzustellen.  Zu den Verbesserungen gehören neue Karten für SSD-Kapazität, Kapazitätspool und NetApp Autonomous Ransomware Protection mit KI (ARP/AI).  Diese Karten fassen die Kapazitätsauslastung und den ARP/AI-Schutz für alle Volumes im Dateisystem zusammen.
 
 
 
+[[support-for-second-generation-amazon-fsx-for-netapp-ontap-file-systems]]
 === Unterstützung für die zweite Generation von Amazon FSX für NetApp ONTAP-Filesystemen
 
 Workload Factory unterstützt jetzt Amazon FSx for NetApp ONTAP Dateisysteme.  Sie können Dateisysteme der zweiten Generation in der Workload Factory-Konsole erstellen, verwalten und überwachen.  Alle neuen kommerziellen Regionen werden unterstützt.
@@ -34,6 +38,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["E
 
 
 
+[[flexvol-volume-support-for-rebalancing-volume-capacity]]
 === FlexVol-Volume-Unterstützung zum Neuausgleich der Volume-Kapazität
 
 FlexVol -Volumes sind in der Workload Factory-Konsole erkennbar.  Sie können die Balance Ihrer FlexVol -Volumes überprüfen und FlexVol Volumes neu ausbalancieren, um die Kapazität neu zu verteilen, wenn im Laufe der Zeit durch das Hinzufügen neuer Dateien und Dateiwachstum Ungleichgewichte entstehen.
@@ -42,12 +47,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["Neu
 
 
 
+[[terminology-update]]
 === Terminologie-Update
 
 Der Begriff „Autonomous Ransomware Protection“ (ARP) wurde in der Workload Factory-Konsole in „NetApp Autonomous Ransomware Protection with AI“ (ARP/AI) aktualisiert.
 
 
 
+[[arpai-enabled-by-default-for-new-volumes]]
 === ARP/AI standardmäßig für neue Volumes aktiviert
 
 Wenn Sie in der Workload Factory-Konsole ein neues Volume erstellen, wird NetApp Autonomous Ransomware Protection mit AI (ARP/AI) standardmäßig aktiviert, wenn das Dateisystem über eine ARP/AI-Richtlinie verfügt.  Dies bedeutet, dass das Volume mithilfe KI-gesteuerter Erkennungs- und Reaktionsfunktionen automatisch vor Ransomware-Angriffen geschützt ist.
@@ -56,6 +63,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["Erstel
 
 
 
+[[replication-support-for-immutable-files]]
 === Replikationsunterstützung für unveränderliche Dateien
 
 Workload Factory unterstützt die Replikation unveränderlicher Volumes von einem FSx for ONTAP-System auf ein anderes FSx for ONTAP-Dateisystem, um kritische Daten vor versehentlichem Löschen oder böswilligen Angriffen wie Ransomware zu schützen. Das Zielvolume und sein Host-Dateisystem sind unveränderlich bzw. gesperrt, und Daten im Zieldateisystem können bis zum Ende der Aufbewahrungsfrist weder geändert noch entfernt werden.
@@ -64,6 +72,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["E
 
 
 
+[[manage-iam-execution-role-and-permissions-during-link-creation]]
 === Verwalten der IAM-Ausführungsrolle und -Berechtigungen während der Linkerstellung
 
 Jetzt können Sie die IAM-Ausführungsrolle und die zugehörige Berechtigungsrichtlinie verwalten, wenn Sie einen Link in der Workload Factory-Konsole erstellen.  Ein Link stellt die Verbindung zwischen Ihrem Workload Factory-Konto und einem oder mehreren FSx for ONTAP -Dateisystemen her.  Sie haben zwei Möglichkeiten, die IAM-Ausführungsrolle und die Linkberechtigungen zuzuweisen – automatisch oder vom Benutzer bereitgestellt.  Durch die Verwaltung der Ausführungsrolle und der zugehörigen Berechtigungsrichtlinie in Workload Factory müssen Sie keinen Code von Drittanbietern mehr verwenden.

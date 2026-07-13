@@ -19,6 +19,7 @@ FSx für ONTAP ist die _Storage_-Komponente in Workload Factory.
 
 
 
+[[features]]
 == Funktionen
 
 FSX für ONTAP bietet folgende Funktionen:
@@ -40,6 +41,7 @@ FSX für ONTAP bietet folgende Funktionen:
 
 
 
+[[additional-features-in-workload-factory]]
 == Zusätzliche Funktionen in Workload Factory
 
 * *Storage-Kostenvergleich*: Vergleicht die Storage-Kosten für Windows File Server mit FSX für ONTAP mit Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File Server. Über den Rechner erfahren Sie, wie FSX für ONTAP Storage-Konfigurationen potenzielle Einsparungen ermöglichen und Ihren Wechsel zu FSX für ONTAP Storage planen.
@@ -49,6 +51,7 @@ FSX für ONTAP bietet folgende Funktionen:
 
 
 
+[[tools-to-use-netapp-workload-factory]]
 == Tools zur Verwendung von NetApp Workload Factory
 
 Sie können NetApp Workload Factory mit den folgenden Tools verwenden:
@@ -64,12 +67,14 @@ Sie können NetApp Workload Factory mit den folgenden Tools verwenden:
 
 
 
+[[cost]]
 == Kosten
 
 AWS verwaltet Ihr FSx for ONTAP -Konto, nicht Workload Factory. Weitere Informationen finden Sie unter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Preise für Amazon FSX für NetApp ONTAP"^] .
 
 
 
+[[regions]]
 == Regionen
 
 Workload Factory wird in allen kommerziellen Regionen unterstützt, in denen FSx für ONTAP unterstützt wird.link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Unterstützte Amazon Regionen anzeigen."^]
@@ -83,6 +88,7 @@ Die folgenden AWS-Regionen werden nicht unterstützt:
 
 
 
+[[getting-help]]
 == Hilfe wird abgerufen
 
 Amazon FSX für NetApp ONTAP ist eine AWS-First-Party-Lösung. Wenn Sie Fragen oder Probleme des technischen Supports im Zusammenhang mit Ihrem FSX für ONTAP-Filesystem, Ihrer Infrastruktur oder jeder Lösung, die diesen Service verwendet, verwenden Sie das Support-Center in Ihrer AWS-Managementkonsole, um einen Support-Fall für AWS zu eröffnen. Wählen Sie den Service „FSX for ONTAP“ und die entsprechende Kategorie aus. Geben Sie die verbleibenden Informationen an, die zur Erstellung Ihres AWS-Supportfalls erforderlich sind.

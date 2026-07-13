@@ -19,6 +19,7 @@ link:configuration-analysis.html["Erfahren Sie mehr über die Konfigurationsanal
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Workload Factory analysiert täglich die Konfigurationen der Amazon FSx for NetApp ONTAP Dateisysteme. Die tägliche Analyse liefert den Status der ordnungsgemäßen Architektur sowie Einblicke und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, damit Ihr Dateisystem Best Practices entspricht.
@@ -32,15 +33,15 @@ Da die Anforderungen an Speicherkonfigurationen unterschiedlich sind, können Si
 .Was analysiert wird
 Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
 
-* Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, geplante Volume-Backups, Remote-Datenreplizierung, Datenzuverlässigkeit für die langfristige Aufbewahrung und Verbindung von Hosts mit dem Failover-Knoten
+* Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, geplante Volume-Backups, Remote Datenreplizierung und Datenzuverlässigkeit für die Langzeitaufbewahrung
 * Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI) deaktiviert und unberechtigter Zugriff auf Volumes
 * Operative Exzellenz: automatisches Kapazitätsmanagement, Schwellenwert für die Kapazitätsauslastung von Volume-Dateien, nahezu vollständige Volume-Auslastung, Schreibmodus für Cache-Beziehungen, Optimierung der Cache-Volume-Größe und Berichterstattung über die logische Volume-Kapazität
 * Kostenoptimierung: Speichereffizienzen, Daten-Tiering, unnötiges Löschen von Snapshots und Backups, inaktive Blockgeräte, ungenutzte SSD-Kapazität und inaktive NAS-Volumes
-* Leistungseffizienz: Hosts mit bevorzugtem Node verbinden
 
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 * Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto angemeldet sein.
@@ -50,6 +51,7 @@ Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigura
 
 
 
+[[fix-a-configuration-issue]]
 == Beheben eines Konfigurationsproblems
 
 Sie können Konfigurationsprobleme für ein FSx for ONTAP Dateisystem oder für ausgewählte Volumes in einem Dateisystem beheben.  Sie können eine oder mehrere zu reparierende Konfigurationen auswählen.
@@ -75,6 +77,7 @@ Der Prozess zur Behebung des Problems wird eingeleitet. Wählen Sie das Menü �
 
 
 
+[[dismiss-a-configuration-analysis]]
 == Verwerfen einer Konfigurationsanalyse
 
 Verwerfen, um eine Konfigurationsanalyse für ein FSx for ONTAP Dateisystem oder für ausgewählte Volumes in einem Dateisystem auf unbestimmte Zeit zu stoppen.  Sie können die Analyse bei Bedarf neu starten.
@@ -122,6 +125,7 @@ Sie können die Analyse jederzeit wieder aktivieren.  Die Konfiguration wird nic
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == Eine verworfene Konfigurationsanalyse reaktivieren
 
 Sie können eine abgebrochene Konfigurationsanalyse jederzeit wieder aktivieren.  Sie können eine oder mehrere Konfigurationen zur Reaktivierung auswählen.

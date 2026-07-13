@@ -22,6 +22,7 @@ Bevor Sie beginnen, gehen Sie wie folgt vor:
 
 
 
+[[create-an-smbcifs-share-for-a-volume]]
 == Erstellen einer SMB/CIFS-Freigabe für ein Volume
 
 Befolgen Sie die Schritte zum Erstellen einer SMB/CIFS-Freigabe für ein Volume.
@@ -63,6 +64,7 @@ Gültige Pfadangaben für den Freigabenamen, beispielsweise „Server“, sind w
 
 
 
+[[change-an-smbcifs-share-for-a-volume]]
 == Ändern einer SMB/CIFS-Freigabe für ein Volume
 
 Befolgen Sie die Schritte, um die SMB/CIFS-Freigabeeinstellungen für ein Volume zu ändern.
@@ -84,6 +86,7 @@ Befolgen Sie die Schritte, um die SMB/CIFS-Freigabeeinstellungen für ein Volume
 
 
 
+[[delete-an-smbcifs-share-for-a-volume]]
 == Löschen einer SMB/CIFS-Freigabe für ein Volume
 
 Befolgen Sie die Schritte zum Löschen einer SMB/CIFS-Freigabe für ein Volume.
