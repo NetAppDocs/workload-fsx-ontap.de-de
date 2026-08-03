@@ -43,6 +43,9 @@ Damit Workload Factory Ereignisse analysieren kann, müssen Sie Amazon Bedrock a
 link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock-Preise"^]
 
 
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine Meldung angezeigt und die KI-Analyse kann nicht genutzt werden. Wenden Sie sich an Ihren Administrator oder  https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Informationen zur KI-Administration"^].
+
+
 
 [[data-privacy-and-security]]
 === Datenschutz und Datensicherheit
@@ -60,19 +63,11 @@ Weitere Einzelheiten finden Sie in der link:https://docs.aws.amazon.com/bedrock/
 [[before-you-begin]]
 == Bevor Sie beginnen
 
+Um Latenzereignisse anzuzeigen, sind die folgenden Schritte erforderlich:
 
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] in Ihrem AWS-Konto.
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zum Dateisystem her."].
 
-[[view-events]]
-=== Ereignisse anzeigen
-
-Um Latenzereignisse anzuzeigen, müssen Sie link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] in Ihrem AWS-Konto.
-
-Um EMS-Ereignisse anzuzeigen, müssen Sie außerdem link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zum Dateisystem her."].
-
-
-
-[[analyze-events]]
-=== Ereignisse analysieren
 
 Um EMS- und Latenzereignisse zu analysieren und KI-gestützte Erkenntnisse und Empfehlungen zu erhalten, stellen Sie Folgendes sicher:
 

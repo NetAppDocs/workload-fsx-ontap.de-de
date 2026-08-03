@@ -137,7 +137,7 @@ Geben Sie die ARN der Lambda-Ausführungsrolle in das Textfeld ein.
 
 .. *Tags*: Fügen Sie optional alle Tags hinzu, die Sie mit diesem Link verknüpfen möchten, damit Sie Ihre Ressourcen einfacher kategorisieren können. Sie könnten beispielsweise ein Tag hinzufügen, das diesen Link als von FSX für ONTAP-Dateisystemen verwendet identifiziert.
 +
-Workload Factory ruft automatisch das AWS-Konto, den Standort und die Sicherheitsgruppe basierend auf dem FSx for ONTAP -Dateisystem ab.
+Workload Factory ruft automatisch das AWS-Konto, den Standort und die Sicherheitsgruppe basierend auf dem FSx for ONTAP-Dateisystem ab.
 
 
 
@@ -148,7 +148,7 @@ Das Dialogfeld „Zu CloudFormation umleiten“ wird angezeigt und erläutert, w
 . Wählen Sie *Weiter*, um die AWS-Verwaltungskonsole zu öffnen, und melden Sie sich dann beim AWS-Konto für dieses FSX for ONTAP-Dateisystem an.
 . Wählen Sie auf der Seite „schneller Stapel erstellen“ unter „Funktionen“ *Ich bestätige, dass AWS CloudFormation IAM-Ressourcen erstellen könnte*.
 +
-Beachten Sie, dass Lambda drei Berechtigungen erteilt werden, wenn Sie die CloudFormation-Vorlage starten. Workload Factory verwendet diese Berechtigungen bei der Verwendung von Links.
+Beachten Sie, dass Lambda beim Starten der CloudFormation-Vorlage drei Berechtigungen erteilt werden. Workload Factory verwendet diese Berechtigungen bei der Verwendung von Links.
 
 +
 [source, json]
@@ -167,7 +167,7 @@ Sie können den Status der Linkerstellung auf der Seite „Ereignisse“ überwa
 --
 .Manuell erstellen
 --
-Sie können eine Verknüpfung mit zwei Infrastructure-as-Code (IaC)-Tools aus der Codebox erstellen: CloudFormation oder Terraform.  Mit dieser Option extrahieren Sie die ARN für den Link aus AWS CloudFormation und melden sie hier.  Workload Factory registriert den Link manuell für Sie.
+Sie können mithilfe zweier Infrastructure-as-Code (IaC) Tools aus der Codebox eine Verknüpfung erstellen: CloudFormation oder Terraform. Mit dieser Option wird der ARN für die Verknüpfung aus AWS CloudFormation extrahiert und hier angegeben. Workload Factory registriert die Verknüpfung manuell für Sie.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

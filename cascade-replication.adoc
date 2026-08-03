@@ -79,7 +79,7 @@ Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene R
 
 +
 
-NOTE: Zur langfristigen Aufbewahrung sind passende Quell- und Zieletiketten erforderlich. Auf Wunsch kann Workload Factory fehlende Etiketten für Sie erstellen.
+NOTE: Für die Langzeitarchivierung sind übereinstimmende Quell- und Zielbezeichnungen erforderlich. Auf Wunsch kann Workload Factory fehlende Bezeichnungen für Sie erstellen.
 
 +
 *** *Wählen Sie eine vorhandene Richtlinie*: Wählen Sie eine vorhandene Richtlinie aus dem Dropdown-Menü aus.

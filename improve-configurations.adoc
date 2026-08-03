@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: improve-configurations.html 
 keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP 
-summary: Workload Factory durchsucht Amazon FSx for NetApp ONTAP -Konfigurationen und liefert Erkenntnisse und Empfehlungen, die Ihnen dabei helfen, betriebliche Höchstleistungen zu erzielen. 
+summary: Workload Factory scannt Amazon FSx for NetApp ONTAP Konfigurationen und stellt Einblicke und Empfehlungen bereit, die zur Erreichung operativer Exzellenz beitragen. 
 ---
 = Sorgfältig konzipierte Filesystem-Konfigurationen implementieren
 :allow-uri-read: 
@@ -11,32 +11,33 @@ summary: Workload Factory durchsucht Amazon FSx for NetApp ONTAP -Konfiguratione
 
 
 [role="lead"]
-Nutzen Sie die Erkenntnisse und Empfehlungen der Konfigurationsanalyse und nutzen Sie Workload Factory, um Best Practices für Ihre FSx for ONTAP Dateisysteme zu implementieren. Sie können den Status der ordnungsgemäßen Architektur problemlos überprüfen, sich über Probleme mit Ihren Konfigurationen informieren und Maßnahmen ergreifen, um die Architektur aller Systeme zu verbessern, die nicht hinsichtlich Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
+Mithilfe der Erkenntnisse und Empfehlungen aus der Konfigurationsanalyse kann Workload Factory genutzt werden, um Best Practices für Ihre FSx for ONTAP Dateisysteme zu implementieren. Der gut konzipierte Status lässt sich einfach überprüfen, Informationen zu Problemen mit Ihren Konfigurationen einsehen und Maßnahmen zur Verbesserung der Architektur aller Systeme ergreifen, die nicht auf Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
 
 Sie können die Analyse bestimmter Speicherkonfigurationen, die nicht auf Ihre Speicherumgebung zutreffen, auch ablehnen, um unnötige Warnungen und ungenaue Optimierungsergebnisse zu vermeiden.
 
-link:configuration-analysis.html["Erfahren Sie mehr über die Konfigurationsanalyse und den Status „Well-Architected“ in Workload Factory."]
+link:configuration-analysis.html["Informationen zur Konfigurationsanalyse und zum Well-Architected-Status."]
 
 
 
 [[about-this-task]]
 == Über diese Aufgabe
 
-Workload Factory analysiert täglich die Konfigurationen der Amazon FSx for NetApp ONTAP Dateisysteme. Die tägliche Analyse liefert den Status der ordnungsgemäßen Architektur sowie Einblicke und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, damit Ihr Dateisystem Best Practices entspricht.
+Workload Factory analysiert täglich die Bereitstellungskonfigurationen des Amazon FSx for NetApp ONTAP-Dateisystems. Die tägliche Analyse liefert den Well-Architected-Status sowie Erkenntnisse und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, damit Ihr Dateisystem Best Practices entspricht.
 
 Durch die Link-Konnektivität kann Workload Factory nach Problemen mit Leistung, Datenschutz und Konfigurationen suchen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"] für die umfassendste Analyse Ihrer Dateisystemressourcen.
 
-Sie haben die Möglichkeit, die Empfehlungen für Konfigurationsprobleme mit Ihren Dateisystemen zu überprüfen und die Probleme vom Speicher aus in der Workload Factory-Konsole zu beheben.
+Es bestehen Optionen, die Empfehlungen zu Konfigurationsproblemen Ihrer Dateisysteme zu überprüfen und die Probleme zu beheben.
 
-Da die Anforderungen an Speicherkonfigurationen unterschiedlich sind, können Sie die Analyse bestimmter Konfigurationen, die nicht auf Ihre Speicherumgebung zutreffen, verwerfen.  Dadurch vermeiden Sie unnötige Warnmeldungen und ungenaue Optimierungsergebnisse.  Wenn eine bestimmte Konfigurationsanalyse verworfen wird, wird die Konfiguration nicht in die Gesamtpunktzahl der Optimierung einbezogen.
+Da die Anforderungen an Speicherkonfigurationen variieren, kann die Analyse bestimmter Konfigurationen, die für Ihre Speicherumgebung nicht relevant sind, ausgeschlossen werden. So werden unnötige Warnmeldungen und ungenaue Optimierungsergebnisse vermieden.
 
 .Was analysiert wird
-Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigurationen für die File-Systeme FSX for ONTAP:
+Workload Factory analysiert den gut entwickelten Status der folgenden Konfigurationen für FSx for ONTAP Dateisysteme:
 
-* Zuverlässigkeit: SSD-Kapazitätsschwelle, geplante lokale Snapshots, geplante Volume-Backups, Remote Datenreplizierung und Datenzuverlässigkeit für die Langzeitaufbewahrung
-* Sicherheit: NetApp Autonomous Ransomware Protection mit KI (ARP/AI) deaktiviert und unberechtigter Zugriff auf Volumes
-* Operative Exzellenz: automatisches Kapazitätsmanagement, Schwellenwert für die Kapazitätsauslastung von Volume-Dateien, nahezu vollständige Volume-Auslastung, Schreibmodus für Cache-Beziehungen, Optimierung der Cache-Volume-Größe und Berichterstattung über die logische Volume-Kapazität
-* Kostenoptimierung: Speichereffizienzen, Daten-Tiering, unnötiges Löschen von Snapshots und Backups, inaktive Blockgeräte, ungenutzte SSD-Kapazität und inaktive NAS-Volumes
+* Zuverlässigkeit: Volume Backups, Snapshot-Richtlinie, regionsübergreifende Replikation, SSD-Kapazitätsreserve, Replikationsrichtlinienbezeichnungen und Dateiobjektkapazität
+* Sicherheit: Ransomware-Schutz (ARP/AI) und unautorisierter iSCSI-Volume-Zugriff
+* Operative Exzellenz: automatisches Kapazitätsmanagement, Speicherplatzreserve für Volumes, FlexCache Write-Modus, FlexCache Replikatgröße, host-seitige Kapazitätsberichte, Betriebssystemtyp, Blockgeräte Speicherplatzmanagement und Thin Provisioning
+* Kostenoptimierung: Kaltdaten-Tiering, Speichereffizienzen, Backup-Ablauf, Snapshot-Ablauf, inaktive Blockgeräte, überprovisionierte SSD-Kapazität und inaktive NAS-Volumes
+* Leistungseffizienz: FlexGroup Volumes Rebalancierung und FlexVol Volumes Rebalancierung
 
 
 
@@ -45,7 +46,6 @@ Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigura
 == Bevor Sie beginnen
 
 * Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto angemeldet sein.
-* Der Behebungsprozess kann zu Instanzausfallzeiten oder Dienstunterbrechungen führen. Stellen Sie sicher, dass Sie jede Empfehlung sorgfältig prüfen, bevor Sie sich für die Behebung eines Konfigurationsproblems entscheiden.
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"]für die umfassendste Analyse Ihrer Dateisystemressourcen.
 
 
@@ -56,104 +56,98 @@ Die Workload-Farm analysiert den gut konzipierten Status der folgenden Konfigura
 
 Sie können Konfigurationsprobleme für ein FSx for ONTAP Dateisystem oder für ausgewählte Volumes in einem Dateisystem beheben.  Sie können eine oder mehrere zu reparierende Konfigurationen auswählen.
 
+Korrekturmaßnahmen können zu Ausfallzeiten von Instanzen oder Serviceunterbrechungen führen. Jede Empfehlung sollte sorgfältig geprüft werden, bevor ein Konfigurationsproblem behoben wird.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Menü „Storage“ die Option *Well-architected*.
-. Wählen Sie *Probleme anzeigen* für jede Konfiguration. Stellen Sie sicher, dass Sie die Empfehlung sorgfältig überprüfen.
+. Das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] auswählen und anschließend *Well-architected* auswählen.
+. Für jede Konfiguration *Anzeigen und Reparieren* auswählen. Die Empfehlung sollte sorgfältig geprüft werden.
 +
 Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.
 
-. Wählen Sie *Fix*.
+. Ressourcen auswählen und dann *Fix*.
 +
-Wenn *View and fix* eine Option ist, wählen Sie die betroffenen Volumes aus, die repariert werden sollen.
+Manche Reparaturvorgänge sind nur für bestimmte Operationen und nicht immer für mehr als eine Ressource verfügbar. Beispielsweise kann die Konfiguration möglicherweise für ein einzelnes Volume, aber nicht für mehrere Volumes behoben werden.
 
-. Sehen Sie sich die im Dialogfeld angezeigten Zusammenfassungs- und Aktionselemente an, um zu erfahren, was passieren wird, wenn Sie das Problem beheben möchten. Einige Vorgänge können zu Instanzausfällen oder Serviceunterbrechungen führen.
-. Wählen Sie *Weiter*, um das Konfigurationsproblem zu beheben.
+. Im Dialogfeld werden Informationen zum Reparaturvorgang für die Konfiguration angezeigt. Einige Vorgänge können zu Ausfallzeiten der Instanz oder zu Dienstunterbrechungen führen.
+. *Fix* auswählen, wenn Workload Factory die empfohlenen Änderungen anwenden soll.
 
 
 .Ergebnis
-Der Prozess zur Behebung des Problems wird eingeleitet. Wählen Sie das Menü „Kontoeinstellungen“ und dann „Tracker“ aus, um den Status des Vorgangs anzuzeigen.
+Der Reparaturvorgang wird gestartet. Im Menü „Kontoeinstellungen“ die Option „Tracker“ auswählen, um den Status des Vorgangs anzuzeigen.
 
 
 
 [[dismiss-a-configuration-analysis]]
 == Verwerfen einer Konfigurationsanalyse
 
-Verwerfen, um eine Konfigurationsanalyse für ein FSx for ONTAP Dateisystem oder für ausgewählte Volumes in einem Dateisystem auf unbestimmte Zeit zu stoppen.  Sie können die Analyse bei Bedarf neu starten.
+Eine Konfigurationsanalyse für eine oder mehrere Ressourcen wird unbegrenzt gestoppt. Die Analyse kann bei Bedarf neu gestartet werden.
+
+Abbrechen beendet die Konfigurationsanalyse für ein oder mehrere FSx for ONTAP Dateisysteme oder Volumes. Die Analyse kann jederzeit neu gestartet werden.
 
 [role="tabbed-block"]
 ====
-.Eine Konfigurationsanalyse für ein Dateisystem verwerfen
+.Eine Konfigurationsanalyse für Konfigurationen verwerfen
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Menü „Storage“ die Option *Well-architected*.
-. Wählen Sie *Probleme anzeigen* für jede Konfiguration. Stellen Sie sicher, dass Sie die Empfehlung sorgfältig überprüfen.
-+
-Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.
-
-. Suchen Sie unter Configurations die Konfiguration, die nicht auf Ihre Umgebung zutrifft, und wählen Sie dann *Dismiss*.
+. Das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] auswählen und anschließend *Well-architected* auswählen.
+. Unter „Konfigurationen“ die Konfiguration identifizieren, die nicht auf Ihre Umgebung zutrifft.
+. Wählen Sie image:icon-action.png["das Aktionsmenüsymbol"] und dann *Verwerfen* aus.
 . Im Dialogfeld „Konfiguration verwerfen“ wählen Sie *Verwerfen*, um die Analyse für die Konfiguration zu stoppen.
 
 
 --
-.Verwerfen einer Konfigurationsanalyse für ein Volume
+.Eine Konfigurationsanalyse für Ihre Ressourcen verwerfen
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Menü „Storage“ die Option *Well-architected*.
-. Unter „Konfigurationen“ identifizieren Sie die Konfiguration, die für die ausgewählten Volumes verworfen werden soll, und wählen Sie dann *Anzeigen und reparieren* aus.
-. Identifizieren Sie die Volumes, die aus der Konfigurationsanalyse ausgeschlossen werden sollen.
+. Das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] auswählen und anschließend *Well-architected* auswählen.
+. Im FSx for ONTAP well-architected Dashboard unter Konfigurationen die Konfiguration auswählen, die nicht auf Ihre Umgebung zutrifft.
+. Auf der Konfigurationsseite die Ressource(n) auswählen, die aus der Konfigurationsanalyse entfernt werden sollen.
 +
-** Für ein Volume: Wählen Sie das Aktionsmenü und dann *Volume schließen*.
-** Für mehrere Volumes: Wählen Sie die Volumes aus und wählen Sie dann neben „Massenaktion“ die Option „Verwerfen“.
+** Für eine Ressource: image:icon-action.png["das Aktionsmenüsymbol"] auswählen und anschließend *Verwerfen* wählen.
+** Für mehrere Ressourcen: Die Ressourcen auswählen und dann neben Bulk action auf *Dismiss* klicken.
 
 
-. Wählen Sie *Ablehnen*, um die Analyse für die Konfiguration zu beenden.
-. Wählen Sie im Dialogfeld „Volumes verwerfen“ zur Bestätigung *Verwerfen* aus.
+. Im Dialogfeld „Ressourcen verwerfen“ *Verwerfen* auswählen, um die Analyse zu beenden.
 
 
 --
 ====
 .Ergebnis
-Die Konfigurationsanalyse wird für das Dateisystem oder ausgewählte Volumes gestoppt.
-
-Sie können die Analyse jederzeit wieder aktivieren.  Die Konfiguration wird nicht mehr in die Gesamtpunktzahl der Optimierung einbezogen.
+Workload Factory stoppt die Konfigurationsanalyse für ausgewählte Konfigurationen.
 
 
 
 [[reactivate-a-dismissed-configuration-analysis]]
 == Eine verworfene Konfigurationsanalyse reaktivieren
 
-Sie können eine abgebrochene Konfigurationsanalyse jederzeit wieder aktivieren.  Sie können eine oder mehrere Konfigurationen zur Reaktivierung auswählen.
+Eine verworfene Konfigurationsanalyse kann jederzeit reaktiviert werden. Sie können eine oder mehrere Konfigurationen oder Ressourcen reaktivieren.
 
 [role="tabbed-block"]
 ====
-.Reaktivieren einer Konfigurationsanalyse für ein Dateisystem
+.Eine Konfigurationsanalyse für Konfigurationen reaktivieren
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Menü „Storage“ die Option *Well-architected*.
+. Das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] auswählen und anschließend *Well-architected* auswählen.
 . Wählen Sie *Verworfene Konfigurationen* aus.
-. Identifizieren Sie die Konfiguration, die Sie reaktivieren möchten, und wählen Sie *Reaktivieren*.
+. Identifizieren Sie die Konfiguration(en), die Sie reaktivieren möchten, und wählen Sie *Reaktivieren* aus.
 
 
 --
-.Reaktivieren einer Konfigurationsanalyse für ein Volume
+.Eine Konfigurationsanalyse für Ihre Ressourcen erneut aktivieren
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Menü „Storage“ die Option *Well-architected*.
-. Wählen Sie *Verworfene Konfigurationen* aus.
-. Identifizieren Sie die Volumes, die anhand der Konfigurationsanalyse reaktiviert werden sollen.
+. Das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] auswählen und anschließend *Well-architected* auswählen.
+. Im FSx for ONTAP well-architected Dashboard unter Konfigurationen die Konfiguration auswählen, die nicht auf Ihre Umgebung zutrifft.
+. Auf der Konfigurationsseite *Ausgeschlossene Konfigurationen* auswählen.
+. Wählen Sie die Ressource(n) aus, die reaktiviert werden sollen.
 +
-** Für ein Volume: Wählen Sie das Aktionsmenü und dann *Volume reaktivieren*.
-** Für mehrere Volumes: Wählen Sie die Volumes aus und wählen Sie dann neben Massenaktion die Option *Reaktivieren*.
+** Für eine Ressource: image:icon-action.png["das Aktionsmenüsymbol"] auswählen und dann *Reaktivieren* auswählen.
+** Für mehrere Ressourcen: Die Ressourcen auswählen und dann neben Bulk action auf *Reaktivieren* klicken.
 
 
 
@@ -161,4 +155,4 @@ Sie können eine abgebrochene Konfigurationsanalyse jederzeit wieder aktivieren.
 --
 ====
 .Ergebnis
-Die Konfigurationsanalyse wird wieder aktiviert.  Täglich erfolgt eine neue Analyse.
+Workload Factory reaktiviert die Konfigurationsanalyse und führt jeden Tag eine neue Analyse durch.

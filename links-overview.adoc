@@ -57,7 +57,7 @@ link:https://aws.amazon.com/lambda/pricing/["Informieren Sie sich über die Kost
 [[when-a-link-is-required]]
 == Wenn ein Link erforderlich ist
 
-Workload Factory benötigt einen Link, um bestimmte Informationen anzuzeigen und bestimmte Aufgaben auszuführen.  Wenn Sie versuchen, einen Vorgang auszuführen, der einen Link erfordert, und Sie keinen Link mit dem FSx for ONTAP Dateisystem verknüpft haben, benachrichtigt Sie Workload Factory, dass für den Vorgang ein Link erforderlich ist.
+Workload Factory benötigt eine Verbindung, um bestimmte Informationen anzuzeigen und einige Aufgaben auszuführen. Wenn versucht wird, einen Vorgang auszuführen, der eine Verbindung erfordert, und keine Verbindung mit dem FSx for ONTAP Dateisystem hergestellt wurde, weist Workload Factory darauf hin, dass für den Vorgang eine Verbindung erforderlich ist.
 
 Zu den Funktionen, für die ein Link erforderlich ist, gehören:
 

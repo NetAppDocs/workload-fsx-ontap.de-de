@@ -13,7 +13,7 @@ summary: Stellen Sie ein Volume aus einem Backup in einem beliebigen FSX für ON
 [role="lead"]
 In NetApp Workload Factory können Sie ein Volume aus einer Sicherung auf einem beliebigen FSx for ONTAP -Dateisystem in Ihrem AWS-Konto wiederherstellen.
 
-Workload Factory legt fest, ob Sie über genügend Kapazität für die Wiederherstellung verfügen, und kann automatisch SSD-Speicher-Tier-Kapazität hinzufügen, wenn nicht.
+Workload Factory ermittelt, ob Sie über ausreichend Kapazität für die Wiederherstellung verfügen und kann automatisch SSD Storage-Tier-Kapazität hinzufügen, wenn dies nicht der Fall ist.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

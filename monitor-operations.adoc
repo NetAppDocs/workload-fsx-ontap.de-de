@@ -14,7 +14,7 @@ summary: Verfolgen Sie FSx für ONTAP, Anmeldeinformationen und Linkvorgänge un
 Überwachen und verfolgen Sie die Ausführung von FSx für ONTAP, Anmeldeinformationen und Linkvorgängen und überwachen Sie den Aufgabenfortschritt mit Tracker in NetApp Workload Factory.
 
 .Über diese Aufgabe
-Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der Sie den Fortschritt und Status von FSX for ONTAP, Anmeldeinformationen und Link-Operationen überwachen und verfolgen können, Details für Betriebsaufgaben und untergeordnete Aufgaben überprüfen und Probleme oder Fehler diagnostizieren können.
+Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der der Fortschritt und Status von FSx for ONTAP, Anmeldeinformationen und Verbindungsvorgängen überwacht und verfolgt, Details zu Betriebsaufgaben und Unteraufgaben überprüft sowie etwaige Probleme oder Fehler diagnostiziert werden können.
 
 In Tracker sind mehrere Aktionen verfügbar. Sie können Jobs nach Zeitrahmen (letzte 24 Stunden, 7 Tage, 14 Tage oder 30 Tage), Workload, Status und Benutzer filtern, Jobs mithilfe der Suchfunktion suchen und die Jobtabelle als CSV-Datei herunterladen. Sie können Tracker jederzeit aktualisieren. Sie können einen fehlgeschlagenen Vorgang schnell wiederholen oder Parameter für einen fehlgeschlagenen Vorgang bearbeiten und den Vorgang erneut versuchen.
 

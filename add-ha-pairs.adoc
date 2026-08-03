@@ -51,4 +51,4 @@ Führen Sie die folgenden Schritte aus, bevor Sie HA-Paare zu einem Dateisystem 
 
 
 .Ergebnis
-Workload Factory initiiert den Prozess zum Hinzufügen der HA-Paare zum Dateisystem. Das Filesystem ist erst für andere Vorgänge wie die Volume-Erstellung verfügbar, wenn die HA-Paare hinzugefügt werden. Sie können den Fortschritt der Operation im Register *Tracker* überwachen.
+Workload Factory initiiert den Prozess zum Hinzufügen der HA-Paare zum Dateisystem. Das Dateisystem steht für andere Operationen wie die Volume-Erstellung erst zur Verfügung, nachdem die HA-Paare hinzugefügt wurden. Der Fortschritt des Vorgangs kann auf der Registerkarte *Tracker* überwacht werden.
