@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: Entdecken und replizieren Sie lokale ONTAP -Daten in NetApp Workload Factory, damit diese zur Anreicherung von KI-Wissensdatenbanken verwendet werden können. 
+summary: Lokale ONTAP Daten in der NetApp Workload Factory erkennen und replizieren, sodass sie als Backup in der Cloud genutzt werden können. 
 ---
 = Verwenden Sie lokale ONTAP Clusterdaten in NetApp Workload Factory
 :allow-uri-read: 
@@ -11,15 +11,14 @@ summary: Entdecken und replizieren Sie lokale ONTAP -Daten in NetApp Workload Fa
 
 
 [role="lead"]
-Entdecken und replizieren Sie lokale ONTAP -Daten in NetApp Workload Factory, damit diese zur Anreicherung von KI-Wissensdatenbanken verwendet werden können.
+Lokale ONTAP Daten in der NetApp Workload Factory erkennen und replizieren, sodass sie als Backup in der Cloud genutzt werden können.
 
 .Über diese Aufgabe
 Um Daten aus einem lokalen ONTAP Cluster zu verwenden, müssen Sie zuerst den lokalen ONTAP Cluster erkennen. Nach der Erkennung eines lokalen ONTAP-Clusters können Sie die Daten für jeden der folgenden Anwendungsfälle verwenden:
 
-Anwendungsfälle:: Beachten Sie, dass der primäre Anwendungsfall für den GenAI-Workload der Schwerpunkt dieser Aufgabenreihe ist.
+Anwendungsfälle::
 +
 --
-* *GenAI-Workload*: Replizieren Sie On-Premises-ONTAP-Volume-Daten auf ein FSX for ONTAP-Dateisystem, damit die Daten für verwendet werden könnenlink:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Verbesserte KI-Wissensdatenbanken"^].
 * *Backup und Migration in die Cloud*: Replizierte On-Premises-ONTAP-Volume-Daten auf einem FSX für ONTAP-Dateisystem können als Backup in der Cloud verwendet werden.
 * *Daten-Tiering*: Nach der Replizierung können selten verwendete Daten auf dem lokalen ONTAP-Volume vom SSD-Storage-Tier auf das Storage-Tier des Kapazitäts-Pools verschoben werden.
 

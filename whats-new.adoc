@@ -88,6 +88,13 @@ Um Benachrichtigungen für S3-Ereignisse einzurichten, link:https://docs.netapp.
 
 
 
+[[ontap-features-displayed-in-volumes-explorer]]
+=== Im Volumes Explorer angezeigte ONTAP-Funktionen
+
+Volumes Explorer enthält jetzt ONTAP Funktionen in der Volumes Tabelle. Diese Funktionen bieten detailliertere Einblicke in die Konfiguration und den Status Ihrer Volumes, wie Schutzabdeckung, Status von Autonomous Ransomware Protection (ARP/AI), Speichereffizienz, Tiering Richtlinie und Volume Autogrow.
+
+
+
 [[05-july-2026]]
 == 05. Juli 2026
 
