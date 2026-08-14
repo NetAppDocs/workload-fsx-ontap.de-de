@@ -1,0 +1,54 @@
+= API-Anforderung anzeigen
+:allow-uri-read: 
+
+
+. In Tracker können Sie mithilfe der Filter oder der Suchfunktion die Job-Ergebnisse eingrenzen. Es besteht außerdem die Möglichkeit, einen Jobbericht herunterzuladen.
+
+
+
+
+[[view-api-request]]
+== API-Anforderung anzeigen
+
+Zeigen Sie die API-Anforderung in der Codebox für eine Aufgabe in Tracker an.
+
+.Schritte
+. Wählen Sie in Tracker eine Aufgabe aus.
+. Wählen Sie das Aktionsmenü und dann *API-Anforderung anzeigen*.
+
+
+
+
+[[retry-a-failed-operation]]
+== Wiederholen Sie einen fehlgeschlagenen Vorgang
+
+Wiederholen Sie einen fehlgeschlagenen Vorgang in Tracker. Sie können auch die Fehlermeldung eines fehlgeschlagenen Vorgangs kopieren.
+
+
+NOTE: Sie können einen fehlgeschlagenen Vorgang bis zu 10 Mal wiederholen.
+
+.Schritte
+. Wählen Sie in Tracker einen fehlgeschlagenen Vorgang aus.
+. Wählen Sie das Aktionsmenü und dann *Wiederholen*.
+
+
+.Ergebnis
+Der Vorgang wird erneut initiiert.
+
+
+
+[[edit-and-retry-a-failed-operation]]
+== Bearbeiten Sie einen fehlgeschlagenen Vorgang und versuchen Sie es erneut
+
+Bearbeiten Sie die Parameter des fehlgeschlagenen Vorgangs, und versuchen Sie den Vorgang außerhalb von Tracker erneut.
+
+.Schritte
+. Wählen Sie in Tracker einen fehlgeschlagenen Vorgang aus.
+. Wählen Sie das Aktionsmenü und dann *Bearbeiten und erneut versuchen*.
++
+Sie werden zur Seite Operation weitergeleitet, auf der Sie die Parameter bearbeiten und den Vorgang wiederholen können.
+
+
+
+.Ergebnis
+Der Vorgang wird erneut initiiert. Rufen Sie Tracker auf, um den Status des Vorgangs anzuzeigen.

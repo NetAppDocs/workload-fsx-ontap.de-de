@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: Verfolgen Sie FSx für ONTAP, Anmeldeinformationen und Linkvorgänge und überwachen Sie den Jobfortschritt mit Tracker in NetApp Workload Factory für Storage. 
+keywords: monitor fsx for ontap, monitor jobs, track jobs, tracker 
+summary: Arbeitslastvorgänge nachverfolgen und den Fortschritt von Jobs mit Tracker in NetApp Workload Factory für FSx für ONTAP überwachen. 
 ---
-= Überwachen Sie Speichervorgänge mit Tracker in NetApp Workload Factory
+= FSx für ONTAP Vorgänge mit Tracker überwachen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -47,12 +47,9 @@ Verfolgen und überwachen Sie Vorgänge in der NetApp -Konsole mit Tracker.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Speichermenü *Verwaltung* und dann *Links*.
-+
-image:screenshot-menu-tracker-option.png["Ein Screenshot des Menüs „Kontoeinstellungen“ mit markierter Tracker-Option."]
-
-. Verwenden Sie auf der Registerkarte Tracker die Filter oder die Suche, um die Jobergebnisse einzugrenzen. Sie können auch einen Jobbericht herunterladen.
+. Wählen Sie das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und dann *Administration*.
+. Im Menü „Administration“ *Tracker* auswählen.
+. In Tracker können Sie mithilfe der Filter oder der Suchfunktion die Job-Ergebnisse eingrenzen. Es besteht außerdem die Möglichkeit, einen Jobbericht herunterzuladen.
 
 
 
