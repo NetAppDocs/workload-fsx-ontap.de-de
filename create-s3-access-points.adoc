@@ -32,10 +32,8 @@ Bitte erfüllen Sie die folgenden Anforderungen, bevor Sie beginnen.
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie in *FSx for ONTAP* das Dateisystem mit dem zu aktualisierenden Volume aus.
-. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, das Sie verwenden möchten, dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das Volume, das Sie verwenden möchten, dann *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
 . Auf der Seite „S3-Zugriffspunkte verwalten“ wählen Sie *S3-Zugriffspunkt erstellen und zuordnen*.
 . Geben Sie auf der Seite *S3-Zugriffspunkt erstellen und verbinden* die folgenden Informationen an:
 +

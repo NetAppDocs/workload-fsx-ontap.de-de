@@ -23,10 +23,8 @@ Bearbeiten Sie den Namen, die Bezeichnung und die Aufbewahrungsdauer eines Snaps
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume mit dem zu bearbeitenden Snapshot aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das Volume mit dem Snapshot aus, das bearbeitet werden soll.
 . Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
 . Wählen Sie auf der Seite „Snapshots verwalten“ das Aktionsmenü für den zu bearbeitenden Snapshot und dann *Bearbeiten* aus.
 . Im Dialogfeld „Snapshot bearbeiten“ können Sie Folgendes bearbeiten:
@@ -56,10 +54,8 @@ Aktivieren Sie den Zugriff auf das Snapshot-Verzeichnis, um Benutzern die Mögli
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume mit dem Snapshot aus, auf das Sie zugreifen möchten.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das Volume mit dem Snapshot aus, auf das zugegriffen werden soll.
 . Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
 . Wählen Sie auf der Seite „Snapshots verwalten“ das Aktionsmenü für den Snapshot aus, auf den Sie zugreifen möchten, und wählen Sie dann *Zugriff* aus.
 . Wählen Sie im Dialogfeld „Auf Snapshot zugreifen“ die Option „Zugriff auf Snapshot-Verzeichnis aktivieren“, um auf diesen Volume-Snapshot und alle Snapshots des Volumes zuzugreifen.
@@ -93,10 +89,8 @@ Unveränderliche Snapshots können erst gelöscht werden, wenn die Aufbewahrungs
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
-. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
-. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
-. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
-. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume mit dem zu löschenden Snapshot aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das Volume mit dem zu löschenden Snapshot aus.
 . Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
 . Wählen Sie auf der Seite „Snapshots verwalten“ das Aktionsmenü für den zu löschenden Snapshot aus und wählen Sie dann *Löschen*.
 . Geben Sie im Dialogfeld „Snapshot löschen“ „delete“ ein.
