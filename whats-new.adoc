@@ -15,6 +15,20 @@ Informieren Sie sich über die Neuerungen bei Amazon FSX for NetApp ONTAP.
 
 
 
+[[30-august-2026]]
+== 30. August 2026
+
+
+
+[[link-creation-available-from-links-page]]
+=== Linkerstellung auf der Seite „Links“ verfügbar
+
+Sie können nun Links direkt von der Seite „Links“ im Menü „Administration“ erstellen, zusätzlich zur FSx for ONTAP Inventarseite und der Dateisystemübersichtsseite.
+
+link:create-link.html["Weitere Informationen zum Erstellen von Links"].
+
+
+
 [[11-august-2026]]
 == 11. August 2026
 
