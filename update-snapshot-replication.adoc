@@ -4,7 +4,7 @@ permalink: update-snapshot-replication.html
 keywords: update snapshot data, replication 
 summary: Aktualisieren Sie Snapshot-Daten, die in einer Replikationsbeziehung zu jedem Zeitpunkt zwischen Quell- und Ziel-Volumes übertragen werden, manuell. 
 ---
-= Aktualisieren von Snapshot-Daten in einer Replikationsbeziehung
+= Replikations-Snapshot-Daten in NetApp Workload Factory aktualisieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

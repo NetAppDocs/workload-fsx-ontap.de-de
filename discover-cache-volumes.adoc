@@ -4,7 +4,7 @@ permalink: discover-cache-volumes.html
 keywords: discover cache volume, FlexCache technology, ONTAP FlexCache, FSx for ONTAP volume 
 summary: Entdecken und zeigen Sie Cache-Volumes an, die mit Cache-Beziehungen verknüpft sind, ohne die NetApp Workload Factory-Konsole zu verlassen. 
 ---
-= Cache-Volumes in Workload Factory entdecken
+= Cache-Volumes in NetApp Workload Factory erkennen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: update-throughput-capacity.html
 keywords: update throughput, change throughput, throughput capacity 
 summary: Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSx für ONTAP Dateisystem in NetApp Workload Factory. 
 ---
-= Aktualisieren der Durchsatzkapazität eines Dateisystems
+= Durchsatzkapazität für ein Dateisystem in NetApp Workload Factory aktualisieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: edit-volume-autogrow.html
 keywords: volume autogrow, increase volume capacity, enable autogrow 
 summary: Aktivieren Sie die automatische Volumevergrößerung, damit Workload Factory die Volumekapazität für Sie verwalten kann.  Sie können es jederzeit deaktivieren. 
 ---
-= Aktivieren Sie die automatische Volumevergrößerung in Workload Factory
+= Automatisches Volumenwachstum in NetApp Workload Factory aktivieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

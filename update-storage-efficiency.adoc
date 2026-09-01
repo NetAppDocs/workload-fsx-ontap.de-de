@@ -4,7 +4,7 @@ permalink: update-storage-efficiency.html
 keywords: storage efficiency change, update storage efficiency 
 summary: In NetApp Workload Factory können Sie die Speichereffizienzeinstellung nach der Volume-Erstellung aktualisieren. 
 ---
-= Aktualisierung der Storage-Effizienzeinstellung eines Volumes
+= Speichereffizienz im NetApp Workload Factory aktualisieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

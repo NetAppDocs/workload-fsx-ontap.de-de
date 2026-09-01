@@ -4,7 +4,7 @@ permalink: create-snapshot-policy.html
 keywords: create 
 summary: Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für eine Speicher-VM in Workload Factory. 
 ---
-= Erstellen einer Snapshot-Richtlinie für Speicher-VMs in Workload Factory
+= Eine Snapshot-Richtlinie für Storage-VMs in NetApp Workload Factory erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: improve-configurations.html
 keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP 
 summary: Workload Factory scannt Amazon FSx for NetApp ONTAP Konfigurationen und stellt Einblicke und Empfehlungen bereit, die zur Erreichung operativer Exzellenz beitragen. 
 ---
-= Sorgfältig konzipierte Filesystem-Konfigurationen implementieren
+= Gut strukturierte FSx for ONTAP Dateisystemkonfigurationen implementieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

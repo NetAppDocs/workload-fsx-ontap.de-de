@@ -4,7 +4,7 @@ permalink: create-cyber-vault.html
 keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
 summary: Erfahren Sie mehr über NetApp Cyber ​​Vaults und wie Sie eine Cyber-Vault-Architektur implementieren, um Ihre Daten vor Ransomware und Cyberbedrohungen zu schützen. 
 ---
-= Schützen Sie Ihre Daten mit einem Cyber-Tresor.
+= Schützen Sie Ihre FSx for ONTAP Daten mit einem Cyber-Tresor
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

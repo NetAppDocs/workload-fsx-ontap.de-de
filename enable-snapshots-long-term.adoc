@@ -4,7 +4,7 @@ permalink: enable-snapshots-long-term.html
 keywords: snapshot long-term retention, enable long-term retention 
 summary: Aktivieren Sie Snapshots für die langfristige Aufbewahrung, wodurch Sie spezifische Snapshots für langfristiges Disaster Recovery replizieren können. 
 ---
-= Aktivieren und bearbeiten Sie Snapshots für die langfristige Aufbewahrung
+= Langfristige Snapshot-Aufbewahrung in NetApp Workload Factory aktivieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

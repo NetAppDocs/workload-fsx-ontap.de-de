@@ -4,7 +4,7 @@ permalink: rebalance-volume.html
 keywords: rebalance capacity, volume capacity, redistribute capacity 
 summary: Überprüfen und gleichen Sie die Volumenkapazität neu aus, um mit der Zeit entstehende Ungleichgewichte zu vermeiden. 
 ---
-= Überprüfen und Neuausgleichen der Volume-Kapazität
+= Überprüfung und Ausgleich der Volumenkapazität in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
