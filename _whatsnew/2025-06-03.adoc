@@ -9,7 +9,7 @@
 
 Jetzt können Sie die Autogrow-Größe Ihrer Volumes so einstellen, dass die Volumegröße über die bereitgestellte Größe für Geschäftsanforderungen und Anwendungsanforderungen hinaus wachsen kann.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["Aktivieren Sie Autogrow"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["Aktivieren Sie Autogrow"]
 
 
 

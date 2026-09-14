@@ -41,7 +41,7 @@ Workload Factory identifiziert die Hosts, die Speicher konsumieren, und die mit 
 
 Alle Dateisystem- und Storage-VM-Endpunkte werden direkt im Tab „Übersicht“ eines Dateisystems angezeigt. Die direkte Endpunktsichtbarkeit in der Workload Factory-Konsole erleichtert die Überwachung von Netzwerkzugriff, Endpunkten und Failover-Status, ohne die CLI oder CloudShell zu verwenden. Um LIF-Details einschließlich Rollen, Endpunkten, Knoten, IP-Adressen und Status anzuzeigen, müssen Sie einen Link mit dem Dateisystem verknüpfen.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen Link mit Ihrem Dateisystem in NetApp Workload Factory verknüpfen"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen Link mit Ihrem Dateisystem in NetApp Workload Factory verknüpfen"^].
 
 
 

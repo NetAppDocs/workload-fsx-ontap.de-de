@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: use-snapshots.html 
+keywords: create snapshot, snapshot 
+summary: Volumendaten lassen sich vor versehentlichem Löschen oder vor Beschädigung schützen, indem Snapshots in NetApp Workload Factory erstellt und verwaltet werden. 
+---
+= Snapshots bieten Schutz für Daten in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Schutz von Volume-Daten vor versehentlichem Löschen oder Beschädigung durch das Erstellen und Verwalten von Snapshots in NetApp Workload Factory. Es besteht die Möglichkeit, einen Snapshot eines Volumes nach Bedarf zu erstellen, eine Snapshot-Richtlinie zu definieren, um die Erstellung und Aufbewahrung von Snapshots für Storage-VMs zu automatisieren, sowie ein Volume aus einem vorhandenen Snapshot wiederherzustellen, um Daten zu einem bestimmten Zeitpunkt wiederherzustellen.
+
+
+
+[[create-an-on-demand-snapshot-of-a-volume]]
+== Einen On-Demand-Snapshot eines Volumes erstellen
+
+Erstellen Sie einen manuellen Snapshot eines FSx für ONTAP -Volumes in NetApp Workload Factory.  Snapshots sind zeitpunktbezogene Versionen des Inhalts Ihres Volumes.
+
+Snapshots sind Ressourcen von Volumes und sofortige Erfassung von Daten, die nur für geänderte Daten Speicherplatz verbrauchen. Da sich die Daten im Laufe der Zeit ändern, belegen Snapshots in der Regel mit zunehmendem Alter mehr Speicherplatz.
+
+FSX für ONTAP-Volumes verwenden Just-in-Time Copy-on-Write, sodass unveränderte Dateien in Snapshots keine Kapazität des Volumes beanspruchen.
+
+
+NOTE: Snapshots sind keine Kopien Ihrer Daten. Wenn Sie Kopien Ihrer Daten erstellen möchten, sollten Sie die Funktionen für Volume-Backups oder Volume-Replikation verwenden.
+
+.Bevor Sie beginnen
+Sie müssen eine Verknüpfung herstellen, um einen manuellen Snapshot eines Volumes zu erstellen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nachdem die Verknüpfung hergestellt wurde, kann zu diesem Vorgang zurückgekehrt werden.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das das Volume enthält, für das ein Snapshot erstellt werden soll, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume aus, das mit Snapshots geschützt werden soll.
+. Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
+. Wählen Sie auf der Seite „Snapshots verwalten“ die Option „Snapshot erstellen“ aus.
+. Führen Sie im Dialogfeld „Snapshot erstellen“ die folgenden Schritte aus:
++
+.. Geben Sie im Feld *Snapshot-Name* einen Snapshot-Namen ein.
+.. Wählen Sie optional ein Etikett aus oder erstellen Sie ein neues Etikett.
+.. Legen Sie die *Aufbewahrungsfrist* als Anzahl von Stunden, Tagen, Monaten oder Jahren fest.
+.. Optional: *Machen Sie diesen Snapshot unveränderlich*, um zu verhindern, dass der Snapshot während der Aufbewahrungsfrist gelöscht wird.
++
+Akzeptieren Sie die Aussage zu unveränderlichen Snapshots.
+
+
+
+. Wählen Sie *Erstellen*.
+
+
+
+
+[[create-a-snapshot-policy-for-storage-vms]]
+== Erstellen einer Snapshot-Richtlinie für Storage-VMs
+
+Erstellen Sie eine benutzerdefinierte Snapshot-Richtlinie für Speicher-VMs in Workload Factory, um die Erstellung und Aufbewahrung von Snapshots zu verwalten. Eine Snapshot-Richtlinie definiert, wie das System Snapshots für eine Speicher-VM erstellt. Sie können eine Snapshot-Richtlinie für eine Speicher-VM in einem FSx for ONTAP -Dateisystem erstellen. Sie können die Richtlinie auch für mehrere Speicher-VMs freigeben.
+
+Sie können eine benutzerdefinierte Snapshot-Richtlinie erstellen, die sich von den drei integrierten Snapshot-Richtlinien für FSX für ONTAP unterscheidet:
+
+* `default`
+* `default-1weekly`
+* `none`
+
+
+Standardmäßig ist jedes Volume mit der Snapshot-Richtlinie des Dateisystems verknüpft `default` . Wir empfehlen, diese Richtlinie für die meisten Workloads zu verwenden.
+
+Durch das Anpassen einer Richtlinie können Sie festlegen, wann Snapshots erstellt werden sollen, wie viele Kopien aufbewahrt werden sollen und wie sie benannt werden sollen.
+
+.Bevor Sie beginnen
+* Sobald eine Snapshot-Richtlinie erstellt wurde, kann ihre Zuordnung zu den Speicher-VM(s) nicht geändert werden, Sie können die Richtlinie jedoch immer hinzufügen oder aus Volumes entfernen.
+* Beachten Sie Folgendes über die Snapshot-Kapazität, bevor Sie Snapshots verwenden:
++
+** Bei den meisten Datensätzen reicht eine zusätzliche Kapazität von 20 % aus, um Snapshots für bis zu vier Wochen aufzubewahren. Je älter die Daten werden, desto wahrscheinlicher wird die Verwendung für Wiederherstellungen.
+** Das Überschreiben aller Daten in einem Snapshot erfordert eine erhebliche Volume-Kapazität, was für die Bereitstellung von Volume-Kapazität von Bedeutung ist.
+
+
+* Um eine benutzerdefinierte Snapshot-Richtlinie zu erstellen, muss eine Verknüpfung hergestellt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Herstellung der Verknüpfung kann zu diesem Vorgang zurückgekehrt werden.
+
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Storage VMs* aus.
+. Wählen Sie auf der Registerkarte *Storage-VMs* das Aktionsmenü für das Volume aus, das mit geplanten Snapshots geschützt werden soll, dann *Erweiterte Aktionen* und dann *Snapshot-Richtlinien verwalten*.
+. Wählen Sie auf der Seite Snapshot Policy Management *Create Snapshot Policy* aus.
+. Geben Sie im Feld *Snapshot Policy Name* einen Namen für die Snapshot Policy ein.
+. Geben Sie optional eine Beschreibung für die Snapshot-Richtlinie ein.
+. Wählen Sie unter *Policy schedule and copies* aus, wann Snapshots erstellt werden sollen. Zum Beispiel jede Minute oder jede Stunde.
++
+Sie können mehr als eine Frequenz auswählen.
+
+. Geben Sie unter *Anzahl der Kopien* die Anzahl der Kopien ein, die beibehalten werden sollen.
++
+Die maximale Anzahl von Kopien beträgt 1,023.
+
+. Optional: Geben Sie unter *Namenskonventionen* ein *Präfix* für die Richtlinie ein.
+. *Retention Label* wird automatisch ausgefüllt.
++
+Dieses Label bezieht sich auf das SnapMirror- oder Replikationslabel, mit dem nur angegebene Snapshots für die Replikation vom Quell- zum Zieldateisystem ausgewählt werden.
+
+. Optional: Aktivieren Sie *unveränderliche Snapshots* für alle benötigten Zeitpläne, legen Sie die *Aufbewahrungsfrist* für jeden Zeitplan fest und akzeptieren Sie die Anweisung, um fortzufahren.
++
+Wenn Sie unveränderliche Snapshots aktivieren, werden alle Snapshots in dieser Snapshot-Richtlinie gesperrt, um zu verhindern, dass die Snapshots während des Aufbewahrungszeitraums gelöscht werden.
+
+. *Freigabe über Storage-VMs*: Standardmäßig aktiviert. Wenn diese Option aktiviert ist, wird die Snapshot-Richtlinie für alle Storage-VMs im File-System freigegeben. Deaktivieren Sie, um eine Snapshot-Richtlinie für eine einzelne Storage-VM zu erstellen.
+. Wählen Sie *Erstellen*.
+
+
+
+
+[[restore-a-volume-from-a-snapshot]]
+== Wiederherstellen eines Volumes aus einem Snapshot
+
+Sie können Daten aus einem Snapshot auf ein vorhandenes Volume oder auf ein neues Volume wiederherstellen. Die Wiederherstellung ermöglicht eine zeitpunktgenaue Wiederherstellung, wenn ein Volume gelöschte oder beschädigte Dateien enthält.
+
+Durch die Erstellung eines neuen Volumes aus einem Snapshot wird innerhalb weniger Sekunden eine Kopie eines gesamten Volumes erstellt, unabhängig von der Volumegröße.  Die neu erstellte Kopie stellt ein neues Volume dar.
+
+.Bevor Sie beginnen
+Beachten Sie die folgenden Einschränkungen, bevor Sie ein Volume aus einem Snapshot erstellen:
+
+* Sie können ein Volume nur aus einem Snapshot wiederherstellen, wenn Sie über eine vorhandene Snapshot-Kopie des Volumes verfügen.
+* Änderungen an Berechtigungsmodellen: Wenn Sie diesen Vorgang zum Umschalten des Protokolltyps des Network-Attached Storage (NAS) verwenden, kann er auch das Berechtigungsmodell wechseln, das der Sicherheitstyp bereitstellt. Es kann zu Problemen mit Dateizugriffsberechtigungen kommen, die Sie nur manuell mit Administratorzugriff mithilfe der NAS-Client-Tools für die Berechtigungseinstellung beheben können.
+
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des Dateisystems mit dem Volume und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie auf der Registerkarte *Volumes* das Aktionsmenü für das Volume aus, das aus einem Snapshot wiederhergestellt werden soll.
+. Wählen Sie *Datenschutzaktionen* und dann *Snapshots verwalten*.
+. Wählen Sie auf der Seite „Snapshots verwalten“ das Aktionsmenü für den wiederherzustellenden Snapshot und dann *Wiederherstellen* aus.
+. Wählen Sie im Dialogfeld „Volume aus einem Snapshot wiederherstellen“ eine der folgenden Optionen aus:
++
+** Wählen Sie mit dem Schalter „Als neues Volume wiederherstellen“ aus.
++
+Geben Sie im Feld *restored Volume Name* einen eindeutigen Namen für das wiederherzustellende Volume ein.
+
+** Stellen Sie Daten aus einem Snapshot auf einem vorhandenen Volume wieder her.  Dieser Vorgang löscht dauerhaft alle Daten, die nach der Erstellung des Snapshots geändert wurden.
++
+Akzeptieren Sie die Aussage, um fortzufahren.
+
+
+
+. Wählen Sie *Wiederherstellen*.
+

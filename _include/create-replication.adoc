@@ -51,7 +51,11 @@ Wenn Sie den Migrationsanwendungsfall ausgewählt haben, wählt Workload Factory
 
 . *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
 +
-Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden. . Geben Sie unter Replikationseinstellungen Folgendes an:
+Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+
++
+.. Geben Sie unter Replikationseinstellungen Folgendes an:
+
 
 . *Replikationsbeziehung initialisieren*: Wählen Sie, ob die Replikationsbeziehung direkt nach ihrer Erstellung oder später initialisiert werden soll. Beachten Sie, dass die Initialisierung zeitaufwändig sein kann, und Sie möchten den Basistransfer möglicherweise außerhalb der Spitzenzeiten durchführen.
 +

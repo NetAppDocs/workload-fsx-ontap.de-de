@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: manage-file-system-settings.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
+summary: FSx for ONTAP -Dateisystemtags für ein Dateisystem können jederzeit hinzugefügt, aktualisiert oder entfernt werden. 
+---
+= FSx for ONTAP Dateisystemeinstellungen in NetApp Workload Factory verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Einstellungen eines FSx for ONTAP Dateisystems in NetApp Workload Factory lassen sich verwalten. Tags für das Dateisystem können verwaltet, das fsxadmin Passwort bei Bedarf zurückgesetzt und die Durchsatzkapazität nach Bedarf aktualisiert werden.
+
+
+
+[[manage-fsx-for-ontap-file-system-tags]]
+== Verwaltung von FSx for ONTAP Dateisystem-Tags
+
+Tags können Ihnen dabei helfen, Ihre Ressourcen zu kategorisieren.  In NetApp Workload Factory können Sie jederzeit Tags für ein Dateisystem hinzufügen, bearbeiten und entfernen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und anschließend *Dateisystem-Tags verwalten*.
+. Im Dialogfeld *Dateisystem-Tags verwalten* können Sie nach Bedarf Tags hinzufügen, bearbeiten oder entfernen.
++
+Die maximale Anzahl von Tags, die Sie einem Dateisystem zuweisen können, beträgt 50.
+
+. Wählen Sie *Anwenden*.
+
+
+
+
+[[reset-the-fsxadmin-password-of-an-fsx-for-ontap-file-system]]
+== Das fsxadmin-Passwort eines FSx for ONTAP Dateisystems zurücksetzen
+
+Setzen Sie das fsxadmin-Passwort in NetApp Workload Factory bei Bedarf zurück.
+
+Wenn Sie während der Erstellung des Dateisystems einen alternativen Benutzer angegeben haben, können Sie nur das fsxadmin-Passwort in der AWS-Konsole zurücksetzen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, für das Sie das fsxadmin-Passwort zurücksetzen möchten, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht das Aktionsmenü aus.
++
+image:screenshot-reset-fsxadmin-password.png["Ein Screenshot des Aktionsmenüs auf der Registerkarte „Übersicht“ für ein Dateisystem."]
+
+. Wählen Sie *fsxadmin Passwort zurücksetzen*.
+. Geben Sie im Dialogfeld Passwort für fsxadmin zurücksetzen ein neues Passwort für fsxadmin ein und bestätigen Sie es erneut.
+. Wählen Sie *Anwenden*.
+
+
+
+
+[[update-throughput-capacity-for-an-fsx-for-ontap-file-system]]
+== Aktualisierung der Durchsatzkapazität für ein FSx for ONTAP Dateisystem
+
+Aktualisieren Sie bei Bedarf die Durchsatzkapazität für ein FSx für ONTAP Dateisystem in NetApp Workload Factory.
+
+Weitere Informationen zu Durchsatzkapazitätsgrenzen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] in der Dokumentation zu AWS FSX for NetApp ONTAP.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, für das Sie die Durchsatzkapazität aktualisieren möchten, und wählen Sie dann *Verwalten*.
+. Wählen Sie unter Information das Bleistiftsymbol neben *Durchsatzkapazität*. Das Bleistiftsymbol wird neben dem Dropdown-Pfeil angezeigt, wenn die Maus über die Zeile *Durchsatzkapazität* schwebt.
+. Wählen Sie im Dialogfeld Durchsatzkapazität die benötigte Durchsatzkapazität aus.
+. *Anwenden* speichert die Änderungen.
+

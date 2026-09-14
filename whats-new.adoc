@@ -25,7 +25,7 @@ Informieren Sie sich über die Neuerungen bei Amazon FSX for NetApp ONTAP.
 
 Sie können nun Links direkt von der Seite „Links“ im Menü „Administration“ erstellen, zusätzlich zur FSx for ONTAP Inventarseite und der Dateisystemübersichtsseite.
 
-link:create-link.html["Weitere Informationen zum Erstellen von Links"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Weitere Informationen zum Erstellen von Links"^].
 
 
 
@@ -209,7 +209,7 @@ Workload Factory identifiziert die Hosts, die Speicher konsumieren, und die mit 
 
 Alle Dateisystem- und Storage-VM-Endpunkte werden direkt im Tab „Übersicht“ eines Dateisystems angezeigt. Die direkte Endpunktsichtbarkeit in der Workload Factory-Konsole erleichtert die Überwachung von Netzwerkzugriff, Endpunkten und Failover-Status, ohne die CLI oder CloudShell zu verwenden. Um LIF-Details einschließlich Rollen, Endpunkten, Knoten, IP-Adressen und Status anzuzeigen, müssen Sie einen Link mit dem Dateisystem verknüpfen.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen Link mit Ihrem Dateisystem in NetApp Workload Factory verknüpfen"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen Link mit Ihrem Dateisystem in NetApp Workload Factory verknüpfen"^].
 
 
 
@@ -943,7 +943,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Sie können jetzt Terraform aus der Codebox verwenden, um einen Link zur Zuordnung zu einem FSx für ONTAP Dateisystem zu erstellen.  Diese Funktion ist für Benutzer gedacht, die Links manuell erstellen.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her"^]
 
 
 
@@ -1047,7 +1047,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["E
 
 Jetzt können Sie die IAM-Ausführungsrolle und die zugehörige Berechtigungsrichtlinie verwalten, wenn Sie einen Link in der Workload Factory-Konsole erstellen.  Ein Link stellt die Verbindung zwischen Ihrem Workload Factory-Konto und einem oder mehreren FSx for ONTAP -Dateisystemen her.  Sie haben zwei Möglichkeiten, die IAM-Ausführungsrolle und die Linkberechtigungen zuzuweisen – automatisch oder vom Benutzer bereitgestellt.  Durch die Verwaltung der Ausführungsrolle und der zugehörigen Berechtigungsrichtlinie in Workload Factory müssen Sie keinen Code von Drittanbietern mehr verwenden.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her"^]
 
 
 
@@ -1086,7 +1086,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 Jetzt können Sie die Autogrow-Größe Ihrer Volumes so einstellen, dass die Volumegröße über die bereitgestellte Größe für Geschäftsanforderungen und Anwendungsanforderungen hinaus wachsen kann.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["Aktivieren Sie Autogrow"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["Aktivieren Sie Autogrow"]
 
 
 
@@ -1548,7 +1548,7 @@ Der Bestand des Speichers wurde auf eine Ansicht mit zwei Registerkarten aktuali
 * Unterstützung für manuelle Link-Erstellung: Diese Funktion ermöglicht die eigenständige Erstellung in AWS CloudFormation mit manueller Registrierung des Links ARN. Es ist nützlich, wenn ein Sicherheits- oder DevOps-Team beim Link-Erstellungsprozess hilft.
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erstellen Sie eine Verknüpfung"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erstellen Sie eine Verknüpfung"^]
 
 
 

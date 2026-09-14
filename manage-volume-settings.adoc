@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: manage-volume-settings.html 
+keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
+summary: Mit Tags können Sie Ihre Ressourcen kategorisieren. Sie können Volume-Tags für FSX für ONTAP-Volumes jederzeit hinzufügen, bearbeiten und entfernen. 
+---
+= Volume-Einstellungen in NetApp Workload Factory verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+FSx for ONTAP Volume-Einstellungen in NetApp Workload Factory können an die Anforderungen Ihres Unternehmens angepasst werden. Volume-Tags lassen sich verwalten, um Ressourcen zu kategorisieren, die Einstellungen zur Speichereffizienz können aktualisiert werden, um Speicherplatz und Kosten zu optimieren, und die Einstellungen für unveränderliche Dateien ermöglichen die Steuerung der Datenaufbewahrung und den Schutz vor unbefugten Änderungen.
+
+
+
+[[manage-volume-tags]]
+== Verwalten von Volume-Tags
+
+Tags können Ihnen dabei helfen, Ihre Ressourcen zu kategorisieren.  Sie können Volume-Tags für FSx for ONTAP Volumes in NetApp Workload Factory jederzeit hinzufügen, bearbeiten und entfernen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das Volume aus, für das Sie Tags ändern möchten.
+. Wählen Sie *Basic actions* und dann *Edit Volume Tags*.
+. Fügen Sie auf der Seite Volume-Tags bearbeiten Tags hinzu, bearbeiten oder entfernen Sie Tags.
++
+Die maximale Anzahl von Tags, die Sie auf ein Volume anwenden können, beträgt 50.
+
+. Wählen Sie *Anwenden*.
+
+
+
+
+[[update-volume-storage-efficiency]]
+== Aktualisierung der Volume-Speichereffizienz
+
+Die Speichereffizienzeinstellung kann nach der Volume-Erstellung aktualisiert werden.
+
+Die Storage-Effizienzfunktionen umfassen Deduplizierung, Datenkomprimierung und Data-Compaction, um eine optimale Speicherersparnis mit einer FlexVol volume zu erzielen. Deduplizierung eliminiert doppelte Datenblöcke. Bei der Datenkomprimierung werden die Datenblöcke komprimiert, damit sie die erforderliche Menge an physischem Storage reduzieren können. Data-Compaction speichert mehr Daten in weniger Speicherplatz und steigert somit die Storage-Effizienz.
+
+Wenn Sie beim Erstellen eines Volumes die Storage-Effizienz nicht aktivieren möchten, können Sie die Einstellungen für potenzielle Platz- und Kosteneinsparungen jederzeit aktivieren.
+
+Volumes verwenden Thin Provisioning, unabhängig davon, ob Sie Storage-Effizienz aktivieren oder deaktivieren.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü des Volumes aus, für das die Speichereffizienzeinstellung aktualisiert werden soll.
+. Wählen Sie *Advanced Actions* und dann *Set Storage Efficiency*.
+. Wählen Sie diese Option, um die Effizienz des Volume-Storage zu aktivieren oder zu deaktivieren.
+. Wählen Sie *Übernehmen*, um die Änderung zu speichern.
+
+
+
+
+[[manage-immutable-files-for-a-volume-in-netapp-workload-factory]]
+== Verwalten unveränderlicher Dateien für ein Volume in NetApp Workload Factory
+
+Wenn diese Funktion aktiviert ist, können Sie bestimmte unveränderliche Dateieinstellungen für ein Volume aktualisieren, z. B. Aufbewahrungsrichtlinien und -Zeiträume, Autofeststellungszeitraum und Modus zum Anhängen von Volumes.
+
+Beachten Sie, dass die Aktivierung unveränderlicher Dateien nur während möglich istlink:create-volume.html["Volume-Erstellung"].
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü des Volumes aus, das aktualisiert werden soll.
+. Wählen Sie *Data Protection actions* und dann *Manage Immanable files*.
+. Auf der Seite „unveränderliche Dateien verwalten“ können Sie Folgendes aktualisieren:
++
+** *Aufbewahrungsfrist*: Wählen Sie *nicht spezifiziert* oder *Zeitraum angeben*.
++
+*** *Nicht spezifiziert*: Die Standardminimum-Periode ist "0" Jahre und die Standardmaximum-Periode ist "30 Jahre".
+*** *Zeitraum angeben*: Option zum Definieren der Aufbewahrungsrichtlinie, der Mindest- und Höchstzeiträume, der Autocommit-Funktion und der Volume Append-Funktion. Geben Sie folgende Informationen an:
++
+**** *Aufbewahrungsrichtlinie*: Diese Frist muss größer oder gleich der Mindestaufbewahrungsfrist und kleiner oder gleich der maximalen Aufbewahrungsfrist sein.
+**** *Mindest- und Höchstzeiträume*: Legen Sie die Mindest- und Höchstzeiträume fest, um Dateien in diesem Volume in einen unveränderlichen WORM-Zustand zu versetzen.
+
+
+
+
+** *Autocommit*: Aktivieren oder deaktivieren Sie die Funktion, um Dateien, die während der Autocommit-Periode nicht geändert wurden, automatisch an WORM zu übergeben.
+** *Privilegiertes Löschen*: Aktivieren oder deaktivieren Sie die Funktion.  Durch Aktivieren der Funktion kann ein SnapLock Administrator ein nicht abgelaufenes WORM-Volume löschen.  Diese Funktion wird nur im Enterprise-Aufbewahrungsmodus unterstützt.
+** *Volume Append-Modus*: Aktivieren oder deaktivieren Sie die Funktion. Durch die Aktivierung des Modus „Anhängen von Volumes“ können Sie WORM-Dateien neuen Inhalt hinzufügen.
+
+
+. Klicken Sie Auf *Anwenden*.
+
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* link:create-volume.html["Erstellen eines Volumes in Workload Factory"]
+* link:manage-volume-capacity.html["Kapazität von Volumes in Workload Factory verwalten"]
+* link:change-tiering-policy.html["Ändern der Volumen-Tiering-Richtlinie in Workload Factory"]
+* link:manage-s3-access-points.html["Verwalten von S3-Zugriffspunkten in Workload Factory"]
+

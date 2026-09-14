@@ -1,43 +1,76 @@
 ---
 sidebar: sidebar 
-permalink: manage-capacity-automatically.html 
-keywords: auto capacity, automatic capacity management, inodes management, file system capacity 
-summary: Durch Aktivierung dieser Funktion kann Workload Factory automatisch inkrementellen Speicherplatz oder Inodes zu einem FSx for ONTAP Dateisystem hinzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert. 
+permalink: adjust-file-system-capacity.html 
+keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
+summary: Passen Sie die SSD-Speicherkapazität eines FSx for ONTAP -Dateisystems manuell an, um die Anforderungen Ihrer projektbasierten Workloads mit unterschiedlichen aktiven Arbeitssätzen zu erfüllen. 
 ---
-= Kapazität und Inodes automatisch in NetApp Workload Factory verwalten
+= Dateisystemkapazität in NetApp Workload Factory anpassen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Durch die Aktivierung von Kapazitätsmanagement kann NetApp Workload Factory automatisch inkrementellen Storage zu einem FSx for ONTAP-Dateisystem hinzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert. Darüber hinaus entfällt durch die Aktivierung dieser Funktion die Notwendigkeit, die Kapazität manuell zu überwachen.
+Die SSD-Speicherkapazität eines FSx for ONTAP Dateisystems kann an die Anforderungen von Workloads mit unterschiedlichen aktiven Arbeitssätzen in NetApp Workload Factory angepasst werden. Die Kapazität lässt sich manuell erhöhen, wenn die Nutzung den festgelegten Schwellenwert überschreitet, oder verringern, wenn die Arbeitssätze nicht genutzt werden, um Kosten zu sparen. Alternativ ist es möglich, das automatische Kapazitätsmanagement zu aktivieren, sodass Workload Factory inkrementellen Storage bei sich ändernden Anforderungen im Zeitverlauf hinzufügt und die manuelle Überwachung entfällt.
+
+
+NOTE: Die Verringerung der SSD-Speicherkapazität wird nur für Dateisysteme der zweiten Generation unterstützt.
 
 
 
-[[about-this-task]]
-== Über diese Aufgabe
+[[adjust-file-system-capacity-manually]]
+== Dateisystemkapazität manuell anpassen
 
-Das System scannt das FSx for ONTAP-Dateisystem alle 30 Minuten. Es prüft, ob inkrementeller Storage hinzugefügt werden muss und verifiziert die verfügbaren Volume-Inodes. Die Anzahl erhöht sich basierend auf den Schwellenwerten des automatischen Kapazitätsmanagements.
+Mit der elastischen Dateisystemkapazität können Sie die Kapazität Ihrer Dateisysteme dynamisch an die Anforderungen Ihrer Arbeitslasten anpassen.
 
-Durch die Aktivierung der Inode-Verwaltung kann NetApp Workload Factory automatisch inkrementelle Inodes zu einem FSx for ONTAP-Dateisystem hinzufügen, wenn sich die Kapazitätsanforderungen ändern. Diese Funktion macht die manuelle Inode-Überwachung überflüssig.
+.Über diese Aufgabe
+Eine Änderung der Dateisystemkapazität wirkt sich auf die IOPS Ihres FSx for ONTAP file system aus.
 
-Diese Funktion kann nur von einem Konto verwaltet werden.
+Wenn Sie automatischlink:provision-iops.html["Bereitstellung von IOPS"] Bei einem Dateisystem erhöhen oder verringern sich die IOPS um 3 IOPS, wenn die SSD-Kapazität um 1 GiB erhöht oder verringert wird.
 
-Die maximale Menge an SSD-Speicherkapazität für alle FSX für ONTAP-Dateisysteme beträgt 524,288 gib. Informationen zur Anforderung einer Quotenerhöhung finden link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] Sie in der Dokumentation zu AWS FSX for NetApp ONTAP.
+Wenn Sie link:provision-iops.html["Bereitstellung von IOPS"] manuell arbeiten, müssen Sie möglicherweise die IOPS-Zuweisung erhöhen, um die höhere Kapazität des Filesystems zu unterstützen.
+
+Weitere Informationen zu SSD-Storage-Kapazitätsbeschränkungen finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] in der Dokumentation zu AWS FSX für NetApp ONTAP.
+
+.Bevor Sie beginnen
+Um die Kapazität eines Dateisystems anzupassen, müssen Sie zuerst link:manage-capacity-automatically.html["Deaktivieren Sie das automatische Kapazitätsmanagement"].
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Dashboard *SSD-Kapazität anpassen*.
+. Wählen Sie das Dateisystem aus, für das Sie die Kapazität anpassen möchten, und wählen Sie dann *Weiter*.
+. Geben Sie im Dialogfeld „SSD-Kapazität anpassen“ eine Zahl für „Bereitgestellte Kapazität“ ein.
+. Wählen Sie die Einheit für die bereitgestellte Kapazität aus.
+. Wählen Sie *Anwenden*.
+
+
+
+
+[[enable-automatic-capacity-and-inode-management]]
+== Automatische Kapazitäts- und Inode-Verwaltung aktivieren
+
+Die Aktivierung von Kapazitätsmanagement und Inode-Management ermöglicht es der NetApp Workload Factory, automatisch inkrementellen Storage, ein FSx for ONTAP File System und Inodes (Dateien) zu einem Volume hinzuzufügen, wenn sich der Kapazitätsbedarf im Laufe der Zeit ändert. Diese Funktionen machen die manuelle Überwachung von Kapazität und Inodes überflüssig.
+
+Nur ein Konto kann diese Funktionen verwalten.
 
 
 
 [[enable-automatic-capacity-management-and-capacity-notifications]]
-== Automatisches Kapazitätsmanagement und Kapazitätsbenachrichtigungen aktivieren
+=== Automatisches Kapazitätsmanagement und Kapazitätsbenachrichtigungen aktivieren
 
 Aktivieren Sie das automatische Kapazitätsmanagement, um inkrementellen Storage eines FSx for ONTAP-Dateisystems automatisch bis zur maximalen Größenbegrenzung hinzuzufügen. Richten Sie Benachrichtigungen ein, um Warnungen zu erhalten, wenn das Dateisystem einen bestimmten Kapazitätsschwellenwert erreicht.
+
+.Über diese Aufgabe
+Workload Factory scannt das FSx for ONTAP-Dateisystem alle 30 Minuten, um zu prüfen, ob inkrementeller Storage hinzugefügt werden muss.
+
+Die maximale Menge an SSD-Speicherkapazität für alle FSX für ONTAP-Dateisysteme beträgt 524,288 gib. Informationen zur Anforderung einer Quotenerhöhung finden link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Kontingente"^] Sie in der Dokumentation zu AWS FSX for NetApp ONTAP.
 
 .Bevor Sie beginnen
 Beachten Sie Folgendes, bevor Sie beginnen:
 
 * Du musstlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten mit der Berechtigungsrichtlinie „Anzeigen, Planen und Analysieren“ erteilen"^] in Workload Factory, um diese Aufgabe abzuschließen.
-* Um sicherzustellen, dass die Volume-Inodes zusammen mit der Speicherkapazität zunehmen, müssen Sie einen Link zuordnen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Um sicherzustellen, dass die Anzahl der Volume-Inodes mit der Speicherkapazität zunimmt, muss eine Verknüpfung hergestellt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung kann zu diesem Vorgang zurückgekehrt werden.
 * Sie sollten diese Funktion während der Datenmigration nicht aktivieren, da AWS zwischen SSD-Kapazitätserhöhungen eine Abkühlphase von mindestens sechs Stunden vorschreibt. Diese Einschränkung kann Anpassungen verzögern. Planen Sie daher entsprechend.
 
 
@@ -86,11 +119,12 @@ Alle 30 Minuten wird ein Dateisystemscan durchgeführt, um festzustellen, ob zus
 
 
 [[enable-inode-management-for-a-file-system]]
-== Inode-Verwaltung für ein Dateisystem aktivieren
+=== Inode-Verwaltung für ein Dateisystem aktivieren
 
 Aktivieren Sie die automatische Inode-Verwaltung, um die Anzahl der Inodes (Dateien) pro Volume bis zum zulässigen Limit zu erhöhen.
 
-Alle 30 Minuten wird das FSx for ONTAP-Dateisystem gescannt. Es werden die verfügbaren Volume-Inodes überprüft und festgestellt, ob inkrementelle Inodes hinzugefügt werden müssen. Die Anzahl erhöht sich anhand automatischer Schwellenwerte für das Inode-Management.
+.Über diese Aufgabe
+Workload Factory scannt das FSx for ONTAP Dateisystem alle 30 Minuten, um die verfügbaren Volume-Inodes zu überprüfen und zu prüfen, ob inkrementelle Inodes hinzugefügt werden müssen. Die Anzahl erhöht sich basierend auf den Schwellenwerten der automatischen Inode-Verwaltung.
 
 
 NOTE: *Terraform-Benutzer*: Terraform hat eine Einschränkung, die erfordert, dass alle Operationen innerhalb von Terraform durchgeführt werden.  Die Inode-Verwaltung wird in Terraform nicht unterstützt, aber Sie können die automatische Inode-Verwaltung in der Workload Factory-Konsole aktivieren.
@@ -98,7 +132,7 @@ NOTE: *Terraform-Benutzer*: Terraform hat eine Einschränkung, die erfordert, da
 .Bevor Sie beginnen
 Beachten Sie Folgendes, bevor Sie beginnen:
 
-* Um Volume-Inodes automatisch zu verwalten, müssen Sie eine Verknüpfung herstellen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
+* Um Volume-Inodes automatisch zu verwalten, muss eine Verknüpfung hergestellt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung kann zu diesem Vorgang zurückgekehrt werden.
 * Die automatische Inode-Verwaltung kann mit einem _Warnschwellenwert_ eingerichtet werden, der eine Benachrichtigung vom Workload Factory-Benachrichtigungsdienst auslöst.  Um diese Funktion nutzen zu können, müssen Sielink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Aktivieren Sie den Workload Factory-Benachrichtigungsdienst"^] Erste.
 * Du musstlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Zugangsdaten mit der Berechtigungsrichtlinie „Anzeigen, Planen und Analysieren“ erteilen"^] in Workload Factory, um diese Aufgabe abzuschließen.
 

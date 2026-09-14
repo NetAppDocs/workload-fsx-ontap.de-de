@@ -11,9 +11,7 @@ summary: Workload Factory scannt Amazon FSx for NetApp ONTAP Konfigurationen und
 
 
 [role="lead"]
-Mithilfe der Erkenntnisse und Empfehlungen aus der Konfigurationsanalyse kann Workload Factory genutzt werden, um Best Practices für Ihre FSx for ONTAP Dateisysteme zu implementieren. Der gut konzipierte Status lässt sich einfach überprüfen, Informationen zu Problemen mit Ihren Konfigurationen einsehen und Maßnahmen zur Verbesserung der Architektur aller Systeme ergreifen, die nicht auf Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
-
-Sie können die Analyse bestimmter Speicherkonfigurationen, die nicht auf Ihre Speicherumgebung zutreffen, auch ablehnen, um unnötige Warnungen und ungenaue Optimierungsergebnisse zu vermeiden.
+Mit Workload Factory lassen sich Best Practices für Ihre FSx for ONTAP Dateisysteme umsetzen. Der gut konzipierte Status kann einfach überprüft werden, Informationen zu Problemen mit den Konfigurationen stehen zur Verfügung, und Probleme lassen sich beheben, um die Architektur aller Systeme zu verbessern, die nicht auf Zuverlässigkeit, Sicherheit, Effizienz, Leistung und Kosten optimiert sind.
 
 link:configuration-analysis.html["Informationen zur Konfigurationsanalyse und zum Well-Architected-Status."]
 
@@ -22,13 +20,11 @@ link:configuration-analysis.html["Informationen zur Konfigurationsanalyse und zu
 [[about-this-task]]
 == Über diese Aufgabe
 
-Workload Factory analysiert täglich die Bereitstellungskonfigurationen des Amazon FSx for NetApp ONTAP-Dateisystems. Die tägliche Analyse liefert den Well-Architected-Status sowie Erkenntnisse und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, damit Ihr Dateisystem Best Practices entspricht.
+Workload Factory analysiert täglich die Bereitstellungskonfigurationen des Amazon FSx for NetApp ONTAP-Dateisystems.
 
-Durch die Link-Konnektivität kann Workload Factory nach Problemen mit Leistung, Datenschutz und Konfigurationen suchen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"] für die umfassendste Analyse Ihrer Dateisystemressourcen.
+Da die Anforderungen an Speicherkonfigurationen variieren, kann die Analyse bestimmter Konfigurationen, die für Ihre Speicherumgebung nicht relevant sind, ausgeschlossen werden.
 
-Es bestehen Optionen, die Empfehlungen zu Konfigurationsproblemen Ihrer Dateisysteme zu überprüfen und die Probleme zu beheben.
-
-Da die Anforderungen an Speicherkonfigurationen variieren, kann die Analyse bestimmter Konfigurationen, die für Ihre Speicherumgebung nicht relevant sind, ausgeschlossen werden. So werden unnötige Warnmeldungen und ungenaue Optimierungsergebnisse vermieden.
+Die Link-Konnektivität ermöglicht es Workload Factory, Probleme mit Leistung, Datenschutz und Konfigurationen zu erkennen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"^] für die umfassendste Analyse Ihrer Dateisystemressourcen.
 
 .Was analysiert wird
 Workload Factory analysiert den gut entwickelten Status der folgenden Konfigurationen für FSx for ONTAP Dateisysteme:
@@ -46,7 +42,7 @@ Workload Factory analysiert den gut entwickelten Status der folgenden Konfigurat
 == Bevor Sie beginnen
 
 * Sie müssen link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Operationen und Behebung gewähren"^] in Ihrem AWS-Konto angemeldet sein.
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"]für die umfassendste Analyse Ihrer Dateisystemressourcen.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Stellen Sie über einen Link eine Verbindung zu einem FSx for ONTAP -Dateisystem her"^] für die umfassendste Analyse Ihrer Dateisystemressourcen.
 
 
 
@@ -69,7 +65,7 @@ Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht o
 +
 Manche Reparaturvorgänge sind nur für bestimmte Operationen und nicht immer für mehr als eine Ressource verfügbar. Beispielsweise kann die Konfiguration möglicherweise für ein einzelnes Volume, aber nicht für mehrere Volumes behoben werden.
 
-. Im Dialogfeld werden Informationen zum Reparaturvorgang für die Konfiguration angezeigt. Einige Vorgänge können zu Ausfallzeiten der Instanz oder zu Dienstunterbrechungen führen.
+. Die Maßnahmen geben Aufschluss über die Folgen dieser Korrektur, wie etwa Instanz-Ausfallzeiten oder Serviceunterbrechungen.
 . *Fix* auswählen, wenn Workload Factory die empfohlenen Änderungen anwenden soll.
 
 

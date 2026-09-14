@@ -1,22 +1,82 @@
 ---
 sidebar: sidebar 
-permalink: rebalance-volume.html 
-keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: Überprüfen und gleichen Sie die Volumenkapazität neu aus, um mit der Zeit entstehende Ungleichgewichte zu vermeiden. 
+permalink: manage-volume-capacity.html 
+keywords: volume size, rebalance volume capacity, adjust volume capacity, volume autogrow, manage volume capacity, FlexVol volume, FlexGroup volume 
+summary: Informationen zur Verwaltung der Volumenkapazität, einschließlich der manuellen Anpassung der Volumengröße und der Verwendung von Volume Autogrow in Workload Factory. 
 ---
-= Überprüfung und Ausgleich der Volumenkapazität in NetApp Workload Factory
+= Kapazität von Volumes in der NetApp Workload Factory verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Überprüfen Sie die Balance der FlexVol- oder FlexGroup-Volume-Kapazität und gleichen Sie die Volume-Kapazität neu aus, um die Dateien gleichmäßig auf alle FlexVol-Volumes in einem Knoten oder auf alle Bestandteile zu verteilen, sodass alle Knoten an der Arbeitslast eines einzelnen FlexGroup-Volumes beteiligt sind.
+Die Volume-Kapazität sollte an den sich ändernden Bedarf angepasst werden. Die Volume-Größe kann manuell angepasst oder die automatische Größenanpassung für Volumes aktiviert werden, damit Workload Factory die Volume-Kapazität verwaltet. Das Gleichgewicht der FlexVol- oder FlexGroup-Volume-Kapazität kann überprüft und die Volume-Kapazität neu verteilt werden, um Dateien gleichmäßig auf alle FlexVol-Volumes in einem Node oder auf alle Bestandteile zu verteilen, sodass alle Nodes an der Arbeitslast eines einzelnen FlexGroup-Volumes beteiligt sind.
 
 
 
-[[about-this-task]]
-== Über diese Aufgabe
+[[edit-volume-autogrow]]
+== Bearbeiten Sie Volume Autogrow
+
+Aktivieren Sie die automatische Größenanpassung des Volumes, damit NetApp Workload Factory die Volumenkapazität für Sie verwaltet. Diese Funktion kann jederzeit deaktiviert werden.
+
+
+NOTE: Volume Autogrow wird für iSCSI Volumes nicht unterstützt.
+
+.Bevor Sie beginnen
+Um die automatische Volumenvergrößerung zu aktivieren, muss eine Verknüpfung hergestellt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung kann zu diesem Vorgang zurückgekehrt werden.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das Volume aus, das Sie ändern möchten.
+. Wählen Sie *Grundlegende Aktionen* und dann *Automatische Lautstärkevergrößerung festlegen*.
+. Aktivieren Sie im Dialogfeld „Automatische Vergrößerung festlegen“ die automatische Vergrößerung des Volumes, um die Volume-Kapazität automatisch zu erweitern, bis das Volume die maximale Größe erreicht. Diese Funktion trägt der steigenden Datennutzung Rechnung und gewährleistet einen unterbrechungsfreien Betrieb.
++
+Geben Sie die maximale Größe und Einheit für das Volumewachstum an. Die maximale Wachstumsgröße kann nicht kleiner als die aktuelle Volumegröße sein.
+
+. Wählen Sie *Anwenden*.
+
+
+
+
+[[adjust-volume-capacity-manually]]
+== Volume-Kapazität manuell anpassen
+
+Sie können die Speicherkapazität anpassen, indem Sie die bereitgestellte Größe eines Volumes erhöhen oder verringern.  Die folgende Tabelle zeigt die minimalen und maximalen Volumengrößen nach Volumentyp:
+
+[cols="1,1,1"]
+|===
+| Datenträgertyp | Mindestgröße | Maximale Größe 
+
+
+| FlexVol Volume | 20 MiB | 300 TiB 
+
+
+| FlexGroup Volume | 800 GiB | 2 PiB 
+|===
+Bei einer iSCSI-LUN führt die Vergrößerung des Volumes auch zu einer Vergrößerung der Host-LUN.  Nachdem Sie die Speicherkapazität erhöht haben, befolgen Sie die Anweisungen Ihres Host-Betriebssystems, um die neue Größe der LUN zu ermitteln und das Dateisystem der LUN zu erweitern.
+
+Die Verringerung der Volume-Größe wird nur für NFS- und SMB/CIFS-Volumes unterstützt.
+
+.Bevor Sie beginnen
+Um die Volume-Kapazität anzupassen, muss ein Link zugeordnet werden. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nachdem der Link zugeordnet wurde, kann zu diesem Vorgang zurückgekehrt werden.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das Volume aus, das Sie ändern möchten.
+. Wählen Sie *Grundlegende Aktionen* und anschließend *Lautstärke anpassen*.
+. Im Dialogfeld „Volumenkapazität anpassen“ legen Sie die *Bereitgestellte Kapazität* und die Einheit fest.
+. Wählen Sie *Anpassen*, um die Änderungen anzuwenden.
+
+
+
+
+[[rebalance-volume-capacity-for-flexvol-and-flexgroup-volumes]]
+== Kapazität von FlexVol- und FlexGroup-Volumes neu ausbalancieren
 
 Die Neuausrichtung der Volume-Kapazität wird für FlexVol-Volumes und FlexGroup-Volumes unterstützt. Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei. Volume-Transfervorgänge verbrauchen Filesystem-Ressourcen.
 
@@ -42,13 +102,13 @@ NOTE: Für SAN-Volumes wie iSCSI und NVMe wird die Neuverteilung nicht unterstü
 
 
 [[check-the-balance-of-your-volumes]]
-== Überprüfen Sie den Saldo Ihrer Volumina
+=== Überprüfen Sie den Saldo Ihrer Volumina
 
 Überprüfen Sie den Kontostand der FlexVol- oder FlexGroup-Volumes in einem FSx für ONTAP-Dateisystem.
 
 .Bevor Sie beginnen
 * FlexGroup Volume Balance ist nur für FSX for ONTAP-Filesysteme mit einer Scale-out-Implementierung mit mindestens zwei HA-Paaren verfügbar.
-* Um den Saldo eines Volumens zu prüfen, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"] . Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Um den Kontostand eines Volumens zu prüfen, müssen Sie link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Einen Link erstellen und zuordnen oder einen vorhandenen Link mit dem Dateisystem verknüpfen"^]. Nachdem die Verbindung hergestellt wurde, kann zu diesem Vorgang zurückgekehrt werden.
 
 
 .Schritte
@@ -72,7 +132,7 @@ Wenn ein Volumen unausgeglichen ist, berücksichtigen Sie <<Volumenkapazität ne
 
 
 [[rebalance-volume-capacity]]
-== Volumenkapazität neu ausbalancieren
+=== Volumenkapazität neu ausbalancieren
 
 Gleichen Sie ein oder mehrere Volumes aus, die keinen Lastausgleich vornehmen.
 
@@ -81,7 +141,7 @@ NOTE: Ein Workload Factory-Administrator kann<<Stoppen eines Volume-Neuausgleich
 
 .Bevor Sie beginnen
 * <<Überprüfen Sie den Saldo Ihrer Volumina,Überprüfen Sie den Saldo eines Volumens>> Vor der Ausbalancierung von Volumes.
-* Um ein Volume neu auszurichten, müssen Sie link:manage-links.html["Verknüpfen Sie eine Verknüpfung"]. Wenn Sie noch keinen Link haben, link:create-link.html["Erstellen Sie eine Verknüpfung"]. Um einen Link im Dateisystem zu verknüpfen, wählen Sie unter *Kontoname* *Associate Link* aus. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Um ein Volume neu auszubalancieren, muss link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Einen Link erstellen und zuordnen oder einen vorhandenen Link mit dem Dateisystem verknüpfen"^] werden. Nachdem die Verknüpfung hergestellt wurde, zu diesem Vorgang zurückkehren.
 * Beachten Sie, dass bestehende Snapshots auf Volumes, die Sie ausgleichen, teilweise werden und nicht zur Wiederherstellung von Volume-Daten verwendet werden können. Neue Snapshots nach der Ausbalancierung können jedoch zur Wiederherstellung von Volume-Daten verwendet werden.
 * FlexVol-Volumes werden am besten komplett neu ausbalanciert, um alle Volume-Ressourcen gleichmäßig zu verteilen. Abgewählte Volumes nehmen nicht aktiv am Ausgleichsprozess teil.
 
@@ -162,7 +222,7 @@ Die Volumes der FlexGroup-Mitglieder werden beim Neuausgleich einzeln verschoben
 
 
 [[stop-a-volume-rebalance-operation]]
-== Stoppen eines Volume-Neuausgleichsvorgangs
+=== Stoppen eines Volume-Neuausgleichsvorgangs
 
 Sie können einen Neuausgleichsvorgang jederzeit abbrechen. Er verursacht keine Unterbrechungen. Durch das Abbrechen des Vorgangs werden aktive Volume-Verschiebungen abgebrochen.
 

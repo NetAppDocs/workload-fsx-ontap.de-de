@@ -37,7 +37,7 @@ Entdecken Sie einen lokalen ONTAP Cluster in NetApp Workload Factory, damit Sie 
 Stellen Sie sicher, dass Sie Folgendes haben, bevor Sie beginnen:
 
 * Ein FSX für ONTAP-Dateisystem für die Replikation.
-* Eine verbundene Verbindung, die mit dem ermittelten On-Premises-Cluster verknüpft wird. Wenn Sie keinen Link haben, müssen Sie link:create-link.html["Erstellen Sie eine"].
+* Eine verbundene Verbindung, die mit dem erkannten lokalen Cluster verknüpft wird. Wenn keine Verbindung vorhanden ist, ist es erforderlich, link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erstellen Sie eine"^].
 * ONTAP-Benutzeranmeldeinformationen mit erforderlichen Berechtigungen.
 * On-Premises-ONTAP Version 9.8 und höher
 * Anschlussmöglichkeiten wie in der folgenden Abbildung dargestellt.
@@ -85,7 +85,7 @@ Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für O
 .Bevor Sie beginnen
 * Sie müssen ein On-Premises-ONTAP-Cluster erkennen, um seine Volume-Daten zu replizieren.
 * Sie müssen über ein verfügbares FSX für ONTAP-Dateisystem verfügen, um das Ziel für die Replikation zu sein.
-* Sowohl dem On-Premises-ONTAP-Cluster als auch dem für die Replikationsbeziehung verwendeten FSX for ONTAP-Dateisystem muss ein Link zugeordnet sein. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+* Sowohl der lokale ONTAP Cluster als auch das FSx for ONTAP Dateisystem, das Sie für die Replikationsbeziehung verwenden, müssen über eine zugeordnete Verbindung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nachdem die Verbindung zugeordnet wurde, kann zu diesem Vorgang zurückgekehrt werden.
 
 
 .Schritte

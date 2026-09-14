@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: use-backups.html 
+keywords: create backup, volume backup, back up a volume, FSx for ONTAP backup, manual backup, restore from a backup, restore volume 
+summary: Schützen Sie Ihre Volume-Daten vor versehentlichem Löschen, Beschädigung und anderen Datenverlusten, indem Backups in der NetApp Workload Factory erstellt und wiederhergestellt werden. 
+---
+= Backups bieten Schutz für Daten in der NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Schutz der Volume-Daten vor versehentlichem Löschen, Beschädigung und anderen Datenverlusten durch das Erstellen und Wiederherstellen von Backups in der NetApp Workload Factory. Es besteht die Möglichkeit, einen Backup-Zeitplan einzurichten, ein bedarfsgesteuertes Backup eines Volumes außerhalb der regulären Backups zu erstellen und ein Volume aus einem vorhandenen Backup auf jedes FSx for ONTAP Dateisystem im eigenen AWS-Konto wiederherzustellen.
+
+
+
+[[create-an-on-demand-backup-of-a-volume]]
+== Eine bedarfsgesteuerte Sicherung eines Volumes erstellen
+
+Erstellen Sie eine manuelle Sicherung eines Volumes außerhalb regelmäßig geplanter Sicherungen in NetApp Workload Factory.
+
+.Über diese Aufgabe
+Volume-Backups werden pro Volume erstellt, sodass jedes Backup nur die Daten in einem bestimmten Volume enthält.
+
+Volume-Backups sind inkrementell, was bedeutet, dass nur die Daten auf dem Volume gespeichert werden, die sich nach Ihrem letzten Backup geändert haben. Dadurch werden die für die Erstellung des Backups benötigte Zeit und der für das Backup benötigte Speicherplatz minimiert, was Speicherkosten spart, da keine Daten dupliziert werden.
+
+.Bevor Sie beginnen
+Um Backups Ihrer Volumes zu erstellen, müssen sowohl das Volume als auch das Dateisystem über ausreichend SSD-Speicherkapazität verfügen, um den Backup-Snapshot zu speichern. Bei der Erstellung eines Backup-Snapshots kann die zusätzliche Speicherkapazität, die durch den Snapshot verbraucht wird, nicht dazu führen, dass das Volume SSD-Storage-Auslastung von über 98 % überschreitet. In diesem Fall schlägt die Sicherung fehl.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das zu sichernde Volume aus.
+. Wählen Sie *Datenschutzmaßnahmen*, *Volume-Backups* und anschließend *manuelle Sicherung*.
+. Geben Sie im Dialogfeld Manuelle Sicherung einen Namen für das Backup ein.
+. Wählen Sie *Backup*.
+
+
+
+
+[[restore-a-volume-from-a-backup-in-netapp-workload-factory]]
+== Wiederherstellen eines Volumes aus einer Sicherung in NetApp Workload Factory
+
+In NetApp Workload Factory können Sie ein Volume aus einer Sicherung auf einem beliebigen FSx for ONTAP -Dateisystem in Ihrem AWS-Konto wiederherstellen.
+
+Workload Factory ermittelt, ob Sie über ausreichend Kapazität für die Wiederherstellung verfügen und kann automatisch SSD Storage-Tier-Kapazität hinzufügen, wenn dies nicht der Fall ist.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Wählen Sie das Aktionsmenü für das Volume aus, das aus einer Sicherung wiederhergestellt werden soll.
+. Wählen Sie *Data protection actions*, *Volume backups* und anschließend *Restore from a backup*.
+. Geben Sie im Dialogfeld Wiederherstellen von einem Backup Folgendes an:
++
+.. *Zieldateisystem*: Wählen Sie das Zieldateisystem aus dem Dropdown-Menü aus.
+.. *Ziel-Speicher-VM*: Wählen Sie die Ziel-Speicher-VM aus dem Dropdown-Menü.
+.. *Sicherungsname*: Wählen Sie den Sicherungsnamen aus dem Dropdown-Menü.
+.. *Name des wiederhergestellten Volumes*: Geben Sie den Namen des wiederhergestellten Volumes ein.
+
+
+. Überprüfen Sie die Dateisystemkapazität für den Wiederherstellungsvorgang.
++
+Wenn die Kapazität des Dateisystems begrenzt ist, kann Folgendes auftreten:
+
++
+** Die Wiederherstellung kann die belegte Kapazität über den von Ihnen festgelegten Schwellenwert hinaus erhöhen. Die Wiederherstellung kann abgeschlossen werden. Es kann in Betracht gezogen werden, link:adjust-file-system-capacity.html["Manuelles Hinzufügen von SSD-Storage-Tier-Kapazität"] oder Workload Factory so auszuwählen, dass automatisch SSD-Storage-Tier-Kapazität hinzugefügt wird.
+** Die Wiederherstellung erfordert zusätzliche SSD-Kapazität.  Um fortzufahren, müssen Sie für Workload Factory auswählen, dass automatisch SSD-Speicherebenenkapazität hinzugefügt wird.
+
+
+. Wählen Sie *Wiederherstellen*.
+

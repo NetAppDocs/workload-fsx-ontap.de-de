@@ -27,96 +27,84 @@ sidebar:
       url: "/learn-fsx-ontap.html"
     - title: Schnellstart
       url: "/quick-start.html"
-    - title: Erstellen Sie ein FSX für ONTAP-Dateisystem
-      url: "/create-file-system.html"
   - title: Verwenden Sie Amazon FSX für NetApp ONTAP
     entries:
     - title: Einsparungen entdecken
       url: "/explore-savings.html"
-    - title: FSx hinsichtlich ONTAP Kosten verfolgen und analysieren
-      url: "/track-costs.html"
-    - title: Verwenden Sie Links
+    - title: Speicherressourcen erstellen
       entries:
-      - title: Mehr über Links erfahren
-        url: "/links-overview.html"
-      - title: Stellen Sie eine Verbindung zu einem Dateisystem mit einem Link her
-        url: "/create-link.html"
-      - title: Links verwalten
-        url: "/manage-links.html"
-    - title: Erstellen eines Volumes
-      url: "/create-volume.html"
-    - title: Ermitteln und Anzeigen von Cache-Volumes
-      url: "/discover-cache-volumes.html"
-    - title: Zugriff auf Ihre Daten
-      url: "/access-data.html"
-    - title: Blockspeicherressourcen erstellen
-      entries:
+      - title: Erstellen Sie ein FSX für ONTAP-Dateisystem
+        url: "/create-file-system.html"
+      - title: Erstellen einer Storage-VM
+        url: "/create-storage-vm.html"
+      - title: Erstellen eines Volumes
+        url: "/create-volume.html"
       - title: Erstellen Sie eine Initiatorgruppe
         url: "/create-igroup.html"
       - title: Erstellen Sie ein Blockgerät
         url: "/create-block-device.html"
-    - title: Erstellen einer Storage-VM
-      url: "/create-storage-vm.html"
-    - title: Sichern Sie Ihre Daten
+    - title: Mehr über Links erfahren
+      url: "/learn-about-links.html"
+    - title: Ermitteln und Anzeigen von Cache-Volumes
+      url: "/discover-cache-volumes.html"
+    - title: Zugriff auf Ihre Daten
+      url: "/access-data.html"
+  - title: Sichern Sie Ihre Daten
+    entries:
+    - title: Datensicherung im Überblick
+      url: "/data-protection-overview.html"
+    - title: Snapshots bieten Schutz für Daten.
       entries:
-      - title: Datensicherung im Überblick
-        url: "/data-protection-overview.html"
-      - title: Verwenden von Snapshots
-        entries:
-        - title: Erstellen Sie einen Snapshot
-          url: "/create-snapshot.html"
-        - title: Erstellen einer Snapshot-Richtlinie
-          url: "/create-snapshot-policy.html"
-        - title: Wiederherstellen eines Volumes aus einem Snapshot
-          url: "/restore-volume-from-snapshot.html"
-      - title: Verwenden Sie Backups im Objektspeicher
-        entries:
-        - title: Erstellen Sie eine manuelle Sicherung
-          url: "/create-backup.html"
-        - title: Stellen Sie ein Volume aus einem Backup wieder her
-          url: "/restore-from-backup.html"
+      - title: Snapshots bieten Schutz für Daten.
+        url: "/use-snapshots.html"
+      - title: Verwalten von Snapshot-Richtlinien
+        url: "/manage-snapshot-policy.html"
+      - title: Verwalten von Snapshots
+        url: "/manage-snapshots.html"
+    - title: Verwenden Sie Backups im Objektspeicher
+      url: "/use-backups.html"
+    - title: Replikation zum Schutz von Daten verwenden
+      entries:
       - title: Datenreplizierung
         url: "/create-replication.html"
-      - title: Autonomer Ransomware-Schutz für Daten
-        url: "/ransomware-protection.html"
-      - title: Klonen Sie ein Volume
-        url: "/clone-volume.html"
-      - title: Lokale ONTAP-Daten nutzen
+      - title: Replizieren von On-Premises ONTAP Daten auf FSx für ONTAP
         url: "/use-onprem-data.html"
-      - title: Erstellen Sie einen Cyber-Tresor zum Schutz Ihrer Daten
-        url: "/create-cyber-vault.html"
-  - title: Administration und Überwachung
+      - title: Replizieren einer Storage-VM in ein anderes Dateisystem
+        url: "/replicate-svm-to-file-system.html"
+      - title: Replikationsverzögerungen verfolgen
+        url: "/track-replication-delays.html"
+      - title: Replikationsbeziehungen verwalten
+        url: "/manage-replication.html"
+    - title: Autonomer Ransomware-Schutz für Daten
+      url: "/ransomware-protection.html"
+    - title: Klonen Sie ein Volume
+      url: "/clone-volume.html"
+    - title: Erstellen Sie einen Cyber-Tresor zum Schutz Ihrer Daten
+      url: "/create-cyber-vault.html"
+  - title: FSx für ONTAP in Workload Factory verwalten
     entries:
-    - title: Überwachen Sie den Betrieb mit Tracker
-      url: "/monitor-operations.html"
+    - title: Analysiere FSx auf ONTAP EMS-Ereignisse
+      url: "/analyze-events.html"
     - title: Implementieren von Best Practices für Dateisysteme
       entries:
       - title: Konfigurationsanalyse für FSX für ONTAP
         url: "/configuration-analysis.html"
       - title: Sorgfältig konzipierte Filesystem-Konfigurationen implementieren
         url: "/improve-configurations.html"
-    - title: Analysiere FSx auf ONTAP EMS-Ereignisse
-      url: "/analyze-events.html"
-    - title: Volume-Administration
+    - title: FSx hinsichtlich ONTAP Kosten verfolgen und analysieren
+      url: "/track-costs.html"
+    - title: Volumes verwalten
       entries:
-      - title: Bearbeiten Sie Volume Autogrow
-        url: "/edit-volume-autogrow.html"
-      - title: Lautstärke anpassen
-        url: "/adjust-volume-capacity.html"
+      - title: Volumenkapazität verwalten
+        url: "/manage-volume-capacity.html"
       - title: Volume-Latenzschwellenwerte festlegen
         url: "/set-volume-latency-thresholds.html"
-      - title: Volumenkapazität neu ausbalancieren
-        url: "/rebalance-volume.html"
-      - title: Management unveränderlicher Dateien
-        url: "/manage-immutable-files.html"
-      - title: Verwalten von Volume-Tags
-        url: "/manage-volume-tags.html"
+      - title: Volume-Einstellungen verwalten
+        url: "/manage-volume-settings.html"
       - title: Cache-Volumes verwalten
         url: "/manage-cache-volumes.html"
       - title: Tiering-Richtlinie ändern
         url: "/change-tiering-policy.html"
-      - title: Aktualisieren Sie die Storage-Effizienz
-        url: "/update-storage-efficiency.html"
       - title: Management der NFS-Exportrichtlinien
         url: "/manage-nfs-export-policy.html"
       - title: Verwalten von SMB/CIFS-Freigaben
@@ -137,64 +125,30 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: Löschen Sie ein Volume
         url: "/delete-volume.html"
-    - title: Blockspeicherverwaltung
+    - title: Blockspeicher verwalten
       entries:
       - title: Blockspeicher verwalten
         url: "/manage-block-storage.html"
       - title: Tags auf Blockgeräte anwenden
         url: "/apply-block-device-tags.html"
-    - title: Filesystem-Administration
+    - title: Dateisysteme verwalten
       entries:
-      - title: Dateisystemkapazität manuell anpassen
-        url: "/increase-file-system-capacity.html"
-      - title: Dateisystemkapazität automatisch verwalten
-        url: "/manage-capacity-automatically.html"
-      - title: Dateisystem-Tags verwalten
-        url: "/manage-fsx-tags.html"
-      - title: Fsxadmin-Kennwort zurücksetzen
-        url: "/reset-fsxadmin-password.html"
-      - title: Löschen eines Dateisystems
-        url: "/delete-file-system.html"
-    - title: Storage VM-Administration
-      entries:
-      - title: Replizieren einer Storage-VM in ein anderes Dateisystem
-        url: "/replicate-svm-to-file-system.html"
-      - title: Active Directory für eine Storage-VM konfigurieren und aktualisieren
-        url: "/configure-active-directory.html"
-      - title: Managen Sie Storage-VM-Tags
-        url: "/manage-svm-tags.html"
-      - title: Kennwort für Storage-VM zurücksetzen
-        url: "/reset-svm-password.html"
-      - title: Löschen einer Speicher-VM
-        url: "/delete-svm.html"
-    - title: Datensicherung Administration
-      entries:
-      - title: Snapshots
-        entries:
-        - title: Verwalten von Snapshot-Richtlinien
-          url: "/manage-snapshot-policy.html"
-        - title: Aktivieren und bearbeiten Sie Snapshots für die langfristige Aufbewahrung
-          url: "/enable-snapshots-long-term.html"
-        - title: Verwalten von Snapshots
-          url: "/manage-snapshots.html"
-      - title: Backups
-        entries:
-        - title: Volume-Backup-Zeitplan verwalten
-          url: "/manage-backup-schedule.html"
-      - title: Replizierung
-        entries:
-        - title: Replizierung eines Datensicherheitsvolumes
-          url: "/cascade-replication.html"
-        - title: Replikationsverzögerungen verfolgen
-          url: "/track-replication-delays.html"
-        - title: Replikationsbeziehungen verwalten
-          url: "/manage-replication.html"
-    - title: Performance-Administration
-      entries:
+      - title: Passen Sie die Dateisystemkapazität an
+        url: "/adjust-file-system-capacity.html"
+      - title: Dateisystemeinstellungen verwalten
+        url: "/manage-file-system-settings.html"
       - title: Stellen Sie IOPS für ein Filesystem bereit
         url: "/provision-iops.html"
-      - title: Aktualisieren der Durchsatzkapazität eines Dateisystems
-        url: "/update-throughput-capacity.html"
+      - title: Löschen eines Dateisystems
+        url: "/delete-file-system.html"
+    - title: Storage-VMs verwalten
+      entries:
+      - title: Speicher-VM-Einstellungen verwalten
+        url: "/manage-svm-settings.html"
+      - title: Löschen einer Speicher-VM
+        url: "/delete-svm.html"
+    - title: Überwachen Sie den Betrieb mit Tracker
+      url: "/monitor-operations.html"
   - title: Referenz
     entries:
     - title: Performance für FSX für ONTAP

@@ -19,7 +19,7 @@ Initiatorgruppen, oder Initiatorgruppen (igroups), verbinden Blockgeräte (LUNs)
 Eine Initiatorgruppe dient als Berechtigungsebene für Blockspeicher. Wenn sich ein Server mit dem Speichersystem verbindet, identifiziert er sich mit seinem iSCSI qualified (IQN) Host-Initiator. Wenn dieser IQN zu einer oder mehreren Initiatorgruppen gehört, erhält der Server Zugriff auf alle LUNs, die diesen Initiatorgruppen zugeordnet sind. Sowohl eine Initiatorgruppe als auch eine iSCSI-Hostverbindung sind erforderlich, damit iSCSI ordnungsgemäß funktioniert.
 
 .Bevor Sie beginnen
-Sie müssen eine Verknüpfung herstellen, um Initiatorgruppen zu erstellen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
+Sie müssen eine Verknüpfung herstellen, um Initiatorgruppen zu erstellen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

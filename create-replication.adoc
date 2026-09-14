@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: create-replication.html 
-keywords: replication, replicate, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync 
-summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisystem, um Datenverlust im Falle einer unvorhergesehenen Katastrophe zu vermeiden. 
+keywords: replication, replicate, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync, replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
+summary: Replikation schützt Daten vor Datenverlust bei unvorhergesehenen Notfällen, ermöglicht die Migration von Daten oder das Kaskadieren der Replikation für Datensicherungs-Volumes in einem Amazon FSx for NetApp ONTAP Dateisystem. 
 ---
 = Daten zu FSx für ONTAP in NetApp Workload Factory replizieren
 :allow-uri-read: 
@@ -11,14 +11,14 @@ summary: Erstellen einer Replikationsbeziehung für ein FSX für ONTAP-Dateisyst
 
 
 [role="lead"]
-Replizieren Sie Daten in NetApp Workload Factory, um sich gegen Datenverlust zu schützen, falls die Region, in der sich Ihre Daten befinden, von einer Katastrophe betroffen ist. Die Datenreplikation wird zwischen FSx for ONTAP-Dateisystemen und lokalen ONTAP-Systemen oder Cloud Volumes ONTAP unterstützt.
+Daten in NetApp Workload Factory werden repliziert, um gegen Datenverlust zu schützen, falls in der Region, in der sich Ihre Daten befinden, eine Katastrophe eintritt. Die Datenreplikation wird zwischen FSx for ONTAP Dateisystemen und lokalen ONTAP Systemen oder Cloud Volumes ONTAP unterstützt. Workload Factory unterstützt außerdem kaskadierende Replikation, um den Datenschutz auf tertiäre Systeme auszuweiten oder Ihre Daten zu migrieren.
 
 Beim Replizieren von Speicher-VM-Daten und Konfigurationseinstellungen müssen Sie zuerst die Replikationsbeziehung erstellen und initialisieren und dann mindestens einmal warten, bis die Daten synchronisiert sind, bevor Sie den Umstellungsvorgang abschließen können.
 
 
 
-[[about-this-task]]
-== Über diese Aufgabe
+[[standard-replication]]
+== Standardreplikation
 
 Die Replikation schützt Ihre Daten, wenn eine Katastrophe Ihre Region betrifft; sie kann auch für Migrationszwecke verwendet werden.
 
@@ -71,7 +71,7 @@ Replizieren Sie Daten zwischen zwei FSx for ONTAP-Dateisystemen, zwischen einem 
 
 * Stellen Sie sicher, dass ein FSx for ONTAP-Dateisystem für das Ziel in der Replikationsbeziehung zur Verfügung steht.
 * Öffnen Sie die TCP-Ports 11104 und 11105 für sicheren Datentransfer und Verwaltung zwischen Speichersystemen. ICMP ist optional, kann aber bei Netzwerkprüfungen und Fehlerbehebung hilfreich sein.
-* Das FSx for ONTAP-Dateisystem, das Sie für die Replikationsbeziehung verwenden, muss über eine zugeordnete Verknüpfung verfügen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
+* Das FSx for ONTAP-Dateisystem, das Sie für die Replikationsbeziehung verwenden, muss über eine zugeordnete Verknüpfung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
 * Für die Datenreplizierung von einem lokalen ONTAP-System zu einem FSx for ONTAP-Dateisystem stellen Sie sicher, dass das lokale ONTAP-System erkannt wurde.
 * Die Replikation wird nicht unterstützt für Volumes, die sich in einem anderen Status als verfügbar, erstellt oder falsch konfiguriert befinden, und wenn die ONTAP-Version nicht kompatibel ist.
 * Stellen Sie bei Migrationsfällen sicher, dass die letzte Replikation für das Volume innerhalb der letzten 24 Stunden abgeschlossen wurde, bevor Sie eine Replikationsbeziehung mit den Storage-VM-Daten und Konfigurationseinstellungen erstellen.
@@ -257,7 +257,7 @@ Berücksichtigen Sie Folgendes bei der Planung des Umstellungsprozesses für Mig
 * Unterbinden Sie jeglichen Clientzugriff auf Ihre Storage-VM, bevor Sie die Replikation umstellen.
 * Stellen Sie sicher, dass alle Quellvolumes keine Daten mehr bereitstellen, bevor Sie die Replikation umstellen.
 * Stellen Sie sicher, dass die Daten zwischen Quell- und Ziel-Volume synchronisiert sind, bevor Sie die Replikation umstellen.
-* Das FSx for ONTAP-Dateisystem, das Sie für die Replikationsbeziehung verwenden, muss über eine zugeordnete Verknüpfung verfügen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
+* Das FSx for ONTAP-Dateisystem, das Sie für die Replikationsbeziehung verwenden, muss über eine zugeordnete Verknüpfung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
 +
 ** Die folgenden Ports müssen in der Sicherheitsgruppe, die dem FSx for ONTAP-Dateisystem zugeordnet ist, für die Verbindungsherstellung geöffnet sein: Port 443 (HTTPS) und Port 22 (SSH).
 
@@ -298,6 +298,137 @@ Nachdem Sie die Replikation für Migrationsszenarien umgestellt haben, aktualisi
 * Überprüfen Sie, ob die DNS-Einstellungen den Erwartungen entsprechen
 * Cache-Beziehungen (ONTAP FlexCache-Beziehungen) neu erstellen, falls im Quellspeicher-VM Cache-Volumes vorhanden waren.
 
+
+Falls erforderlich, link:change-tiering-policy.html["die Tiering-Richtlinie ändern"] für das/die Ziel-Volume nach der Umstellung.
+
+
+
+[[cascade-replication-for-data-protection-volumes]]
+== Kaskadenreplikation für Datensicherungsvolumes
+
+NetApp Workload Factory unterstützt die Replikation von Datensicherungsvolumes, auch _kaskadierte Bereitstellungen_ genannt.  Eine _kaskadierte Bereitstellung_ besteht aus einer Kette von Beziehungen, in der ein Quellvolume auf ein sekundäres Volume gespiegelt wird (erster Hop) und das sekundäre Volume auf ein tertiäres Volume gespiegelt wird (zweiter Hop).  Wenn das sekundäre Volume nicht mehr verfügbar ist, können Sie die Beziehung zwischen dem primären und dem tertiären Volume synchronisieren, ohne eine neue Baseline-Übertragung durchzuführen.
+
+Diese Funktion wird für FSX für ONTAP-Dateisysteme mit ONTAP Version 9.6 und höher unterstützt. Siehe link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["ONTAP-Dokumentation für kompatible ONTAP-Versionen"^].
+
+Erfahren Sie mehr über link:https://docs.netapp.com/us-en/ontap/data-protection/supported-deployment-config-concept.html#how-cascade-deployments-work["Funktionsweise von Kaskadenimplementierungen"^].
+
+.Bevor Sie beginnen
+Beachten Sie Folgendes, bevor Sie beginnen:
+
+* Beachten Sie, dass die erneute Synchronisierung von Volumes, die Teil einer Kaskadenkonfiguration sind, länger dauern kann.
+* Wenn das Quell-Volume der Beziehung ein Data-Protection-Volume ist und ein Ziel einer anderen Beziehung ist, wird das Umkehren der Replikationsbeziehung nicht unterstützt.
+* Es wird ein Replikat eines Data-Protection-Volumes (oder ein zweiter Hop) unterstützt. Es gilt nicht als Best Practice, ein zweites Replikat eines Datensicherheitsvolumes (oder einen dritten Hop) zu erstellen.
+* Öffnen Sie die TCP-Ports 11104 und 11105 für sicheren Datentransfer und Verwaltung zwischen Speichersystemen. ICMP ist optional, kann aber bei Netzwerkprüfungen und Fehlerbehebung hilfreich sein.
+
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, das die zu replizierenden Volumes enthält, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
+. Wählen Sie in der Tabelle Volumes ein oder mehrere Data Protection Volumes (DP/Replicated Volumes) aus und wählen Sie dann *Replicate Data* aus.
+. Geben Sie auf der Seite Daten replizieren unter Replikationsziel Folgendes an:
++
+.. *Anwendungsfall*: Wählen Sie einen der folgenden Anwendungsfälle für die Replikation aus.  Abhängig vom ausgewählten Anwendungsfall füllt Workload Factory das Formular gemäß Best Practices mit empfohlenen Werten aus.  Sie können die empfohlenen Werte akzeptieren oder beim Ausfüllen des Formulars Änderungen vornehmen.
++
+*** Künstliche Intelligenz (KI) und maschinelles Lernen (ML): Replizieren Sie Ihre lokalen ONTAP-Daten zu FSx for ONTAP und erstellen Sie S3-Zugriffspunkte, um das Training von KI und ML in der Cloud zu unterstützen
+*** Migration: Überträgt Ihre Daten an das Ziel-FSX für ONTAP-Filesystem
++
+*Replikation der Speicher-VM-Konfiguration*: Optional können Sie die Replikation der Speicher-VM-Daten und -Konfigurationseinstellungen für eine einzelne Speicher-VM auswählen. Bei der Migration von Daten und Einstellungen müssen alle Volumes innerhalb der letzten 24 Stunden repliziert und anschließend gleichzeitig umgeschaltet werden.
+
++
+Die Tiering-Richtlinie für alle Volumes entspricht standardmäßig der Tiering-Richtlinie des Quell-Volumes, was für Migrationsanwendungsfälle empfohlen wird.
+
++
+Während der Migration greifen Clients auf Daten des Quell-ONTAP-Dateisystems zu. Nach der Umstellung sind die Volumes über die Ziel-FSx for ONTAP-Dateisystem-IP-Adressen verfügbar. Aktualisieren Sie alle Clients oder Ressourcen, die noch die alte IP-Adresse verwenden.
+
+*** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
+*** Disaster Recovery in kalten oder archivierten Daten:
++
+**** Cold Disaster Recovery: Verwendet längere Recovery-Zeitvorgaben (RTO) und Recovery-Zeitpunkte (RPO) zur Senkung der Kosten
+**** Archiv: Replizierung von Daten für langfristige Speicherung und Compliance
+
+
+*** Sonstiges
++
+Darüber hinaus bestimmt die Auswahl des Anwendungsfalls die Replikationsrichtlinie oder die SnapMirror Policy (ONTAP). Die Begriffe, die zur Beschreibung von Replikationsrichtlinien verwendet link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9-Dokumentation"^]werden, stammen aus .
+
++
+**** Für die Migration und andere wird die Replikationsrichtlinie _MirrorAllSnapshots_ genannt. _MirrorAllSnapshots_ ist eine asynchrone Richtlinie zur Spiegelung aller Snapshots und des aktuellen aktiven Dateisystems.
+**** Für Disaster Recovery mit heißen, kalten oder archivierten Daten wird die Replikationsrichtlinie _MirrorAndVault_ genannt. _MirrorAndVault_ ist eine asynchrone und Vault-Richtlinie zur Spiegelung des neuesten aktiven Dateisystems und der täglichen und wöchentlichen Snapshots.
++
+Wenn Sie Snapshots für die langfristige Aufbewahrung aktivieren, lautet die standardmäßige Replikationsrichtlinie für alle Anwendungsfälle _MirrorAndVault_.
+
+
+
+
+
+.. * FSX für ONTAP Dateisystem*: Wählen Sie Anmeldeinformationen, Region und FSX für ONTAP Dateisystem Namen für das Ziel FSX für ONTAP Dateisystem.
+.. *Name der Speicher-VM*: Wählen Sie die Speicher-VM aus. Die von Ihnen ausgewählte Speicher-VM ist das Ziel für alle ausgewählten Volumes in dieser Replikationsbeziehung.
++
+Wenn die Namen der Quell- und Ziel-Storage-VMs identisch sind, erstellen wir einen Dateisystemalias für die Ziel-Storage-VM-Namen, um Peering-Konflikte zu vermeiden.
+
+.. *Volumenname*: Der Name des Zielvolume wird automatisch im folgenden Format generiert `{OriginalVolumeName}_copy`. Sie können den automatisch generierten Volume-Namen verwenden oder einen anderen Volume-Namen eingeben.
+.. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Ziel-Volume gespeicherten Daten. Die Tiering-Richtlinie wird standardmäßig auf die empfohlene Tiering-Richtlinie für den ausgewählten Anwendungsfall zurückgesetzt.
++
+_Ausgewogen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes über die Workload Factory-Konsole. Weitere Informationen zu den Richtlinien für die Mengenstaffelung finden Sie unter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der AWS FSx für NetApp ONTAP Dokumentation. Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx for ONTAP Tiering-Richtliniennamen in Klammern angibt.
+
++
+Wenn Sie den Migrationsanwendungsfall ausgewählt haben, wählt Workload Factory automatisch aus, dass die Tiering-Richtlinie des Quellvolumes auf das Zielvolume kopiert werden soll.  Sie können die Option zum Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die für das für die Replikation ausgewählte Volume gilt.
+
+.. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
++
+Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+
+
+
+. Geben Sie unter Replikationseinstellungen Folgendes an:
++
+.. *Replikationsbeziehung initialisieren*: Wählen Sie, ob die Replikationsbeziehung direkt nach ihrer Erstellung oder später initialisiert werden soll. Beachten Sie, dass die Initialisierung zeitaufwändig sein kann, und Sie möchten den Basistransfer möglicherweise außerhalb der Spitzenzeiten durchführen.
++
+Um die Initialisierung später manuell durchzuführen, beachten Sie die Anweisungen in <<Schritt 2: Replikationsbeziehung initialisieren,Schritt 2: Replikationsbeziehung initialisieren>>.
+
+.. *Replikationsintervall*: Wählen Sie die Häufigkeit, mit der Snapshots vom Quell-Volume auf das Ziel-Volume übertragen werden.
+.. *Langfristige Aufbewahrung*: Optional können Snapshots für die langfristige Aufbewahrung aktiviert werden. Dank der langfristigen Aufbewahrung können Business-Services auch bei einem vollständigen Standortausfall weiterlaufen und Applikationen mithilfe einer sekundären Kopie einen transparenten Failover unterstützen.
++
+Replikationen ohne langfristige Aufbewahrung verwenden die Richtlinie _MirrorAllSnapshots_. Durch Aktivieren der langfristigen Aufbewahrung wird der Replikation die Richtlinie _MirrorAndVault_ zugewiesen.
+
++
+Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
+
++
+
+NOTE: Für die Langzeitarchivierung sind übereinstimmende Quell- und Zielbezeichnungen erforderlich. Auf Wunsch kann Workload Factory fehlende Bezeichnungen für Sie erstellen.
+
++
+*** *Eine bestehende Richtlinie auswählen*: Wählen Sie eine bestehende Richtlinie aus.
+*** *Neue Richtlinie erstellen*: Geben Sie einen *Richtliniennamen* ein.
+
+
+.. *Unveränderliche Snapshots*: Optional. Wählen Sie *Enable Immanable Snapshots* aus, um zu verhindern, dass in dieser Richtlinie ergriffene Snapshots während des Aufbewahrungszeitraums gelöscht werden.
++
+*** Legen Sie die *Aufbewahrungsfrist* in Stunden, Tagen, Monaten oder Jahren fest.
+*** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
+
+
+.. *S3-Zugriffspunkt*: Optional kann ein S3-Zugriffspunkt angehängt werden, um über AWS S3-APIs auf FSx for ONTAP -Dateisystemdaten zuzugreifen, die sich auf NFS- oder SMB/CIFS-Volumes befinden. Es wird nur der Dateizugriffstyp unterstützt. Bitte geben Sie folgende Details an:
++
+*** *Name des S3-Zugangspunkts*: Geben Sie den Namen des S3-Zugangspunkts ein.
+*** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.
+*** *Benutzertyp*: Wählen Sie als Benutzertyp *UNIX* oder *Windows* aus.
+*** *Netzwerkkonfiguration*: Wählen Sie *Internet* oder *Virtual private cloud (VPC)*. Der von Ihnen gewählte Netzwerktyp bestimmt, ob der Zugangspunkt aus dem Internet erreichbar ist oder auf eine bestimmte VPC beschränkt ist.
+*** *Inventartabelle aktivieren*: Wenn Sie die Inventartabelle für das Volume aktivieren, generiert das System Metadaten für alle Objekte, die über den S3-Zugriffspunkt zugänglich sind, und es fallen AWS S3-Anfragekosten an. Weitere Informationen finden Sie unter link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^].
+
+
+.. *S3 access point tags*: Optional können Sie bis zu 50 Tags hinzufügen.
+
+
+. Wählen Sie *Erstellen*.
+
+
+.Ergebnis
+Das replizierte Volume oder die replizierten Volumes replizieren sich und erscheinen auf der Registerkarte *Replikationsbeziehungen* im Ziel-FSX für ONTAP-Dateisystem.
 
 
 

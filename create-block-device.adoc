@@ -19,7 +19,7 @@ In NetApp Workload Factory werden für Blockgeräte ausschließlich FlexVol -Vol
 Die Blockgröße muss kleiner sein als die verfügbare FlexVol volume Volumengröße.
 
 .Bevor Sie beginnen
-* Sie müssen einen Link zuordnen, um Blockgeräte zu erstellen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]Die Nachdem Sie die Verknüpfung hergestellt haben, kehren Sie zu diesem Vorgang zurück.
+* Sie müssen eine Verknüpfung herstellen, um Blockgeräte zu erstellen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung kann zu diesem Vorgang zurückgekehrt werden.
 
 
 .Schritte
@@ -69,7 +69,7 @@ ONTAP erreicht Speichereffizienz durch Deduplizierungs- und Komprimierungsfunkti
 
 .. *Snapshot Policy*: Wählen Sie die Snapshot Policy aus, um die Häufigkeit und Aufbewahrung von Snapshots festzulegen.
 +
-Nachfolgend sind die Standardrichtlinien von AWS aufgeführt. Um vorhandene Snapshot-Richtlinien anzuzeigen, müssen Sie link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Verknüpfen Sie eine Verknüpfung"]Die
+Im Folgenden sind die Standardrichtlinien von AWS aufgeführt. Vorhandene Snapshot-Richtlinien werden angezeigt, wenn link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Verknüpfen Sie eine Verknüpfung"^].
 
 +
 `default`:: Diese Richtlinie erstellt automatisch Snapshots nach dem folgenden Zeitplan. Die ältesten Snapshot-Kopien werden gelöscht, um Platz für neuere Kopien zu schaffen:
@@ -98,7 +98,7 @@ _Ausgewogen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Vol
 Wenn die Funktion nicht verfügbar ist, kann dies einen der folgenden Gründe haben:
 
 +
-*** Dem Dateisystem ist kein Link zugeordnet. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Kehren Sie nach dem Verknüpfen zu diesem Vorgang zurück.
+*** Es ist kein Link mit dem Dateisystem verknüpft. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nachdem der Link verknüpft wurde, kann zu diesem Vorgang zurückgekehrt werden.
 *** Für ARP/AI werden keine Volumes mit unveränderlichen Dateien und Volumes mit dem NVMe-Protokoll unterstützt.
 *** Das Dateisystem verfügt bereits über eine ARP/AI-Richtlinie.
 

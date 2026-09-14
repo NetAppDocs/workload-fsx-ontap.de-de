@@ -77,4 +77,4 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["E
 
 Jetzt können Sie die IAM-Ausführungsrolle und die zugehörige Berechtigungsrichtlinie verwalten, wenn Sie einen Link in der Workload Factory-Konsole erstellen.  Ein Link stellt die Verbindung zwischen Ihrem Workload Factory-Konto und einem oder mehreren FSx for ONTAP -Dateisystemen her.  Sie haben zwei Möglichkeiten, die IAM-Ausführungsrolle und die Linkberechtigungen zuzuweisen – automatisch oder vom Benutzer bereitgestellt.  Durch die Verwaltung der Ausführungsrolle und der zugehörigen Berechtigungsrichtlinie in Workload Factory müssen Sie keinen Code von Drittanbietern mehr verwenden.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Stellen Sie über einen Lambda-Link eine Verbindung zu einem FSX für ONTAP-Dateisystem her"^]
