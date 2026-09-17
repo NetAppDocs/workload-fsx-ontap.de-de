@@ -20,6 +20,8 @@ indexpage:
     links:
     - title: Einsparungen entdecken
       url: "/explore-savings.html"
+    - title: Mehr über Links erfahren
+      url: "/links-overview.html"
     - title: Stellen Sie eine Verbindung zu einem Dateisystem mit einem Link her
       url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
     - title: Erstellen einer Storage-VM

@@ -44,7 +44,7 @@ sidebar:
       - title: Erstellen Sie ein Blockgerät
         url: "/create-block-device.html"
     - title: Mehr über Links erfahren
-      url: "/learn-about-links.html"
+      url: "/links-overview.html"
     - title: Ermitteln und Anzeigen von Cache-Volumes
       url: "/discover-cache-volumes.html"
     - title: Zugriff auf Ihre Daten
