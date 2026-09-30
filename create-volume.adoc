@@ -88,6 +88,7 @@ NOTE: Bei der Verwendung von Terraform aus der Codebox werden der Code, den Sie 
 . Geben Sie auf der Seite Volume erstellen unter Allgemeine Details die folgenden Details ein:
 +
 .. *Volumenname*: Geben Sie einen Namen für das Volume ein.
+.. *Workload*: Der dem Volume zugeordnete Workload wird ausgewählt.
 .. *Name der Speicher-VM*: Geben Sie optional einen Namen der Speicher-VM ein.
 .. *Lautstärkestil*: Wählen Sie *FlexVol* oder *FlexGroup* Lautstärke.
 +

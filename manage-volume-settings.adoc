@@ -11,7 +11,24 @@ summary: Mit Tags können Sie Ihre Ressourcen kategorisieren. Sie können Volume
 
 
 [role="lead"]
-FSx for ONTAP Volume-Einstellungen in NetApp Workload Factory können an die Anforderungen Ihres Unternehmens angepasst werden. Volume-Tags lassen sich verwalten, um Ressourcen zu kategorisieren, die Einstellungen zur Speichereffizienz können aktualisiert werden, um Speicherplatz und Kosten zu optimieren, und die Einstellungen für unveränderliche Dateien ermöglichen die Steuerung der Datenaufbewahrung und den Schutz vor unbefugten Änderungen.
+Die FSx for ONTAP Volume-Einstellungen in NetApp Workload Factory können an die Anforderungen Ihres Unternehmens angepasst werden. Volume-Tags können verwaltet werden, um Ressourcen wie die Festlegung von Volume-Workloads zu kategorisieren, Einstellungen zur Speichereffizienz können aktualisiert werden, um Speicherplatz und Kosten zu optimieren, und Einstellungen für unveränderliche Dateien können verwaltet werden, um die Datenaufbewahrung zu steuern und vor unbefugten Änderungen zu schützen.
+
+
+
+[[change-volume-workload]]
+== Volume-Workload ändern
+
+Die Workloads eines Volumes werden an die vorgesehenen Anwendungsfälle angepasst.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
+. Im Aktionsmenü wird das Volume ausgewählt, für das die Arbeitslast aktualisiert werden soll.
+. *Advanced actions* und anschließend *Change workloads* auswählen.
+. Im Dialogfeld „Workloads ändern“ werden die richtigen Workloads für das Volume ausgewählt.
+. Wählen Sie *Übernehmen*, um die Änderungen zu speichern.
+
 
 
 

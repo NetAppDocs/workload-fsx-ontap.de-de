@@ -11,7 +11,9 @@ summary: FSx for ONTAP -Dateisystemtags für ein Dateisystem können jederzeit h
 
 
 [role="lead"]
-Die Einstellungen eines FSx for ONTAP Dateisystems in NetApp Workload Factory lassen sich verwalten. Tags für das Dateisystem können verwaltet, das fsxadmin Passwort bei Bedarf zurückgesetzt und die Durchsatzkapazität nach Bedarf aktualisiert werden.
+Die Einstellungen eines FSx for ONTAP Dateisystems in NetApp Workload Factory können verwaltet werden, damit Ihr Dateisystem übersichtlich, sicher und für Ihre Workload angemessen dimensioniert bleibt. Tags können jederzeit hinzugefügt oder bearbeitet, ONTAP-Zugangsdaten verwaltet, das fsxadmin-Passwort zurückgesetzt und die Durchsatzkapazität aktualisiert werden.
+
+Die Dateisystemübersicht zeigt Trends bei der SSD-Kapazität und der Durchsatznutzung, KI-generierte Zusammenfassungen der wichtigsten Workloads sowie erweiterbare Details zur Dateisystemkonfiguration.
 
 
 
@@ -29,6 +31,44 @@ Tags können Ihnen dabei helfen, Ihre Ressourcen zu kategorisieren.  In NetApp W
 +
 Die maximale Anzahl von Tags, die Sie einem Dateisystem zuweisen können, beträgt 50.
 
+. Wählen Sie *Anwenden*.
+
+
+
+
+[[manage-ontap-credentials]]
+== ONTAP Anmeldeinformationen verwalten
+
+Verwaltung der ONTAP-Anmeldeinformationen für ein FSx for ONTAP Dateisystem in NetApp Workload Factory. Workload Factory hat zwei Arten von Anmeldeinformationen: primäre und eingeschränkte. Standardmäßig verwendet das Dateisystem die primären ONTAP-Anmeldeinformationen. Eingeschränkte Anmeldeinformationen werden nur für KI-Operationen (AIOps) wie Ask Me, Rule builder und benutzerdefinierte Dashboards verwendet. Optional kann ein Satz eingeschränkter Anmeldeinformationen hinzugefügt werden, und jeder der beiden Sätze kann jederzeit aktualisiert werden.
+
+Folgende Aufgaben sind möglich:
+
+* Optional kann ein eingeschränkter Satz von Anmeldedaten hinzugefügt werden, entweder mit einem Benutzernamen und einem Passwort oder mit einem Secret ARN.
+* Vorhandene Zugangsdaten, einschließlich Benutzername und Passwort, nur das Passwort oder die Secret ARN, können geändert werden.
+
+
+Workload Factory unterstützt den Wechsel zwischen dem Workload Factory Anmeldeinformationsdienst (Benutzername und Passwort) und AWS Secrets Manager.
+
+Workload Factory verarbeitet eingeschränkte Anmeldeinformationen wie folgt:
+
+* Wenn Sie keine eingeschränkten Anmeldeinformationen für ein Dateisystem angegeben haben und anschließend benutzerdefinierte Regeln oder Dashboards erstellen oder Fragen an Ask Me stellen, erstellt Workload Factory schreibgeschützte ONTAP Anmeldeinformationen zur Verwendung als eingeschränkter Anmeldeinformationssatz.
+* Wenn Sie bereits eingeschränkte Zugangsdaten für ein Dateisystem angegeben haben, werden diese Zugangsdaten für AIOps verwendet.
+
+
+.Bevor Sie beginnen
+Sie müssen einen Link zum Verwalten der ONTAP Anmeldeinformationen verknüpfen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung ist eine Rückkehr zu diesem Vorgang erforderlich.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
+. Wählen Sie im Speichermenü *FSx für ONTAP* aus.
+. Wählen Sie unter *FSx for ONTAP* das Aktionsmenü des Dateisystems aus, für das Sie das fsxadmin-Passwort zurücksetzen möchten, und wählen Sie dann *Verwalten*.
+. Wählen Sie in der Dateisystemübersicht das Aktionsmenü aus.
++
+image:screenshot-manage-ontap-credentials.png["Ein Screenshot des Aktionsmenüs auf der Registerkarte „Übersicht“ für ein Dateisystem."]
+
+. *Manage ONTAP credentials* ist auszuwählen.
+. Die primären oder eingeschränkten ONTAP Zugangsdaten werden aktualisiert.
 . Wählen Sie *Anwenden*.
 
 
