@@ -90,7 +90,7 @@ Empfohlenes Modell: `anthropic.claude-sonnet-4-20250514-v1:0`. Geben Sie den ARN
 Erstellen und verknüpfen Sie einen Link mit einem FSx for ONTAP-Dateisystem, um KI-gestützte Ereignisanalysen zu ermöglichen. Ein Link stellt eine Vertrauensbeziehung zwischen Workload Factory und einem oder mehreren FSx for ONTAP-Dateisystemen her und nutzt AWS Lambda.
 
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."]. Nachdem die Verknüpfung hergestellt ist, zu diesem Vorgang zurückkehren.
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung ist eine Rückkehr zu diesem Vorgang erforderlich.
 
 * *AWS IAM-Berechtigungen*
 +

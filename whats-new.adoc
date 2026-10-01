@@ -129,7 +129,7 @@ Workload Factory erkennt nun den bevorzugten FlexCache Schreibmodus für Volumes
 [[link-documentation-support]]
 === Unterstützung für Link-Dokumentation
 
-Die gesamte Linkdokumentation ist nun in der Dokumentation zur Einrichtung und Administration von NetApp Workload Factory enthalten. Ein Verweis auf die link:links-overview.html["Erfahren Sie mehr über NetApp Workload Factory-Links"]Workload Factory FSx for ONTAP Dokumentation ist weiterhin möglich; die Links zu den entsprechenden Seiten befinden sich in der Dokumentation zur Einrichtung und Administration.
+Die gesamte Linkdokumentation ist nun in der Dokumentation zur Einrichtung und Administration von NetApp Workload Factory enthalten. Ein Verweis auf die link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Erfahren Sie mehr über NetApp Workload Factory-Links"]Workload Factory FSx for ONTAP Dokumentation ist weiterhin möglich; die Links zu den entsprechenden Seiten befinden sich in der Dokumentation zur Einrichtung und Administration.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Weitere Informationen zur Konfiguration von Links in der Workload Factory Konsole."^]
 
@@ -784,7 +784,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html["Verfolge
 
 Verwalten Sie Ihre FSx-Tags für ein Dateisystem ganz einfach direkt über die NetApp Workload Factory Konsole.  Diese Funktion ermöglicht das Hinzufügen, Bearbeiten oder Entfernen von Tags und ermöglicht so eine bessere Organisation und Kategorisierung Ihrer FSx for ONTAP -Dateisysteme.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-fsx-tags.html["Verwalten Sie FSx-Tags in Workload Factory"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-file-system-settings.html["Verwalten Sie FSx-Tags in Workload Factory"]
 
 
 

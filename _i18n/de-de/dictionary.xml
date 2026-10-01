@@ -1884,7 +1884,6 @@
   <block id="5b58af6390ae44b5a39c726b4820fffb" category="section-title">Verwalten von FSx-Tags für ein Dateisystem in NetApp Workload Factory</block>
   <block id="543e684a4a914d6bef4f91873d32e315" category="paragraph">Verwalten Sie Ihre FSx-Tags für ein Dateisystem ganz einfach direkt über die NetApp Workload Factory Konsole.  Diese Funktion ermöglicht das Hinzufügen, Bearbeiten oder Entfernen von Tags und ermöglicht so eine bessere Organisation und Kategorisierung Ihrer FSx for ONTAP -Dateisysteme.</block>
   <block id="8945587d036e5b09c39322767239857a" category="inline-link-macro">Verwalten Sie FSx-Tags in Workload Factory</block>
-  <block id="3c57420160e53dc4967d9ca75a5d5d06" category="paragraph"><block ref="3c57420160e53dc4967d9ca75a5d5d06" category="inline-link-macro-rx"></block></block>
   <block id="1b931c0909a42d2dd6b1b28eeb36252c" category="section-title">Cache-Kapazität für FSx für ONTAP Dateisysteme anpassen</block>
   <block id="aed1296ef373ba8df468af355d85d3ce" category="paragraph">Über die Workload Factory-Konsole können Sie die Kapazität für Cache-Volumes erhöhen und verringern.</block>
   <block id="012110073acf8459d2a77ef54f547130" category="inline-link-macro">Cache-Volumes in Workload Factory verwalten</block>
@@ -2945,7 +2944,6 @@
   <block id="ea05a1e5432074a56846a3cb823f80f2" category="inline-link-macro">Verbindung zum Dateisystem über einen Link herstellen</block>
   <block id="4cef7c6d6a0dbf34de8eba95d0e16b67" category="list-text"><block ref="7e93da5b3f54c52f1a6c0b519dbe8002" category="inline-link-macro-rx"></block>.</block>
   <block id="83726c1191ab868f046fb1270a7954b5" category="list-text">Du hast <block ref="4c631e4853ec617b9b81a0579deada8a" category="inline-link-macro-rx"></block>.</block>
-  <block id="8261903e070030df643604429f468749" category="paragraph"><block ref="b7a77703e091475e5a757f20e1f86c42" category="inline-link-macro-rx"></block>. Nachdem die Verknüpfung hergestellt ist, zu diesem Vorgang zurückkehren.</block>
   <block id="8feb6c8d13e912657481adbe0cafebb3" category="paragraph">Workload Factory wendet Best Practices auf große Storage-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Bewertungen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.</block>
   <block id="fb7e951a08ddce4b83498e18f05a36da" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>.</block>
   <block id="72a389467e8e4db775c5a741c5559e79" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>.</block>
@@ -3134,7 +3132,6 @@
   <block id="b5033aab245daac51a144f2bf76d1491" category="section-title">FlexCache Verbesserung des Schreibmodus</block>
   <block id="988626e00644e40216e6917f272294d3" category="paragraph">Workload Factory erkennt nun den bevorzugten FlexCache Schreibmodus für Volumes und empfiehlt, ihn bei Bedarf zu ändern, um die Leistung zu optimieren.</block>
   <block id="7add6c128bfc87116bba8dfec617987f" category="section-title">Unterstützung für Link-Dokumentation</block>
-  <block id="41d8c250ba5deffd33a0d05e7f94eaf4" category="paragraph">Die gesamte Linkdokumentation ist nun in der Dokumentation zur Einrichtung und Administration von NetApp Workload Factory enthalten. Ein Verweis auf die <block ref="25b81a757714a127c9c382013e960ce5" category="inline-link-macro-rx"></block>Workload Factory FSx for ONTAP Dokumentation ist weiterhin möglich; die Links zu den entsprechenden Seiten befinden sich in der Dokumentation zur Einrichtung und Administration.</block>
   <block id="ab868acd52ff4eb0e8c4b7bedf975941" category="inline-link-macro">Weitere Informationen zur Konfiguration von Links in der Workload Factory Konsole.</block>
   <block id="3d5d598217b93a807560cdae92940fdc" category="paragraph"><block ref="3d5d598217b93a807560cdae92940fdc" category="inline-link-macro-rx"></block></block>
   <block id="433dd4f7423c50024b8b40531d2cdae6" category="section-title">Regionsübergreifende Ermittlung der Host-zu-Storage-Beziehung</block>
@@ -3186,4 +3183,7 @@
   <block id="53c306e93da69caff455d3eaa34a6b5c" category="list-text">Um nach AWS-Zuordnungs-Tags zu filtern, muss sichergestellt sein, dass Ihren FSx for ONTAP Dateisystemen Tags zugewiesen sind.</block>
   <block id="22818134e299296b864b78dc4cca4c88" category="paragraph">Es wird ein CSV-Bericht generiert, der heruntergeladen werden kann.</block>
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">30. September 2026</block>
+  <block id="cdda19a64421ad2d94977547c50a1983" category="paragraph"><block ref="cdda19a64421ad2d94977547c50a1983" category="inline-link-macro-rx"></block></block>
+  <block id="56643767ee547abedda1d643567a4c85" category="paragraph">Die gesamte Linkdokumentation ist nun in der Dokumentation zur Einrichtung und Administration von NetApp Workload Factory enthalten. Ein Verweis auf die <block ref="08c564abbdedd12846cfb2f0de43f628" category="inline-link-macro-rx"></block>Workload Factory FSx for ONTAP Dokumentation ist weiterhin möglich; die Links zu den entsprechenden Seiten befinden sich in der Dokumentation zur Einrichtung und Administration.</block>
+  <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Nach der Verknüpfung ist eine Rückkehr zu diesem Vorgang erforderlich.</block>
 </blocks>
