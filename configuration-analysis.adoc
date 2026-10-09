@@ -203,7 +203,7 @@ Wenn ein Blockgerät sieben Tage lang nicht verwendet wird, empfiehlt es sich, d
 
 * *Inaktive NAS-Volumes*
 +
-Die Konfigurationsanalyse identifiziert NAS Volumes, die nicht aktiv genutzt werden, und schlägt vor, die Volumes zu löschen oder zu archivieren, um Kosten zu reduzieren.
+Wenn ein NAS-Volume 31 Tage lang nicht verwendet wurde, empfiehlt es sich, das ungenutzte NAS-Volume zu archivieren oder zu löschen, um Kosten zu senken.
 
 
 
