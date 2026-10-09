@@ -245,7 +245,7 @@ Berücksichtigen Sie Folgendes bei der Planung des Umstellungsprozesses für Mig
 
 
 * *Klone*: Klone werden als einzelne Volumes migriert und belegen daher mehr Speicherplatz auf dem Ziel-FSx for ONTAP-Dateisystem. Erwägen Sie, die Klone vor der Umstellung zu löschen, um eine erhöhte Kapazität auf dem Ziel zu vermeiden.
-* *Cache-Volumes*: Für ONTAP FlexCache 9.17.x oder älter. Quell-Speicher-VMs, die Cache-Volumes enthalten, werden bei der Umstellung nicht unterstützt. Entfernen Sie die ONTAP FlexCache-Beziehung vor der Umstellung, um Migrationsfehler zu vermeiden.
+* *Cache-Volumes*: Quell-Storage-VMs, die Cache-Volumes enthalten, werden bei der Umstellung nicht unterstützt. Vor der Umstellung muss die ONTAP FlexCache Beziehung entfernt werden, um Migrationsfehler zu vermeiden.
 * *AWS S3-Zugriffspunkte*: Die Cutover-Replikation für Migrationsanwendungsfälle wird für Volumes mit S3-Zugriffspunkten nicht unterstützt. Löschen Sie die S3-Zugriffspunkte vom Quellvolume, um Migrationsfehler zu vermeiden.
 * *ONTAP S3-Konfigurationen*: Die Cutover-Replikation für Migrationsszenarien wird für vServer mit ONTAP S3-Konfigurationen nicht unterstützt. Entfernen Sie ONTAP S3-Konfigurationen, einschließlich object-store-server, Buckets, Benutzer, Gruppen oder Richtlinien, vom vServer, um Migrationsfehler zu vermeiden.
 * *LUN-Seriennummern und iSCSI-Ziel-IQN*: Die LUN-Seriennummern und der iSCSI-Ziel-IQN ändern sich während der Umstellung.
