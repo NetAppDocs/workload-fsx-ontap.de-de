@@ -192,6 +192,12 @@ Sie können jederzeit einen Klon eines bestehenden Blockgeräts erstellen. Ein B
 
 Blockgeräte, die keinem Client mehr zugeordnet sind oder sieben Tage lang ungenutzt bleiben, werden als inaktive Blockgeräte klassifiziert. Sie können die Daten eines inaktiven Blockgeräts in die Kapazitätspool-Ebene archivieren, um SSD-Kapazität zurückzugewinnen.
 
+
+NOTE: Ein Volume mit untergeordneten Klonen kann erst gelöscht werden, wenn alle untergeordneten Klone entweder gelöscht oder in unabhängige Volumes getrennt wurden.
+
+.Bevor Sie beginnen
+Es sollte sichergestellt sein, dass alle Blockgeräte (LUNs) auf demselben Volume inaktiv sind, bevor die Daten archiviert werden.
+
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
@@ -215,7 +221,7 @@ Blockgeräte, die keinem Client zugeordnet sind oder sieben Tage lang nicht verw
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* die Registerkarte *Blockgeräte* aus.
 . Wählen Sie unter „Verwaiste Geräte“ die Option „Kapazität anzeigen und wiederherstellen“.
-. Auf dem Bildschirm „Speicherplatz für ungenutzte Blockgeräte freigeben“ können Sie ein oder mehrere Blockgeräte auswählen, um die Daten zu archivieren und die Kapazität freizugeben.
+. Auf dem Bildschirm „Speicherplatz für ungenutzte Blockgeräte freigeben“ können Sie ein oder mehrere Blockgeräte auswählen, um die Kapazität zurückzugewinnen.
 . Wählen Sie *Löschen*.
 
 
