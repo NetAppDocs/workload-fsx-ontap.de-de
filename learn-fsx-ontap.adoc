@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: learn-fsx-ontap.html 
 keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
-summary: Amazon FSx for NetApp ONTAP ist ein vollständig verwalteter Service, der es Kunden ermöglicht, Dateisysteme als Speicher-Backend für Ihre Workloads innerhalb von Workload Factory zu starten und auszuführen. 
+summary: Informationen zu Amazon FSx for NetApp ONTAP, einem vollständig verwalteten Dienst, mit dem Sie Dateisysteme als Storage-Backend für Ihre Workloads in Workload Factory starten und ausführen können. 
 ---
 = Erfahren Sie mehr über Amazon FSx for NetApp ONTAP in NetApp Workload Factory
 :allow-uri-read: 
@@ -24,9 +24,9 @@ FSx für ONTAP ist die _Storage_-Komponente in Workload Factory.
 
 FSX für ONTAP bietet folgende Funktionen:
 
-* *Vollständig verwalteter Dienst*: Bietet einen vollständig verwalteten Dienst, der in die Workload Factory-Konsole integriert ist.
+* *Vollständig verwalteter Service*: bietet einen vollständig verwalteten Service, der in die Workload Factory Managementplattform integriert ist.
 * *Hohe Verfügbarkeit*: Bietet Hochverfügbarkeit für jedes FSX für ONTAP-Dateisystem, unterstützt einzelne und mehrere Verfügbarkeitszonen-Bereitstellungen.
-* *Automatisierte Snapshots*: Sichert Daten mit automatisierten, effizienten Snapshots, die nahezu sofortige, platzsparende und schreibgeschützte Point-in-Time-Kopien des Dateisystems oder der Volumes sind.
+* *Automatisierte Snapshots*: schützen Daten mit automatisierten, effizienten Snapshots, die nahezu sofortige, platzsparende, zeitpunktgenaue schreibgeschützte Kopien des Dateisystems oder von Volumes sind.
 * *Volume-Replikation*: Bietet Disaster Recovery mit regionsübergreifender Replikation über Amazon Web Services.
 * *Effiziente Backups*: Fügt eine zusätzliche Schutzschicht mit einer Kopie der Daten in einer anderen Region für Notfälle hinzu.
 * *Fast Cloning*: Beschleunigt die Applikationsentwicklung durch schnelles Klonen.
@@ -35,7 +35,7 @@ FSX für ONTAP bietet folgende Funktionen:
 * *In-Memory-Cache und NVMe-Cache*: Umfasst einen einzigartigen in-Memory-Cache und NVMe-Cache, der die Performance häufig genutzter Daten steigert.
 * *Hunderttausende IOPS*: Stellt hunderttausende IOPS mit SSD-Festplatten bereit, um sicherzustellen, dass Ihre Speicher und Workloads rechtzeitig Ergebnisse erhalten.
 * *Thin Provisioning*: Ermöglicht die Bereitstellung von Kapazitäten im Voraus und spart so lange Kosten, bis mehr Kapazität benötigt wird.
-* *Datendeduplizierung und -Komprimierung*: Entfernt doppelte Daten und komprimiert Daten, um die Menge an physischem Storage zu reduzieren, der für FSX für ONTAP-Dateisysteme erforderlich ist, was zu Kosteneinsparungen führt.
+* *Datendeduplizierung und Komprimierung*: entfernt doppelte Daten und komprimiert Daten, um den für FSx for ONTAP Dateisysteme erforderlichen physischen Storage zu reduzieren, was zu Kosteneinsparungen führt.
 * *Data Tiering*: Reduziert die Speicherkosten, indem weniger häufig verwendete Daten vom primären SSD-Storage-Tier mit hoher Performance auf die Storage-Tier mit dem sekundären Kapazitäts-Pool verschoben werden.
 
 
@@ -46,7 +46,7 @@ FSX für ONTAP bietet folgende Funktionen:
 
 * *Storage-Kostenvergleich*: Vergleicht die Storage-Kosten für Windows File Server mit FSX für ONTAP mit Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File Server. Über den Rechner erfahren Sie, wie FSX für ONTAP Storage-Konfigurationen potenzielle Einsparungen ermöglichen und Ihren Wechsel zu FSX für ONTAP Storage planen.
 * *Workload Factory Benutzeroberfläche*: bietet die Bereitstellungsmodusoptionen _Quick create_ und _Advanced create_. Quick create umfasst AWS-, NetApp- und branchenübliche Best Practices für Ihre Speicherkonfigurationen. Die Oberfläche zeigt außerdem Trends bei der SSD-Speicherkapazität und der Durchsatznutzung, Workload-Zusammenfassungen sowie detaillierte Konfigurationseinstellungen, die erweitert werden können.
-* *Codebox*: Bietet Entwicklern einen Code-Viewer für FSX für ONTAP-Operationen, Codevorlagen für Kopieren und Herunterladen sowie einen Automatisierungsskatalog für die Wiederverwendung von Code.
+* *Codebox*: bietet Entwicklern einen Code-Viewer für FSx for ONTAP Operationen, Codevorlagen zum Kopieren und Herunterladen sowie einen Automatisierungskatalog zur Code-Wiederverwendung.
 
 
 
@@ -77,7 +77,7 @@ AWS verwaltet Ihr FSx for ONTAP -Konto, nicht Workload Factory. Weitere Informat
 [[regions]]
 == Regionen
 
-Workload Factory wird in allen kommerziellen Regionen unterstützt, in denen FSx für ONTAP unterstützt wird.link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Unterstützte Amazon Regionen anzeigen."^]
+Workload Factory wird in allen kommerziellen Regionen unterstützt, in denen FSx for ONTAP unterstützt wird. link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Unterstützte Amazon Regionen anzeigen."^]
 
 Die folgenden AWS-Regionen werden nicht unterstützt:
 

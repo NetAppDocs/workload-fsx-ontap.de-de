@@ -11,7 +11,7 @@ summary: Analysieren Sie Ereignisse innerhalb der NetApp Workload Factory für F
 
 
 [role="lead"]
-Identifizieren und beheben Sie Dateisystemprobleme von FSx for ONTAP schnell mit dem intelligenten Ereignisanalysator in NetApp Workload Factory. Der Ereignisanalysator extrahiert und analysiert automatisch FSx for ONTAP Event Management System (EMS)- und Latenzereignisse und nutzt dabei Agentic AI mit Amazon Bedrock-Integration.
+Dateisystemprobleme von FSx for ONTAP lassen sich mit dem intelligenten Ereignisanalysator in NetApp Workload Factory schnell identifizieren und beheben. Der Ereignisanalysator extrahiert und analysiert automatisch Ereignisse des FSx for ONTAP Event Management System (EMS) sowie Latenzereignisse mithilfe von Agentic AI und der Integration von Amazon Bedrock.
 
 
 
@@ -53,7 +53,7 @@ NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine M
 Ihr Datenschutz und Ihre Sicherheit werden geschützt durch:
 
 * *Datenhoheit*: Alle Daten und Aggregationen verbleiben innerhalb Ihres AWS-Kontos und werden über einen privaten VPC-Endpunkt (Amazon Bedrock) kommuniziert, ohne öffentliche Internetverbindung.
-* *Kein KI-Training*: Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet. Amazon Bedrock verarbeitet Ereignisse in Echtzeit, trainiert aber nicht mit Ihren Daten. Ergebnisse werden nur in Ihrer Umgebung gespeichert.
+* *Kein KI-Training*: Kundendaten werden nicht zum Trainieren oder Verbessern von Modellen verwendet. Amazon Bedrock verarbeitet Ereignisse in Echtzeit, trainiert aber nicht anhand Ihrer Daten. Ergebnisse werden ausschließlich in Ihrer Umgebung gespeichert.
 
 
 Weitere Einzelheiten finden Sie in der link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Amazon Bedrock-Datenschutzdokumentation"^].
@@ -63,13 +63,13 @@ Weitere Einzelheiten finden Sie in der link:https://docs.aws.amazon.com/bedrock/
 [[before-you-begin]]
 == Bevor Sie beginnen
 
-Um Latenzereignisse anzuzeigen, sind die folgenden Schritte erforderlich:
+Um Latenzereignisse anzuzeigen, müssen Sie Folgendes tun:
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Berechtigungen für Ansicht, Planung und Analyse erteilen"^] in Ihrem AWS-Konto.
 * link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Verbindung zum Dateisystem über einen Link herstellen"^].
 
 
-Um EMS- und Latenzereignisse zu analysieren und KI-gestützte Erkenntnisse und Empfehlungen zu erhalten, stellen Sie Folgendes sicher:
+Um EMS- und Latenzereignisse zu analysieren und KI-gestützte Erkenntnisse und Empfehlungen zu erhalten, müssen die folgenden Voraussetzungen erfüllt sein:
 
 * Sie haben link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_Berechtigungen für Operationen und Fehlerbehebung_"^] in Ihrem AWS-Konto.
 * Du hast link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["über einen Link mit dem Dateisystem verbunden"^].
@@ -87,7 +87,7 @@ Empfohlenes Modell: `anthropic.claude-sonnet-4-20250514-v1:0`. Geben Sie den ARN
 
 * *Link zur Workload Factory*
 +
-Erstellen und verknüpfen Sie einen Link mit einem FSx for ONTAP-Dateisystem, um KI-gestützte Ereignisanalysen zu ermöglichen. Ein Link stellt eine Vertrauensbeziehung zwischen Workload Factory und einem oder mehreren FSx for ONTAP-Dateisystemen her und nutzt AWS Lambda.
+Erstellen und verknüpfen Sie einen Link mit einem FSx for ONTAP-Dateisystem, um KI-gestützte Ereignisanalysen zu ermöglichen. Ein Link stellt eine Vertrauensbeziehung zwischen Workload Factory und einem oder mehreren FSx for ONTAP Dateisystemen her und verwendet AWS Lambda.
 
 +
 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung ist eine Rückkehr zu diesem Vorgang erforderlich.

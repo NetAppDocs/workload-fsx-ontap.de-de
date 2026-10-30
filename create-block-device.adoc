@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-block-device.html 
 keywords: create block device, create lun, iscsi protocol 
-summary: 'Erstellen Sie Blockgeräte, um die Anforderungen Ihrer Geschäftsanwendungen (LOB) zu erfüllen.' 
+summary: Erstellen von iSCSI-Blockgeräten in einem vorhandenen oder neuen Volume, Konfigurieren des Zugriffs der Initiatorgruppe sowie Festlegen von Storage-Effizienz- und Schutzoptionen für FSx for ONTAP. 
 ---
 = Erstellen eines Blockgeräts für ein Dateisystem in NetApp Workload Factory
 :allow-uri-read: 
@@ -91,7 +91,7 @@ NOTE: Snapshot-Zeiten basieren auf der Zeitzone des Dateisystems, die standardm�
 
 .. *Tiering Policy*: Wählen Sie die Tiering Policy für die auf dem Volume gespeicherten Daten.
 +
-_Ausgewogen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes über die Workload Factory-Konsole. Weitere Informationen zu den Richtlinien für die Mengenstaffelung finden Sie unter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der AWS FSx für NetApp ONTAP Dokumentation. Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx for ONTAP Tiering-Richtliniennamen in Klammern angibt.
+Balanced (Auto) ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes über die Workload Factory Managementplattform. Weitere Informationen zu Volume-Tiering-Richtlinien enthält link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der Dokumentation zu AWS FSx for NetApp ONTAP. Workload Factory verwendet in der Workload Factory Managementplattform anwendungsfallbasierte Namen für Tiering-Richtlinien und fügt die FSx for ONTAP Tiering-Richtliniennamen in Klammern hinzu.
 
 .. *ARP/AI*: NetApp Autonomous Ransomware Protection mit AI (ARP/AI) ist standardmäßig aktiviert, wenn ein Link mit dem Dateisystem verknüpft ist. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["Erfahren Sie mehr über ARP/AI"]. Akzeptieren Sie die Aussage, um fortzufahren.
 +

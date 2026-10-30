@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: Lokale ONTAP Daten in der NetApp Workload Factory erkennen und replizieren, sodass sie als Backup in der Cloud genutzt werden können. 
+summary: Lokale ONTAP Cluster in NetApp Workload Factory erkennen, replizieren und entfernen, um Volume-Daten in FSx for ONTAP File-Systemen in der Cloud zu sichern. 
 ---
 = Verwenden Sie lokale ONTAP Clusterdaten in NetApp Workload Factory
 :allow-uri-read: 
@@ -34,12 +34,12 @@ Anwendungsfälle::
 Entdecken Sie einen lokalen ONTAP Cluster in NetApp Workload Factory, damit Sie die Daten auf ein Amazon FSx for NetApp ONTAP Dateisystem replizieren können.
 
 .Bevor Sie beginnen
-Stellen Sie sicher, dass Sie Folgendes haben, bevor Sie beginnen:
+Folgendes ist erforderlich:
 
 * Ein FSX für ONTAP-Dateisystem für die Replikation.
 * Eine verbundene Verbindung, die mit dem erkannten lokalen Cluster verknüpft wird. Wenn keine Verbindung vorhanden ist, ist es erforderlich, link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erstellen Sie eine"^].
 * ONTAP-Benutzeranmeldeinformationen mit erforderlichen Berechtigungen.
-* On-Premises-ONTAP Version 9.8 und höher
+* On-premises ONTAP Version 9.8 oder höher.
 * Anschlussmöglichkeiten wie in der folgenden Abbildung dargestellt.
 +
 image:screenshot-on-prem-connectivity.png["Screenshot, der zeigt, wie ein On-Premises-ONTAP-Cluster für den Managementpfad und den Datenpfad zur Amazon Web Services Cloud verbunden werden sollte"]
@@ -85,7 +85,7 @@ Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für O
 .Bevor Sie beginnen
 * Sie müssen ein On-Premises-ONTAP-Cluster erkennen, um seine Volume-Daten zu replizieren.
 * Sie müssen über ein verfügbares FSX für ONTAP-Dateisystem verfügen, um das Ziel für die Replikation zu sein.
-* Sowohl der lokale ONTAP Cluster als auch das FSx for ONTAP Dateisystem, das Sie für die Replikationsbeziehung verwenden, müssen über eine zugeordnete Verbindung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nachdem die Verbindung zugeordnet wurde, kann zu diesem Vorgang zurückgekehrt werden.
+* Sowohl der lokale ONTAP Cluster als auch das FSx for ONTAP Dateisystem, das Sie für die Replikationsbeziehung verwenden, müssen über eine zugeordnete Verbindung verfügen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung kann zu diesem Vorgang zurückgekehrt werden.
 
 
 .Schritte
@@ -109,13 +109,13 @@ Replizieren von Volume-Daten von einem lokalen ONTAP-Cluster zu einem FSX für O
 Beachten Sie, dass einige Tiering-Richtlinien über einen zugehörigen Mindestkühlzeitraum verfügen, der die Zeit bzw. die _Kühltage_ festlegt, dass Benutzerdaten in einem Volume inaktiv bleiben müssen, damit die Daten als „kalt“ gelten und in die Storage-Ebene des Kapazitäts-Pools verschoben werden. Der Kühlzeitraum beginnt, wenn Daten auf die Festplatte geschrieben werden.
 
 +
-Weitere Informationen zu Volume-Tiering-Richtlinien finden Sie link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^]in der Dokumentation zu AWS FSX for NetApp ONTAP.
+Weitere Informationen zu Volume-Tiering-Richtlinien finden sich in link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] der AWS FSx for NetApp ONTAP Dokumentation.
 
 
 
 .. *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MiB/s. ein Alternativ wählen Sie *Unlimited*.
 +
-Ohne Einschränkung kann die Netzwerk- und Applikations-Performance abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+Ohne eine Begrenzung könnten Netzwerk- und Applikations-Performance sinken. Wir empfehlen jedoch eine unbegrenzte Transferrate für FSx for ONTAP Dateisysteme für kritische Workloads, beispielsweise solche, die primär für die Notfallwiederherstellung verwendet werden.
 
 
 
@@ -124,7 +124,7 @@ Ohne Einschränkung kann die Netzwerk- und Applikations-Performance abnehmen. Al
 .. *Replikationsintervall*: Wählen Sie die Häufigkeit, mit der Snapshots vom Quell-Volume auf das Ziel-Volume übertragen werden.
 .. *Langfristige Aufbewahrung*: Optional können Snapshots für die langfristige Aufbewahrung aktiviert werden.
 +
-Wenn Sie die langfristige Aufbewahrung aktivieren, wählen Sie eine vorhandene Richtlinie aus, oder erstellen Sie eine neue Richtlinie, um die zu replizierenden Snapshots und die Anzahl der beizubehaltenden Snapshots zu definieren.
+Wenn Sie die Langzeitaufbewahrung aktivieren, erfolgt die Auswahl einer vorhandenen Richtlinie oder die Erstellung einer neuen Richtlinie, um die zu replizierenden Snapshots und die Anzahl der aufzubewahrenden Snapshots festzulegen.
 
 +
 *** Wählen Sie für eine vorhandene Richtlinie *vorhandene Richtlinie auswählen* aus, und wählen Sie dann die vorhandene Richtlinie aus dem Dropdown-Menü aus.

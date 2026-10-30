@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: security-reference.html 
 keywords: security, data protection, IAM, file system access control, vpc 
-summary: Die Dokumentation zu Amazon FSX for NetApp ONTAP enthält die folgenden Sicherheitsthemen als Referenz. 
+summary: Überprüfung der AWS- und NetApp Workload Factory Sicherheitsdokumentation für FSx for ONTAP, einschließlich Datenschutz, Identitäts- und Zugriffsmanagement sowie Dateisystem-Zugriffssteuerung. 
 ---
 = Sicherheit für FSx für ONTAP in NetApp Workload Factory
 :allow-uri-read: 
@@ -11,9 +11,10 @@ summary: Die Dokumentation zu Amazon FSX for NetApp ONTAP enthält die folgenden
 
 
 [role="lead"]
-Die Dokumentation zu Amazon FSX for NetApp ONTAP enthält die folgenden Sicherheitsthemen als Referenz.
+Die AWS-Dokumentation behandelt die Sicherheit für Amazon FSx for NetApp ONTAP, einschließlich Datenschutz, Identitäts- und Zugriffsmanagement sowie Dateisystem-Zugriffskontrolle. NetApp Dokumentation umfasst auch die Informationssicherheit für Workload Factory.
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/data-protection.html["Datensicherung in Amazon FSX for NetApp ONTAP"^]
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html["Identitäts- und Zugriffsmanagement für Amazon FSX for NetApp ONTAP"^]
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limit-access-security-groups.html["File System Access Control mit Amazon VPC"^] In der Dokumentation zu Amazon FSX for NetApp ONTAP
+* link:https://docs.netapp.com/us-en/workload-infosec/index.html["Informationssicherheit für NetAppWorkload Factory"^]
 

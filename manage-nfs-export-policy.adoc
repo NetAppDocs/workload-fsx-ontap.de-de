@@ -11,7 +11,7 @@ summary: Verwalten Sie die NFS-Exportrichtlinie für ein Volume, das die Protoko
 
 
 [role="lead"]
-Verwalten Sie die NFS-Exportrichtlinie für ein Volume, das die Protokolltypen NFSv3 oder NFSv4.1 in NetApp Workload Factory verwendet.
+In NetApp Workload Factory ist die Verwaltung der NFS-Exportrichtlinie für ein Volume möglich, das die Protokolltypen NFSv3 oder NFSv4.1 verwendet, um zu steuern, welche Clients auf das Volume zugreifen können und welche Zugriffsrechte sie haben.
 
 .Über diese Aufgabe
 Beim Management der Exportrichtlinie eines Volumes werden Regeln für den Export hinzugefügt, die Client-Spezifikationen, Zugriffssteuerung, Super-User-Zugriff und NFS-Version detailliert beschreiben. Sie können mehr als eine Exportrichtlinie hinzufügen und sie priorisieren.
@@ -31,7 +31,7 @@ Bestimmen Sie die Clientspezifikationen für die Regeln der Exportrichtlinie. G�
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Wählen Sie das Menü aus image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und wählen Sie dann *Speicher* aus.
 . Im Menü „Speicher“ die Option *Volumes explorer* auswählen.
-. Wählen Sie das Aktionsmenü für das Volume aus, für das die NFS-Exportrichtlinie geändert werden soll.
+. Im Aktionsmenü ist das Volume auszuwählen, dessen NFS-Exportrichtlinie geändert werden soll.
 . Wählen Sie *Erweiterte Aktionen* und dann *NFS-Exportrichtlinie bearbeiten*.
 . Geben Sie auf der Seite „NFS-Exportrichtlinie bearbeiten“ Folgendes an:
 +

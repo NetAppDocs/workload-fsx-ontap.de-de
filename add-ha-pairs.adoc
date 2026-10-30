@@ -14,31 +14,31 @@ summary: Fügen Sie einem Dateisystem in NetApp Workload Factory Hochverfügbark
 Fügen Sie Hochverfügbarkeitspaare (HA) hinzu, um ein FSx für ONTAP Single-AZ-Dateisystem der zweiten Generation in NetApp Workload Factory zu skalieren und so Leistung und Kapazität zu erhöhen.  Diese Erweiterung bietet Ihnen mehr Leistungsskalierbarkeit und Flexibilität im Vergleich zu Dateisystemen der ersten Generation.
 
 .Über diese Aufgabe
-Die neuen HA-Paare werden auf der gleichen SKU und der gleichen Kapazität pro HA-Paar hinzugefügt.
+Die neuen HA-Paare verwenden dieselbe SKU und Kapazität pro HA-Paar.
 
 Das Hinzufügen von HA-Paaren wird für folgende nicht unterstützt:
 
 * Hochverfügbarkeit mit mehreren Verfügbarkeitszonen oder FSX for ONTAP-Filesystemen der ersten Generation
-* FSX für ONTAP-Dateisysteme mit mehr als 5 Storage-VMs
+* FSx for ONTAP Dateisysteme mit mehr als fünf Storage-VMs
 * FSX für ONTAP-Dateisysteme mit iSCSI-LUNs
-* Konfigurationen mit maximaler oder fast der maximalen SSD-Kapazität oder mit erreichten I/O-Zuweisungslimits
+* Konfigurationen, die die maximale oder nahezu maximale SSD-Kapazität erreicht haben oder ihre E/A-Zuweisungsgrenzen erreicht haben
 
 
 Folgende Aspekte sollten beim Hinzufügen von HA-Paaren beachtet werden:
 
-* Entfernung von HA-Paaren: HA-Paare können nicht entfernt werden, nachdem sie dem Dateisystem hinzugefügt wurden.
-* Betriebszeit und Einschränkungen: Das Hinzufügen von HA-Paaren kann ca. 30 Minuten dauern. Sie sollten HA-Paare während eines Wartungsfenster oder während Zeiten mit geringer Aktivität hinzufügen. Zudem werden durch das Hinzufügen von HA-Paaren andere Vorgänge eingeschränkt, wie z. B. das Hinzufügen weiterer HA-Paare, die Bereitstellung von IOPS, die Erhöhung der SSD-Kapazität und die Aktualisierung der Durchsatzkapazität.
-* I/O-Zuweisung: Automatische I/O-Zuweisung hängt von der gesamten Speicherkapazität ab. Die benutzerkonfigurierte I/O-Zuweisung wird mit der Menge der hinzugefügten HA-Paare multipliziert.
-* NVMe Cache: Beim Hinzufügen von HA-Paaren ist standardmäßig NVME Cache aktiviert. Wir empfehlen, NVMe-Cache für große Workloads zu deaktivieren.
+* Entfernung von HA-Paaren: HA-Paare können nicht aus dem Dateisystem entfernt werden, nachdem sie hinzugefügt wurden.
+* Betriebsdauer und Einschränkungen: Das Hinzufügen von HA-Paaren kann etwa 30 Minuten dauern. Das Hinzufügen von HA-Paaren sollte während eines Wartungsfensters oder in Zeiten geringer Auslastung erfolgen. Darüber hinaus schränkt das Hinzufügen von HA-Paaren andere Operationen ein, wie z. B. das Hinzufügen weiterer HA-Paare, die Provisionierung von IOPS, die Erhöhung der SSD-Kapazität und die Aktualisierung der Durchsatzkapazität.
+* E/A-Zuweisung: Die automatische E/A-Zuweisung hängt von der gesamten Storage-Kapazität ab. Die benutzerkonfigurierte E/A-Zuweisung wird mit der Anzahl der hinzugefügten HA-Paare multipliziert.
+* NVMe-Cache: Beim Hinzufügen von HA-Paaren ist der NVMe-Cache standardmäßig aktiviert. Wir empfehlen, den NVMe-Cache bei hoher Arbeitslast zu deaktivieren.
 * Anzahl an HA-Paaren: Wir empfehlen, das Filesystem auf eine gerade Anzahl von HA-Paaren zu erweitern, um eine ausgewogene Datenverteilung über HA-Paare hinweg zu erreichen.
-* LUN-Erstellung: LUN-Erstellung ist auf einem Single-AZ File-System der zweiten Generation nur möglich, wenn beim Hinzufügen von HA-Paaren noch keine LUNs im File-System vorhanden sind. LUN-Erstellung wird nur auf einem File-System mit maximal 6 HA-Paaren unterstützt.
+* LUN-Erstellung: Die Erstellung von LUNs ist auf einem Single-AZ-Dateisystem der zweiten Generation nur möglich, wenn beim Hinzufügen von HA-Paaren noch keine LUNs auf dem Dateisystem vorhanden sind. Die LUN-Erstellung ist nur auf einem Dateisystem mit maximal sechs HA-Paaren möglich.
 
 
 .Bevor Sie beginnen
 Führen Sie die folgenden Schritte aus, bevor Sie HA-Paare zu einem Dateisystem hinzufügen:
 
 * Entfernen Sie alle iSCSI-LUNs, um das Dateisystem zu skalieren.
-* Stellen Sie sicher, dass das Dateisystem nicht mehr als 5 Storage-VMs hat.
+* Das Dateisystem darf nicht mehr als fünf Storage VMs enthalten.
 
 
 .Schritte

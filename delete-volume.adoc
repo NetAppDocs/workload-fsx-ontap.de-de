@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-volume.html 
 keywords: delete volume, volume deletion 
-summary: Löschen Sie ein nicht mehr benötigter Volume in Ihrem FSX for ONTAP-Dateisystem und geben Sie Speicherplatz frei. Dieser Vorgang kann nicht rückgängig gemacht werden. 
+summary: Das Löschen eines nicht mehr benötigten Volume aus einem FSx for ONTAP Dateisystem gibt Speicherplatz frei. Dieser Vorgang ist irreversibel. 
 ---
 = Löschen eines Volumes in NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Löschen Sie ein nicht mehr benötigter Volume in Ihrem FSX for ONTAP-D
 
 
 [role="lead"]
-Löschen Sie ein nicht mehr benötigter Volume in Ihrem FSX for ONTAP-Dateisystem und geben Sie Speicherplatz frei. Dieser Vorgang kann nicht rückgängig gemacht werden.
+Das Löschen eines nicht mehr benötigten Volume aus einem FSx for ONTAP Dateisystem gibt Speicherplatz frei. Dieser Vorgang ist irreversibel.
 
 .Bevor Sie beginnen
 Beachten Sie Folgendes, bevor Sie ein Volume löschen:

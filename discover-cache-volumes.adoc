@@ -11,7 +11,7 @@ summary: Entdecken und zeigen Sie Cache-Volumes an, die mit Cache-Beziehungen ve
 
 
 [role="lead"]
-Entdecken und zeigen Sie Cache-Volumes an, die mit Cache-Beziehungen verknüpft sind, ohne die NetApp Workload Factory-Konsole zu verlassen.  Cache-Beziehungen werden auch als ONTAP FlexCache -Beziehungen bezeichnet.  Workload Factory erkennt vorhandene Cache-Beziehungen mithilfe der FlexCache -Technologie. Dabei handelt es sich um die Remote-Caching-Funktion von NetApp ONTAP, die den Datenzugriff beschleunigt und die WAN-Latenz, Bandbreite und Kosten für leseintensive Workloads reduziert, insbesondere wenn Clients wiederholt auf dieselben Daten zugreifen müssen.
+Cache-Volumes, die Cache-Beziehungen zugeordnet sind, lassen sich anzeigen, ohne die NetApp Workload Factory Managementplattform zu verlassen. Cache-Beziehungen werden auch als ONTAP FlexCache Beziehungen bezeichnet. Workload Factory erkennt vorhandene Cache-Beziehungen mithilfe der FlexCache Technologie, der Remote-Caching-Funktion von NetApp ONTAP, die den Datenzugriff beschleunigt und WAN-Latenz, Bandbreite und Kosten für leseintensive Workloads reduziert, insbesondere wenn Clients wiederholt auf dieselben Daten zugreifen müssen.
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["Erfahren Sie mehr über die Replikation von Daten mit FlexCache."^]
 

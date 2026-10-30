@@ -11,14 +11,14 @@ summary: Erfahren Sie mehr über NetApp Cyber ​​Vaults und wie Sie eine Cybe
 
 
 [role="lead"]
-Ein Cyber-Vault-Volume ist ein isolierter, sicherer Speicherort, der zum Speichern von Sicherungskopien Ihrer Daten verwendet wird und diese vor Ransomware-Angriffen und anderen Cyberbedrohungen schützt.  Im Rahmen der Vault-Erstellung erstellen Sie ein Cyber-Vault-Volume, deaktivieren alle Client-Protokolle, richten eine Replikationsbeziehung zwischen dem Quell-Volume und dem Cyber-Vault-Volume ein und erstellen unveränderliche Snapshots auf dem Cyber-Vault-Volume.
+Ein Cyber-Vault Volume ist ein isolierter, sicherer Storage-Speicherort, der Sicherungskopien Ihrer Daten speichert und sie vor Ransomware-Angriffen und anderen Cyberbedrohungen schützt. Zum Erstellen eines Vaults erstellen Sie ein Cyber-Vault Volume, deaktivieren alle Clientprotokolle, richten eine Replikationsbeziehung zwischen dem Quell-Volume und dem Cyber-Vault Volume ein und erstellen unveränderliche Snapshots auf dem Cyber-Vault Volume.
 
 .Was ist ein Cyber-Tresor?
 Ein Cyber-Tresor ist eine spezielle Datenschutztechnik, bei der kritische Daten in einer isolierten Umgebung, getrennt von der primären IT-Infrastruktur, gespeichert werden.
 
 Der Cyber-Tresor ist ein vom Rest des Netzwerks abgeschottetes, unveränderliches und unauslöschliches Datenrepository, das immun gegen Bedrohungen ist, die das Hauptnetzwerk betreffen, wie Malware, Ransomware oder sogar Insider-Bedrohungen.  Ein Cyber-Tresor lässt sich mit unveränderlichen und unauslöschlichen Snapshots realisieren.
 
-Bei Air-Gapping-Backups mit herkömmlichen Methoden müssen Platz geschaffen und das primäre und sekundäre Medium physisch getrennt werden. Durch die Verlagerung der Medien an einen anderen Standort und/oder die Trennung der Verbindung haben böswillige Akteure keinen Zugriff auf die Daten. Dies schützt die Daten, kann jedoch zu längeren Wiederherstellungszeiten führen.
+Bei herkömmlichen Methoden für Backups mit Air-Gap-Verfahren werden Kapazität geschaffen und primäre sowie sekundäre Speichermedien physisch getrennt. Durch die Verlagerung der Speichermedien an einen externen Standort oder die Unterbrechung der Verbindung haben Angreifer keinen Zugriff auf die Daten. Dies schützt die Daten, kann aber zu längeren Wiederherstellungszeiten führen.
 
 .FSx für ONTAP Cyber-Tresore
 Amazon FSx for NetApp ONTAP wird als Cyber-Vault-Quelle und -Ziel unterstützt.

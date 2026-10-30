@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: NetApp Workload Factory analysiert regelmäßig die Dateisystemkonfigurationen von Amazon FSx for NetApp ONTAP, um festzustellen, ob Konfigurationsprobleme vorliegen. 
+summary: Mit NetApp Workload Factory lassen sich FSx for ONTAP Dateisystemkonfigurationen analysieren, um Probleme zu identifizieren und Empfehlungen zu erhalten, die Performance, Kosteneffizienz und Compliance verbessern. 
 ---
 = Konfigurationsanalyse für FSX für ONTAP-Dateisysteme
 :allow-uri-read: 
@@ -104,7 +104,7 @@ Die Snapshot-Richtlinienbezeichnungen des Quellvolumes und die Replikationsricht
 
 * *Dateiobjektkapazität*
 +
-Um die Speicherkapazitätsgrenze des Volumes nicht zu erreichen, sollte der Schwellenwert für die Dateikapazität erhöht werden. Eine geringe Dateikapazität (Inodes) verhindert das Schreiben weiterer Daten auf das Volume. Workload Factory empfiehlt, die Dateikapazitätsauslastung unter 80 % zu halten, um die Erstellung neuer Dateien zu ermöglichen.
+Eine Erhöhung des Schwellenwerts für die Dateikapazität hilft, das Erreichen der Volume-Kapazitätsgrenze zu vermeiden. Eine niedrige Dateikapazität (Inodes) verhindert das Schreiben zusätzlicher Daten auf das Volume. Workload Factory empfiehlt, die Dateikapazitätsauslastung unter 80 % zu halten, um die Erstellung neuer Dateien zu ermöglichen.
 
 
 
@@ -134,7 +134,7 @@ Operative Exzellenz konzentriert sich auf die Bereitstellung der optimalsten Arc
 
 * *Automatisches Kapazitätsmanagement*
 +
-Automatisches Kapazitätsmanagement sollte aktiviert werden, um regelmäßig sicherzustellen, dass die SSD-Ebene den Schwellenwert nicht überschreitet.
+Mit dem automatischen Kapazitätsmanagement wird regelmäßig sichergestellt, dass das SSD-Tier den Schwellenwert nicht überschreitet.
 
 * *Freier Volumenkapazitätsspielraum*
 +

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-volume-settings.html 
 keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
-summary: Mit Tags können Sie Ihre Ressourcen kategorisieren. Sie können Volume-Tags für FSX für ONTAP-Volumes jederzeit hinzufügen, bearbeiten und entfernen. 
+summary: Das Ändern von Volume-Workloads, das Bearbeiten von Volume-Tags, das Aktualisieren der Storage-Effizienz und das Managen der Einstellungen für unveränderliche Dateien für FSx for ONTAP Volumes in NetApp Workload Factory. 
 ---
 = Volume-Einstellungen in NetApp Workload Factory verwalten
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Mit Tags können Sie Ihre Ressourcen kategorisieren. Sie können Volume
 
 
 [role="lead"]
-Die FSx for ONTAP Volume-Einstellungen in NetApp Workload Factory können an die Anforderungen Ihres Unternehmens angepasst werden. Volume-Tags können verwaltet werden, um Ressourcen wie die Festlegung von Volume-Workloads zu kategorisieren, Einstellungen zur Speichereffizienz können aktualisiert werden, um Speicherplatz und Kosten zu optimieren, und Einstellungen für unveränderliche Dateien können verwaltet werden, um die Datenaufbewahrung zu steuern und vor unbefugten Änderungen zu schützen.
+Die FSx for ONTAP Volume-Einstellungen in NetApp Workload Factory lassen sich an die Anforderungen Ihres Unternehmens anpassen. Volume-Workloads und Tags können festgelegt werden, um Ressourcen zu kategorisieren, Einstellungen für die Storage-Effizienz können aktualisiert werden, um Speicherplatz und Kosten zu optimieren, und die Einstellungen für unveränderliche Dateien können gemanagt werden, um die Datenaufbewahrung zu steuern und vor unbefugten Änderungen zu schützen.
 
 
 
@@ -80,7 +80,7 @@ Volumes verwenden Thin Provisioning, unabhängig davon, ob Sie Storage-Effizienz
 
 Wenn diese Funktion aktiviert ist, können Sie bestimmte unveränderliche Dateieinstellungen für ein Volume aktualisieren, z. B. Aufbewahrungsrichtlinien und -Zeiträume, Autofeststellungszeitraum und Modus zum Anhängen von Volumes.
 
-Beachten Sie, dass die Aktivierung unveränderlicher Dateien nur während möglich istlink:create-volume.html["Volume-Erstellung"].
+Unveränderliche Dateien können nur während link:create-volume.html["Volume-Erstellung"] aktiviert werden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
@@ -92,7 +92,7 @@ Beachten Sie, dass die Aktivierung unveränderlicher Dateien nur während mögli
 +
 ** *Aufbewahrungsfrist*: Wählen Sie *nicht spezifiziert* oder *Zeitraum angeben*.
 +
-*** *Nicht spezifiziert*: Die Standardminimum-Periode ist "0" Jahre und die Standardmaximum-Periode ist "30 Jahre".
+*** *Nicht spezifiziert*: Die standardmäßige Mindestlaufzeit beträgt 0 Jahre und die standardmäßige Höchstlaufzeit beträgt 30 Jahre.
 *** *Zeitraum angeben*: Option zum Definieren der Aufbewahrungsrichtlinie, der Mindest- und Höchstzeiträume, der Autocommit-Funktion und der Volume Append-Funktion. Geben Sie folgende Informationen an:
 +
 **** *Aufbewahrungsrichtlinie*: Diese Frist muss größer oder gleich der Mindestaufbewahrungsfrist und kleiner oder gleich der maximalen Aufbewahrungsfrist sein.
@@ -103,10 +103,10 @@ Beachten Sie, dass die Aktivierung unveränderlicher Dateien nur während mögli
 
 ** *Autocommit*: Aktivieren oder deaktivieren Sie die Funktion, um Dateien, die während der Autocommit-Periode nicht geändert wurden, automatisch an WORM zu übergeben.
 ** *Privilegiertes Löschen*: Aktivieren oder deaktivieren Sie die Funktion.  Durch Aktivieren der Funktion kann ein SnapLock Administrator ein nicht abgelaufenes WORM-Volume löschen.  Diese Funktion wird nur im Enterprise-Aufbewahrungsmodus unterstützt.
-** *Volume Append-Modus*: Aktivieren oder deaktivieren Sie die Funktion. Durch die Aktivierung des Modus „Anhängen von Volumes“ können Sie WORM-Dateien neuen Inhalt hinzufügen.
+** *Volume Append-Modus*: Diese Funktion kann aktiviert oder deaktiviert werden. Durch das Aktivieren des Volume Append-Modus können WORM-Dateien um neue Inhalte ergänzt werden.
 
 
-. Klicken Sie Auf *Anwenden*.
+. Wählen Sie *Anwenden*.
 
 
 

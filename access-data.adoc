@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: access-data.html 
 keywords: access data, mount point, mount volumes, mount clients, on-premises 
-summary: Sie können von vor Ort auf Ihre FSX for ONTAP-Dateisysteme zugreifen, indem Sie Volumes für NAS-Clients mounten und iSCSI-LUNs für SAN-Clients mounten. 
+summary: Der Mountpunkt für FSx for ONTAP Volumes in Workload Factory sowie Links zum Mounten von Volumes und iSCSI-LUNs auf NAS- und SAN-Clients sind verfügbar. 
 ---
 = Zugriff auf Ihre FSX for ONTAP-Dateisystemdaten
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary: Sie können von vor Ort auf Ihre FSX for ONTAP-Dateisysteme zugreifen, 
 [role="lead"]
 Sie können von vor Ort auf Ihre FSX for ONTAP-Dateisysteme zugreifen, indem Sie Volumes für NAS-Clients mounten und iSCSI-LUNs für SAN-Clients mounten.
 
-link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Datenzugriff"^] In der Dokumentation zu Amazon FSX for NetApp ONTAP finden Sie Informationen dazu, wie Sie auf Daten für Ihre Referenz zugreifen.
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Datenzugriff"^]Die Dokumentation zu Amazon FSx for NetApp ONTAP enthält Informationen darüber, wie auf Daten zugegriffen werden kann.
 
 Sie können den Einhängepunkt für Volumes auch in NetApp Workload Factory abrufen.
 
@@ -22,7 +22,7 @@ Sie können den Einhängepunkt für Volumes auch in NetApp Workload Factory abru
 [[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == Holen Sie sich den Mount-Punkt für Volumes in NetApp Workload Factory
 
-Holen Sie sich den Mount-Punkt für ein Volume, um eine Freigabe auf einer CIFS-Freigabe oder einem NFS-Client zu mounten.
+Der Mountpunkt eines Volumes kann verwendet werden, um das Volume als CIFS-Freigabe oder auf einem NFS-Client einzuhängen.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

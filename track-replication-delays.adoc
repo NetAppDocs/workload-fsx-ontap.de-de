@@ -23,7 +23,7 @@ Die Nachverfolgung kann aktiviert werden, um Replikationsverzögerungen in Ihrem
 . Im Dialogfeld „Replikationsverzögerungsverlauf aktivieren“ wählen Sie *Enable*.
 . Zurück in der Kachel „Replikationsverzögerungsverlauf“ wählen Sie *Schwellenwert anpassen*, um Ihren bevorzugten Schwellenwert festzulegen.
 . Im Dialogfeld „Verzögerungszeitschwelle anpassen“ geben Sie die Schwelle in Stunden und Minuten ein.
-. Optional können Sie *Benachrichtigungen bei Verzögerungen aktivieren* auswählen, um Benachrichtigungen zu erhalten, wenn Replikationsverzögerungen den Schwellenwert überschreiten.
+. Optional können Sie *Benachrichtigungen bei Verzögerungen aktivieren* auswählen, um Benachrichtigungen zu erhalten, wenn die Replikationsverzögerung den Schwellenwert überschreitet.
 +
 Benachrichtigungen erfolgen per E-Mail und beinhalten:
 

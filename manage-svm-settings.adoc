@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-svm-settings.html 
 keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
-summary: Hinzufügen, Aktualisieren oder Entfernen von Storage-VM-Tags für eine Storage-VM jederzeit. 
+summary: Die Konfiguration von Active Directory, das Managen von Tags und das Zurücksetzen des Passworts für eine Storage VM in einem FSx for ONTAP Dateisystem. 
 ---
 = Speicher-VM-Einstellungen in NetApp Workload Factory verwalten
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Hinzufügen, Aktualisieren oder Entfernen von Storage-VM-Tags für eine
 
 
 [role="lead"]
-Die Einstellungen einer Storage-VM in NetApp Workload Factory lassen sich verwalten. Die Konfiguration und Aktualisierung von Active Directory für eine Storage-VM, die Aktualisierung des Storage-VM-Kennworts sowie die Verwaltung von Tags für die Storage-VM sind möglich.
+In NetApp Workload Factory lassen sich die Einstellungen einer Storage VM managen. Sie können Active Directory konfigurieren und aktualisieren, das Passwort der Storage VM zurücksetzen und Storage VM-Tags managen.
 
 
 
@@ -33,13 +33,13 @@ Die gleichen Schritte gelten für die Konfiguration und Aktualisierung von Activ
 +
 .. *Active Directory-Domain zu verbinden*: Geben Sie den vollständig qualifizierten Domainnamen (FQDN) Ihres Active Directory ein.
 .. *DNS-IP-Adressen*: Geben Sie bis zu drei IP-Adressen durch Kommas getrennt ein.
-.. *SMB-Server NetBIOS-Name*: Geben Sie den SMB-Server NetBIOS-Namen des Active Directory-Computerobjekts ein, das für Ihre Speicher-VM erstellt werden soll. Dies ist der Name dieser SVM im Active Directory.
+.. *NetBIOS-Name des SMB-Servers*: Hier wird der NetBIOS-Name des SMB-Servers für das Active Directory-Computerobjekt angegeben, das für Ihre Storage VM erstellt wird. Dies ist der Name der Storage VM in Active Directory.
 .. *Benutzername*: Geben Sie den Benutzernamen des Dienstkontos in Ihr vorhandenes Active Directory ein.
 +
 Geben Sie kein Domänenpräfix oder Suffix ein. Für `EXAMPLE\ADMIN`, verwenden `ADMIN`.
 
 .. *Passwort*: Geben Sie das Passwort für das Service-Konto ein.
-.. *Organisationseinheit (OU)*: Geben Sie die Organisationseinheit ein.
+.. *Organisationseinheit (OU)*: Eintrag der Organisationseinheit.
 +
 Die Organisationseinheit ist der Distinguished Path Name der Organisationseinheit, der Sie Ihr Dateisystem beitreten möchten.
 

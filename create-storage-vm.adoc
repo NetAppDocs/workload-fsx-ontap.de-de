@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-storage-vm.html 
 keywords: create storage VM, create svm 
-summary: 'Sie können eine FSx für ONTAP -Speicher-VM (SVM) erstellen, um Speicher- und Datendienste für Ihre Workloads in NetApp Workload Factory bereitzustellen.' 
+summary: 'Die Erstellung einer FSx for ONTAP Storage VM (SVM) ermöglicht die Bereitstellung von Storage und Datenservices für Ihre Workloads in NetApp Workload Factory.' 
 ---
 = Erstellen Sie eine Storage-VM für ein FSX für ONTAP-Filesystem
 :allow-uri-read: 
@@ -16,7 +16,7 @@ Erstellen Sie eine Storage-VM (SVM) für ein FSx for ONTAP Dateisystem, um virtu
 .Über diese Aufgabe
 Storage-VMs sind isolierte Dateiserver, mit denen Sie auf die Daten der einzelnen Workloads im Workload Factory Storage zugreifen können.  Jede SVM verfügt über eigene Administratoranmeldeinformationen und Endpunkte für die Verwaltung und den Zugriff auf Daten.
 
-Wenn Sie mit SVMs auf Daten in FSX for ONTAP zugreifen, mounten Ihre Clients und Workstations über den Endpunkt (IP-Adresse) der SVM ein Volume, eine CIFS/SMB-Freigabe oder eine iSCSI-LUN, die von einer SVM gehostet wird.
+Clients und Workstations greifen in FSx for ONTAP auf Daten zu, indem sie ein von einer SVM gehostetes Volume, eine CIFS/SMB-Freigabe oder eine iSCSI-LUN über den SVM-Endpunkt (IP-Adresse) einbinden.
 
 .Bevor Sie beginnen
 Überprüfen Sie die unterstützte Anzahl von Storage-VMs pro Dateisystem. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Management von FSX für ONTAP Storage Virtual Machines"^]In der AWS-Dokumentation finden Sie Informationen zur maximalen Anzahl von SVMs pro Filesystem.

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ransomware-protection.html 
 keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy 
-summary: 'NetApp Autonomous Ransomware Protection mit KI (ARP/AI) nutzt Workload-Analyse in NAS- und SAN-Umgebungen, um ungewöhnliche Aktivitäten zu erkennen und davor zu warnen, die auf einen möglichen Ransomware-Angriff hindeuten.' 
+summary: Die Aktivierung von NetApp Autonomous Ransomware Protection with AI ermöglicht die Erkennung ungewöhnlicher Volume-Aktivitäten, die Validierung vermuteter Angriffe und die Wiederherstellung von Daten aus Snapshots. 
 ---
-= Schützen Sie Ihre FSx for ONTAP Daten mit NetApp Autonomous Ransomware Protection mit KI.
+= Schutz von FSx for ONTAP Daten mit NetApp Autonomous Ransomware Protection with AI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -45,7 +45,7 @@ Wenn das System eine Dateierweiterung als ungewöhnlich kennzeichnet, sollte die
 
 Wenn Sie eine Warnung als Fehlalarm markieren, aktualisiert das System seine Warnungseinstellungen. Wenn beispielsweise eine neue Dateierweiterung eine Warnung auslöst und Sie diese als Fehlalarm markieren, erhalten Sie beim nächsten Auftreten dieser Dateierweiterung keine Warnung.
 
-Nicht unterstützte Konfigurationen:: Die folgenden Konfigurationen unterstützen die Verwendung von ARP/AI nicht.
+Nicht unterstützte Konfigurationen:: ARP/AI unterstützt diese Konfigurationen nicht.
 +
 --
 * NVMe Volumes
@@ -124,7 +124,7 @@ Ermitteln Sie, ob ein Angriff ein falscher Alarm oder ein echter Ransomware-Vorf
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie aus der Kachel Autonomous Ransomware Protection *Analyze Attacks* aus.
 . Laden Sie den Bericht über Angriffsereignisse herunter, um zu überprüfen, ob Dateien oder Ordner kompromittiert wurden, und entscheiden Sie dann, ob ein Angriff stattgefunden hat.
-. Wenn kein Angriff stattgefunden hat, wählen Sie *False Alarm* für die Lautstärke in der Tabelle und wählen Sie dann *Schließen*
+. Wenn kein Angriff stattgefunden hat, können Sie in der Tabelle für das entsprechende Volume *Fehlalarm* und anschließend *Schließen* auswählen.
 . Wenn ein Angriff stattgefunden hat, wählen Sie *Real Attack* für das Volumen in der Tabelle. Das Dialogfeld „kompromittierte Volume-Daten wiederherstellen“ wird geöffnet. Sie können sofort mit fortfahren <<Wiederherstellung von Daten nach einem Ransomware-Angriff,Stellen Sie Ihre Daten wieder her>>oder *Schließen* auswählen und später den Wiederherstellungsprozess abschließen.
 
 

@@ -18,17 +18,17 @@ Auf Daten kann auf dem Klon und auf dem übergeordneten Element während der Tei
 .Über diese Aufgabe
 Der Vorgang zum Aufteilen von Klonen umfasst Folgendes:
 
-* Während der Aufteilung können keine neuen Snapshot-Kopien des FlexClone Volume erstellt werden.
-* Ein FlexClone Volume kann nicht vom übergeordneten Volume getrennt werden, wenn es zu einer Datensicherungsbeziehung gehört.
-* Wenn Sie das FlexClone Volume während des Splittings offline schalten, wird der Split-Vorgang unterbrochen. Wenn Sie das FlexClone Volume wieder online schalten, wird der Splitting-Vorgang fortgesetzt.
+* Während des Aufteilungsvorgangs können keine neuen Snapshot-Kopien des FlexClone Volumes erstellt werden.
+* Ein FlexClone Volume kann nicht von seinem übergeordneten Volume getrennt werden, wenn es zu einer Datensicherungsbeziehung gehört.
+* Wenn das FlexClone volume während der Aufteilung offline genommen wird, wird der Aufteilungsvorgang angehalten. Wenn das FlexClone volume wieder online ist, wird der Aufteilungsvorgang fortgesetzt.
 * Nach der Aufteilung benötigen sowohl das übergeordnete FlexVol Volume als auch der Klon die volle Speicherplatzzuweisung, die durch die Garantien des Volume festgelegt wurde.
-* Nachdem ein FlexClone Volume von seinem übergeordneten Element getrennt wurde, können die beiden Volumes nicht erneut verbunden werden.
+* Nachdem Sie ein FlexClone Volume von seinem übergeordneten Volume getrennt haben, können Sie die beiden nicht wieder zusammenführen.
 
 
 .Bevor Sie beginnen
 Vor dem Aufteilen eines geklonten Volume sollten Sie Folgendes beachten:
 
-* Um ein geklontes Volume aufzuteilen, muss eine Verknüpfung hergestellt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nachdem die Verknüpfung hergestellt wurde, kann zu diesem Vorgang zurückgekehrt werden.
+* Um ein geklontes Volume aufzuteilen, muss eine Verknüpfung hergestellt werden. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Nach der Verknüpfung kann zu diesem Vorgang zurückgekehrt werden.
 * Das FlexClone Volume muss online sein, wenn der Trennvorgang beginnt.
 * Das übergeordnete Volume muss online sein, damit die Teilung erfolgreich durchgeführt werden kann.
 

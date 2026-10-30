@@ -23,7 +23,7 @@ Erstellen Sie eine manuelle Sicherung eines Volumes außerhalb regelmäßig gepl
 .Über diese Aufgabe
 Volume-Backups werden pro Volume erstellt, sodass jedes Backup nur die Daten in einem bestimmten Volume enthält.
 
-Volume-Backups sind inkrementell, was bedeutet, dass nur die Daten auf dem Volume gespeichert werden, die sich nach Ihrem letzten Backup geändert haben. Dadurch werden die für die Erstellung des Backups benötigte Zeit und der für das Backup benötigte Speicherplatz minimiert, was Speicherkosten spart, da keine Daten dupliziert werden.
+Volume-Backups sind inkrementell. Das bedeutet, dass nur die Daten auf dem Volume gespeichert werden, die sich seit dem letzten Backup geändert haben. Dadurch werden der Zeitaufwand für die Erstellung des Backups und der für das Backup erforderliche Speicherplatz minimiert, wodurch Storage-Kosten gesenkt werden, da keine Daten dupliziert werden.
 
 .Bevor Sie beginnen
 Um Backups Ihrer Volumes zu erstellen, müssen sowohl das Volume als auch das Dateisystem über ausreichend SSD-Speicherkapazität verfügen, um den Backup-Snapshot zu speichern. Bei der Erstellung eines Backup-Snapshots kann die zusätzliche Speicherkapazität, die durch den Snapshot verbraucht wird, nicht dazu führen, dass das Volume SSD-Storage-Auslastung von über 98 % überschreitet. In diesem Fall schlägt die Sicherung fehl.

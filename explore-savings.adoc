@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: explore-savings.html 
 keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP 
-summary: 'Entdecken Sie Einsparungen bei Ihren Storage-Workloads – bei EBS-Storage (Amazon Elastic Block Store), Elastic File System (EFS) und FSX für Windows-Dateiserver im Vergleich zu AWS FSX für NetApp ONTAP.' 
+summary: 'Eine Übersicht über die Einsparungen für Ihre Storage-Workloads in Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSx for Windows File Server im Vergleich zu Amazon FSx for NetApp ONTAP.' 
 ---
 = Entdecken Sie Einsparungen mit FSx für ONTAP in der NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Entdecken Sie Einsparungen bei Ihren Storage-Workloads – bei EBS-Sto
 
 
 [role="lead"]
-Erkunden Sie die Einsparmöglichkeiten bei Ihren Storage-Workloads, die Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSX für Windows File-Server gegen FSX für NetApp ONTAP verwenden.
+Ein Vergleich mit FSx for ONTAP zeigt Einsparungsmöglichkeiten für Ihre Storage-Workloads, die Amazon Elastic Block Store (EBS), Elastic File System (EFS) und FSx for Windows File Server verwenden.
 
 NetApp Workload Factory enthält einen Speichereinsparungsrechner zum Vergleichen von Amazon-Speicherumgebungen mit FSx für ONTAP.  Sie können mit oder ohne Angabe Ihrer AWS-Anmeldeinformationen Einsparungen ermitteln und die Konfigurationseinstellungen für Ihre Speicherumgebung anpassen.  Wenn Sie AWS-Anmeldeinformationen angeben, können Sie beispielsweise eine oder mehrere Instanzen von Amazon Elastic Block Store auswählen und den Vergleich automatisch von Workload Factory durchführen lassen.  Ob manuell oder automatisch, der Rechner ermittelt, welcher Speicherdienst für Ihren Speicherbedarf die niedrigsten Kosten bietet.
 
@@ -22,7 +22,7 @@ Wenn der Speicherrechner ermittelt, dass FSx für ONTAP der kostengünstigste Sp
 [[calculator-options]]
 == Berechnungsoptionen
 
-Für den Vergleich der Kosten zwischen Ihren Systemen und FSX for ONTAP stehen zwei Rechner-Optionen zur Verfügung – Anpassung und automatische Erkennung für Ihre Amazon Storage-Umgebungen.
+Zum Vergleich der Kosten Ihrer Systeme mit FSx for ONTAP stehen zwei Rechneroptionen zur Verfügung: Anpassung oder automatische Erkennung für Ihre Amazon Storage-Umgebungen.
 
 Einsparungen durch Anpassung: Sie stellen die Konfigurationseinstellungen für eine Storage-Umgebung bereit, einschließlich Anwendungsfall, Region, Anzahl von Volumes oder File-Systemen, Storage-Menge, Snapshot-Häufigkeit, geänderter Menge pro Snapshot, bereitgestellter IOPS, Durchsatz und mehr.
 

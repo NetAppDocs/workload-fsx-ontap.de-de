@@ -187,7 +187,7 @@ Richten Sie die Infrastruktur so ein, dass AWS-Serviceereignisse vom S3-Zugriffs
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Volumes* aus.
 . Wählen Sie auf der Registerkarte „Volumes“ das Aktionsmenü für das Volume aus, für das Sie S3-Zugriffspunkte verwalten möchten, dann wählen Sie *Erweiterte Aktionen* und anschließend *S3-Zugriffspunkte verwalten*.
 . Wählen Sie auf dem Bildschirm *S3-Zugriffspunkte verwalten* das Menü Aktionen und dann *Zugriffspunkt bearbeiten* aus.
-. Im Dialogfeld *S3-Zugriffspunkt bearbeiten* stellen Sie sicher, dass die Netzwerkkonfiguration auf *Internet* eingestellt ist.
+. Im Dialogfeld *S3-Zugriffspunkt bearbeiten* muss die Netzwerkkonfiguration auf *Internet* eingestellt sein.
 . Folgen Sie den Anweisungen im Dialogfeld, um die Infrastruktur für die Journaltabellenfunktion einzurichten.
 . Laden Sie die CloudFormation-Vorlage herunter.
 . Stellen Sie den CloudFormation Stack in Ihrem AWS-Konto bereit.
@@ -232,7 +232,7 @@ Falls der Stack mit einem  `AccessDenied` oder  `InsufficientPermission` Fehler 
 
 ==== CloudTrail-Limit
 
-AWS legt standardmäßig ein Limit von 5 Trails pro Region fest. Wenn das Konto bereits 5 Trails enthält, `the FsxDataEventTrail` schlägt die Ressource mit folgender Fehlermeldung fehl: Maximum number of trails (5) exceeded. Sie können die Anzahl der Trails auf regionaler Ebene mit folgendem Befehl überprüfen:
+AWS setzt standardmäßig ein Limit von fünf Trails pro Region durch. Wenn das Konto bereits fünf Trails enthält, schlägt die `FsxDataEventTrail` Ressource mit Folgendem fehl: Maximum number of trails (5) exceeded. Die Anzahl der Trails auf regionaler Ebene lässt sich mit folgendem Befehl überprüfen:
 
 [source, cli]
 ----
@@ -335,14 +335,14 @@ Die S3TableIntegration erstellt automatisch einen Tabellen-Bucket namens aws-clo
 +
 ** Wenn der aws-cloudwatch-Tabellen-Bucket nicht existiert, dann fehlen die `S3TableIntegrationRole` Berechtigungen. Es benötigt `s3tables:CreateTableBucket`, `s3tables:PutTableBucketEncryption` und `s3tables:PutTableBucketPolicy` — alle beschränkt auf `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`.
 ** Wenn der Tabellen-Bucket existiert, aber `logs.aws_cloudtrail__data` nicht, dann leitet die Integration keine Ereignisse weiter. Die Integration muss `Status: ACTIVE` anzeigen und `aws_cloudtrail` als Protokollquelle einbinden.
-** Existiert die Tabelle, ist das entsprechende Ereignis aber nicht darin enthalten, befindet es sich möglicherweise noch in der Übertragung. Die Datenaufnahme in S3-Tabellen kann eine gewisse Latenz aufweisen. Warten Sie einige Minuten. Sollte das Ereignis nach 15–20 Minuten immer noch nicht angezeigt werden, ist die Integration möglicherweise fehlgeschlagen.
+** Existiert die Tabelle, ist das entsprechende Ereignis aber nicht darin enthalten, befindet es sich möglicherweise noch in der Übertragung. Die Datenaufnahme in S3 Tables kann eine gewisse Latenz aufweisen. Einige weitere Minuten sind abzuwarten. Sollte das Ereignis nach 15-20 Minuten immer noch nicht angezeigt werden, ist die Integration möglicherweise fehlerhaft.
 
 
 . Fragen Sie das Seed-Ereignis direkt ab.
 +
 .. Öffnen Sie die S3-Tabellen in der AWS-Managementkonsole.
 .. Navigieren Sie zum aws-cloudwatch table bucket → aws_cloudtrail__data table und verwenden Sie die Schaltfläche *Vorschau*, um eine Schnellabfrage direkt im Browser auszuführen.
-.. Wenn das Ereignis in der Tabelle vorhanden ist, das Journal aber immer noch  `FAILED` anzeigt, dann ist das Abfragefenster möglicherweise abgelaufen, bevor das Ereignis eingetreten ist.
+.. Wenn das Ereignis in der Tabelle vorhanden ist, das Protokoll aber immer noch `FAILED` anzeigt, dann ist das Abfragefenster möglicherweise abgelaufen, bevor das Ereignis eingegangen ist.
 
 
 

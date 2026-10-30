@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-volume-capacity.html 
 keywords: volume size, rebalance volume capacity, adjust volume capacity, volume autogrow, manage volume capacity, FlexVol volume, FlexGroup volume 
-summary: Informationen zur Verwaltung der Volumenkapazität, einschließlich der manuellen Anpassung der Volumengröße und der Verwendung von Volume Autogrow in Workload Factory. 
+summary: In Workload Factory lassen sich die Volume-Größe manuell anpassen, das automatische Vergrößern von Volumes aktivieren und die Kapazität von FlexVol und FlexGroup Volumes neu ausbalancieren. 
 ---
 = Kapazität von Volumes in der NetApp Workload Factory verwalten
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Informationen zur Verwaltung der Volumenkapazität, einschließlich der
 
 
 [role="lead"]
-Die Volume-Kapazität sollte an den sich ändernden Bedarf angepasst werden. Die Volume-Größe kann manuell angepasst oder die automatische Größenanpassung für Volumes aktiviert werden, damit Workload Factory die Volume-Kapazität verwaltet. Das Gleichgewicht der FlexVol- oder FlexGroup-Volume-Kapazität kann überprüft und die Volume-Kapazität neu verteilt werden, um Dateien gleichmäßig auf alle FlexVol-Volumes in einem Node oder auf alle Bestandteile zu verteilen, sodass alle Nodes an der Arbeitslast eines einzelnen FlexGroup-Volumes beteiligt sind.
+Passen Sie die Volume-Kapazität an, wenn sich Ihre Anforderungen ändern. Die Volume-Größe kann manuell erhöht oder verringert werden, Volume autogrow kann aktiviert werden, damit Workload Factory die Kapazität für Sie managt, oder die Kapazität von FlexVol- und FlexGroup-Volumes kann neu ausbalanciert werden, um Dateien gleichmäßig auf alle FlexVol-Volumes in einem Node oder auf alle Bestandteile zu verteilen, sodass alle Nodes an der Workload eines einzelnen FlexGroup-Volumes beteiligt sind.
 
 
 
@@ -44,7 +44,7 @@ Geben Sie die maximale Größe und Einheit für das Volumewachstum an. Die maxim
 [[adjust-volume-capacity-manually]]
 == Volume-Kapazität manuell anpassen
 
-Sie können die Speicherkapazität anpassen, indem Sie die bereitgestellte Größe eines Volumes erhöhen oder verringern.  Die folgende Tabelle zeigt die minimalen und maximalen Volumengrößen nach Volumentyp:
+Sie können die Volume-Kapazität anpassen, indem Sie die provisionierte Größe eines Volumes erhöhen oder verringern. Die minimalen und maximalen Größen variieren je nach Volume-Typ:
 
 [cols="1,1,1"]
 |===
@@ -78,23 +78,23 @@ Um die Volume-Kapazität anzupassen, muss ein Link zugeordnet werden. link:https
 [[rebalance-volume-capacity-for-flexvol-and-flexgroup-volumes]]
 == Kapazität von FlexVol- und FlexGroup-Volumes neu ausbalancieren
 
-Die Neuausrichtung der Volume-Kapazität wird für FlexVol-Volumes und FlexGroup-Volumes unterstützt. Wenn sich aufgrund des Hinzufügens neuer Dateien und des Dateiwachstums Ungleichgewichte im Laufe der Zeit entwickeln, wird die Kapazität durch eine Ausbalancierung eines Volumes neu verteilt. Nachdem Sie den Neuausgleich manuell starten, wählen wir die Dateien aus und verschieben sie automatisch und unterbrechungsfrei. Volume-Transfervorgänge verbrauchen Filesystem-Ressourcen.
+Die Neuausrichtung der Volume-Kapazität wird für FlexVol Volumes und FlexGroup Volumes unterstützt. Bei der Neuausrichtung eines Volumes wird die Kapazität neu verteilt, wenn im Laufe der Zeit durch das Hinzufügen neuer Dateien und durch Dateiwachstum Ungleichgewichte entstehen. Nach dem manuellen Starten der Neuausrichtung wählt Workload Factory die Dateien aus und verschiebt sie automatisch und unterbrechungsfrei. Volume-Transfervorgänge beanspruchen Dateisystemressourcen.
 
-Jeder Volumetyp und jede Neuausgleichsoperation unterscheidet sich wie folgt.
+Die Neugewichtung unterscheidet sich je nach Volume-Typ.
 
 .FlexVol Volumes
 FlexVol-Volumes sind logische Container, die Flexibilität bei der Datenverwaltung bieten und Erweiterung, Verkleinerung, Verschiebung und effizientes Kopieren ermöglichen. Sie können in NAS- und SAN-Umgebungen eingesetzt werden.
 
-Ein FlexVol-Volume kann im Verhältnis zu anderen FlexVol-Volumes innerhalb eines Knotens in einem FSx for ONTAP-Dateisystem ausgeglichen werden. Wenn das Dateisystem nur über ein einziges FlexVol-Volume verfügt, ist ein Neuausgleich nicht möglich. Wenn das Dateisystem mehr als ein FlexVol-Volume pro Knoten hat und ein einzelnes FlexVol-Volume ausgewählt ist, wird das FlexVol-Volume im Kontext aller FlexVols ausgeglichen, aber nur das ausgewählte Volume darf verschoben werden.
+Ein FlexVol volume kann im Verhältnis zu anderen FlexVol volumes innerhalb eines Node in einem FSx for ONTAP Dateisystem ausbalanciert werden. Wenn das Dateisystem nur ein einziges FlexVol volume hat, ist eine Neuausrichtung nicht möglich. Wenn das Dateisystem pro Node mehr als ein FlexVol volume hat und ein einzelnes FlexVol volume ausgewählt wird, wird das FlexVol volume im Kontext aller FlexVols ausbalanciert, aber nur das ausgewählte volume darf verschoben werden.
 
 .FlexGroup Volumes
 FlexGroup-Volumes hingegen sind skalierbare NAS-Container, die auf hohe Leistung und automatische Lastverteilung ausgelegt sind. Sie bestehen aus mehreren Mitgliedsvolumes (Bestandteilen), die den Datenverkehr transparent teilen. FlexGroup-Volumes bieten enorme Kapazität und übertreffen die FlexVol-Grenzen mit bis zu 60 PB Kapazität und 400 Milliarden Dateien. Sie vereinfachen die Verwaltung durch die Bereitstellung eines einzigen Namespace-Containers.
 
-Die Kapazität wird auf eine Reihe von Komponenten in einem Scale-Out-FSx für ONTAP-Dateisystem mit zwei oder mehr Hochverfügbarkeitspaaren (HA) verteilt. Jede Komponente ist ein Container, der die maximale einzelne Dateigröße vorgibt. FSX for ONTAP verteilt Dateien gleichmäßig über alle Komponenten, sodass alle Nodes am Workload eines einzelnen FlexGroup Volumes teilnehmen.
+Die Kapazität wird in einem Scale-out FSx for ONTAP Dateisystem mit zwei oder mehr Hochverfügbarkeitspaaren (HA) auf mehrere Bestandteile verteilt. Jeder Bestandteil ist ein Container, der die maximale Größe einer einzelnen Datei festlegt. FSx for ONTAP verteilt die Dateien gleichmäßig auf alle Bestandteile, sodass alle Knoten an der Workload eines einzelnen FlexGroup Volume beteiligt sind.
 
 Wenn die Komponenten nicht gleichmäßig über alle Nodes verteilt werden, sinkt die Volume-Performance von FlexGroup.
 
-Zur Überprüfung der Ausgewogenheit der FlexGroup Volumenkapazität gehört auch die Beurteilung der aktuellen Zusammensetzung der Bestandteile.  Wenn Sie die Kapazität des Volumes neu ausbalancieren, entwirft NetApp Workload Factory ein neues Komponentenlayout mit einer geraden Anzahl von Komponenten, um die Daten gleichmäßig auf alle HA-Paare zu verteilen.  Der Dienst führt den Neuausgleichsplan aus, der wiederum die Lese- und Schreibvorgänge verbessert.
+Die Überprüfung der Kapazitätsauslastung eines FlexGroup Volume umfasst auch die Bewertung des aktuellen Layouts der Bestandteile. Beim Neuausbalancieren der Kapazität des Volume entwirft NetApp Workload Factory ein neues Layout der Bestandteile mit einer geraden Anzahl von Bestandteilen, um die Daten gleichmäßig auf alle HA-Paare zu verteilen. Der Dienst führt den Neuausbalancierungsplan aus, was wiederum die Lese- und Schreibvorgänge verbessert.
 
 
 NOTE: Für SAN-Volumes wie iSCSI und NVMe wird die Neuverteilung nicht unterstützt.
@@ -142,7 +142,7 @@ NOTE: Ein Workload Factory-Administrator kann<<Stoppen eines Volume-Neuausgleich
 .Bevor Sie beginnen
 * <<Überprüfen Sie den Saldo Ihrer Volumina,Überprüfen Sie den Saldo eines Volumens>> Vor der Ausbalancierung von Volumes.
 * Um ein Volume neu auszubalancieren, muss link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Einen Link erstellen und zuordnen oder einen vorhandenen Link mit dem Dateisystem verknüpfen"^] werden. Nachdem die Verknüpfung hergestellt wurde, zu diesem Vorgang zurückkehren.
-* Beachten Sie, dass bestehende Snapshots auf Volumes, die Sie ausgleichen, teilweise werden und nicht zur Wiederherstellung von Volume-Daten verwendet werden können. Neue Snapshots nach der Ausbalancierung können jedoch zur Wiederherstellung von Volume-Daten verwendet werden.
+* Vorhandene Snapshots auf Volumes, die Sie neu ausbalancieren, werden unvollständig und können nicht zur Wiederherstellung von Volume-Daten verwendet werden. Neue Snapshots, die nach der Neuausbalancierung erstellt werden, können jedoch zur Wiederherstellung von Volume-Daten verwendet werden.
 * FlexVol-Volumes werden am besten komplett neu ausbalanciert, um alle Volume-Ressourcen gleichmäßig zu verteilen. Abgewählte Volumes nehmen nicht aktiv am Ausgleichsprozess teil.
 
 
@@ -150,7 +150,7 @@ NOTE: Ein Workload Factory-Administrator kann<<Stoppen eines Volume-Neuausgleich
 ====
 .FlexVol Volume
 --
-Ein FlexVol-Volume kann im Verhältnis zu anderen FlexVol-Volumes innerhalb eines Knotens in einem FSx for ONTAP-Dateisystem ausgeglichen werden. Wenn das Dateisystem mehr als ein FlexVol-Volume pro Knoten hat und ein einzelnes FlexVol-Volume ausgewählt ist, wird das FlexVol-Volume im Kontext aller FlexVols ausgeglichen, aber nur das ausgewählte Volume darf verschoben werden.
+Ein FlexVol volume kann innerhalb eines Knotens in einem FSx for ONTAP-Dateisystem im Verhältnis zu anderen FlexVol volumes ausbalanciert werden. Wenn das Dateisystem mehr als ein FlexVol volume pro Knoten hat und ein einzelnes FlexVol volume ausgewählt ist, wird das FlexVol volume im Kontext aller FlexVols ausbalanciert, aber nur das ausgewählte volume darf verschoben werden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.

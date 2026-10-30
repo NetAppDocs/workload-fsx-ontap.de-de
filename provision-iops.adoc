@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: provision-iops.html 
 keywords: iops, SSD, provision, allocate 
-summary: Automatische Provisionierung oder manuelle Bereitstellung von SSD-IOPS für ein FSX für ONTAP Filesystem. 
+summary: In Workload Factory lässt sich für ein FSx for ONTAP Dateisystem die automatische SSD-IOPS-Provisionierung aktivieren oder ein vom Benutzer provisionierter IOPS-Wert festlegen. 
 ---
 = Stellen Sie SSD-IOPS für ein FSX für ONTAP-Filesystem bereit
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: Automatische Provisionierung oder manuelle Bereitstellung von SSD-IOPS 
 
 
 [role="lead"]
-Stellen Sie SSD-IOPS für ein FSx für ONTAP Dateisystem in NetApp Workload Factory automatisch oder manuell bereit.
+Automatische oder manuelle Provisionierung von SSD-IOPS für ein FSx for ONTAP Dateisystem in NetApp Workload Factory, um die für Ihre Workloads verfügbare Performance zu steuern.
 
 .Über diese Aufgabe
-Sie können die automatische SSD-IOPS-Bereitstellung für ein FSX-Dateisystem aktivieren oder IOPS manuell bereitstellen.
+Bei einem FSx for ONTAP Dateisystem lässt sich die automatische SSD-IOPS-Provisionierung aktivieren, oder IOPS lassen sich manuell provisionieren.
 
 Die automatisch bereitgestellten IOPS werden als drei IOPS pro GiB berechnet.
 

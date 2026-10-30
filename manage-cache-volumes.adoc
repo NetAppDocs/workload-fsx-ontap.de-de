@@ -11,7 +11,7 @@ summary: Verwalten Sie bei Bedarf die Cache-Volumes für ein FSx for ONTAP -Date
 
 
 [role="lead"]
-Verwenden Sie die NetApp Workload Factory Konsole, um Cache-Volumes für FSx for ONTAP -Dateisysteme zu verwalten.  Caching, eine Methode zur temporären Speicherung von Daten, verbessert die Datenzugriffsleistung durch Verkürzung der Abrufzeit.  Sie können den Cache-Namen bearbeiten, die Kapazität anpassen, die Exportrichtlinie ändern, eine Caching-Methode auswählen, den Cache vorab befüllen oder Cache-Volumes löschen.
+Mit der NetApp Workload Factory Managementplattform lassen sich Cache-Volumes für FSx for ONTAP-Dateisysteme managen. Caching, eine Methode zur temporären Speicherung von Daten, verbessert die Performance beim Datenzugriff, indem die Abrufzeit verkürzt wird. Sie können den Cache-Namen bearbeiten, die Kapazität anpassen, die Exportrichtlinie ändern, eine Caching-Methode auswählen, den Cache vorab befüllen oder Cache-Volumes löschen.
 
 .Über diese Aufgabe
 In der NetApp Workload Factory -Konsole können Sie Cache-Volumes verwalten, die mit Cache-Beziehungen verknüpft sind.

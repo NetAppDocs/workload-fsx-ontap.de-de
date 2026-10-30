@@ -33,7 +33,7 @@ Sie können auch eine gespeicherte Konfiguration laden.
 
 
 
-.. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
+.. *Tags*: Optional lassen sich bis zu 50 Tags hinzufügen.
 
 
 . Geben Sie unter Dateisystemdetails Folgendes an:
@@ -47,8 +47,8 @@ Sie können auch eine gespeicherte Konfiguration laden.
 .. *Durchsatzkapazität pro HA-Paar*: Wählen Sie die Durchsatzkapazität pro Anzahl von HA-Paaren. Dateisysteme der ersten Generation unterstützen nur ein HA-Paar.
 .. *Bereitgestellte IOPS*: Wählen Sie eine der folgenden Optionen:
 +
-*** *Automatisch*: Bei der automatischen Ausführung werden für jedes erstellte GiB 3 IOPS hinzugefügt.
-*** *Vom Benutzer bereitgestellt*: Geben Sie für die Benutzerbereitstellung den IOPS-Wert ein.
+*** *Automatisch*: Fügt 3 IOPS pro erstelltem GiB hinzu.
+*** *Vom Benutzer bereitgestellt*: Eingabe des IOPS-Werts.
 
 
 .. *ONTAP Credentials*: Optional. Geben Sie Ihren ONTAP-Benutzernamen und Ihr Kennwort ein. Das Passwort kann jetzt oder später festgelegt werden.
@@ -63,7 +63,7 @@ Wenn der von Ihnen eingegebene Benutzer nicht der Benutzer fsxadmin ist und Sie 
 ... *SMB-Server NetBIOS-Name*: Geben Sie den SMB-Server NetBIOS-Namen des Active Directory-Computerobjekts ein, das für Ihre Speicher-VM erstellt werden soll. Dies ist der Name dieser Speicher-VM im Active Directory.
 ... *Benutzername*: Geben Sie den Benutzernamen des Dienstkontos in Ihr vorhandenes Active Directory ein.
 +
-Geben Sie kein Domänenpräfix oder Suffix ein. Für `EXAMPLE\ADMIN`, verwenden `ADMIN`.
+Ein Domänenpräfix oder -suffix darf nicht enthalten sein. Für `EXAMPLE\ADMIN` ist  `ADMIN` zu verwenden.
 
 ... *Passwort*: Geben Sie das Passwort für das Service-Konto ein.
 ... *Organisationseinheit*: Geben Sie optional den Namen der Organisationseinheit ein, in der Sie das Computerkonto für FSX für ONTAP erstellen möchten. Die Organisationseinheit ist der Distinguished Path Name der Organisationseinheit, der Sie dem Dateisystem beitreten möchten.

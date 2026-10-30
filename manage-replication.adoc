@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-replication.html 
 keywords: replication management, manage replication, pause replication, stop replication, break replication, delete replication, track replication, change replication schedule, limit replication transfer rate, reverse replication 
-summary: Replikationsbeziehungen in NetApp Workload Factory verwalten. 
+summary: Replikationsbeziehungen anhalten, fortsetzen, umkehren, stoppen und löschen, den Replikationszeitplan ändern und die Transferrate in NetApp Workload Factory begrenzen. 
 ---
 = Verwalten Sie Ihre Replikationsbeziehungen in NetApp Workload Factory
 :allow-uri-read: 
@@ -20,7 +20,7 @@ Verwalten Sie Ihre Replikationsbeziehungen in NetApp Workload Factory. Sie könn
 
 Ändern Sie den Replikationszeitplan des Quellvolumes in einer Replikationsbeziehung in NetApp Workload Factory.
 
-Legen Sie fest, wie oft Snapshots vom Quell-Volume auf das replizierte Volume übertragen werden, um die erforderlichen Point Objectives (RPOs) zu erfüllen.
+Die Häufigkeit der Übertragung von Snapshots vom Quell-Volume auf das replizierte Volume sollte so gewählt werden, dass sie Ihren Recovery Point Objectives (RPOs) entspricht.
 
 Wenn ein On-Premises-ONTAP-Cluster Ziel der Replikationsbeziehung ist, wird eine Änderung des Replikationszeitplans nicht unterstützt.
 
@@ -32,7 +32,7 @@ Wenn ein On-Premises-ONTAP-Cluster Ziel der Replikationsbeziehung ist, wird eine
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
 . Wählen Sie auf der Registerkarte „Replikationsbeziehungen“ das Aktionsmenü des zu ändernden Replikationsbeziehungszeitplans aus.
 . Wählen Sie *Replikationsintervall bearbeiten*.
-. Wählen Sie im Dialogfeld Replikationsintervall bearbeiten die Häufigkeit der Snapshot-Übertragung vom Quell-Volume aus. Sie können zwischen den folgenden Frequenzen wählen:
+. Im Dialogfeld „Replikationsintervall bearbeiten“ wird die Häufigkeit der Snapshot-Übertragung vom Quell-Volume ausgewählt. Zur Auswahl steht eine der folgenden Häufigkeiten:
 +
 ** Alle 5 Minuten
 ** Stündlich
@@ -51,7 +51,7 @@ Wenn ein On-Premises-ONTAP-Cluster Ziel der Replikationsbeziehung ist, wird eine
 
 Die Begrenzung der maximalen Übertragungsrate ist optional, wird jedoch empfohlen. Ohne Einschränkung kann die Netzwerk- und Applikations-Performance abnehmen.
 
-Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+Für kritische Workloads, wie z. B. FSx for ONTAP Dateisysteme, die hauptsächlich für die Notfallwiederherstellung verwendet werden, wird eine unbegrenzte Transferrate empfohlen.
 
 .Bevor Sie beginnen
 Berücksichtigen Sie, wie viel Bandbreite für die Replikation zugewiesen werden soll.
@@ -62,7 +62,7 @@ Berücksichtigen Sie, wie viel Bandbreite für die Replikation zugewiesen werden
 . Wählen Sie im Speichermenü *FSx für ONTAP* aus.
 . Wählen Sie in *FSx for ONTAP* das Aktionsmenü des zu aktualisierenden Dateisystems und dann *Verwalten*.
 . Wählen Sie in der Dateisystemübersicht die Registerkarte *Replikationsbeziehungen* aus.
-. Wählen Sie auf der Registerkarte „Replikationsbeziehungen“ das Aktionsmenü der Replikationsbeziehung aus, für die Sie die maximale Übertragungsrate begrenzen möchten.
+. Auf der Registerkarte „Replikationsbeziehungen“ ist das Aktionsmenü der Replikationsbeziehung auszuwählen, für die die maximale Transferrate begrenzt werden soll.
 . Wählen Sie *Max. Übertragungsrate bearbeiten*.
 . Wählen Sie im Dialogfeld Max. Übertragungsrate bearbeiten die Option *Limited* aus, und geben Sie die maximale Übertragungsgrenze in MB/s ein
 +
@@ -118,7 +118,7 @@ Die Beziehung hält an und ihr Status wird als „angehalten“ angezeigt.
 [[resume-a-paused-replication-relationship]]
 == Nehmen Sie eine angehaltene Replikationsbeziehung wieder auf
 
-Wenn Sie eine Replikationsbeziehung wiederherstellen, werden alle Änderungen am Ziel-Volume, die während der Unterbrechung der Replikation vorgenommen wurden, gelöscht. Das Ziel-Volume wechselt vom lesen/schreiben in den Nur-Lese-Modus und empfängt wieder Aktualisierungen vom Quell-Volume im geplanten Replikationsintervall.
+Wenn eine Replikationsbeziehung fortgesetzt wird, werden alle Änderungen am Ziel-Volume gelöscht, die vorgenommen wurden, während die Replikation angehalten war. Das Ziel-Volume wechselt von lesen/schreiben zu schreibgeschützt und empfängt wieder Aktualisierungen vom Quell-Volume im geplanten Replikationsintervall.
 
 
 NOTE: Alle Daten, die zwischen der letzten Datenreplikation und der Deaktivierung des Quell-Volumes auf das ursprüngliche Quell-Volume geschrieben wurden, bleiben nicht erhalten.
@@ -152,7 +152,7 @@ Rückwärtsgänge werden für folgende Vorgänge unterstützt:
 
 Nachdem Sie die Replikation beendet und Änderungen am Ziel-Volume vorgenommen haben, können Sie diese Änderungen zurück auf das Quell-Volume replizieren. Dieser Prozess ist in einem Disaster-Recovery-Szenario üblich, in dem Sie eine Weile auf dem Ziel-Volume arbeiten und die Rollen der Volumes wechseln möchten.
 
-Wenn Sie eine Replikation rückgängig machen und wieder aufnehmen, wechselt sie die Quell- und Zielrollen der Volumes, das Ziel-Volume wird das neue Quell-Volume und das Quell-Volume wird das neue Ziel-Volume. Bei der Umkehrung wird auch der Inhalt des neuen Ziel-Volume mit dem Inhalt des neuen Quell-Volume überschrieben. Wenn Sie eine Replikation zweimal umkehren, wird die ursprüngliche Replikationsrichtung neu erstellt.
+Wenn Sie eine Replikation umkehren und fortsetzen, werden die Quell- und Zielrollen Ihrer Volumes getauscht; das Ziel-Volume wird zum neuen Quell-Volume und das Quell-Volume zum neuen Ziel-Volume. Der Umkehrvorgang überschreibt außerdem den Inhalt des neuen Ziel-Volumes mit dem Inhalt des neuen Quell-Volumes. Wenn Sie eine Replikation zweimal umkehren, stellt sich die ursprüngliche Replikationsrichtung wieder her.
 
 []
 ====
@@ -203,7 +203,7 @@ Der Replikationsstatus des Volumes ändert sich in *broken*. Das Ziel-Volume wir
 [[delete-a-replication-relationship]]
 == Löschen einer Replikationsbeziehung
 
-Löschen Sie eine Replikationsbeziehung in NetApp Workload Factory.  Wenn Sie eine Replikationsbeziehung löschen, wird die Replikationsbeziehung zwischen dem Quell- und dem Zielvolume entfernt.  Nachdem die Replikationsbeziehung gelöscht wurde, bestehen beide Volumes mit den aktuellen Daten, die sie enthalten, weiterhin unabhängig voneinander fort.
+Löschen einer Replikationsbeziehung in NetApp Workload Factory. Beim Löschen einer Replikationsbeziehung wird die Verbindung zwischen dem Quell- und dem Ziel-Volume entfernt. Nach dem Löschen der Beziehung existieren beide Volumes weiterhin unabhängig voneinander mit den jeweils enthaltenen Daten.
 
 Wenn Sie eine Replikationsbeziehung löschen, löscht FSX für ONTAP auch die allgemeinen Replikations-Snapshots des Quell- und Zielvolume.
 

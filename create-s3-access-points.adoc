@@ -11,7 +11,7 @@ summary: Erstellen Sie S3-Zugriffspunkte für ein Volume in NetApp Workload Fact
 
 
 [role="lead"]
-Erstellen und Zuordnen von S3-Zugriffspunkten für ein Volume in NetApp Workload Factory.
+Das Erstellen und Verknüpfen von S3-Zugriffspunkten mit einem FSx for ONTAP-Volume in NetApp Workload Factory ermöglicht AWS Services den Zugriff auf Volume-Dateien, als ob sie sich in einem S3-Bucket befänden.
 
 .Über diese Aufgabe
 Amazon FSx for NetApp ONTAP ermöglicht NFS- und SMB-Dateisystemen den Zugriff auf S3-Daten und die Anbindung an AWS-Services wie Amazon Bedrock, SageMaker, Athena, AWS Glue und mehr. Sie können AWS-Services mit all Ihren Objektspeicherdaten verbinden.
@@ -41,7 +41,7 @@ Bitte erfüllen Sie die folgenden Anforderungen, bevor Sie beginnen.
 ** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.
 ** *Benutzertyp*: Wählen Sie als Benutzertyp *UNIX* oder *Windows* aus.
 ** *Netzwerkkonfiguration*: Wählen Sie *Internet* oder *Virtual private cloud (VPC)*. Die Wahl des Netzwerktyps bestimmt, ob der Zugriffspunkt über das Internet erreichbar ist oder auf eine bestimmte VPC beschränkt ist. Um die Journal-Tabellenfunktion zu nutzen, müssen Sie *Internet* als Netzwerkkonfiguration auswählen.
-** *Inventartabelle*: Optional. Erfordert die  `getObject` Berechtigung. Aktivieren Sie die Inventartabelle auf dem Volume, um Metadaten für alle Objekte zu generieren, die über den S3-Zugriffspunkt zugänglich sind, und es entstehen AWS S3-Anfragekosten. Weitere Informationen finden Sie unter link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^]. Die Tabelle wird alle 24 Stunden aktualisiert.
+** *Inventartabelle*: Optional. Erfordert die `getObject` Berechtigung. Die Aktivierung der Inventartabelle auf dem Volume generiert Metadaten für alle Objekte, die über den S3-Zugriffspunkt zugänglich sind, und verursacht AWS S3-Anfragekosten. Weitere Informationen finden sich in link:https://aws.amazon.com/s3/pricing/["Amazon S3 Preisdokumentation"^]. Die Tabelle wird alle 24 Stunden aktualisiert.
 ** *S3 access point tags*: Optional können Sie bis zu 50 Tags hinzufügen oder entfernen.
 
 

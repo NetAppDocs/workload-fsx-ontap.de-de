@@ -16,7 +16,7 @@ Verwenden Sie NetApp Workload Factory, um Initiatorgruppen zu erstellen und den 
 .Über diese Aufgabe
 Initiatorgruppen, oder Initiatorgruppen (igroups), verbinden Blockgeräte (LUNs) mit den Rechenressourcen, die darauf zugreifen dürfen. Im Gegensatz zu NFS oder CIFS, wo ein Volume allgemein zugänglich ist und Benutzerberechtigungen den Zugriff steuern, werden Berechtigungen für Blockspeicher auf Maschinenebene verwaltet. Typischerweise kann jeweils nur ein System auf ein Blockgerät zugreifen.
 
-Eine Initiatorgruppe dient als Berechtigungsebene für Blockspeicher. Wenn sich ein Server mit dem Speichersystem verbindet, identifiziert er sich mit seinem iSCSI qualified (IQN) Host-Initiator. Wenn dieser IQN zu einer oder mehreren Initiatorgruppen gehört, erhält der Server Zugriff auf alle LUNs, die diesen Initiatorgruppen zugeordnet sind. Sowohl eine Initiatorgruppe als auch eine iSCSI-Hostverbindung sind erforderlich, damit iSCSI ordnungsgemäß funktioniert.
+Eine Initiatorgruppe dient als Berechtigungsebene für Block-Storage. Wenn sich ein Server mit dem Storage-System verbindet, identifiziert er sich über seinen Host-Initiator mit iSCSI Qualified Name (IQN). Gehört dieser IQN zu einer oder mehreren Initiatorgruppen, erhält der Server Zugriff auf alle LUNs, die diesen Initiatorgruppen zugeordnet sind. Sowohl eine Initiatorgruppe als auch eine iSCSI-Hostverbindung sind erforderlich, damit iSCSI ordnungsgemäß funktioniert.
 
 .Bevor Sie beginnen
 Sie müssen eine Verknüpfung herstellen, um Initiatorgruppen zu erstellen. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Erfahren Sie, wie Sie einen vorhandenen Link zuordnen oder einen neuen Link erstellen und zuordnen."^]. Kehren Sie nach der Verknüpfung zu diesem Vorgang zurück.
@@ -34,7 +34,7 @@ Sie müssen eine Verknüpfung herstellen, um Initiatorgruppen zu erstellen. link
 ** *Name der Storage-VM*: Wählen Sie die Storage-VM für die Initiatorgruppe aus.
 ** *Blockgerätename*: Wählen Sie ein oder mehrere Blockgeräte aus, die der Initiatorgruppe zugeordnet werden sollen. Die aufgelisteten Blockgeräte sind diejenigen, die noch keinem Host-Initiator zugeordnet wurden.
 ** *Betriebssystemtyp*: Wählen Sie Linux, VMware oder Windows für den Betriebssystemtyp aus.
-** *Host-Initiatoren*: Fügen Sie der Initiatorgruppe einen oder mehrere iSCSI Qualified (IQN) Host-Initiatoren hinzu.
+** *Host-Initiatoren*: Einen oder mehrere Host-Initiatoren mit iSCSI Qualified Name (IQN) zur Initiatorgruppe hinzufügen.
 
 
 . Wählen Sie *Erstellen*.

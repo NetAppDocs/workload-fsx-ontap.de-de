@@ -11,7 +11,7 @@ summary: Details der S3-Zugriffspunkte für ein Volume in NetApp Workload Factor
 
 
 [role="lead"]
-Zeigen Sie Details zu S3-Zugriffspunkten wie Alias, ARN und S3-URI an. Mit aktivierten Inventar- und Journaltabellen können Sie Metadaten und Audit-Protokolle von Benutzerzugriffsereignissen und Objektoperationen über alle S3-Zugriffspunkte hinweg einsehen.
+Details zu S3-Zugriffspunkten wie Alias, ARN und S3-URI sind einsehbar. Wenn die Inventar- und Journaltabellen aktiviert sind, sind Metadaten und Audit-Protokolle von Benutzerzugriffsereignissen und Objektoperationen über alle S3-Zugriffspunkte hinweg einsehbar.
 
 .Über diese Aufgabe
 Wenn die Inventartabelle für das Volume aktiviert ist, können Sie Zugriffspunkt-, Inventartabellen- und Bucket-Details der vorhandenen S3-Zugriffspunkte, die mit dem Volume verbunden sind, anzeigen. Das System stellt außerdem einen Link zur Inventartabelle in der AWS Management Console bereit.

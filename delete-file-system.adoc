@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: Um ein Dateisystem in NetApp Workload Factory zu löschen, müssen Sie zunächst alle mit dem Dateisystem verknüpften Volumes, Speicher-VMs oder Replikationsbeziehungen löschen. 
+summary: Das Löschen eines FSx for ONTAP Dateisystems in NetApp Workload Factory erfolgt, nachdem dessen Volumes, Storage VMs und Replikationsbeziehungen entfernt wurden. 
 ---
 = Löschen eines Dateisystems in NetApp Workload Factory
 :allow-uri-read: 

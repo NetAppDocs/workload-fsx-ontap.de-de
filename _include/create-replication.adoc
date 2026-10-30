@@ -18,7 +18,7 @@ Während der Migration greifen Clients auf Daten des Quell-ONTAP-Dateisystems zu
 ** Hot Disaster Recovery: Hohe Verfügbarkeit und schnelles Disaster Recovery für kritische Workloads
 ** Disaster Recovery in kalten oder archivierten Daten:
 +
-*** Cold Disaster Recovery: Verwendet längere Recovery-Zeitvorgaben (RTO) und Recovery-Zeitpunkte (RPO) zur Senkung der Kosten
+*** Kalte Notfallwiederherstellung: verwendet längere Wiederherstellungszeitvorgaben (RTO) und Wiederherstellungspunktvorgaben (RPO), um Kosten zu senken
 *** Archiv: Replizierung von Daten für langfristige Speicherung und Compliance
 
 
@@ -47,11 +47,11 @@ Wenn die Namen der Quell- und Ziel-Storage-VMs identisch sind, erstellen wir ein
 _Ausgewogen (Auto)_ ist die Standard-Tiering-Richtlinie beim Erstellen eines Volumes über die Workload Factory-Konsole. Weitere Informationen zu den Richtlinien für die Mengenstaffelung finden Sie unter link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Speicherkapazität für Volumes"^] in der AWS FSx für NetApp ONTAP Dokumentation. Beachten Sie, dass Workload Factory in der Workload Factory-Konsole anwendungsfallbasierte Namen für Tiering-Richtlinien verwendet und FSx for ONTAP Tiering-Richtliniennamen in Klammern angibt.
 
 +
-Wenn Sie den Migrationsanwendungsfall ausgewählt haben, wählt Workload Factory automatisch aus, dass die Tiering-Richtlinie des Quellvolumes auf das Zielvolume kopiert werden soll.  Sie können die Option zum Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die für das für die Replikation ausgewählte Volume gilt.
+Wenn Sie den Anwendungsfall Migration ausgewählt haben, wählt Workload Factory automatisch das Kopieren der Tiering-Richtlinie vom Quell-Volume auf das Ziel-Volume aus. Sie können das Kopieren der Tiering-Richtlinie deaktivieren und eine Tiering-Richtlinie auswählen, die für das zur Replikation ausgewählte Volume gilt.
 
 . *Max. Übertragungsrate*: Wählen Sie *Limited* und geben Sie die maximale Übertragungsgrenze in MB/s. ein Alternativ wählen Sie *Unlimited*.
 +
-Ohne Einschränkung kann die Netzwerk- und Anwendungsleistung abnehmen. Alternativ empfehlen wir eine unbegrenzte Übertragungsrate für die Dateisysteme FSX for ONTAP für kritische Workloads, zum Beispiel solche, die primär für die Disaster Recovery genutzt werden.
+Ohne eine Begrenzung könnten Netzwerk- und Applikations-Performance sinken. Wir empfehlen jedoch eine unbegrenzte Transferrate für FSx for ONTAP Dateisysteme für kritische Workloads, beispielsweise solche, die primär für die Notfallwiederherstellung verwendet werden.
 
 +
 .. Geben Sie unter Replikationseinstellungen Folgendes an:
@@ -84,7 +84,7 @@ NOTE: Für die Langzeitarchivierung sind übereinstimmende Quell- und Zielbezeic
 ** *Snapshot-Richtlinien*: Wählen Sie in der Tabelle die Snapshot-Policy-Häufigkeit und die Anzahl der zu haltenden Kopien aus. Sie können mehrere Snapshot-Richtlinien auswählen.
 
 
-. *S3-Zugriffspunkt*: Optional kann ein S3-Zugriffspunkt angehängt werden, um über AWS S3-APIs auf FSx for ONTAP -Dateisystemdaten zuzugreifen, die sich auf NFS- oder SMB/CIFS-Volumes befinden. Es wird nur der Dateizugriffstyp unterstützt. Bitte geben Sie folgende Details an:
+. *S3-Zugriffspunkt*: Optional können Sie einen S3-Zugriffspunkt anbinden, um auf FSx for ONTAP-Dateisystemdaten zuzugreifen, die sich auf NFS- oder SMB/CIFS-Volumes befinden, über die AWS S3-APIs. Nur der Dateizugriffstyp wird unterstützt. Folgende Details sind erforderlich:
 +
 ** *Name des S3-Zugangspunkts*: Geben Sie den Namen des S3-Zugangspunkts ein.
 ** *Benutzer*: Wählen Sie einen vorhandenen Benutzer mit Zugriff auf das Volume aus oder erstellen Sie einen neuen Benutzer.

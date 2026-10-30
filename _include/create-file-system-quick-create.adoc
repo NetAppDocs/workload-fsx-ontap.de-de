@@ -23,7 +23,7 @@ Diese einzelne HA-Paar-Konfiguration wird für Workloads empfohlen, die einen Du
 
 
 
-.. *Tags*: Optional können Sie bis zu 50 Tags hinzufügen.
+.. *Tags*: Optional lassen sich bis zu 50 Tags hinzufügen.
 
 
 . Geben Sie unter *Dateisystemdetails* Folgendes an:
@@ -45,7 +45,7 @@ Wenn der von Ihnen eingegebene Benutzer nicht der Benutzer fsxadmin ist und Sie 
 ... *SMB-Server NetBIOS-Name*: Geben Sie den SMB-Server NetBIOS-Namen des Active Directory-Computerobjekts ein, das für Ihre Speicher-VM erstellt werden soll. Dies ist der Name dieser Speicher-VM im Active Directory.
 ... *Benutzername*: Geben Sie den Benutzernamen des Dienstkontos in Ihr vorhandenes Active Directory ein.
 +
-Geben Sie kein Domänenpräfix oder Suffix ein. Für `EXAMPLE\ADMIN`, verwenden `ADMIN`.
+Ein Domänenpräfix oder -suffix darf nicht enthalten sein. Für `EXAMPLE\ADMIN` ist  `ADMIN` zu verwenden.
 
 ... *Passwort*: Geben Sie das Passwort für das Service-Konto ein.
 ... *Organisationseinheit*: Geben Sie optional den Namen der Organisationseinheit ein, in der Sie das Computerkonto für FSX für ONTAP erstellen möchten. Die Organisationseinheit ist der Distinguished Path Name der Organisationseinheit, der Sie dem Dateisystem beitreten möchten.

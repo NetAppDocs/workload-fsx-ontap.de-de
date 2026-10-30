@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: improve-configurations.html 
 keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP 
-summary: Workload Factory scannt Amazon FSx for NetApp ONTAP Konfigurationen und stellt Einblicke und Empfehlungen bereit, die zur Erreichung operativer Exzellenz beitragen. 
+summary: Hier können Sie den Well-Architected-Status von FSx for ONTAP Dateisystemen überprüfen, Konfigurationsprobleme beheben und die Konfigurationsanalyse in Workload Factory deaktivieren oder reaktivieren. 
 ---
 = Gut strukturierte FSx for ONTAP Dateisystemkonfigurationen implementieren
 :allow-uri-read: 
@@ -57,7 +57,7 @@ Korrekturmaßnahmen können zu Ausfallzeiten von Instanzen oder Serviceunterbrec
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
 . Das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] auswählen und anschließend *Well-architected* auswählen.
-. Für jede Konfiguration *Anzeigen und Reparieren* auswählen. Die Empfehlung sollte sorgfältig geprüft werden.
+. Für jede Konfiguration kann *Anzeigen und Reparieren* ausgewählt werden. Die Empfehlung sollte sorgfältig geprüft werden.
 +
 Die Empfehlung erläutert Best Practices und potenzielle Fallstricke bei nicht optimierten Konfigurationen.
 

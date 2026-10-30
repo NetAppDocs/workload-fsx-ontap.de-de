@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-file-system-settings.html 
 keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
-summary: FSx for ONTAP -Dateisystemtags für ein Dateisystem können jederzeit hinzugefügt, aktualisiert oder entfernt werden. 
+summary: Das Management der FSx for ONTAP Dateisystemeinstellungen in NetApp Workload Factory umfasst Tags, ONTAP Anmeldeinformationen, das fsxadmin-Passwort und die Durchsatzkapazität. 
 ---
 = FSx for ONTAP Dateisystemeinstellungen in NetApp Workload Factory verwalten
 :allow-uri-read: 
@@ -51,7 +51,7 @@ Workload Factory unterstützt den Wechsel zwischen dem Workload Factory Anmeldei
 
 Workload Factory verarbeitet eingeschränkte Anmeldeinformationen wie folgt:
 
-* Wenn Sie keine eingeschränkten Anmeldeinformationen für ein Dateisystem angegeben haben und anschließend benutzerdefinierte Regeln oder Dashboards erstellen oder Fragen an Ask Me stellen, erstellt Workload Factory schreibgeschützte ONTAP Anmeldeinformationen zur Verwendung als eingeschränkter Anmeldeinformationssatz.
+* Wenn Sie keine eingeschränkten Anmeldeinformationen für ein Dateisystem angegeben haben und anschließend benutzerdefinierte Regeln oder Dashboards erstellen oder Fragen an Ask Me senden, erstellt Workload Factory schreibgeschützte ONTAP Anmeldeinformationen zur Verwendung als Satz eingeschränkter Anmeldeinformationen.
 * Wenn Sie bereits eingeschränkte Zugangsdaten für ein Dateisystem angegeben haben, werden diese Zugangsdaten für AIOps verwendet.
 
 

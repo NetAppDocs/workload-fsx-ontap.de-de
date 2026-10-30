@@ -31,11 +31,11 @@ Weitere Informationen zu Storage-Tiers finden link:https://docs.aws.amazon.com/f
 
 * *Balanced (Auto)*: Standard-Tiering-Richtlinie beim Erstellen eines Volumes über die Benutzeroberfläche. Speichert häufig genutzte Daten in der SSD-Storage-Tier und verschiebt selten genutzte Daten und Snapshots nach Ablauf des Abkühlzeitraums auf die Kapazitäts-Pool-Storage-Tier. Empfohlen für allgemeine primäre Workloads.
 * *Kostenoptimiert (Alle)*: Verschiebt alle Snapshots und Daten auf den Kapazitäts-Pool-Speicher-Tier. Empfohlen für sekundäre Ziele.
-* *Performance-optimiert (nur Snapshots)*: Verschiebt nur Snapshot-Daten auf den Kapazitäts-Pool-Speicher-Tier. Empfohlen für Workloads mit niedriger Latenz, beispielsweise für geschäftskritische Datenbanken
+* *Performance-optimiert (nur Snapshots)*: Tiers speichern Snapshot-Daten nur im Capacity-Pool-Storage-Tier. Empfohlen für Workloads mit niedriger Latenz, wie z. B. geschäftskritische Datenbanken.
 * *Keine*: Speichert Volume-Daten im SSD-Speicher-Tier und verhindert, dass sie in den Kapazitäts-Pool-Speicher-Tier verschoben werden.
 
 
-Beachten Sie, dass einige Tiering-Richtlinien über einen zugehörigen Mindestkühlzeitraum verfügen, der die Zeit bzw. die _Kühltage_ festlegt, dass Benutzerdaten in einem Volume inaktiv bleiben müssen, damit die Daten als „kalt“ gelten und in die Storage-Ebene des Kapazitäts-Pools verschoben werden. Der Kühlzeitraum beginnt, wenn Daten auf die Festplatte geschrieben werden.
+Einige Tiering-Richtlinien haben eine zugeordnete Mindestkühlzeit, die die Zeit bzw. die _Kühltage_ festlegt, während der Benutzerdaten in einem Volume inaktiv bleiben müssen, damit die Daten als „kalt“ betrachtet und in den Capacity Pool Storage-Tier verschoben werden. Die Kühlzeit beginnt, wenn Daten auf die Festplatte geschrieben werden.
 
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
