@@ -3419,4 +3419,6 @@
   <block id="356b28bbbd0d4021c21f75e7c065f091" category="list-text">Hostdetails einschließlich Hostname, Instanz-ID, Workload-Typ, Region und iSCSI Qualified Name (IQN)</block>
   <block id="8b253c1d4259c21c8314fc85adcb31d6" category="section-title">01. November 2026</block>
   <block id="7dc50386b3284326e1114e4e7f4eb3fd" category="section-title">1. November 2026</block>
+  <block id="7cc20c44b067a9d650d7a25d5be9d67d" category="section-title">Kundengesteuerte Bedrock Unterstützung für die Klassifizierung</block>
+  <block id="8a8cb6e7e1b94c2efc52b7f5d677eb4d" category="paragraph">Mit Workload Factory können Sie jetzt Ihre eigene Amazon Bedrock Konfiguration für die Klassifizierung von Workload-Tags verwenden. Sie können Ihren eigenen Bedrock-Endpunkt und Ihre Zugangsdaten angeben, sodass Klassifizierungsanfragen über Ihre eigene Bedrock Konfiguration ausgeführt werden.</block>
 </blocks>
