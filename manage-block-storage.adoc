@@ -11,13 +11,14 @@ summary: Blockspeicher für ein FSx for ONTAP-Dateisystem in NetApp Workload Fac
 
 
 [role="lead"]
-Verwenden Sie NetApp Workload Factory, um die Verwaltung Ihrer Blockspeicherressourcen, einschließlich Initiatorgruppen und Blockgeräten, zu vereinfachen und den Clientzugriff auf FSx for ONTAP Blockgeräte zu steuern, um optimale Leistung zu erzielen und die Kosten zu minimieren.
+Mit NetApp Workload Factory vereinfachen Sie das Managen Ihrer Block-Storage-Ressourcen, einschließlich Initiatorgruppen und Blockgeräten, und steuern den Clientzugriff auf FSx for ONTAP Blockgeräte, um optimale Performance zu erzielen und Kosten zu minimieren. Das Diagramm der Initiatorgruppe für Blockgeräte unterstützt Sie dabei, Clientverbindungen zu optimieren und Probleme schnell zu beheben.
 
 .Über diese Aufgabe
 Über die Workload Factory-Konsole können Sie Initiatorgruppen (igroups) verwalten, um den Clientzugriff auf Blockgeräte zu steuern. Außerdem können Sie Details zu Blockgeräten anzeigen, die Kapazität erhöhen, Klone erstellen, den Clientzugriff verwalten, Daten inaktiver Blockgeräte archivieren und Blockgeräte löschen.
 
 Im Blockspeicherdiagramm ist Folgendes zu prüfen:
 
+* Hostdetails einschließlich Hostname, Instanz-ID, Workload-Typ, Region und iSCSI Qualified Name (IQN)
 * Clientverbindungen
 * Blockgerätestatus
 * Knoten-Client-Beziehung

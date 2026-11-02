@@ -32,7 +32,7 @@ Ein Link stellt eine Vertrauensbeziehung zwischen Workload Factory und einem ode
 * Verwalten von ONTAP Anmeldeinformationen
 
 
-link:learn-about-links.html["Weitere Informationen zu Links"].
+link:links-overview.html["Weitere Informationen zu Links"].
 
 .Was passiert, wenn ich keinen Link mit meinem Dateisystem verknüpfe?
 Funktionen, die von einer Verbindung abhängen, sind möglicherweise nicht verfügbar. Beispielsweise ist ARP/AI ohne Verbindung nicht verfügbar, vorhandene Snapshot-Richtlinien können beim Erstellen eines Volumes nicht angezeigt werden, und Cache-Beziehungen können nicht ermittelt werden. Ohne Verbindung kann die Konfigurationsanalyse die Datenschutz- und Performance-Einstellungen nicht prüfen, sodass die Analyse unvollständig ist. Latenzereignisse können zwar auch ohne Verbindung angezeigt werden, jedoch ist eine Verbindung erforderlich, um EMS-Ereignisse anzuzeigen und zu analysieren sowie Latenzereignisse zu analysieren.

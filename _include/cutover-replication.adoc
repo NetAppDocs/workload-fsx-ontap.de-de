@@ -6,5 +6,9 @@
 . Wählen Sie in *FSx for ONTAP* das Dateisystem aus, das die Volume(s) enthält, die repliziert werden sollen.
 . Wählen Sie die Registerkarte *Replication relationships* aus.
 . Wählen Sie in der Tabelle Replication relationships die Replikationsbeziehung aus, die umgestellt werden soll, und wählen Sie dann *Cut over replication* aus.
-. Überprüfen Sie die Informationen im Dialogfeld Cut over replication und geben Sie dann _cut over_ ein, um zu bestätigen.
+. Die Schritte zum Testen der Umstellung sind abzuschließen, anschließend erfolgt die eigentliche Umstellung.
++
+Wenn Sie den Dialog während des Vorgangs schließen, können Sie den *SVM-Migrationsstatus* auf der Registerkarte *Replikationsbeziehungen* überprüfen und die Umstellungsoperation fortsetzen, sobald Sie bereit sind.
+
+. Zum Abschließen des Vorgangs zunächst die Informationen im Dialogfeld „Replikation umstellen“ prüfen und anschließend _cut over_ eingeben.
 
