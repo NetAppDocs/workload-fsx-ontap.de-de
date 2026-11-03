@@ -2,31 +2,40 @@
 sidebar: sidebar 
 permalink: track-costs.html 
 keywords: cost, consumption, Cost Explorer 
-summary: Verfolgen Sie die Kosten und erstellen Sie Berichte für Ihre FSx for ONTAP Dateisystemressourcen in NetApp Workload Factory. 
+summary: Die Kosten für Ihre FSx for ONTAP Dateisystemressourcen in NetApp Workload Factory können nachverfolgt werden. 
 ---
-= FSx for ONTAP Kostenverfolgung und Berichte in NetApp Workload Factory
+= Nachverfolgung der Kosten für Ressourcen in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-NetApp Workload Factory bietet eine konsolidierte Übersicht über die Kosten und die Nutzung Ihres FSx for ONTAP Dateisystems und unterstützt so eine effektive Budgetverwaltung und Ressourcenoptimierung. Außerdem können Kostenberichte für Ihre FSx for ONTAP Dateisystemressourcen erstellt und mit Stakeholdern geteilt werden.
+Mit NetApp Workload Factory lassen sich die Kosten und die Nutzung Ihres FSx for ONTAP File-Systems nachverfolgen, damit Budgets effektiv gemanagt und Ressourcen optimiert werden können. Wir verwenden AWS Cost Explorer, um die Gesamtkosten mit Daten bereitzustellen, die nur minimale Berechtigungen erfordern. Die Kosten pro Ressource (File-System oder Volume) basieren auf Berechnungen von Workload Factory, die einzigartige Einblicke liefern, die über AWS Cost Explorer nicht verfügbar sind.
 
 
 
 [[about-this-task]]
 == Über diese Aufgabe
 
-Workload Factory verfolgt die Kosten und die Nutzung des FSx for ONTAP-Dateisystems, indem es Kostendaten vom AWS Cost Explorer abruft. Die folgenden Kostendetails werden erfasst: Nutzungsart, Nutzungs-SKU, Bereitstellungstyp, Nutzung und Gesamtkosten.
+Workload Factory ruft Kosten- und Nutzungsdaten für Ihre FSx for ONTAP Dateisystemressourcen aus AWS Cost Explorer mithilfe der folgenden Berechtigungen ab: `ce:GetCostAndUsage` und `ce:GetTags`. Die folgenden Kostendetails werden erfasst: Nutzungsart, Nutzungs-SKU, Bereitstellungstyp, Nutzung und Gesamtkosten.
 
+Im Kosten-Dashboard bieten zwei Registerkarten Informationen zu den Gesamtkosten und den Kosten nach Ressource.
+
+* Die Gesamtkosten basieren auf Daten, die direkt von der AWS Cost Explorer API abgerufen werden.
+* Die Funktion „Kosten nach Ressource“ zeigt Ihnen Kostenschätzungen nach Dateisystemen oder Volumes an.
++
 Für individuelle Ressourcen berechnet Workload Factory die Kosten durch Kombination der tatsächlichen Nutzung der Performance-Tier, eines anteiligen Kostenanteils der Performance-Tier-Kosten für bereitgestellten, aber ungenutzten Speicherplatz, der nach Kapazität verteilten Performance-Zuweisungen und der Nutzung des Kapazitätspools. Workload Factory multipliziert jede Komponente mit ihrem Preis pro Einheit für die jeweilige Dimension und summiert die Ergebnisse, um die Gesamtkosten für jede Ressource zu ermitteln.
 
-Im Cost Dashboard können Sie Kosten- und Nutzungsdaten nach AWS Konten, Anmeldeinformationen, einer oder mehreren Regionen und Zeiträumen filtern, um den Verbrauch Ihres FSx for ONTAP Dateisystems nachzuvollziehen. Workload Factory zeigt Daten immer auf monatlicher Basis an. Außerdem können Sie nach einem oder mehreren Dateisystemen und einem oder mehreren Volumes innerhalb eines Dateisystems filtern. AWS Kostenzuordnungs-Tag-Schlüssel und Tag-Schlüsselwerte fügen eine zusätzliche Filterebene hinzu, um bestimmte Kosten genauer zu bestimmen. Ein _Tag_ besteht aus einem Schlüssel und einem Wert. Die Filterung nach Tag-Schlüsseln und Tag-Schlüsselwerten setzt voraus, dass Ihren FSx for ONTAP Dateisystemen Tags zugewiesen sind. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Erfahren Sie mehr über AWS-Kostenverteilungs-Tags."^]
 
-Workload Factory ruft Kosten- und Nutzungsdaten für Ihre FSx for ONTAP Dateisystemressourcen aus AWS Cost Explorer mithilfe der folgenden Berechtigungen ab: `ce:GetCostAndUsage` und `ce:GetTags`. Die Gesamtkosten werden mithilfe der AWS Cost API und eigener Schätzungen berechnet.
 
-Zusätzlich zu den Kostendaten im Cost Dashboard zeigt die Kostenübersicht die Kosten Ihres FSx for ONTAP Dateisystems sowie die Ausgabenmuster Ihres Unternehmens an. Außerdem können Kostenberichte für Ihre FSx for ONTAP Dateisystemressourcen erstellt werden. Der Bericht ist eine herunterladbare CSV-Datei, die mit Stakeholdern geteilt werden kann.
+Workload Factory zeigt Daten immer auf monatlicher Basis an.
+
+Sie können Kosten- und Nutzungsdaten nach AWS-Konten, Anmeldeinformationen, einer oder mehreren Regionen und Zeiträumen filtern, damit Sie den Verbrauch Ihres FSx for ONTAP Dateisystems nachvollziehen können. Sie können außerdem nach einem oder mehreren Dateisystemen und einem oder mehreren Volumes innerhalb eines Dateisystems filtern.
+
+AWS Kostenzuordnungs-Tag-Schlüssel und Tag-Schlüsselwerte fügen eine zusätzliche Filterebene hinzu, um bestimmte Kosten genauer zu bestimmen. Ein _Tag_ besteht aus einem Schlüssel und einem Wert. Die Filterung nach Tag-Schlüsseln und Tag-Schlüsselwerten setzt voraus, dass Ihren FSx for ONTAP Dateisystemen Tags zugewiesen sind. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Erfahren Sie mehr über AWS-Kostenverteilungs-Tags."^]
+
+Zusätzlich zu den Kostendaten im Cost Dashboard zeigt die KI-generierte Kostenübersicht die Kosten Ihres FSx for ONTAP-Dateisystems sowie die Ausgabenmuster Ihres Unternehmens. Sie können CSV-Dateien Ihrer FSx for ONTAP-Dateisystemressourcen erstellen und diese mit Ihrem Team und Ihren Stakeholdern teilen.
 
 
 

@@ -106,6 +106,22 @@ Die Snapshot-Richtlinienbezeichnungen des Quellvolumes und die Replikationsricht
 +
 Eine Erhöhung des Schwellenwerts für die Dateikapazität hilft, das Erreichen der Volume-Kapazitätsgrenze zu vermeiden. Eine niedrige Dateikapazität (Inodes) verhindert das Schreiben zusätzlicher Daten auf das Volume. Workload Factory empfiehlt, die Dateikapazitätsauslastung unter 80 % zu halten, um die Erstellung neuer Dateien zu ermöglichen.
 
+* *Host mit Failover-Knoten verbinden*
++
+Workload Factory empfiehlt, Hosts mit dem Failover-Knoten zu verbinden, um die Konnektivität aufrechtzuerhalten und Unterbrechungen während Failover-Vorgängen zu vermeiden.
+
+* *SAP HANA Snapshot Richtlinie*
++
+Bei SAP HANA Volumes senkt die Einstellung der Snapshot-Richtlinie auf "None" die Storage-Kosten und verbessert die Performance für aktive Datenbankdaten.
+
+* *MySQL Snapshot-Richtlinie*
++
+Bei MySQL Volumes senkt eine auf "None" gesetzte Snapshot-Richtlinie die Storage-Kosten und verbessert die Performance für aktive Datenbankdaten.
+
+* *PostgreSQL Snapshot-Richtlinie*
++
+Zur Senkung der Storage-Kosten und zur Verbesserung der Performance für aktive Datenbankdaten sollte die Snapshot-Richtlinie für PostgreSQL Volumes auf "None" gesetzt werden.
+
 
 
 
@@ -122,6 +138,18 @@ NetApp Autonomous Ransomware Protection mit KI (ARP/AI) hilft, Ihre Volumes vor 
 * *Nicht autorisierter iSCSI-Volume-Zugriff*
 +
 Volumes, die Anwendungsdaten über iSCSI bereitstellen, sollten nicht gleichzeitig NAS-Zugriff ermöglichen. Workload Factory empfiehlt, iSCSI-Volumes von der Verwendung anderer Protokolle auszuschließen.
+
+* *ARP/AI-Erkennungslücke bei mehreren Geräten*
++
+ARP/AI bietet vollständigen Schutz, wenn an ein Volume nur ein Blockgerät angeschlossen ist. Wenn an ein Volume mehrere Blockgeräte angeschlossen sind, verschiebt Workload Factory diese auf neue Volumes, sodass jedes Volume nur noch ein Blockgerät enthält.
+
+* *Bidirektionales CHAP für Kubernetes iSCSI-Backends*
++
+Für Trident iSCSI-Backends sorgt die bidirektionale CHAP-Authentifizierung dafür, dass sich iSCSI-Initiator und -Ziel gegenseitig authentifizieren. Dies verhindert, dass nicht autorisierte Hosts iSCSI-Sitzungen mit der Storage VM aufbauen.
+
+* *Deaktivierung `showmount` auf der Applikation Storage VM*
++
+Das Deaktivieren `showmount` auf der Applikation Storage VM verhindert, dass Clients Exporte auflisten, auf die sie nicht zugreifen können.
 
 
 
@@ -168,6 +196,14 @@ Thin Provisioning für FSx for ONTAP Volumes, die Datenbankinstanzen hosten, kon
 +
 Vor der Verwendung mit AWS MGN ist für FSx for ONTAP Dateisysteme die Konfiguration der erforderlichen AWS Transform MGN (MGN) Konnektivitäts- und API-Authentifizierungseinstellungen erforderlich.
 
+* *Dedizierte Kubernetes Storage VM*
++
+Eine dedizierte Storage VM für Kubernetes-Workloads erleichtert die Verwaltung. Wenn Kubernetes Storage getrennt gehalten wird, vereinfacht dies die Richtlinienkonfiguration und trägt dazu bei, konsistente Storage-Einstellungen sicherzustellen.
+
+* *Initiatorgruppen-Betriebssystem mit dem Host abgleichen*
++
+Das Betriebssystem der Initiatorgruppe (igroup) sollte mit dem Betriebssystem des Hosts übereinstimmen, um E/A- oder Performance-Probleme zu vermeiden.
+
 
 
 
@@ -204,6 +240,10 @@ Wenn ein Blockgerät sieben Tage lang nicht verwendet wird, empfiehlt es sich, d
 * *Inaktive NAS-Volumes*
 +
 Wenn ein NAS-Volume 31 Tage lang nicht verwendet wurde, empfiehlt es sich, das ungenutzte NAS-Volume zu archivieren oder zu löschen, um Kosten zu senken.
+
+* *Klon-Bereinigung*
++
+Das Löschen aller Volume-Klone, die älter als 30 Tage sind, optimiert die Storage-Nutzung und senkt die Kosten.
 
 
 
