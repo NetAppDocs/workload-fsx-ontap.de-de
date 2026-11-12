@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: create-custom-rule.html 
+keywords: create custom rule, byor, custom rules, fsx, ontap, well architected, rule builder 
+summary: In NetApp Workload Factory kann eine benutzerdefinierte Architekturregel in natürlicher Sprache erstellt werden, um Ihre Unternehmensstandards für FSx for ONTAP durchzusetzen. 
+---
+= Benutzerdefinierte Regel in NetApp Workload Factory erstellen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Benutzerdefinierte Regeln ermöglichen die Überprüfung Ihrer FSx for ONTAP-Ressourcen in Workload Factory anhand der Standards Ihres Unternehmens. Jede Regel lässt sich in einfacher Sprache beschreiben, und der KI-Regel Errichter wandelt Ihre Anfrage in eine validierte Regel um.
+
+.Über diese Aufgabe
+Der Prozess zum Einrichten von Regeln führt Sie durch jeden Schritt: die Erstellung der Regel, die Überprüfung, wie die KI sie verstanden hat, und die Kontrolle der Ergebnisse vor der Planung regelmäßiger Überprüfungen. Sie behalten während des gesamten Prozesses die Kontrolle. Das System schlägt auf Grundlage Ihres Prompt eine Regel vor, aber es geschieht nichts, bis Sie sie genehmigen.
+
+
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine Meldung angezeigt, und benutzerdefinierte Regeln können nicht erstellt oder bearbeitet werden. Bei Fragen stehen Ihr Administrator oder link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Informationen zur KI-Administration"^] zur Verfügung.
+
+.Bevor Sie beginnen
+* Sie haben AWS-Anmeldeinformationen mit Lesezugriff konfiguriert.
+* Sie verfügen über ONTAP Zugangsdaten mit Anzeigeberechtigungen.
+* Sie haben einen Link oder Agenten für FSx für ONTAP Konnektivität konfiguriert.
+* Sie verstehen, dass die Erstellung benutzerdefinierter Regeln den Bedrock AI-Dienst von NetApp verwendet.
+
+
+
+
+[[create-a-rule]]
+== Regel erstellen
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Sie wählen das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und anschließend *Well-architected* > *Rule Errichter*.
++
+Wenn Sie den Errichter öffnen, werden Beispielaufforderungen angezeigt, die beim Schreiben Ihrer benutzerdefinierten Regel unterstützen. Es besteht die Möglichkeit, *Aufforderung kopieren* auszuwählen, um eine Beispielaufforderung in das Textfeld des KI-Dialogs zu übernehmen.
+
+. Geben Sie im Feld *Regel erstellen* Ihre Regelbeschreibung in natürlicher Sprache ein. Seien Sie so spezifisch wie möglich in Bezug auf:
++
+** Welcher Ressourcentyp überprüft wird (Dateisystem, Volume oder Cache).
+** Welche Bedingung validiert wird.
+** Welcher Schwellenwert definiert die Compliance.
+** Warum diese Regel wichtig ist (optional, aber empfohlen).
+
+
+. Wählen Sie image:arrow.png["Das Menüsymbol wird verwendet, um mit der Generierung von Regeln zu beginnen., Breite=18"].
++
+Die KI analysiert Ihre Eingabeaufforderung und generiert eine Regeldefinition.
+
+
+
+
+
+[[review-the-ai-interpretation]]
+== KI-Interpretation überprüfen
+
+Der Regelgenerator zeigt Folgendes an:
+
+Geparste Interpretation:: Wie die KI Ihre Eingabe in einfacher Sprache verstanden hat.
+Regeldefinition:: Die strukturierte Regel umfasst Ressourcentyp, Bedingungslogik und Bewertungskriterien.
+Argumentation:: Warum die KI Ihren Prompt so interpretiert hat.
+Vertrauensindikator:: Wie sicher das System bei der Interpretation ist.
+
+
+.Schritte
+. Die Interpretation sollte überprüft werden, um sicherzustellen, dass sie der beabsichtigten Bedeutung entspricht.
+. Zu prüfen ist, ob die Regeldefinition korrekt ist. Ist die Auslegung unklar oder falsch, stellt das System möglicherweise Fragen wie:
++
+** Welche Ressource sollte überprüft werden?
+** Welcher Wert oder Grenzwert definiert Compliance?
+** Wie oft soll die Regel ausgeführt werden?
+
+
+. Antworten auf die klärenden Fragen der KI.
++
+Die KI bittet Sie möglicherweise, aus mehreren Optionen auszuwählen, um Ihre Bedürfnisse besser zu verstehen. Jede Frage wird beantwortet und *Weiter* ausgewählt, oder *Überspringen* wird gewählt, um optionale Fragen zu überspringen.
+
+. Nachdem Sie alle Fragen beantwortet haben, wählen Sie *Weiter*, um Ihre Regel zu erstellen.
+
+
+
+
+[[test-the-rule]]
+== Testen der Regel
+
+Vor dem Speichern oder Planen der Regel lässt sich mit einem Test feststellen, welche Ressourcen von der Regel betroffen sind.
+
+.Schritte
+. *Regel validieren* auswählen.
++
+Das System bewertet alle Ressourcen im Geltungsbereich anhand Ihrer Regellogik.
+
+. Validierungsergebnisse anzeigen:
++
+** Bewertete Ressourcen: Gesamtzahl der geprüften Ressourcen
+** Konform: Ressourcen, die die Regelkriterien erfüllen
+** Nicht konform: Ressourcen, die die Kriterien nicht erfüllen
+** Fehlgeschlagene Auswertungen: Ressourcen, die nicht ausgewertet werden konnten (mit Fehlerdetails)
+
+
+
+
+
+
+[[save-or-schedule-the-rule]]
+== Regel speichern oder planen
+
+Nachdem Sie Ihre Regel validiert haben, können Sie sie als Entwurf speichern oder für eine regelmäßige Ausführung festlegen.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+** Zum Planen einer regelmäßigen Auswertung werden die Auswertungshäufigkeit festgelegt und *Schedule* ausgewählt. Die Regel ist aktiviert und wird gemäß dem definierten Zeitplan ausgeführt.
+** Zum Speichern nach der Validierung ohne Planung wählen Sie *Save as draft*. Die Regel wird gespeichert, aber nicht ausgewertet, bis sie geplant wird.
+** Die Regel wird durch Auswahl von *Löschen* gelöscht.
+
+
+
+
+.Ergebnis
+Ihre benutzerdefinierte Regel wird erstellt und im Regelkatalog aufgeführt. Wenn Sie einen Zeitplan festlegen, prüft die Regel Ihre FSx for ONTAP Ressourcen mit der angegebenen Häufigkeit. Wenn Sie die Regel später bearbeiten, führt Sie das System durch dieselben Schritte, Chat, Überprüfung, Genehmigung und Validierung, bevor Sie die aktualisierte Version speichern.
+
+
+
+[[whats-next]]
+== Wie es weiter geht
+
+link:manage-custom-rules.html["Benutzerdefinierte Regeln verwalten"]

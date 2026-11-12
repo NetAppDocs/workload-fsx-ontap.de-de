@@ -3444,4 +3444,166 @@
   <block id="6d24db4e0644546ba5972d86f0474123" category="paragraph">AWS Kostenzuordnungs-Tag-Schlüssel und Tag-Schlüsselwerte fügen eine zusätzliche Filterebene hinzu, um bestimmte Kosten genauer zu bestimmen. Ein _Tag_ besteht aus einem Schlüssel und einem Wert. Die Filterung nach Tag-Schlüsseln und Tag-Schlüsselwerten setzt voraus, dass Ihren FSx for ONTAP Dateisystemen Tags zugewiesen sind. <block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
   <block id="00785d0f1296ca2a8d0846890b38a469" category="paragraph">Zusätzlich zu den Kostendaten im Cost Dashboard zeigt die KI-generierte Kostenübersicht die Kosten Ihres FSx for ONTAP-Dateisystems sowie die Ausgabenmuster Ihres Unternehmens. Sie können CSV-Dateien Ihrer FSx for ONTAP-Dateisystemressourcen erstellen und diese mit Ihrem Team und Ihren Stakeholdern teilen.</block>
   <block id="1e1ba6e3e89c5c46a8b08f6bb7ca5b1e" category="paragraph">Zum Einstieg senden Sie eine E-Mail an ng-CyberVault@netapp.com.</block>
+  <block id="5a42b43100ba01e0c1d04cf83985f0a6" category="summary">In NetApp Workload Factory kann eine benutzerdefinierte Architekturregel in natürlicher Sprache erstellt werden, um Ihre Unternehmensstandards für FSx for ONTAP durchzusetzen.</block>
+  <block id="4049afdb7ff78ea7ac28f61f9f797fd8" category="doc">Benutzerdefinierte Regel in NetApp Workload Factory erstellen</block>
+  <block id="5372fe69d86b61601b1f331c4b46a82a" category="paragraph">Benutzerdefinierte Regeln ermöglichen die Überprüfung Ihrer FSx for ONTAP-Ressourcen in Workload Factory anhand der Standards Ihres Unternehmens. Jede Regel lässt sich in einfacher Sprache beschreiben, und der KI-Regel Errichter wandelt Ihre Anfrage in eine validierte Regel um.</block>
+  <block id="4995e76cedbca110dbb7cefe85e61d77" category="paragraph">Der Prozess zum Einrichten von Regeln führt Sie durch jeden Schritt: die Erstellung der Regel, die Überprüfung, wie die KI sie verstanden hat, und die Kontrolle der Ergebnisse vor der Planung regelmäßiger Überprüfungen. Sie behalten während des gesamten Prozesses die Kontrolle. Das System schlägt auf Grundlage Ihres Prompt eine Regel vor, aber es geschieht nichts, bis Sie sie genehmigen.</block>
+  <block id="c6cf187b99e57acdf56ff23a5013546b" category="admonition">Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine Meldung angezeigt, und benutzerdefinierte Regeln können nicht erstellt oder bearbeitet werden. Bei Fragen stehen Ihr Administrator oder <block ref="a4efb9d0168cfdc15063741b91ed0040" category="inline-link-macro-rx"></block> zur Verfügung.</block>
+  <block id="5d9b02c1296ee6f0b859a2db7ccf523b" category="list-text">Sie haben AWS-Anmeldeinformationen mit Lesezugriff konfiguriert.</block>
+  <block id="0876642abf2aedd4eb3ae76dd87f7586" category="list-text">Sie verfügen über ONTAP Zugangsdaten mit Anzeigeberechtigungen.</block>
+  <block id="0e8e25fe832310f010ce2950b2110974" category="list-text">Sie haben einen Link oder Agenten für FSx für ONTAP Konnektivität konfiguriert.</block>
+  <block id="fadf874162a190084750a51220f07180" category="list-text">Sie verstehen, dass die Erstellung benutzerdefinierter Regeln den Bedrock AI-Dienst von NetApp verwendet.</block>
+  <block id="536d32f8526dd0faea40f78af4cad034" category="section-title">Regel erstellen</block>
+  <block id="d50a7101e42fa60ccc6f625b2ce3048e" category="list-text">Sie wählen das Menü <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> und anschließend *Well-architected* &gt; *Rule Errichter*.</block>
+  <block id="3f87c61ee7c070ec896e14d55b132e25" category="paragraph">Wenn Sie den Errichter öffnen, werden Beispielaufforderungen angezeigt, die beim Schreiben Ihrer benutzerdefinierten Regel unterstützen. Es besteht die Möglichkeit, *Aufforderung kopieren* auszuwählen, um eine Beispielaufforderung in das Textfeld des KI-Dialogs zu übernehmen.</block>
+  <block id="ab99baf0da39867076eea6e470865275" category="list-text">Geben Sie im Feld *Regel erstellen* Ihre Regelbeschreibung in natürlicher Sprache ein. Seien Sie so spezifisch wie möglich in Bezug auf:</block>
+  <block id="d8eefaf38d3f8455541df01bc5d6831b" category="list-text">Welcher Ressourcentyp überprüft wird (Dateisystem, Volume oder Cache).</block>
+  <block id="4e86c5f58eeed68b966c1b5f2cf16853" category="list-text">Welche Bedingung validiert wird.</block>
+  <block id="dfa6d1dd6fe7783b6568e7fea39c0f7a" category="list-text">Welcher Schwellenwert definiert die Compliance.</block>
+  <block id="7bceccf61b56c9e997b6748a3219ca2c" category="list-text">Warum diese Regel wichtig ist (optional, aber empfohlen).</block>
+  <block id="7950e8546d11cf9aebf1d18723eacb62" category="inline-image-macro">Das Menüsymbol wird verwendet, um mit der Generierung von Regeln zu beginnen., Breite=18</block>
+  <block id="448a77fdd0ab1119d70eda7dfad65fa7" category="list-text">Wählen Sie <block ref="9bf5747e0eee12d0fcc488bd415a8bc3" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="15fc6fdd1dd9d66889237c7e8a75d290" category="paragraph">Die KI analysiert Ihre Eingabeaufforderung und generiert eine Regeldefinition.</block>
+  <block id="1c88936123899b4423b51efeb098f008" category="section-title">KI-Interpretation überprüfen</block>
+  <block id="28ea3f4811ef4cb7fc2b7f08d6fce5a7" category="paragraph">Der Regelgenerator zeigt Folgendes an:</block>
+  <block id="0cd216375fd6782b45d9f84efb6f3e84" category="list-text">Geparste Interpretation</block>
+  <block id="9d009657b96c5aad9fa21f1828b73bcf" category="list-text">Wie die KI Ihre Eingabe in einfacher Sprache verstanden hat.</block>
+  <block id="e35d59c335e26445eed5e3cf4fc88047" category="list-text">Regeldefinition</block>
+  <block id="69dc0eb643b0cd391da1782b1c0156e4" category="list-text">Die strukturierte Regel umfasst Ressourcentyp, Bedingungslogik und Bewertungskriterien.</block>
+  <block id="87a222577e9c7b7a0739d92337f4fe46" category="list-text">Argumentation</block>
+  <block id="22e3f2781979bb9f2227381c2a3c30ea" category="list-text">Warum die KI Ihren Prompt so interpretiert hat.</block>
+  <block id="6e536680660f9f562a1a4ab7cdbba4e1" category="list-text">Vertrauensindikator</block>
+  <block id="0f1a4e7b1fc79efcfb93a1a4b715f3d0" category="list-text">Wie sicher das System bei der Interpretation ist.</block>
+  <block id="f89784f298e9f6255c6acd2f32b4051a" category="list-text">Die Interpretation sollte überprüft werden, um sicherzustellen, dass sie der beabsichtigten Bedeutung entspricht.</block>
+  <block id="b5d05144afb692d05ca26ecfffcee694" category="list-text">Zu prüfen ist, ob die Regeldefinition korrekt ist. Ist die Auslegung unklar oder falsch, stellt das System möglicherweise Fragen wie:</block>
+  <block id="1f3c02b25897cff55c5d7894bed5c157" category="list-text">Welche Ressource sollte überprüft werden?</block>
+  <block id="2d351367dd00ae9228b6503d57500015" category="list-text">Welcher Wert oder Grenzwert definiert Compliance?</block>
+  <block id="d24a425ef6891cb0134794ec6897a668" category="list-text">Wie oft soll die Regel ausgeführt werden?</block>
+  <block id="32e95e9677f9ef2f50e204cf4b6401d7" category="list-text">Antworten auf die klärenden Fragen der KI.</block>
+  <block id="7d84a0d9d14a5f050503a7b9b00b3435" category="paragraph">Die KI bittet Sie möglicherweise, aus mehreren Optionen auszuwählen, um Ihre Bedürfnisse besser zu verstehen. Jede Frage wird beantwortet und *Weiter* ausgewählt, oder *Überspringen* wird gewählt, um optionale Fragen zu überspringen.</block>
+  <block id="f7dd96479a94850934674d003fe54f52" category="list-text">Nachdem Sie alle Fragen beantwortet haben, wählen Sie *Weiter*, um Ihre Regel zu erstellen.</block>
+  <block id="66178252f08edeeeeda7bfc5ebf5227b" category="section-title">Testen der Regel</block>
+  <block id="12eb9fcd23a3f9a01164b30552a1e02c" category="paragraph">Vor dem Speichern oder Planen der Regel lässt sich mit einem Test feststellen, welche Ressourcen von der Regel betroffen sind.</block>
+  <block id="e0924f9cecf28912d6b59208f0ee9242" category="list-text">*Regel validieren* auswählen.</block>
+  <block id="87d68b4e906936ea67c73d25fddbb199" category="paragraph">Das System bewertet alle Ressourcen im Geltungsbereich anhand Ihrer Regellogik.</block>
+  <block id="6ad0887ee719e958ea66bc1d5ca7ed60" category="list-text">Validierungsergebnisse anzeigen:</block>
+  <block id="31d7cb3d933c56805e03dca75c02893d" category="list-text">Bewertete Ressourcen: Gesamtzahl der geprüften Ressourcen</block>
+  <block id="c3e6edb3feeaf77e1989872831656640" category="list-text">Konform: Ressourcen, die die Regelkriterien erfüllen</block>
+  <block id="00d56e696324ec288953d4f8b2cfec0f" category="list-text">Nicht konform: Ressourcen, die die Kriterien nicht erfüllen</block>
+  <block id="bd86697cf08c2fc5775c698f872f3628" category="list-text">Fehlgeschlagene Auswertungen: Ressourcen, die nicht ausgewertet werden konnten (mit Fehlerdetails)</block>
+  <block id="24a910eeb4468fa91fa54136e064eb5d" category="section-title">Regel speichern oder planen</block>
+  <block id="cdac1db1869db85a5ed349854c63c6bf" category="paragraph">Nachdem Sie Ihre Regel validiert haben, können Sie sie als Entwurf speichern oder für eine regelmäßige Ausführung festlegen.</block>
+  <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">Führen Sie einen der folgenden Schritte aus:</block>
+  <block id="39a7241c7fb2f38f3a304dc5a7ddd33e" category="list-text">Zum Planen einer regelmäßigen Auswertung werden die Auswertungshäufigkeit festgelegt und *Schedule* ausgewählt. Die Regel ist aktiviert und wird gemäß dem definierten Zeitplan ausgeführt.</block>
+  <block id="9c85906f54c1b8a93d6470f07300ddfa" category="list-text">Zum Speichern nach der Validierung ohne Planung wählen Sie *Save as draft*. Die Regel wird gespeichert, aber nicht ausgewertet, bis sie geplant wird.</block>
+  <block id="4a5aaf656967e8a439bf519ae6b59880" category="list-text">Die Regel wird durch Auswahl von *Löschen* gelöscht.</block>
+  <block id="a1c63e33653cd43f47951d30d948a4f4" category="paragraph">Ihre benutzerdefinierte Regel wird erstellt und im Regelkatalog aufgeführt. Wenn Sie einen Zeitplan festlegen, prüft die Regel Ihre FSx for ONTAP Ressourcen mit der angegebenen Häufigkeit. Wenn Sie die Regel später bearbeiten, führt Sie das System durch dieselben Schritte, Chat, Überprüfung, Genehmigung und Validierung, bevor Sie die aktualisierte Version speichern.</block>
+  <block id="79d32aa7b3e52f3c6db178577378b427" category="inline-link-macro">Benutzerdefinierte Regeln verwalten</block>
+  <block id="f571cd95e32f7c421382198bc0dd0eae" category="paragraph"><block ref="f571cd95e32f7c421382198bc0dd0eae" category="inline-link-macro-rx"></block></block>
+  <block id="ce245aab753e2723bfd040fed4abf11f" category="summary">Sie können Ihre eigenen Architekturregeln definieren und managen, um Unternehmensstandards zusammen mit NetApp Best Practices in NetApp Workload Factory durchzusetzen.</block>
+  <block id="7d242f235430b1bf813d847afa9c75af" category="doc">Informationen zu benutzerdefinierten Regeln in NetApp Workload Factory</block>
+  <block id="311939b9d3db153a7ced12abaf3717a0" category="paragraph">Mit benutzerdefinierten Regeln können Sie Ihre eigenen Architekturstandards sowie NetApp Best Practices im Regelkatalog von NetApp Workload Factory festlegen, überprüfen und durchsetzen.</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="section-title">Überblick</block>
+  <block id="91b90f08c0d07c5aa66b502a1d12c868" category="paragraph">Mit dem Errichter lassen sich benutzerdefinierte Regeln in einfacher Sprache erstellen. Diese Regeln werden für alle Ihre Ressourcen geprüft. Benutzerdefinierte Regeln helfen dabei, die Standards, Risikogrenzen und betrieblichen Anforderungen Ihres Unternehmens durchzusetzen, die von Standardregeln möglicherweise nicht abgedeckt werden.</block>
+  <block id="48dc51848c127d267cdd7ab1bcd0fe5e" category="inline-link-macro">Informationen zur Verwaltung von KI-Funktionen</block>
+  <block id="01b363e0fd4d8a4ccc9789787974b41d" category="admonition">Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, können Sie keine neuen Regeln erstellen oder bestehende Regeln bearbeiten. Alle bereits geplanten Regeln werden weiterhin ausgeführt. <block ref="0d265466472513eb45c1ef2960b8028d" category="inline-link-macro-rx"></block>.</block>
+  <block id="2d5a2d8915799663f0b12f296909b0d7" category="section-title">Funktionsweise benutzerdefinierter Regeln</block>
+  <block id="4edc72502b9f9929e41bae938a7490c1" category="paragraph">Benutzerdefinierte Regeln nutzen KI, um Anweisungen in einfacher Sprache in klare, strukturierte Regeln umzuwandeln. Die KI übersetzt Ihre Anfrage, schlägt eine Regel vor, erläutert, wie sie Ihre Anweisungen verstanden hat, und bittet um Ihre Zustimmung, bevor die Regel gespeichert oder geplant wird. Dieser Prozess trägt dazu bei, dass:</block>
+  <block id="0465277e228b6cf7f37c1fab3872f9cd" category="list-text">Die Regel ist klar definiert und wird auf Fehler überprüft</block>
+  <block id="f2b92cb195f44b1f57205f66b9c1c992" category="list-text">Es wird kein benutzerdefinierter Code ausgeführt</block>
+  <block id="f6b50ace5a7da2eb893c9a1a1c3971be" category="list-text">Sie können genau überprüfen, was bewertet wird, bevor Sie die Regel genehmigen</block>
+  <block id="110a917dc178ad706edce62d767a4196" category="list-text">Jede benutzerdefinierte Regel enthält den zu bewertenden Ressourcentyp, die Bedingungslogik, den Schweregrad, den Bewertungszeitplan und Hinweise zur Behebung des Problems.</block>
+  <block id="aa5bf59269969e22f1e91f0116790d69" category="paragraph">Bevor Sie benutzerdefinierte Regeln erstellen und ausführen können, müssen Sie Folgendes haben:</block>
+  <block id="2c4eed705dd3e0adf6e7194858d8dff7" category="list-text">AWS Zugangsdaten</block>
+  <block id="287ae8bc216279a75c04344894e04b7f" category="inline-link-macro">AWS-Anmeldeinformationen zur Workload Factory hinzufügen</block>
+  <block id="7494074c4fddc030d2901e19b4299fbc" category="list-text">Schreibgeschützter Zugriff auf Ihre AWS-Umgebung. Benutzerdefinierte Regeln erfordern schreibgeschützte Berechtigungen als Sicherheitsgrenze. <block ref="3cc095eb9cb9898bd77210cc5e32ef56" category="inline-link-macro-rx"></block>.</block>
+  <block id="823a6e1d7fe661be55dd3af05f972b11" category="list-text">ONTAP Zugangsdaten</block>
+  <block id="2fe1ca0ae9374dba8f39842024c0183d" category="list-text">FSx Viewer Benutzer mit Leseberechtigung. Workload Factory erstellt auf jedem FSx for ONTAP Dateisystem einen Benutzer mit Leseberechtigung, falls noch keiner existiert, damit Workload Factory Auswertungen durchführen kann.</block>
+  <block id="04d1424a4b58f665f6537d166f4f9750" category="list-text">Link oder Agent</block>
+  <block id="b68341d527b58582cc7cb537c3230cd8" category="inline-link-macro">Mit einem Link eine Verbindung zu einem FSx for ONTAP Dateisystem herstellen</block>
+  <block id="1a9a7cbcff7e420530f8c372f3d5adee" category="list-text">Nur für Regeln erforderlich, die direkt eine Verbindung zu ONTAP herstellen müssen, um Einstellungen zu prüfen, auf die AWS APIs nicht zugreifen können. <block ref="24b9156f94ab02a475dde64452245780" category="inline-link-macro-rx"></block>.</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">Einschränkungen</block>
+  <block id="97897c725b297f3a24f29e0cb3d12838" category="list-text">Regeln können Probleme nicht automatisch beheben. Sie müssen nicht konforme Ressourcen anhand der bereitgestellten Anleitung selbst korrigieren.</block>
+  <block id="e0ff3e32dbc4b668a800d5b59c47613b" category="list-text">Jede Regel prüft nur einen Ressourcentyp, kann aber auf eine Vielzahl von Ressourcen angewendet werden. Beispielsweise kann eine Regel Volumes in mehreren Regionen, in allen Regionen oder in mehreren Konten auswerten. Für die Auswertung verschiedener Ressourcentypen sind separate Regeln erforderlich.</block>
+  <block id="3f84490332db2de49bed3d46ab452bb0" category="list-text">Regeln laufen höchstens einmal pro Stunde, um übermäßiges Scannen zu verhindern.</block>
+  <block id="499ed12f9f73ef11f2d3afd859dacba5" category="list-text">Regeln können Ihre Umgebung nur lesen und keine Änderungen vornehmen.</block>
+  <block id="7d178946e8d76597de91865cae420fb6" category="list-text">Sie können diese Einstellungen später im Regelkatalog aktualisieren.</block>
+  <block id="3414a9edc41238183f8bcc3192e49adf" category="section-title">Regellebenszyklus</block>
+  <block id="990ef24c1b7e8a2bf1d9ad948d75e88c" category="paragraph">Benutzerdefinierte Regeln durchlaufen die folgenden Zustände:</block>
+  <block id="b6e0b0c90cfbddfe767f137f8066d1df" category="list-text">In Bearbeitung</block>
+  <block id="d4008ffe54f55490997ab0d5940aafb3" category="list-text">Das Erstellen oder Überprüfen von Regeln.</block>
+  <block id="b75ff201f3276decaffcefb7b216622f" category="list-text">Erstellen fehlgeschlagen</block>
+  <block id="db78d463a1f2fbb737aa54f862bd0d4b" category="list-text">Die Regel konnte nicht erstellt werden. Sie können die Regel erneut öffnen und die Bearbeitung im Chat fortsetzen.</block>
+  <block id="f03ab16cd58372c77ba45a3d9a5a1cb9" category="list-text">Entwurf</block>
+  <block id="c4e6fec5ee0f22a348768aa087f15acb" category="list-text">Gespeichert, aber noch nicht geplant.</block>
+  <block id="7401c14d073cd1188b475ef7f5e0cdc8" category="list-text">Validierter Entwurf</block>
+  <block id="de28b803b960b2c037e1abe4d18cf9d7" category="list-text">Die Validierung war erfolgreich, und die Dateien können gespeichert oder geplant werden.</block>
+  <block id="b1caf7f21c1b8899e11165a6aed71af9" category="list-text">Bearbeitung</block>
+  <block id="f25dfb15b911ed977033f485330ceadd" category="list-text">Aktualisierung einer Entwurfskopie einer bestehenden Regel. Die aktuell geplante Regel wird weiterhin ausgeführt, bis zum Speichern der Änderungen.</block>
+  <block id="2b7dabba0077abe3732e0418b048a56b" category="list-text">Geplant</block>
+  <block id="cf61937578a34d9f00c4f6dd6f175c05" category="list-text">Aktiv und wird gemäß dem festgelegten Zeitplan ausgeführt.</block>
+  <block id="b9f5c797ebbf55adccdd8539a65a0241" category="list-text">Deaktiviert</block>
+  <block id="ca7e0b16936fbee3bd2dd7f992b32b4d" category="list-text">Angehalten, aber nicht gelöscht. Kann wieder aktiviert werden.</block>
+  <block id="5fe6005bf6e415c950c011fb65f12b8f" category="list-text">Gelöscht</block>
+  <block id="71e78f13c09017bc4b63f46243d379b7" category="list-text">Endgültig entfernt.</block>
+  <block id="2090e30be5c37fb6b5aa40aa26a83dea" category="section-title">Beispiele für benutzerdefinierte Regeln</block>
+  <block id="cc36425e424f4c30e5d1dd8b4cf78a69" category="list-text">Produktionsvolumenschutz</block>
+  <block id="31ba253c12166670e96f9fc69476b594" category="list-text">„Alle Volumes mit dem Tag ‚Prod‘ müssen über eine Snapshot-Richtlinie verfügen.“</block>
+  <block id="3243b04cc4c4b7516a144da9c506a9ba" category="paragraph">Diese Regel überprüft, ob Produktionsvolumina über eine Snapshot-Richtlinie verfügen, die sie gemäß den Unternehmensanforderungen schützt.</block>
+  <block id="9beacae88b6d84f519d92cf003a30d57" category="list-text">Tiering von Archiv-Volumes</block>
+  <block id="654b13cdd2897fd4260df3602f80ebbf" category="list-text">„Allen Volumes mit dem Tag ‚Archive‘ sollte die Tiering-Richtlinie auf ‚All‘ gesetzt sein.“</block>
+  <block id="3756e2c2d7cd023d9845fbb763b174a9" category="paragraph">Diese Regel senkt die Kosten, indem archivierte Daten automatisch in kostengünstigeren Speicher verschoben werden.</block>
+  <block id="ccf414cfce06645c55d0bcfd5f41608b" category="list-text">Standards für die Dateisystembenennung</block>
+  <block id="269acf14c942e18c7f92dabf12bccaf5" category="list-text">„Alle Dateisysteme müssen der Namenskonvention 'fsx-{environment}-{application}' folgen.“</block>
+  <block id="bf0fa31d0a55270b5b0783d82f5a26b2" category="paragraph">Diese Regel validiert, dass Dateisysteme den organisatorischen Namenskonventionen entsprechen, was eine einfachere Verwaltung und Kostenverteilung ermöglicht.</block>
+  <block id="3f710cadb0123c693533da68aaf5b596" category="section-title">Nächste Schritte</block>
+  <block id="cff2e3f5566a6d8510f1c58ca5513eb3" category="inline-link-macro">Eine benutzerdefinierte Regel erstellen</block>
+  <block id="ef517711d9a5dee55f2bb56046d3fd70" category="paragraph"><block ref="385442535e80145b437f6d2ceb94114a" category="inline-link-macro-rx"></block> <block ref="f571cd95e32f7c421382198bc0dd0eae" category="inline-link-macro-rx"></block></block>
+  <block id="736345038ae5166988c54000f3a9ef2a" category="summary">Im Regelkatalog in NetApp Workload Factory lassen sich benutzerdefinierte Architekturregeln anzeigen, bearbeiten, pausieren, fortsetzen, testen und löschen.</block>
+  <block id="f111cb0bc631b06943464ebbce09ef55" category="doc">Benutzerdefinierte Regeln in NetApp Workload Factory managen</block>
+  <block id="5a39a30849e6dba110bd13af7cf930b3" category="paragraph">Der Regelkatalog in NetApp Workload Factory bietet Ihnen einen zentralen Ort, um alle Ihre benutzerdefinierten Architekturregeln zu managen. Sie können Regeldetails und -ergebnisse einsehen, Regeln bearbeiten, Schnelltests durchführen, geplante Auswertungen pausieren oder fortsetzen und nicht mehr benötigte Regeln löschen.</block>
+  <block id="d8bb2214730133a5475bf68bf933cdeb" category="section-title">Regelkatalog anzeigen</block>
+  <block id="12dc6c12cd959eea202fab9d01a2ef04" category="paragraph">Der Regelkatalog zeigt alle von Ihnen erstellten Regeln, deren Status, Zeitplan und neuesten Ergebnisse an.</block>
+  <block id="642657de37325cdd56a85e86e5effce6" category="list-text">Über *Ihre Regeln anzeigen* lässt sich der Regelkatalog öffnen.</block>
+  <block id="5890f83979745a0ed0d6d680fbcc1638" category="section-title">Regelergebnisse anzeigen</block>
+  <block id="eeed19c5f7da7509abad8a01045710dc" category="paragraph">Die Ergebnisse zeigen, welche Ressourcen Ihrer Regel folgen und welche nicht.</block>
+  <block id="a40467eae61686c6d04705b1341a3476" category="list-text">Im Regelkatalog können Sie die Regel auswählen, die Sie überprüfen möchten.</block>
+  <block id="2d6751ce25ede21d2492997ddca98b45" category="list-text">Die Registerkarte *Alle Laufergebnisse* auswählen.</block>
+  <block id="f4e2484ce7f636995f87d4460bb472cf" category="list-text">Mit **Details anzeigen** werden die Ergebnisse für jeden Durchlauf angezeigt.</block>
+  <block id="13b595cf2341f5678ff3130cc1287485" category="paragraph">Wenn die Überprüfung für einige Elemente fehlgeschlagen ist, zeigt die Fehlermeldung den Grund an. Häufige Gründe sind Verbindungsprobleme, fehlende Berechtigungen oder eine nicht eingerichtete Verknüpfung.</block>
+  <block id="12a0a2265c24db72f6aaae801b9ef08e" category="section-title">Benutzerdefinierte Regel bearbeiten</block>
+  <block id="dbea8da43ac90f4152565d880d18e30e" category="paragraph">Sie können eine Regel jederzeit umbenennen. Außerdem können Sie die Beschreibung, den Ressourcentyp, den Zeitplan, den Schweregrad, die Bedingungslogik, den Auswertungsbereich und die Abhilfehinweise einer Regel bearbeiten.</block>
+  <block id="8473633d69dc94d27429c2a37902fe75" category="paragraph">Sie können eine Regel entweder im Regelkatalog oder auf der Regeldetailseite umbenennen. Andere Regeleinstellungen lassen sich über den Regelkatalog bearbeiten.</block>
+  <block id="a7bcf973f8ab46210fd83a2c927c24de" category="list-text">Im Regelkatalog ist die Regel auszuwählen, die bearbeitet werden soll.</block>
+  <block id="2dc19156fac0f6096a2db17a78fe0da8" category="list-text">Die Umbenennung der Regel erfolgt durch Aktualisieren des Regelnamens im Katalog oder auf der Detailkarte der Regel.</block>
+  <block id="b4f3df698e928c6673aa11c0a7e74343" category="list-text">Die Bearbeitung anderer Regeleinstellungen erfolgt über *Bearbeiten*.</block>
+  <block id="01e52dae8e86fc149d714c3cdc94859d" category="paragraph">Die Regel öffnet sich im Chat-Modus mit ihrem vollständigen Verlauf.</block>
+  <block id="91fa4b053658e4dedadb0d60014d7b3e" category="list-text">Sie können die gewünschten Änderungen anfordern oder die Anfrage im Chat aktualisieren.</block>
+  <block id="f5500860e31d724af72a4be713c2c1e5" category="paragraph">Wenn das Erstellen der Regel zuvor fehlgeschlagen ist, können Sie bei dieser Regel fortfahren und Ihre Anfrage im Chat aktualisieren.</block>
+  <block id="1f998f331ae48a1cf2b4056c154eff9f" category="list-text">Die aktualisierte Erläuterung und die Zusammenfassung der Änderungen werden geprüft.</block>
+  <block id="fc7c0f65a3d8f2f0a1da1c56bd143c30" category="paragraph">Das System zeigt vor dem Speichern an, was sich gegenüber der aktuellen Regel geändert hat.</block>
+  <block id="023ad31a6b18fc538747a36ab488e65c" category="list-text">Wenn sich die Regel im Entwurfsmodus befindet, können Sie *Regel validieren* auswählen, um die aktualisierte Logik zu testen.</block>
+  <block id="44e90941996b011e8407b152cda355df" category="list-text">Damit die Änderungen erhalten bleiben, wird *Speichern* ausgewählt, um die aktuelle Regel zu ersetzen. Wenn Sie den Zeitplan geändert haben, wird der aktualisierte Zeitplan gespeichert. Wenn Sie den Zeitplan nicht geändert haben, bleibt er unverändert.</block>
+  <block id="cabf275678b6655f7ec32af7a5e772ec" category="list-text">Zum Verwerfen der Änderungen ist *Änderungen verwerfen* auszuwählen. Die Regel kehrt zu ihrer vorherigen Version zurück und beendet den Bearbeitungsmodus.</block>
+  <block id="053ebf33b65f60110cd8e776b413ed79" category="paragraph">Während der Bearbeitung einer Regel wird sie Ihnen als „Wird bearbeitet“ angezeigt. Andere Benutzer sehen weiterhin die aktuell geplante Regel, und geplante Ausführungen werden normal fortgesetzt, bis Sie die Änderungen speichern.</block>
+  <block id="8c5fb02c595607ff2d6a7bffe64be464" category="section-title">Eine Regel pausieren</block>
+  <block id="1e68160fbadf5661e25cda25fd14c709" category="paragraph">Durch das Anhalten einer Regel werden deren Auswertungen gestoppt, ohne die Regel zu löschen. Angehaltene Regeln bleiben im Katalog erhalten und können jederzeit wieder aufgenommen werden.</block>
+  <block id="ab37000159a2028473bf2d51d2e168df" category="list-text">Im Regelkatalog erfolgt die Auswahl der Regel, die pausiert werden soll.</block>
+  <block id="1e9305945880528c5c52639547a0485e" category="list-text">Eine geplante Regel lässt sich anhalten, indem *Pause* ausgewählt und anschließend bestätigt wird. Danach wird die Regel nicht mehr nach Zeitplan ausgeführt.</block>
+  <block id="ef31b72311045c72b3594fe1b8294b61" category="list-text">Eine angehaltene Regel lässt sich mit *Fortsetzen* und anschließender Bestätigung fortsetzen. Die Regel nimmt die regulären Auswertungen wieder auf.</block>
+  <block id="505e9a4d5d793341b92e51caeffa198f" category="section-title">Eine benutzerdefinierte Regel löschen</block>
+  <block id="106aa9d3af8dd9fe811548be7c0ab934" category="paragraph">Eine Regel kann dauerhaft gelöscht werden, wenn sie nicht mehr benötigt wird. Diese Aktion kann nicht rückgängig gemacht werden.</block>
+  <block id="cd69578465ffe65a5793f55372a9e2b0" category="list-text">Im Regelkatalog ist die Regel auszuwählen, die gelöscht werden soll.</block>
+  <block id="a611c28af3d155e736c074bd926dc51b" category="list-text">Bestätigen Sie, dass die Regel dauerhaft gelöscht werden soll.</block>
+  <block id="f36dd1b2731552458a4d8983a8bec074" category="paragraph">Die Regel wurde aus dem Katalog entfernt. Der gesamte Auswertungsverlauf wird gelöscht.</block>
+  <block id="ee46de54fef48d3ea00b2c8fc06cb58b" category="section-title">Ein Schnelltest kann durchgeführt werden</block>
+  <block id="bd472ca28321d77d062059272b456804" category="paragraph">Ein Schnelltest kann jederzeit ausgeführt werden, um die aktuelle Konformität zu überprüfen, ohne auf den nächsten geplanten Lauf warten zu müssen.</block>
+  <block id="635b91ded7a74d36fda511d533ef4c52" category="list-text">Im Regelkatalog können Sie die Regel auswählen, die Sie auswerten möchten.</block>
+  <block id="e70327eb26e94002df7dad0a96b24a3d" category="list-text">Die Option *Validate* auswählen.</block>
+  <block id="b4b7ad5dbb1a5d746e0ac8936e3f4798" category="paragraph">Das System bewertet alle Ressourcen im Geltungsbereich anhand der Regellogik.</block>
+  <block id="5cb57852939f164731c4f61fcca33dac" category="list-text">Die Ergebnisse zeigen den aktuellen Compliance-Status.</block>
+  <block id="2cc894218e78a9699920859cc698e5d7" category="paragraph">Tests werden geprüft und erscheinen in der Bewertungshistorie der Regel.</block>
+  <block id="cc04bd1e4cca8a5b4e87672f588bf490" category="paragraph"><block ref="cc04bd1e4cca8a5b4e87672f588bf490" category="inline-link-macro-rx"></block></block>
+  <block id="2977988f0d0d5b4f141a9dbdc67379ed" category="sidebar">Benutzerdefinierte Regeln</block>
+  <block id="4bd4792ab17b2dfaf1c72610c348727b" category="sidebar">Informationen zu benutzerdefinierten Regeln</block>
 </blocks>

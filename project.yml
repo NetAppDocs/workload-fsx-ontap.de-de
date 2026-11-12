@@ -91,6 +91,14 @@ sidebar:
         url: "/configuration-analysis.html"
       - title: Sorgfältig konzipierte Filesystem-Konfigurationen implementieren
         url: "/improve-configurations.html"
+      - title: Benutzerdefinierte Regeln
+        entries:
+        - title: Informationen zu benutzerdefinierten Regeln
+          url: "/learn-custom-rules.html"
+        - title: Eine benutzerdefinierte Regel erstellen
+          url: "/create-custom-rule.html"
+        - title: Benutzerdefinierte Regeln verwalten
+          url: "/manage-custom-rules.html"
     - title: FSx hinsichtlich ONTAP Kosten verfolgen und analysieren
       url: "/track-costs.html"
     - title: Volumes verwalten

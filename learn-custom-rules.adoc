@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: learn-custom-rules.html 
+keywords: custom rules, byor, bring your own rules, fsx, ontap, well architected, organizational standards 
+summary: Sie können Ihre eigenen Architekturregeln definieren und managen, um Unternehmensstandards zusammen mit NetApp Best Practices in NetApp Workload Factory durchzusetzen. 
+---
+= Informationen zu benutzerdefinierten Regeln in NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit benutzerdefinierten Regeln können Sie Ihre eigenen Architekturstandards sowie NetApp Best Practices im Regelkatalog von NetApp Workload Factory festlegen, überprüfen und durchsetzen.
+
+
+
+[[overview]]
+== Überblick
+
+Mit dem Errichter lassen sich benutzerdefinierte Regeln in einfacher Sprache erstellen. Diese Regeln werden für alle Ihre Ressourcen geprüft. Benutzerdefinierte Regeln helfen dabei, die Standards, Risikogrenzen und betrieblichen Anforderungen Ihres Unternehmens durchzusetzen, die von Standardregeln möglicherweise nicht abgedeckt werden.
+
+
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, können Sie keine neuen Regeln erstellen oder bestehende Regeln bearbeiten. Alle bereits geplanten Regeln werden weiterhin ausgeführt. link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"^].
+
+
+
+[[how-custom-rules-work]]
+== Funktionsweise benutzerdefinierter Regeln
+
+Benutzerdefinierte Regeln nutzen KI, um Anweisungen in einfacher Sprache in klare, strukturierte Regeln umzuwandeln. Die KI übersetzt Ihre Anfrage, schlägt eine Regel vor, erläutert, wie sie Ihre Anweisungen verstanden hat, und bittet um Ihre Zustimmung, bevor die Regel gespeichert oder geplant wird. Dieser Prozess trägt dazu bei, dass:
+
+* Die Regel ist klar definiert und wird auf Fehler überprüft
+* Es wird kein benutzerdefinierter Code ausgeführt
+* Sie können genau überprüfen, was bewertet wird, bevor Sie die Regel genehmigen
+* Jede benutzerdefinierte Regel enthält den zu bewertenden Ressourcentyp, die Bedingungslogik, den Schweregrad, den Bewertungszeitplan und Hinweise zur Behebung des Problems.
+
+
+
+
+[[before-you-begin]]
+== Bevor Sie beginnen
+
+Bevor Sie benutzerdefinierte Regeln erstellen und ausführen können, müssen Sie Folgendes haben:
+
+AWS Zugangsdaten:: Schreibgeschützter Zugriff auf Ihre AWS-Umgebung. Benutzerdefinierte Regeln erfordern schreibgeschützte Berechtigungen als Sicherheitsgrenze. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS-Anmeldeinformationen zur Workload Factory hinzufügen"].
+ONTAP Zugangsdaten:: FSx Viewer Benutzer mit Leseberechtigung. Workload Factory erstellt auf jedem FSx for ONTAP Dateisystem einen Benutzer mit Leseberechtigung, falls noch keiner existiert, damit Workload Factory Auswertungen durchführen kann.
+Link oder Agent:: Nur für Regeln erforderlich, die direkt eine Verbindung zu ONTAP herstellen müssen, um Einstellungen zu prüfen, auf die AWS APIs nicht zugreifen können. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Mit einem Link eine Verbindung zu einem FSx for ONTAP Dateisystem herstellen"^].
+
+
+
+
+[[limitations]]
+== Einschränkungen
+
+* Regeln können Probleme nicht automatisch beheben. Sie müssen nicht konforme Ressourcen anhand der bereitgestellten Anleitung selbst korrigieren.
+* Jede Regel prüft nur einen Ressourcentyp, kann aber auf eine Vielzahl von Ressourcen angewendet werden. Beispielsweise kann eine Regel Volumes in mehreren Regionen, in allen Regionen oder in mehreren Konten auswerten. Für die Auswertung verschiedener Ressourcentypen sind separate Regeln erforderlich.
+* Regeln laufen höchstens einmal pro Stunde, um übermäßiges Scannen zu verhindern.
+* Regeln können Ihre Umgebung nur lesen und keine Änderungen vornehmen.
+* Sie können diese Einstellungen später im Regelkatalog aktualisieren.
+
+
+
+
+[[rule-lifecycle]]
+== Regellebenszyklus
+
+Benutzerdefinierte Regeln durchlaufen die folgenden Zustände:
+
+In Bearbeitung:: Das Erstellen oder Überprüfen von Regeln.
+Erstellen fehlgeschlagen:: Die Regel konnte nicht erstellt werden. Sie können die Regel erneut öffnen und die Bearbeitung im Chat fortsetzen.
+Entwurf:: Gespeichert, aber noch nicht geplant.
+Validierter Entwurf:: Die Validierung war erfolgreich, und die Dateien können gespeichert oder geplant werden.
+Bearbeitung:: Aktualisierung einer Entwurfskopie einer bestehenden Regel. Die aktuell geplante Regel wird weiterhin ausgeführt, bis zum Speichern der Änderungen.
+Geplant:: Aktiv und wird gemäß dem festgelegten Zeitplan ausgeführt.
+Deaktiviert:: Angehalten, aber nicht gelöscht. Kann wieder aktiviert werden.
+Gelöscht:: Endgültig entfernt.
+
+
+
+
+[[custom-rule-examples]]
+== Beispiele für benutzerdefinierte Regeln
+
+Produktionsvolumenschutz:: „Alle Volumes mit dem Tag ‚Prod‘ müssen über eine Snapshot-Richtlinie verfügen.“
++
+--
+Diese Regel überprüft, ob Produktionsvolumina über eine Snapshot-Richtlinie verfügen, die sie gemäß den Unternehmensanforderungen schützt.
+
+--
+Tiering von Archiv-Volumes:: „Allen Volumes mit dem Tag ‚Archive‘ sollte die Tiering-Richtlinie auf ‚All‘ gesetzt sein.“
++
+--
+Diese Regel senkt die Kosten, indem archivierte Daten automatisch in kostengünstigeren Speicher verschoben werden.
+
+--
+Standards für die Dateisystembenennung:: „Alle Dateisysteme müssen der Namenskonvention 'fsx-{environment}-{application}' folgen.“
++
+--
+Diese Regel validiert, dass Dateisysteme den organisatorischen Namenskonventionen entsprechen, was eine einfachere Verwaltung und Kostenverteilung ermöglicht.
+
+--
+
+
+
+
+[[what-to-do-next]]
+== Nächste Schritte
+
+link:create-custom-rule.html["Eine benutzerdefinierte Regel erstellen"] link:manage-custom-rules.html["Benutzerdefinierte Regeln verwalten"]

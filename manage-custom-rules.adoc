@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: manage-custom-rules.html 
+keywords: manage rules, edit rules, disable rules, delete rules, rule catalog, byor 
+summary: Im Regelkatalog in NetApp Workload Factory lassen sich benutzerdefinierte Architekturregeln anzeigen, bearbeiten, pausieren, fortsetzen, testen und löschen. 
+---
+= Benutzerdefinierte Regeln in NetApp Workload Factory managen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der Regelkatalog in NetApp Workload Factory bietet Ihnen einen zentralen Ort, um alle Ihre benutzerdefinierten Architekturregeln zu managen. Sie können Regeldetails und -ergebnisse einsehen, Regeln bearbeiten, Schnelltests durchführen, geplante Auswertungen pausieren oder fortsetzen und nicht mehr benötigte Regeln löschen.
+
+
+
+[[view-the-rules-catalog]]
+== Regelkatalog anzeigen
+
+Der Regelkatalog zeigt alle von Ihnen erstellten Regeln, deren Status, Zeitplan und neuesten Ergebnisse an.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Sie wählen das Menü image:workloads-menu-icon.png["Über das Hamburger-Menüsymbol kann man zu Workloads wie Speicher, EDA, KI, Datenbanken, VMware und Administration navigieren."] und anschließend *Well-architected* > *Rule Errichter*.
+. Über *Ihre Regeln anzeigen* lässt sich der Regelkatalog öffnen.
+
+
+
+
+[[view-rule-results]]
+== Regelergebnisse anzeigen
+
+Die Ergebnisse zeigen, welche Ressourcen Ihrer Regel folgen und welche nicht.
+
+.Schritte
+. Im Regelkatalog können Sie die Regel auswählen, die Sie überprüfen möchten.
+. Die Registerkarte *Alle Laufergebnisse* auswählen.
+. Mit **Details anzeigen** werden die Ergebnisse für jeden Durchlauf angezeigt.
+
+
+Wenn die Überprüfung für einige Elemente fehlgeschlagen ist, zeigt die Fehlermeldung den Grund an. Häufige Gründe sind Verbindungsprobleme, fehlende Berechtigungen oder eine nicht eingerichtete Verknüpfung.
+
+
+
+[[edit-a-custom-rule]]
+== Benutzerdefinierte Regel bearbeiten
+
+Sie können eine Regel jederzeit umbenennen. Außerdem können Sie die Beschreibung, den Ressourcentyp, den Zeitplan, den Schweregrad, die Bedingungslogik, den Auswertungsbereich und die Abhilfehinweise einer Regel bearbeiten.
+
+Sie können eine Regel entweder im Regelkatalog oder auf der Regeldetailseite umbenennen. Andere Regeleinstellungen lassen sich über den Regelkatalog bearbeiten.
+
+.Schritte
+. Im Regelkatalog ist die Regel auszuwählen, die bearbeitet werden soll.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Die Umbenennung der Regel erfolgt durch Aktualisieren des Regelnamens im Katalog oder auf der Detailkarte der Regel.
+** Die Bearbeitung anderer Regeleinstellungen erfolgt über *Bearbeiten*.
++
+Die Regel öffnet sich im Chat-Modus mit ihrem vollständigen Verlauf.
+
+
+
+. Sie können die gewünschten Änderungen anfordern oder die Anfrage im Chat aktualisieren.
++
+Wenn das Erstellen der Regel zuvor fehlgeschlagen ist, können Sie bei dieser Regel fortfahren und Ihre Anfrage im Chat aktualisieren.
+
+. Die aktualisierte Erläuterung und die Zusammenfassung der Änderungen werden geprüft.
++
+Das System zeigt vor dem Speichern an, was sich gegenüber der aktuellen Regel geändert hat.
+
+. Wenn sich die Regel im Entwurfsmodus befindet, können Sie *Regel validieren* auswählen, um die aktualisierte Logik zu testen.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Damit die Änderungen erhalten bleiben, wird *Speichern* ausgewählt, um die aktuelle Regel zu ersetzen. Wenn Sie den Zeitplan geändert haben, wird der aktualisierte Zeitplan gespeichert. Wenn Sie den Zeitplan nicht geändert haben, bleibt er unverändert.
+** Zum Verwerfen der Änderungen ist *Änderungen verwerfen* auszuwählen. Die Regel kehrt zu ihrer vorherigen Version zurück und beendet den Bearbeitungsmodus.
+
+
+
+
+Während der Bearbeitung einer Regel wird sie Ihnen als „Wird bearbeitet“ angezeigt. Andere Benutzer sehen weiterhin die aktuell geplante Regel, und geplante Ausführungen werden normal fortgesetzt, bis Sie die Änderungen speichern.
+
+
+
+[[pause-a-rule]]
+== Eine Regel pausieren
+
+Durch das Anhalten einer Regel werden deren Auswertungen gestoppt, ohne die Regel zu löschen. Angehaltene Regeln bleiben im Katalog erhalten und können jederzeit wieder aufgenommen werden.
+
+.Schritte
+. Im Regelkatalog erfolgt die Auswahl der Regel, die pausiert werden soll.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Eine geplante Regel lässt sich anhalten, indem *Pause* ausgewählt und anschließend bestätigt wird. Danach wird die Regel nicht mehr nach Zeitplan ausgeführt.
+** Eine angehaltene Regel lässt sich mit *Fortsetzen* und anschließender Bestätigung fortsetzen. Die Regel nimmt die regulären Auswertungen wieder auf.
+
+
+
+
+
+
+[[delete-a-custom-rule]]
+== Eine benutzerdefinierte Regel löschen
+
+Eine Regel kann dauerhaft gelöscht werden, wenn sie nicht mehr benötigt wird. Diese Aktion kann nicht rückgängig gemacht werden.
+
+.Schritte
+. Im Regelkatalog ist die Regel auszuwählen, die gelöscht werden soll.
+. Wählen Sie *Löschen*.
+. Bestätigen Sie, dass die Regel dauerhaft gelöscht werden soll.
+
+
+.Ergebnis
+Die Regel wurde aus dem Katalog entfernt. Der gesamte Auswertungsverlauf wird gelöscht.
+
+
+
+[[run-a-quick-test]]
+== Ein Schnelltest kann durchgeführt werden
+
+Ein Schnelltest kann jederzeit ausgeführt werden, um die aktuelle Konformität zu überprüfen, ohne auf den nächsten geplanten Lauf warten zu müssen.
+
+.Schritte
+. Im Regelkatalog können Sie die Regel auswählen, die Sie auswerten möchten.
+. Die Option *Validate* auswählen.
++
+Das System bewertet alle Ressourcen im Geltungsbereich anhand der Regellogik.
+
+. Die Ergebnisse zeigen den aktuellen Compliance-Status.
+
+
+Tests werden geprüft und erscheinen in der Bewertungshistorie der Regel.
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+link:learn-custom-rules.html["Weitere Informationen zu benutzerdefinierten Regeln"]
